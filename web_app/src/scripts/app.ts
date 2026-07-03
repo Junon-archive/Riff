@@ -12,7 +12,7 @@
  *     교체되므로, 상태 의존 값(진도율·완료 체크·닉네임 칩 등)은 `astro:page-load`마다 다시 채운다.
  *   - `astro:page-load`는 최초 로드 + 매 전환마다 발생한다. 중복 바인딩 방지는 `delegatesBound` 가드로.
  */
-import { DEFAULT_CURRICULUM_ID, DONATION_LINKS, DONATION_ORDER, SUPPORTED_LANGS } from '../config';
+import { DEFAULT_CURRICULUM_ID, DONATION_CHANNELS, DONATION_ORDER, DREAM_ITEMS, SUPPORTED_LANGS } from '../config';
 import type { DonationChannel, Lang } from '../config';
 import {
   loadState,
@@ -101,6 +101,28 @@ function updateSaveAmount(state: GhState): void {
   el.innerHTML = t('progress.saved_money', { amount: `<b>${formatted}</b>` });
 }
 
+/**
+ * "드림 기타" 후원 연출 — 마일스톤(월/커리큘럼 완료) 달성 시 도네이션 시트 대신 먼저 노출한다.
+ * DREAM_ITEMS 중 랜덤 1개를 골라 이미지·이름·멘트를 채우고 컨페티와 함께 시트를 연다.
+ */
+function openDreamReveal(): void {
+  const item = DREAM_ITEMS[Math.floor(Math.random() * DREAM_ITEMS.length)];
+  if (!item) return;
+
+  const img = document.getElementById('dreamImg') as HTMLImageElement | null;
+  if (img) {
+    img.src = item.img;
+    img.alt = item.name;
+  }
+  setText('#dreamName', item.name);
+  const instrument = t(item.type === 'bass' ? 'dream.bass' : 'dream.guitar');
+  const line = document.getElementById('dreamLine');
+  if (line) line.innerHTML = t('dream.line', { instrument });
+
+  burstConfetti();
+  openSheet('dreamScrim');
+}
+
 /** 도네이션 채널 노출 순서 — ko: 국내 채널 우선 / en·ja: 글로벌 채널 우선(design_spec §4.14). */
 function applyDonationOrder(lang: Lang): void {
   const grid = document.getElementById('payGrid');
@@ -109,6 +131,45 @@ function applyDonationOrder(lang: Lang): void {
     const btn = grid.querySelector(`[data-donate="${channel}"]`);
     if (btn) grid.appendChild(btn); // appendChild 는 기존 노드를 이동시킨다 → 순서대로 재배치
   });
+}
+
+/**
+ * 도네이션 시트 — 채널 그리드 뷰로 리셋(QR 뷰가 열려 있었다면 되돌린다).
+ * 시트를 열 때마다(footer CTA·dream CTA) 호출해 항상 그리드에서 시작하게 한다.
+ */
+function resetDonateView(): void {
+  document.getElementById('donateMain')?.removeAttribute('hidden');
+  document.getElementById('donateQrView')?.setAttribute('hidden', '');
+}
+
+/**
+ * qr 이 설정된 채널 클릭 시 — 시트 안에서 그리드 대신 QR 이미지를 보여주는 뷰로 전환한다.
+ * url 도 함께 있으면 "링크로 열기" 보조 버튼도 노출한다(둘 다 지원, technical_spec OPEN 없음 — 신규).
+ */
+function showDonateQr(channel: DonationChannel): void {
+  const cfg = DONATION_CHANNELS[channel];
+  if (!cfg.qr) return;
+
+  const img = document.getElementById('qrImg') as HTMLImageElement | null;
+  if (img) {
+    img.src = cfg.qr;
+    img.alt = t(`donate.${channel}`);
+  }
+
+  const linkBtn = document.getElementById('qrLinkBtn') as HTMLAnchorElement | null;
+  if (linkBtn) {
+    if (cfg.url) {
+      linkBtn.href = cfg.url;
+      linkBtn.textContent = t(`donate.${channel}`);
+      linkBtn.hidden = false;
+    } else {
+      linkBtn.hidden = true;
+      linkBtn.removeAttribute('href');
+    }
+  }
+
+  document.getElementById('donateMain')?.setAttribute('hidden', '');
+  document.getElementById('donateQrView')?.removeAttribute('hidden');
 }
 
 /* ------------------------------------------------------------------
@@ -300,8 +361,7 @@ function handleComplete(): void {
 
   if (milestone) {
     window.setTimeout(() => {
-      updateSaveAmount(loadState());
-      openSheet('donateScrim');
+      openDreamReveal();
     }, 900);
   }
 }
@@ -325,6 +385,26 @@ function handleUndo(): void {
 }
 
 /* ------------------------------------------------------------------
+ * 악기 필터 칩 (랜딩 #instrumentFilter) — 커리큘럼이 늘어도 하드코딩 분기 없이
+ * data-instrument 값으로만 카드를 in-place 필터한다. 칩 자체의 노출 여부(2종 이상일 때만)는
+ * SSR(HomeView.astro)이 이미 판정해 `hidden` 을 심어두므로, 여기서는 클릭 시 필터링만 담당.
+ * ---------------------------------------------------------------- */
+function applyInstrumentFilter(chip: HTMLElement): void {
+  const filterRoot = chip.closest('#instrumentFilter');
+  if (!filterRoot) return;
+  const value = chip.dataset.filterInstrument ?? 'all';
+
+  $all<HTMLElement>('.chip-btn', filterRoot).forEach((btn) => {
+    btn.classList.toggle('active', btn === chip);
+  });
+
+  $all<HTMLElement>('#currList .curr-card').forEach((card) => {
+    const show = value === 'all' || card.dataset.instrument === value;
+    card.style.display = show ? '' : 'none';
+  });
+}
+
+/* ------------------------------------------------------------------
  * 이벤트 위임 (document/window 1회 바인딩 — STUB 2·3·5)
  * ---------------------------------------------------------------- */
 let delegatesBound = false;
@@ -344,6 +424,12 @@ function bindDelegatesOnce(): void {
 
     if (target.closest('#undoBtn, [data-undo]')) {
       handleUndo();
+      return;
+    }
+
+    const filterChip = target.closest<HTMLElement>('[data-filter-instrument]');
+    if (filterChip) {
+      applyInstrumentFilter(filterChip);
       return;
     }
 
@@ -413,15 +499,32 @@ function bindDelegatesOnce(): void {
 
     if (target.closest('#openDonateBtn')) {
       updateSaveAmount(loadState());
+      resetDonateView();
       openSheet('donateScrim');
+      return;
+    }
+    if (target.closest('#dreamDonateBtn')) {
+      closeSheet(document.getElementById('dreamScrim'));
+      updateSaveAmount(loadState());
+      resetDonateView();
+      openSheet('donateScrim');
+      return;
+    }
+    if (target.closest('#qrBackBtn')) {
+      resetDonateView();
       return;
     }
     const donateBtn = target.closest<HTMLElement>('[data-donate]');
     if (donateBtn) {
       const channel = donateBtn.dataset.donate as DonationChannel | undefined;
-      if (channel && channel in DONATION_LINKS) {
-        markDonationClicked(channel);
-        window.open(DONATION_LINKS[channel], '_blank', 'noopener,noreferrer');
+      if (!channel || !(channel in DONATION_CHANNELS)) return;
+      const cfg = DONATION_CHANNELS[channel];
+      if (!cfg.url && !cfg.qr) return; // 준비 중 채널 — SSR이 이미 disabled 처리했지만 방어적으로 한 번 더 막는다.
+      markDonationClicked(channel);
+      if (cfg.qr) {
+        showDonateQr(channel);
+      } else if (cfg.url) {
+        window.open(cfg.url, '_blank', 'noopener,noreferrer');
       }
       return;
     }

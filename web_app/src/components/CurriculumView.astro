@@ -36,6 +36,7 @@ const firstOpenMonthIndex = curriculum.months.findIndex((m) => !isMonthSoon(m));
   <section class="curr-head">
     <span class="eyebrow">{translate(lang, 'curr.eyebrow')}</span>
     <h1 class="display" id="currTitle">{cleanTitle(curriculum.titles[lang])}</h1>
+    {curriculum.forWho && <p class="curr-for-who curr-head-for-who">{curriculum.forWho[lang]}</p>}
   </section>
 
   <div class="card prog-summary">

@@ -23,17 +23,57 @@ export const THEME_KEY = 'riff_theme';
 export const DEFAULT_CURRICULUM_ID = 'solo_scale_3months';
 
 /**
- * 도네이션 링크 — 실제 결제 연동 전 플레이스홀더 상수.
+ * 도네이션 채널 1개의 실 연동 정보.
+ * - `url` 만 있으면: 버튼 클릭 시 새 창으로 연다(기존 동작).
+ * - `qr` 이 있으면: 버튼 클릭 시 도네이션 시트 안에서 QR 이미지를 보여주는 뷰로 전환한다(`url`도
+ *   있으면 QR 뷰에 "링크로 열기" 버튼을 함께 보여준다).
+ * - 둘 다 비어있으면("" 또는 미지정): 버튼을 비활성화하고 "준비 중"으로 안내한다(강매·깨진 링크 방지).
+ * 운영자는 이 값들만 채우면 된다(플러그앤플레이) — 코드 변경 불필요.
+ */
+export interface DonationChannelConfig {
+  /** 외부 결제/후원 페이지 URL. */
+  url?: string;
+  /** QR 이미지 경로 — `public/donate/*.png` 기준 절대 경로(예: `/donate/kakaopay.png`). */
+  qr?: string;
+}
+
+/**
+ * 도네이션 채널 — 실제 결제 연동 전 플레이스홀더(값은 운영자가 나중에 채운다, `public/donate/README.txt` 참조).
  * i18n 라벨은 donate.toss/kakaopay/paypal/bmc 키가 담당(하드코딩 금지, §7.4).
  */
-export const DONATION_LINKS = {
-  toss: 'https://example.com/donate/toss', // TODO: 실제 링크
-  kakaopay: 'https://example.com/donate/kakaopay', // TODO
-  paypal: 'https://example.com/donate/paypal', // TODO
-  bmc: 'https://example.com/donate/bmc', // TODO
-} as const;
+export const DONATION_CHANNELS: Record<'toss' | 'kakaopay' | 'paypal' | 'bmc', DonationChannelConfig> = {
+  // 전 채널 플레이스홀더("준비 중"). 운영자가 링크/QR 확보 시 아래에 값만 채우면 활성화.
+  //   url 만: 새 창으로 열기 · qr 만/qr+url: 시트 내 QR 뷰(+링크 버튼) · 둘 다 비면 "준비 중" 비활성.
+  toss: { url: '' }, // TODO(운영자): 토스 후원 링크 (예: { url: 'https://toss.me/...' })
+  kakaopay: { url: '' }, // TODO(운영자): 카카오페이 (예: { qr: '/donate/kakaopay.png' } — public/donate/kakaopay.png 추가)
+  paypal: { url: '' }, // TODO(운영자): PayPal (예: { url: 'https://paypal.me/...' })
+  bmc: { url: '' }, // TODO(운영자): Buy Me a Coffee (예: { url: 'https://buymeacoffee.com/...' })
+};
 
-export type DonationChannel = keyof typeof DONATION_LINKS;
+export type DonationChannel = keyof typeof DONATION_CHANNELS;
+
+/** 채널에 실제 url/qr 이 하나도 없는(플레이스홀더) 상태 — 버튼 비활성화 판정에 사용. */
+export function isDonationChannelPreparing(channel: DonationChannel): boolean {
+  const cfg = DONATION_CHANNELS[channel];
+  return !cfg.url && !cfg.qr;
+}
+
+/**
+ * "드림 기타" 후원 연출(마일스톤 달성 시) — 등장 시 랜덤 1개 노출.
+ * name 은 3언어 공통으로 영어 원문 그대로 표시(고유명사, 번역 대상 아님).
+ * 이미지: public/dream/*.png (배경 제거).
+ */
+export interface DreamItem {
+  img: string;
+  name: string;
+  type: 'guitar' | 'bass';
+}
+
+export const DREAM_ITEMS: DreamItem[] = [
+  { img: '/dream/strat-cory-wong.png', name: 'Fender USA Stratocaster Cory Wong Signature', type: 'guitar' },
+  { img: '/dream/prs-silversky.png', name: 'PRS SilverSky', type: 'guitar' },
+  { img: '/dream/jazz-bass-v.png', name: 'Fender American Professional II Jazz Bass V', type: 'bass' },
+];
 
 /**
  * 도네이션 채널 노출 우선순위(레이아웃 동일, 정렬만 변경) — design_spec §4.14 / translation_map §5.

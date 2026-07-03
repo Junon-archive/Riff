@@ -167,3 +167,45 @@ console.log(ko.length,en.length,ja.length, JSON.stringify(ko)===JSON.stringify(e
 ## 7. 산출물
 
 - `web_app/src/i18n/ko.json`, `en.json`, `ja.json` — 언어당 **91개 키**, 14 최상위 네임스페이스(`common, free, home, curr, months, lesson, donate, nick, storage, landing, progress, nudge, lang, error`), 3언어 키셋 diff **0건**, 플레이스홀더 불일치 **0건**.
+
+## 8. 추가 — "드림 기타" 후원 연출 (`dream.*`, 프론트 2단계 구현, 2026-07-03)
+
+월/커리큘럼 완료(마일스톤) 시 도네이션 시트를 바로 열지 않고 먼저 노출하는 "드림 기타" 리빌 시트(`#dreamScrim`, `web_app/src/layouts/Base.astro` + `web_app/src/scripts/app.ts`)용 신규 네임스페이스. 목업(`design_reference.html`)에는 없는 완전 신규 기능이라 목업 대조 대상이 아니다(§1 42개 목업 참조 키에 미포함, 세션 B/OPEN-4 범위 밖 신규 추가).
+
+| 키 | 바인딩 | 용도 |
+|---|---|---|
+| `dream.tada` | 속성(`data-i`) | 이미지 위에 겹치는 "쨘!" 액센트 텍스트 |
+| `dream.guitar` | JS(`t()`, `{instrument}` 보간 인자) | 악기 타입이 guitar인 아이템의 명사 |
+| `dream.bass` | JS(`t()`, `{instrument}` 보간 인자) | 악기 타입이 bass인 아이템의 명사 |
+| `dream.line` | JS(`t()` → `innerHTML` 주입, `{instrument}` 플레이스홀더) | 랜덤 노출된 드림 아이템 멘트 |
+| `dream.cta` | 속성(`data-i`) | 후원 시트로 넘어가는 버튼 라벨 |
+| `dream.later` | 속성(`data-i`) | 강매 없이 닫는 보조 버튼 라벨 |
+
+- 3언어 키셋 diff 재검증: `dream.*` 6키 추가 후 언어당 **103개 키**, diff **0건**(§0 검증 명령으로 재현 가능).
+- `DREAM_ITEMS`(`web_app/src/config.ts`)의 `name`(악기 고유명사, 예: "PRS SilverSky")은 3언어 공통 영어 원문 그대로 표시 — 번역 대상 아님(고유명사 규약, `translation_map.md` 없음 별도 언급 불요).
+
+## 9. 추가 — 커리큘럼 분류 스킴 신규 키 (프론트 구현, 2026-07-03)
+
+등급 라벨("입문/중급/고급") 대신 "이런 분께" + 기간 배지 + 악기 필터 칩 인프라를 도입하며 신설한 키. 상세 배경·구현 위치는 `translation_map.md` §8 참조.
+
+| 키 | 바인딩 | 용도 |
+|---|---|---|
+| `curr.months_unit` | JS(`t()`, `{n}` 보간) | 랜딩/커리큘럼 카드의 기간 메타 배지("3개월" 등) |
+| `filter.all` | 속성(`data-i` 미사용, Astro SSR `translate()`) | 악기 필터 칩 "전체" |
+| `instrument.guitar` | 상동 | 악기 필터 칩 "기타" 라벨 |
+| `instrument.bass` | 상동 | 악기 필터 칩 "베이스" 라벨(현재 데이터엔 기타뿐이라 미노출, 인프라 대비) |
+
+- `curriculum.forWho`(커리큘럼 카드의 "이런 분께" 한 줄)는 사전 키가 아니라 `_design_docs/02_curriculum/{id}/meta.json`의 `forWho` 필드(3언어)를 `build-content.mjs`가 manifest로 그대로 통과시킨 **콘텐츠 데이터**다 — i18n 사전에 새 키를 추가하지 않았다.
+- 3언어 키셋 diff 재검증: 위 4키 추가 후 언어당 **107개 키**, diff **0건**(§0 검증 명령으로 재현 가능).
+
+## 10. 추가 — 도네이션 QR 뷰 신규 키 (프론트 구현, 2026-07-03)
+
+도네이션 시트를 "링크 + QR 이미지" 플러그앤플레이로 확장(`web_app/src/config.ts` `DONATION_CHANNELS`, `web_app/src/scripts/app.ts` `showDonateQr`, `web_app/src/layouts/Base.astro` `#donateQrView`)하며 신설한 키. 목업에는 QR 뷰 개념이 없어 목업 대조 대상이 아니다.
+
+| 키 | 바인딩 | 용도 |
+|---|---|---|
+| `donate.scan_qr` | Astro SSR(`translate()`) | QR 뷰 안내 문구("카메라로 스캔하세요") |
+| `donate.preparing` | Astro SSR(`translate()`) | url/qr 둘 다 비어있는(플레이스홀더) 채널 버튼의 "준비 중" 배지 |
+
+- QR 뷰의 뒤로가기 버튼 라벨은 신규 키를 만들지 않고 기존 `common.back`("이전")을 재사용했다.
+- 3언어 키셋 diff 재검증: 위 2키 추가 후 언어당 **109개 키**, diff **0건**(§0 검증 명령으로 재현 가능).

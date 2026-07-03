@@ -31,6 +31,7 @@ donate.*      도네이션 카드/문구 (구 donation.*, 목업 정합 개명)
 nick.*        닉네임 입력 시트 (목업 정합 신규)
 lang.*        언어 스위처
 error.*       예외 안내
+dream.*       "드림 기타" 후원 연출 시트 (프론트 2단계 신규, 목업 미참조)
 ```
 > 전체 키 목록·목업 대조·rename/merge 근거는 `./i18n_key_map.md` 참조.
 
@@ -76,3 +77,26 @@ error.*       예외 안내
 - 최종 결과물: `web_app/src/i18n/ko.json`, `en.json`, `ja.json` — 언어당 **91개 키**, 14개 최상위 네임스페이스(`common, free, home, curr, months, lesson, donate, nick, storage, landing, progress, nudge, lang, error`), 3개 언어 키셋 diff **0건**, 플레이스홀더(`{amount}/{nickname}/{week}/{count}`) 불일치 **0건**.
 - 목업 `design_reference.html`이 실제로 참조하는 42개 키(`data-i`/`data-i-html`/`data-i-ph` 속성 38개 + JS `t()` 직접 호출 4개)를 전량 커버한다. 키 이름은 **목업 쪽을 정본**으로 삼아 세션 B의 동일 개념 키 13쌍을 병합/개명했다(`common`(9)·`progress`(7)·`nudge`(5)·`lang`(4)·`error`(5) 등 목업 미참조 네임스페이스는 그대로 보존).
 - 이 md는 톤·키 규약의 SSOT. 위 §3·§5 표는 실제 JSON 값과 항상 1:1로 유지한다(값 변경 시 이 표도 함께 갱신). **키 이름·매핑 상세는 `./i18n_key_map.md`가 담당**(신설, OPEN-4 완결 산출물).
+
+## 7. 추가 — "드림 기타" 후원 연출 `dream.*` (2026-07-03)
+마일스톤(월/커리큘럼 완료) 달성 시 도네이션 시트 전에 먼저 노출하는 리빌 시트용 신규 네임스페이스(6키). 상세 매핑·바인딩은 `./i18n_key_map.md` §8 참조. 추가 후 언어당 **103개 키**, 3언어 diff **0건**.
+
+| key | ko | en | ja |
+|---|---|---|---|
+| `dream.tada` | 쨘! | Ta-da! | じゃーん！ |
+| `dream.guitar` | 기타 | guitar | ギター |
+| `dream.bass` | 베이스 | bass | ベース |
+| `dream.line` (`{instrument}` 보간) | 주인장의 드림 {instrument}예요. 그냥 그렇다구요 ㅎㅎ 아래 버튼을 살짝 눌러보면, 주인장에게 큰 힘이 될지도 몰라요! | This is the dev's dream {instrument}. Just putting that out there 😄 Tapping the button below might help me more than you'd think! | これ、作った人の夢の{instrument}なんです。まあ、それだけの話なんですけどね 笑 下のボタンをそっと押すと、私にとって大きな力になるかもしれません！ |
+| `dream.cta` | 후원하러 가기 | Support the dev | 応援する |
+| `dream.later` | 다음에요 | Maybe later | また今度 |
+
+## 8. 추가 — 커리큘럼 분류 스킴 `filter.*`/`instrument.*`/`curr.months_unit` (2026-07-03)
+"입문/중급/고급" 등급 라벨을 화면에 쓰지 않기로 확정(내부 `level`은 정렬 전용, 절대 노출 안 함). 대신:
+- 카드 제목 아래 **"이런 분께" 한 줄**은 `meta.json`의 `forWho`(3언어)를 콘텐츠 파이프라인이 그대로 통과시켜 노출한다(별도 i18n 키 없음 — 커리큘럼 콘텐츠 자체이므로 사전이 아니라 `meta.json`이 SSOT).
+- **기간 배지**: `curr.months_unit`(`{n}` 보간, 예: ko "{n}개월"/en "{n} months"/ja "{n}か月")를 신설해 `meta.json`의 `durationMonths`와 조합.
+- **악기 필터 칩**: `filter.all`(전체/All/すべて), `instrument.guitar`(기타/Guitar/ギター), `instrument.bass`(베이스/Bass/ベース) 신설. 서로 다른 `instrument`가 2종 이상일 때만 랜딩에 칩 행이 노출(현재 기타 1종뿐이라 자동 숨김 — 인프라만 존재, 하드코딩 분기 없음).
+- 신규 키 5개(`curr.months_unit`, `filter.all`, `instrument.guitar`, `instrument.bass`) 반영 후 언어당 **107개 키**, 3언어 diff **0건**(검증 명령은 §0 재사용).
+- 구현: `web_app/src/components/HomeView.astro`(필터 칩 SSR 판정 + forWho·배지 렌더), `web_app/src/components/CurriculumView.astro`(forWho 한 줄), `web_app/src/scripts/app.ts`(칩 클릭 시 `data-instrument` 기반 in-place 필터), `web_app/scripts/build-content.mjs`(`forWho`/`durationMonths` manifest 통과).
+
+## 9. 버그 수정 — `progress.saved_money` "약 약" 중복 (2026-07-03)
+`lib/progress.ts`의 `formatSavedMoney()`가 ko(`약`)/ja(`約`) 접두어를 자체적으로 붙이는데, `progress.saved_money` 템플릿(§3)에도 같은 접두어가 있어 렌더 결과가 "약 약 40만 원"처럼 중복 노출됐다. i18n 값은 그대로 두고(§3 표 불변) `formatSavedMoney()`가 **금액만** 반환하도록 수정 — 접두어는 항상 i18n 템플릿 쪽만 책임진다.

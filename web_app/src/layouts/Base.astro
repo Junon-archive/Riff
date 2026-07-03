@@ -10,8 +10,8 @@
 import { ClientRouter } from 'astro:transitions';
 import { translate } from '../lib/i18n';
 import { altUrls } from '../lib/urls';
-import type { Lang } from '../config';
-import { SUPPORTED_LANGS } from '../config';
+import type { DonationChannel, Lang } from '../config';
+import { DONATION_CHANNELS, isDonationChannelPreparing, SUPPORTED_LANGS } from '../config';
 import '../styles/tokens.css';
 import '../styles/app.css';
 
@@ -33,6 +33,14 @@ const homeHref = lang === 'ko' ? '/' : `/${lang}/`;
 const desc = description ?? translate(lang, 'home.lead');
 
 const LANG_LABEL: Record<Lang, string> = { ko: '한글', en: 'EN', ja: '日本' };
+
+/** 도네이션 채널 버튼 렌더 메타(아이콘만 — url/qr/준비중 여부는 config.ts DONATION_CHANNELS가 SSOT). */
+const DONATION_BUTTONS: { channel: DonationChannel; iconClass: string; icon: string }[] = [
+  { channel: 'toss', iconClass: 'pay-toss', icon: 'T' },
+  { channel: 'kakaopay', iconClass: 'pay-kakao', icon: 'K' },
+  { channel: 'paypal', iconClass: 'pay-paypal', icon: 'P' },
+  { channel: 'bmc', iconClass: 'pay-bmc', icon: '☕' },
+];
 ---
 
 <!doctype html>
@@ -128,18 +136,61 @@ const LANG_LABEL: Record<Lang, string> = { ko: '한글', en: 'EN', ja: '日本' 
       바텀시트 3종 · 토스트 · 컨페티 — 마크업만 정적 이식(초기 hidden).
       open/close·Export/Import·도네이션 채널·닉네임 저장·컨페티 배선은 scripts/app.ts 가 담당한다.
     */}
+    <div class="scrim" id="dreamScrim">
+      <div class="sheet sheet-dream" role="dialog" aria-modal="true" aria-label={translate(lang, 'dream.tada')}>
+        <div class="grip"></div>
+        <div class="dream-stage">
+          <span class="dream-tada" data-i="dream.tada">{translate(lang, 'dream.tada')}</span>
+          <img id="dreamImg" class="dream-img" src="" alt="" />
+        </div>
+        <div id="dreamName" class="dream-name"></div>
+        <p id="dreamLine" class="dream-line" data-i-html></p>
+        <button class="btn" id="dreamDonateBtn" data-i="dream.cta">{translate(lang, 'dream.cta')}</button>
+        <button class="btn ghost" data-close-sheet data-i="dream.later">{translate(lang, 'dream.later')}</button>
+      </div>
+    </div>
+
     <div class="scrim" id="donateScrim">
       <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="donateH">
         <div class="grip"></div>
-        <h2 id="donateH">{translate(lang, 'donate.title')}</h2>
-        <p class="sh-sub">{translate(lang, 'donate.sub')}</p>
-        <div class="save-amount"><div class="big" id="saveAmount"></div></div>
-        <div class="pay-grid" id="payGrid">
-          <button class="pay-btn pay-toss" data-donate="toss"><span class="ico">T</span><span>{translate(lang, 'donate.toss')}</span></button>
-          <button class="pay-btn pay-kakao" data-donate="kakaopay"><span class="ico">K</span><span>{translate(lang, 'donate.kakaopay')}</span></button>
-          <button class="pay-btn pay-paypal" data-donate="paypal"><span class="ico">P</span><span>{translate(lang, 'donate.paypal')}</span></button>
-          <button class="pay-btn pay-bmc" data-donate="bmc"><span class="ico">☕</span><span>{translate(lang, 'donate.bmc')}</span></button>
+
+        {/* 채널 그리드 뷰 — 기본. QR 채널 클릭 시 scripts/app.ts 가 아래 QR 뷰로 전환한다. */}
+        <div id="donateMain">
+          <h2 id="donateH">{translate(lang, 'donate.title')}</h2>
+          <p class="sh-sub">{translate(lang, 'donate.sub')}</p>
+          <div class="save-amount"><div class="big" id="saveAmount"></div></div>
+          <div class="pay-grid" id="payGrid">
+            {DONATION_BUTTONS.map(({ channel, iconClass, icon }) => {
+              const cfg = DONATION_CHANNELS[channel];
+              const preparing = isDonationChannelPreparing(channel);
+              return (
+                <button
+                  class={`pay-btn ${iconClass}`}
+                  data-donate={channel}
+                  data-qr={cfg.qr || undefined}
+                  disabled={preparing}
+                  aria-disabled={preparing}
+                >
+                  <span class="ico">{icon}</span>
+                  <span>{translate(lang, `donate.${channel}`)}</span>
+                  {preparing ? <span class="pay-badge">{translate(lang, 'donate.preparing')}</span> : null}
+                </button>
+              );
+            })}
+          </div>
         </div>
+
+        {/* QR 뷰 — qr 이 설정된 채널 클릭 시에만 진입(scripts/app.ts showDonateQr). 기본 hidden. */}
+        <div class="qr-view" id="donateQrView" hidden>
+          <button class="qr-back" id="qrBackBtn" type="button">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 19l-7-7 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>{translate(lang, 'common.back')}</span>
+          </button>
+          <img class="qr-img" id="qrImg" src="" alt="" />
+          <p class="qr-hint">{translate(lang, 'donate.scan_qr')}</p>
+          <a class="btn secondary" id="qrLinkBtn" href="#" target="_blank" rel="noopener noreferrer" hidden></a>
+        </div>
+
         <button class="btn ghost close-free" data-close-sheet>{translate(lang, 'donate.close')}</button>
       </div>
     </div>

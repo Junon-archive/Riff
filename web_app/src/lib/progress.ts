@@ -56,6 +56,10 @@ export function savedMoneyWon(state: GhState, curriculumId: string): number {
  * 아낀 레슨비의 언어별 통화 표기.
  * OPEN-3(technical_spec §12): 표시 통화 환산율은 미확정. 단가(₩20,000/Day)는 고정 상수이며,
  * 아래 en/ja 환산은 자릿수 감 잡기용 근사치 placeholder(문서화된 결정 전까지 유지, 정밀 회계 용도 아님).
+ *
+ * 주의: "약"/"約"/"about" 같은 근사치 접두어는 여기서 붙이지 않는다. i18n 템플릿
+ * (`progress.saved_money`)이 문구 전체를 책임지므로, 이 함수는 **금액 문자열만** 반환한다.
+ * (과거 버그: 여기서도 접두어를 붙이고 템플릿에도 있어 "약 약 40만 원"처럼 중복 노출됐음.)
  */
 const APPROX_KRW_PER_USD = 1400;
 const APPROX_KRW_PER_JPY = 9.3;
@@ -64,11 +68,11 @@ export function formatSavedMoney(state: GhState, curriculumId: string, lang: Lan
   const won = savedMoneyWon(state, curriculumId);
   if (lang === 'ko') {
     const man = Math.round(won / 10000);
-    return man >= 1 ? `약 ${man.toLocaleString('ko-KR')}만 원` : `${won.toLocaleString('ko-KR')}원`;
+    return man >= 1 ? `${man.toLocaleString('ko-KR')}만 원` : `${won.toLocaleString('ko-KR')}원`;
   }
   if (lang === 'ja') {
     const jpy = Math.round(won / APPROX_KRW_PER_JPY);
-    return `約${jpy.toLocaleString('ja-JP')}円`;
+    return `${jpy.toLocaleString('ja-JP')}円`;
   }
   const usd = Math.round(won / APPROX_KRW_PER_USD);
   return `$${usd.toLocaleString('en-US')}`;

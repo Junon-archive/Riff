@@ -33,7 +33,15 @@
     "week": "Week",
     "month": {
       "days": "lessons"
-    }
+    },
+    "months_unit": "{n} months"
+  },
+  "filter": {
+    "all": "All"
+  },
+  "instrument": {
+    "guitar": "Guitar",
+    "bass": "Bass"
   },
   "months": {
     "done": "Completed 🎉",
@@ -71,7 +79,17 @@
     "kakaopay": "KakaoPay",
     "paypal": "PayPal",
     "bmc": "Buy Me a Coffee",
-    "thanks": "You keep this fun to build. Thank you!"
+    "thanks": "You keep this fun to build. Thank you!",
+    "scan_qr": "Scan with your camera",
+    "preparing": "Coming soon"
+  },
+  "dream": {
+    "tada": "Ta-da!",
+    "guitar": "guitar",
+    "bass": "bass",
+    "line": "This is the dev's dream {instrument}. Just putting that out there 😄 Tapping the button below might help me more than you'd think!",
+    "cta": "Support the dev",
+    "later": "Maybe later"
   },
   "nick": {
     "title": "What should we call you?",

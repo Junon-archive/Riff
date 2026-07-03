@@ -33,7 +33,15 @@
     "week": "주차",
     "month": {
       "days": "개 레슨"
-    }
+    },
+    "months_unit": "{n}개월"
+  },
+  "filter": {
+    "all": "전체"
+  },
+  "instrument": {
+    "guitar": "기타",
+    "bass": "베이스"
   },
   "months": {
     "done": "완료했어요 🎉",
@@ -71,7 +79,17 @@
     "kakaopay": "카카오페이",
     "paypal": "PayPal",
     "bmc": "Buy Me a Coffee",
-    "thanks": "덕분에 오늘도 즐겁게 만들어요. 고마워요!"
+    "thanks": "덕분에 오늘도 즐겁게 만들어요. 고마워요!",
+    "scan_qr": "카메라로 스캔하세요",
+    "preparing": "준비 중이에요"
+  },
+  "dream": {
+    "tada": "쨘!",
+    "guitar": "기타",
+    "bass": "베이스",
+    "line": "주인장의 드림 {instrument}예요. 그냥 그렇다구요 ㅎㅎ 아래 버튼을 살짝 눌러보면, 주인장에게 큰 힘이 될지도 몰라요!",
+    "cta": "후원하러 가기",
+    "later": "다음에요"
   },
   "nick": {
     "title": "어떻게 부르면 될까요?",

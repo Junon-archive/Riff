@@ -172,10 +172,30 @@ h1.display {
 }
 .curr-body { padding: 18px 20px 20px; }
 .curr-body h3 { margin: 0; font-size: 19px; font-weight: 800; letter-spacing: -0.03em; }
+/* "이런 분께" 한 줄 — 등급 라벨(입문/중급/고급) 대신 능력·상황 기준 안내(은은하게, 제목 바로 아래). */
+.curr-for-who { margin: 6px 0 0; font-size: 13px; font-weight: 600; color: var(--text-3); }
 .curr-meta { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
 .meta-pill {
   font-size: 12px; font-weight: 600; color: var(--text-2);
   background: var(--grey-100); padding: 5px 10px; border-radius: var(--pill);
+}
+
+/* 악기 필터 칩 행 — 서로 다른 instrument 가 2종 이상일 때만 SSR에서 노출(HomeView.astro).
+   .lang-seg 세그먼트와 동일한 톤(연회색 알약 배경, 활성 시 카드색+그림자)을 따르되
+   가로 스크롤 가능한 칩 나열형으로 쓴다. */
+.filter-chips {
+  display: flex; gap: 8px; margin-top: 16px; overflow-x: auto;
+  -ms-overflow-style: none; scrollbar-width: none;
+}
+.filter-chips::-webkit-scrollbar { display: none; }
+.filter-chips[hidden] { display: none; }
+.chip-btn {
+  flex: none; font-size: 13px; font-weight: 700; color: var(--text-2);
+  background: var(--grey-100); padding: 8px 14px; border-radius: var(--pill);
+  transition: all .15s;
+}
+.chip-btn.active {
+  background: var(--primary); color: #fff;
 }
 
 .teaser {
@@ -208,6 +228,7 @@ h1.display {
    커리큘럼 계층(아코디언 트리)
    ============================================================ */
 .curr-head { padding: 20px 4px 4px; }
+.curr-head-for-who { margin-top: 8px; font-size: 14px; }
 .prog-summary {
   margin-top: 16px; padding: 18px 20px; background: var(--primary-weak);
   border-radius: var(--radius); border: none;
@@ -387,18 +408,45 @@ h1.display {
 .save-amount .big b { color: var(--primary); font-size: 30px; }
 .pay-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 18px 0 6px; }
 .pay-btn {
+  position: relative;
   display: flex; align-items: center; gap: 10px; padding: 15px 16px;
   border: 1px solid var(--line); border-radius: var(--radius-sm);
   background: var(--card); font-weight: 700; font-size: 14.5px; transition: transform .1s, background .15s;
 }
 .pay-btn:active { transform: scale(.98); background: var(--grey-50); }
+.pay-btn:disabled { opacity: .5; cursor: default; }
+.pay-btn:disabled:active { transform: none; background: var(--card); }
 .pay-btn .ico { width: 30px; height: 30px; border-radius: 9px; display: grid; place-items: center;
   font-size: 15px; color: #fff; flex: none; }
 .pay-toss   .ico { background: #3182F6; }
 .pay-kakao  .ico { background: #FEE500; color: #191F28; }
 .pay-paypal .ico { background: #0070BA; }
 .pay-bmc    .ico { background: #FFDD00; color: #191F28; }
+.pay-badge {
+  position: absolute; top: -7px; right: -6px;
+  background: var(--grey-700); color: #fff;
+  font-size: 10px; font-weight: 700; letter-spacing: -0.01em;
+  padding: 3px 7px; border-radius: var(--pill); white-space: nowrap;
+}
 .close-free { margin-top: 8px; }
+
+/* 도네이션 QR 뷰 — qr 이 설정된 채널 클릭 시 pay-grid 대신 노출(scripts/app.ts showDonateQr). */
+.qr-view[hidden] { display: none; }
+.qr-view { display: flex; flex-direction: column; align-items: center; padding: 4px 0 6px; }
+.qr-back {
+  align-self: flex-start;
+  display: inline-flex; align-items: center; gap: 4px;
+  color: var(--text-2); font-size: 14px; font-weight: 700;
+  padding: 8px 4px; margin: 0 0 6px;
+}
+.qr-back:active { opacity: .6; }
+.qr-img {
+  width: 200px; height: 200px; margin: 24px 0 18px;
+  border-radius: var(--radius-sm); border: 1px solid var(--line);
+  background: var(--card-sub); object-fit: contain;
+}
+.qr-hint { color: var(--text-2); font-size: 14.5px; margin: 0 0 18px; text-align: center; }
+#qrLinkBtn { margin-top: 4px; }
 
 /* 닉네임 입력 */
 .field {
@@ -417,6 +465,51 @@ h1.display {
   border: 1.5px solid var(--line); background: var(--card-sub); color: var(--text);
   padding: 14px 16px; font-size: 13px; font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
   margin-top: 12px;
+}
+
+/* ============================================================
+   "드림 기타" 후원 연출 시트 — 마일스톤 달성 시 도네이션 시트 대신 먼저 노출.
+   ============================================================ */
+.sheet-dream { text-align: center; padding-top: 10px; }
+.dream-stage {
+  position: relative; display: flex; align-items: center; justify-content: center;
+  padding: 18px 0 6px; min-height: 180px;
+}
+.dream-tada {
+  position: absolute; top: -2px; left: 50%; z-index: 2;
+  transform: translateX(-50%) rotate(-9deg);
+  color: var(--primary); font-size: 26px; font-weight: 800; letter-spacing: -0.02em;
+  text-shadow: 0 2px 0 var(--bg);
+  animation: dream-tada-pop .55s cubic-bezier(.2,1.4,.4,1) both;
+  animation-delay: .28s;
+}
+.dream-img {
+  max-width: 260px; width: 82%; height: auto; display: block; margin: 12px auto 0;
+  filter: drop-shadow(0 14px 22px rgba(0,0,0,.18));
+  animation: dream-img-pop .5s cubic-bezier(.22,1.3,.36,1) both;
+}
+.dream-name {
+  color: var(--text-3); font-size: 12.5px; font-weight: 600; letter-spacing: -0.01em;
+  margin: 4px 0 2px;
+}
+.dream-line {
+  color: var(--text-2); font-size: 14.5px; line-height: 1.55;
+  margin: 14px 0 20px; word-break: keep-all;
+}
+#dreamDonateBtn { margin-bottom: 8px; }
+
+@keyframes dream-img-pop {
+  0% { opacity: 0; transform: scale(.55) translateY(18px); }
+  65% { opacity: 1; transform: scale(1.06) translateY(-2px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+@keyframes dream-tada-pop {
+  0% { opacity: 0; transform: translateX(-50%) rotate(-9deg) scale(.4); }
+  55% { opacity: 1; transform: translateX(-50%) rotate(-9deg) scale(1.18); }
+  100% { opacity: 1; transform: translateX(-50%) rotate(-9deg) scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dream-tada, .dream-img { animation: none; }
 }
 
 /* ============================================================

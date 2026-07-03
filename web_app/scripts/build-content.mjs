@@ -457,7 +457,13 @@ function main() {
         topic: curMeta?.topic ?? null,
         level: curMeta?.level ?? null,
         tags: curMeta?.tags ?? [],
-        overview: curOverview,
+        // 분류 스킴(등급 라벨 금지, "이런 분께" + 기간 배지 + 악기 필터로 대체):
+        // forWho = 카드에 노출되는 3언어 한 줄("이런 분께"). durationMonths = 기간 메타 배지.
+        // level(정수)은 정렬용 내부 값으로만 남기고 화면엔 절대 노출하지 않는다.
+        forWho: curMeta?.forWho ?? null,
+        durationMonths: curMeta?.durationMonths ?? null,
+        // 주의: 커리큘럼 최상위 overview.md 는 내부 설계 문서(트래킹 표·메타)라 사용자 노출 금지 →
+        // manifest 에 html 을 싣지 않는다. 카드 소개는 taglines/forWho 로 대체.
         totalDays: allDayKeys.length,
         dayKeys: allDayKeys,
         months: manifestMonths,

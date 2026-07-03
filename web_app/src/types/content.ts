@@ -65,13 +65,30 @@ export interface ManifestCurriculum {
   id: string;
   /** 커리큘럼 개요 제목 (언어별). overview.md 최상단 heading. */
   titles: LangMap;
-  /** 커리큘럼 개요 HTML (언어별). overview.md */
-  overview: LangMap;
+  /** (미사용) 커리큘럼 최상위 overview.md 는 내부 설계 문서라 manifest 에 싣지 않음. 카드 소개는 taglines/forWho. */
+  overview?: LangMap;
   /** 총 Day 수(진도율/아낀 레슨비 분모). */
   totalDays: number;
   /** 평탄화된 dayKey 목록(이전/다음 Day 내비게이션 소스, 진행 순서). */
   dayKeys: string[];
   months: ManifestMonth[];
+
+  /* --------------------------------------------------------------
+   * 분류 스킴(meta.json 발원, build-content.mjs 통과). "입문/중급/고급" 같은
+   * 등급 라벨은 화면에 절대 쓰지 않는다 — level 은 정렬용 내부 값일 뿐이다.
+   * -------------------------------------------------------------- */
+  /** 카드 하단 태그라인(언어별), meta.json 없으면 null. */
+  taglines: LangMap | null;
+  /** 악기 필터 칩의 키(예: "guitar"/"bass"). 2종 이상일 때만 필터 UI 노출. */
+  instrument: string | null;
+  topic: string | null;
+  /** 정렬 전용 내부 등급. 화면에 "입문/중급/고급" 등으로 노출 금지. */
+  level: number | null;
+  tags: string[];
+  /** "이런 분께" 한 줄(언어별) — 등급 라벨 대신 능력/상황 기준 안내. */
+  forWho: LangMap | null;
+  /** 기간(개월) 메타 배지. */
+  durationMonths: number | null;
 }
 
 export interface ContentManifest {

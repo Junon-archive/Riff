@@ -33,7 +33,15 @@
     "week": "週",
     "month": {
       "days": "レッスン"
-    }
+    },
+    "months_unit": "{n}か月"
+  },
+  "filter": {
+    "all": "すべて"
+  },
+  "instrument": {
+    "guitar": "ギター",
+    "bass": "ベース"
   },
   "months": {
     "done": "完了しました 🎉",
@@ -71,7 +79,17 @@
     "kakaopay": "KakaoPay",
     "paypal": "PayPal",
     "bmc": "Buy Me a Coffee",
-    "thanks": "おかげで、今日も楽しく作れています。ありがとうございます！"
+    "thanks": "おかげで、今日も楽しく作れています。ありがとうございます！",
+    "scan_qr": "カメラでスキャンしてください",
+    "preparing": "準備中です"
+  },
+  "dream": {
+    "tada": "じゃーん！",
+    "guitar": "ギター",
+    "bass": "ベース",
+    "line": "これ、作った人の夢の{instrument}なんです。まあ、それだけの話なんですけどね 笑 下のボタンをそっと押すと、私にとって大きな力になるかもしれません！",
+    "cta": "応援する",
+    "later": "また今度"
   },
   "nick": {
     "title": "なんて呼べばいい？",

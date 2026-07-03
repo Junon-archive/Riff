@@ -6,7 +6,7 @@
 import { translate } from '../lib/i18n';
 import { getManifest } from '../lib/content';
 import { curriculumPath, localize } from '../lib/urls';
-import { cleanTitle, stripAndTruncate } from '../views/textUtils';
+import { cleanTitle } from '../views/textUtils';
 import type { Lang } from '../config';
 
 interface Props {
@@ -14,6 +14,15 @@ interface Props {
 }
 const { lang } = Astro.props;
 const manifest = getManifest();
+
+/**
+ * 악기 필터 칩 인프라: "입문/중급/고급" 등급 라벨 대신 악기 단위로만 필터한다.
+ * 서로 다른 instrument 가 2종 이상일 때만 칩 행을 노출(지금은 기타 1종뿐이라 자동 숨김 —
+ * 데이터가 늘어나면 하드코딩 분기 없이 자연히 나타난다). 판정은 SSR에서, 실제 필터링은
+ * scripts/app.ts 가 data-instrument 로 카드를 in-place 토글한다.
+ */
+const instruments = [...new Set(manifest.curricula.map((c) => c.instrument).filter((v): v is string => !!v))];
+const showInstrumentFilter = instruments.length >= 2;
 ---
 
 <main class="view" id="view-home">
@@ -23,14 +32,31 @@ const manifest = getManifest();
     <p class="lead">{translate(lang, 'home.lead')}</p>
   </section>
 
+  <div class="filter-chips" id="instrumentFilter" hidden={!showInstrumentFilter}>
+    <button type="button" class="chip-btn active" data-filter-instrument="all">
+      {translate(lang, 'filter.all')}
+    </button>
+    {instruments.map((inst) => (
+      <button type="button" class="chip-btn" data-filter-instrument={inst}>
+        {translate(lang, `instrument.${inst}`)}
+      </button>
+    ))}
+  </div>
+
   <div id="currList">
     {manifest.curricula.map((c) => (
-      <a class="card curr-card tap" href={localize(lang, curriculumPath(c.id))}>
+      <a class="card curr-card tap" data-instrument={c.instrument ?? ''} href={localize(lang, curriculumPath(c.id))}>
         <div class="curr-thumb"><span class="chip">{translate(lang, 'curr.eyebrow')}</span></div>
         <div class="curr-body">
           <h3>{cleanTitle(c.titles[lang])}</h3>
-          <p class="muted" style="margin:8px 0 0;font-size:14px">{stripAndTruncate(c.overview[lang])}</p>
-          <div class="curr-meta"><span class="meta-pill">{c.totalDays} {translate(lang, 'curr.month.days')}</span></div>
+          {c.taglines && <p class="muted" style="margin:8px 0 0;font-size:14px">{c.taglines[lang]}</p>}
+          {c.forWho && <p class="curr-for-who">{c.forWho[lang]}</p>}
+          <div class="curr-meta">
+            {c.durationMonths && (
+              <span class="meta-pill">{translate(lang, 'curr.months_unit', { n: c.durationMonths })}</span>
+            )}
+            <span class="meta-pill">{c.totalDays} {translate(lang, 'curr.month.days')}</span>
+          </div>
         </div>
       </a>
     ))}

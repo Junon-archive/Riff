@@ -13,5 +13,11 @@
   "instrument": "guitar",
   "topic": "solo-scale",
   "level": 2,
-  "tags": ["solo", "scale", "improv", "intermediate"]
+  "tags": ["solo", "scale", "improv", "intermediate"],
+  "durationMonths": 3,
+  "forWho": {
+    "ko": "곡은 쳐봤지만, 즉흥 솔로는 처음인 분께",
+    "en": "For players who can play songs but have never improvised",
+    "ja": "曲は弾けるけど、即興ソロは初めての人へ"
+  }
 }
