@@ -1,0 +1,24 @@
+# Week 11 — Switching Modes by Genre + Singing Like Real Music with Space and Phrasing
+> Curriculum: solo_scale_3months · Month 3 · Parent: ../month_3_overview.md · dayKey: m3.w11
+
+With W9 (Dorian) and W10 (Mixolydian) under your belt, you've got "picking the right note" covered. But real-world playing means backing tracks roll through different genres — blues flows into funk, funk into rock — and every time that happens, you have to decide "what mode do I play this in?" in real time, mid-progression. This week, you'll swap in a new genre's backing every day to build that decision-making muscle, while layering on the final piece that turns "a string of notes" into music — **space and phrasing.** Right before you move into composing in W12, this is the week you complete your expression.
+
+## What We're Building This Week
+Build the **decision-making muscle** to choose and switch scales (modes) in real time the instant the chord's character changes. Minor/modal vamp → Dorian, dominant/blues → Mixolydian plus the blue note, ♭VII power-chord rock → Mixolydian — get this decision chart into your body. Then layer expressive tools on top (space, motifs, call-and-response, dynamics) so the same 3rd landing lands like a real melody, phrased in each genre's own voice.
+
+## Why This, Why Now
+You've got "the right notes," but running a scale nonstop is still "practice," not "music." Now that targeting and modes are both fully in place, this is exactly the right moment to learn the expression that turns scale-running into music. That's why the space-and-phrasing mini-lesson sits right here in the master design. Combining real-world genre switching with this final brushstroke of expression flows naturally into composing your original solo next week.
+
+## This Week's Journey (Day 1 → Day 4)
+- **Day 1 — Blues: dragging it out, sticky and slow.** Start on home turf: a blues (A7–D7–E7, I-IV-V). Dominant/blues means the mode choice is almost automatic — Mixolydian plus the blue note. Land on each chord's 3rd (C#/F#/G#), but today's real topic isn't "the right note," it's "how do you sing it." Don't snap your notes onto the beat's head — come in a half-beat **laid back**, and let landing notes ring out long with vibrato for that sticky, drawn-out sound.
+- **Day 2 — Funk: toss it out, then cut the silence clean.** If blues drags, funk is its exact opposite — extremely tight, with rests as the true star of the rhythm. The Am7–D9 vamp (Cissy Strut / Chameleon style) is minor/modal, so Dorian alone covers both chords. Here's a nice "aha" moment — Dorian's color note F# (♮6) is also D9's 3rd, so switching is just a matter of deciding whether you're on 3rd string 5th fret (C) or 2nd string 7th fret (F#). Cut "play-then-rest" precisely on the 16th-note grid, with exact, clean silence.
+- **Day 3 — Rock: push it up big, let it ring out long.** The power-chord riff (A5–G5–D5, I-♭VII-IV) is a ♭VII progression, so Mixolydian's color is exactly right. Land on C# over A5 (bending up a whole step from B below), B over G5, and F# over D5. Rock's whole attitude is a **powerful long tone and a big vibrato** — bend one note hard and let it ring, instead of fussing with little tricks. Leave space as a big, deliberate silence — "the quiet before firing the next cannon."
+- **Day 4 — A combined medley, switching live.** Over a medley that flows blues → funk → rock, switch both your mode and your phrasing mood completely at every genre seam. Here's an insight you'll discover along the way — the 3rd targets for all three genres sit right next to each other on the 3rd string, frets 4, 5, and 6 (B, C, C#). Your hand barely moves at all; it's which fret you pick and how you sing it that makes the genre.
+
+## The Core Feel to Hold Onto
+- **Switching modes isn't a big hand relocation — it's a switch in judgment and expression.** Decision chart: dominant/blues → Mixolydian plus the blue note, minor/modal → Dorian, ♭VII power-chord rock → Mixolydian.
+- **The same 3rd landing sings differently in every genre.** Blues = laid back, long ring-outs. Funk = 16th-note chops, short staccato, precise rests. Rock = long tones, bold bends. Same idea, three different outfits.
+- **Space is a skill, not laziness.** Build a "conversation" — asking and answering yourself with rests, motifs, and call-and-response — and that's the moment a string of notes finally becomes music.
+
+## By the End of This Week
+You'll be able to hear a backing track's genre and instantly decide which mode to play, landing on each chord's 3rd as the chord changes. You'll sing the same 3rd landing differently by genre — sticky for blues, tight for funk, powerful for rock — and you'll be able to record a medley where you switch your mode and phrasing mood completely at every genre seam. Your hands now hold "how to sing" on top of "how to pick the right notes."

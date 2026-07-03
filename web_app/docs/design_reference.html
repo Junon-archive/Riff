@@ -1,0 +1,1344 @@
+<!--
+  Riff — 무료 기타 레슨 웹서비스 (디자인 레퍼런스 목업)
+  ------------------------------------------------------------
+  · 디자인 톤: TOSS (흰색/파랑, 미니멀, 넓은 여백, 큰 라운드, 친절한 대화체)
+  · 모바일 우선 + PC 지원(중앙 앱 컬럼)
+  · 로그인 없음: 닉네임 + localStorage 진도 (try/catch로 인메모리 폴백)
+  · 3개국어(KR/EN/JP) i18n 스위처 상시 노출
+  · 지판/타브는 이미지가 아니라 JSON 데이터 → SVG 렌더 (currentColor 기반 = 다크모드 자동 대응)
+  · 순수 프론트엔드, 외부 CDN 의존 없음(시스템 폰트 스택)
+  ------------------------------------------------------------
+  실제 렌더러(Fretboard/Tab)가 들어갈 자리는 정확한 형태의 SVG placeholder로 잡아둠.
+-->
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Riff · 무료 기타 레슨 (디자인 목업)</title>
+<style>
+  /* ============================================================
+     디자인 토큰 — Toss 팔레트
+     ============================================================ */
+  :root {
+    --blue-50:  #E8F3FF;
+    --blue-100: #C9E2FF;
+    --blue-500: #3182F6;   /* Toss 시그니처 블루 */
+    --blue-600: #2272EB;
+    --blue-700: #1B64DA;
+
+    --grey-900: #191F28;
+    --grey-800: #333D4B;
+    --grey-700: #4E5968;
+    --grey-600: #6B7684;
+    --grey-500: #8B95A1;
+    --grey-400: #B0B8C1;
+    --grey-300: #D1D6DB;
+    --grey-200: #E5E8EB;
+    --grey-100: #F2F4F6;
+    --grey-50:  #F9FAFB;
+
+    --green-500: #12B886;
+    --yellow-500: #FFC043;
+
+    /* 의미 토큰(라이트) */
+    --bg:        #FFFFFF;
+    --bg-sub:    #F2F4F6;   /* 앱 밖 배경(데스크톱 프레임) */
+    --card:      #FFFFFF;
+    --card-sub:  #F9FAFB;
+    --line:      #E5E8EB;
+    --text:      #191F28;
+    --text-2:    #4E5968;
+    --text-3:    #8B95A1;
+    --primary:   #3182F6;
+    --primary-press: #1B64DA;
+    --primary-weak:  #E8F3FF;
+    --shadow:    0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(0,0,0,.06);
+    --shadow-sm: 0 1px 2px rgba(0,0,0,.05), 0 2px 8px rgba(0,0,0,.04);
+
+    --radius-lg: 24px;
+    --radius:    20px;
+    --radius-sm: 14px;
+    --pill:      999px;
+
+    --app-w: 480px;
+    --safe-b: env(safe-area-inset-bottom, 0px);
+
+    --font: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+            "Pretendard", "Malgun Gothic", "Segoe UI",
+            "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP",
+            "Noto Sans KR", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+
+  [data-theme="dark"] {
+    --bg:        #17171C;
+    --bg-sub:    #0E0E12;
+    --card:      #1E1E24;
+    --card-sub:  #26262E;
+    --line:      #2E2E38;
+    --text:      #EDEEF0;
+    --text-2:    #B0B8C1;
+    --text-3:    #7C838D;
+    --primary:   #4593FC;
+    --primary-press: #3182F6;
+    --primary-weak:  #17263D;
+    --shadow:    0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.5);
+    --shadow-sm: 0 1px 2px rgba(0,0,0,.4), 0 2px 8px rgba(0,0,0,.35);
+    --grey-100:  #26262E;
+    --grey-50:   #1E1E24;
+    --grey-200:  #2E2E38;
+  }
+
+  /* ============================================================
+     리셋 & 기본
+     ============================================================ */
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: var(--font);
+    background: var(--bg-sub);
+    color: var(--text);
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    -webkit-font-smoothing: antialiased;
+    transition: background .25s ease, color .25s ease;
+  }
+  button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation-duration: .001ms !important; transition-duration: .01ms !important; }
+  }
+
+  /* ============================================================
+     앱 셸 — 데스크톱에선 중앙 앱 컬럼
+     ============================================================ */
+  .app {
+    position: relative;
+    max-width: var(--app-w);
+    min-height: 100vh;
+    margin: 0 auto;
+    background: var(--bg);
+    transition: background .25s ease;
+  }
+  @media (min-width: 600px) {
+    .app {
+      min-height: calc(100vh - 48px);
+      margin: 24px auto;
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+  }
+
+  /* ---- 헤더 ---- */
+  .topbar {
+    position: sticky; top: 0; z-index: 40;
+    display: flex; align-items: center; gap: 8px;
+    height: 56px; padding: 0 8px 0 6px;
+    background: color-mix(in srgb, var(--bg) 82%, transparent);
+    backdrop-filter: saturate(180%) blur(12px);
+    -webkit-backdrop-filter: saturate(180%) blur(12px);
+    border-bottom: 1px solid transparent;
+  }
+  .topbar.scrolled { border-bottom-color: var(--line); }
+  .icon-btn {
+    width: 40px; height: 40px; border-radius: 12px;
+    display: grid; place-items: center; color: var(--text);
+    transition: background .15s;
+  }
+  .icon-btn:active { background: var(--grey-100); }
+  .brand {
+    display: flex; align-items: center; gap: 8px;
+    font-weight: 800; font-size: 19px; letter-spacing: -0.03em;
+  }
+  .brand .pick {
+    width: 22px; height: 22px; color: var(--primary);
+  }
+  .topbar .spacer { flex: 1; }
+
+  /* 언어 스위처 (세그먼트) */
+  .lang-seg {
+    display: inline-flex; background: var(--grey-100);
+    border-radius: var(--pill); padding: 3px;
+  }
+  .lang-seg button {
+    font-size: 12px; font-weight: 700; color: var(--text-3);
+    padding: 5px 9px; border-radius: var(--pill); line-height: 1;
+    transition: all .15s;
+  }
+  .lang-seg button.active {
+    background: var(--bg); color: var(--text);
+    box-shadow: var(--shadow-sm);
+  }
+  [data-theme="dark"] .lang-seg button.active { background: #3A3A44; }
+
+  .nick-chip {
+    display: inline-flex; align-items: center; gap: 6px;
+    max-width: 108px; padding: 7px 12px; border-radius: var(--pill);
+    background: var(--primary-weak); color: var(--primary);
+    font-size: 13px; font-weight: 700;
+  }
+  .nick-chip span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+  /* ---- 뷰 컨테이너 ---- */
+  .view { padding: 8px 20px 120px; }
+  .view[hidden] { display: none; }
+
+  /* ============================================================
+     타이포 & 공통
+     ============================================================ */
+  .eyebrow { font-size: 13px; font-weight: 700; color: var(--primary); letter-spacing: 0; }
+  h1.display {
+    font-size: 30px; font-weight: 800; letter-spacing: -0.035em;
+    line-height: 1.28; margin: 10px 0 0;
+  }
+  .lead { font-size: 16px; color: var(--text-2); margin: 12px 0 0; font-weight: 500; }
+  .section-title { font-size: 20px; font-weight: 800; letter-spacing: -0.03em; margin: 0; }
+  .muted { color: var(--text-3); }
+
+  .card {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: var(--radius); padding: 20px;
+    transition: transform .12s ease, box-shadow .15s ease, background .25s;
+  }
+  .card.tap { cursor: pointer; }
+  .card.tap:active { transform: scale(.985); }
+
+  /* 큰 파랑 버튼 (Toss 스타일 CTA) */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    width: 100%; height: 56px; border-radius: var(--radius-sm);
+    background: var(--primary); color: #fff;
+    font-size: 17px; font-weight: 700; letter-spacing: -0.02em;
+    transition: transform .1s, background .15s, opacity .15s;
+  }
+  .btn:active { transform: scale(.98); background: var(--primary-press); }
+  .btn.secondary { background: var(--grey-100); color: var(--text); }
+  .btn.ghost { background: transparent; color: var(--text-2); height: 48px; }
+  .btn:disabled { opacity: .5; cursor: default; }
+
+  /* 진도 바 */
+  .pbar { height: 8px; border-radius: var(--pill); background: var(--grey-200); overflow: hidden; }
+  .pbar > i { display: block; height: 100%; background: var(--primary); border-radius: var(--pill);
+    transition: width .6s cubic-bezier(.2,.8,.2,1); }
+
+  .row { display: flex; align-items: center; }
+  .between { justify-content: space-between; }
+  .gap8 { gap: 8px; } .gap12 { gap: 12px; }
+
+  /* ============================================================
+     랜딩
+     ============================================================ */
+  .hero { padding: 24px 4px 8px; }
+  .free-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--primary-weak); color: var(--primary);
+    font-size: 13px; font-weight: 800; padding: 8px 14px; border-radius: var(--pill);
+  }
+  .hero h1 .accent { color: var(--primary); }
+
+  .curr-card { margin-top: 16px; overflow: hidden; padding: 0; }
+  .curr-thumb {
+    height: 132px; display: flex; align-items: flex-end; padding: 16px;
+    background:
+      radial-gradient(120% 120% at 100% 0%, rgba(255,255,255,.28), transparent 60%),
+      linear-gradient(135deg, #4593FC 0%, #3182F6 55%, #1B64DA 100%);
+    color: #fff;
+  }
+  .chip {
+    display: inline-block; font-size: 12px; font-weight: 700;
+    background: rgba(255,255,255,.22); padding: 5px 10px; border-radius: var(--pill);
+    backdrop-filter: blur(4px);
+  }
+  .curr-body { padding: 18px 20px 20px; }
+  .curr-body h3 { margin: 0; font-size: 19px; font-weight: 800; letter-spacing: -0.03em; }
+  .curr-meta { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
+  .meta-pill {
+    font-size: 12px; font-weight: 600; color: var(--text-2);
+    background: var(--grey-100); padding: 5px 10px; border-radius: var(--pill);
+  }
+
+  .teaser {
+    margin-top: 16px; border-style: dashed; background: var(--card-sub);
+    display: flex; align-items: center; gap: 14px;
+  }
+  .teaser .emoji { font-size: 26px; }
+  .teaser h3 { margin: 0; font-size: 16px; font-weight: 800; }
+  .teaser p { margin: 3px 0 0; font-size: 13px; color: var(--text-3); }
+
+  .philosophy {
+    margin-top: 28px; text-align: center; padding: 28px 16px;
+  }
+  .philosophy p { font-size: 15px; color: var(--text-2); font-weight: 500; margin: 0; }
+  .philosophy strong { color: var(--text); font-weight: 800; }
+
+  /* 저장 안내 배너 */
+  .storage-note {
+    margin-top: 16px; display: flex; gap: 12px; align-items: flex-start;
+    background: var(--card-sub); border: 1px solid var(--line);
+    border-radius: var(--radius-sm); padding: 14px 16px;
+  }
+  .storage-note .emoji { font-size: 20px; line-height: 1.4; }
+  .storage-note p { margin: 0; font-size: 13px; color: var(--text-2); }
+  .storage-note button {
+    margin-top: 8px; font-size: 13px; font-weight: 700; color: var(--primary);
+  }
+
+  /* ============================================================
+     커리큘럼 계층(아코디언 트리)
+     ============================================================ */
+  .curr-head { padding: 20px 4px 4px; }
+  .prog-summary {
+    margin-top: 16px; padding: 18px 20px; background: var(--primary-weak);
+    border-radius: var(--radius); border: none;
+  }
+  .prog-summary .big { font-size: 28px; font-weight: 800; color: var(--primary); letter-spacing: -0.03em; }
+
+  .month { margin-top: 14px; }
+  .month-head {
+    width: 100%; display: flex; align-items: center; gap: 12px;
+    padding: 18px 20px; background: var(--card); border: 1px solid var(--line);
+    border-radius: var(--radius); text-align: left; transition: background .15s;
+  }
+  .month.open .month-head { border-radius: var(--radius) var(--radius) 0 0; }
+  .month-head:active { background: var(--grey-50); }
+  .month-num {
+    width: 38px; height: 38px; flex: none; border-radius: 12px;
+    background: var(--primary-weak); color: var(--primary);
+    display: grid; place-items: center; font-weight: 800; font-size: 14px;
+  }
+  .month.done .month-num { background: var(--green-500); color: #fff; }
+  .month-head .t { flex: 1; min-width: 0; }
+  .month-head .t b { display: block; font-size: 16px; font-weight: 800; letter-spacing: -0.02em; }
+  .month-head .t small { color: var(--text-3); font-size: 13px; font-weight: 500; }
+  .caret { color: var(--text-3); transition: transform .25s; flex: none; }
+  .month.open .caret { transform: rotate(180deg); }
+
+  .month-body {
+    display: none; border: 1px solid var(--line); border-top: none;
+    border-radius: 0 0 var(--radius) var(--radius); overflow: hidden;
+    background: var(--card-sub);
+  }
+  .month.open .month-body { display: block; }
+  .month.soon .month-head { opacity: .62; }
+
+  .week { padding: 6px 12px 12px; }
+  .week-label {
+    display: flex; align-items: center; gap: 8px;
+    padding: 14px 8px 8px; font-size: 13px; font-weight: 800; color: var(--text-2);
+  }
+  .week-label .wp { height: 6px; flex: 1; }
+
+  .day {
+    width: 100%; display: flex; align-items: center; gap: 12px;
+    padding: 13px 12px; border-radius: 14px; text-align: left;
+    background: var(--card); border: 1px solid var(--line); margin-top: 6px;
+    transition: transform .1s, background .15s;
+  }
+  .day:active { transform: scale(.99); background: var(--grey-50); }
+  .day .check {
+    width: 26px; height: 26px; flex: none; border-radius: 50%;
+    border: 2px solid var(--grey-300); display: grid; place-items: center;
+    color: transparent; transition: all .2s;
+  }
+  .day.done .check { background: var(--green-500); border-color: var(--green-500); color: #fff; }
+  .day .dt { flex: 1; min-width: 0; }
+  .day .dt b { display: block; font-size: 15px; font-weight: 700; letter-spacing: -0.02em; }
+  .day .dt small { color: var(--text-3); font-size: 12.5px; }
+  .day .arr { color: var(--grey-400); flex: none; }
+  .day.locked { opacity: .5; }
+
+  /* ============================================================
+     레슨 상세(Day)
+     ============================================================ */
+  .lesson-head { padding: 16px 4px 4px; }
+  .crumb { font-size: 13px; font-weight: 700; color: var(--primary); }
+  .lesson-head h1 { font-size: 26px; font-weight: 800; letter-spacing: -0.035em; margin: 10px 0 0; }
+  .lesson-head .sub { color: var(--text-2); margin: 8px 0 0; font-size: 15px; }
+
+  .block { margin-top: 26px; }
+  .block-tag {
+    display: inline-flex; align-items: center; gap: 7px;
+    font-size: 13px; font-weight: 800; color: var(--primary);
+    margin-bottom: 12px;
+  }
+  .block-tag .n {
+    width: 22px; height: 22px; border-radius: 7px; font-size: 12px;
+    background: var(--primary-weak); display: grid; place-items: center;
+  }
+  .prose p { font-size: 15.5px; color: var(--text); margin: 0 0 14px; line-height: 1.72; }
+  .prose p:last-child { margin-bottom: 0; }
+  .callout {
+    background: var(--primary-weak); border-radius: var(--radius-sm);
+    padding: 16px 18px; font-size: 14.5px; color: var(--text); font-weight: 500;
+    display: flex; gap: 10px; margin-top: 4px;
+  }
+  .callout .emoji { font-size: 18px; }
+
+  /* SVG 렌더 영역 (지판/타브) */
+  .render-area {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: var(--radius); padding: 20px 18px; overflow: hidden;
+  }
+  .render-area + .render-area { margin-top: 12px; }
+  .render-cap {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 4px;
+  }
+  .render-cap b { font-size: 14px; font-weight: 800; }
+  .render-cap .badge {
+    font-size: 11px; font-weight: 700; color: var(--text-3);
+    background: var(--grey-100); padding: 4px 8px; border-radius: var(--pill);
+  }
+  .render-note { font-size: 12px; color: var(--text-3); margin: 10px 0 0; text-align: center; }
+  .fretboard, .tabsvg { width: 100%; height: auto; display: block; color: var(--text); }
+
+  /* 완료 버튼 영역 */
+  .complete-wrap { margin-top: 28px; }
+  .done-state {
+    display: flex; align-items: center; gap: 12px; justify-content: center;
+    background: var(--card-sub); border: 1px solid var(--line);
+    border-radius: var(--radius-sm); height: 56px; font-weight: 800; color: var(--green-500);
+  }
+
+  .lesson-nav { display: flex; gap: 10px; margin-top: 12px; }
+  .lesson-nav .btn { height: 50px; font-size: 15px; }
+
+  /* ============================================================
+     하단 고정 CTA (도네이션 진입)
+     ============================================================ */
+  .footer-cta {
+    position: sticky; bottom: 0; z-index: 30;
+    padding: 12px 20px calc(12px + var(--safe-b));
+    background: linear-gradient(to top, var(--bg) 68%, transparent);
+  }
+
+  /* ============================================================
+     바텀시트 / 모달 공통
+     ============================================================ */
+  .scrim {
+    position: fixed; inset: 0; z-index: 60; background: rgba(0,0,0,.42);
+    opacity: 0; pointer-events: none; transition: opacity .28s;
+    display: flex; align-items: flex-end; justify-content: center;
+  }
+  .scrim.show { opacity: 1; pointer-events: auto; }
+  .sheet {
+    width: 100%; max-width: var(--app-w); background: var(--bg);
+    border-radius: 28px 28px 0 0; padding: 10px 24px calc(28px + var(--safe-b));
+    transform: translateY(100%); transition: transform .34s cubic-bezier(.2,.9,.25,1);
+    max-height: 88vh; overflow-y: auto;
+  }
+  .scrim.show .sheet { transform: translateY(0); }
+  .grip { width: 40px; height: 4px; border-radius: 4px; background: var(--grey-300);
+    margin: 0 auto 18px; }
+  .sheet h2 { font-size: 21px; font-weight: 800; letter-spacing: -0.03em; margin: 0 0 6px; }
+  .sheet .sh-sub { color: var(--text-2); font-size: 14.5px; margin: 0 0 20px; }
+
+  /* 도네이션 */
+  .save-amount {
+    text-align: center; padding: 22px 0 8px;
+  }
+  .save-amount .big {
+    font-size: 22px; font-weight: 800; color: var(--text);
+    letter-spacing: -0.03em; line-height: 1.4; word-break: keep-all;
+  }
+  .save-amount .big b { color: var(--primary); font-size: 30px; }
+  .pay-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 18px 0 6px; }
+  .pay-btn {
+    display: flex; align-items: center; gap: 10px; padding: 15px 16px;
+    border: 1px solid var(--line); border-radius: var(--radius-sm);
+    background: var(--card); font-weight: 700; font-size: 14.5px; transition: transform .1s, background .15s;
+  }
+  .pay-btn:active { transform: scale(.98); background: var(--grey-50); }
+  .pay-btn .ico { width: 30px; height: 30px; border-radius: 9px; display: grid; place-items: center;
+    font-size: 15px; color: #fff; flex: none; }
+  .pay-toss   .ico { background: #3182F6; }
+  .pay-kakao  .ico { background: #FEE500; color: #191F28; }
+  .pay-paypal .ico { background: #0070BA; }
+  .pay-bmc    .ico { background: #FFDD00; color: #191F28; }
+  .close-free { margin-top: 8px; }
+
+  /* 닉네임 입력 */
+  .field {
+    width: 100%; height: 56px; border-radius: var(--radius-sm);
+    border: 1.5px solid var(--line); background: var(--card-sub);
+    padding: 0 18px; font-size: 16px; color: var(--text); font-family: inherit;
+    transition: border-color .15s, background .15s; margin-bottom: 12px;
+  }
+  .field:focus { outline: none; border-color: var(--primary); background: var(--bg); }
+  .field::placeholder { color: var(--text-3); }
+
+  .io-row { display: flex; gap: 10px; margin-top: 6px; }
+  .io-row .btn { height: 52px; font-size: 15px; }
+  .io-text {
+    width: 100%; height: 120px; resize: none; border-radius: var(--radius-sm);
+    border: 1.5px solid var(--line); background: var(--card-sub); color: var(--text);
+    padding: 14px 16px; font-size: 13px; font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+    margin-top: 12px;
+  }
+
+  /* ============================================================
+     nudge 토스트
+     ============================================================ */
+  .toast-wrap {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 70;
+    display: flex; flex-direction: column; align-items: center;
+    padding: 0 16px calc(16px + var(--safe-b)); pointer-events: none;
+  }
+  .toast {
+    width: 100%; max-width: 440px; pointer-events: auto;
+    display: flex; align-items: center; gap: 12px;
+    background: var(--grey-900); color: #fff;
+    border-radius: 18px; padding: 15px 16px; margin-top: 10px;
+    box-shadow: 0 8px 30px rgba(0,0,0,.28);
+    transform: translateY(140%); opacity: 0;
+    transition: transform .4s cubic-bezier(.2,.9,.25,1), opacity .3s;
+  }
+  [data-theme="dark"] .toast { background: #33343C; }
+  .toast.show { transform: translateY(0); opacity: 1; }
+  .toast .emoji { font-size: 22px; flex: none; }
+  .toast .txt { font-size: 14px; font-weight: 600; line-height: 1.45; }
+  .toast .txt b { color: #6EB1FF; }
+
+  /* 컨페티 캔버스 */
+  #confetti { position: fixed; inset: 0; z-index: 65; pointer-events: none; }
+
+  /* 다크모드 토글 아이콘 전환 */
+  .moon { display: none; } .sun { display: block; }
+  [data-theme="dark"] .moon { display: block; } [data-theme="dark"] .sun { display: none; }
+
+  /* 등장 애니메이션 */
+  @keyframes rise { from { opacity: 0; transform: translateY(10px);} to { opacity: 1; transform: none; } }
+  .view > * { animation: rise .4s ease both; }
+  .view > *:nth-child(2){ animation-delay: .03s; }
+  .view > *:nth-child(3){ animation-delay: .06s; }
+  .view > *:nth-child(4){ animation-delay: .09s; }
+</style>
+</head>
+<body>
+<div class="app">
+
+  <!-- ===================== 헤더 ===================== -->
+  <header class="topbar" id="topbar">
+    <button class="icon-btn" id="backBtn" aria-label="뒤로" style="display:none">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M15 19l-7-7 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="brand" id="brandHome" role="button" tabindex="0">
+      <svg class="pick" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M12 2c4.4 0 8 2.6 8 6.4 0 3.1-2 5.2-3.9 7.2-1.4 1.5-2.1 3-2.5 4.9-.2 1-.9 1.5-1.6 1.5-.9 0-1.6-.8-1.9-2.1C9.3 21 9 17 8 14.6 6.9 12 4 11 4 8.4 4 4.6 7.6 2 12 2z"/>
+      </svg>
+      Riff
+    </div>
+    <div class="spacer"></div>
+
+    <div class="lang-seg" id="langSeg" role="tablist" aria-label="언어 선택">
+      <button data-lang="kr" class="active">한글</button>
+      <button data-lang="en">EN</button>
+      <button data-lang="jp">日本</button>
+    </div>
+
+    <button class="icon-btn" id="themeBtn" aria-label="테마 전환">
+      <svg class="sun" width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="2"/><path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.4 1.4M17.6 17.6L19 19M19 5l-1.4 1.4M6.4 17.6L5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <svg class="moon" width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M20 14.5A8 8 0 019.5 4 7 7 0 1020 14.5z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+    </button>
+
+    <button class="nick-chip" id="nickChip" style="display:none"><span id="nickText"></span></button>
+  </header>
+
+  <!-- ===================== 랜딩 ===================== -->
+  <main class="view" id="view-home">
+    <section class="hero">
+      <span class="free-badge">🎁 <span data-i="free.badge"></span></span>
+      <h1 class="display" data-i-html="home.title"></h1>
+      <p class="lead" data-i="home.lead"></p>
+    </section>
+
+    <div id="currList"></div>
+
+    <div class="card teaser">
+      <div class="emoji">🎬</div>
+      <div>
+        <h3 data-i="home.teaser.title"></h3>
+        <p data-i="home.teaser.desc"></p>
+      </div>
+    </div>
+
+    <div class="storage-note">
+      <span class="emoji">💾</span>
+      <div>
+        <p data-i="home.storage"></p>
+        <button id="openStorageBtn" data-i="home.storage.cta"></button>
+      </div>
+    </div>
+
+    <div class="philosophy">
+      <p data-i-html="home.philosophy"></p>
+    </div>
+  </main>
+
+  <!-- ===================== 커리큘럼 계층 ===================== -->
+  <main class="view" id="view-curriculum" hidden>
+    <section class="curr-head">
+      <span class="eyebrow" data-i="curr.eyebrow"></span>
+      <h1 class="display" id="currTitle"></h1>
+    </section>
+
+    <div class="card prog-summary">
+      <div class="row between" style="align-items:flex-end">
+        <div>
+          <div class="muted" style="font-size:13px;font-weight:700" data-i="curr.progress.label"></div>
+          <div class="big"><span id="progPct">0</span>%</div>
+        </div>
+        <div class="muted" style="font-size:13px;font-weight:600">
+          <span id="progDone">0</span>/<span id="progTotal">0</span> <span data-i="curr.days"></span>
+        </div>
+      </div>
+      <div class="pbar" style="margin-top:12px"><i id="progFill" style="width:0%"></i></div>
+    </div>
+
+    <div id="monthTree"></div>
+  </main>
+
+  <!-- ===================== 레슨 상세(Day) ===================== -->
+  <main class="view" id="view-lesson" hidden>
+    <section class="lesson-head">
+      <div class="crumb" id="lessonCrumb"></div>
+      <h1 id="lessonTitle"></h1>
+      <p class="sub" id="lessonSub"></p>
+    </section>
+
+    <!-- ① 이론/설명 -->
+    <section class="block">
+      <div class="block-tag"><span class="n">1</span><span data-i="lesson.theory"></span></div>
+      <div class="prose" id="lessonProse"></div>
+      <div class="callout" style="margin-top:16px">
+        <span class="emoji">💡</span>
+        <span data-i="lesson.tip"></span>
+      </div>
+    </section>
+
+    <!-- ② 시각 자료: 지판 + 타브 (JSON→SVG 렌더 영역) -->
+    <section class="block">
+      <div class="block-tag"><span class="n">2</span><span data-i="lesson.visual"></span></div>
+
+      <div class="render-area">
+        <div class="render-cap">
+          <b data-i="lesson.chord"></b>
+          <span class="badge">SVG · JSON render</span>
+        </div>
+        <div id="fretMount"></div>
+        <p class="render-note" data-i="lesson.chord.note"></p>
+      </div>
+
+      <div class="render-area">
+        <div class="render-cap">
+          <b data-i="lesson.tab"></b>
+          <span class="badge">SVG · JSON render</span>
+        </div>
+        <div id="tabMount"></div>
+        <p class="render-note" data-i="lesson.tab.note"></p>
+      </div>
+    </section>
+
+    <!-- ③ 완료 액션 -->
+    <section class="complete-wrap">
+      <div class="block-tag"><span class="n">3</span><span data-i="lesson.action"></span></div>
+      <button class="btn" id="completeBtn"><span data-i="lesson.complete"></span></button>
+      <div class="done-state" id="doneState" style="display:none">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span data-i="lesson.done"></span>
+      </div>
+
+      <div class="lesson-nav">
+        <button class="btn secondary" id="prevBtn"><span data-i="lesson.prev"></span></button>
+        <button class="btn secondary" id="nextBtn"><span data-i="lesson.next"></span></button>
+      </div>
+    </section>
+  </main>
+
+  <!-- 하단 고정 도네이션 진입 -->
+  <div class="footer-cta" id="footerCta">
+    <button class="btn secondary" id="openDonateBtn">💙 <span data-i="donate.footer"></span></button>
+  </div>
+</div>
+
+<!-- ===================== 바텀시트: 도네이션 ===================== -->
+<div class="scrim" id="donateScrim">
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="donateH">
+    <div class="grip"></div>
+    <h2 id="donateH" data-i="donate.title"></h2>
+    <p class="sh-sub" data-i="donate.sub"></p>
+
+    <div class="save-amount">
+      <div class="big" id="saveAmount"></div>
+    </div>
+
+    <div class="pay-grid">
+      <button class="pay-btn pay-toss"><span class="ico">T</span>Toss</button>
+      <button class="pay-btn pay-kakao"><span class="ico">K</span>카카오페이</button>
+      <button class="pay-btn pay-paypal"><span class="ico">P</span>PayPal</button>
+      <button class="pay-btn pay-bmc"><span class="ico">☕</span>Buy me a coffee</button>
+    </div>
+
+    <button class="btn ghost close-free" data-close-sheet data-i="donate.close"></button>
+  </div>
+</div>
+
+<!-- ===================== 바텀시트: 닉네임 ===================== -->
+<div class="scrim" id="nickScrim">
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="nickH">
+    <div class="grip"></div>
+    <h2 id="nickH" data-i="nick.title"></h2>
+    <p class="sh-sub" data-i="nick.sub"></p>
+    <input class="field" id="nickInput" maxlength="16" data-i-ph="nick.placeholder" />
+    <button class="btn" id="saveNickBtn" data-i="nick.save"></button>
+    <button class="btn ghost" data-close-sheet data-i="nick.later"></button>
+  </div>
+</div>
+
+<!-- ===================== 바텀시트: 저장/Export·Import ===================== -->
+<div class="scrim" id="storageScrim">
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="stH">
+    <div class="grip"></div>
+    <h2 id="stH" data-i="storage.title"></h2>
+    <p class="sh-sub" data-i="storage.sub"></p>
+
+    <div class="io-row">
+      <button class="btn secondary" id="exportBtn" data-i="storage.export"></button>
+      <button class="btn secondary" id="importBtn" data-i="storage.import"></button>
+    </div>
+    <textarea class="io-text" id="ioText" data-i-ph="storage.io.placeholder"></textarea>
+    <button class="btn ghost" data-close-sheet data-i="storage.close"></button>
+  </div>
+</div>
+
+<!-- nudge 토스트 & 컨페티 -->
+<div class="toast-wrap" id="toastWrap"></div>
+<canvas id="confetti"></canvas>
+
+<script>
+/* ============================================================
+   0. 저장소 (localStorage 실패 시 인메모리 폴백)
+   ============================================================ */
+const mem = {};
+const store = {
+  get(k){ try { const v = localStorage.getItem(k); return v; } catch(e){ return k in mem ? mem[k] : null; } },
+  set(k,v){ try { localStorage.setItem(k,v); } catch(e){ mem[k]=v; } },
+};
+
+/* ============================================================
+   1. i18n 사전 (KR / EN / JP)
+   ============================================================ */
+const I18N = {
+  kr: {
+    "free.badge":"로그인도, 결제도 없어요",
+    "home.title":"기타가 어려웠던 이유,<br><span class='accent'>연습 순서</span>가 없어서였어요",
+    "home.lead":"하루에 하나씩만 따라오세요. 촘촘한 순서대로, 끝까지 무료로 배울 수 있게 만들었어요.",
+    "home.teaser.title":"다음 커리큘럼이 기다리고 있어요",
+    "home.teaser.desc":"코드 체인지 · 리듬 스트로크 · 블루스 릭 … 순서대로 무료로 열려요",
+    "home.storage":"회원가입은 없어요. 진도는 이 브라우저에 저장돼요. 캐시를 지우면 기억도 같이 사라질 수 있어서, 가끔 백업해두면 마음이 편해요.",
+    "home.storage.cta":"진도 백업 · 복원하기",
+    "home.philosophy":"<strong>배우는 순서만 있으면, 기타는 누구나 칠 수 있어요.</strong><br>그래서 이 사이트의 모든 강의는 계속 무료입니다.",
+    "curr.eyebrow":"커리큘럼",
+    "curr.progress.label":"내 진도율",
+    "curr.days":"일 완료",
+    "curr.week":"주차",
+    "months.done":"완료했어요 🎉",
+    "months.soon":"곧 열려요",
+    "curr.month.days":"개 레슨",
+    "lesson.theory":"이론 · 설명",
+    "lesson.visual":"눈으로 보기",
+    "lesson.action":"오늘의 연습",
+    "lesson.chord":"코드 다이어그램 (지판)",
+    "lesson.chord.note":"헤드가 왼쪽 · 6현 × 프렛 격자 위에 운지가 데이터로 찍혀요",
+    "lesson.tab":"타브 악보",
+    "lesson.tab.note":"실제 서비스에선 재생 · 속도조절이 붙는 자리예요",
+    "lesson.tip":"손이 아직 안 따라줘도 괜찮아요. 오늘은 '모양'만 익혀도 충분해요.",
+    "lesson.complete":"오늘의 연습 완료 🎸",
+    "lesson.done":"오늘 연습을 마쳤어요",
+    "lesson.prev":"이전 Day",
+    "lesson.next":"다음 Day",
+    "donate.footer":"이 강의, 후원으로 응원하기",
+    "donate.title":"여기까지 잘 따라왔어요! 👏",
+    "donate.sub":"이후 내용도 모두 무료예요! 여기까지 따라왔다면 이미 레슨 몇 회차 분량을 아낀 셈이에요. 도움이 됐다면, 커피 한 잔으로 다음 커리큘럼을 응원해주세요.",
+    "donate.saved":"지금까지 무료로 절약한 금액이에요",
+    "donate.close":"괜찮아요, 계속 무료로 배울래요",
+    "nick.title":"어떻게 부르면 될까요?",
+    "nick.sub":"닉네임만 정하면 끝이에요. 가입도, 비밀번호도 필요 없어요.",
+    "nick.placeholder":"예: 여섯줄의기적",
+    "nick.save":"이 이름으로 시작하기",
+    "nick.later":"다음에 할게요",
+    "storage.title":"진도 백업 · 복원",
+    "storage.sub":"아래 코드를 복사해두면, 기기를 바꿔도 진도를 그대로 이어갈 수 있어요.",
+    "storage.export":"내 진도 내보내기",
+    "storage.import":"코드로 불러오기",
+    "storage.io.placeholder":"여기에 백업 코드가 나타나요. 붙여넣어서 복원할 수도 있어요.",
+    "storage.close":"닫기",
+  },
+  en: {
+    "free.badge":"No login, no payment",
+    "home.title":"Guitar felt hard because<br><span class='accent'>the path was unclear</span>",
+    "home.lead":"Follow one small lesson a day. A clear, step-by-step order — free all the way through.",
+    "home.teaser.title":"More curricula are on the way",
+    "home.teaser.desc":"Chord changes · Rhythm strumming · Blues licks … unlocking in order, free",
+    "home.storage":"No sign-up here. Progress lives in this browser, and clearing the cache can erase it — backing it up now and then keeps it safe.",
+    "home.storage.cta":"Back up · restore progress",
+    "home.philosophy":"<strong>With the right order, anyone can play guitar.</strong><br>That's why every lesson here stays free.",
+    "curr.eyebrow":"Curriculum",
+    "curr.progress.label":"Your progress",
+    "curr.days":"days done",
+    "curr.week":"Week",
+    "months.done":"Completed 🎉",
+    "months.soon":"Coming soon",
+    "curr.month.days":"lessons",
+    "lesson.theory":"Theory",
+    "lesson.visual":"See it",
+    "lesson.action":"Today's practice",
+    "lesson.chord":"Chord diagram (fretboard)",
+    "lesson.chord.note":"Head on the left · finger dots drawn from data onto the 6-string × fret grid",
+    "lesson.tab":"Tab notation",
+    "lesson.tab.note":"In the live app, playback & tempo controls live here",
+    "lesson.tip":"If your fingers aren't there yet, that's fine. Just learning the shape today is plenty.",
+    "lesson.complete":"Mark today complete 🎸",
+    "lesson.done":"Today's practice done",
+    "lesson.prev":"Prev Day",
+    "lesson.next":"Next Day",
+    "donate.footer":"Support these free lessons",
+    "donate.title":"You've been following along great! 👏",
+    "donate.sub":"Everything ahead is free too! Following along this far already saved you several lesson fees. If it helped, a coffee-sized cheer supports the next curriculum.",
+    "donate.saved":"What you've saved so far, for free",
+    "donate.close":"No thanks, I'll keep learning for free",
+    "nick.title":"What should we call you?",
+    "nick.sub":"Just pick a nickname. No sign-up, no password.",
+    "nick.placeholder":"e.g. SixStringHero",
+    "nick.save":"Start with this name",
+    "nick.later":"Maybe later",
+    "storage.title":"Back up · restore progress",
+    "storage.sub":"Copy the code below and you can pick up right where you left off on any device.",
+    "storage.export":"Export my progress",
+    "storage.import":"Restore from code",
+    "storage.io.placeholder":"Your backup code appears here. Paste one to restore.",
+    "storage.close":"Close",
+  },
+  jp: {
+    "free.badge":"ログインも決済もありません",
+    "home.title":"ギターが難しかった理由は、<br><span class='accent'>練習の順番</span>がなかったから",
+    "home.lead":"1日ひとつだけ進めましょう。ていねいな順番で、最後まで無料で学べるように作りました。",
+    "home.teaser.title":"次のカリキュラムも準備中です",
+    "home.teaser.desc":"コードチェンジ · リズムストローク · ブルースリック … 順番に無料で公開",
+    "home.storage":"会員登録はありません。進捗はこのブラウザに保存され、キャッシュを消すと消えることも。たまにバックアップしておくと安心です。",
+    "home.storage.cta":"進捗をバックアップ · 復元",
+    "home.philosophy":"<strong>順番さえあれば、ギターは誰でも弾けます。</strong><br>だからこのサイトのレッスンは、ずっと無料です。",
+    "curr.eyebrow":"カリキュラム",
+    "curr.progress.label":"あなたの進捗",
+    "curr.days":"日 完了",
+    "curr.week":"週",
+    "months.done":"完了しました 🎉",
+    "months.soon":"近日公開",
+    "curr.month.days":"レッスン",
+    "lesson.theory":"理論 · 解説",
+    "lesson.visual":"目で見る",
+    "lesson.action":"今日の練習",
+    "lesson.chord":"コードダイアグラム（指板）",
+    "lesson.chord.note":"ヘッドが左 · 6弦×フレットの格子に運指がデータで描かれます",
+    "lesson.tab":"タブ譜",
+    "lesson.tab.note":"本番アプリでは再生・テンポ調整がここに入ります",
+    "lesson.tip":"指がまだ届かなくても大丈夫。今日は「形」を覚えるだけで十分です。",
+    "lesson.complete":"今日の練習を完了 🎸",
+    "lesson.done":"今日の練習を終えました",
+    "lesson.prev":"前のDay",
+    "lesson.next":"次のDay",
+    "donate.footer":"この無料レッスンを応援する",
+    "donate.title":"ここまでよくついてきました！ 👏",
+    "donate.sub":"この先の内容もすべて無料です！ここまで進めたなら、すでにレッスン数回分を節約しています。役に立ったら、コーヒー1杯で次のカリキュラムを応援してください。",
+    "donate.saved":"これまで無料で節約した金額です",
+    "donate.close":"大丈夫です、無料のまま続けます",
+    "nick.title":"なんて呼べばいい？",
+    "nick.sub":"ニックネームを決めるだけ。登録もパスワードも不要です。",
+    "nick.placeholder":"例: 六弦の奇跡",
+    "nick.save":"この名前で始める",
+    "nick.later":"あとで",
+    "storage.title":"進捗のバックアップ · 復元",
+    "storage.sub":"下のコードをコピーしておけば、機種を変えても続きから再開できます。",
+    "storage.export":"進捗を書き出す",
+    "storage.import":"コードで読み込む",
+    "storage.io.placeholder":"ここにバックアップコードが表示されます。貼り付けて復元もできます。",
+    "storage.close":"閉じる",
+  }
+};
+
+/* ============================================================
+   2. 커리큘럼 데이터 (모듈형 — 카드/월/주/일 계속 추가 구조)
+   ============================================================ */
+const CURRICULA = [{
+  id:"solo-scale-3m",
+  tag:{kr:"3개월 과정",en:"3-Month Course",jp:"3か月コース"},
+  title:{kr:"솔로 & 스케일 루틴",en:"Solo & Scale Routine",jp:"ソロ＆スケール ルーティン"},
+  desc:{kr:"펜타토닉부터 메이저 스케일까지. \u201C어디를 눌러야 하지?\u201D에서 \u201C이제 손이 먼저 가네\u201D까지 가는 루틴이에요.",
+        en:"From pentatonic to major scales — from \u201Cwhere do I press?\u201D to \u201Cmy fingers already know.\u201D",
+        jp:"ペンタトニックからメジャースケールまで。「どこを押さえるの？」から「指が先に動く」まで進むルーティンです。"},
+  meta:[{kr:"입문 → 중급",en:"Beginner → Intermediate",jp:"入門→中級"},
+        {kr:"하루 15분",en:"15 min/day",jp:"1日15分"},
+        {kr:"기타 1대면 OK",en:"Just a guitar",jp:"ギター1本でOK"}],
+  months:[
+    { title:{kr:"1개월차 · 기초 다지기",en:"Month 1 · Foundations",jp:"1か月目・基礎固め"},
+      sub:{kr:"자세, 튜닝, 첫 코드",en:"Posture, tuning, first chords",jp:"姿勢・チューニング・最初のコード"},
+      weeks:[
+        { days:[
+          {title:{kr:"기타와 첫 만남",en:"Meet your guitar",jp:"ギターとの出会い"},
+           sub:{kr:"각 부분의 이름과 잡는 법",en:"Parts & how to hold",jp:"各部の名前と構え方"}},
+          {title:{kr:"튜닝하기",en:"Tune up",jp:"チューニング"},
+           sub:{kr:"6개의 줄을 정확한 음으로",en:"Six strings, right pitch",jp:"6弦を正しい音に"}},
+          {title:{kr:"첫 코드, Em",en:"Your first chord: Em",jp:"最初のコード Em"},
+           sub:{kr:"가장 쉬운 코드부터",en:"Start with the easiest",jp:"一番かんたんなコードから"}},
+          {title:{kr:"두 번째 코드, E",en:"Second chord: E",jp:"2つ目のコード E"},
+           sub:{kr:"손가락 하나만 더",en:"Just one more finger",jp:"指をもう1本だけ"}},
+          {title:{kr:"Em ↔ E 바꾸기",en:"Switch Em ↔ E",jp:"Em↔Eの切り替え"},
+           sub:{kr:"코드 전환 첫 연습",en:"First chord changes",jp:"コードチェンジの初練習"}},
+        ]},
+        { days:[
+          {title:{kr:"Am 코드",en:"The Am chord",jp:"Amコード"},
+           sub:{kr:"부드러운 단조의 시작",en:"Into minor territory",jp:"やさしい短調の入口"}},
+          {title:{kr:"기본 스트로크",en:"Basic strumming",jp:"基本ストローク"},
+           sub:{kr:"다운·업 리듬 감각",en:"Down & up feel",jp:"ダウン・アップの感覚"}},
+          {title:{kr:"C 코드 도전",en:"Tackle the C chord",jp:"Cコードに挑戦"},
+           sub:{kr:"손가락 벌리기 연습",en:"Stretch practice",jp:"指を広げる練習"}},
+        ]},
+      ]},
+    { title:{kr:"2개월차 · 리듬과 스케일",en:"Month 2 · Rhythm & Scales",jp:"2か月目・リズムとスケール"},
+      sub:{kr:"곧 열려요",en:"Coming soon",jp:"近日公開"},
+      soon:true, weeks:[] },
+    { title:{kr:"3개월차 · 첫 솔로",en:"Month 3 · Your first solo",jp:"3か月目・はじめてのソロ"},
+      sub:{kr:"곧 열려요",en:"Coming soon",jp:"近日公開"},
+      soon:true, weeks:[] },
+  ]
+}];
+
+/* 레슨 본문(대표 Day = Em 코드) — 실제 서비스에선 Day마다 채워짐.
+   여기선 토스체 샘플 본문을 3개국어로 제공. 나머지 Day는 이 톤을 재사용. */
+const LESSON_BODY = {
+  kr:["오늘은 기타에서 가장 먼저 배우는 코드, <b>Em(이 마이너)</b>을 익혀볼게요. 손가락 두 개만 있으면 되는, 세상에서 제일 다정한 코드예요.",
+      "왼손 검지와 중지를 준비하고, 5번 줄과 4번 줄의 <b>2번 프렛</b>을 살짝 눌러주세요. 나머지 줄은 그대로 열어둡니다. 여섯 줄을 천천히 아래로 훑으면… 방금 그게 Em이에요.",
+      "소리가 지저분하게 나도 놀라지 마세요. 손끝이 줄을 눌러본 적이 없어서 그래요. 며칠이면 굳은살이 생기고, 소리는 점점 맑아집니다."],
+  en:["Today we learn the very first chord most guitarists ever play: <b>E minor (Em)</b>. It needs only two fingers — the friendliest chord in the world.",
+      "Get your index and middle finger ready and press the <b>2nd fret</b> on the 5th and 4th strings. Leave the rest open. Strum slowly downward across all six strings… that was Em.",
+      "If it sounds muddy, don't panic. Your fingertips just haven't done this before. In a few days you'll build calluses and the tone will clear right up."],
+  jp:["今日はギターで最初に習うコード <b>Em（イー・マイナー）</b> を覚えましょう。指2本だけでいい、世界でいちばん優しいコードです。",
+      "左手の人差し指と中指を用意して、5弦と4弦の <b>2フレット</b> を軽く押さえます。残りの弦は開放のまま。6本の弦をゆっくり下に弾けば…今のがEmです。",
+      "音が濁っても驚かないで。指先がまだ慣れていないだけです。数日でタコができて、音はどんどんクリアになります。"]
+};
+
+/* 지판(코드 다이어그램) 데이터 — Em: 낮은E→높은e 순 [0,2,2,0,0,0] */
+const CHORD_EM = {
+  name:"Em",
+  strings:[
+    {state:0}, {state:2,finger:2}, {state:2,finger:3}, {state:0}, {state:0}, {state:0}
+  ] // index 0 = 6번(낮은E) … index 5 = 1번(높은e)
+};
+
+/* 타브 데이터 — Em 펜타토닉 상행 (line 1=높은e … 6=낮은E) */
+const TAB_EM_PENTA = {
+  strings:6, cols:12,
+  notes:[
+    {c:0,s:6,f:0},{c:1,s:6,f:3},{c:2,s:5,f:0},{c:3,s:5,f:2},
+    {c:4,s:4,f:0},{c:5,s:4,f:2},{c:6,s:3,f:0},{c:7,s:3,f:2},
+    {c:8,s:2,f:0},{c:9,s:2,f:3},{c:10,s:1,f:0},{c:11,s:1,f:3},
+  ]
+};
+
+/* ============================================================
+   3. SVG 렌더러 (이미지 아님 · JSON → SVG · currentColor)
+   ============================================================ */
+function renderChord(data){
+  /* 가로형 지판 — 기타 헤드(너트)가 왼쪽.
+     · 가로선 = 6개의 줄 (아래 = 낮은 E, 위 = 높은 e / 타브와 동일한 방향)
+     · 세로선 = 프렛, 왼쪽 굵은 선 = 너트
+     · 너트 왼쪽 O/✕ = 개방현/뮤트, 격자 위 파란 dot = 운지(손가락 번호) */
+  const W=380,H=200, padL=66, padR=24, padT=26, padB=34;
+  const nStr=6, nFret=4;
+  const gh=(H-padT-padB)/(nStr-1);        // 줄 간격(세로)
+  const gw=(W-padL-padR)/nFret;           // 프렛 간격(가로)
+  const sy=i=>padT+(nStr-1-i)*gh;         // i:0(낮은E)=맨 아래
+  const fx=f=>padL+f*gw;
+  const names=["E","A","D","G","B","e"];  // index 0 = 낮은 E
+  let s=`<svg class="fretboard" viewBox="0 0 ${W} ${H}" role="img" aria-label="${data.name} chord diagram">`;
+  // 너트(헤드 쪽 · 왼쪽 굵은 세로선)
+  s+=`<line x1="${fx(0)}" y1="${sy(5)}" x2="${fx(0)}" y2="${sy(0)}" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>`;
+  // 프렛(세로선) + 프렛 번호
+  for(let f=1;f<=nFret;f++){
+    s+=`<line x1="${fx(f)}" y1="${sy(5)}" x2="${fx(f)}" y2="${sy(0)}" stroke="currentColor" stroke-width="1.4" opacity=".28"/>`;
+    s+=`<text x="${fx(f)-gw/2}" y="${H-8}" text-anchor="middle" font-size="11" font-weight="700" fill="currentColor" opacity=".45">${f}</text>`;
+  }
+  // 줄(가로선 · 낮은 줄일수록 두껍게) + 줄 이름 + O/✕ + 운지 dot
+  data.strings.forEach((st,i)=>{
+    const y=sy(i);
+    s+=`<line x1="${fx(0)}" y1="${y}" x2="${W-padR}" y2="${y}" stroke="currentColor" stroke-width="${(1.1+(5-i)*0.18).toFixed(2)}" opacity=".3"/>`;
+    s+=`<text x="14" y="${y+4}" font-size="12" font-weight="700" fill="currentColor" opacity=".5">${names[i]}</text>`;
+    if(st.state===0){ // 개방현 O
+      s+=`<circle cx="${padL-24}" cy="${y}" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8" opacity=".55"/>`;
+    } else if(st.state==="x"){ // 뮤트 ✕
+      s+=`<text x="${padL-24}" y="${y+5}" text-anchor="middle" font-size="14" font-weight="700" fill="currentColor" opacity=".5">✕</text>`;
+    } else { // 운지
+      const cx=fx(st.state-1)+gw/2;
+      s+=`<circle cx="${cx}" cy="${y}" r="12" fill="var(--primary)"/>`;
+      if(st.finger) s+=`<text x="${cx}" y="${y+4.5}" text-anchor="middle" font-size="12.5" font-weight="800" fill="#fff">${st.finger}</text>`;
+    }
+  });
+  s+=`</svg>`;
+  return s;
+}
+
+function renderTab(data){
+  const W=560, padX=30, padTop=18, rowH=22, labelW=18;
+  const H=padTop*2 + rowH*(data.strings-1);
+  const names=["e","B","G","D","A","E"]; // line1..6
+  const colW=(W-padX*2-labelW)/(data.cols);
+  const lineY=i=>padTop+i*rowH;            // i:0(top,e) .. 5(E)
+  const colX=c=>padX+labelW+colW*(c+0.5);
+  let s=`<svg class="tabsvg" viewBox="0 0 ${W} ${H}" role="img" aria-label="Tab notation">`;
+  // 6줄 + 라벨
+  for(let i=0;i<data.strings;i++){
+    s+=`<line x1="${padX+labelW}" y1="${lineY(i)}" x2="${W-padX}" y2="${lineY(i)}" stroke="currentColor" stroke-width="1.2" opacity=".3"/>`;
+    s+=`<text x="${padX}" y="${lineY(i)+4}" font-size="12" font-weight="700" fill="currentColor" opacity=".5">${names[i]}</text>`;
+  }
+  // 왼쪽 세로 마감선
+  s+=`<line x1="${padX+labelW}" y1="${lineY(0)}" x2="${padX+labelW}" y2="${lineY(5)}" stroke="currentColor" stroke-width="1.6" opacity=".4"/>`;
+  // 음표(프렛 숫자)
+  data.notes.forEach(n=>{
+    const i=n.s-1;                     // s:1(top e)..6(E)
+    const cx=colX(n.c), cy=lineY(i);
+    s+=`<circle cx="${cx}" cy="${cy}" r="10" fill="var(--bg)"/>`;
+    s+=`<text x="${cx}" y="${cy+4.5}" text-anchor="middle" font-size="13" font-weight="800" fill="var(--primary)">${n.f}</text>`;
+  });
+  s+=`</svg>`;
+  return s;
+}
+
+/* ============================================================
+   4. 앱 상태 & i18n 적용
+   ============================================================ */
+const state = {
+  lang: store.get("riff_lang") || "kr",
+  theme: store.get("riff_theme") || "light",
+  nick: store.get("riff_nick") || "",
+  done: new Set(JSON.parse(store.get("riff_done") || "[]")),
+  view: "home",
+  cur: 0, dayKey: null,
+  seenNudge: store.get("riff_nudge")==="1",
+};
+
+const $ = s=>document.querySelector(s);
+const $$ = s=>document.querySelectorAll(s);
+const t = k => (I18N[state.lang][k] ?? I18N.kr[k] ?? k);
+
+function applyI18n(){
+  $$("[data-i]").forEach(el=> el.textContent = t(el.dataset.i));
+  $$("[data-i-html]").forEach(el=> el.innerHTML = t(el.dataset.iHtml));
+  $$("[data-i-ph]").forEach(el=> el.placeholder = t(el.dataset.iPh));
+  document.documentElement.lang = state.lang==="jp"?"ja":(state.lang==="en"?"en":"ko");
+}
+
+/* 일자 전체 목록 평탄화(이전/다음 이동용) */
+function flatDays(){
+  const out=[]; const c=CURRICULA[state.cur];
+  c.months.forEach((m,mi)=> m.weeks.forEach((w,wi)=> w.days.forEach((d,di)=>{
+    out.push({key:`${mi}-${wi}-${di}`, mi,wi,di, d, m, w});
+  })));
+  return out;
+}
+function totalDays(){ return flatDays().length; }
+function doneCount(){ let n=0; flatDays().forEach(x=>{ if(state.done.has(x.key)) n++; }); return n; }
+
+/* ============================================================
+   5. 렌더 — 랜딩
+   ============================================================ */
+function renderHome(){
+  const wrap=$("#currList"); wrap.innerHTML="";
+  CURRICULA.forEach((c,ci)=>{
+    const el=document.createElement("div");
+    el.className="card curr-card tap";
+    const metaHtml=c.meta.map(m=>`<span class="meta-pill">${m[state.lang]}</span>`).join("");
+    el.innerHTML=`
+      <div class="curr-thumb"><span class="chip">${c.tag[state.lang]}</span></div>
+      <div class="curr-body">
+        <h3>${c.title[state.lang]}</h3>
+        <p class="muted" style="margin:8px 0 0;font-size:14px">${c.desc[state.lang]}</p>
+        <div class="curr-meta">${metaHtml}</div>
+      </div>`;
+    el.onclick=()=>{ state.cur=ci; go("curriculum"); };
+    wrap.appendChild(el);
+  });
+}
+
+/* ============================================================
+   6. 렌더 — 커리큘럼 계층
+   ============================================================ */
+function renderCurriculum(){
+  const c=CURRICULA[state.cur];
+  $("#currTitle").textContent=c.title[state.lang];
+  const total=totalDays(), done=doneCount();
+  const pct= total? Math.round(done/total*100):0;
+  $("#progPct").textContent=pct;
+  $("#progDone").textContent=done;
+  $("#progTotal").textContent=total;
+  $("#progFill").style.width=pct+"%";
+
+  const tree=$("#monthTree"); tree.innerHTML="";
+  c.months.forEach((m,mi)=>{
+    const mDays = m.weeks.reduce((a,w)=>a+w.days.length,0);
+    const mDone = m.weeks.reduce((a,w,wi)=>a+w.days.filter((_,di)=>state.done.has(`${mi}-${wi}-${di}`)).length,0);
+    const isDone = mDays>0 && mDone===mDays;
+    const el=document.createElement("div");
+    el.className="month"+(m.soon?" soon":"")+(isDone?" done":"")+(mi===0?" open":"");
+    const sub = m.soon ? t("months.soon") : (isDone? t("months.done") : `${mDone}/${mDays} ${t("curr.month.days")}`);
+    let body="";
+    m.weeks.forEach((w,wi)=>{
+      const wDone=w.days.filter((_,di)=>state.done.has(`${mi}-${wi}-${di}`)).length;
+      const wPct= Math.round(wDone/w.days.length*100);
+      let days="";
+      w.days.forEach((d,di)=>{
+        const key=`${mi}-${wi}-${di}`, dn=state.done.has(key);
+        days+=`<button class="day${dn?' done':''}" data-day="${key}">
+          <span class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="dt"><b>Day ${di+1}. ${d.title[state.lang]}</b><small>${d.sub[state.lang]}</small></span>
+          <span class="arr"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </button>`;
+      });
+      body+=`<div class="week">
+        <div class="week-label">${t("curr.week")} ${wi+1}
+          <span class="pbar wp"><i style="width:${wPct}%"></i></span>
+          <span style="color:var(--text-3);font-weight:700">${wPct}%</span>
+        </div>${days}
+      </div>`;
+    });
+    el.innerHTML=`
+      <button class="month-head">
+        <span class="month-num">${isDone?'✓':(mi+1)}</span>
+        <span class="t"><b>${m.title[state.lang]}</b><small>${sub}</small></span>
+        <span class="caret"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </button>
+      <div class="month-body">${body}</div>`;
+    el.querySelector(".month-head").onclick=()=>{ if(!m.soon) el.classList.toggle("open"); };
+    el.querySelectorAll(".day").forEach(btn=>{
+      btn.onclick=()=>{ state.dayKey=btn.dataset.day; go("lesson"); };
+    });
+    tree.appendChild(el);
+  });
+}
+
+/* ============================================================
+   7. 렌더 — 레슨 상세
+   ============================================================ */
+function renderLesson(){
+  const list=flatDays();
+  const idx=list.findIndex(x=>x.key===state.dayKey);
+  const item=list[idx]||list[0];
+  const {mi,wi,di,d,m}=item;
+  $("#lessonCrumb").textContent=`${m.title[state.lang]} · ${t("curr.week")} ${wi+1}`;
+  $("#lessonTitle").textContent=`Day ${di+1}. ${d.title[state.lang]}`;
+  $("#lessonSub").textContent=d.sub[state.lang];
+
+  // 본문: 대표 샘플 재사용(모든 Day 동일 톤의 placeholder)
+  $("#lessonProse").innerHTML = LESSON_BODY[state.lang].map(p=>`<p>${p}</p>`).join("");
+
+  // SVG 렌더 마운트
+  $("#fretMount").innerHTML = renderChord(CHORD_EM);
+  $("#tabMount").innerHTML  = renderTab(TAB_EM_PENTA);
+
+  // 완료 상태
+  const done=state.done.has(item.key);
+  $("#completeBtn").style.display=done?"none":"flex";
+  $("#doneState").style.display=done?"flex":"none";
+  $("#completeBtn").onclick=()=> completeDay(item.key);
+
+  // 이전/다음
+  $("#prevBtn").disabled = idx<=0;
+  $("#nextBtn").disabled = idx>=list.length-1;
+  $("#prevBtn").onclick=()=>{ if(idx>0){ state.dayKey=list[idx-1].key; renderLesson(); scrollTop(); } };
+  $("#nextBtn").onclick=()=>{ if(idx<list.length-1){ state.dayKey=list[idx+1].key; renderLesson(); scrollTop(); maybeNudge(list[idx+1]); } };
+}
+
+/* ============================================================
+   8. 완료 처리 · 컨페티 · 진도 저장
+   ============================================================ */
+function completeDay(key){
+  state.done.add(key);
+  store.set("riff_done", JSON.stringify([...state.done]));
+  $("#completeBtn").style.display="none";
+  $("#doneState").style.display="flex";
+  burstConfetti();
+  updateSaveAmount();
+  // 주차 완료 시 도네이션 시트
+  const item=flatDays().find(x=>x.key===key);
+  const weekDays=CURRICULA[state.cur].months[item.mi].weeks[item.wi].days;
+  const weekDone=weekDays.every((_,di)=>state.done.has(`${item.mi}-${item.wi}-${di}`));
+  setTimeout(()=>{ if(weekDone) openSheet("donateScrim"); }, 900);
+}
+
+/* 컨페티(캔버스, 외부 의존 없음) */
+const cvs=$("#confetti"), ctx=cvs.getContext("2d");
+function fit(){ cvs.width=innerWidth; cvs.height=innerHeight; }
+fit(); addEventListener("resize",fit);
+let parts=[], raf=null;
+function burstConfetti(){
+  if(matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const colors=["#3182F6","#4593FC","#12B886","#FFC043","#FF6B6B","#C9E2FF"];
+  const cx=innerWidth/2, cy=innerHeight*0.42;
+  for(let i=0;i<120;i++){
+    const a=Math.random()*Math.PI*2, sp=6+Math.random()*9;
+    parts.push({x:cx,y:cy,vx:Math.cos(a)*sp,vy:Math.sin(a)*sp-4,
+      g:0.22+Math.random()*0.12, s:6+Math.random()*6, rot:Math.random()*6,
+      vr:(Math.random()-.5)*0.4, c:colors[i%colors.length], life:1});
+  }
+  if(!raf) tick();
+}
+function tick(){
+  ctx.clearRect(0,0,cvs.width,cvs.height);
+  parts.forEach(p=>{
+    p.vy+=p.g; p.x+=p.vx; p.y+=p.vy; p.rot+=p.vr; p.life-=0.008;
+    ctx.save(); ctx.translate(p.x,p.y); ctx.rotate(p.rot); ctx.globalAlpha=Math.max(p.life,0);
+    ctx.fillStyle=p.c; ctx.fillRect(-p.s/2,-p.s/2,p.s,p.s*0.6); ctx.restore();
+  });
+  parts=parts.filter(p=>p.life>0 && p.y<cvs.height+40);
+  if(parts.length){ raf=requestAnimationFrame(tick); } else { ctx.clearRect(0,0,cvs.width,cvs.height); raf=null; }
+}
+
+/* ============================================================
+   9. nudge 토스트
+   ============================================================ */
+const NUDGE = {
+  kr:{emoji:"⚡", html:"벌써 <b>2주차</b>예요. 대부분은 여기 오기 전에 멈춰요. 오늘은 10분만 해도 충분히 이긴 날이에요."},
+  en:{emoji:"⚡", html:"<b>Week 2</b> already — most people stop before this point. Ten minutes today still counts as a win."},
+  jp:{emoji:"⚡", html:"もう<b>2週目</b>。多くの人はここに来る前に止まります。今日は10分だけでも十分勝ちです。"},
+};
+function toast(emoji, html, ms=4200){
+  const wrap=$("#toastWrap");
+  const el=document.createElement("div");
+  el.className="toast";
+  el.innerHTML=`<span class="emoji">${emoji}</span><span class="txt">${html}</span>`;
+  wrap.appendChild(el);
+  requestAnimationFrame(()=> el.classList.add("show"));
+  setTimeout(()=>{ el.classList.remove("show"); setTimeout(()=>el.remove(),400); }, ms);
+}
+function maybeNudge(next){
+  // 2주차 첫 진입 시 1회
+  if(state.seenNudge) return;
+  if(next && next.wi===1){
+    const n=NUDGE[state.lang]; toast(n.emoji, n.html);
+    state.seenNudge=true; store.set("riff_nudge","1");
+  }
+}
+
+/* ============================================================
+   10. 도네이션 절약 금액
+   ============================================================ */
+function updateSaveAmount(){
+  const per = {kr:60000, en:45, jp:6000}; // Day당 환산 예시 (레슨 1회분)
+  const amt = doneCount()*per[state.lang];
+  let str;
+  if(state.lang==="kr"){
+    // 만 원 단위로 어림해서 문장으로: "지금까지 약 48만 원 아꼈어요 ✌️"
+    const man = Math.round(amt/10000);
+    const money = man >= 1 ? `약 ${man.toLocaleString()}만 원` : `${amt.toLocaleString()}원`;
+    str = `지금까지 <b>${money}</b> 아꼈어요 ✌️`;
+  } else if(state.lang==="jp"){
+    const man = amt/10000;
+    const money = man >= 1 ? `約${(Math.round(man*10)/10).toLocaleString()}万円` : `¥${amt.toLocaleString()}`;
+    str = `ここまで <b>${money}</b> 節約しました ✌️`;
+  } else {
+    str = `You've saved about <b>$${amt.toLocaleString()}</b> so far ✌️`;
+  }
+  $("#saveAmount").innerHTML = str;
+}
+
+/* ============================================================
+   11. 라우팅 & 헤더
+   ============================================================ */
+function go(view){
+  state.view=view;
+  ["home","curriculum","lesson"].forEach(v=> $("#view-"+v).hidden = (v!==view));
+  $("#backBtn").style.display = view==="home"?"none":"grid";
+  $("#footerCta").style.display = "block";
+  if(view==="home") renderHome();
+  if(view==="curriculum") renderCurriculum();
+  if(view==="lesson"){ renderLesson(); }
+  scrollTop();
+}
+function back(){
+  if(state.view==="lesson") go("curriculum");
+  else if(state.view==="curriculum") go("home");
+}
+function scrollTop(){ window.scrollTo({top:0,behavior:"instant"}); }
+
+/* ============================================================
+   12. 바텀시트 열고 닫기
+   ============================================================ */
+function openSheet(id){ $("#"+id).classList.add("show"); }
+function closeSheet(el){ el.classList.remove("show"); }
+$$(".scrim").forEach(sc=>{
+  sc.addEventListener("click",e=>{ if(e.target===sc) closeSheet(sc); });
+});
+$$("[data-close-sheet]").forEach(b=> b.onclick=()=> closeSheet(b.closest(".scrim")));
+
+/* ============================================================
+   13. 이벤트 바인딩
+   ============================================================ */
+// 언어
+$("#langSeg").addEventListener("click",e=>{
+  const b=e.target.closest("button"); if(!b) return;
+  state.lang=b.dataset.lang; store.set("riff_lang",state.lang);
+  $$("#langSeg button").forEach(x=>x.classList.toggle("active",x===b));
+  applyI18n(); go(state.view); updateSaveAmount();
+});
+// 테마
+function applyTheme(){ document.documentElement.dataset.theme=state.theme; }
+$("#themeBtn").onclick=()=>{ state.theme=state.theme==="light"?"dark":"light"; store.set("riff_theme",state.theme); applyTheme(); };
+// 뒤로 / 로고 홈
+$("#backBtn").onclick=back;
+$("#brandHome").onclick=()=>go("home");
+// 닉네임
+$("#nickChip").onclick=()=> openSheet("nickScrim");
+$("#saveNickBtn").onclick=()=>{
+  const v=$("#nickInput").value.trim();
+  if(v){ state.nick=v; store.set("riff_nick",v); refreshNick(); closeSheet($("#nickScrim")); }
+};
+function refreshNick(){
+  if(state.nick){ $("#nickChip").style.display="inline-flex"; $("#nickText").textContent=state.nick; }
+}
+// 도네이션 / 저장 진입
+$("#openDonateBtn").onclick=()=>{ updateSaveAmount(); openSheet("donateScrim"); };
+$("#openStorageBtn").onclick=()=> openSheet("storageScrim");
+// export / import
+$("#exportBtn").onclick=()=>{
+  const payload=JSON.stringify({nick:state.nick, done:[...state.done], v:1});
+  $("#ioText").value=btoa(unescape(encodeURIComponent(payload)));
+  $("#ioText").select();
+};
+$("#importBtn").onclick=()=>{
+  try{
+    const raw=decodeURIComponent(escape(atob($("#ioText").value.trim())));
+    const obj=JSON.parse(raw);
+    if(obj.done){ state.done=new Set(obj.done); store.set("riff_done",JSON.stringify(obj.done)); }
+    if(obj.nick){ state.nick=obj.nick; store.set("riff_nick",obj.nick); refreshNick(); }
+    closeSheet($("#storageScrim")); go(state.view);
+    toast("✅", state.lang==="kr"?"진도를 불러왔어요!":state.lang==="jp"?"進捗を読み込みました！":"Progress restored!");
+  }catch(e){
+    toast("⚠️", state.lang==="kr"?"코드를 다시 확인해주세요.":state.lang==="jp"?"コードを確認してください。":"Please check the code.");
+  }
+};
+// 헤더 그림자
+addEventListener("scroll",()=>{ $("#topbar").classList.toggle("scrolled", window.scrollY>4); });
+
+/* ============================================================
+   14. 부트
+   ============================================================ */
+applyTheme();
+applyI18n();
+$$("#langSeg button").forEach(x=> x.classList.toggle("active", x.dataset.lang===state.lang));
+refreshNick();
+renderHome();
+go("home");
+// 닉네임 미설정 시 살짝 뒤 유도(강제 아님)
+if(!state.nick){ setTimeout(()=> openSheet("nickScrim"), 1200); }
+</script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+# dependencies
+node_modules/
+
+# build output
+dist/
+
+# 콘텐츠 파이프라인 산출물 (SSOT=_design_docs, 재생성 가능 → 커밋하지 않음)
+# scripts/build-content.mjs 로 언제든 재생성. technical_spec §4.1.
+src/content/
+
+# editor / os
+.DS_Store
+*.log
+.vite/

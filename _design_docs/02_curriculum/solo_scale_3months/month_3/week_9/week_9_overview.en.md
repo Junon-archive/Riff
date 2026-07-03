@@ -1,0 +1,24 @@
+# Week 9 — Dorian Mode: One Note (the Major 6th, F#) to Dress Minor in Sophisticated Color
+> Curriculum: solo_scale_3months · Month 3 · Parent: ../month_3_overview.md · dayKey: m3.w9
+
+You've really put in the work these past 8 weeks. You've covered the pentatonic neck, gotten your hands on the blues, and made chord-tone targeting and guide tones second nature. But here's a question — have you noticed your solos keep circling back to the same "dark minor" feel? Sad, heavy, always the same color. This week, we change that color — by touching **just one note** in the scale. This is where Month 3, your graduation semester, really begins.
+
+## What We're Building This Week
+Play **A Dorian** over A-minor-family backing (starting with an Am7 vamp, moving into Am7–D7). The key is letting Dorian's identity note — the **major 6th, F# (♮6)** — ring out as color, boldly, without hiding it. Instead of running the scale straight up and down, work it like a melody with 3rd-interval and 16th-note sequences, and keep using the same engine you've built over the last 8 weeks: land on each chord's 3rd every time the chord changes.
+
+## Why Dorian, Why Now
+The 6th note of natural minor (Aeolian) is F — the minor 6th, ♭6. Raise that one note a half step to F# — the major 6th, ♮6 — and that's it, that's the whole change, but the whole sound opens up brighter and more sophisticated. This is the exact F# Santana reaches for to get that "Latin, jazzy" feeling out of a minor key. You already nailed "picking the right note" by the end of Month 2, so now it's time to layer "modal color" on top of that for the first time. This is Month 3's first color lesson — and the starting point for the expressiveness you'll build over the next three weeks.
+
+## This Week's Journey (Day 1 → Day 4)
+- **Day 1 — Say hello to F#, just this one note.** Get A Dorian Position 1 under your fingers, and compare Aeolian's F (♭6) against Dorian's F# (♮6) side by side, by ear. Hear for yourself how a single fret's difference (5th string, 8th fret vs. 9th fret) changes the entire color, and get to where you can find F# — 5th string 9th fret, 2nd string 7th fret — with your eyes closed in under 3 seconds. This is the day you confirm with your own ears, over an Am7 vamp, that swapping F for F# brightens everything up.
+- **Day 2 — Making the scale sound like "music": 3rd intervals.** Run straight up and down do-re-mi style, and it still sounds like an etude even with F# in there. So instead, work it in 3rd intervals, pairing notes a third apart — D–F#, F#–A — so F# stands out as it passes through the line, then land squarely on C (♭3, the 3rd of Am7) at the end. Yesterday F# was the note you stopped and showed off; today it's the note that colors the music as it flows by.
+- **Day 3 — A goosebump-worthy discovery: D7's 3rd is F#.** The backing now moves Am7 → D7. Roll your hands through 16th-note sequences and you'll discover something — Am7's 3rd is C (♭3), but **D7's 3rd is exactly F#**, the very Dorian color note you've been treasuring all week. The instant the chord shifts to D7, all you have to do is land on F# — and that's chord-tone targeting and a full-on burst of Dorian color happening at once. Two birds, one note.
+- **Day 4 — Put it all together into an 8-bar solo.** Assemble 8 bars over Am7–D7 (two bars at a time): land on C over Am7, F# over D7. Now add one new spoonful of feel — sing your landing notes with vibrato, and leave a little **space** at the end of each phrase. Don't try to fill every gap; let it breathe. (Space and phrasing get their full deep-dive in W11 — today's just an early taste.) Use the model phrase as a springboard, gradually swap in your own lines, and record it — that's this week's graduation piece done.
+
+## The Core Feel to Hold Onto
+- **The color note F# (♮6) is a note to show off, not hide.** Play it long, play it clear, add vibrato. Sneak around F#, and you're right back to dark minor.
+- **When the chord changes, the landing note changes too.** Am7 → C (♭3), D7 → F#. You're combining guide-tone instinct with modal color. Over D7 especially, F# is both the color note and a chord tone — the "safest note that also shines the brightest."
+- **Memorize note names, not fret positions.** Don't call it "5th string, 9th fret" — call it "that's F#, the major 6th." Names are what connect the whole neck together.
+
+## By the End of This Week
+You'll be able to freely run A Dorian Position 1 with 16th-note and 3rd-interval sequences, and find F# with your eyes closed in under 3 seconds. You'll hear and confirm "it gets brighter" for yourself by switching from an F line to an F# line over Am7, and you'll be able to record an 8-bar improv over Am7–D7 backing, landing on each chord's 3rd (C/F#) with space built in. This is where you pick up your first brushstroke of sophistication for minor.

@@ -1,0 +1,208 @@
+<!doctype html>
+<!--
+  Riff — 무료 기타 레슨 정적 SPA (앱 셸)
+  · 마크업은 docs/design_reference.html 의 <body> 구조를 이식(재발명 금지).
+  · 인라인 <style>/<script> 는 각각 src/styles/*.css, src/*.ts 로 분리.
+  · data-lang 은 목업의 kr/jp 를 표준 ko/ja 로 정규화(technical_spec §7.3).
+  · CSS/JS 는 Vite 가 src/main.ts 진입점에서 번들.
+-->
+<html lang="ko" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Riff · 무료 기타 레슨</title>
+</head>
+<body>
+<div class="app">
+
+  <!-- ===================== 헤더 ===================== -->
+  <header class="topbar" id="topbar">
+    <button class="icon-btn" id="backBtn" aria-label="뒤로" style="display:none">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M15 19l-7-7 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="brand" id="brandHome" role="button" tabindex="0">
+      <svg class="pick" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M12 2c4.4 0 8 2.6 8 6.4 0 3.1-2 5.2-3.9 7.2-1.4 1.5-2.1 3-2.5 4.9-.2 1-.9 1.5-1.6 1.5-.9 0-1.6-.8-1.9-2.1C9.3 21 9 17 8 14.6 6.9 12 4 11 4 8.4 4 4.6 7.6 2 12 2z"/>
+      </svg>
+      Riff
+    </div>
+    <div class="spacer"></div>
+
+    <div class="lang-seg" id="langSeg" role="tablist" aria-label="언어 선택">
+      <button data-lang="ko" class="active">한글</button>
+      <button data-lang="en">EN</button>
+      <button data-lang="ja">日本</button>
+    </div>
+
+    <button class="icon-btn" id="themeBtn" aria-label="테마 전환">
+      <svg class="sun" width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="2"/><path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.4 1.4M17.6 17.6L19 19M19 5l-1.4 1.4M6.4 17.6L5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <svg class="moon" width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M20 14.5A8 8 0 019.5 4 7 7 0 1020 14.5z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+    </button>
+
+    <button class="nick-chip" id="nickChip" style="display:none"><span id="nickText"></span></button>
+  </header>
+
+  <!-- ===================== 랜딩(홈) ===================== -->
+  <main class="view" id="view-home">
+    <section class="hero">
+      <span class="free-badge">🎁 <span data-i="free.badge"></span></span>
+      <h1 class="display" data-i-html="home.title"></h1>
+      <p class="lead" data-i="home.lead"></p>
+    </section>
+
+    <div id="currList"></div>
+
+    <div class="card teaser">
+      <div class="emoji">🎬</div>
+      <div>
+        <h3 data-i="home.teaser.title"></h3>
+        <p data-i="home.teaser.desc"></p>
+      </div>
+    </div>
+
+    <div class="storage-note">
+      <span class="emoji">💾</span>
+      <div>
+        <p data-i="home.storage"></p>
+        <button id="openStorageBtn" data-i="home.storage_cta"></button>
+      </div>
+    </div>
+
+    <div class="philosophy">
+      <p data-i-html="home.philosophy"></p>
+    </div>
+  </main>
+
+  <!-- ===================== 커리큘럼 계층(아코디언) ===================== -->
+  <main class="view" id="view-curriculum" hidden>
+    <section class="curr-head">
+      <span class="eyebrow" data-i="curr.eyebrow"></span>
+      <h1 class="display" id="currTitle"></h1>
+    </section>
+
+    <div class="card prog-summary">
+      <div class="row between" style="align-items:flex-end">
+        <div>
+          <div class="muted" style="font-size:13px;font-weight:700" data-i="curr.progress.label"></div>
+          <div class="big"><span id="progPct">0</span>%</div>
+        </div>
+        <div class="muted" style="font-size:13px;font-weight:600">
+          <span id="progDone">0</span>/<span id="progTotal">0</span> <span data-i="curr.days"></span>
+        </div>
+      </div>
+      <div class="pbar" style="margin-top:12px"><i id="progFill" style="width:0%"></i></div>
+    </div>
+
+    <div id="monthTree"></div>
+  </main>
+
+  <!-- ===================== 레슨 상세(Day) ===================== -->
+  <main class="view" id="view-lesson" hidden>
+    <section class="lesson-head">
+      <div class="crumb" id="lessonCrumb"></div>
+      <h1 id="lessonTitle"></h1>
+      <p class="sub" id="lessonSub"></p>
+    </section>
+
+    <!-- ① 이론/설명 -->
+    <section class="block">
+      <div class="block-tag"><span class="n">1</span><span data-i="lesson.theory"></span></div>
+      <div class="prose" id="lessonProse"></div>
+      <div class="callout" style="margin-top:16px">
+        <span class="emoji">💡</span>
+        <span data-i="lesson.tip"></span>
+      </div>
+    </section>
+
+    <!-- ② 시각 자료: 지판 + 타브 (JSON→SVG 렌더 마운트, Day 별 scores[] 개수만큼 동적 생성 — technical_spec §5.4) -->
+    <section class="block">
+      <div class="block-tag"><span class="n">2</span><span data-i="lesson.visual"></span></div>
+      <div class="prose" id="lessonVisualProse"></div>
+      <div id="scoresMount"></div>
+    </section>
+
+    <!-- ③ 완료 액션 -->
+    <section class="complete-wrap">
+      <div class="block-tag"><span class="n">3</span><span data-i="lesson.action"></span></div>
+      <div class="prose" id="lessonPractice"></div>
+      <div class="callout" id="lessonTipsWrap" style="margin-bottom:16px">
+        <span class="emoji">💡</span>
+        <div class="prose" id="lessonTips" style="flex:1"></div>
+      </div>
+      <button class="btn" id="completeBtn"><span data-i="lesson.complete"></span></button>
+      <div class="done-state" id="doneState" style="display:none">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span data-i="lesson.done"></span>
+      </div>
+
+      <div class="lesson-nav">
+        <button class="btn secondary" id="prevBtn"><span data-i="lesson.prev"></span></button>
+        <button class="btn secondary" id="nextBtn"><span data-i="lesson.next"></span></button>
+      </div>
+    </section>
+  </main>
+
+  <!-- 하단 고정 도네이션 진입 -->
+  <div class="footer-cta" id="footerCta">
+    <button class="btn secondary" id="openDonateBtn">💙 <span data-i="donate.footer"></span></button>
+  </div>
+</div>
+
+<!-- ===================== 바텀시트: 도네이션 ===================== -->
+<div class="scrim" id="donateScrim">
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="donateH">
+    <div class="grip"></div>
+    <h2 id="donateH" data-i="donate.title"></h2>
+    <p class="sh-sub" data-i="donate.sub"></p>
+
+    <div class="save-amount">
+      <div class="big" id="saveAmount"></div>
+    </div>
+
+    <div class="pay-grid" id="payGrid">
+      <button class="pay-btn pay-toss" data-donate="toss"><span class="ico">T</span><span data-i="donate.toss"></span></button>
+      <button class="pay-btn pay-kakao" data-donate="kakaopay"><span class="ico">K</span><span data-i="donate.kakaopay"></span></button>
+      <button class="pay-btn pay-paypal" data-donate="paypal"><span class="ico">P</span><span data-i="donate.paypal"></span></button>
+      <button class="pay-btn pay-bmc" data-donate="bmc"><span class="ico">☕</span><span data-i="donate.bmc"></span></button>
+    </div>
+
+    <button class="btn ghost close-free" data-close-sheet data-i="donate.close"></button>
+  </div>
+</div>
+
+<!-- ===================== 바텀시트: 닉네임 ===================== -->
+<div class="scrim" id="nickScrim">
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="nickH">
+    <div class="grip"></div>
+    <h2 id="nickH" data-i="nick.title"></h2>
+    <p class="sh-sub" data-i="nick.sub"></p>
+    <input class="field" id="nickInput" maxlength="16" data-i-ph="nick.placeholder" />
+    <button class="btn" id="saveNickBtn" data-i="nick.save"></button>
+    <button class="btn ghost" data-close-sheet data-i="nick.later"></button>
+  </div>
+</div>
+
+<!-- ===================== 바텀시트: 저장/Export·Import ===================== -->
+<div class="scrim" id="storageScrim">
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="stH">
+    <div class="grip"></div>
+    <h2 id="stH" data-i="storage.title"></h2>
+    <p class="sh-sub" data-i="storage.sub"></p>
+
+    <div class="io-row">
+      <button class="btn secondary" id="exportBtn" data-i="storage.export"></button>
+      <button class="btn secondary" id="importBtn" data-i="storage.import"></button>
+    </div>
+    <textarea class="io-text" id="ioText" data-i-ph="storage.io_placeholder"></textarea>
+    <button class="btn ghost" data-close-sheet data-i="storage.close"></button>
+  </div>
+</div>
+
+<!-- nudge 토스트 & 컨페티 -->
+<div class="toast-wrap" id="toastWrap"></div>
+<canvas id="confetti"></canvas>
+
+<script type="module" src="/src/main.ts"></script>
+</body>
+</html>

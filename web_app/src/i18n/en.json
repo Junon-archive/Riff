@@ -1,0 +1,127 @@
+{
+  "common": {
+    "app_name": "Riff",
+    "next": "Next",
+    "back": "Back",
+    "close": "Close",
+    "confirm": "Sounds good",
+    "cancel": "Cancel",
+    "retry": "Let's try again",
+    "loading": "One sec…",
+    "ok": "Got it"
+  },
+  "free": {
+    "badge": "No login, no payment"
+  },
+  "home": {
+    "title": "Guitar felt hard because<br><span class='accent'>the path was unclear</span>",
+    "lead": "Follow one small lesson a day. A clear, step-by-step order — free all the way through.",
+    "teaser": {
+      "title": "More curricula are on the way",
+      "desc": "Chord changes · Rhythm strumming · Blues licks … unlocking in order, free"
+    },
+    "storage": "No sign-up here. Progress lives in this browser, and clearing the cache can erase it — backing it up now and then keeps it safe.",
+    "storage_cta": "Back up · restore progress",
+    "philosophy": "<strong>With the right order, anyone can play guitar.</strong><br>That's why every lesson here stays free."
+  },
+  "curr": {
+    "eyebrow": "Curriculum",
+    "progress": {
+      "label": "Your progress"
+    },
+    "days": "days done",
+    "week": "Week",
+    "month": {
+      "days": "lessons"
+    }
+  },
+  "months": {
+    "done": "Completed 🎉",
+    "soon": "Coming soon"
+  },
+  "lesson": {
+    "title": "Today's lesson",
+    "theory": "Theory",
+    "visual": "See it",
+    "action": "Today's practice",
+    "chord": "Chord diagram (fretboard)",
+    "chord_note": "Head on the left · finger dots drawn from data onto the 6-string × fret grid",
+    "tab": "Tab notation",
+    "tab_note": "In the live app, playback & tempo controls live here",
+    "tip": "If your fingers aren't there yet, that's fine. Just learning the shape today is plenty.",
+    "play": "Play",
+    "pause": "Pause",
+    "replay": "Watch again",
+    "week_label": "Week {week}",
+    "day_label": "Day {count}",
+    "complete": "Mark today complete 🎸",
+    "complete_toast": "🎉 You just got a little better!",
+    "done": "Today's practice done",
+    "prev": "Prev Day",
+    "next": "Next Day",
+    "locked": "A little more and this one opens up"
+  },
+  "donate": {
+    "footer": "Support these free lessons",
+    "title": "You've been following along great! 👏",
+    "sub": "Everything ahead is free too! Following along this far already saved you several lesson fees. If it helped, a coffee-sized cheer supports the next curriculum.",
+    "close": "No thanks, I'll keep learning for free",
+    "toss": "Send via Toss",
+    "kakaopay": "KakaoPay",
+    "paypal": "PayPal",
+    "bmc": "Buy Me a Coffee",
+    "thanks": "You keep this fun to build. Thank you!"
+  },
+  "nick": {
+    "title": "What should we call you?",
+    "sub": "Just pick a nickname. No sign-up, no password.",
+    "placeholder": "e.g. SixStringHero",
+    "save": "Start with this name",
+    "later": "Maybe later"
+  },
+  "storage": {
+    "title": "Back up · restore progress",
+    "sub": "Copy the code below and you can pick up right where you left off on any device.",
+    "export": "Export my progress",
+    "import": "Restore from code",
+    "io_placeholder": "Your backup code appears here. Paste one to restore.",
+    "close": "Close",
+    "export_done": "Safely saved. You can relax now ✅",
+    "import_done": "Your progress is back. Welcome home!",
+    "cleared_warning": "Clearing browser data wipes your progress too. Still want to?"
+  },
+  "landing": {
+    "free_banner": "Every lesson, 100% free",
+    "start_button": "Start now",
+    "coming_soon": "New curriculum, landing soon"
+  },
+  "progress": {
+    "title": "Your progress",
+    "saved_money": "You've saved about {amount} in lesson fees so far",
+    "lessons_done": "You've finished {count} lessons",
+    "streak": "{count} days in a row 🔥",
+    "completion": "{count}% complete",
+    "keep_going": "This pace looks great on you",
+    "empty": "Nothing here yet. Let's ease into your first lesson"
+  },
+  "nudge": {
+    "enter_week_2": "8 in 10 people put the guitar down in week 1. But you made it here, {nickname} — you're already in the top 20%. Let's keep going 👀",
+    "finish_week": "Week {week} done! Your fingers are starting to remember 🙌",
+    "finish_month": "A whole month. Seriously, not many people get here 👏",
+    "welcome_back": "You're back, {nickname}. We saved your spot",
+    "almost_there": "So close. Just one more?"
+  },
+  "lang": {
+    "switch": "Change language",
+    "ko": "한국어",
+    "en": "English",
+    "ja": "日本語"
+  },
+  "error": {
+    "generic": "Something hiccuped. Want to try again in a bit?",
+    "not_found": "Can't find that lesson. Taking you home",
+    "load_failed": "Couldn't load that. Maybe a quick refresh?",
+    "save_failed": "That didn't save. Let's try once more in a moment",
+    "offline": "Looks like you're offline right now"
+  }
+}

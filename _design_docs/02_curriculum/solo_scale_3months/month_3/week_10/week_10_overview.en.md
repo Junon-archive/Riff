@@ -1,0 +1,24 @@
+# Week 10 — Mixolydian Mode: Getting Bluesy with ♭7 Tension Resolving to the Major 3rd
+> Curriculum: solo_scale_3months · Month 3 · Parent: ../month_3_overview.md · dayKey: m3.w10
+
+Last week you picked up the minor-side color (Dorian ♮6). This week it's the exact opposite corner's turn — **dominant 7th chords**. One thing worth noticing: play A minor pentatonic over an A7 backing track and, sure, you won't hit a wrong note, but it's boring. That "technically bluesy but kind of flat" feeling — you know it. Reach for the **one note** that anyone who's only ever lived in minor pentatonic never touches, and everything changes. Time to meet this week's star, **A Mixolydian**.
+
+## What We're Building This Week
+Play **A Mixolydian (A B C# D E F# G)** over dominant 7th backing (from an A7 vamp up through an A7–D7 blues). Get the relationship between the two identity notes into your hands and ears — the **minor 7th, ♭7 (G)**, which creates tension, and the **major 3rd (C#)**, which resolves it — and build that deep, bluesy line where the blue note ♭3 (C) resolves up a half step into the major 3rd C#. And so you're not stuck in one shape, you'll connect two or more shapes across the whole neck.
+
+## Why Mixolydian, Why Now
+Mixolydian is a major scale with just the 7th lowered a half step (major 7th G# → minor 7th G). That's what splits the sound into these two notes. **G (♭7)** gives the chord that itchy tension of "this isn't just major, this is dominant, it wants to go somewhere," while **C# (the major 3rd)** is the resolution note that reassures the ear, declaring "this is major." Anyone who's only ever run minor pentatonic never touches this C# at all, so their sound stays stuck in the dark. If W9 gave you the minor-side color, this week fills in the dominant-side color to complete both wings of your modal palette. And the blue-note principle you learned back in W4 ("a passing point, not a destination") gets layered onto modes for the first time.
+
+## This Week's Journey (Day 1 → Day 4)
+- **Day 1 — Start with the relationship between two notes.** Get A Mixolydian Position 1 under your fingers, and find G (tension) and C# (resolution) with your eyes closed. Get the feel of hanging tension on G and releasing it on C# into your ears, and taste the bluesy color of resolving the blue note C (♭3) up a half step into C#. This is the day you confirm, over an A7 vamp, that landing on C# is what makes it sound like a real dominant chord.
+- **Day 2 — Turn landing on C# into muscle memory.** Knowing where a note is and having your hand find it automatically mid-solo are two completely different things. Break Position 1 into short phrase-sized chunks with 16th-note sequences, so C# and G keep brushing under your fingers. Try approaching C# with the blue note in two different textures — bending and hammer-ons. A sticky bend, a smooth hammer — the same blue note wears two different expressions.
+- **Day 3 — Escape the one box, connect two shapes.** Open up Position 2, with the root A on the 4th string, 7th fret. Same note names (A B C# D E F# G), different hand shape. Your weapon for connecting the two shapes is a **position shift (slide)** — slide all the way from the root A on the 1st string, 5th fret, up to C# on the 9th fret. Slide up out of Position 1, and you land right on Position 2's major 3rd, C#. Shift and arrive at your target in one motion — two birds, one slide.
+- **Day 4 — Bring it all together with an A7–D7 blues.** Real blues has chords that move. A7's 3rd is C#, D7's 3rd is F#. The instant the chord moves to D7, you need to move your landing point from C# to F#. The good news: both notes are already sitting inside A Mixolydian. No need to switch scales — just retarget where you land. There's a clever bonus too: the blue note C over A7 gets promoted to the ♭7 over D7. Connecting the two shapes with 3rd intervals is this week's grand summary.
+
+## The Core Feel to Hold Onto
+- **Two identity notes: ♭7 (G) = tension, major 3rd (C#) = resolution.** Hang it on G, release it on C#. That push-and-pull is basically all of Mixolydian.
+- **The blue note ♭3 (C) is a wrong note if you sit on it, and a great line if you pass through it.** It's the crooked note a half step below C# (the major 3rd), and it only comes alive when you resolve it a half step up.
+- **When the chord changes, the 3rd changes too: A7 → C#, D7 → F#.** Both notes already live in the same scale, so your hand stays put — just retarget.
+
+## By the End of This Week
+You'll be able to smoothly connect the two A Mixolydian shapes with a slide, and find C# and G by note name no matter which shape you're in. You'll build your own bluesy licks by resolving the blue note C into the major 3rd C#, and you'll be able to record an improv that moves across the neck over an A7–D7 blues, landing on each chord's 3rd (C#/F#). This week, you get the feel of truly singing dominant sound — not just imitating it.

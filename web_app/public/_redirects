@@ -1,0 +1,4 @@
+# Cloudflare Pages SPA fallback (안전판).
+# 해시 라우팅이라 딥링크는 서버 rewrite 없이도 동작하지만,
+# 알 수 없는 경로도 셸(index.html)을 반환하도록 200 rewrite 를 둔다. technical_spec §9.2.
+/*  /index.html  200

@@ -1,0 +1,200 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://guitar-hero.pages.dev/schema/fretboard_score_schema.json",
+  "title": "Fretboard & Tab Score Schema",
+  "description": "할루시네이션 없는 지판/타브 렌더링용 표준 데이터 스키마. 이미지 생성 AI 대신 이 JSON을 프론트엔드(SVG/VexFlow/AlphaTab)가 정확히 렌더링한다. 외부 AI 세션(GPT-4o 등)은 반드시 이 스키마를 준수해 출력한다. 세션 A의 월별 변종 필드(interval/degree/highlight/target/tempo/tempo_bpm/blue_note/slide_to/bend_target)는 모두 이 스키마로 정규화한다.",
+  "type": "object",
+  "required": ["id", "type", "meta"],
+  "properties": {
+    "id": { "type": "string", "description": "고유 식별자 (예: m1.w1.d1.diagram1)" },
+    "type": {
+      "type": "string",
+      "enum": ["fretboard_diagram", "tab", "scale_shape"],
+      "description": "fretboard_diagram=코드/코드톤 매핑 다이어그램, tab=타브 시퀀스, scale_shape=스케일/모드 폼"
+    },
+    "meta": {
+      "type": "object",
+      "required": ["title", "stringCount"],
+      "properties": {
+        "title": { "type": "string" },
+        "titleI18nKey": { "type": "string", "description": "제목 다국어 키(선택)" },
+        "instrument": { "type": "string", "enum": ["guitar"], "default": "guitar" },
+        "stringCount": { "type": "integer", "enum": [6], "default": 6, "description": "표준 6현 고정" },
+        "tuning": {
+          "type": "array",
+          "description": "6번(저음 E)→1번(고음 e) 순서. 표준 EADGBE. (고음현도 'E' 대문자로 표기)",
+          "items": { "type": "string" },
+          "default": ["E", "A", "D", "G", "B", "E"],
+          "minItems": 6,
+          "maxItems": 6
+        },
+        "key": { "type": "string", "description": "조성/스케일 (예: A minor, A Dorian, C major)" },
+        "scale": { "type": "string", "description": "스케일/모드명(선택, 예: A Mixolydian) — 구 root/scale 필드 대체" },
+        "tempoBpm": { "type": "integer", "minimum": 20, "maximum": 300, "description": "구 tempo/tempo_bpm 통일 필드" }
+      }
+    },
+
+    "fretboard": {
+      "type": "object",
+      "description": "type=fretboard_diagram | scale_shape 일 때 사용. 구 fret_range:[a,b] → startFret=a, fretSpan=b-a 로 정규화.",
+      "required": ["startFret", "fretSpan", "dots"],
+      "properties": {
+        "startFret": { "type": "integer", "minimum": 0, "description": "다이어그램 시작 프렛(넛=0). 구 fret_range[0]." },
+        "fretSpan": { "type": "integer", "minimum": 1, "maximum": 24, "description": "프렛 표시 범위(inclusive). 표시창 = startFret ~ (startFret+fretSpan) 프렛까지 포함. 구 fret_range[1]-fret_range[0]. 렌더러(fretboard.ts)는 이 inclusive 해석을 채택. 넥 전체(0~24프렛)는 크게(최대 24)." },
+        "dots": {
+          "type": "array",
+          "description": "짚는 음 목록. 구 notes[] 배열을 정규화.",
+          "items": {
+            "type": "object",
+            "required": ["string", "fret"],
+            "properties": {
+              "string": { "type": "integer", "minimum": 1, "maximum": 6, "description": "1=고음e ~ 6=저음E" },
+              "fret": { "type": "integer", "minimum": 0, "description": "0=개방현" },
+              "finger": { "type": "integer", "minimum": 0, "maximum": 4, "description": "0=개방/무지정,1=검지..4=새끼" },
+              "label": { "type": "string", "description": "도수/음이름 표기(선택). 구 interval/degree/note 통일. 예: R, b3, 3, 5, b7, 6, 'Dm7-3(F)'" },
+              "isRoot": { "type": "boolean", "default": false, "description": "근음 여부" },
+              "highlight": { "type": "boolean", "default": false, "description": "강조 표시(구 highlight/target/blue_note 통일). 타겟 3도·색채음·블루노트 등을 시각 강조." },
+              "role": {
+                "type": "string",
+                "enum": ["root", "chord_tone", "target", "color", "blue_note", "scale", "passing"],
+                "description": "음의 교육적 역할(선택). target=코드톤 착지 목표(주로 3도), color=색채음(도리안 ♮6 등), blue_note=♭5/♭3 블루노트, chord_tone=1/3/5, scale=일반 스케일음, passing=경과음."
+              },
+              "muted": { "type": "boolean", "default": false, "description": "x 표기" }
+            }
+          }
+        },
+        "barre": {
+          "type": "array",
+          "description": "바레(한 손가락으로 여러 현) 표기",
+          "items": {
+            "type": "object",
+            "required": ["fret", "fromString", "toString", "finger"],
+            "properties": {
+              "fret": { "type": "integer", "minimum": 1 },
+              "fromString": { "type": "integer", "minimum": 1, "maximum": 6 },
+              "toString": { "type": "integer", "minimum": 1, "maximum": 6 },
+              "finger": { "type": "integer", "minimum": 1, "maximum": 4 }
+            }
+          }
+        }
+      }
+    },
+
+    "tab": {
+      "type": "object",
+      "description": "type=tab 일 때 사용. 시간순 음표 시퀀스.",
+      "required": ["measures"],
+      "properties": {
+        "timeSignature": { "type": "string", "default": "4/4" },
+        "pattern": { "type": "string", "description": "패턴 태그(선택, 예: 3rd_interval, 4note_sequence, arpeggio_1-3-5, guide_tone_3rds, block_connection)" },
+        "measures": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["notes"],
+            "properties": {
+              "measure": { "type": "integer", "minimum": 1, "description": "마디 번호(선택)" },
+              "notes": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["string", "fret", "duration"],
+                  "properties": {
+                    "string": { "type": "integer", "minimum": 1, "maximum": 6 },
+                    "fret": { "type": "integer", "minimum": 0, "maximum": 24 },
+                    "duration": {
+                      "type": "string",
+                      "enum": ["whole", "half", "quarter", "eighth", "sixteenth"],
+                      "description": "음길이. 구 '2'→half, '4'→quarter, '8'→eighth, '16'→sixteenth 로 정규화."
+                    },
+                    "dotted": { "type": "boolean", "default": false },
+                    "rest": { "type": "boolean", "default": false, "description": "쉼표(여백/프레이징 표현에 사용). 렌더러 계약: rest=true이면 string/fret은 자리채움용으로 무시하고 duration만큼 공백으로 렌더한다." },
+                    "technique": {
+                      "type": "string",
+                      "enum": ["none", "hammer_on", "pull_off", "slide", "bend", "vibrato", "palm_mute", "harmonic"],
+                      "default": "none",
+                      "description": "구 hammer→hammer_on, pull→pull_off 정규화. fade_out은 렌더 대상 아님(제거)."
+                    },
+                    "slideToFret": { "type": "integer", "minimum": 0, "maximum": 24, "description": "슬라이드 도착 프렛(구 slide_to 통일). technique=slide일 때." },
+                    "bendTarget": { "type": "string", "description": "벤딩 도착 목표(구 bend_target 통일). 예: 'half'(반음), 'full'(온음), 또는 도착 도수 '5'. technique=bend일 때." },
+                    "label": { "type": "string", "description": "도수/음이름 표기(구 degree 통일). 예: R, b3, 3, 'G7-3(B)'" },
+                    "target": { "type": "boolean", "default": false, "description": "코드톤 착지 목표음 여부(주로 3도). 구 target 통일." },
+                    "highlight": { "type": "boolean", "default": false, "description": "시각 강조(색채음/블루노트/타겟)." },
+                    "role": {
+                      "type": "string",
+                      "enum": ["root", "chord_tone", "target", "color", "blue_note", "scale", "passing"],
+                      "description": "음의 교육적 역할(선택). fretboard.dots.role과 동일 의미."
+                    },
+                    "finger": { "type": "integer", "minimum": 0, "maximum": 4 }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "notes": {
+      "type": "string",
+      "description": "렌더링 외 참고 텍스트/연주 팁(선택). 표시는 레슨 md가 담당."
+    }
+  },
+
+  "examples": [
+    {
+      "id": "m1.w1.d1.aminor_pentatonic_box1",
+      "type": "scale_shape",
+      "meta": {
+        "title": "A minor pentatonic — Box 1",
+        "stringCount": 6,
+        "tuning": ["E", "A", "D", "G", "B", "E"],
+        "key": "A minor",
+        "tempoBpm": 60
+      },
+      "fretboard": {
+        "startFret": 5,
+        "fretSpan": 4,
+        "dots": [
+          { "string": 6, "fret": 5, "isRoot": true, "label": "R", "role": "root" },
+          { "string": 6, "fret": 8, "label": "b3", "role": "target", "highlight": true },
+          { "string": 5, "fret": 5, "label": "4", "role": "scale" },
+          { "string": 5, "fret": 7, "label": "5", "role": "chord_tone" },
+          { "string": 4, "fret": 5, "label": "b7", "role": "scale" },
+          { "string": 4, "fret": 7, "isRoot": true, "label": "R", "role": "root" },
+          { "string": 3, "fret": 5, "label": "b3", "role": "target", "highlight": true },
+          { "string": 3, "fret": 7, "label": "4", "role": "scale" },
+          { "string": 2, "fret": 5, "label": "5", "role": "chord_tone" },
+          { "string": 2, "fret": 8, "label": "b7", "role": "scale" },
+          { "string": 1, "fret": 5, "isRoot": true, "label": "R", "role": "root" },
+          { "string": 1, "fret": 8, "label": "b3", "role": "target", "highlight": true }
+        ]
+      }
+    },
+    {
+      "id": "m2.w8.d2.guide_tone_line",
+      "type": "tab",
+      "meta": {
+        "title": "ii-V-I guide tone line (Dm7 F -> G7 B -> Cmaj7 E)",
+        "stringCount": 6,
+        "tuning": ["E", "A", "D", "G", "B", "E"],
+        "key": "C major (ii-V-I)",
+        "tempoBpm": 76
+      },
+      "tab": {
+        "timeSignature": "4/4",
+        "pattern": "guide_tone_3rds",
+        "measures": [
+          {
+            "measure": 1,
+            "notes": [
+              { "string": 4, "fret": 3, "duration": "quarter", "label": "Dm7-3(F)", "target": true, "highlight": true, "role": "target" },
+              { "string": 3, "fret": 4, "duration": "quarter", "label": "G7-3(B)", "target": true, "highlight": true, "role": "target" },
+              { "string": 4, "fret": 2, "duration": "half", "technique": "vibrato", "label": "Cmaj7-3(E)", "target": true, "highlight": true, "role": "target" }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

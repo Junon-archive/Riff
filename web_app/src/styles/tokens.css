@@ -1,0 +1,73 @@
+/* ============================================================
+   Riff 디자인 토큰 — Toss 팔레트 (라이트/다크)
+   출처: docs/design_reference.html :root / [data-theme="dark"]
+   정본: docs/design_spec.md §2. 값 임의 변경 금지.
+   ============================================================ */
+:root {
+  --blue-50:  #E8F3FF;
+  --blue-100: #C9E2FF;
+  --blue-500: #3182F6;   /* Toss 시그니처 블루 */
+  --blue-600: #2272EB;
+  --blue-700: #1B64DA;
+
+  --grey-900: #191F28;
+  --grey-800: #333D4B;
+  --grey-700: #4E5968;
+  --grey-600: #6B7684;
+  --grey-500: #8B95A1;
+  --grey-400: #B0B8C1;
+  --grey-300: #D1D6DB;
+  --grey-200: #E5E8EB;
+  --grey-100: #F2F4F6;
+  --grey-50:  #F9FAFB;
+
+  --green-500: #12B886;
+  --yellow-500: #FFC043;
+
+  /* 의미 토큰(라이트) */
+  --bg:        #FFFFFF;
+  --bg-sub:    #F2F4F6;   /* 앱 밖 배경(데스크톱 프레임) */
+  --card:      #FFFFFF;
+  --card-sub:  #F9FAFB;
+  --line:      #E5E8EB;
+  --text:      #191F28;
+  --text-2:    #4E5968;
+  --text-3:    #8B95A1;
+  --primary:   #3182F6;
+  --primary-press: #1B64DA;
+  --primary-weak:  #E8F3FF;
+  --shadow:    0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(0,0,0,.06);
+  --shadow-sm: 0 1px 2px rgba(0,0,0,.05), 0 2px 8px rgba(0,0,0,.04);
+
+  --radius-lg: 24px;
+  --radius:    20px;
+  --radius-sm: 14px;
+  --pill:      999px;
+
+  --app-w: 480px;
+  --safe-b: env(safe-area-inset-bottom, 0px);
+
+  --font: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+          "Pretendard", "Malgun Gothic", "Segoe UI",
+          "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP",
+          "Noto Sans KR", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+[data-theme="dark"] {
+  --bg:        #17171C;
+  --bg-sub:    #0E0E12;
+  --card:      #1E1E24;
+  --card-sub:  #26262E;
+  --line:      #2E2E38;
+  --text:      #EDEEF0;
+  --text-2:    #B0B8C1;
+  --text-3:    #7C838D;
+  --primary:   #4593FC;
+  --primary-press: #3182F6;
+  --primary-weak:  #17263D;
+  --shadow:    0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.5);
+  --shadow-sm: 0 1px 2px rgba(0,0,0,.4), 0 2px 8px rgba(0,0,0,.35);
+  --grey-100:  #26262E;
+  --grey-50:   #1E1E24;
+  --grey-200:  #2E2E38;
+}
