@@ -34,6 +34,7 @@ import {
   evalEnterWeek2,
   evalFinishMonth,
   evalFinishWeek,
+  evalW0Intro,
   evalWelcomeBack,
 } from '../lib/nudges';
 import { burstConfetti, fitConfettiCanvas } from './confetti';
@@ -335,6 +336,10 @@ function onLessonEnter(state: GhState): void {
 
   setLastVisited(curriculumId, dayKey);
 
+  // Week 0 Day 1 첫 진입: 온보딩 안내(1회).
+  const intro = evalW0Intro(dayKey);
+  if (intro) showToast(intro.emoji, intro.text);
+
   const week = Number(view.dataset.week ?? 'NaN');
   if (!Number.isNaN(week)) {
     const nudge = evalEnterWeek2(week, state.nickname);
@@ -371,7 +376,8 @@ function handleComplete(): void {
 
   let milestone = false;
 
-  if (!Number.isNaN(month) && !Number.isNaN(week) && weekDayKeys.length > 0) {
+  // week 0(온보딩)은 완료 응원 토스트를 띄우지 않는다(가볍게 지나가는 주).
+  if (!Number.isNaN(month) && !Number.isNaN(week) && week >= 1 && weekDayKeys.length > 0) {
     const wDone = weekDayKeys.filter((k) => completedSet.has(k)).length;
     const remainingInWeek = weekDayKeys.length - wDone;
 

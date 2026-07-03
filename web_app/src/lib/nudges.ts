@@ -51,6 +51,14 @@ export function evalEnterWeek2(currentWeek: number, nickname: string | null): Nu
   };
 }
 
+/** `w0_intro` — Week 0 Day 1 첫 진입 시 1회: 가볍게 따라 치고 바로 Week 1로 넘어가도 된다는 안내. */
+export function evalW0Intro(dayKey: string): NudgeToast | null {
+  if (dayKey !== 'm1.w0.d1') return null;
+  if (hasSeenNudge('w0_intro')) return null;
+  markNudgeShown('w0_intro');
+  return { id: 'w0_intro', emoji: '👋', text: t('nudge.w0_intro') };
+}
+
 /** `almost_there` — 해당 주 미완료 Day == 1 & 주차 내 미노출. */
 export function evalAlmostThere(month: number, week: number, remainingInWeek: number): NudgeToast | null {
   if (remainingInWeek !== 1) return null;

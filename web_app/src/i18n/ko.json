@@ -137,7 +137,8 @@
     "finish_week_6": "꾸준함이 진짜 재능이에요. {week}주차, 오늘도 완주했네요.",
     "finish_month": "한 달을 채웠어요. 이건 진짜 아무나 못 해요 👏",
     "welcome_back": "다시 왔네요, {nickname}님. 기다리고 있었어요",
-    "almost_there": "거의 다 왔어요. 딱 하나만 더 해볼까요?"
+    "almost_there": "거의 다 왔어요. 딱 하나만 더 해볼까요?",
+    "w0_intro": "Week 0은 편하게 읽고 가볍게 따라 쳐본 다음, 바로 Week 1로 넘어가도 좋아요"
   },
   "lang": {
     "switch": "언어 바꾸기",

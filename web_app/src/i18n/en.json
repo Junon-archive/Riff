@@ -137,7 +137,8 @@
     "finish_week_6": "Consistency really is the talent. Week {week}, done again today.",
     "finish_month": "A whole month. Seriously, not many people get here 👏",
     "welcome_back": "You're back, {nickname}. We saved your spot",
-    "almost_there": "So close. Just one more?"
+    "almost_there": "So close. Just one more?",
+    "w0_intro": "Week 0 is a light warm-up — skim it, try it easy, then feel free to jump straight to Week 1"
   },
   "lang": {
     "switch": "Change language",

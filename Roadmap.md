@@ -72,6 +72,11 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-03 (넛지 다듬기)
+- **응원 토스트 지속시간** 4.2초 → **7초** + 탭하면 닫힘(읽기 쉽게).
+- **Week 0 완료 응원 제거** — 온보딩 주라 완료 토스트 미표시(week≥1만).
+- **Week 0 Day 1 진입 안내** — "가볍게 따라 치고 바로 Week 1로 넘어가도 좋아요" 1회 토스트(`nudge.w0_intro`, 3언어).
+
 ### 2026-07-03 (배포 후 다듬기)
 - **배포 완료** — Cloudflare Pages, `guitar-riff.pages.dev`. `astro.config` `site`를 실도메인으로 교정(canonical/hreflang/sitemap 절대 URL).
 - **후원 CTA 부담 완화** — 푸터 "후원으로 응원하기"가 스크롤 중 항상 sticky로 떠 부담 → **정적 배치로 페이지 맨 끝에서만** 노출. `.view`/`.lesson-article` 하단 여백(구 sticky 대비) 축소.
