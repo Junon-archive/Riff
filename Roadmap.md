@@ -72,6 +72,10 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-03 (배포 후 다듬기)
+- **배포 완료** — Cloudflare Pages, `guitar-riff.pages.dev`. `astro.config` `site`를 실도메인으로 교정(canonical/hreflang/sitemap 절대 URL).
+- **후원 CTA 부담 완화** — 푸터 "후원으로 응원하기"가 스크롤 중 항상 sticky로 떠 부담 → **정적 배치로 페이지 맨 끝에서만** 노출. `.view`/`.lesson-article` 하단 여백(구 sticky 대비) 축소.
+
 ### 2026-07-03 (콘텐츠 충실도 검토 — 색상·콜아웃)
 - **산문 색상 ↔ 렌더 색 정합** — 산문이 임의 색("빨강=타겟" 등)을 써 실제 렌더(타겟=초록)와 어긋나던 문제. 렌더 색 범례 SSOT(`03_data_schema/color_legend.md`) 신설 → **각 음 role에 맞춰 산문 색 교정**(빨강→초록 타겟, ♭5=blue_note→보라, 색채음=노랑 유지) ko/en/ja 일관. 빨강/red 잔재 0, role 데이터 무결.
 - **정적 콜아웃 제거** — 매 레슨 동일하던 `lesson.tip` 목업 잔재 삭제(실제 ④팁은 이미 렌더됨).

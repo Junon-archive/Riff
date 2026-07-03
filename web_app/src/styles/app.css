@@ -99,7 +99,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .nick-chip span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
 /* ---- 뷰 컨테이너 ---- */
-.view { padding: 8px 20px 120px; }
+.view { padding: 8px 20px 32px; }
 .view[hidden] { display: none; }
 
 /* ============================================================
@@ -370,10 +370,10 @@ h1.display {
 /* ============================================================
    하단 고정 CTA (도네이션 진입)
    ============================================================ */
+/* 후원 진입 CTA: 스크롤 중 항상 떠 있으면 부담 → 정적 배치로 페이지 맨 끝에서만 보이게. */
 .footer-cta {
-  position: sticky; bottom: 0; z-index: 30;
-  padding: 12px 20px calc(12px + var(--safe-b));
-  background: linear-gradient(to top, var(--bg) 68%, transparent);
+  padding: 24px 20px calc(28px + var(--safe-b));
+  background: transparent;
 }
 
 /* ============================================================

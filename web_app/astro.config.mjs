@@ -14,8 +14,8 @@ import { defineConfig } from 'astro/config';
  * - build.format      — 'directory': 각 라우트를 <route>/index.html 로.
  */
 export default defineConfig({
-  // 절대 URL(canonical·hreflang·사이트맵)용 배포 도메인. CF Pages 실도메인 확정 시 교체.
-  site: 'https://riff.pages.dev',
+  // 절대 URL(canonical·hreflang·사이트맵)용 배포 도메인 (Cloudflare Pages 실도메인).
+  site: 'https://guitar-riff.pages.dev',
   output: 'static',
   trailingSlash: 'always',
   build: {
