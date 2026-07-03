@@ -1,0 +1,59 @@
+---
+/**
+ * HomeView.astro — 랜딩(홈). hero + 커리큘럼 카드 목록 + 티저 + 저장 안내 + 철학.
+ * 출처: (구) index.html #view-home + _legacy/views/home.ts 카드 렌더. 카드는 <a> 링크(SSR·SEO).
+ */
+import { translate } from '../lib/i18n';
+import { getManifest } from '../lib/content';
+import { curriculumPath, localize } from '../lib/urls';
+import { cleanTitle, stripAndTruncate } from '../views/textUtils';
+import type { Lang } from '../config';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const manifest = getManifest();
+---
+
+<main class="view" id="view-home">
+  <section class="hero">
+    <span class="free-badge">🎁 <span>{translate(lang, 'free.badge')}</span></span>
+    <h1 class="display" set:html={translate(lang, 'home.title')}></h1>
+    <p class="lead">{translate(lang, 'home.lead')}</p>
+  </section>
+
+  <div id="currList">
+    {manifest.curricula.map((c) => (
+      <a class="card curr-card tap" href={localize(lang, curriculumPath(c.id))}>
+        <div class="curr-thumb"><span class="chip">{translate(lang, 'curr.eyebrow')}</span></div>
+        <div class="curr-body">
+          <h3>{cleanTitle(c.titles[lang])}</h3>
+          <p class="muted" style="margin:8px 0 0;font-size:14px">{stripAndTruncate(c.overview[lang])}</p>
+          <div class="curr-meta"><span class="meta-pill">{c.totalDays} {translate(lang, 'curr.month.days')}</span></div>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <div class="card teaser">
+    <div class="emoji">🎬</div>
+    <div>
+      <h3>{translate(lang, 'home.teaser.title')}</h3>
+      <p>{translate(lang, 'home.teaser.desc')}</p>
+    </div>
+  </div>
+
+  {/* Export/Import 시트 open 은 scripts/app.ts(#openStorageBtn 클릭 위임)가 담당 */}
+  <div class="storage-note">
+    <span class="emoji">💾</span>
+    <div>
+      <p>{translate(lang, 'home.storage')}</p>
+      <button id="openStorageBtn">{translate(lang, 'home.storage_cta')}</button>
+    </div>
+  </div>
+
+  <div class="philosophy">
+    <p set:html={translate(lang, 'home.philosophy')}></p>
+  </div>
+</main>

@@ -207,6 +207,23 @@ export function markDayComplete(curriculumId: string, dayKey: string): GhState {
   return next;
 }
 
+/** markDayComplete 의 반대 동작 — 완료 실행취소(undo). 없는 항목이면 no-op. */
+export function markDayIncomplete(curriculumId: string, dayKey: string): GhState {
+  const state = loadState();
+  const prev = state.progress[curriculumId];
+  if (!prev || !prev.completedDays.includes(dayKey)) return state;
+  const completedDays = prev.completedDays.filter((d) => d !== dayKey);
+  const next: GhState = {
+    ...state,
+    progress: {
+      ...state.progress,
+      [curriculumId]: { ...prev, completedDays },
+    },
+  };
+  saveState(next);
+  return next;
+}
+
 export function setLastVisited(curriculumId: string, dayKey: string): GhState {
   const state = loadState();
   const prev = state.progress[curriculumId] ?? { completedDays: [], lastVisited: null };

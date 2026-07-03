@@ -16,10 +16,10 @@ const PAD_L = 48; // 왼쪽 여백(현 이름 + 개방/뮤트 표기)
 const PAD_R = 22;
 const PAD_T = 26;
 const PAD_B = 30; // 프렛 번호 라벨
-const ROW_H = 28; // 현 간격(세로)
+const ROW_H = 36; // 현 간격(세로) — 점 위 도수 라벨이 위 현의 점에 가리지 않도록 넉넉히
 const COL_W = 48; // 프렛 간격(가로)
 const N_STR = 6; // 표준 6현 고정
-const DOT_R = 12;
+const DOT_R = 10; // 점 반경(작게) — 위/아래 현 라벨과 겹침 방지
 
 /* ---- 유틸 ------------------------------------------------------------- */
 function esc(s: string): string {
@@ -217,7 +217,7 @@ export function renderFretboard(score: Score): string {
     // 근음 강조: 외곽 링 추가
     if (dot.isRoot || dot.role === 'root') {
       parts.push(
-        `<circle cx="${cx}" cy="${y}" r="${DOT_R + 3}" fill="none" stroke="var(--primary, #3182F6)" stroke-width="1.5" opacity="0.5"/>`,
+        `<circle cx="${cx}" cy="${y}" r="${DOT_R + 2}" fill="none" stroke="var(--primary, #3182F6)" stroke-width="1.5" opacity="0.5"/>`,
       );
     }
 
@@ -241,7 +241,7 @@ export function renderFretboard(score: Score): string {
     const showLabelOutside = dot.label && (inside !== dot.label);
     if (showLabelOutside) {
       parts.push(
-        `<text x="${cx}" y="${y - DOT_R - 4}" text-anchor="middle" font-size="10" font-weight="700" fill="${style.outlined ? 'currentColor' : style.fill}">${esc(dot.label as string)}</text>`,
+        `<text x="${cx}" y="${y - DOT_R - 4}" text-anchor="middle" font-size="9.5" font-weight="700" fill="${style.outlined ? 'currentColor' : style.fill}">${esc(dot.label as string)}</text>`,
       );
     }
   }

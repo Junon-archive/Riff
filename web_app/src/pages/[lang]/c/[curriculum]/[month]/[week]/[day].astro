@@ -1,0 +1,36 @@
+---
+/**
+ * /{lang}/c/{curriculum}/m{M}/w{W}/d{D}/ — 레슨 상세(en/ja). Day × 언어 당 1 정적 페이지.
+ */
+import Base from '../../../../../../layouts/Base.astro';
+import LessonView from '../../../../../../components/LessonView.astro';
+import { translate } from '../../../../../../lib/i18n';
+import { findCurriculum, findDayLocation, getManifest } from '../../../../../../lib/content';
+import { cleanTitle } from '../../../../../../views/textUtils';
+import { lessonRoutes } from '../../../../../../lib/paths';
+import { PREFIXED_LANGS, curriculumPath, localize } from '../../../../../../lib/urls';
+import type { Lang } from '../../../../../../config';
+
+export function getStaticPaths() {
+  return PREFIXED_LANGS.flatMap((lang) =>
+    lessonRoutes().map((r) => ({
+      params: { lang, ...r.params },
+      props: { dayKey: r.dayKey },
+    })),
+  );
+}
+
+const lang = Astro.params.lang as Lang;
+const { curriculum, month, week, day } = Astro.params;
+const { dayKey } = Astro.props as { dayKey: string };
+
+const node = findCurriculum(getManifest(), curriculum!)!;
+const loc = findDayLocation(node, dayKey)!;
+const dayTitle = loc.day.titles[lang];
+const canonicalPath = `/c/${curriculum}/${month}/${week}/${day}/`;
+const title = `${dayTitle} · ${cleanTitle(loc.month.titles[lang])} — ${translate(lang, 'common.app_name')}`;
+---
+
+<Base lang={lang} title={title} canonicalPath={canonicalPath} backHref={localize(lang, curriculumPath(curriculum!))}>
+  <LessonView lang={lang} curriculumId={curriculum!} dayKey={dayKey} />
+</Base>

@@ -6,5 +6,4 @@ export * from './storage';
 export * from './progress';
 export * from './nudges';
 export * from './i18n';
-export * from './router';
 export * from './content';

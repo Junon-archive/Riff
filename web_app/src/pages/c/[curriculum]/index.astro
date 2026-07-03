@@ -1,0 +1,26 @@
+---
+/**
+ * /c/{curriculum}/ — 커리큘럼 개요(ko).
+ */
+import Base from '../../../layouts/Base.astro';
+import CurriculumView from '../../../components/CurriculumView.astro';
+import { translate } from '../../../lib/i18n';
+import { findCurriculum, getManifest } from '../../../lib/content';
+import { cleanTitle } from '../../../views/textUtils';
+import { curriculumRoutes } from '../../../lib/paths';
+import { localize } from '../../../lib/urls';
+
+export function getStaticPaths() {
+  return curriculumRoutes().map((r) => ({ params: { curriculum: r.curriculum } }));
+}
+
+const lang = 'ko';
+const { curriculum } = Astro.params;
+const node = findCurriculum(getManifest(), curriculum!)!;
+const canonicalPath = `/c/${curriculum}/`;
+const title = `${cleanTitle(node.titles[lang])} — ${translate(lang, 'common.app_name')}`;
+---
+
+<Base lang={lang} title={title} canonicalPath={canonicalPath} backHref={localize(lang, '/')}>
+  <CurriculumView lang={lang} curriculumId={curriculum!} />
+</Base>

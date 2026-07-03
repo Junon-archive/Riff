@@ -5,15 +5,18 @@
 > **⚠️ 스택 개정 (2026-07-03): React → 경량 하이브리드.**
 > 완성도 높은 바닐라 목업(`web_app/docs/design_reference.html`)이 라우팅·i18n·localStorage 폴백·SVG 렌더·컨페티를 의존성 0으로 이미 구현했다. 이를 근거로 **UI 프레임워크(React) 제거**, **바닐라 JS(ES modules) + Vite + TypeScript**로 확정한다. 타브/지판은 **자체 SVG 렌더러**로 확정(AlphaTab/VexFlow 미채택). 아래 §1 표에 개정 결과를 병기하며, 상세·근거·기각안·위임 경계는 **`web_app/docs/technical_spec.md`(정식 기술 명세)**가 SSOT다. 서비스명은 **Riff**.
 
+> **⚠️ 2차 개정 (2026-07-03): 바닐라 해시 SPA → Astro 정적 다중 페이지.**
+> 목적은 **SEO**다. 해시 SPA(`#/c/...`)는 레슨별 실제 HTML 이 없어 검색 유입이 불가능했다. 빌드 도구를 **Vite → Astro(빌드 타임 전용, 정적 출력)**로 전환해 **레슨마다 실제 정적 HTML** 을 생성하고, 언어별 정적 라우트(ko 무접두 `/`, `/en`, `/ja`)로 hreflang 기반 다국어 SEO 를 얻는다. 덤으로 **View Transitions**(`<ClientRouter/>`). **런타임 프레임워크는 여전히 없음**(Astro 는 빌드 타임, 정적 HTML+아일랜드). **Zero-Cost·CF Pages 배포·자체 SVG 렌더러·i18n 사전·localStorage 상태·CSS 토큰은 전부 불변**이며 그대로 재사용한다. 라우팅 모델·재사용/변경 경계·URL 스킴·2단계 위임은 **`web_app/docs/technical_spec.md` §8-Astro(개정 노트)**가 SSOT다.
+
 ## 1. 결정 요약 (TL;DR)
 
 > 아래 목록의 취소선(~~…~~)은 개정 전(React) 결정, 화살표(→) 뒤가 개정 후 확정값이다.
 
-- **프레임워크:** ~~React + Vite~~ → **바닐라 JS(ES modules) + Vite** (UI 프레임워크 없음). 뷰 3종·소형 표면적이라 프레임워크 런타임 이득 < 비용.
+- **프레임워크:** ~~React + Vite~~ → ~~바닐라 JS(ES modules) + Vite~~ → **Astro + TypeScript**(빌드 타임 전용, 런타임 UI 프레임워크 없음·정적 출력). 상호작용은 소형 아일랜드/스크립트로.
 - **언어:** TypeScript (악보 JSON 스키마의 타입 안전성이 핵심). *(유지)*
-- **스타일:** CSS Variables 기반 디자인 토큰. ~~Tailwind 선택~~ → **Tailwind 미채택**, 목업 `:root` 토큰 승계.
-- **라우팅:** ~~React Router~~ → **해시 라우팅**(자체 경량 라우터). 정적 호스트에서 서버 rewrite 없이 딥링크 안전.
-- **i18n:** ~~react-i18next~~ → **자체 경량 사전 로더** + `ko/en/ja.json`(9 네임스페이스). 목업 kr/jp는 **ko/ja로 정규화**.
+- **스타일:** CSS Variables 기반 디자인 토큰. ~~Tailwind 선택~~ → **Tailwind 미채택**, 목업 `:root` 토큰 승계. *(유지)*
+- **라우팅:** ~~React Router~~ → ~~해시 라우팅~~ → **Astro 파일 기반 정적 라우팅**. 레슨별 실제 HTML(SEO). 언어별 정적 라우트(ko 무접두, `/en`·`/ja`) + hreflang.
+- **i18n:** ~~react-i18next~~ → **자체 경량 사전 로더** + `ko/en/ja.json`(14 네임스페이스·91키). 목업 kr/jp는 **ko/ja로 정규화**. Astro 에서는 빌드 타임 `translate(lang, key)`로 언어별 페이지에 직접 SSR.
 - **상태/진도:** 외부 상태관리 없이 `localStorage` 래퍼 + **인메모리 폴백**(React Context 불필요).
 - **악보/지판 렌더링:** 지판·타브 **둘 다 자체 SVG 렌더러**(`fretboard_score_schema.json` 소비). ~~AlphaTab/VexFlow~~ 미채택.
 - **애니메이션:** 완료 팡파르 = **자체 canvas 컨페티**(목업 구현 재사용, 의존성 0). ~~canvas-confetti~~ 불필요.

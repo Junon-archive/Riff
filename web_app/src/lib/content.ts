@@ -81,3 +81,11 @@ export function parseDayKey(dayKey: string): { month: number; week: number; day:
   if (!match) throw new Error(`[content] invalid dayKey: ${dayKey}`);
   return { month: Number(match[1]), week: Number(match[2]), day: Number(match[3]) };
 }
+
+/**
+ * weeks/days 가 비어 있는 월 = "곧 열려요"(데이터 기반 판정, 커리큘럼별 하드코딩 없음).
+ * SSR(CurriculumView.astro)과 클라이언트 하이드레이션(scripts/app.ts)이 동일 판정을 공유한다.
+ */
+export function isMonthSoon(month: ManifestMonth): boolean {
+  return month.weeks.length === 0 || month.weeks.every((w) => w.days.length === 0);
+}

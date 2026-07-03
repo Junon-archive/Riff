@@ -45,18 +45,20 @@ error.*       예외 안내
 | `lesson.complete_toast` (변경 없음 — `lesson.done`과는 별개 유지, `i18n_key_map.md` §3 비고) | 🎉 방금 한 걸음 더 나아갔어요! | 🎉 You just got a little better! | 🎉 いま、一歩前に進みましたね！ |
 | `progress.saved_money` (변경 없음) | 지금까지 약 {amount} 레슨비를 아꼈어요 | You've saved about {amount} in lesson fees so far | これまでで約 {amount} のレッスン代を節約できました |
 | `nudge.enter_week_2` (변경 없음) | 10명 중 8명은 1주차에서 기타를 내려놔요. 그런데 {nickname}님은 여기까지 왔으니, 이미 상위 20%예요. 다음도 같이 달려봐요 👀 | 8 in 10 people put the guitar down in week 1. But you made it here, {nickname} — you're already in the top 20%. Let's keep going 👀 | 10人に8人は、1週目でギターを置いてしまいます。でも{nickname}さんはここまで来たので、もう上位20%です。次も一緒にいきましょう 👀 |
-| `nudge.finish_week` (변경 없음) | {week}주차 완주! 손가락이 기억하기 시작했을 거예요 🙌 | Week {week} done! Your fingers are starting to remember 🙌 | {week}週目、走り切りましたね！指が覚え始めたころだと思います 🙌 |
+| `nudge.finish_week_1..6` (2단계: 단일 키 → 6개 로테이션 키로 분화, 아래 §4 참조) | 예) 약 35%는 {week}주차에서 기타를 내려놨대요. 그런데 {nickname}님은 여기까지 왔으니, 이미 상위 20%예요. (외 5종 — `web_app/src/i18n/ko.json` `nudge.finish_week_1..6` 참조) | e.g. About 35% put the guitar down by week {week}. But you've made it this far, {nickname} — you're already in the top 20%. (+5 more variants — see `web_app/src/i18n/en.json` `nudge.finish_week_1..6`) | 例）だいたい35%の人が{week}週目でギターを置いてしまうそうです。でも{nickname}さんはここまで来たので、もう上位20%です。（他5種 — `web_app/src/i18n/ja.json` `nudge.finish_week_1..6` 参照） |
 | `nudge.finish_month` (변경 없음) | 한 달을 채웠어요. 이건 진짜 아무나 못 해요 👏 | A whole month. Seriously, not many people get here 👏 | 1か月やり切りました。これ、なかなかできることじゃないんです 👏 |
 | `home.storage` (구 `storage.local_only`, 목업 문구로 병합) | 회원가입은 없어요. 진도는 이 브라우저에 저장돼요. 캐시를 지우면 기억도 같이 사라질 수 있어서, 가끔 백업해두면 마음이 편해요. | No sign-up here. Progress lives in this browser, and clearing the cache can erase it — backing it up now and then keeps it safe. | 会員登録はありません。進捗はこのブラウザに保存され、キャッシュを消すと消えることも。たまにバックアップしておくと安心です。 |
 | `storage.export` (키 이름 동일, 문구는 목업 채택) | 내 진도 내보내기 | Export my progress | 進み具合を書き出す |
 | `donate.sub` (구 `donation.coffee`, 목업 문구로 병합) | 이후 내용도 모두 무료예요! 여기까지 따라왔다면 이미 레슨 몇 회차 분량을 아낀 셈이에요. 도움이 됐다면, 커피 한 잔으로 다음 커리큘럼을 응원해주세요. | Everything ahead is free too! Following along this far already saved you several lesson fees. If it helped, a coffee-sized cheer supports the next curriculum. | この先の内容もすべて無料です！ここまで進めたなら、すでにレッスン数回分を節約しています。役に立ったら、コーヒー1杯で次のカリキュラムを応援してください。 |
 | `lang.switch` (변경 없음) | 언어 바꾸기 | Change language | 言語を変える |
+| `lesson.undo` (신규, 2단계 구현 — 완료 실행취소 버튼) | 취소 | Undo | 取り消す |
 
 ## 4. 유동 알림(Nudge) 카피 규약
 - 각 nudge는 `nudge.{id}` 키 하나. `01_architecture/state_storage.md` §5 트리거 표와 1:1 매핑됨.
 - `nudge.welcome_back`(재접속 3일 경과 기준), `nudge.almost_there`(잔여 Day 1개 기준)는 §5에 편입 완료 — nudge 네임스페이스 5개 키(`enter_week_2`/`finish_week`/`finish_month`/`welcome_back`/`almost_there`) 전체가 §5 표와 어긋남 없이 매핑됨.
 - 변수 보간: `{amount}`, `{nickname}`, `{week}`, `{count}` 플레이스홀더를 3개 언어에서 이름 그대로 유지(어순은 언어별 자유). 실제 산출물에서 검증 완료(불일치 0건).
 - 1회성 노출(중복 방지)은 저장 계층(`nudges.shown`)이 담당(1회성은 id, 반복형은 `id:주차`/`id:날짜` dedup 키), 카피는 순수 문구만.
+- **`nudge.finish_week` 문구 로테이션(프론트 2단계 구현):** 트리거 조건·dedup 키(`finish_week:{m.w}`)는 불변. 다만 같은 문구 반복을 피하기 위해 `nudge.finish_week_1`~`nudge.finish_week_6` 6종을 두고, `web_app/src/lib/nudges.ts`가 **전역 주차 인덱스(`week % 6`)로 결정적 로테이션**해 하나를 고른다(랜덤 아님 — 같은 주차는 항상 같은 문구, 재현 가능). 결: `_1`=통계+칭찬(긁지 않기 톤, {week}/{nickname} 사용), `_2`=순수 격려, `_3`=연습(메트로놈) 리마인더, `_4`/`_6`=누적·꾸준함 칭찬({week} 사용), `_5`=완주 축하. `{week}`/`{nickname}` 플레이스홀더는 3언어 동일 이름 유지.
 
 ## 5. 도네이션 채널 라벨
 > 네임스페이스가 `donation.*` → **`donate.*`**로 통일됐다(목업 `donate.title/sub/close/footer`와 정합, `./i18n_key_map.md` §3). 값은 변경 없음.

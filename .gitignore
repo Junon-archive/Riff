@@ -9,3 +9,6 @@ dist/
 Thumbs.db
 
 # NOTE: .claude/ 는 의도적으로 추적한다(에이전트 정의·설정 포함). 무시하지 않음.
+
+# Astro 생성 캐시/타입
+.astro/

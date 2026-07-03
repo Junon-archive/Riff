@@ -27,6 +27,18 @@ export function weekScopeKey(month: number, week: number): string {
   return `m${month}.w${week}`;
 }
 
+/**
+ * `finish_week` 문구 로테이션 — i18n `nudge.finish_week_1..N`(토스체 격려/통계/연습 리마인더 등
+ * 다양한 결). 매번 같은 문장이 반복되지 않도록 **전역 주차 인덱스(week)** 로 결정적 로테이션한다
+ * (완료 시점의 랜덤이 아니라 주차 번호 기반이라 같은 주는 항상 같은 문구 — 재현 가능·테스트 가능).
+ */
+const FINISH_WEEK_VARIANTS = 6;
+
+function finishWeekKey(week: number): string {
+  const idx = ((week % FINISH_WEEK_VARIANTS) + FINISH_WEEK_VARIANTS) % FINISH_WEEK_VARIANTS;
+  return `nudge.finish_week_${idx + 1}`;
+}
+
 /** `enter_week_2` — w2 첫 진입 & 미노출(영구 1회). */
 export function evalEnterWeek2(currentWeek: number, nickname: string | null): NudgeToast | null {
   if (currentWeek !== 2) return null;
@@ -48,13 +60,25 @@ export function evalAlmostThere(month: number, week: number, remainingInWeek: nu
   return { id: dedupKey, emoji: NUDGE_EMOJI.almost_there, text: t('nudge.almost_there') };
 }
 
-/** `finish_week` — 해당 주 미완료 Day == 0. */
-export function evalFinishWeek(month: number, week: number, remainingInWeek: number): NudgeToast | null {
+/**
+ * `finish_week` — 해당 주 미완료 Day == 0. 트리거·dedup 은 그대로, 문구만 주차 번호 기반으로
+ * 로테이션한다(finishWeekKey, state_storage §5 dedup 키 형식 `finish_week:{m.w}` 불변).
+ */
+export function evalFinishWeek(
+  month: number,
+  week: number,
+  remainingInWeek: number,
+  nickname: string | null = null,
+): NudgeToast | null {
   if (remainingInWeek !== 0) return null;
   const dedupKey = `finish_week:${weekScopeKey(month, week)}`;
   if (hasSeenNudge(dedupKey)) return null;
   markNudgeShown(dedupKey);
-  return { id: dedupKey, emoji: NUDGE_EMOJI.finish_week, text: t('nudge.finish_week', { week }) };
+  return {
+    id: dedupKey,
+    emoji: NUDGE_EMOJI.finish_week,
+    text: t(finishWeekKey(week), { week, nickname: nickname ?? '' }),
+  };
 }
 
 /** `finish_month` — 한 달 완료(영구 1회). */

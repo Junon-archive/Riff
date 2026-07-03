@@ -57,6 +57,7 @@
     "complete": "Mark today complete 🎸",
     "complete_toast": "🎉 You just got a little better!",
     "done": "Today's practice done",
+    "undo": "Undo",
     "prev": "Prev Day",
     "next": "Next Day",
     "locked": "A little more and this one opens up"
@@ -106,7 +107,12 @@
   },
   "nudge": {
     "enter_week_2": "8 in 10 people put the guitar down in week 1. But you made it here, {nickname} — you're already in the top 20%. Let's keep going 👀",
-    "finish_week": "Week {week} done! Your fingers are starting to remember 🙌",
+    "finish_week_1": "About 35% put the guitar down by week {week}. But you've made it this far, {nickname} — you're already in the top 20%.",
+    "finish_week_2": "Nice work — you're doing great. Keep this pace going!",
+    "finish_week_3": "How was practice? Just don't forget your metronome — it's always with you.",
+    "finish_week_4": "You've made it to week {week}. A little practice each day adds up to this.",
+    "finish_week_5": "Another week, complete. Your fingers are remembering a little more each time.",
+    "finish_week_6": "Consistency really is the talent. Week {week}, done again today.",
     "finish_month": "A whole month. Seriously, not many people get here 👏",
     "welcome_back": "You're back, {nickname}. We saved your spot",
     "almost_there": "So close. Just one more?"

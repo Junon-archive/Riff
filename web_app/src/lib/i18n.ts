@@ -52,9 +52,17 @@ function resolvePath(dict: Dict, path: string): unknown {
   }, dict);
 }
 
-/** dot-path 사전 조회 + 폴백(ko) + `{placeholder}` 보간. 미스 시 키 원문 반환. */
-export function t(key: string, params?: Record<string, string | number>): string {
-  let value = resolvePath(DICTS[currentLang], key);
+/**
+ * 언어 명시형 순수 조회 — 활성 언어(모듈 상태)에 의존하지 않는다.
+ * Astro SSR(빌드 타임, 언어별 정적 라우트)에서 사용한다: 각 페이지가 자신의 lang 으로 직접 해석.
+ * dot-path 조회 + 폴백(ko) + `{placeholder}` 보간. 미스 시 키 원문 반환.
+ */
+export function translate(
+  lang: Lang,
+  key: string,
+  params?: Record<string, string | number>,
+): string {
+  let value = resolvePath(DICTS[lang], key);
   if (typeof value !== 'string') value = resolvePath(DICTS[DEFAULT_LANG], key);
   if (typeof value !== 'string') return key;
   let out = value;
@@ -64,6 +72,11 @@ export function t(key: string, params?: Record<string, string | number>): string
     }
   }
   return out;
+}
+
+/** dot-path 사전 조회 + 폴백(ko) + `{placeholder}` 보간. 미스 시 키 원문 반환. (활성 언어 기준) */
+export function t(key: string, params?: Record<string, string | number>): string {
+  return translate(currentLang, key, params);
 }
 
 /** [data-i]/[data-i-html]/[data-i-ph] 스캔 + document.lang 갱신(목업 승계, §7.1). */

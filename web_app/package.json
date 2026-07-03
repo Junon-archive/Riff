@@ -1,19 +1,22 @@
 {
   "name": "riff-web",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
-  "description": "Riff — 무료 기타 레슨 정적 SPA (바닐라 + Vite + TypeScript). Zero-Cost / Static / i18n-first.",
+  "description": "Riff — 무료 기타 레슨 정적 사이트 (Astro + TypeScript). Zero-Cost / Static / i18n-first / SEO(레슨별 정적 HTML).",
   "scripts": {
     "build:content": "node scripts/build-content.mjs",
-    "dev": "npm run build:content && vite",
-    "typecheck": "tsc --noEmit",
+    "dev": "npm run build:content && astro dev",
+    "check": "astro check",
+    "typecheck": "astro check",
     "prebuild": "npm run build:content",
-    "build": "npm run build:content && tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "build": "npm run build:content && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "devDependencies": {
-    "typescript": "^5.7.3",
-    "vite": "^6.0.7"
+    "@astrojs/check": "^0.9.4",
+    "astro": "^5.13.0",
+    "typescript": "^5.7.3"
   }
 }

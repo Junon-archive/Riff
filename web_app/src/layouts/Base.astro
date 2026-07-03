@@ -1,0 +1,175 @@
+---
+/**
+ * Base.astro — 앱 셸(topbar / 뷰 컨테이너 slot / 바텀시트 / 토스트 / 컨페티 캔버스).
+ * 출처 마크업: (구) web_app/index.html <body> — 재발명 금지, 클래스/구조 그대로 이식.
+ * 차이: data-i 빈 노드 → 언어별 SSR 텍스트(translate). 언어 스위처 = 동일 페이지의 타 언어 URL 링크.
+ *
+ * View Transitions: <ClientRouter /> (Astro 5). 정적 다중 페이지 간 SPA 유사 전환.
+ * 상호작용(테마 토글 등 최소분만 여기서, 나머지는 2단계 island 로 위임 — 하단 STUB 주석 참조).
+ */
+import { ClientRouter } from 'astro:transitions';
+import { translate } from '../lib/i18n';
+import { altUrls } from '../lib/urls';
+import type { Lang } from '../config';
+import { SUPPORTED_LANGS } from '../config';
+import '../styles/tokens.css';
+import '../styles/app.css';
+
+interface Props {
+  lang: Lang;
+  title: string;
+  description?: string;
+  /** 캐논(ko) 경로 — hreflang · 언어 스위처 링크 계산용. */
+  canonicalPath: string;
+  /** 뒤로가기 버튼 노출 + 대상 링크(홈이면 생략). */
+  backHref?: string;
+  /** 색인 제외(404 등 에러 페이지). 기본 false. */
+  noindex?: boolean;
+}
+
+const { lang, title, description, canonicalPath, backHref, noindex = false } = Astro.props;
+const alts = altUrls(canonicalPath);
+const homeHref = lang === 'ko' ? '/' : `/${lang}/`;
+const desc = description ?? translate(lang, 'home.lead');
+
+const LANG_LABEL: Record<Lang, string> = { ko: '한글', en: 'EN', ja: '日本' };
+---
+
+<!doctype html>
+<html lang={lang} data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+    <meta name="description" content={desc} />
+    {noindex ? <meta name="robots" content="noindex,follow" /> : null}
+
+    {/* hreflang — 언어별 정적 대체 URL(SEO). x-default = ko */}
+    {SUPPORTED_LANGS.map((l) => (
+      <link rel="alternate" hreflang={l} href={new URL(alts[l], Astro.site ?? Astro.url).href} />
+    ))}
+    <link rel="alternate" hreflang="x-default" href={new URL(alts.ko, Astro.site ?? Astro.url).href} />
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site ?? Astro.url).href} />
+
+    {/* 테마 플래시 방지 + 테마 토글(문서 위임, View Transitions 후 재적용) */}
+    <script is:inline>
+      (function () {
+        var apply = function () {
+          try {
+            var t = localStorage.getItem('riff_theme');
+            document.documentElement.dataset.theme = t === 'dark' ? 'dark' : 'light';
+          } catch (e) {}
+        };
+        apply();
+        document.addEventListener('astro:after-swap', apply);
+        document.addEventListener('click', function (e) {
+          var b = e.target && e.target.closest && e.target.closest('#themeBtn');
+          if (!b) return;
+          var next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+          try {
+            localStorage.setItem('riff_theme', next);
+          } catch (e2) {}
+          document.documentElement.dataset.theme = next;
+        });
+      })();
+    </script>
+
+    <ClientRouter />
+
+    {/*
+      2단계 상호작용 부트스트랩(진도 하이드레이션·완료 액션·바텀시트·넛지 — technical_spec §8-A.5).
+      astro:page-load 에서 (재)바인딩되므로 최초 로드·View Transitions 전환 모두 커버한다.
+    */}
+    <script src="../scripts/app.ts"></script>
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar" id="topbar">
+        {backHref ? (
+          <a class="icon-btn" id="backBtn" href={backHref} aria-label="Back">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M15 19l-7-7 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        ) : null}
+        <a class="brand" id="brandHome" href={homeHref}>
+          <svg class="pick" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 2c4.4 0 8 2.6 8 6.4 0 3.1-2 5.2-3.9 7.2-1.4 1.5-2.1 3-2.5 4.9-.2 1-.9 1.5-1.6 1.5-.9 0-1.6-.8-1.9-2.1C9.3 21 9 17 8 14.6 6.9 12 4 11 4 8.4 4 4.6 7.6 2 12 2z"/>
+          </svg>
+          Riff
+        </a>
+        <div class="spacer"></div>
+
+        {/* 언어 스위처 = 동일 페이지의 타 언어 정적 URL 링크(SEO·SSR). */}
+        <div class="lang-seg" id="langSeg" role="tablist" aria-label="Language">
+          {SUPPORTED_LANGS.map((l) => (
+            <a href={alts[l]} class={l === lang ? 'active' : ''} hreflang={l}>{LANG_LABEL[l]}</a>
+          ))}
+        </div>
+
+        <button class="icon-btn" id="themeBtn" aria-label="Toggle theme">
+          <svg class="sun" width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="2"/><path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.4 1.4M17.6 17.6L19 19M19 5l-1.4 1.4M6.4 17.6L5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <svg class="moon" width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M20 14.5A8 8 0 019.5 4 7 7 0 1020 14.5z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        </button>
+
+        {/* 닉네임 칩 — scripts/app.ts refreshNickChip() 이 localStorage 상태로 표시/토글 */}
+        <button class="nick-chip" id="nickChip" style="display:none"><span id="nickText"></span></button>
+      </header>
+
+      <slot />
+
+      {/* 하단 고정 도네이션 진입 — scripts/app.ts 가 클릭 시 도네이션 시트 open */}
+      <div class="footer-cta" id="footerCta">
+        <button class="btn secondary" id="openDonateBtn">💙 <span>{translate(lang, 'donate.footer')}</span></button>
+      </div>
+    </div>
+
+    {/*
+      바텀시트 3종 · 토스트 · 컨페티 — 마크업만 정적 이식(초기 hidden).
+      open/close·Export/Import·도네이션 채널·닉네임 저장·컨페티 배선은 scripts/app.ts 가 담당한다.
+    */}
+    <div class="scrim" id="donateScrim">
+      <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="donateH">
+        <div class="grip"></div>
+        <h2 id="donateH">{translate(lang, 'donate.title')}</h2>
+        <p class="sh-sub">{translate(lang, 'donate.sub')}</p>
+        <div class="save-amount"><div class="big" id="saveAmount"></div></div>
+        <div class="pay-grid" id="payGrid">
+          <button class="pay-btn pay-toss" data-donate="toss"><span class="ico">T</span><span>{translate(lang, 'donate.toss')}</span></button>
+          <button class="pay-btn pay-kakao" data-donate="kakaopay"><span class="ico">K</span><span>{translate(lang, 'donate.kakaopay')}</span></button>
+          <button class="pay-btn pay-paypal" data-donate="paypal"><span class="ico">P</span><span>{translate(lang, 'donate.paypal')}</span></button>
+          <button class="pay-btn pay-bmc" data-donate="bmc"><span class="ico">☕</span><span>{translate(lang, 'donate.bmc')}</span></button>
+        </div>
+        <button class="btn ghost close-free" data-close-sheet>{translate(lang, 'donate.close')}</button>
+      </div>
+    </div>
+
+    <div class="scrim" id="nickScrim">
+      <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="nickH">
+        <div class="grip"></div>
+        <h2 id="nickH">{translate(lang, 'nick.title')}</h2>
+        <p class="sh-sub">{translate(lang, 'nick.sub')}</p>
+        <input class="field" id="nickInput" maxlength="16" placeholder={translate(lang, 'nick.placeholder')} />
+        <button class="btn" id="saveNickBtn">{translate(lang, 'nick.save')}</button>
+        <button class="btn ghost" data-close-sheet>{translate(lang, 'nick.later')}</button>
+      </div>
+    </div>
+
+    <div class="scrim" id="storageScrim">
+      <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="stH">
+        <div class="grip"></div>
+        <h2 id="stH">{translate(lang, 'storage.title')}</h2>
+        <p class="sh-sub">{translate(lang, 'storage.sub')}</p>
+        <div class="io-row">
+          <button class="btn secondary" id="exportBtn">{translate(lang, 'storage.export')}</button>
+          <button class="btn secondary" id="importBtn">{translate(lang, 'storage.import')}</button>
+        </div>
+        <textarea class="io-text" id="ioText" placeholder={translate(lang, 'storage.io_placeholder')}></textarea>
+        <button class="btn ghost" data-close-sheet>{translate(lang, 'storage.close')}</button>
+      </div>
+    </div>
+
+    <div class="toast-wrap" id="toastWrap"></div>
+    <canvas id="confetti"></canvas>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+---
+/**
+ * CurriculumView.astro — 커리큘럼 계층 2단 중첩 아코디언(Month → Week → Day) + 진도 요약.
+ * 출처: (구) index.html #view-curriculum + _legacy/views/curriculum.ts.
+ *
+ * SSR: 진도 0%(서버는 완료 여부를 모른다) 기준으로 **첫 Month·그 안의 첫 Week만** 펼치고 나머지는
+ * 접은 채로 렌더한다. 접힌 상태여도 모든 Day 링크는 DOM에 그대로 존재한다(CSS display 토글일 뿐 —
+ * 크롤러·스크린리더·no-JS 사용자 모두 콘텐츠에 도달 가능). data-curriculum/data-total-days/
+ * data-month/data-week/data-day 훅만 남긴다.
+ * 2단계 구현 완료: 진도율(%)·완료 체크·Month/Week 아코디언 초기 열림은 scripts/app.ts 의
+ * hydrateCurriculum() 이 localStorage 진도로 재계산해 하이드레이트한다("다음 미완료 Day가 있는
+ * Month·Week"를 펼침). ("곧 열려요" soon 판정은 구조 데이터 기반이라 SSR 시점에 이미 확정.)
+ */
+import { translate } from '../lib/i18n';
+import { findCurriculum, getManifest, isMonthSoon, parseDayKey } from '../lib/content';
+import { lessonPath, localize } from '../lib/urls';
+import { cleanTitle } from '../views/textUtils';
+import type { Lang } from '../config';
+
+interface Props {
+  lang: Lang;
+  curriculumId: string;
+}
+const { lang, curriculumId } = Astro.props;
+const curriculum = findCurriculum(getManifest(), curriculumId)!;
+
+const CHECK_ICON = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+const ARROW_ICON = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+const CARET_ICON = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+// SSR 기본 펼침: soon 이 아닌 첫 Month, 그 Month 의 첫 Week만 open. 나머지는 전부 접힘.
+const firstOpenMonthIndex = curriculum.months.findIndex((m) => !isMonthSoon(m));
+---
+
+<main class="view" id="view-curriculum" data-curriculum={curriculumId} data-total-days={curriculum.totalDays}>
+  <section class="curr-head">
+    <span class="eyebrow">{translate(lang, 'curr.eyebrow')}</span>
+    <h1 class="display" id="currTitle">{cleanTitle(curriculum.titles[lang])}</h1>
+  </section>
+
+  <div class="card prog-summary">
+    <div class="row between" style="align-items:flex-end">
+      <div>
+        <div class="muted" style="font-size:13px;font-weight:700">{translate(lang, 'curr.progress.label')}</div>
+        <div class="big"><span id="progPct">0</span>%</div>
+      </div>
+      <div class="muted" style="font-size:13px;font-weight:600">
+        <span id="progDone">0</span>/<span id="progTotal">{curriculum.totalDays}</span> {translate(lang, 'curr.days')}
+      </div>
+    </div>
+    <div class="pbar" style="margin-top:12px"><i id="progFill" style="width:0%"></i></div>
+  </div>
+
+  <div id="monthTree">
+    {curriculum.months.map((month, monthIndex) => {
+      const soon = isMonthSoon(month);
+      const monthOpen = !soon && monthIndex === firstOpenMonthIndex;
+      const monthBodyId = `month-body-m${month.month}`;
+      return (
+        <div class={`month${soon ? ' soon' : ''}${monthOpen ? ' open' : ''}`} data-month={month.month}>
+          <button
+            class="month-head"
+            type="button"
+            aria-expanded={monthOpen ? 'true' : 'false'}
+            aria-controls={monthBodyId}
+            disabled={soon}
+          >
+            <span class="month-num">{month.month}</span>
+            <span class="t">
+              <b>{cleanTitle(month.titles[lang])}</b>
+              <small>{soon ? translate(lang, 'months.soon') : `${month.weeks.flatMap((w) => w.days).length} ${translate(lang, 'curr.month.days')}`}</small>
+            </span>
+            {soon ? null : <span class="caret" set:html={CARET_ICON}></span>}
+          </button>
+          <div class="month-body" id={monthBodyId}>
+            {month.weeks.map((week, weekIndex) => {
+              const weekOpen = monthOpen && weekIndex === 0;
+              const weekBodyId = `week-body-m${month.month}w${week.week}`;
+              return (
+                <div class={`week${weekOpen ? ' open' : ''}`} data-week={week.week}>
+                  <button
+                    class="week-head"
+                    type="button"
+                    aria-expanded={weekOpen ? 'true' : 'false'}
+                    aria-controls={weekBodyId}
+                  >
+                    <span class="week-check" set:html={CHECK_ICON}></span>
+                    <span class="week-label-text">{translate(lang, 'lesson.week_label', { week: week.week })}</span>
+                    <span class="pbar wp"><i style="width:0%"></i></span>
+                    <span class="wp-pct">0%</span>
+                    {/* .caret 은 재사용하지 않는다 — .month.open .caret 이 후손 선택자라 중첩된 week
+                        캐럿까지 함께 회전시켜버리는 충돌이 있었다(월 아코디언과 별개로 자체 스타일 보유). */}
+                    <span class="week-caret" set:html={CARET_ICON}></span>
+                  </button>
+                  <div class="week-body" id={weekBodyId}>
+                    {week.days.map((d) => {
+                      const { month: m, week: w, day } = parseDayKey(d.dayKey);
+                      return (
+                        <a class="day" data-day={d.dayKey} href={localize(lang, lessonPath(curriculumId, m, w, day))}>
+                          <span class="check" set:html={CHECK_ICON}></span>
+                          <span class="dt"><b>{d.titles[lang]}</b></span>
+                          <span class="arr" set:html={ARROW_ICON}></span>
+                        </a>
+                      );
+                    })}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      );
+    })}
+  </div>
+</main>

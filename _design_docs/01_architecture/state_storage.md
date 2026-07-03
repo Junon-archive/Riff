@@ -81,6 +81,7 @@
 loadState(): GhState
 saveState(next: GhState): void
 markDayComplete(curriculumId: string, dayKey: string): GhState
+markDayIncomplete(curriculumId: string, dayKey: string): GhState  // 완료 실행취소(undo), 2단계 추가
 hasSeenNudge(id: string): boolean
 markNudgeShown(id: string): void
 exportState(): Blob

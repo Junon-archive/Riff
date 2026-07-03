@@ -1,0 +1,18 @@
+<script>
+var state = {
+  schemaVersion: 1,
+  nickname: "테스터",
+  lang: "ko",
+  progress: {
+    solo_scale_3months: {
+      completedDays: ["m1.w0.d1","m1.w0.d2","m1.w0.d3","m1.w0.d4","m1.w1.d1","m1.w1.d2"],
+      lastVisited: "m1.w1.d2"
+    }
+  },
+  nudges: { shown: [] },
+  donation: { clickedChannels: [], dismissedAt: null },
+  lastActiveAt: new Date().toISOString()
+};
+localStorage.setItem('gh_state', JSON.stringify(state));
+location.href = "/c/solo_scale_3months/";
+</script>

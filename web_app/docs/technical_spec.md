@@ -10,6 +10,9 @@
 
 이 문서는 **개발 명세**다. 토스체가 아니라 명확·구조적 기술 서술을 사용한다. UI 카피의 톤은 `design_spec.md`와 i18n 사전이 담당한다.
 
+> **⚠️ 개정 (2026-07-03): 빌드/라우팅을 Astro 정적 다중 페이지로 전환.**
+> **동기 = SEO.** 해시 SPA(§8)는 레슨별 실제 HTML 이 없어 검색 유입이 불가능하다. **Astro(빌드 타임 전용, 정적 출력)**로 전환해 레슨마다 실제 정적 HTML + 언어별 정적 라우트(hreflang) + View Transitions 를 얻는다. **런타임 프레임워크는 여전히 없다**(정적 HTML + 소형 아일랜드). **§8(해시 라우팅), §9.1(vite/tsx 스크립트), §9.2(SPA fallback rewrite)는 아래 §8-A 로 대체(supersede)**된다. §2(스택 근거 — React·SVG 기각), §4(콘텐츠 파이프라인), §5(렌더러 계약), §6(상태/진도), §7(i18n 사전), §11(config)은 **불변이며 그대로 재사용**한다. Zero-Cost·CF Pages 배포도 불변. 상세는 **§8-A 가 이 주제의 SSOT**.
+
 ---
 
 ## 1. 개요 & 설계 원칙 (재확인)
@@ -425,7 +428,109 @@ const backend = {
 
 ---
 
+## 8-A. Astro 마이그레이션 (개정 노트 — 이 주제의 SSOT)
+
+> 이 절은 §8(해시 라우팅)·§9.1·§9.2 를 **대체**한다. §3 구조에 Astro 레이어를 **추가**하고, §13.2 위임 경계를 갱신한다. 값·계약(§4·§5·§6·§7·§11)은 불변.
+
+### 8-A.1 왜 Astro인가 (해시 SPA 기각)
+
+- **근거:** 목표가 "레슨별 검색 유입"으로 격상됐다. 해시 SPA 는 URL fragment(`#/c/...`)라 서버가 라우트를 모르고, 크롤러에 **단일 셸 HTML** 만 노출된다 → 레슨 콘텐츠가 색인되지 않는다. Astro 는 **빌드 타임에 라우트별 실제 HTML** 을 생성하며(정적 출력, 어댑터 없음), 산문·악보(SVG 문자열)를 서버 렌더해 **인덱싱 가능한 본문**을 만든다.
+- **런타임 비용 0 유지:** Astro 는 기본적으로 JS 를 내보내지 않는다(Islands). 우리 상호작용은 소형 `<script>`/아일랜드로 제한 → 번들 최소. 프레임워크 런타임 부담 없음.
+- **부수 이득:** `<ClientRouter/>`(View Transitions)로 SPA 유사 전환. 파일 기반 라우팅으로 딥링크·뒤로가기 자연 지원(해시 트릭 불필요).
+- **트레이드오프:** 빌드 산출물이 다수 HTML(현재 162개)로 늘지만 정적 CDN 에 무해. `.astro` 컴포넌트 문법 학습 비용 소폭.
+- **기각안:** *해시/히스토리 SPA*(SEO 불가·본문 미색인) **기각**. *Next.js 등 SSR 프레임워크*(서버 런타임 필요 → Zero-Cost 위배) **기각**.
+
+### 8-A.2 URL 스킴 (확정)
+
+언어별 정적 라우트. **ko = 기본 언어(무접두)**, en/ja = 접두. 모든 경로는 `trailingSlash:'always'`.
+
+| 뷰 | ko (캐논) | en | ja |
+|---|---|---|---|
+| 홈 | `/` | `/en/` | `/ja/` |
+| 커리큘럼 | `/c/{curriculumId}/` | `/en/c/{curriculumId}/` | `/ja/c/{curriculumId}/` |
+| 레슨(Day) | `/c/{curriculumId}/m{M}/w{W}/d{D}/` | `/en/c/.../m{M}/w{W}/d{D}/` | `/ja/c/.../m{M}/w{W}/d{D}/` |
+
+- 레슨 URL 세그먼트 `m{M}/w{W}/d{D}` 는 dayKey `m{M}.w{W}.d{D}` 와 1:1(구 해시 스킴과 동형 → 멘탈모델·향후 리다이렉트 용이). 예: `/c/solo_scale_3months/m1/w0/d1/` ↔ `m1.w0.d1`.
+- **정적 페이지 수:** 홈 3(ko/en/ja) + 커리큘럼 3 + **레슨 52 Day × 3언어 = 156** → 총 162. `getStaticPaths` 가 manifest 를 평탄화해 전량 생성(코드 수정 없이 콘텐츠만 늘면 자동 확장 — Modular 원칙 유지).
+- **hreflang:** 모든 페이지 `<head>` 에 ko/en/ja `alternate` + `x-default`(=ko) + `canonical`. `site`(astro.config)의 절대 URL 로 방출.
+- **언어 스위처:** 세그먼트 버튼 = 동일 페이지의 타 언어 URL `<a>` 링크(런타임 사전 재적용 아님 — 언어 전환 = 정적 페이지 이동). 크롤러가 따라갈 수 있는 실제 링크.
+
+### 8-A.3 구조 (§3 에 추가되는 Astro 레이어)
+
+```
+web_app/
+├── astro.config.mjs          output:'static', i18n(locales ko/en/ja, defaultLocale ko,
+│                             prefixDefaultLocale:false), trailingSlash:'always', site
+├── tsconfig.json             extends astro/tsconfigs/strict
+├── src/
+│   ├── env.d.ts              astro/client 타입 참조
+│   ├── pages/                파일 기반 라우트 (얇음: params→lang·data 해석 후 View 위임)
+│   │   ├── index.astro                               (ko 홈)
+│   │   ├── [lang]/index.astro                        (en/ja 홈)
+│   │   ├── c/[curriculum]/index.astro                (ko 커리큘럼)
+│   │   ├── [lang]/c/[curriculum]/index.astro         (en/ja 커리큘럼)
+│   │   ├── c/[curriculum]/[month]/[week]/[day].astro (ko 레슨 · getStaticPaths 52)
+│   │   └── [lang]/c/[curriculum]/[month]/[week]/[day].astro (en/ja 레슨 · 104)
+│   ├── layouts/Base.astro    앱 셸(topbar/slot/바텀시트/토스트/컨페티 캔버스) + head(메타·
+│   │                         hreflang·ClientRouter·테마 플래시 스크립트)
+│   ├── components/           SSR 뷰 (ko/[lang] 페이지가 공유)
+│   │   ├── HomeView.astro     hero + 커리큘럼 카드(<a> 링크)
+│   │   ├── CurriculumView.astro  월/주/일 아코디언(정적 펼침, 링크)
+│   │   └── LessonView.astro   ①②③④ 산문 + 악보 SVG(render/* 재사용) + 이전/다음 링크
+│   ├── lib/urls.ts           URL 스킴 헬퍼(localize·altUrls·*Path) [신규]
+│   ├── lib/paths.ts          getStaticPaths 소스(manifest 평탄화) [신규]
+│   └── … (render/·styles/·content/·i18n/·types/·config·lib 순수 로직 = 그대로 재사용)
+```
+
+- **`pages/` 는 얇게:** URL 파라미터 → `lang`·데이터 해석 후 공유 `*View.astro` 로 위임. ko 와 `[lang]` 변형이 같은 View 컴포넌트를 재사용해 중복 최소화.
+- **i18n(SSR):** `lib/i18n.ts` 에 순수 `translate(lang, key, params)` 추가(활성 언어 전역상태 비의존). `t()` 는 이를 래핑(기존 호환). Astro 는 페이지 `lang` 으로 `translate` 직접 호출 → 언어별 최종 텍스트를 서버 렌더.
+- **악보 SSR:** `render/fretboard.ts`·`render/tab.ts` 가 **SVG 문자열** 을 반환(순수)하므로 `set:html` 로 서버 렌더 → 지판/타브가 색인 가능한 HTML 로 출력(Zero-Hallucination 유지, 클라이언트 JS 불필요).
+
+### 8-A.4 재사용 vs 재작성 경계
+
+| 분류 | 대상 | 조치 |
+|---|---|---|
+| **그대로 재사용** | `render/*`, `styles/*`(토큰·CSS), `content/*`+`scripts/build-content.mjs`, `i18n/*.json`, `types/*`, `config.ts`, `lib/`{storage,progress,nudges,content} + i18n 순수부 | 변경 없음(i18n 은 `translate` **추가**만) |
+| **신규(Astro)** | `astro.config.mjs`, `tsconfig`(astro), `env.d.ts`, `layouts/Base.astro`, `components/*View.astro`, `pages/**`, `lib/urls.ts`, `lib/paths.ts` | 이번 단계 산출 |
+| **대체됨(참조 보존)** | `main.ts`(부트·이벤트 배선), `views/{home,curriculum,lesson}.ts`(DOM 렌더), `lib/router.ts`(해시) | 빌드에서 미사용(고아). **2단계 상호작용 이식의 참조 소스**로 트리에 남김(git 이력에도 존재). `views/textUtils.ts` 만 `*View.astro` 가 계속 import |
+| **삭제** | `index.html`(SPA 셸 → Base.astro), `vite.config.ts`(→ astro.config) | 제거 |
+| **개정** | `public/_redirects` | SPA catch-all(`/* /index.html 200`) **삭제**(실제 라우트 덮어써 SEO 파괴). 404 는 2단계 `src/pages/404.astro` |
+
+### 8-A.5 상호작용: 이번 단계 vs 2단계 STUB
+
+이번 단계에서 **동작**: 정적 라우팅(162 페이지)·언어 전환(링크)·View Transitions·테마 토글(+플래시 방지, `astro:after-swap` 재적용)·레슨 산문/악보 SSR·이전·다음/뒤로 링크.
+
+**2단계(frontend-engineer)가 채울 STUB**(마크업·`id`·`data-*` 훅은 이미 배치됨):
+1. **진도(localStorage) 하이드레이션:** 커리큘럼 진도율%/주차 바/완료 체크(`#progPct`·`.week-label .wp i`·`.day .check`), 레슨 완료 상태(`#completeBtn`↔`#doneState`) — `lib/{storage,progress}` 재사용, `data-curriculum`/`data-day`/`data-total-days` 훅으로.
+2. **완료 액션:** `#completeBtn` 클릭 → `markDayComplete` → 컨페티(`#confetti`, 목업 로직 이식) → 넛지 토스트(`lib/nudges`, `#toastWrap`) → 주 완주 시 도네이션 시트.
+3. **바텀시트 3종:** open/close(`.scrim`/`[data-close-sheet]`), 닉네임 저장(`#saveNickBtn`→`#nickChip`), Export/Import(`#exportBtn`/`#importBtn`), 도네이션 채널(`[data-donate]`→`DONATION_LINKS`)·`DONATION_ORDER` 정렬·아낀 레슨비(`#saveAmount`).
+4. **닉네임 유도**(최초 방문 1.2s)·**welcome_back**·**enter_week_2** 등 로드/진입 넛지.
+5. **"곧 열려요"/초기 아코디언 열림**의 완료기반 판정(현재 SSR 은 전부 펼침·0%).
+6. **`src/pages/404.astro`** + (선택) `sitemap`·`robots.txt`.
+
+> 구현 지침: 위 상호작용은 페이지별 소형 `<script>`(모듈) 또는 아일랜드로. View Transitions 와 공존하려면 문서 수준 이벤트 위임 또는 `astro:page-load` 에 (재)바인딩할 것(예: 테마 토글이 이미 이 패턴). `lib/*` 순수 로직은 그대로 import 해 재사용한다.
+
+### 8-A.6 빌드 & 배포 (§9.1·§9.2 대체)
+
+```
+node scripts/build-content.mjs   (_design_docs → src/content, 스키마 검증) — 불변
+        │  (npm "prebuild" / "build" 선행)
+        ▼
+astro build                       (라우트별 정적 HTML → dist/)
+        ▼
+Cloudflare Pages                  (정적 dist 업로드/Git 연동) — 불변
+```
+
+- `package.json` scripts: `"build:content": "node scripts/build-content.mjs"`, `"prebuild": "npm run build:content"`, `"build": "npm run build:content && astro build"`, `"dev": "npm run build:content && astro dev"`, `"check": "astro check"`, `"preview": "astro preview"`.
+- **정적 출력·어댑터 없음**(`output:'static'`). CF Pages 배포 방식·`*.pages.dev` 도메인 불변. `astro.config` 의 `site` 는 canonical/hreflang 절대 URL 용(실도메인 확정 시 교체).
+- **SPA fallback 불필요:** 실제 파일이 존재하므로 rewrite 없이 딥링크 동작. `_redirects` catch-all 제거됨(§8-A.4).
+- 자산 캐싱은 Astro 해시 파일명(`_astro/*.[hash]`) → immutable. (구 §9.2 의 `_headers` 규칙은 후속에서 재확인.)
+
+---
+
 ## 9. 빌드 & 배포
+
+> **⚠️ §9.1·§9.2 는 §8-A.6(Astro)으로 대체됐다.** 아래는 (구) 바닐라+Vite 기준 기록 — 이력 보존용. 현행은 §8-A 를 따른다.
 
 ### 9.1 파이프라인
 
@@ -535,12 +640,12 @@ export const DEFAULT_CURRICULUM_ID = 'solo_scale_3months';
 
 ### 13.2 → frontend-engineer (구현 벌크)
 
-- **셸/뷰:** 목업 `index.html`·CSS를 `index.html`+`styles/tokens.css`로 이식. `routes/{home,curriculum,lesson}.ts` 구현.
-- **lib:** `storage.ts`(폴백·마이그레이션·Export/Import), `progress.ts`(진도율·아낀 레슨비), `nudges.ts`(트리거 5종·dedup), `i18n.ts`(감지·resolve·data-i 바인딩), `router.ts`(해시).
-- **components:** sheet/toast/confetti/langSwitcher/donationCard.
-- **콘텐츠 파이프라인:** `scripts/build-content.ts`(§4) + 검증 게이트.
-- **정합 작업:** 언어코드 정규화(§7.3), 사전 91키를 `i18n.ts`의 dot-path resolver로 연결 + flatten 4키 예외 처리(§7.4), 하드코딩 결제버튼·토스트를 `donate.*`/`nudge.*`/`storage.*`/`error.*` 키로 바인딩(§7.4 잔여 과제), config 상수화(§11).
-- **배포:** `_redirects`/`_headers`, Vite config, CF Pages 연결(§9).
+> **⚠️ Astro 개정 후 갱신:** 1단계(아키텍트)가 Astro 스캐폴드·정적 라우팅·SSR 뷰·언어 전환·테마·View Transitions 를 완료했다. 2단계의 초점은 **상호작용(localStorage 하이드레이션)** 이며, 목록·훅·경계는 **§8-A.5 STUB** 이 SSOT. 아래는 그 요약.
+
+- **상호작용 이식(핵심):** §8-A.5 의 STUB 1~6 — 진도 하이드레이션·완료 액션(컨페티·넛지·도네이션 시트)·바텀시트 3종·로드/진입 넛지·완료기반 아코디언·`404.astro`. **(구) `main.ts`·`views/*`·`lib/router.ts` 가 참조 구현**(트리에 보존). 페이지별 `<script>`/아일랜드 + `astro:page-load` 재바인딩 패턴 사용(§8-A.5 지침).
+- **재사용(변경 금지 우선):** `lib/{storage,progress,nudges}`·`render/*`·`i18n/*`·`config`·`content` 파이프라인은 §8-A.4 기준 그대로. 필요 시 아일랜드에서 import.
+- **정합 잔재(§7.4):** 하드코딩 결제버튼·토스트를 `donate.*`/`nudge.*`/`storage.*`/`error.*` 키로 바인딩(Astro 에서는 아일랜드가 `translate(lang,…)` 또는 서버 주입 문자열 사용). flatten 4키 주의.
+- **배포/SEO:** `_headers`(캐시 규칙), `sitemap`/`robots.txt`, CF Pages 연결(§8-A.6). `astro.config` `site` 실도메인 확정.
 
 ### 13.3 아키텍트 유지 항목
 

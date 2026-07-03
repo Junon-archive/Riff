@@ -1,0 +1,35 @@
+---
+/**
+ * 404 — 정적 호스트(Cloudflare Pages 포함) 표준 위치. 존재하지 않는 경로 전량이 이 페이지로 응답한다.
+ * technical_spec §8-A.5 STUB 6 · §8-A.4(구 SPA fallback `_redirects` catch-all 대체).
+ * 언어 자동감지 없이 ko 고정(정적 사이트 특성상 서버가 Accept-Language 를 볼 수 없음) +
+ * en/ja 홈 링크를 함께 제공해 다른 언어 사용자도 빠져나갈 길을 준다.
+ */
+import Base from '../layouts/Base.astro';
+import { translate } from '../lib/i18n';
+import { PREFIXED_LANGS } from '../lib/urls';
+import type { Lang } from '../config';
+
+const lang: Lang = 'ko';
+const title = `404 · ${translate(lang, 'error.not_found')} — ${translate(lang, 'common.app_name')}`;
+
+const OTHER_LANG_LABEL: Record<Lang, string> = { ko: '한글', en: 'EN', ja: '日本' };
+---
+
+<Base lang={lang} title={title} canonicalPath="/" noindex>
+  <main class="view" id="view-404">
+    <section class="hero">
+      <h1 class="display">404</h1>
+      <p class="lead">{translate(lang, 'error.not_found')}</p>
+    </section>
+    <a class="btn" href="/">{translate(lang, 'landing.start_button')}</a>
+    <p class="muted" style="margin-top:16px;font-size:13px">
+      {PREFIXED_LANGS.map((l, i) => (
+        <>
+          {i > 0 ? ' · ' : ''}
+          <a href={`/${l}/`} hreflang={l}>{OTHER_LANG_LABEL[l]}</a>
+        </>
+      ))}
+    </p>
+  </main>
+</Base>

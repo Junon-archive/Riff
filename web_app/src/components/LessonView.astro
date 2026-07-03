@@ -1,0 +1,352 @@
+---
+/**
+ * LessonView.astro — 레슨 상세(Day). 토스 리포트/공지 스타일의 순수 아티클 레이아웃.
+ * 출처: (구) index.html #view-lesson + _legacy/views/lesson.ts.
+ *
+ * SEO 핵심: 산문(prose[lang])과 악보(SVG 문자열)를 서버에서 렌더 → 실제 인덱싱되는 HTML.
+ * 렌더러(render/fretboard·tab)는 순수 함수(SVG 문자열) 그대로 재사용.
+ * 2단계 구현 완료: 완료 버튼 클릭 → 진도 저장·컨페티·넛지·도네이션 시트, 완료 상태 표시는
+ * scripts/app.ts(document 이벤트 위임 + astro:page-load 하이드레이션)가 담당.
+ *
+ * 섹션 구성(DayProse 4벌 — theory/visual/practice/tips)을 숫자 배지(①②③) 없이
+ * 자연스러운 h2 제목으로만 구획한다. practice + tips 는 "오늘의 연습" 한 섹션으로 묶어
+ * 흐르는 글로 읽히게 하고, 팁 콜아웃은 페이지 전체에 1개만 둔다(theory 섹션 말미).
+ */
+import { translate } from '../lib/i18n';
+import {
+  findCurriculum,
+  findDayLocation,
+  getAdjacentDayKeys,
+  getManifest,
+  loadDayContent,
+  parseDayKey,
+} from '../lib/content';
+import { renderFretboard, renderTab } from '../render';
+import { lessonPath, localize } from '../lib/urls';
+import { cleanTitle } from '../views/textUtils';
+import type { Lang } from '../config';
+
+interface Props {
+  lang: Lang;
+  curriculumId: string;
+  dayKey: string;
+}
+const { lang, curriculumId, dayKey } = Astro.props;
+
+const manifest = getManifest();
+const curriculum = findCurriculum(manifest, curriculumId)!;
+const location = findDayLocation(curriculum, dayKey)!;
+const content = await loadDayContent(curriculumId, dayKey);
+const prose = content.prose[lang];
+const title = content.titles[lang] ?? location.day.titles[lang];
+
+const crumb = `${cleanTitle(location.month.titles[lang])} · ${translate(lang, 'lesson.week_label', { week: location.week.week })}`;
+
+const { prev, next } = getAdjacentDayKeys(curriculum, dayKey);
+const hrefFor = (key: string) => {
+  const { month, week, day } = parseDayKey(key);
+  return localize(lang, lessonPath(curriculumId, month, week, day));
+};
+const prevHref = prev ? hrefFor(prev) : null;
+const nextHref = next ? hrefFor(next) : null;
+
+// 2단계 하이드레이션 훅(scripts/app.ts 가 사용): manifest 재조회 없이 완료 액션(주/월/커리큘럼 마일스톤 판정)을
+// 계산할 수 있도록, 소속 주/월의 dayKey 목록과 커리큘럼 총 Day 수를 data-* 로 함께 심는다.
+const weekDayKeys = location.week.days.map((d) => d.dayKey).join(',');
+const monthDayKeys = location.month.weeks.flatMap((w) => w.days).map((d) => d.dayKey).join(',');
+---
+
+<main
+  class="view lesson-article"
+  id="view-lesson"
+  data-curriculum={curriculumId}
+  data-day={dayKey}
+  data-month={location.month.month}
+  data-week={location.week.week}
+  data-week-days={weekDayKeys}
+  data-month-days={monthDayKeys}
+  data-curriculum-total-days={curriculum.totalDays}
+>
+  <header class="lesson-head">
+    <p class="crumb" id="lessonCrumb">{crumb}</p>
+    <h1 id="lessonTitle">{title}</h1>
+    <p class="lesson-meta">
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none">
+        <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+        <path d="M12 7v5l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>{content.estMinutes}</span>
+    </p>
+  </header>
+
+  <article class="lesson-body">
+    {/* 이론 · 설명 */}
+    <section>
+      <h2>{translate(lang, 'lesson.theory')}</h2>
+      <div class="prose" id="lessonProse" set:html={prose.theory}></div>
+
+      <div class="callout">
+        <span class="emoji" aria-hidden="true">💡</span>
+        <span>{translate(lang, 'lesson.tip')}</span>
+      </div>
+    </section>
+
+    {/* 눈으로 보기: 산문 + 지판/타브 SVG(JSON→SVG, scores[] 개수만큼) */}
+    <section>
+      <h2>{translate(lang, 'lesson.visual')}</h2>
+      <div class="prose" id="lessonVisualProse" set:html={prose.visual}></div>
+
+      <div id="scoresMount">
+        {content.scores.map((score) => {
+          const isTab = score.type === 'tab';
+          return (
+            <figure class="render-area">
+              <div class="render-mount" set:html={isTab ? renderTab(score) : renderFretboard(score)}></div>
+              <figcaption class="render-cap">{score.meta.title}</figcaption>
+            </figure>
+          );
+        })}
+      </div>
+    </section>
+
+    {/* 오늘의 연습: 연습 순서 + 팁/흔한 실수를 하나의 흐름으로 */}
+    <section>
+      <h2>{translate(lang, 'lesson.action')}</h2>
+      <div class="prose" id="lessonPractice" set:html={prose.practice}></div>
+      <div class="prose" id="lessonTips" set:html={prose.tips}></div>
+    </section>
+  </article>
+
+  {/* 완료 액션 — 완료 버튼/완료 상태/이전·다음 내비는 scripts/app.ts 하이드레이션 훅 그대로 유지 */}
+  <section class="complete-wrap">
+    <button class="btn" id="completeBtn"><span>{translate(lang, 'lesson.complete')}</span></button>
+    <div class="done-state" id="doneState" style="display:none">
+      <div class="done-row">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>{translate(lang, 'lesson.done')}</span>
+      </div>
+      <button type="button" class="undo-btn" id="undoBtn" data-undo>{translate(lang, 'lesson.undo')}</button>
+    </div>
+
+    <div class="lesson-nav">
+      {prevHref ? (
+        <a class="btn secondary" id="prevBtn" href={prevHref}>{translate(lang, 'lesson.prev')}</a>
+      ) : (
+        <button class="btn secondary" id="prevBtn" disabled>{translate(lang, 'lesson.prev')}</button>
+      )}
+      {nextHref ? (
+        <a class="btn secondary" id="nextBtn" href={nextHref}>{translate(lang, 'lesson.next')}</a>
+      ) : (
+        <button class="btn secondary" id="nextBtn" disabled>{translate(lang, 'lesson.next')}</button>
+      )}
+    </div>
+  </section>
+</main>
+
+<style>
+  /* ============================================================
+     레슨 상세 — 토스 리포트풍 순수 아티클.
+     카드/테두리로 섹션을 감싸지 않는다. 최대폭 680px 중앙 정렬, 색은 전부 시맨틱 변수.
+     ============================================================ */
+
+  .lesson-article {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 28px clamp(20px, 5vw, 24px) 140px;
+  }
+
+  /* ---- 헤더 ---- */
+  .lesson-head { padding: 0; }
+  .crumb {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--primary);
+  }
+  .lesson-head h1 {
+    margin: 10px 0 0;
+    font-size: clamp(26px, 6vw, 32px);
+    font-weight: 800;
+    line-height: 1.35;
+    letter-spacing: -0.03em;
+    color: var(--text);
+  }
+  .lesson-meta {
+    margin: 12px 0 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-3);
+  }
+  .lesson-meta svg { flex: none; }
+
+  /* ---- 섹션 리듬 ---- */
+  .lesson-body { margin-top: 8px; }
+  .lesson-body > section { margin: 0; }
+  .lesson-body > section h2 {
+    margin: 72px 0 24px;
+    font-size: clamp(22px, 5vw, 26px);
+    font-weight: 800;
+    line-height: 1.35;
+    letter-spacing: -0.03em;
+    color: var(--text);
+  }
+  .lesson-body > section:first-child h2 { margin-top: 36px; }
+
+  /* ---- 본문 프로즈 ----
+     prose 내부 콘텐츠는 set:html 로 주입된 원본 HTML(mark/h4/ul/b 등)이라
+     Astro 컴파일러가 추적하는 트리 밖에 있다 → 자손 선택자는 :global() 로 열어야
+     실제 DOM에 매칭된다(:global 밖의 `.prose` 자체는 계속 스코프돼 다른 컴포넌트와 격리됨). */
+  .prose { color: var(--text-2); }
+  .prose :global(p) {
+    margin: 0 0 24px;
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--text-2);
+  }
+  .prose :global(p:last-child) { margin-bottom: 0; }
+
+  .prose :global(h3),
+  .prose :global(h4) {
+    margin: 48px 0 16px;
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.4;
+    color: var(--text);
+  }
+  .prose :global(h3:first-child),
+  .prose :global(h4:first-child) { margin-top: 0; }
+
+  .prose :global(ul),
+  .prose :global(ol) {
+    margin: 0 0 24px;
+    padding-left: 1.3em;
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--text-2);
+  }
+  .prose :global(li) { margin-bottom: 10px; }
+  .prose :global(li:last-child) { margin-bottom: 0; }
+  .prose :global(li > ul),
+  .prose :global(li > ol) { margin: 10px 0 0; }
+
+  .prose :global(b),
+  .prose :global(strong) { color: var(--text); font-weight: 700; }
+
+  .prose :global(em) { color: inherit; }
+
+  .prose :global(mark) {
+    background: var(--highlight);
+    color: inherit;
+    padding: 0 2px;
+    border-radius: 2px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+
+  .prose :global(.num-accent) { color: var(--num-accent-red); font-weight: 800; }
+  .prose :global(.num-accent-blue) { color: var(--num-accent-blue); font-weight: 800; }
+
+  .prose :global(code) {
+    font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+    font-size: 0.88em;
+    color: var(--text);
+    background: var(--card-sub);
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+
+  .prose :global(blockquote) {
+    margin: 24px 0;
+    padding: 0 0 0 14px;
+    border-left: 2px solid var(--line);
+    font-size: 15px;
+    line-height: 1.7;
+    font-style: normal;
+    color: var(--text-3);
+  }
+  .prose :global(blockquote p) { margin: 0; color: inherit; font-size: inherit; line-height: inherit; }
+
+  /* 각주 — "*"로 시작하는 문단 등에 수동 부여하는 훅 */
+  .prose :global(.footnote) {
+    margin-top: -16px;
+    margin-bottom: 24px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--text-3);
+  }
+
+  /* ---- 팁 콜아웃(페이지 전체 1개) ---- */
+  .callout {
+    margin-top: 8px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 20px;
+    background: var(--primary-weak);
+    border-radius: 16px;
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: 500;
+    color: var(--text);
+  }
+  .callout .emoji { font-size: 18px; line-height: 1.4; flex: none; }
+
+  /* ---- 지판/타브 SVG 렌더 영역: 카드감 제거 ---- */
+  #scoresMount { margin-top: 40px; }
+  .render-area {
+    margin: 0;
+    padding: 24px 12px;
+    background: var(--card-sub);
+    border-radius: 16px;
+  }
+  .render-area + .render-area { margin-top: 32px; }
+  .render-mount :global(.fretboard),
+  .render-mount :global(.tabsvg) {
+    width: 100%;
+    height: auto;
+    display: block;
+    color: var(--text);
+  }
+  .render-cap {
+    margin: 12px 0 0;
+    font-size: 13px;
+    color: var(--text-3);
+    text-align: center;
+  }
+
+  /* ---- 완료 액션 ---- */
+  .complete-wrap {
+    margin-top: 64px;
+    padding-top: 32px;
+    border-top: 1px solid var(--line);
+  }
+  .done-state {
+    color: var(--green-500);
+    flex-direction: column;
+    gap: 6px;
+    height: auto;
+    padding: 14px 16px;
+  }
+  .done-row { display: flex; align-items: center; gap: 10px; }
+  .undo-btn {
+    padding: 2px 4px;
+    border: none;
+    background: none;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-3);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    cursor: pointer;
+  }
+  .undo-btn:hover,
+  .undo-btn:focus-visible { color: var(--text-2); }
+  .lesson-nav { display: flex; gap: 10px; margin-top: 12px; }
+  .lesson-nav .btn { height: 50px; font-size: 15px; text-decoration: none; }
+
+  /* 등장 애니메이션은 전역 .view > * 규칙을 그대로 상속받는다(재정의 없음). */
+</style>

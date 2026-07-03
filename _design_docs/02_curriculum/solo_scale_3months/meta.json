@@ -1,0 +1,17 @@
+{
+  "id": "solo_scale_3months",
+  "title": {
+    "ko": "3개월 솔로/스케일 마스터 커리큘럼",
+    "en": "3-Month Solo & Scale Mastery",
+    "ja": "3か月ソロ・スケール マスター講座"
+  },
+  "tagline": {
+    "ko": "펜타토닉부터 즉흥 솔로까지, 12주 로드맵",
+    "en": "From pentatonics to improvised solos — a 12-week roadmap",
+    "ja": "ペンタトニックから即興ソロまで、12週間のロードマップ"
+  },
+  "instrument": "guitar",
+  "topic": "solo-scale",
+  "level": 2,
+  "tags": ["solo", "scale", "improv", "intermediate"]
+}

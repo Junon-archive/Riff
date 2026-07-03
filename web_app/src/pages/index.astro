@@ -1,0 +1,16 @@
+---
+/**
+ * / — 홈(ko, 기본 언어 · 접두 없음).
+ */
+import Base from '../layouts/Base.astro';
+import HomeView from '../components/HomeView.astro';
+import { translate } from '../lib/i18n';
+import { stripAndTruncate } from '../views/textUtils';
+
+const lang = 'ko';
+const title = `${translate(lang, 'common.app_name')} — ${stripAndTruncate(translate(lang, 'home.title'), 60)}`;
+---
+
+<Base lang={lang} title={title} canonicalPath="/">
+  <HomeView lang={lang} />
+</Base>

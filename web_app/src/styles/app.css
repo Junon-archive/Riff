@@ -38,6 +38,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     box-shadow: var(--shadow);
     overflow: hidden;
   }
+  /* 레슨 상세만: 토스 리포트형 아티클(콘텐츠 680px)이 제 폭을 쓰도록 셸을 넓힘.
+     홈·커리큘럼(480px 폰 컬럼)은 그대로. */
+  .app:has(#view-lesson) { max-width: 720px; }
 }
 
 /* ---- 헤더 ---- */
@@ -71,16 +74,21 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   display: inline-flex; background: var(--grey-100);
   border-radius: var(--pill); padding: 3px;
 }
-.lang-seg button {
+.lang-seg button, .lang-seg a {
   font-size: 12px; font-weight: 700; color: var(--text-3);
   padding: 5px 9px; border-radius: var(--pill); line-height: 1;
   transition: all .15s;
 }
-.lang-seg button.active {
+.lang-seg button.active, .lang-seg a.active {
   background: var(--bg); color: var(--text);
   box-shadow: var(--shadow-sm);
 }
-[data-theme="dark"] .lang-seg button.active { background: #3A3A44; }
+[data-theme="dark"] .lang-seg button.active,
+[data-theme="dark"] .lang-seg a.active { background: #3A3A44; }
+
+/* Astro 파일 라우팅: 일부 컨트롤이 <button>/<div> → <a>(정적 링크·SEO)로 바뀌었다.
+   비주얼 불변 유지를 위해 링크 기본 장식만 제거한다(design_spec 참조, 값 변경 아님). */
+.brand, .icon-btn, .lang-seg a, .curr-card, .day { text-decoration: none; color: inherit; }
 
 .nick-chip {
   display: inline-flex; align-items: center; gap: 6px;
@@ -147,7 +155,9 @@ h1.display {
 }
 .hero h1 .accent { color: var(--primary); }
 
-.curr-card { margin-top: 16px; overflow: hidden; padding: 0; }
+/* .curr-card 는 <a> 링크(SSR)라 기본 display 가 inline이다 — .card 의 border-radius/overflow가
+   하나의 박스로 닫히려면 명시적으로 block 화해야 한다(그렇지 않으면 모서리가 사각으로 깨진다). */
+.curr-card { display: block; margin-top: 16px; overflow: hidden; padding: 0; }
 .curr-thumb {
   height: 132px; display: flex; align-items: flex-end; padding: 16px;
   background:
@@ -230,14 +240,35 @@ h1.display {
   background: var(--card-sub);
 }
 .month.open .month-body { display: block; }
-.month.soon .month-head { opacity: .62; }
+.month.soon .month-head { opacity: .62; cursor: default; }
+.month-head:disabled { cursor: default; }
 
+/* ---- Week 아코디언(2단 중첩 — Month 안의 Week 행, 탭하면 그 주 Day 4개만 펼침) ---- */
 .week { padding: 6px 12px 12px; }
-.week-label {
-  display: flex; align-items: center; gap: 8px;
-  padding: 14px 8px 8px; font-size: 13px; font-weight: 800; color: var(--text-2);
+.week-head {
+  width: 100%; display: flex; align-items: center; gap: 10px;
+  padding: 12px 14px; background: var(--card); border: 1px solid var(--line);
+  border-radius: 14px; text-align: left; transition: background .15s;
 }
-.week-label .wp { height: 6px; flex: 1; }
+.week.open .week-head { border-radius: 14px 14px 0 0; }
+.week-head:active { background: var(--grey-50); }
+.week-check {
+  width: 22px; height: 22px; flex: none; border-radius: 50%;
+  border: 2px solid var(--grey-300); display: none; align-items: center; justify-content: center;
+  color: transparent;
+}
+.week.done .week-check { display: flex; background: var(--green-500); border-color: var(--green-500); color: #fff; }
+.week-label-text { flex: none; font-size: 13px; font-weight: 800; color: var(--text-2); }
+.week-head .wp { height: 6px; flex: 1; }
+.week-head .wp-pct { flex: none; font-size: 12px; font-weight: 700; color: var(--text-3); }
+.week-caret { color: var(--text-3); transition: transform .25s; flex: none; }
+.week.open .week-caret { transform: rotate(180deg); }
+
+.week-body {
+  display: none; border: 1px solid var(--line); border-top: none;
+  border-radius: 0 0 14px 14px; padding: 8px 10px 10px; background: var(--card-sub);
+}
+.week.open .week-body { display: block; }
 
 .day {
   width: 100%; display: flex; align-items: center; gap: 12px;
@@ -245,6 +276,7 @@ h1.display {
   background: var(--card); border: 1px solid var(--line); margin-top: 6px;
   transition: transform .1s, background .15s;
 }
+.day:first-child { margin-top: 0; }
 .day:active { transform: scale(.99); background: var(--grey-50); }
 .day .check {
   width: 26px; height: 26px; flex: none; border-radius: 50%;

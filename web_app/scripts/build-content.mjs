@@ -432,6 +432,19 @@ function main() {
     }
   }
 
+  // 커리큘럼 메타(meta.json): 언어별 제목·태그라인·분류(instrument/level/tags). 있으면 title 을 우선 적용.
+  const metaRaw = readIfExists(join(SRC_DIR, 'meta.json'));
+  let curMeta = null;
+  if (metaRaw) {
+    try { curMeta = JSON.parse(metaRaw); }
+    catch (e) { fail(`meta.json 파싱 실패: ${e.message}`); }
+    if (curMeta.title) {
+      for (const lang of LANGS) {
+        if (curMeta.title[lang]) curTitles[lang] = curMeta.title[lang];
+      }
+    }
+  }
+
   const manifest = {
     schemaVersion: 1,
     generatedAt: new Date().toISOString(),
@@ -439,6 +452,11 @@ function main() {
       {
         id: CURRICULUM_ID,
         titles: curTitles,
+        taglines: curMeta?.tagline ?? null,
+        instrument: curMeta?.instrument ?? null,
+        topic: curMeta?.topic ?? null,
+        level: curMeta?.level ?? null,
+        tags: curMeta?.tags ?? [],
         overview: curOverview,
         totalDays: allDayKeys.length,
         dayKeys: allDayKeys,

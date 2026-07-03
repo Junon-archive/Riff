@@ -66,6 +66,7 @@ console.log(ko.length,en.length,ja.length, JSON.stringify(ko)===JSON.stringify(e
 | 25 | `lesson.done` | 속성 | `lesson.done` | 신규 (세션 B `lesson.complete_toast`와 **의도적으로 병합하지 않음** — §3 비고) |
 | 26 | `lesson.prev` | 속성 | `lesson.prev` | 병합 (← `lesson.prev_lesson`) |
 | 27 | `lesson.next` | 속성 | `lesson.next` | 병합 (← `lesson.next_lesson`) |
+| 43 | `lesson.undo` | 속성 | `lesson.undo` | 신규 (2단계 구현 — "완료" 실행취소 버튼 라벨, `doneState` 내부 보조 액션) |
 | 28 | `donate.footer` | 속성 | `donate.footer` | 신규 |
 | 29 | `donate.title` | 속성 | `donate.title` | 신규 |
 | 30 | `donate.sub` | 속성 | `donate.sub` | 병합 (← `donation.coffee`) |
@@ -146,7 +147,7 @@ console.log(ko.length,en.length,ja.length, JSON.stringify(ko)===JSON.stringify(e
 - `common.*` (9): app_name, next, back, close, confirm, cancel, retry, loading, ok
 - `landing.*` (3, 병합 후 잔존): free_banner, start_button, coming_soon
 - `progress.*` (7): title, saved_money, lessons_done, streak, completion, keep_going, empty
-- `nudge.*` (5): enter_week_2, finish_week, finish_month, welcome_back, almost_there — `state_storage.md` §5 트리거 표와 1:1
+- `nudge.*` (5 트리거 / 실키 10개): enter_week_2, finish_week_1..6(2단계: `finish_week` 단일 키 → 문구 로테이션 6종으로 분화, `translation_map.md` §4 참조), finish_month, welcome_back, almost_there — `state_storage.md` §5 트리거 표와 1:1(트리거·dedup은 불변, 문구 선택만 `web_app/src/lib/nudges.ts`가 주차 번호로 로테이션)
 - `storage.*` (3, 병합 후 잔존): export_done, import_done, cleared_warning
 - `donate.*` (3, 병합 후 잔존): toss, kakaopay, paypal, bmc, thanks *(5개 — 목업이 결제 버튼 라벨을 `data-i` 없이 하드코딩해서 벌어진 공백. §6 참고)*
 - `lesson.*` (7, 병합 후 잔존): title, play, pause, replay, week_label, day_label, complete_toast, locked
