@@ -134,25 +134,46 @@ function applyDonationOrder(lang: Lang): void {
 }
 
 /**
- * 도네이션 시트 — 채널 그리드 뷰로 리셋(QR 뷰가 열려 있었다면 되돌린다).
- * 시트를 열 때마다(footer CTA·dream CTA) 호출해 항상 그리드에서 시작하게 한다.
+ * 도네이션 시트 — 채널 리스트 뷰로 리셋(상세 뷰가 열려 있었다면 되돌린다).
+ * 시트를 열 때마다(footer CTA·dream CTA) 호출해 항상 리스트에서 시작하게 한다.
  */
 function resetDonateView(): void {
   document.getElementById('donateMain')?.removeAttribute('hidden');
   document.getElementById('donateQrView')?.setAttribute('hidden', '');
+  currentDonateChannel = null;
+}
+
+/** 채널 상세 뷰 안에서 현재 열려 있는 채널(링크 버튼 클릭 시 markDonationClicked 재호출용). */
+let currentDonateChannel: DonationChannel | null = null;
+
+/** 터치/모바일 기기 판정 — 도네이션 상세 뷰의 QR/링크 기본 pane 선택에 쓰인다. */
+function isCoarsePointer(): boolean {
+  return typeof window !== 'undefined' && !!window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
+}
+
+/** QR/링크 세그먼트 토글 — 두 pane 중 하나만 보이게 전환한다. */
+function showDonateTab(tab: 'qr' | 'link'): void {
+  const qrPane = document.getElementById('qrPane');
+  const linkPane = document.getElementById('linkPane');
+  qrPane?.toggleAttribute('hidden', tab !== 'qr');
+  linkPane?.toggleAttribute('hidden', tab !== 'link');
+  document.getElementById('tabQrBtn')?.classList.toggle('active', tab === 'qr');
+  document.getElementById('tabLinkBtn')?.classList.toggle('active', tab === 'link');
 }
 
 /**
- * qr 이 설정된 채널 클릭 시 — 시트 안에서 그리드 대신 QR 이미지를 보여주는 뷰로 전환한다.
- * url 도 함께 있으면 "링크로 열기" 보조 버튼도 노출한다(둘 다 지원, technical_spec OPEN 없음 — 신규).
+ * 채널 클릭 시 — 시트 안에서 리스트 대신 채널 상세 뷰(QR pane + 링크 pane)로 전환한다.
+ * url/qr 둘 다 있으면 세그먼트 토글을 보여주고, 기본 선택은 기기별로 갈린다:
+ * 데스크톱(정밀 포인터) → QR 먼저, 모바일/터치(coarse 포인터) → 링크 먼저.
+ * 한쪽만 있으면 토글 없이 그 pane만 보여준다.
  */
-function showDonateQr(channel: DonationChannel): void {
+function showDonateChannel(channel: DonationChannel): void {
   const cfg = DONATION_CHANNELS[channel];
-  if (!cfg.qr) return;
+  currentDonateChannel = channel;
 
   const img = document.getElementById('qrImg') as HTMLImageElement | null;
   if (img) {
-    img.src = cfg.qr;
+    img.src = cfg.qr ?? '';
     img.alt = t(`donate.${channel}`);
   }
 
@@ -160,13 +181,27 @@ function showDonateQr(channel: DonationChannel): void {
   if (linkBtn) {
     if (cfg.url) {
       linkBtn.href = cfg.url;
-      linkBtn.textContent = t(`donate.${channel}`);
-      linkBtn.hidden = false;
+      if (/^https?:\/\//i.test(cfg.url)) {
+        linkBtn.target = '_blank';
+        linkBtn.rel = 'noopener noreferrer';
+      } else {
+        // 앱 딥링크(예: supertoss://) — 새 탭 강제 없이 OS/브라우저가 네이티브로 처리하게 둔다.
+        linkBtn.removeAttribute('target');
+        linkBtn.removeAttribute('rel');
+      }
     } else {
-      linkBtn.hidden = true;
       linkBtn.removeAttribute('href');
     }
   }
+
+  const hasQr = !!cfg.qr;
+  const hasLink = !!cfg.url;
+  const tabs = document.getElementById('donateTabs');
+  if (tabs) tabs.hidden = !(hasQr && hasLink);
+
+  let defaultTab: 'qr' | 'link' = hasQr ? 'qr' : 'link';
+  if (hasQr && hasLink) defaultTab = isCoarsePointer() ? 'link' : 'qr';
+  showDonateTab(defaultTab);
 
   document.getElementById('donateMain')?.setAttribute('hidden', '');
   document.getElementById('donateQrView')?.removeAttribute('hidden');
@@ -521,11 +556,18 @@ function bindDelegatesOnce(): void {
       const cfg = DONATION_CHANNELS[channel];
       if (!cfg.url && !cfg.qr) return; // 준비 중 채널 — SSR이 이미 disabled 처리했지만 방어적으로 한 번 더 막는다.
       markDonationClicked(channel);
-      if (cfg.qr) {
-        showDonateQr(channel);
-      } else if (cfg.url) {
-        window.open(cfg.url, '_blank', 'noopener,noreferrer');
-      }
+      showDonateChannel(channel);
+      return;
+    }
+    const donateTabBtn = target.closest<HTMLElement>('[data-donate-tab]');
+    if (donateTabBtn) {
+      const tab = donateTabBtn.dataset.donateTab as 'qr' | 'link' | undefined;
+      if (tab) showDonateTab(tab);
+      return;
+    }
+    if (target.closest('#qrLinkBtn')) {
+      // 실제 이동은 <a href> 기본 동작에 맡긴다(preventDefault 하지 않음) — 클릭 기록만 남긴다.
+      if (currentDonateChannel) markDonationClicked(currentDonateChannel);
       return;
     }
     if (target.closest('.close-free')) {

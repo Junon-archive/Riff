@@ -39,7 +39,6 @@ const DONATION_BUTTONS: { channel: DonationChannel; iconClass: string; icon: str
   { channel: 'toss', iconClass: 'pay-toss', icon: 'T' },
   { channel: 'kakaopay', iconClass: 'pay-kakao', icon: 'K' },
   { channel: 'paypal', iconClass: 'pay-paypal', icon: 'P' },
-  { channel: 'bmc', iconClass: 'pay-bmc', icon: '☕' },
 ];
 ---
 
@@ -154,7 +153,7 @@ const DONATION_BUTTONS: { channel: DonationChannel; iconClass: string; icon: str
       <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="donateH">
         <div class="grip"></div>
 
-        {/* 채널 그리드 뷰 — 기본. QR 채널 클릭 시 scripts/app.ts 가 아래 QR 뷰로 전환한다. */}
+        {/* 채널 리스트 뷰 — 기본. 채널 클릭 시 scripts/app.ts 가 아래 상세 뷰로 전환한다. */}
         <div id="donateMain">
           <h2 id="donateH">{translate(lang, 'donate.title')}</h2>
           <p class="sh-sub">{translate(lang, 'donate.sub')}</p>
@@ -168,6 +167,7 @@ const DONATION_BUTTONS: { channel: DonationChannel; iconClass: string; icon: str
                   class={`pay-btn ${iconClass}`}
                   data-donate={channel}
                   data-qr={cfg.qr || undefined}
+                  data-url={cfg.url || undefined}
                   disabled={preparing}
                   aria-disabled={preparing}
                 >
@@ -180,15 +180,30 @@ const DONATION_BUTTONS: { channel: DonationChannel; iconClass: string; icon: str
           </div>
         </div>
 
-        {/* QR 뷰 — qr 이 설정된 채널 클릭 시에만 진입(scripts/app.ts showDonateQr). 기본 hidden. */}
+        {/* 채널 상세 뷰 — 그리드 채널 클릭 시 진입(scripts/app.ts showDonateChannel). 기본 hidden.
+            QR/링크 두 pane 을 세그먼트 토글로 오간다(기본 선택은 기기별 — app.ts 참조). */}
         <div class="qr-view" id="donateQrView" hidden>
           <button class="qr-back" id="qrBackBtn" type="button">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 19l-7-7 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             <span>{translate(lang, 'common.back')}</span>
           </button>
-          <img class="qr-img" id="qrImg" src="" alt="" />
-          <p class="qr-hint">{translate(lang, 'donate.scan_qr')}</p>
-          <a class="btn secondary" id="qrLinkBtn" href="#" target="_blank" rel="noopener noreferrer" hidden></a>
+
+          <div class="lang-seg donate-tabs" id="donateTabs" role="tablist" aria-label={translate(lang, 'donate.title')}>
+            <button type="button" data-donate-tab="qr" id="tabQrBtn" role="tab">{translate(lang, 'donate.tab_qr')}</button>
+            <button type="button" data-donate-tab="link" id="tabLinkBtn" role="tab">{translate(lang, 'donate.tab_link')}</button>
+          </div>
+
+          <div class="qr-pane" id="qrPane">
+            <img class="qr-img" id="qrImg" src="" alt="" />
+            <p class="qr-hint">{translate(lang, 'donate.scan_qr')}</p>
+          </div>
+
+          <div class="link-pane" id="linkPane">
+            <a class="btn" id="qrLinkBtn" href="#">{translate(lang, 'donate.open_link')}</a>
+          </div>
+
+          {/* 세무·실명 고지: 실제 송금 직전(결제 뷰)에 작게 노출 — 인트로는 깨끗하게 유지 */}
+          <p class="donate-notice">{translate(lang, 'donate.notice')}</p>
         </div>
 
         <button class="btn ghost close-free" data-close-sheet>{translate(lang, 'donate.close')}</button>

@@ -72,6 +72,12 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-03 (도네이션 실연동 — 3채널·QR/링크 토글·고지)
+- **실제 자산 연동** — kakaopay(qr+링크)·toss(qr+`supertoss://` 딥링크)·paypal(qr+링크). **BMC 제거**(한국 미지원). QR은 `public/donate/*.jpeg|png`.
+- **채널 결제 뷰: QR/링크 세그먼트 토글** — 기기별 기본값(데스크톱=QR, 모바일=링크, `pointer:coarse` 판정), 링크는 `<a href>`(http 새탭 / 딥링크 네이티브). 3채널 단일 열 레이아웃.
+- **세무·실명 고지 캡션** — 인트로가 아니라 **채널 결제 뷰**에 작게(just-in-time, 차단 아님). "기타소득 성실 신고 + 이체 시 실명 노출 가능" 3언어.
+- i18n 113키(diff 0), 헤드리스 21/21 통과.
+
 ### 2026-07-03 (도네이션 연결부 준비 — 링크/QR 플러그앤플레이)
 - **도네이션 시트 링크+QR 지원** — `config.ts` `DONATION_CHANNELS: {url?, qr?}`. url만→새창, qr(±url)→시트 내 QR 뷰(+링크 버튼), 둘 다 비면 "준비 중" 비활성 배지. 전 채널 현재 플레이스홀더(깨진 링크/이미지 0). `public/donate/README.txt`에 파일명·활성화 방법. i18n 109키(+scan_qr/preparing).
 - **운영자 활성화법:** ① QR PNG를 `public/donate/`에 넣고 ② `config.ts`의 해당 채널에 `{url}`/`{qr}` 채우면 즉시 라이브.

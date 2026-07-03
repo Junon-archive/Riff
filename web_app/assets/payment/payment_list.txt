@@ -1,1 +1,3 @@
 kakaopay: https://qr.kakaopay.com/Ej8nJROmG
+Toss: supertoss://send?amount=0&bank=%EC%B9%B4%EC%B9%B4%EC%98%A4%EB%B1%85%ED%81%AC&accountNo=3333161555103&origin=qr
+paypal: https://paypal.me/JunonLee

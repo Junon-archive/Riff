@@ -24,9 +24,9 @@ export const DEFAULT_CURRICULUM_ID = 'solo_scale_3months';
 
 /**
  * 도네이션 채널 1개의 실 연동 정보.
- * - `url` 만 있으면: 버튼 클릭 시 새 창으로 연다(기존 동작).
- * - `qr` 이 있으면: 버튼 클릭 시 도네이션 시트 안에서 QR 이미지를 보여주는 뷰로 전환한다(`url`도
- *   있으면 QR 뷰에 "링크로 열기" 버튼을 함께 보여준다).
+ * - `url`/`qr` 둘 다 있으면: 버튼 클릭 시 시트 안에서 QR·링크 두 pane을 세그먼트 토글로 오가는
+ *   상세 뷰로 전환한다(기본 선택은 기기별 — 데스크톱=QR, 모바일=링크, `app.ts` showDonateChannel 참조).
+ * - 어느 한쪽만 있으면: 토글 없이 그 pane만 보여준다.
  * - 둘 다 비어있으면("" 또는 미지정): 버튼을 비활성화하고 "준비 중"으로 안내한다(강매·깨진 링크 방지).
  * 운영자는 이 값들만 채우면 된다(플러그앤플레이) — 코드 변경 불필요.
  */
@@ -38,16 +38,16 @@ export interface DonationChannelConfig {
 }
 
 /**
- * 도네이션 채널 — 실제 결제 연동 전 플레이스홀더(값은 운영자가 나중에 채운다, `public/donate/README.txt` 참조).
- * i18n 라벨은 donate.toss/kakaopay/paypal/bmc 키가 담당(하드코딩 금지, §7.4).
+ * 도네이션 채널 — 실 연동 값(운영자 확정, BMC는 한국 미지원으로 제외).
+ * i18n 라벨은 donate.toss/kakaopay/paypal 키가 담당(하드코딩 금지, §7.4).
  */
-export const DONATION_CHANNELS: Record<'toss' | 'kakaopay' | 'paypal' | 'bmc', DonationChannelConfig> = {
-  // 전 채널 플레이스홀더("준비 중"). 운영자가 링크/QR 확보 시 아래에 값만 채우면 활성화.
-  //   url 만: 새 창으로 열기 · qr 만/qr+url: 시트 내 QR 뷰(+링크 버튼) · 둘 다 비면 "준비 중" 비활성.
-  toss: { url: '' }, // TODO(운영자): 토스 후원 링크 (예: { url: 'https://toss.me/...' })
-  kakaopay: { url: '' }, // TODO(운영자): 카카오페이 (예: { qr: '/donate/kakaopay.png' } — public/donate/kakaopay.png 추가)
-  paypal: { url: '' }, // TODO(운영자): PayPal (예: { url: 'https://paypal.me/...' })
-  bmc: { url: '' }, // TODO(운영자): Buy Me a Coffee (예: { url: 'https://buymeacoffee.com/...' })
+export const DONATION_CHANNELS: Record<'toss' | 'kakaopay' | 'paypal', DonationChannelConfig> = {
+  kakaopay: { url: 'https://qr.kakaopay.com/Ej8nJROmG', qr: '/donate/kakaopay.jpeg' },
+  toss: {
+    url: 'supertoss://send?amount=0&bank=%EC%B9%B4%EC%B9%B4%EC%98%A4%EB%B1%85%ED%81%AC&accountNo=3333161555103&origin=qr',
+    qr: '/donate/toss.jpeg',
+  },
+  paypal: { url: 'https://paypal.me/JunonLee', qr: '/donate/paypal.png' },
 };
 
 export type DonationChannel = keyof typeof DONATION_CHANNELS;
@@ -80,7 +80,7 @@ export const DREAM_ITEMS: DreamItem[] = [
  * ko: 국내 채널 우선, en/ja: 글로벌 채널 우선.
  */
 export const DONATION_ORDER: Record<Lang, DonationChannel[]> = {
-  ko: ['toss', 'kakaopay', 'paypal', 'bmc'],
-  en: ['paypal', 'bmc', 'toss', 'kakaopay'],
-  ja: ['paypal', 'bmc', 'toss', 'kakaopay'],
+  ko: ['kakaopay', 'toss', 'paypal'],
+  en: ['paypal', 'kakaopay', 'toss'],
+  ja: ['paypal', 'kakaopay', 'toss'],
 };

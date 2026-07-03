@@ -81,7 +81,11 @@
     "bmc": "Buy Me a Coffee",
     "thanks": "You keep this fun to build. Thank you!",
     "scan_qr": "Scan with your camera",
-    "preparing": "Coming soon"
+    "preparing": "Coming soon",
+    "tab_qr": "View QR",
+    "tab_link": "Open link",
+    "open_link": "Open link",
+    "notice": "Every bit is honestly reported as income — and a transfer may show the dev's real name, just so you know 😊"
   },
   "dream": {
     "tada": "Ta-da!",

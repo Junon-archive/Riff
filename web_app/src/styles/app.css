@@ -406,10 +406,15 @@ h1.display {
   letter-spacing: -0.03em; line-height: 1.4; word-break: keep-all;
 }
 .save-amount .big b { color: var(--primary); font-size: 30px; }
-.pay-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 18px 0 6px; }
+.donate-notice {
+  color: var(--text-3); font-size: 12.5px; line-height: 1.5; text-align: center;
+  margin: 2px 0 4px; word-break: keep-all;
+}
+/* 채널 3개 — 세로 리스트(토스 스타일, 항목 늘어도 자연히 쌓인다). */
+.pay-grid { display: grid; grid-template-columns: 1fr; gap: 10px; margin: 16px 0 6px; }
 .pay-btn {
   position: relative;
-  display: flex; align-items: center; gap: 10px; padding: 15px 16px;
+  display: flex; align-items: center; gap: 12px; padding: 15px 16px;
   border: 1px solid var(--line); border-radius: var(--radius-sm);
   background: var(--card); font-weight: 700; font-size: 14.5px; transition: transform .1s, background .15s;
 }
@@ -421,7 +426,6 @@ h1.display {
 .pay-toss   .ico { background: #3182F6; }
 .pay-kakao  .ico { background: #FEE500; color: #191F28; }
 .pay-paypal .ico { background: #0070BA; }
-.pay-bmc    .ico { background: #FFDD00; color: #191F28; }
 .pay-badge {
   position: absolute; top: -7px; right: -6px;
   background: var(--grey-700); color: #fff;
@@ -430,7 +434,7 @@ h1.display {
 }
 .close-free { margin-top: 8px; }
 
-/* 도네이션 QR 뷰 — qr 이 설정된 채널 클릭 시 pay-grid 대신 노출(scripts/app.ts showDonateQr). */
+/* 도네이션 채널 상세 뷰 — 채널 클릭 시 pay-grid 대신 노출(scripts/app.ts showDonateChannel). */
 .qr-view[hidden] { display: none; }
 .qr-view { display: flex; flex-direction: column; align-items: center; padding: 4px 0 6px; }
 .qr-back {
@@ -440,13 +444,25 @@ h1.display {
   padding: 8px 4px; margin: 0 0 6px;
 }
 .qr-back:active { opacity: .6; }
+
+/* QR/링크 세그먼트 토글 — .lang-seg 톤 재사용(디자인 통일). */
+.donate-tabs { margin: 4px 0 6px; }
+.donate-tabs[hidden] { display: none; }
+.donate-tabs button { border: none; background: none; font-family: inherit; cursor: pointer; }
+
+.qr-pane, .link-pane {
+  display: flex; flex-direction: column; align-items: center;
+  width: 100%; min-height: 216px; justify-content: center;
+}
+.qr-pane[hidden], .link-pane[hidden] { display: none; }
+
 .qr-img {
-  width: 200px; height: 200px; margin: 24px 0 18px;
+  width: 200px; height: 200px; margin: 0 0 18px;
   border-radius: var(--radius-sm); border: 1px solid var(--line);
   background: var(--card-sub); object-fit: contain;
 }
-.qr-hint { color: var(--text-2); font-size: 14.5px; margin: 0 0 18px; text-align: center; }
-#qrLinkBtn { margin-top: 4px; }
+.qr-hint { color: var(--text-2); font-size: 14.5px; margin: 0; text-align: center; }
+.link-pane .btn { margin: 0; }
 
 /* 닉네임 입력 */
 .field {
