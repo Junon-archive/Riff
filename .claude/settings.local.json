@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p _design_docs/01_architecture _design_docs/02_curriculum/solo_scale_3months/month_1/week_1 _design_docs/02_curriculum/solo_scale_3months/month_1/week_2 _design_docs/02_curriculum/solo_scale_3months/month_2 _design_docs/03_data_schema _design_docs/04_localization web_app/docs web_app/src)",
+      "Bash(touch _design_docs/00_master_prd.md _design_docs/02_curriculum/solo_scale_3months/curriculum_overview.md _design_docs/02_curriculum/solo_scale_3months/month_1/month_1_overview.md _design_docs/02_curriculum/solo_scale_3months/month_1/week_1/week_1_overview.md _design_docs/02_curriculum/solo_scale_3months/month_1/week_1/day_1.md _design_docs/02_curriculum/solo_scale_3months/month_1/week_1/day_2.md web_app/docs/implementation_guide.md)"
+    ]
+  }
+}
