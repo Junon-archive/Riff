@@ -14,13 +14,13 @@ Here's why we're doing this today — you mapped Am yesterday, so now it's time 
 
 C major's skeleton notes are **C (root) · E (3rd) · G (5th)**. Yesterday, Am was A·C·E. If you're quick, you'll already see it: **C shows up in both chords.** In Am, C was the 3rd (♭3); in the C chord, it's the root (R). Same note, different job. This turns out to be the secret passage for gliding freely between Am and C — we'll dig into that properly tomorrow (Day 3). For today, just focus on drawing the C chord-tone map.
 
-Today's real star is the 3rd, **E**. Just like C made Am sound "minor" yesterday, E is what brightens up C into sounding "major." So we're marking E in red as today's landing target. Fun fact: this E is the exact same note that was the 5th of Am yesterday. Same fret, different role once the chord changes — get a feel for that in your body today.
+Today's real star is the 3rd, **E**. Just like C made Am sound "minor" yesterday, E is what brightens up C into sounding "major." So we're marking E in green as today's landing target. Fun fact: this E is the exact same note that was the 5th of Am yesterday. Same fret, different role once the chord changes — get a feel for that in your body today.
 
 Once more for emphasis: this isn't speed practice. It's **brain training for recognizing positions.** At a slow BPM, all you're doing is drawing a clear map: "there's an E here, and there's one there too."
 
 ## ② Visual Reference
 
-This maps C's chord tones (C·E·G) across the whole neck (frets 0–12). The red highlight is **E**, the 3rd — today's landing target.
+This maps C's chord tones (C·E·G) across the whole neck (frets 0–12). The green highlight is **E**, the 3rd — today's landing target.
 
 ```json
 {

@@ -20,7 +20,7 @@ So today, you graduate Month 1. Don't put pressure on yourself — go into it li
 
 ## ② Visual Reference
 
-Here's today's jam "cheat sheet" — the whole A blues Box 1, with landing points (♭3, red) and passing tones (♭5, red) at a glance. If you get lost mid-jam, just look at this.
+Here's today's jam "cheat sheet" — the whole A blues Box 1, with landing points (♭3, green) and passing tones (♭5, purple) at a glance. If you get lost mid-jam, just look at this.
 
 ```json
 {

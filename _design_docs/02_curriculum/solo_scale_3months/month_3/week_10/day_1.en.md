@@ -25,7 +25,7 @@ Today, the goal is to get **Position 1** comfortable in your hands, and be able 
 
 ## ② Visual Reference
 
-First, here's A Mixolydian **Position 1**. The root A sits at the 6th string, 5th fret. Pay close attention to the two kinds of red highlights — **the major 3rd C# (resolution)** and **the ♭7 G (tension)**. These two colors are today's stars.
+First, here's A Mixolydian **Position 1**. The root A sits at the 6th string, 5th fret. Pay close attention to the two kinds of highlights — **the major 3rd C# (resolution, green)** and **the ♭7 G (tension, yellow)**. These two colors are today's stars.
 
 ```json
 {

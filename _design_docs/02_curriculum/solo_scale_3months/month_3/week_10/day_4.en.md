@@ -26,7 +26,7 @@ Today's goal: over the A7↔D7 backing, land on the 3rd (C#/F#) for each chord, 
 
 ## ② Visual Reference
 
-First, a **dominant 3rd target map.** A7's 3rd, C# (red), and D7's 3rd, F# (red), are scattered across both forms. Scope out ahead of time where the "nearest C# or F#" is whenever the chord changes.
+First, a **dominant 3rd target map.** A7's 3rd, C# (green), and D7's 3rd, F# (green), are scattered across both forms. Scope out ahead of time where the "nearest C# or F#" is whenever the chord changes.
 
 ```json
 {

@@ -18,7 +18,7 @@ Our practice pattern is **four-note groups (16th notes in fours).** If the 3rd i
 
 ## ② Visual Reference
 
-Pentatonic Box 1, now with two new **B (2nd, highlighted in yellow)** spots — 6th string 7th fret, 1st string 7th fret. Each is a bridge flowing straight into the C (♭3, red) right above it.
+Pentatonic Box 1, now with two new **B (2nd, highlighted in green)** spots — 6th string 7th fret, 1st string 7th fret. Each is a bridge flowing straight into the C (♭3, green) right above it.
 
 ```json
 {

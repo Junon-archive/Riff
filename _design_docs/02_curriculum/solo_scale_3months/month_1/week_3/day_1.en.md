@@ -16,11 +16,11 @@ So starting today, we're moving up past the 12th fret. Our first new home is Box
 
 And today's real assignment isn't to memorize Box 4 in isolation — it's to stitch it together with Box 3. The Box 3 you learned last week (frets 9–12) and today's Box 4 (frets 12–15) share a wall right at the 12th fret. They're not strangers; they're neighbors holding hands at fret 12. To feel that in your body, today we use a slide. Slide from the 5th string 12th fret (A, the root) all the way to the 15th fret (C, the ♭3), and in one motion you move from Box 3 to Box 4 while landing right on today's target note, C (♭3). One move teaches you both "connecting boxes" and "landing on the 3rd" at once.
 
-The coordinates to remember never change: A (R) · C (♭3) · D (4) · E (5) · G (♭7). Only the location moved up 12 frets — the role of each note stays exactly the same. And especially C (♭3): in Box 4, it lives on the 5th string 15th fret and the 2nd string 13th fret. That's today's red light.
+The coordinates to remember never change: A (R) · C (♭3) · D (4) · E (5) · G (♭7). Only the location moved up 12 frets — the role of each note stays exactly the same. And especially C (♭3): in Box 4, it lives on the 5th string 15th fret and the 2nd string 13th fret. That's today's green light.
 
 ## ② Visual Reference
 
-First, today's new home: Box 4. Centered on the root A (5th string, 12th fret), the notes highlighted in red are C (♭3) — today's landing target.
+First, today's new home: Box 4. Centered on the root A (5th string, 12th fret), the notes highlighted in green are C (♭3) — today's landing target.
 
 ```json
 {

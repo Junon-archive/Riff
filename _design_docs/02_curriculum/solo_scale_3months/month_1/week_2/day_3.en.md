@@ -18,7 +18,7 @@ Today's real test is **accuracy at the connection points** — the seams where y
 
 ## ② Visual Reference
 
-First, here's the map of the whole neck. From fret 5 to fret 13, we've pulled out and marked just the **root A's and target C's (♭3)** scattered across the three boxes. Think of this as your "highway signs." Wherever these red C's pop up during your journey, that's a landing point.
+First, here's the map of the whole neck. From fret 5 to fret 13, we've pulled out and marked just the **root A's and target C's (♭3)** scattered across the three boxes. Think of this as your "highway signs." Wherever these green C's pop up during your journey, that's a landing point.
 
 ```json
 {

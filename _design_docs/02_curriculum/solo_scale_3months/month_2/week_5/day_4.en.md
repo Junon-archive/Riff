@@ -18,7 +18,7 @@ So today isn't about drills — it's about making **music.** Running straight up
 
 ## ② Visual Reference
 
-This week's result: the **complete A natural minor Box 1.** The pentatonic skeleton (white) + passing tones B and F (yellow) + the landing note C (red). All 7 notes gathered into one shape.
+This week's result: the **complete A natural minor Box 1.** The pentatonic skeleton (white) + passing tones B and F (green) + the landing note C (green). All 7 notes gathered into one shape.
 
 ```json
 {

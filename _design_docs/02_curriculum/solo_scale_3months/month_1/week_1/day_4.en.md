@@ -14,11 +14,11 @@ Here's why we're doing this today. The real reason we've spent three days traini
 
 Just one core concept to nail down. When the Am chord rings out over the backing track, the notes that make up that chord are **A (root) · C (♭3) · E (5).** We call these three notes "chord tones." Whether a solo sounds amateur or professional comes down to exactly one thing: **do you land on a chord tone when you end a phrase, or just stop anywhere?** Pour out scale notes and let the ending trail off — that's amateur. Hook the ending firmly on C or A and sing it with vibrato — that's professional. It really comes down to this one difference.
 
-And of all the chord tones, **landing on C (♭3) is your best weapon.** Landing on the root A feels stable but a little predictable; landing on C, the ♭3, brings out that aching, minor-key color — "ah, this is minor" — instantly. The whole reason we've kept a red light on C for the past three days comes down to today. Now you're going to reach right into the flow of your solo, grab that C, and land on it.
+And of all the chord tones, **landing on C (♭3) is your best weapon.** Landing on the root A feels stable but a little predictable; landing on C, the ♭3, brings out that aching, minor-key color — "ah, this is minor" — instantly. The whole reason we've kept a green light on C for the past three days comes down to today. Now you're going to reach right into the flow of your solo, grab that C, and land on it.
 
 ## ② Visual Reference
 
-This is the Am chord-tone map. Out of the five scale notes, only the **three chord tones (R · ♭3 · 5)** are marked. These three spots are your "landing zones." Aim especially for the red C (♭3).
+This is the Am chord-tone map. Out of the five scale notes, only the **three chord tones (R · ♭3 · 5)** are marked. These three spots are your "landing zones." Aim especially for the green C (♭3).
 
 ```json
 {

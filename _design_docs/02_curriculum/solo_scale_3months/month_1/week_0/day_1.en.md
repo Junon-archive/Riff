@@ -26,7 +26,7 @@ So if you slow down and watch what improv masters actually do, it's really not t
 
 ### Today's preview: where's the 3rd in Am?
 
-The neighborhood we'll live in for the whole first month is **A minor pentatonic, Box 1 (5th fret).** The 3rd of an Am chord is **C (minor 3rd, ♭3).** In the fretboard diagram below, every note highlighted in yellow is a C. For today, just take a mental snapshot: "someday, I'll be landing on these notes."
+The neighborhood we'll live in for the whole first month is **A minor pentatonic, Box 1 (5th fret).** The 3rd of an Am chord is **C (minor 3rd, ♭3).** In the fretboard diagram below, every note highlighted in green is a C. For today, just take a mental snapshot: "someday, I'll be landing on these notes."
 
 ## ② Visual Reference
 
@@ -58,7 +58,7 @@ The neighborhood we'll live in for the whole first month is **A minor pentatonic
 }
 ```
 
-Think of the yellow notes (♭3 = C) as the **landing target**, R (A) as home base, and the 5th (E) as a side character. For now, it's enough just to get familiar with where they sit.
+Think of the green notes (♭3 = C) as the **landing target**, R (A) as home base, and the 5th (E) as a side character. For now, it's enough just to get familiar with where they sit.
 
 ## ③ Today's Practice (50-minute routine)
 
@@ -69,7 +69,7 @@ It's day one, so we're using more **head** than hands. But we still keep moving.
 - Done when: picking direction stays consistent through two full round trips.
 
 **10–20 min · Brain training (BPM 60)**
-- On the fretboard above, isolate just the **three yellow (C, ♭3) positions.** Say them out loud as you fret them: "6th string 8th fret, 3rd string 5th fret, 1st string 8th fret."
+- On the fretboard above, isolate just the **three green (C, ♭3) positions.** Say them out loud as you fret them: "6th string 8th fret, 3rd string 5th fret, 1st string 8th fret."
 - Done when: your hand can find all three C spots without looking at the fretboard.
 
 **20–40 min · Real-world feel — one-note improv (BPM 70–80, Am backing track)**

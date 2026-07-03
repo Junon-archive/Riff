@@ -20,7 +20,7 @@ Today's goal is one single thing: engrave the 3-measure phrase below into your b
 
 ## ② Visual Reference
 
-Here's the ingredient map for the phrase — 3rd-interval stepping stones (scale notes), the ♭5 passing tone (red), and the ♭3 landing point (red), all on one board.
+Here's the ingredient map for the phrase — 3rd-interval stepping stones (scale notes), the ♭5 passing tone (purple), and the ♭3 landing point (green), all on one board.
 
 ```json
 {

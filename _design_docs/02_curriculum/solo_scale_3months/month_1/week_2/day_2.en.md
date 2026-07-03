@@ -18,7 +18,7 @@ Now, today's bridge. Yesterday you slid A→C on the 4th string. Today's Box 2�
 
 ## ② Visual Reference
 
-Here's the map of Box 3. First, burn this into your eyes: the root A sits at the 5th string, fret 12 — dead center on the fretboard. The red C's (the ♭3) are at 4th string fret 10 and 2nd string fret 13.
+Here's the map of Box 3. First, burn this into your eyes: the root A sits at the 5th string, fret 12 — dead center on the fretboard. The green C's (the ♭3) are at 4th string fret 10 and 2nd string fret 13.
 
 ```json
 {

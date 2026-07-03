@@ -16,11 +16,11 @@ Today, we're turning these five rooms into one long hallway. The tool that break
 
 The core technique is the position shift (slide). Play a few notes in 3rds inside one room, slide up a string into the next room, then play in 3rds there too. Today's run starts at the 6th string 5th fret (Box 1's root) and travels all the way to the 3rd string 17th fret (Box 5's C), crossing the entire neck in one breath with three slides. Once you get through it, you'll feel in your hands that "oh, the neck really is one connected thing."
 
-And don't forget — the point of this run isn't showing off your fingers. It's burning into your body exactly where the C (♭3) target sits, no matter what part of the neck you're passing through. Every time you fret one of those red C's during the run, take a mental snapshot: "C here, C there too." Tomorrow, in improv, this map becomes your weapon.
+And don't forget — the point of this run isn't showing off your fingers. It's burning into your body exactly where the C (♭3) target sits, no matter what part of the neck you're passing through. Every time you fret one of those green C's during the run, take a mental snapshot: "C here, C there too." Tomorrow, in improv, this map becomes your weapon.
 
 ## ② Visual Reference
 
-First, today's map: the full-neck A minor pentatonic (from the open strings to fret 15). It shows that the five boxes are actually one seamless net, connected without a single break. Everything highlighted in red is a C (♭3) target — see how evenly C is scattered across the whole neck. (The notes at frets 16–17 at the top of Box 5 are just the fret-5 pattern repeated one octave up, so you've already seen that same shape lower down on this map.)
+First, today's map: the full-neck A minor pentatonic (from the open strings to fret 15). It shows that the five boxes are actually one seamless net, connected without a single break. Everything highlighted in green is a C (♭3) target — see how evenly C is scattered across the whole neck. (The notes at frets 16–17 at the top of Box 5 are just the fret-5 pattern repeated one octave up, so you've already seen that same shape lower down on this map.)
 
 ```json
 {

@@ -56,7 +56,6 @@
     "chord_note": "Head on the left · finger dots drawn from data onto the 6-string × fret grid",
     "tab": "Tab notation",
     "tab_note": "In the live app, playback & tempo controls live here",
-    "tip": "If your fingers aren't there yet, that's fine. Just learning the shape today is plenty.",
     "play": "Play",
     "pause": "Pause",
     "replay": "Watch again",
@@ -68,7 +67,8 @@
     "undo": "Undo",
     "prev": "Prev Day",
     "next": "Next Day",
-    "locked": "A little more and this one opens up"
+    "locked": "A little more and this one opens up",
+    "minutes": "about {n} min"
   },
   "donate": {
     "footer": "Support these free lessons",

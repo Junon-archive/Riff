@@ -18,7 +18,7 @@ Here's the key idea: Box 1 and Box 2 sit right next to each other and **share no
 
 ## ② Visual Reference
 
-First, here's the map of Box 2. Feels unfamiliar, right? The root A sits on the 4th string, fret 7, and the red C's (the ♭3) are scattered throughout. These C's are your landing pads from here on out.
+First, here's the map of Box 2. Feels unfamiliar, right? The root A sits on the 4th string, fret 7, and the green C's (the ♭3) are scattered throughout. These C's are your landing pads from here on out.
 
 ```json
 {

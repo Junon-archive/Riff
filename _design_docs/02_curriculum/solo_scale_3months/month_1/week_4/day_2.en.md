@@ -26,7 +26,7 @@ And today's second mission. Yesterday we only looked at ♭5 in Box 1, but ♭5 
 
 ## ② Visual Reference
 
-Here's the ♭5 map for the whole neck. Between the root A notes, ♭5 = E♭ (highlighted in red) sits once on each string. No matter which box you're in, the nearest red dot is your local blue note.
+Here's the ♭5 map for the whole neck. Between the root A notes, ♭5 = E♭ (highlighted in purple) sits once on each string. No matter which box you're in, the nearest purple dot is your local blue note.
 
 ```json
 {
@@ -104,7 +104,7 @@ Here's a vibrato expression phrase. Measure 1 slides from the 4th into ♭5 and 
 Set the scale aside for a moment and focus on vibrato alone. Fret the 3rd string 5th fret (♭3 = C) with your ring finger, and at 70 BPM, rotate your wrist like turning a doorknob — **"up (click) – down (click)"** — on a quarter-note cycle. Once it feels natural, double the speed to eighth notes. Also shift the width from narrow to wide. Keep checking that it's your **wrist** rotating, not your finger.
 
 **10–20 min · Brain training (mapping ♭5 across the whole neck)**
-Looking at the map above, work through strings 6 to 1, fretting each string's one ♭5 (red dot) in order. Every time you fret one, lock in the location by saying "this is the blue note in this zone." Then close your eyes and find them: start with 5th string 6th fret and 3rd string 8th fret (the two Box 1 spots), and if you've got room, keep going through the other strings. Pass when you can fret 5 or more spots with your eyes closed.
+Looking at the map above, work through strings 6 to 1, fretting each string's one ♭5 (purple dot) in order. Every time you fret one, lock in the location by saying "this is the blue note in this zone." Then close your eyes and find them: start with 5th string 6th fret and 3rd string 8th fret (the two Box 1 spots), and if you've got room, keep going through the other strings. Pass when you can fret 5 or more spots with your eyes closed.
 
 **20–40 min · Real-world improv (Am7 one-chord backing, 65–70 BPM) — expressing ♭5 through slide/bend**
 Play the backing track and follow this rule: **always "enter" ♭5 via a slide or bend, and always finish landing notes with slow, wide vibrato.** Don't let a single note today cut off flat and dead. End each phrase landing on ♭3 (C) or the root (A) → sing it with wrist vibrato. Use the phrase above as your skeleton and vary it little by little.

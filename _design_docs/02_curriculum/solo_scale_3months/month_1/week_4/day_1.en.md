@@ -24,7 +24,7 @@ To sum up: today we're finding where ♭5 lives in Box 1, and learning to **soun
 
 ## ② Visual Reference
 
-Here's A blues scale Box 1. Two new ♭5 spots (highlighted in red) have joined the five pentatonic notes — 5th string 6th fret, and 3rd string 8th fret. Those two are today's stars.
+Here's A blues scale Box 1. Two new ♭5 spots (highlighted in purple) have joined the five pentatonic notes — 5th string 6th fret, and 3rd string 8th fret. Those two are today's stars.
 
 ```json
 {

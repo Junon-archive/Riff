@@ -75,7 +75,7 @@ const monthDayKeys = location.month.weeks.flatMap((w) => w.days).map((d) => d.da
         <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
         <path d="M12 7v5l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
-      <span>{content.estMinutes}</span>
+      <span>{translate(lang, 'lesson.minutes', { n: content.estMinutes })}</span>
     </p>
   </header>
 
@@ -84,11 +84,6 @@ const monthDayKeys = location.month.weeks.flatMap((w) => w.days).map((d) => d.da
     <section>
       <h2>{translate(lang, 'lesson.theory')}</h2>
       <div class="prose" id="lessonProse" set:html={prose.theory}></div>
-
-      <div class="callout">
-        <span class="emoji" aria-hidden="true">💡</span>
-        <span>{translate(lang, 'lesson.tip')}</span>
-      </div>
     </section>
 
     {/* 눈으로 보기: 산문 + 지판/타브 SVG(JSON→SVG, scores[] 개수만큼) */}

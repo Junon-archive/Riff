@@ -35,7 +35,7 @@ So today's the day you land on the 3rds of A7 and D7 (C# and F#) — but sing th
 
 ## ② Visual Reference
 
-First up, a **target note map** for the blues backing. From one spot near the 5th fret, you can reach the 3rds of A7, D7, and E7 all at once. The highlighted notes are the 3rds you're landing on; the C right next to them is the blue note (♭3). **3rd string, frets 5–6 (C→C#)** are today's two key notes.
+First up, a **target note map** for the blues backing. From one spot near the 5th fret, you can reach the 3rds of A7, D7, and E7 all at once. The green-highlighted notes are the 3rds you're landing on; the C right next to them is the blue note (♭3). **3rd string, frets 5–6 (C→C#)** are today's two key notes.
 
 ```json
 {

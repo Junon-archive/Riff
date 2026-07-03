@@ -16,11 +16,11 @@ Every chord boils down to three notes as its skeleton. For Am, that's **A (root)
 
 Let's clear up one misunderstanding first. This is **not** sweep-picking speed practice. The goal isn't to rip through it fast — it's **brain training to recognize positions**: "oh, that's a C here, and that's a C there too." That's why the BPM stays very slow all day today. Speed has never once been the star of this curriculum.
 
-And today's real star is **C (♭3)**. The 3rd is the note that decides a chord's expression. A and E stay the same whether the chord is major or minor, but it's C that makes this chord "minor." So we're marking C in red as your **landing candidate (target)** going forward. If you can put your finger on all three C spots with your eyes closed, today's a total win.
+And today's real star is **C (♭3)**. The 3rd is the note that decides a chord's expression. A and E stay the same whether the chord is major or minor, but it's C that makes this chord "minor." So we're marking C in green as your **landing candidate (target)** going forward. If you can put your finger on all three C spots with your eyes closed, today's a total win.
 
 ## ② Visual Reference
 
-This is a map of Am's chord tones (A·C·E) across the whole neck (frets 0–12). The red highlight is **C**, the 3rd — that's today's landing target.
+This is a map of Am's chord tones (A·C·E) across the whole neck (frets 0–12). The green highlight is **C**, the 3rd — that's today's landing target.
 
 ```json
 {

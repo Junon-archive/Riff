@@ -18,7 +18,7 @@ Here's a tip in advance: a good solo isn't about playing lots of notes, it's abo
 
 ## ② Visual Reference
 
-Today's "jam home base" — inside one box spanning frets 5–8, all of Am's and C's chord tones are gathered together. The red highlights are the landing targets for both chords' 3rds (**C** and **E**). You can cover the whole tune using just this small area.
+Today's "jam home base" — inside one box spanning frets 5–8, all of Am's and C's chord tones are gathered together. The green highlights are the landing targets for both chords' 3rds (**C** and **E**). You can cover the whole tune using just this small area.
 
 ```json
 {

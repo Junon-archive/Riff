@@ -18,7 +18,7 @@ And today's landing spot is, as always, **C (♭3)** — the 3rd of the Am chord
 
 ## ② Visual Reference
 
-This is A minor pentatonic Box 1 (root on the 5th fret). The three red highlights are, once again, today's destination: **C (♭3)**.
+This is A minor pentatonic Box 1 (root on the 5th fret). The three green highlights are, once again, today's destination: **C (♭3)**.
 
 ```json
 {

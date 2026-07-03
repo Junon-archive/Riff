@@ -20,7 +20,7 @@ One more time: this isn't speed practice. It's timing training for **landing exa
 
 ## ② Visual Reference
 
-This is a "guide-tone map" plotting Am's 3rd (**C**) and C's 3rd (**E**) together across the whole neck. Both are landing targets (in red), and A marks the anchor point (root) that orients you. Pair up the C-E's that sit close together with your eyes.
+This is a "guide-tone map" plotting Am's 3rd (**C**) and C's 3rd (**E**) together across the whole neck. Both are landing targets (in green), and A marks the anchor point (root) that orients you. Pair up the C-E's that sit close together with your eyes.
 
 ```json
 {

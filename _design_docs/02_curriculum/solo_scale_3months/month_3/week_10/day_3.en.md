@@ -22,7 +22,7 @@ Today's goal: get Position 2 into your hands, go back and forth between the two 
 
 ## ② Visual Reference
 
-First, **A Mixolydian Position 2.** The root A is at the 4th string, 7th fret. Get the locations of the major 3rd C# (red) and ♭7 G (red) into your eyes here too. Same note names as Position 1, just a different shape.
+First, **A Mixolydian Position 2.** The root A is at the 4th string, 7th fret. Get the locations of the major 3rd C# (green) and ♭7 G (yellow) into your eyes here too. Same note names as Position 1, just a different shape.
 
 ```json
 {
@@ -62,7 +62,7 @@ First, **A Mixolydian Position 2.** The root A is at the 4th string, 7th fret. G
 }
 ```
 
-Second, a **connection map** linking the two forms. The roots (A), major 3rd C# (red), and ♭7 G (red) of Position 1 and Position 2 are scattered together across the neck. The root at the 4th string, 7th fret is the "shared link" between the two forms. And the 1st string slide from the 5th fret (A) to the 9th fret (C#) is today's travel route.
+Second, a **connection map** linking the two forms. The roots (A), major 3rd C# (green), and ♭7 G (yellow) of Position 1 and Position 2 are scattered together across the neck. The root at the 4th string, 7th fret is the "shared link" between the two forms. And the 1st string slide from the 5th fret (A) to the 9th fret (C#) is today's travel route.
 
 ```json
 {

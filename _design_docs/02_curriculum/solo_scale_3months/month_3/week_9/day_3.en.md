@@ -71,7 +71,7 @@ First, here's the **A Dorian 4-note sequence** (2 bars, eighth notes). It rolls 
 }
 ```
 
-Second, here's the **Am7 vs. D7 target-3rds map**. Two kinds of highlights: **C (Am7's 3rd)** and **F# (D7's 3rd = the Dorian color)**. See with your own eyes how F# plays double duty. The roots A and D are marked too, for reference.
+Second, here's the **Am7 vs. D7 target-3rds map**. Two kinds of highlights: **C (Am7's 3rd)** in green and **F# (D7's 3rd = the Dorian color)** in yellow. See with your own eyes how F# plays double duty. The roots A and D are marked too, for reference.
 
 ```json
 {

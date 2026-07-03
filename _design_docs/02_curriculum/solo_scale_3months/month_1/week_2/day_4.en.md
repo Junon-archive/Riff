@@ -18,7 +18,7 @@ Here's today's game: open a phrase over the backing track, **slide into whicheve
 
 ## ② Visual Reference
 
-Here's the map of Am's chord tones (R · ♭3 · 5) across the neck. From fret 5 to 13, spanning all three boxes, every landing pad is marked. The red C (♭3) is your first-choice landing spot; the root A is your safe second choice. The blue E (the 5th) is a passing chord tone. This map is your compass for today's improv.
+Here's the map of Am's chord tones (R · ♭3 · 5) across the neck. From fret 5 to 13, spanning all three boxes, every landing pad is marked. The green C (♭3) is your first-choice landing spot; the root A is your safe second choice. The blue E (the 5th) is a passing chord tone. This map is your compass for today's improv.
 
 ```json
 {

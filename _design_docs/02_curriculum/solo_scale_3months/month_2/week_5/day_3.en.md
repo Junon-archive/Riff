@@ -18,7 +18,7 @@ Of course, just like B yesterday, F is a **passing tone.** It's not an Am chord 
 
 ## ② Visual Reference
 
-Alongside yesterday's B (yellow), today adds two spots of **F (6th, highlighted in yellow)** to the pentatonic — 5th string 8th fret, 2nd string 6th fret. Each is a bridge sliding a half-step down into the E (5th) right below it.
+Alongside yesterday's B (green), today adds two spots of **F (6th, highlighted in green)** to the pentatonic — 5th string 8th fret, 2nd string 6th fret. Each is a bridge sliding a half-step down into the E (5th) right below it.
 
 ```json
 {

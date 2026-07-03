@@ -14,11 +14,11 @@ Here's why we're doing this today. You've probably played the pentatonic Box 1 a
 
 So starting today, we're setting one rule: **no more simple up-and-down runs.** Instead, we're going to chew through the box using 4-note sequences (groups of four 16th notes). Why 4-note groups? Because instead of moving through the box in one straight direction, you'll go "four notes forward, one note back, forward again" — and that forces your brain to start memorizing each note's position as an **individual coordinate**, not a habit. That's how we break the autopilot.
 
-The coordinates you need to remember are just the 5 notes of A minor pentatonic: **A (root) · C (♭3) · D (4) · E (5) · G (♭7).** Of these, the one to really burn into your eyes today is **C (♭3).** That's the 3rd of the Am chord — the note that's going to be your "landing spot" for the next three months. For now, just let it sink in: "ah, C lights up red right here, here, and here."
+The coordinates you need to remember are just the 5 notes of A minor pentatonic: **A (root) · C (♭3) · D (4) · E (5) · G (♭7).** Of these, the one to really burn into your eyes today is **C (♭3).** That's the 3rd of the Am chord — the note that's going to be your "landing spot" for the next three months. For now, just let it sink in: "ah, C lights up green right here, here, and here."
 
 ## ② Visual Reference
 
-Am pentatonic Box 1 (root on the 5th fret). The notes highlighted in red (♭3 = C) are your target notes going forward.
+Am pentatonic Box 1 (root on the 5th fret). The notes highlighted in green (♭3 = C) are your target notes going forward.
 
 ```json
 {

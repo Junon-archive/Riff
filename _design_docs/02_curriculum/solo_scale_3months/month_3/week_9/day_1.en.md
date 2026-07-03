@@ -28,7 +28,7 @@ Today's goal is just two things. First, get one A Dorian position under your fin
 
 ## ② Visual Reference
 
-Here's A Dorian **Position 1** (starting at fret 5, three notes per string). There are two kinds of red highlights. **F# (the 6th, the color note)** is today's star, so it's highlighted; **C (the b3)** is the 3rd of Am7, so it's marked as a landing target. The root A appears in three spots (string 6 fret 5, string 4 fret 7, string 2 fret 10).
+Here's A Dorian **Position 1** (starting at fret 5, three notes per string). There are two kinds of highlights. **F# (the 6th, the color note)** is today's star, so it's marked in yellow; **C (the b3)** is the 3rd of Am7, so it's marked in green as a landing target. The root A appears in three spots (string 6 fret 5, string 4 fret 7, string 2 fret 10).
 
 ```json
 {

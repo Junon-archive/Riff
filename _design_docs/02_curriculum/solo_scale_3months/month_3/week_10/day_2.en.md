@@ -62,7 +62,7 @@ First, today's warm-up, the **A Mixolydian 4-note sequence**. Within Position 1,
 }
 ```
 
-Second, the **C# & G target map**. Within Position 1, the major 3rd C# (red, resolution) and ♭7 G (red, tension) each appear in two spots. The root A and the blue note C are layered in lightly, too. Today's brain training is done when this picture pops into your head with your eyes closed.
+Second, the **C# & G target map**. Within Position 1, the major 3rd C# (green, resolution) and ♭7 G (yellow, tension) each appear in two spots. The root A and the blue note C are layered in lightly, too. Today's brain training is done when this picture pops into your head with your eyes closed.
 
 ```json
 {

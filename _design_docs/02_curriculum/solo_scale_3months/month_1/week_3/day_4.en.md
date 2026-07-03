@@ -20,7 +20,7 @@ This week's graduation test is this: over an Am backing track, open phrases in d
 
 ## ② Visual Reference
 
-First, today's compass: the full-neck Am chord tone map (from the open strings to fret 15). Out of the scale's five notes, this pulls out just the three chord tones (R · ♭3 · 5). C (♭3), highlighted in red, is your "landing pad." Wherever you are on the neck, practice hunting for the nearest red dot with your eyes.
+First, today's compass: the full-neck Am chord tone map (from the open strings to fret 15). Out of the scale's five notes, this pulls out just the three chord tones (R · ♭3 · 5). C (♭3), highlighted in green, is your "landing pad." Wherever you are on the neck, practice hunting for the nearest green dot with your eyes.
 
 ```json
 {

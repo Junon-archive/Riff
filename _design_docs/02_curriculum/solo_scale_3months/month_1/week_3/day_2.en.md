@@ -20,7 +20,7 @@ Today's target, C (♭3), sits at the 5th string 15th fret and the 3rd string 17
 
 ## ② Visual Reference
 
-Today's final puzzle piece: Box 5. Centered on the root A (6th string 17th fret, 3rd string 14th fret, 1st string 17th fret), the notes highlighted in red are the target C (♭3). The A at the 6th string 17th fret is the doorway into "Box 1, one octave up."
+Today's final puzzle piece: Box 5. Centered on the root A (6th string 17th fret, 3rd string 14th fret, 1st string 17th fret), the notes highlighted in green are the target C (♭3). The A at the 6th string 17th fret is the doorway into "Box 1, one octave up."
 
 ```json
 {
