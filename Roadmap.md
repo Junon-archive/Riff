@@ -2,24 +2,27 @@
 
 > 무료 기타 레슨 웹 서비스. 이 문서는 **현재 구현 상황·변경 로그·다음 작업**을 관리하는 단일 대시보드다.
 > 규칙: 작업이 하나 끝날 때마다 이 파일을 갱신한다(`CLAUDE.md` 고정 규칙).
-> 최종 갱신: 2026-07-03 (Astro 마이그레이션 완료)
+> 최종 갱신: 2026-07-04 · **라이브: https://guitar-riff.pages.dev**
 
 ---
 
 ## 1. 지금 어디까지 왔나 (한눈에)
 
+**🚀 배포 완료 — 실서비스 운영 중** (`guitar-riff.pages.dev`, Cloudflare Pages + GitHub 자동배포).
+
 | 영역 | 상태 | 요약 |
 |---|---|---|
-| **설계 문서(_design_docs)** | ✅ 완료 | PRD·아키텍처·스키마·로컬라이제이션·저작 플레이북 확정 |
+| **설계 문서(_design_docs)** | ✅ 완료 | PRD·아키텍처·스키마·로컬라이제이션·저작 플레이북·색 범례 확정 |
 | **커리큘럼 콘텐츠** | ✅ 완료 | `solo_scale_3months` = Week 0 + 12주 = **52 Day**, KR/EN/JP |
 | **악보 데이터** | ✅ 완료 | 105개 지판/타브 JSON, 스키마 검증 전량 PASS |
-| **i18n** | ✅ 완료 | day 156(52×3) + 개요 48(16×3) + UI 카피 91키(3언어 diff 0) |
+| **i18n** | ✅ 완료 | day 156(52×3) + 개요 48(16×3) + UI 카피 **114키**(3언어 diff 0) |
 | **명세서** | ✅ 완료 | 기술 명세 / 디자인 명세(+상호 정합 리뷰 통과) |
-| **web_app (Astro)** | ✅ 동작 | **Astro+TS로 이전 완료** — 163 정적 페이지, SEO(레슨별 HTML·hreflang), View Transitions |
-| **기능 확장** | 🟨 예정 | 분류 필터 칩 · 자동 후원(드림기타) 연출 |
-| **배포** | ⬜ 예정 | Cloudflare Pages (GitHub 연동) |
+| **web_app (Astro)** | ✅ 운영 | Astro+TS 정적 163 페이지, SEO(레슨별 HTML·hreflang), View Transitions |
+| **도네이션** | ✅ 운영 | 카카오페이·토스·PayPal 실연동(QR/링크 토글), 드림기타 후원 연출, 세무 고지 |
+| **커리큘럼 분류** | ✅ 완료 | forWho·개월/일수 배지 + 악기 필터 칩 인프라(2종+ 시 노출) |
+| **배포(CF Pages)** | ✅ 완료 | GitHub 연동 자동배포, `guitar-riff.pages.dev` |
 
-**요약:** 콘텐츠·설계·명세·앱까지 완성됐고 **Astro 이전(SEO)까지 끝났다.** 다음은 분류 필터·드림기타 후원 연출을 얹고 CF Pages에 배포하는 단계다.
+**요약:** 설계 → 3개월 콘텐츠(3언어) → Astro 앱 → 실도메인 배포 → 도네이션 실연동까지 **1차 릴리스 완료**. 이후는 콘텐츠 확장(신규 커리큘럼)과 운영 다듬기 단계.
 
 ---
 
@@ -45,15 +48,16 @@
 - **부트:** `src/main.ts` — 테마·언어·닉네임·도네이션·백업 시트 배선.
 - **검증:** `tsc --noEmit` clean, `npm run build` 성공(52 지연청크), 헤드리스 크로미움 스모크 통과.
 
-### 🟨 예정
-- **커리큘럼 분류:** manifest에 `instrument/topic/level/tags` 필드 + 랜딩 필터 칩(5개+ 시점).
-- **자동 후원 연출:** Month·커리큘럼 완료 시 '드림기타(Fender Strat · Cory Wong Sig)' 단계형 시트 → 후원(자동 트리거는 이미 구현, 연출·이미지 추가 필요).
+### 🟨 다음 후보 (신규 개발)
+- **신규 커리큘럼 추가** — 잽잽이(펑키 리듬)·스트로크 주법 등. 저작 SOP(`00_curriculum_authoring_playbook.md`)대로 `meta.json`+day md 추가 → 빌드만으로 확장(악기 2종+ 되면 필터 칩 자동 노출).
+- **타브 재생 기능** — 향후 자체 Web Audio로 릭 재생·속도조절(AlphaTab 미채택 결정, 필요 시 자체 구현).
+- **오선보** — 필요한 커리큘럼 생기면 VexFlow 도입.
 
 ### ⏳ 열린 이슈(비차단)
-- `astro.config` `site`가 placeholder(`https://riff.pages.dev`) → 실도메인 확정 시 교체(canonical/hreflang/sitemap 절대 URL).
-- OPEN-6: 프라이버시 경량 분석 도구 선정.
+- OPEN-6: 프라이버시 경량 분석 도구 선정(방문·완주율 집계).
 - OPEN-8: 보강 UI용 i18n 키 3개(`nick.chip_empty`, `storage.blocked_banner/toast`) 3언어 카피.
-- 도네이션 실제 링크(현재 플레이스홀더).
+- BMC(Buy Me a Coffee)는 한국 미지원으로 제외됨 — 글로벌 확장 시 대체 채널 검토.
+- week_5 추가음(2·6도)이 `passing+highlight`라 타겟과 같은 초록 — 교육적 구분 원하면 role→`color`(악보 데이터 변경).
 - `lib/storage.ts` `escape`/`unescape` deprecation 힌트 3건(정리 권장).
 
 ---
@@ -63,10 +67,10 @@
 - [x] **M0 설계 정합화** — 문서·스키마·프롬프트 확정
 - [x] **M1 콘텐츠 시드** — 3개월 52 Day + 악보 + 3개국어
 - [x] **M2 MVP 구현** — 바닐라+Vite+TS 앱(렌더러·i18n·상태·완료)
-- [x] **M2.5 Astro 이전** — 정적 페이지·SEO·View Transitions (163 페이지, 검증 통과)
-- [ ] **M2.6 기능 확장** — 분류 필터 칩 · 자동 후원(드림기타) 연출 ⬅ **현재**
-- [ ] **M3 배포** — Cloudflare Pages(GitHub 연동), 도네이션 링크
-- [ ] **M4 확장** — 신규 커리큘럼(잽잽이/펑키 리듬 등) 모듈 추가
+- [x] **M2.5 Astro 이전** — 정적 페이지·SEO·View Transitions (163 페이지)
+- [x] **M2.6 기능 확장** — 커리큘럼 분류 · 드림기타 후원 연출 · 완료 취소
+- [x] **M3 배포** — Cloudflare Pages(GitHub 연동) `guitar-riff.pages.dev` + 도네이션 실연동
+- [ ] **M4 확장** — 신규 커리큘럼(잽잽이/펑키 리듬 등) 모듈 추가 ⬅ **다음**
 
 ---
 
@@ -141,7 +145,8 @@
 ---
 
 ## 5. 다음 작업 (Next)
-1. **드림기타 후원 연출** — 월/커리큘럼 완료 시 단계형 시트(Fender Strat · Cory Wong Sig 이미지 → 응원 문구 → 후원 채널). 이미지 에셋(실사진 자체호스팅) 필요.
-2. **커리큘럼 분류** — manifest `instrument/topic/level/tags` + 랜딩 필터 칩(커리큘럼 5개+ 시점).
-3. **manifest 커리큘럼 title 언어별 번역** 갭 수정.
-4. **Cloudflare Pages 배포** — GitHub 연동, 실도메인 확정 시 `astro.config` `site` 교체.
+1차 릴리스는 배포까지 완료됐다. 이후 우선순위:
+1. **신규 커리큘럼 제작** — `00_curriculum_authoring_playbook.md` SOP로 잽잽이/스트로크 등 추가(데이터 추가만으로 확장).
+2. **경량 분석(OPEN-6)** — 프라이버시 준수 완주율·언어분포 집계 도입 검토.
+3. **타브 재생(자체 Web Audio)** — 릭 들려주기 수요 생기면.
+4. **운영 관찰** — 실사용 피드백 기반 UX 다듬기(넛지·도네이션 전환 등).

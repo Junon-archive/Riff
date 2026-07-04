@@ -2,8 +2,12 @@
 
 > **문서 상태:** Living Document (지속 갱신)
 > **작성 주체:** PM / Tech Lead Agent
-> **최종 수정일:** 2026-07-02
+> **최종 수정일:** 2026-07-04
 > **한 줄 정의:** 유료 레슨급 퀄리티를, 로그인·DB·호스팅 비용 0원으로 전 세계에 무료 제공하는 정적(Static) 기타 교육 웹 서비스.
+
+> **🚀 구현 현황 (2026-07-04): 1차 릴리스 배포 완료 — https://guitar-riff.pages.dev**
+> 이 PRD는 기획 원본(방향성)이다. 아래 본문 중 초기 가정과 실제 구현이 달라진 부분은 각주로 표기했다. 실시간 진행 상황은 `../Roadmap.md`, 확정 스택·라우팅은 `../web_app/docs/technical_spec.md`가 SSOT.
+> **주요 확정 사항:** 스택 = **Astro + TS**(정적, 런타임 프레임워크 없음) · 지판/타브 = **자체 SVG 렌더러**(AlphaTab/VexFlow 미채택) · 라우팅 = **Astro 파일 기반 정적 라우트**(언어별 페이지 `/`·`/en`·`/ja` + hreflang, SEO) · 도네이션 채널 = **카카오페이·토스·PayPal**(BMC는 한국 미지원으로 제외) · 배포 = **Cloudflare Pages**(GitHub 자동배포).
 
 ---
 
@@ -77,6 +81,7 @@
   - 외부 전문 AI(GPT-4o 등)로 **음 좌표·프렛·스트링 번호**를 표준 JSON 스키마로 추출(`03_data_schema/fretboard_score_schema.json`).
   - 프론트엔드가 이 JSON을 받아 **SVG(지판 다이어그램)** 및 **VexFlow / AlphaTab(타브 악보)** 로 정확히 렌더링.
 - 이 방식의 이점: 픽셀이 아니라 데이터라서 **검증 가능**하고, 다국어/다크모드/반응형에 자동 대응된다.
+> ✅ **구현 확정:** 지판·타브 **둘 다 자체 SVG 렌더러**로 구현(AlphaTab/VexFlow 미채택). 표준 스키마 = `03_data_schema/fretboard_score_schema.json`, 역할→색 = `03_data_schema/color_legend.md`. 향후 재생 필요 시 자체 Web Audio, 오선보 필요 시 VexFlow.
 
 ### 3.6 다국어 지원 (i18n)
 - 지원 언어: **한국어(ko) / 영어(en) / 일본어(ja)**.
@@ -90,6 +95,7 @@
 - 채널: **Toss 송금 링크 / 카카오페이 QR·송금 / PayPal / Buy Me a Coffee**.
   - 국내(ko): Toss·카카오페이 우선 노출. 글로벌(en/ja): PayPal·BMC 우선 노출.
 - 강매·모달 강제 없음. 언제나 "닫고 계속 무료 이용" 경로 제공.
+> ✅ **구현 확정:** 실제 채널 = **카카오페이·토스·PayPal** 3종(BMC는 한국 미지원으로 제외). 각 채널 **QR/링크 토글**(기기별 기본값: PC=QR, 모바일=링크). 큰 마일스톤(월·커리큘럼 완료) 시 **'드림기타' 후원 연출** → 채널 시트. 결제 뷰에 세무·실명 고지 캡션(차단형 아님).
 
 ---
 
@@ -105,6 +111,7 @@
 /about, /donate, /disclaimer        정적 페이지
 ```
 - 콘텐츠 소스는 `_design_docs/02_curriculum/**`의 md + JSON. 빌드 시 라우트로 매핑.
+> ✅ **구현 확정(Astro 정적 라우팅):** 레슨마다 **실제 정적 HTML**을 생성(SEO). 실제 URL 스킴 = `/c/{cur}/m{M}/w{W}/d{D}/`. **언어별 라우트**: ko는 무접두(`/…`), 영어 `/en/…`, 일본어 `/ja/…` + canonical·hreflang. 월/주 개요는 별도 페이지가 아니라 커리큘럼 뷰의 **인라인 아코디언**(Month→Week→Day). 총 163 정적 페이지(레슨 156 + 홈/커리큘럼 6 + 404/robots/sitemap).
 
 ---
 
@@ -164,11 +171,13 @@
 
 ## 9. 로드맵 & 마일스톤 (Roadmap)
 
-- **M0 — 설계 정합화(현재):** `_design_docs` 전 문서 확정, 스키마 고정, 세션 프롬프트 확정.
-- **M1 — 콘텐츠 시드:** 세션 A/B로 Month 1 / Week 1 (Day 1~n) 콘텐츠·악보 JSON·3개국어 카피 완성.
-- **M2 — MVP 구현:** `web_app` 프론트 뼈대(라우팅·i18n·localStorage·지판/타브 렌더러·완료 버튼) + Week 1 탑재.
-- **M3 — 배포:** Cloudflare Pages 배포, 도네이션 링크 연동.
-- **M4 — 확장:** Month 1 전체 → 3개월 완성 → 신규 커리큘럼(잽잽이 등) 모듈 추가.
+> ✅ 상세·최신 진행은 `../Roadmap.md`. 아래는 원 마일스톤(전부 완료, M4만 진행 예정).
+
+- **M0 — 설계 정합화:** ✅ `_design_docs` 전 문서 확정, 스키마 고정, 세션 프롬프트 확정.
+- **M1 — 콘텐츠 시드:** ✅ 3개월 전체(Week 0 + 12주 = 52 Day) 콘텐츠·악보 JSON·3개국어 카피 완성.
+- **M2 — MVP 구현:** ✅ `web_app`(라우팅·i18n·localStorage·자체 SVG 렌더러·완료). 이후 **Astro 이전**으로 SEO 확보.
+- **M3 — 배포:** ✅ Cloudflare Pages(`guitar-riff.pages.dev`) + 도네이션 실연동(카카오페이·토스·PayPal).
+- **M4 — 확장:** ⬜ 신규 커리큘럼(잽잽이/펑키 리듬 등) 모듈 추가 — 데이터 추가만으로. ⬅ 다음
 
 ---
 

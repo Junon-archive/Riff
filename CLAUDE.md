@@ -18,9 +18,12 @@
 - `web_app/docs/technical_spec.md` · `design_spec.md` — 기술·디자인 명세(구현 SSOT)
 
 ## 스택 (현재)
-- 확정: 바닐라 JS + Vite + TypeScript, 자체 SVG 렌더러, 해시 라우팅, CF Pages.
-- **진행 예정: Astro + TS로 마이그레이션**(SEO·정적 페이지·View Transitions). 완료 시 이 절과 tech_stack/technical_spec 갱신.
+- **확정·운영 중: Astro + TypeScript**(정적 출력, 런타임 프레임워크 없음), 자체 SVG 지판/타브 렌더러, 파일 기반 정적 라우팅(언어별 페이지+hreflang), View Transitions, `localStorage` 상태.
+- **배포: Cloudflare Pages(GitHub 연동 자동배포) → https://guitar-riff.pages.dev.**
+- 콘텐츠 파이프라인: `_design_docs` day/overview md → `scripts/build-content.mjs` → `src/content/*.json`+`manifest.json` → Astro 빌드.
 - AlphaTab/VexFlow 미채택(향후: 재생 필요 시 자체 Web Audio, 오선보 필요 시 VexFlow).
+- 상세 SSOT: `web_app/docs/technical_spec.md`(§8-A Astro)·`design_spec.md`, `_design_docs/01_architecture/tech_stack.md`.
 
-## 저장소
+## 저장소 · 배포
 - GitHub: `https://github.com/Junon-archive/Riff.git` (main). `.claude/` 포함 전체 추적.
+- `main` push → Cloudflare Pages 자동 재배포. 빌드 설정: Root `web_app`, Build `npm run build`, Output `dist`.
