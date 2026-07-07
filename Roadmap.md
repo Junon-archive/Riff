@@ -77,6 +77,13 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-07 (『펑크 리듬』 콘텐츠 착수 — meta.json + Week 1 완성: 오른손 16비트 모터)
+- **커리큘럼 발견 활성화:** `funk_rhythm_2months/meta.json` 신설(3개국어 title/tagline/forWho, topic:"funk-rhythm", level:2, durationMonths:2). 빌드가 자동 발견(총 3개 커리큘럼) — web_app 소스 무수정, meta.json만으로 등록.
+- **Week 1 (오른손 16비트 모터) 전량 작성:** day_1~4 × ko/en/ja(12) + week_1_overview×3 + month_1_overview×3 = 18파일. 교육 축: D1 16비트 "1-e-&-a"·다운/업·멈추지 않는 손 → D2 손목 스냅·뮤트 스크래치 → D3 업다운 밸런스·빈 피킹(rest) → D4 4마디 통합 그루브.
+- **악보(②)**: 전부 `type:"tab"` + `meta.notation:"staff+tab"`(박자 공유). 16분 모터=`sixteenth`+`palm_mute`, 빈 피킹=`rest`(단, string/fret 필수 — 스키마 검증 준수). 색 없는 담백한 리듬(role:"scale")로 '리듬이 주인공'임을 반영.
+- **검증(주차 게이트 통과):** `npm run build` exit 0, **funk totalDays=4**. 12개 day 페이지 전부 staffsvg≥2·검정 누출 0, 빨강 0, ②JSON 블록 ko=en=ja 일치, ① 공백제외 485~501자(≈목표 500), 프론트매터 dayKey/i18nKey 3언어 일치.
+- 다른 커리큘럼·web_app 무수정. funk week_prompt.md는 읽기 전용 입력(미수정).
+
 ### 2026-07-07 (『코드 빌딩』 이론/설명 보강 — 전체 32일 · 3언어 · 토스 톤 심화)
 - **문제:** `chord_building_2months`의 ①이론/설명이 `solo_scale_3months` 대비 짧고(①섹션 실측 공백 제외 평균 ~320자 vs solo ~623자) 토스 특유의 친절함이 옅다는 피드백. 사용자가 보강 범위로 **"전체 32일 · 3언어"** 선택.
 - **작업:** 32일 × 3언어 전 파일의 **①섹션 산문만** 보강. 각 날짜에 토스 톤 4요소(동기 부여 훅·안심 문구·비유·실전 보상)를 녹여 목표 밀도(공백 제외 ~400~500자)로 확장. 산문 외 **JSON/악보/프론트매터/섹션 마커/색 규약은 일절 미변경**.

@@ -1,0 +1,23 @@
+{
+  "id": "funk_rhythm_2months",
+  "title": {
+    "ko": "2개월 펑크 리듬 머신",
+    "en": "2-Month Funk Rhythm Machine",
+    "ja": "2か月ファンク・リズム・マシン"
+  },
+  "tagline": {
+    "ko": "펑크의 8할은 오른손 — 멈추지 않는 16비트 모터로 8주",
+    "en": "80% of funk is the right hand — a nonstop 16th-note motor in 8 weeks",
+    "ja": "ファンクの8割は右手 — 止まらない16ビート・モーターで8週間"
+  },
+  "instrument": "guitar",
+  "topic": "funk-rhythm",
+  "level": 2,
+  "tags": ["funk", "rhythm", "groove", "right-hand", "muting", "comping"],
+  "durationMonths": 2,
+  "forWho": {
+    "ko": "코드는 치는데 왜 내 펑크는 '꿀렁'거리지 않는지 답답한 분께",
+    "en": "For players who can strum chords but wonder why their funk doesn't groove",
+    "ja": "コードは弾けるのに、なぜ自分のファンクはグルーヴしないのか悩む人へ"
+  }
+}
