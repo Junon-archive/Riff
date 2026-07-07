@@ -2,7 +2,7 @@
 
 > 무료 기타 레슨 웹 서비스. 이 문서는 **현재 구현 상황·변경 로그·다음 작업**을 관리하는 단일 대시보드다.
 > 규칙: 작업이 하나 끝날 때마다 이 파일을 갱신한다(`CLAUDE.md` 고정 규칙).
-> 최종 갱신: 2026-07-04 · **라이브: https://guitar-riff.pages.dev**
+> 최종 갱신: 2026-07-07 · **라이브: https://guitar-riff.pages.dev**
 
 ---
 
@@ -34,6 +34,7 @@
 - **전환:** `<ClientRouter/>` View Transitions(부드러운 소프트 내비).
 - **재사용:** SVG 렌더러·CSS 토큰·콘텐츠 JSON/manifest·i18n 91키·storage/progress/nudges/content 로직 그대로 이식.
 - **하이드레이션:** `src/scripts/app.ts`(진도·완료·바텀시트·넛지, `astro:page-load` 재바인딩), `confetti.ts`, `toast.ts`.
+- **오선보 렌더러(VexFlow):** `render/staff.ts` — `meta.notation:"staff"|"staff+tab"|"rhythm"`이면 **오선보+타브 결합(박자 공유)**을 SVG로 생성. **빌드타임 전용**(jsdom devDep) → 클라이언트 JS 0. `renderScore()`가 `meta.notation`으로 분기(그 외/미지정 → 자체 타브 SVG). 역할→색·다크모드는 지판/타브와 동일 계약.
 - **자동 후원:** **월·커리큘럼 완료 시에만** 도네이션 시트 자동(주 완주는 토스트만).
 - **정리:** 구 바닐라 파일(main/router/views)은 `web_app/src/_legacy/`로 이동(빌드 제외).
 - **검증:** `npm run build` 163 페이지 성공, 헤드리스 스모크(내비·하이드레이션·완료·마일스톤 후원·언어전환 진도유지·닉네임·Export) 콘솔 에러 0.
@@ -49,9 +50,9 @@
 - **검증:** `tsc --noEmit` clean, `npm run build` 성공(52 지연청크), 헤드리스 크로미움 스모크 통과.
 
 ### 🟨 다음 후보 (신규 개발)
-- **신규 커리큘럼 추가** — 잽잽이(펑키 리듬)·스트로크 주법 등. 저작 SOP(`00_curriculum_authoring_playbook.md`)대로 `meta.json`+day md 추가 → 빌드만으로 확장(악기 2종+ 되면 필터 칩 자동 노출).
+- **신규 커리큘럼 — 『코드 빌딩 시스템』(2개월/8주)** — 생성용 주차별 프롬프트 준비 완료(`_design_docs/02_curriculum/Chord Building System_2months/`, 표준 스키마로 정합화). 다음: 프롬프트로 콘텐츠 생성 → `meta.json`+day md → 빌드(악기/토픽 2종+ 되면 필터 칩 자동 노출).
 - **타브 재생 기능** — 향후 자체 Web Audio로 릭 재생·속도조절(AlphaTab 미채택 결정, 필요 시 자체 구현).
-- **오선보** — 필요한 커리큘럼 생기면 VexFlow 도입.
+- **오선보 v2(선택)** — 산문 label·technique(H/P/sl/P.M.) 오버레이, 리듬 전용 슬래시 표기. (v1 오선보+타브 결합은 구현 완료 — 위 ✅ 참조.)
 
 ### ⏳ 열린 이슈(비차단)
 - OPEN-6: 프라이버시 경량 분석 도구 선정(방문·완주율 집계).
@@ -75,6 +76,55 @@
 ---
 
 ## 4. 변경 로그 (Changelog)
+
+### 2026-07-07 (신규 커리큘럼 프롬프트 정합화 — 『펑크 리듬』 8주)
+- **생성용 프롬프트 8개**(`funk_rhythm_2months/month_{1,2}/week_{1..8}_prompt.md`)를 **표준 악보 스키마로 재정렬**. 기존 solo_scale·chord_building과 통일성 확보가 목적(『코드 빌딩』 정합화 방식을 그대로 벤치마크).
+  - 리듬 JSON을 비표준(`notation_type:"vexflow_rhythm"`/`bars`/`strokes`/`pos`/`direction`/`time_signature`/`tempo_bpm`)·지판 JSON 비표준(`diagram_type`/`chord_name`/`root_string`/`base_fret`/`interval`/`note`/`muted`) → **표준 스키마**(`id`·`type:"tab"|"fretboard_diagram"`·`meta`·`tab.measures[].notes[]`·`fretboard.dots`·`label`·`role`)로 교체. 빌드 파이프라인·렌더러가 그대로 소비 가능.
+  - **펑크 리듬→표준 매핑 규칙** 신설: 스트로크=단일 대표음(코드 폼은 별도 `fretboard_diagram` 병기), 고스트/뮤트 스크래치·커팅=`technique:"palm_mute"`, 빈 피킹/무음=`rest`, 스타카토=짧은 `duration`+`rest`. 렌더 불가한 **업/다운 피킹 방향·악센트·셔플 필**은 산문으로 설명하되 주목할 자리는 `highlight`(초록)로 표기.
+  - **역할→색**을 `color_legend.md`에 맞춤(근음/코드톤=파랑, 9도 텐션=`color`(노랑), 악센트/주목음=`target`+`highlight`(초록)). `articulation`/`feel`/`tempo_bpm` 등 스키마 밖 필드 금지 명시.
+  - **오선보/리듬**: 원문의 "VexFlow 렌더링용 데이터"(원시 코드) → **표준 `type:"tab"` JSON + `meta.notation:"staff+tab"`(리듬만이면 `"rhythm"`)** 힌트로 변경. 펑크는 리듬이 핵심이라 그루브·컴핑·커팅을 `staff+tab`으로 내 박자를 오선보로 보이게 지시.
+  - 규칙 #5(연습용 예제 릭 최소 2개+연주 안내 한 줄, ③ 실전 블록에 예제 연결)와 ①③④ **시각 자료 적극 삽입** 지침을 8개 전 프롬프트에 반영.
+- 코드/스키마/콘텐츠 변경 없음(프롬프트 문서만). ⚠ 후속 필요: `funk_rhythm_2months/meta.json`(커리큘럼 카드 노출용)이 아직 없어 빌드 발견 대상 아님 — 콘텐츠 착수 시 생성.
+
+### 2026-07-07 (『코드 빌딩』 Week 4 완성 = **Month 1 완성** — 쉘 보이싱)
+- **W4 D1~D4 × 3언어 + Week4 개요** 작성. 교육 축: 5도를 버린 **3줄 쉘 보이싱**(R·3·7). 6현 근음 세트(4·3번 줄=7·3도)·5현 근음 세트(3·2번 줄), 3주차 II-V-I을 전부 쉘로 재연결. 1개월 회고 + 다음 달(텐션·탑노트) 예고.
+- **1개월차(4주) 전량 검증 통과:** `astro check` **0 errors**, `npm run build` **214 페이지**. 코드 **16일** 전부 staffsvg 2·**검정 누출 0**, 3도/7도=target(초록)·근음=파랑, 뮤트 ✕ 정상. EN/JA 파리티·solo 52일 불변 확인.
+- 남은 작업: **Month 2 (Week 5~8, 16일 × 3언어)** — 4현 근음 고음역, 9도 텐션, 탑노트 보이스 리딩, 레코딩 챌린지.
+
+### 2026-07-07 (『코드 빌딩』 Week 3 완성 — II-V-I 보이스 리딩)
+- **W3 D1~D4 × 3언어 + Week3 개요** 작성. 교육 축: 6·5현 근음을 섞어 **Dm7(5)-G7(6)-Cmaj7(5)** II-V-I을 한 프렛 구역에서 최단 연결(보이스 리딩). 가이드톤(3·7도)이 반음씩만 이동, 다른 키(D)로 패턴 이동, 4마디 루프 통합.
+- 새 렌더 패턴 검증: **가이드톤 라인(온음표 + `Dm7-b7(C)` 형식 라벨)**, 3-fretboard II-V-I, root+guide 컴핑. day4 섹션 헤더 `#`→`##` 오타 즉시 교정(빌드 마커 계약).
+- 검증: `npm run build` chord **12일**(W1~W3), 각 day staffsvg 2·검정 누출 0·가이드톤=초록·근음=파랑. solo 52 불변.
+- 남은 작업: **Week 4~8(20일 × 3언어)**. (사용자 지시: Week 3 완료 시 Week 4 자동 진행.)
+
+### 2026-07-07 (『코드 빌딩』 Week 2 완성 — 5현 근음 A폼)
+- **W2 D1~D4 × 3언어 + Week2 개요** 작성. 교육 축: 5현 근음(A폼)에서 **2번 줄=3도 스위치·3번 줄=7도 삼거리(R/7/b7)**로 Maj/m/7/m7/**Maj7** 순환. Maj7 등장·b7 vs 7 반음 대조가 핵심.
+- 각 day 규칙 #5 준수(staff+tab 예제 2 + 연주 안내). 6·1현 뮤트(✕) 렌더 확인.
+- 검증: `npm run build` chord **8일**(W1+W2), 각 day staffsvg 2·검정 누출 0·색 정합. solo 52 불변.
+- 남은 작업: **Week 3~8(24일 × 3언어)**.
+
+### 2026-07-07 (신규 커리큘럼 콘텐츠 착수 — 멀티 커리큘럼 빌드 + 『코드 빌딩』 W1 완성)
+- **`build-content.mjs` 다중 커리큘럼화** — `02_curriculum/*/meta.json` 보유 폴더를 모두 발견해 하나의 `manifest.json`으로 집계(기존 단일 `CURRICULUM_ID` 하드코딩 제거). day 0개 커리큘럼은 스킵. `CURRICULUM_ORDER`로 랜딩 노출 순서.
+- **커리큘럼 폴더 정리** — `Chord Building System_2months` → **`chord_building_2months`**(URL 안전 id). 프롬프트 8종 동반 이동.
+- **프롬프트 절대 규칙 #5 추가**(사용자 지시) — 각 day 최소 2개의 **연주용 예제 릭/컴핑**(`type:"tab"`)을 포함, 예제 아래 연주 안내 한 줄, ③ 실전 반주 블록에서 그 예제를 실제 소재로 지정.
+- **콘텐츠 — Week 1 완성(3언어)** — `chord_building_2months/meta.json` + Month1·Week1 overview + **W1 D1~D4 전부 3언어**(ko/en/ja). solo 포맷 준수(프론트매터·①②③④·JSON 스코어). 각 day = 지판 1 + **staff+tab 예제 2**(규칙 #5: 연주용 릭/컴핑 + 연주 안내 한 줄, ③ 실전 반주에 예제 연결). 교육 축: 6현 근음 E폼에서 3번 줄=3도(밝/어둠)·4번 줄=7도(긴장) 두 스위치로 Maj/m/7/m7 순환.
+- **검증** — `npm run build` 성공. 코드 W1 4개 day 각각 staffsvg 2·fretboard 1, **검정 누출 0**, 3도/변화음=target(초록)·근음/코드톤=파랑으로 산문 색과 정합. 기존 solo 52일 불변.
+- 남은 작업: **Week 2~8 전체(28일 × 3언어) + 주/월 개요** 순차 작성(W1이 포맷·품질 레퍼런스).
+
+### 2026-07-07 (VexFlow 오선보+타브 렌더러 구현)
+- **`web_app/src/render/staff.ts` 신규** — `meta.notation:"staff"|"staff+tab"|"rhythm"`인 `type:"tab"` 악보를 **오선보+타브 결합(박자 공유)** SVG로 렌더. VexFlow `Stave`+`TabStave`+`StaveConnector`, 두 `Voice` 공동 포맷. 음정=`string`+`fret`+`tuning`, 박자=`duration`(빔·플래그·점). 역할→색·`currentColor` 다크모드, `class="staffsvg"` 반응형.
+- **빌드타임 전용**: `vexflow`(dep) + `jsdom`(devDep, canvas 텍스트측정 스텁)로 Node 빌드 중 SVG 생성 → **클라이언트 JS 0**. `astro.config` `vite.ssr.external:['jsdom']`.
+- **디스패치**: `render/index.ts`에 `renderScore(score)` 추가(type·`meta.notation` 분기). `LessonView.astro`가 이를 호출(구 `renderFretboard`/`renderTab` 직접호출 대체).
+- **스키마/타입 정식화**: `fretboard_score_schema.json`·`types/score.ts`에 `meta.notation` enum 추가, `build-content.mjs` 검증에 `NOTATIONS` 추가.
+- 검증: `astro check` 0 errors, `npm run build` 163 페이지 성공, 3개 모드(staff/staff+tab/rhythm)+빈 악보 스모크 통과(검정 누출 0·역할색 정상). 기존 solo 커리큘럼은 자체 타브 SVG 그대로.
+
+### 2026-07-07 (신규 커리큘럼 프롬프트 정합화 — 『코드 빌딩 시스템』 8주)
+- **생성용 프롬프트 8개**(`Chord Building System_2months/month_{1,2}/week_{1..8}_prompt.md`)를 **표준 악보 스키마로 재정렬**. 기존 solo_scale와 통일성 확보가 목적.
+  - 지판 JSON을 비표준(`diagram_type`/`chord_name`/`root_string`/`base_fret`/`interval`/`note`/`top_note`) → **표준 스키마**(`id`·`type:"fretboard_diagram"`·`meta`·`fretboard.dots`·`label`·`role`·`barre`)로 교체. 렌더러(`fretboard.ts`/`tab.ts`)·`fretboard_score_schema.json`이 그대로 소비 가능.
+  - **역할→색**을 `color_legend.md`에 맞춤(근음/코드톤=파랑, 텐션=`color`(노랑), 변화음=`target`+`highlight`(초록)). **탑노트**는 없던 `top_note` 필드 대신 `highlight`로 표기.
+  - **오선보/리듬**: 원문의 "VexFlow 렌더링용 데이터 출력"(원시 코드) → **표준 `type:"tab"` JSON + `meta.notation` 힌트**로 변경(데이터-not-코드 원칙 유지). notation 값: `"staff+tab"`(오선보+타브 결합, **박자 공유**)·`"staff"`(오선보만)·`"rhythm"`(리듬 슬래시)·`"tab"`(기본). 멜로디·가이드톤·탑노트 라인은 `"staff+tab"`으로 설정해 음정과 박자를 동시에 보여준다. 실제 오선보 렌더링(VexFlow)은 후속 코드 작업.
+  - ①이론·③연습·④팁 **어디서든 시각 자료 적극 삽입** 지침 강화.
+- 코드/스키마/콘텐츠 변경 없음(프롬프트 문서만). 커리큘럼 콘텐츠 생성은 별도 단계.
 
 ### 2026-07-03 (넛지 다듬기)
 - **응원 토스트 지속시간** 4.2초 → **7초** + 탭하면 닫힘(읽기 쉽게).

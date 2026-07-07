@@ -33,14 +33,14 @@
 | | |
 |---|---|
 | **프레임워크** | Astro + TypeScript (정적 출력, 런타임 프레임워크 없음) |
-| **렌더링** | 자체 SVG 지판/타브 렌더러 (표준 악보 JSON 스키마 소비) |
+| **렌더링** | 자체 SVG 지판/타브 렌더러 + **VexFlow**(오선보+타브 결합·박자 공유, 빌드타임 SVG·클라이언트 JS 0) — 표준 악보 JSON 스키마 소비 |
 | **스타일** | CSS 변수 디자인 토큰(Toss 팔레트), 다크모드, 시스템 폰트(외부 CDN 0) |
 | **상태/진도** | `localStorage` 단일 소스 + 인메모리 폴백 (서버 전송 없음) |
 | **i18n** | 자체 경량 사전(`ko/en/ja.json`), 언어별 정적 라우트 + hreflang |
 | **전환** | Astro View Transitions (`<ClientRouter/>`) |
 | **배포** | Cloudflare Pages (GitHub 연동 자동배포) |
 
-> 외부 런타임 의존성 0. AlphaTab/VexFlow 미채택(향후 재생 필요 시 자체 Web Audio, 오선보 필요 시 VexFlow 검토).
+> 클라이언트 런타임 의존성 0. 오선보는 VexFlow로 렌더하되 **빌드 시점에만** 동작해 브라우저로는 순수 SVG만 나간다. AlphaTab 미채택(재생 필요 시 자체 Web Audio).
 
 ## 저장소 구조
 

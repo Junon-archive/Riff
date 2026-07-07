@@ -18,7 +18,7 @@
 - **라우팅:** ~~React Router~~ → ~~해시 라우팅~~ → **Astro 파일 기반 정적 라우팅**. 레슨별 실제 HTML(SEO). 언어별 정적 라우트(ko 무접두, `/en`·`/ja`) + hreflang.
 - **i18n:** ~~react-i18next~~ → **자체 경량 사전 로더** + `ko/en/ja.json`(14 네임스페이스·91키). 목업 kr/jp는 **ko/ja로 정규화**. Astro 에서는 빌드 타임 `translate(lang, key)`로 언어별 페이지에 직접 SSR.
 - **상태/진도:** 외부 상태관리 없이 `localStorage` 래퍼 + **인메모리 폴백**(React Context 불필요).
-- **악보/지판 렌더링:** 지판·타브 **둘 다 자체 SVG 렌더러**(`fretboard_score_schema.json` 소비). ~~AlphaTab/VexFlow~~ 미채택.
+- **악보/지판 렌더링:** 지판·기본 타브 **자체 SVG 렌더러**(`fretboard_score_schema.json` 소비). **오선보(+타브 결합, 박자 공유)는 VexFlow 채택**(2026-07-07, `render/staff.ts`, `meta.notation`) — 단 **빌드타임 전용(jsdom devDep)** 이라 클라이언트 JS 0. ~~AlphaTab~~ 미채택.
 - **애니메이션:** 완료 팡파르 = **자체 canvas 컨페티**(목업 구현 재사용, 의존성 0). ~~canvas-confetti~~ 불필요.
 - **배포:** **Cloudflare Pages**(1순위) / GitHub Pages(대안). 기본 도메인 `*.pages.dev` + SPA fallback(`_redirects`). *(유지)*
 
@@ -63,7 +63,7 @@ src/
 - 커스텀 도메인 없이 `*.pages.dev`로 시작. (추후 도메인 연결 여지)
 
 ## 6. 결정 대기 항목 (M2에서 확정)
-- [x] 타브 렌더러: ~~AlphaTab vs VexFlow~~ → **자체 SVG 렌더러 확정**(둘 다 미채택). 근거·계약: `technical_spec.md` §2.3, §5.
+- [x] 타브 렌더러: ~~AlphaTab vs VexFlow~~ → **지판·기본 타브 자체 SVG 확정**. 오선보(+타브 결합)만 **VexFlow 채택**(빌드타임 전용). 근거·계약: `technical_spec.md` §2.3, §5.4.
 - [x] Tailwind 채택 여부 vs 순수 CSS 토큰 → **CSS 변수 토큰 확정**(Tailwind 미채택).
 - [ ] 경량 분석 도구(프라이버시 준수) 선정 — `technical_spec.md` OPEN-6에서 추적.
 

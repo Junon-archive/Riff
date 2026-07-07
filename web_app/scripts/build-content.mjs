@@ -27,10 +27,10 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const WEB_APP = resolve(__dirname, '..');
 const REPO_ROOT = resolve(WEB_APP, '..');
 
-const CURRICULUM_ID = 'solo_scale_3months';
-const SRC_DIR = join(REPO_ROOT, '_design_docs', '02_curriculum', CURRICULUM_ID);
+const CURRICULA_ROOT = join(REPO_ROOT, '_design_docs', '02_curriculum');
 const OUT_ROOT = join(WEB_APP, 'src', 'content');
-const OUT_DIR = join(OUT_ROOT, CURRICULUM_ID);
+// 랜딩 노출/정렬 우선순위(먼저 나오는 것이 앞 카드). 여기 없는 커리큘럼은 이름순으로 뒤에 붙는다.
+const CURRICULUM_ORDER = ['solo_scale_3months', 'chord_building_2months'];
 
 const LANGS = ['ko', 'en', 'ja'];
 const SECTION_MARKERS = ['①', '②', '③', '④'];
@@ -116,6 +116,7 @@ function extractJsonBlocks(md) {
    --------------------------------------------------------------- */
 const SCORE_TYPES = new Set(['fretboard_diagram', 'tab', 'scale_shape']);
 const DURATIONS = new Set(['whole', 'half', 'quarter', 'eighth', 'sixteenth']);
+const NOTATIONS = new Set(['tab', 'staff', 'staff+tab', 'rhythm']);
 
 function validateScore(score, ctx) {
   const at = (m) => fail(`악보 스키마 위반 [${ctx}]: ${m}`);
@@ -125,6 +126,8 @@ function validateScore(score, ctx) {
   if (!score.meta || typeof score.meta !== 'object') at('meta 누락');
   if (typeof score.meta.title !== 'string') at('meta.title 누락');
   if (score.meta.stringCount !== 6) at('meta.stringCount 는 6 고정');
+  if (score.meta.notation !== undefined && !NOTATIONS.has(score.meta.notation))
+    at(`meta.notation 부정확: ${score.meta.notation}`);
 
   if (score.type === 'tab') {
     if (!score.tab || !Array.isArray(score.tab.measures)) at('tab.measures 누락');
@@ -311,14 +314,16 @@ function readIfExists(path) {
 /* ---------------------------------------------------------------
    메인
    --------------------------------------------------------------- */
-function main() {
+function buildCurriculum(curriculumId) {
+  const SRC_DIR = join(CURRICULA_ROOT, curriculumId);
+  const OUT_DIR = join(OUT_ROOT, curriculumId);
   if (!existsSync(SRC_DIR)) fail(`커리큘럼 소스 없음: ${SRC_DIR}`);
 
   // 출력 디렉터리 초기화(재생성)
   if (existsSync(OUT_DIR)) rmSync(OUT_DIR, { recursive: true, force: true });
   mkdirSync(OUT_DIR, { recursive: true });
 
-  console.log(`\n▶ build-content: ${CURRICULUM_ID}`);
+  console.log(`\n▶ build-content: ${curriculumId}`);
 
   // 월 디렉터리 수집(숫자 정렬)
   const monthDirs = readdirSync(SRC_DIR)
@@ -382,7 +387,7 @@ function main() {
 
       const manifestDays = [];
       for (const dayNum of dayNums) {
-        const parsed = buildDay(weekPath, dayNum, { monthNum, weekNum });
+        const parsed = buildDay(weekPath, dayNum, { monthNum, weekNum }, curriculumId);
         dayFileCount++;
         allDayKeys.push(parsed.day.dayKey);
         manifestDays.push({
@@ -419,7 +424,7 @@ function main() {
   const curTitles = {};
   const curOverview = {};
   const curKoRaw = readIfExists(join(SRC_DIR, 'overview.md'));
-  const curKo = curKoRaw ? parseOverview(curKoRaw) : { title: CURRICULUM_ID, html: '' };
+  const curKo = curKoRaw ? parseOverview(curKoRaw) : { title: curriculumId, html: '' };
   for (const lang of LANGS) {
     const raw = readIfExists(join(SRC_DIR, `overview.${lang}.md`));
     if (raw) {
@@ -445,49 +450,87 @@ function main() {
     }
   }
 
+  if (allDayKeys.length !== dayFileCount) fail('dayKey 수와 파일 수 불일치');
+  if (allDayKeys.length === 0) {
+    warn(`day 파일이 없어 스킵: ${curriculumId}`);
+    return null;
+  }
+  console.log(`  ✔ ${curriculumId}: day JSON ${dayFileCount}개 (totalDays=${allDayKeys.length})`);
+
+  return {
+    id: curriculumId,
+    titles: curTitles,
+    taglines: curMeta?.tagline ?? null,
+    instrument: curMeta?.instrument ?? null,
+    topic: curMeta?.topic ?? null,
+    level: curMeta?.level ?? null,
+    tags: curMeta?.tags ?? [],
+    // 분류 스킴(등급 라벨 금지, "이런 분께" + 기간 배지 + 악기 필터로 대체):
+    // forWho = 카드에 노출되는 3언어 한 줄("이런 분께"). durationMonths = 기간 메타 배지.
+    // level(정수)은 정렬용 내부 값으로만 남기고 화면엔 절대 노출하지 않는다.
+    forWho: curMeta?.forWho ?? null,
+    durationMonths: curMeta?.durationMonths ?? null,
+    // 주의: 커리큘럼 최상위 overview.md 는 내부 설계 문서(트래킹 표·메타)라 사용자 노출 금지 →
+    // manifest 에 html 을 싣지 않는다. 카드 소개는 taglines/forWho 로 대체.
+    totalDays: allDayKeys.length,
+    dayKeys: allDayKeys,
+    months: manifestMonths,
+  };
+}
+
+/* ---------------------------------------------------------------
+   커리큘럼 자동 발견: 02_curriculum 하위에서 meta.json 을 가진 디렉터리.
+   CURRICULUM_ORDER 우선, 그 외 이름순.
+   --------------------------------------------------------------- */
+function discoverCurricula() {
+  const dirs = readdirSync(CURRICULA_ROOT, { withFileTypes: true })
+    .filter((d) => d.isDirectory() && existsSync(join(CURRICULA_ROOT, d.name, 'meta.json')))
+    .map((d) => d.name);
+  const rank = (id) => {
+    const i = CURRICULUM_ORDER.indexOf(id);
+    return i === -1 ? CURRICULUM_ORDER.length : i;
+  };
+  return dirs.sort((a, b) => rank(a) - rank(b) || a.localeCompare(b));
+}
+
+/* ---------------------------------------------------------------
+   메인: 모든 커리큘럼을 빌드해 manifest.json 하나로 집계.
+   --------------------------------------------------------------- */
+function main() {
+  if (existsSync(OUT_ROOT)) rmSync(OUT_ROOT, { recursive: true, force: true });
+  mkdirSync(OUT_ROOT, { recursive: true });
+
+  const ids = discoverCurricula();
+  if (ids.length === 0) fail(`커리큘럼(meta.json 보유)이 없음: ${CURRICULA_ROOT}`);
+  console.log(`▶ build-content: ${ids.length}개 커리큘럼 발견 — ${ids.join(', ')}`);
+
+  const curricula = [];
+  for (const id of ids) {
+    const cur = buildCurriculum(id);
+    if (cur) curricula.push(cur);
+  }
+  if (curricula.length === 0) fail('빌드된 커리큘럼이 없음(모두 day 0)');
+
   const manifest = {
     schemaVersion: 1,
     generatedAt: new Date().toISOString(),
-    curricula: [
-      {
-        id: CURRICULUM_ID,
-        titles: curTitles,
-        taglines: curMeta?.tagline ?? null,
-        instrument: curMeta?.instrument ?? null,
-        topic: curMeta?.topic ?? null,
-        level: curMeta?.level ?? null,
-        tags: curMeta?.tags ?? [],
-        // 분류 스킴(등급 라벨 금지, "이런 분께" + 기간 배지 + 악기 필터로 대체):
-        // forWho = 카드에 노출되는 3언어 한 줄("이런 분께"). durationMonths = 기간 메타 배지.
-        // level(정수)은 정렬용 내부 값으로만 남기고 화면엔 절대 노출하지 않는다.
-        forWho: curMeta?.forWho ?? null,
-        durationMonths: curMeta?.durationMonths ?? null,
-        // 주의: 커리큘럼 최상위 overview.md 는 내부 설계 문서(트래킹 표·메타)라 사용자 노출 금지 →
-        // manifest 에 html 을 싣지 않는다. 카드 소개는 taglines/forWho 로 대체.
-        totalDays: allDayKeys.length,
-        dayKeys: allDayKeys,
-        months: manifestMonths,
-      },
-    ],
+    curricula,
   };
-
   writeFileSync(
     join(OUT_ROOT, 'manifest.json'),
     JSON.stringify(manifest, null, 2) + '\n',
     'utf8',
   );
-
   console.log(
-    `✔ 완료: day JSON ${dayFileCount}개 + manifest.json (totalDays=${allDayKeys.length})` +
+    `\n✔ 완료: 커리큘럼 ${curricula.length}개 · manifest.json` +
       (warnCount ? `  · 경고 ${warnCount}건` : ''),
   );
-  if (allDayKeys.length !== dayFileCount) fail('dayKey 수와 파일 수 불일치');
 }
 
 /* ---------------------------------------------------------------
    한 Day 를 3언어에서 조립
    --------------------------------------------------------------- */
-function buildDay(weekPath, dayNum, loc) {
+function buildDay(weekPath, dayNum, loc, curriculumId) {
   const files = {};
   const fmByLang = {};
   const sectionsByLang = {};
@@ -553,7 +596,7 @@ function buildDay(weekPath, dayNum, loc) {
 
   const day = {
     dayKey: koFm.dayKey,
-    curriculumId: CURRICULUM_ID,
+    curriculumId,
     i18nKey: koFm.i18nKey || `lesson.${koFm.dayKey}`,
     estMinutes,
     month: loc.monthNum,

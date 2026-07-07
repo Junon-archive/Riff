@@ -81,7 +81,7 @@
   - 외부 전문 AI(GPT-4o 등)로 **음 좌표·프렛·스트링 번호**를 표준 JSON 스키마로 추출(`03_data_schema/fretboard_score_schema.json`).
   - 프론트엔드가 이 JSON을 받아 **SVG(지판 다이어그램)** 및 **VexFlow / AlphaTab(타브 악보)** 로 정확히 렌더링.
 - 이 방식의 이점: 픽셀이 아니라 데이터라서 **검증 가능**하고, 다국어/다크모드/반응형에 자동 대응된다.
-> ✅ **구현 확정:** 지판·타브 **둘 다 자체 SVG 렌더러**로 구현(AlphaTab/VexFlow 미채택). 표준 스키마 = `03_data_schema/fretboard_score_schema.json`, 역할→색 = `03_data_schema/color_legend.md`. 향후 재생 필요 시 자체 Web Audio, 오선보 필요 시 VexFlow.
+> ✅ **구현 확정:** 지판·기본 타브 **자체 SVG 렌더러**. **오선보(+타브 결합, 박자 공유)는 VexFlow 채택**(2026-07-07, `render/staff.ts`, `meta.notation:"staff"|"staff+tab"|"rhythm"`) — 빌드타임 전용이라 클라이언트 JS 0. 표준 스키마 = `03_data_schema/fretboard_score_schema.json`, 역할→색 = `03_data_schema/color_legend.md`. AlphaTab 미채택(재생 필요 시 자체 Web Audio).
 
 ### 3.6 다국어 지원 (i18n)
 - 지원 언어: **한국어(ko) / 영어(en) / 일본어(ja)**.

@@ -1,0 +1,23 @@
+{
+  "id": "chord_building_2months",
+  "title": {
+    "ko": "2개월 코드 빌딩 시스템",
+    "en": "2-Month Chord Building System",
+    "ja": "2か月コードビルディング・システム"
+  },
+  "tagline": {
+    "ko": "코드는 외우지 말고 조립하세요 — 근음 위 인터벌로 8주",
+    "en": "Don't memorize chords — build them. Intervals over a root, in 8 weeks",
+    "ja": "コードは暗記じゃなく組み立て — ルート上のインターバルで8週間"
+  },
+  "instrument": "guitar",
+  "topic": "chord-comping",
+  "level": 2,
+  "tags": ["chord", "voicing", "comping", "interval", "intermediate"],
+  "durationMonths": 2,
+  "forWho": {
+    "ko": "코드를 잡을 순 있지만, 왜 그렇게 잡는지는 모르는 분께",
+    "en": "For players who can grab chords but don't know why they're shaped that way",
+    "ja": "コードは押さえられるけど、なぜその形なのか分からない人へ"
+  }
+}

@@ -21,7 +21,7 @@ import {
   loadDayContent,
   parseDayKey,
 } from '../lib/content';
-import { renderFretboard, renderTab } from '../render';
+import { renderScore } from '../render';
 import { lessonPath, localize } from '../lib/urls';
 import { cleanTitle } from '../views/textUtils';
 import type { Lang } from '../config';
@@ -92,15 +92,12 @@ const monthDayKeys = location.month.weeks.flatMap((w) => w.days).map((d) => d.da
       <div class="prose" id="lessonVisualProse" set:html={prose.visual}></div>
 
       <div id="scoresMount">
-        {content.scores.map((score) => {
-          const isTab = score.type === 'tab';
-          return (
-            <figure class="render-area">
-              <div class="render-mount" set:html={isTab ? renderTab(score) : renderFretboard(score)}></div>
-              <figcaption class="render-cap">{score.meta.title}</figcaption>
-            </figure>
-          );
-        })}
+        {content.scores.map((score) => (
+          <figure class="render-area">
+            <div class="render-mount" set:html={renderScore(score)}></div>
+            <figcaption class="render-cap">{score.meta.title}</figcaption>
+          </figure>
+        ))}
       </div>
     </section>
 
@@ -300,7 +297,8 @@ const monthDayKeys = location.month.weeks.flatMap((w) => w.days).map((d) => d.da
   }
   .render-area + .render-area { margin-top: 32px; }
   .render-mount :global(.fretboard),
-  .render-mount :global(.tabsvg) {
+  .render-mount :global(.tabsvg),
+  .render-mount :global(.staffsvg) {
     width: 100%;
     height: auto;
     display: block;

@@ -30,7 +30,12 @@
         },
         "key": { "type": "string", "description": "조성/스케일 (예: A minor, A Dorian, C major)" },
         "scale": { "type": "string", "description": "스케일/모드명(선택, 예: A Mixolydian) — 구 root/scale 필드 대체" },
-        "tempoBpm": { "type": "integer", "minimum": 20, "maximum": 300, "description": "구 tempo/tempo_bpm 통일 필드" }
+        "tempoBpm": { "type": "integer", "minimum": 20, "maximum": 300, "description": "구 tempo/tempo_bpm 통일 필드" },
+        "notation": {
+          "type": "string",
+          "enum": ["tab", "staff", "staff+tab", "rhythm"],
+          "description": "type=tab 렌더 힌트(선택). 미지정/'tab'=자체 타브 SVG, 'staff'=오선보만, 'staff+tab'=오선보+타브 결합(박자 공유, VexFlow render/staff.ts), 'rhythm'=리듬 컴핑(현재 staff+tab 로 렌더). fretboard_diagram/scale_shape 에는 영향 없음."
+        }
       }
     },
 

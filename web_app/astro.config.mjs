@@ -28,4 +28,9 @@ export default defineConfig({
       prefixDefaultLocale: false,
     },
   },
+  vite: {
+    // 오선보 렌더러(render/staff.ts)는 빌드타임에만 jsdom 을 쓴다(서버 전용).
+    // Vite SSR 번들링 대신 Node 로 외부화해 빌드 안정성 확보(클라이언트로는 나가지 않음).
+    ssr: { external: ['jsdom'] },
+  },
 });

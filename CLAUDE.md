@@ -21,7 +21,7 @@
 - **확정·운영 중: Astro + TypeScript**(정적 출력, 런타임 프레임워크 없음), 자체 SVG 지판/타브 렌더러, 파일 기반 정적 라우팅(언어별 페이지+hreflang), View Transitions, `localStorage` 상태.
 - **배포: Cloudflare Pages(GitHub 연동 자동배포) → https://guitar-riff.pages.dev.**
 - 콘텐츠 파이프라인: `_design_docs` day/overview md → `scripts/build-content.mjs` → `src/content/*.json`+`manifest.json` → Astro 빌드.
-- AlphaTab/VexFlow 미채택(향후: 재생 필요 시 자체 Web Audio, 오선보 필요 시 VexFlow).
+- 악보 렌더: 지판·기본 타브 = **자체 SVG**(`render/fretboard.ts`·`tab.ts`). **오선보(+타브 결합, 박자 공유) = VexFlow 채택**(`render/staff.ts`, `meta.notation:"staff"|"staff+tab"|"rhythm"`). VexFlow는 **빌드타임에만**(jsdom devDep) SVG 생성 → 클라이언트 JS 0. `renderScore()`가 `meta.notation`으로 분기. AlphaTab 미채택(재생 필요 시 자체 Web Audio).
 - 상세 SSOT: `web_app/docs/technical_spec.md`(§8-A Astro)·`design_spec.md`, `_design_docs/01_architecture/tech_stack.md`.
 
 ## 저장소 · 배포

@@ -51,6 +51,12 @@ export interface ScoreMeta {
   scale?: string;
   /** 20~300 */
   tempoBpm?: number;
+  /**
+   * type=tab 렌더 힌트. 미지정/'tab'=자체 타브 SVG, 'staff'=오선보만,
+   * 'staff+tab'=오선보+타브 결합(박자 공유, VexFlow), 'rhythm'=리듬 컴핑(현재 staff+tab 로 렌더).
+   * fretboard_diagram/scale_shape 에는 영향 없음.
+   */
+  notation?: 'tab' | 'staff' | 'staff+tab' | 'rhythm';
 }
 
 /** 지판 다이어그램의 짚는 음(dot). string 1=고음e … 6=저음E, fret 0=개방현. */
