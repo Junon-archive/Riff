@@ -77,6 +77,12 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-07 (『펑크 리듬』 Week 2 완성 — 왼손 고스트 노트)
+- **Week 2 (왼손 고스트 노트) 전량 작성:** day_1~4 × 3언어(12) + week_2_overview×3 = 15파일. 교육 축: D1 고스트=힘 뺀 '퍽'·실제음 대비 → D2 고스트 연속(하이햇 카펫) → D3 실제음+고스트 섞기(같은 자리 압력 온·오프) → D4 실제음(스네어)+고스트(하이햇) 교대 그루브.
+- **소리 재료:** 2·3번 줄 고음 E 스탭(3현 R=E4·2현 3도=G#4, 나머지 뮤트) — 같은 자리에서 왼손 압력만으로 실제음/고스트 전환. 정식 E9 폼은 Week 4에서 공개(선반영 회피). D3·D4에 `fretboard_diagram` 병기(day당 JSON 3블록).
+- **검증(게이트 통과):** build exit 0, **funk totalDays=8**. 12페이지 staffsvg≥2·검정 0, 빨강 0, ②JSON ko=en=ja 일치(d1·d2=2, d3·d4=3), ① 480~491자, 프론트매터 3언어 일치.
+- 타 커리큘럼·web_app·prompt 무수정.
+
 ### 2026-07-07 (『펑크 리듬』 콘텐츠 착수 — meta.json + Week 1 완성: 오른손 16비트 모터)
 - **커리큘럼 발견 활성화:** `funk_rhythm_2months/meta.json` 신설(3개국어 title/tagline/forWho, topic:"funk-rhythm", level:2, durationMonths:2). 빌드가 자동 발견(총 3개 커리큘럼) — web_app 소스 무수정, meta.json만으로 등록.
 - **Week 1 (오른손 16비트 모터) 전량 작성:** day_1~4 × ko/en/ja(12) + week_1_overview×3 + month_1_overview×3 = 18파일. 교육 축: D1 16비트 "1-e-&-a"·다운/업·멈추지 않는 손 → D2 손목 스냅·뮤트 스크래치 → D3 업다운 밸런스·빈 피킹(rest) → D4 4마디 통합 그루브.
