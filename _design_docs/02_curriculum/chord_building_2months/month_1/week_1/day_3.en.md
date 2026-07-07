@@ -9,11 +9,11 @@ i18nKey: "lesson.m1.w1.d3"
 
 ## ① Theory
 
-Through yesterday, the 3rd split bright (major) from dark (minor). Today we handle the **7th** — specifically the **b7 (minor 7th).** Add one b7 to a major chord and you get a **dominant 7 (e.g., G7).**
+Through yesterday, the 3rd split bright (major) from dark (minor). Today we handle a new axis, the **7th** — specifically the **b7 (minor 7th).** Add one b7 to a major chord and you get a **dominant 7 (e.g., G7).** The name sounds grand, but the job is the same as yesterday: just laying one note on.
 
-The essence of a dominant 7 is, in a word, **tension.** Unlike a major chord that just sits there, once the b7 comes in there's a pull — "I want to go somewhere, I want to resolve." That wriggling feel in blues, funk, and jazz all comes from this b7.
+The essence of a dominant 7 is, in a word, **tension.** Unlike a major chord that sits there comfortably, once the b7 comes in there's a pull — "I want to go somewhere, I want to resolve fast." That wriggling blues-guitar feel, the stickiness of funk, the thrill of jazz — it all comes from this one b7. Isn't that wild? One note plants a "want to go" into the chord.
 
-On the fretboard, lower yesterday's G major **4th string, fret 5 (R=G)** to **fret 3 (b7=F)** and you have G7 — leaving the 3rd (3rd string, fret 4, B) alone. So this week's changes are exactly two axes — **3rd string = the 3rd (bright/dark) switch, 4th string = the 7th (tension) switch.**
+On the fretboard, lower yesterday's G major **4th string, fret 5 (R=G)** to **fret 3 (b7=F)** and you have G7 — leaving the 3rd (3rd string, fret 4, B) alone, moving only the 4th string two frets down. Now this week's picture snaps into focus — **3rd string = the 3rd (bright/dark) switch, 4th string = the 7th (tension) switch.** Just two strings, two switches. Tomorrow you'll combine them to make four chords at will. Today, just lock in this one 4th-string switch.
 
 ## ② Visuals
 

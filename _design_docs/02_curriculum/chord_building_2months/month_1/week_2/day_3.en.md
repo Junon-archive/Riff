@@ -9,15 +9,15 @@ i18nKey: "lesson.m1.w2.d3"
 
 ## ① Theory
 
-Yesterday you learned the two switches (2nd-string 3rd, 3rd-string 7th). First lower both to complete **Cm7** (b3 + b7), then invite today's new guest, **Maj7.**
+Yesterday you learned the two switches (2nd-string 3rd, 3rd-string 7th). Today, first lower both to complete **Cm7** (b3 + b7), then invite this week's new guest, **Maj7.** The names look confusingly alike, right? Amazingly, the spots are just one fret apart.
 
-The key is the **3rd string** — this string is the 7th's "three-way":
+It's all on the **3rd string** — this string is the 7th's "three-way":
 
 - **3rd string, fret 5 = R** (octave root) → plain major/minor
 - **3rd string, fret 4 = 7** (major 7th) → **Maj7**
 - **3rd string, fret 3 = b7** (minor 7th) → **dominant 7**
 
-So **the b7 (fret 3) and the Maj7's 7 (fret 4) are exactly one fret — a half step — apart.** Yet that half step makes completely different emotions. The b7 (dominant) is tension that "wants to resolve fast"; the Maj7's 7 is a "floating, dreamy, sophisticated" unfinished. That wistful color of jazz and city-pop is exactly this Maj7. Today you place the two side by side on the 3rd string and tell them apart by ear.
+So **the b7 (fret 3) and the Maj7's 7 (fret 4) are exactly one fret — a half step — apart.** Yet that half step makes completely different emotions. The b7 (dominant) is an antsy tension that "wants to resolve fast"; the Maj7's 7 is a "floating, dreamy, sophisticated" unfinished. City-pop's wistfulness, that hazy color of a jazz ballad — it all comes from this one Maj7. If the half-step difference sounds subtle at first, that's fine. Today you place the two side by side on the 3rd string and lock in, by ear, the emotional difference that one half step makes.
 
 ## ② Visuals
 

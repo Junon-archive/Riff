@@ -13,7 +13,7 @@ Yesterday you saw the ii–V–I concept. Today you actually connect **Dm7 (5th)
 
 **① Root-string crossing.** Dm7's root is on the 5th string, G7's on the 6th, Cmaj7's back on the 5th. Alternating 6th/5th-string chords like this keeps your hand off the neck-running.
 
-**② Guide tones move a half step.** Yesterday on the 3rd string, 7th→3rd→7th barely moved (5→4→4). Today, see **another guide-tone line.** On the 2nd string, Dm7's 3rd (F) → G7's 7th (F) → Cmaj7's 3rd (E): **frets 6→6→5.** F stays, then drops a half step to E. Two guide-tone lines (3rd & 2nd strings) sliding almost in place at once — that's the reality of voice leading.
+**② Guide tones move a half step.** Yesterday on the 3rd string, 7th→3rd→7th barely moved (5→4→4). Today, see **another guide-tone line.** On the 2nd string, Dm7's 3rd (F) → G7's 7th (F) → Cmaj7's 3rd (E): **frets 6→6→5.** F stays, then drops a half step to E. Two guide-tone lines (3rd & 2nd strings) sliding almost in place at once — that's the reality of voice leading. Isn't that something? Three whole chords change, yet the notes singing on top stay nearly glued in place. Get this feel into your hands and any progression turns smooth.
 
 ## ② Visuals
 

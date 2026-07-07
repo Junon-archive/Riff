@@ -9,16 +9,16 @@ i18nKey: "lesson.m1.w2.d1"
 
 ## ① Theory
 
-All last week the root sat on the **6th string.** This week we move that home to the **5th string.** Not one rule changes — it's still "stack the 3rd and 5th over the root." But when the root moves to another string, the 3rd and 5th move to new spots too, so today is about learning that new map.
+All last week the root sat on the **6th string.** This week, why move that home to the **5th string?** Because freeing up just one root string opens the whole neck. Relax — not one rule changes. It's still "stack the 3rd and 5th over the root." But when the root moves to another string, the 3rd and 5th follow to new spots too, so today is about learning that new map.
 
-Our example is **C major (A-form)** with the root on the 5th string, 3rd fret. Broken down by interval, the fretted spots are:
+Our example is **C major (A-form)** with the root on the 5th string, 3rd fret. Broken down by interval, one spot at a time:
 
 - **R (root)** — 5th string, fret 3 (C). This week's new home.
 - **5 (5th)** — 4th string, fret 5 (G). The string just above the root.
 - **R (root)** — 3rd string, fret 5 (C). The octave root.
 - **3 (3rd)** — 2nd string, fret 5 (E). Today's expression note (green).
 
-And **the 6th string is unused.** The key A-form habit is **killing the 6th string firmly.** If a string lower than the root leaks through, the chord blurs. Mute it with a light thumb over the top, or with the tip of your root finger touching the 6th string.
+And **the 6th string is unused.** Here a new A-form habit is born — **killing the 6th string firmly.** If a string lower than the root leaks through, the chord turns muddy. Mute it with a light thumb over the top, or with the tip of your root finger touching the 6th string. It feels like one more thing to mind at first, but within a few days your hand does it on its own.
 
 ## ② Visuals
 

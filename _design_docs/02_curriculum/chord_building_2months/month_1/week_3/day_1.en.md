@@ -14,7 +14,7 @@ Half the songs in the world stand on one chord progression: **ii–V–I.** In C
 The problem is that beginners **jump** their hand across the neck to play it — over there for Dm7, here for G7, over there again for Cmaj7. The changes stutter. Pros don't. Their secret is twofold:
 
 1. **They choose the root string.** By **crossing** the 6th-string-root and 5th-string-root chords from the last two weeks, they tie the hand to one fret region. E.g., Dm7 (5th) → G7 (6th) → Cmaj7 (5th). The root travels across the 5th, 6th, and 5th strings, but the hand stays nearly in place.
-2. **The guide tones (3rd & 7th) move only a half step.** When chords change, only the 3rd and 7th slide the shortest distance. Today we plant these two feelings as seeds.
+2. **The guide tones (3rd & 7th) move only a half step.** When chords change, only the 3rd and 7th slide the shortest distance. Today we plant these two feelings as seeds. We'll polish the smooth connecting all week, so today it's enough just to feel "ah, that's how a pro keeps the hand from jumping."
 
 ## ② Visuals
 

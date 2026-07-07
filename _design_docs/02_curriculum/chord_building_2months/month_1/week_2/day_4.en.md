@@ -9,12 +9,12 @@ i18nKey: "lesson.m1.w2.d4"
 
 ## ① Theory
 
-The week's finish line. Over the 5th-string root, combine the two switches into **five characters** cycled in one spot.
+The week's finish line. Today isn't new memorizing either — over the 5th-string root, combine the two switches into **five characters** cycled in one spot. Get here and the 5th-string root is fully yours.
 
 - **2nd string = the 3rd switch.** Fret 5 (3) ↔ fret 4 (b3).
 - **3rd string = the 7th three-way.** Fret 5 (R) · fret 4 (7) · fret 3 (b7).
 
-The combination of these two strings gives all five chords:
+The combination of these two strings alone gives all five chords:
 
 - **C (major)** = 2nd string 5 (3) · 3rd string 5 (R)
 - **Cm** = 2nd string 4 (b3) · 3rd string 5 (R)
@@ -22,7 +22,7 @@ The combination of these two strings gives all five chords:
 - **Cm7** = 2nd string 4 (b3) · 3rd string 3 (b7)
 - **Cmaj7** = 2nd string 5 (3) · 3rd string 4 (7)
 
-The position combination of two fingers (2nd & 3rd strings) sets the chord's name. Today you spin them freely over one root.
+See — the five chords are, in the end, just the **position combination of two fingers (2nd & 3rd strings).** Not five shapes to memorize, but a question of where to put two strings. Today you spin them freely over one root, confirming by hand that the feel you gained on the 6th string last week works exactly the same on the 5th.
 
 ## ② Visuals
 

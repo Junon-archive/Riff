@@ -20,7 +20,7 @@ So the three characters are:
 - **C7 shell** = 3rd string 3 (b7) · 2nd string 5 (3)
 - **Cm7 shell** = 3rd string 3 (b7) · 2nd string 4 (b3)
 
-If the 6th-string shell (yesterday) used the 4th & 3rd strings, the 5th-string shell uses the **3rd & 2nd.** When the root string changes, the color notes shift up one set. Once you have both sets (6th & 5th), tomorrow you can connect a whole ii–V–I as shells.
+If the 6th-string shell (yesterday) used the 4th & 3rd strings, the 5th-string shell uses the **3rd & 2nd.** When the root string changes, the color notes shift up one set. The principle is exactly the same as yesterday, so there's almost nothing new to memorize. **When the root drops a string, the color notes follow one string down** — that one rule is all you need. Once you have both sets (6th & 5th), tomorrow you can connect a whole ii–V–I as shells. From today, whether a chord's root sits on the 5th or 6th string, you can grab it as a shell.
 
 ## ② Visuals
 

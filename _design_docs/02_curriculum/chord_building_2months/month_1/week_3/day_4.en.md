@@ -9,7 +9,7 @@ i18nKey: "lesson.m1.w3.d4"
 
 ## ① Theory
 
-The week's finish line. Tie everything together.
+The week's finish line. Today isn't new learning — it's tying together everything you've learned. Get here and the ii–V–I is nearly yours. You gather three things at once.
 
 - Use **root-string crossing (5·6·5)** to bind your hand to one region,
 - feel the **guide tones (3rd & 7th)** move only a half step,

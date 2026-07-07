@@ -20,7 +20,7 @@ The combination of these two strings gives all three characters:
 - **G7 shell** = 4th string 3 (b7) · 3rd string 4 (3)
 - **Gm7 shell** = 4th string 3 (b7) · 3rd string 3 (b3)
 
-The two switches (3rd & 7th) you've used for three weeks are alive in the shell too. It's just that with no 5th or doubled note, you now operate only the **two remaining color notes** clearly.
+The two switches (3rd & 7th) you've used for three weeks are alive in the shell too. It's just that with no 5th or doubled note, you now operate only the **two remaining color notes** clearly. Looks complicated? But there are only two things to remember — the "7th string" and the "3rd string." Get these two switches into your hands and you can flip between major, dominant, and minor with a single finger. You're not memorizing three chords; you're learning two switches.
 
 ## ② Visuals
 

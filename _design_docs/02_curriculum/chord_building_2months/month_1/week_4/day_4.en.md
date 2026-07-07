@@ -9,7 +9,7 @@ i18nKey: "lesson.m1.w4.d4"
 
 ## ① Theory
 
-The month's last day. The **Dm7 → G7 → Cmaj7** ii–V–I from Week 3 — you now play it **entirely as shell voicings.** Two things merge naturally:
+The month's last day. The **Dm7 → G7 → Cmaj7** ii–V–I from Week 3 — you now play it **entirely as shell voicings.** There's nothing new to learn today. It's the day the pieces you've stacked up all month click together into "ah, this all connected into one thing." Two things merge naturally:
 
 - **Root-string crossing (5·6·5)** — Dm7 and Cmaj7 are 5th-string-root shells, G7 is a 6th-string-root shell.
 - **Guide tones = the shell's color notes** — since a shell keeps only the 3rd and 7th to begin with, Week 3's guide-tone line is literally the shell's two notes. That line on the 3rd string moving 5→4→4 — remember it?

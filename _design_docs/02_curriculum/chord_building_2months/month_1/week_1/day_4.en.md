@@ -9,21 +9,21 @@ i18nKey: "lesson.m1.w1.d4"
 
 ## ① Theory
 
-This is the week's finish line. We combine the two switches you've learned.
+At last, the week's finish line. Today you're not learning something new — you're **combining** the two switches you already have. Just getting here means you've already crossed a whole mountain.
 
 - **3rd string = the 3rd switch.** Fret 4 (3, bright) ↔ fret 3 (b3, dark).
 - **4th string = the 7th switch.** Fret 5 (R) ↔ fret 3 (b7, tension).
 
-Today's new chord, **m7,** is both switches **lowered.** That is, minor (b3) with a dominant b7 added. On G, 3rd string fret 3 (b3) + 4th string fret 3 (b7) = **Gm7** — dark but with its tension softly released, that sophisticated jazz/soul color.
+Today's new chord, **m7,** is simply both switches **lowered.** That is, minor (b3) with a dominant b7 added. On G, 3rd string fret 3 (b3) + 4th string fret 3 (b7) = **Gm7** — dark but with its tension softly released, that sophisticated jazz/soul/city-pop color.
 
-Seen as a table, the two switches give exactly four cells:
+Draw the two switches as a table and you get exactly four cells:
 
 - **Maj** = 3rd as-is · 7th as-is (3rd string 4, 4th string 5)
 - **m** = 3rd lowered · 7th as-is (3rd string 3, 4th string 5)
 - **7** = 3rd as-is · 7th lowered (3rd string 4, 4th string 3)
 - **m7** = 3rd lowered · 7th lowered (3rd string 3, 4th string 3)
 
-Four chords are just the **up/down combination of two fingers.** Today you cycle them freely over one root.
+Isn't that something? Four chords are, in the end, just the **up/down combination of two fingers.** Not four shapes to memorize — just two switches. Today you cycle them freely over one root, cementing this week's conclusion into your hands: a chord isn't memorized, it's assembled.
 
 ## ② Visuals
 

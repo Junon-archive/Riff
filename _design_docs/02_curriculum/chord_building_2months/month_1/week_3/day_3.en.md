@@ -17,7 +17,7 @@ Push C up a whole step (two frets) and you get **D key:**
 - **A7 (V)** — 6th-string root, fret 5. (C's G7, two frets up)
 - **Dmaj7 (I)** — 5th-string root, fret 5. (C's Cmaj7, two frets up)
 
-Not one finger shape changes. The root-string crossing (5·6·5) and the half-step guide-tone motion are identical. **Because you learned a "pattern," not a memorized shape,** you can slide it to any of the 12 keys. That's the privilege of learning chords by interval.
+Not one finger shape changes. The root-string crossing (5·6·5) and the half-step guide-tone motion are identical. **Because you learned a "pattern," not a memorized shape,** you can slide it to any of the 12 keys. That's the privilege of learning chords by interval. In other words, no need to memorize 12 keys separately — nail this one pattern today and the rest of the keys come nearly free.
 
 ## ② Visuals
 

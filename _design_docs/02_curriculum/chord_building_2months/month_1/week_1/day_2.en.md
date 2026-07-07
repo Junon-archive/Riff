@@ -9,13 +9,15 @@ i18nKey: "lesson.m1.w1.d2"
 
 ## ① Theory
 
-Yesterday you fixed the **3rd (B)** in G major into your eye. Today you touch only that 3rd. The rule is a single line:
+Here's why we're doing this today — nail one chord properly and dozens of minor chords come free. Yesterday you fixed the **3rd (B)** in G major into your eye, right? Today you touch only that 3rd. One finger, one fret. The rule is a single line:
 
 > **Lower the 3rd a half step (3 → b3) and Major becomes minor.**
 
-On the fretboard, drop the **4th fret (B, the 3rd) on the 3rd string** to the **3rd fret (B♭, b3)** — one fret. One finger, one fret, and the chord's expression flips from bright to sad. R and 5 stay put — today you feel in your hands that the 3rd is always what changes the character.
+On the fretboard, drop the **4th fret (B, the 3rd) on the 3rd string** one fret down to the **3rd fret (B♭, b3).** One finger, one fret, and the chord's expression flips from bright to sad. R and 5 — you don't touch them at all.
 
-Why it matters: from now on, for any chord you meet, just ask "where's the 3rd, and is it major or minor?" and you instantly know whether it's a bright or dark chord. Instead of memorizing 60 shapes, you track **one spot: the 3rd.**
+At first it might feel almost anticlimactic — "wait, that's really it?" — and **that emptiness is normal.** Good principles are simple like that. Bright vs. sad is always decided by one note, the 3rd; today you just feel that once, in your hands.
+
+Why it matters: from now on, for any chord you meet, just ask "where's the 3rd, and is it major or minor?" and you instantly know whether it's a bright or dark chord. Instead of memorizing 60 shapes, you track **one spot: the 3rd.** Am, Cm, Fm — you'll make them yourself, thinking "ah, just drop the 3rd a half step."
 
 ## ② Visuals
 

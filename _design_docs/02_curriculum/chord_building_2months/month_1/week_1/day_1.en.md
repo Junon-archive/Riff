@@ -9,15 +9,15 @@ i18nKey: "lesson.m1.w1.d1"
 
 ## ① Theory
 
-Here's why we're doing this today: it's not that we can't play chords because we can't memorize them. It's that memorizing them **as shapes only** kills our ability to adapt. Memorize twenty — "G is this shape, C is that shape" — and the twenty-first chord stops you cold again. So starting today we change the rule. We stop seeing a chord as a shape and start seeing it as **notes stacked over a root.**
+Here's why we're doing this today: it's not that we can't play chords because we can't memorize them. It's that memorizing them **as shapes only** kills our ability to adapt. Memorize twenty — "G is this shape, C is that shape" — and the twenty-first chord stops you cold again. You've probably hit that frustrating wall at least once. So starting today we change the rule entirely. We stop seeing a chord as a shape and start seeing it as **notes stacked over a root.**
 
-There's exactly one reference point: the **root (R).** Today we dissect a chord whose root sits on the **6th string** (the one people call the "E-form"). Our example is **G major** at the 3rd fret. Inside this chord there are really only three kinds of notes.
+There's exactly one reference point: the **root (R).** Today we dissect a chord whose root sits on the **6th string** (the one people call the "E-form"). Our example is **G major** at the 3rd fret. Don't be intimidated — even inside this big chord there are really only three kinds of notes.
 
 - **R (root)** — the G on the 6th, 4th, and 1st strings. The chord's name, and its home.
 - **3 (3rd)** — the B on the 3rd string. The note that sets the chord's **expression.** Bright or dark is entirely decided by this 3rd.
 - **5 (5th)** — the D on the 5th and 2nd strings. A pillar that thickens the chord. It doesn't change the character.
 
-So G major isn't a "complicated six-finger shape" — it's just **the three ingredients R·3·5 placed over a 6th-string root.** Today, fully break down by eye where these three notes live. Pay special attention to the **3rd (B).** All week long, every change happens at the 3rd and the 7th — "lower this a half step for minor, add that for a 7."
+So G major isn't a "complicated six-finger shape" — it's just **the three ingredients R·3·5 placed over a 6th-string root.** Not six unfamiliar dots, but three familiar ingredients — see it that way and a chord suddenly feels light. Today, fully break down by eye where these three notes live. Pay special attention to the **3rd (B).** All week long, **every change happens at just two spots — the 3rd and the 7th** — "lower this a half step for minor, add that for a 7." Put this map in your head today, and the next three days are a breeze.
 
 ## ② Visuals
 

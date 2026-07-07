@@ -19,7 +19,7 @@ That's why pros boldly drop the 5th (and the doubled root) and keep **only root�
 - **Cleaner sound** — no clash with other instruments in a band.
 - **Clear identity** — with only the 3rd and 7th left, the chord's character rings distinctly.
 
-Today, using last week's G7, we diet it from a **6-string full chord → a 3-string shell.**
+Today, using last week's G7, we diet it from a **6-string full chord → a 3-string shell.** Throwing something away feels like a loss, right? Yet strangely, the more pro you are, the less you grab. Using only three fingers, your changes will actually get easier than before — let's feel "the less you hold, the more pro it sounds" with your own hands today.
 
 ## ② Visuals
 
