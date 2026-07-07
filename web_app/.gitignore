@@ -12,3 +12,6 @@ src/content/
 .DS_Store
 *.log
 .vite/
+
+# scripts/build-content.mjs 로 재생성되는 오선보 임베드 폰트 CSS.
+src/styles/vexflow-fonts.css

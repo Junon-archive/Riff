@@ -22,6 +22,9 @@ import {
   parseDayKey,
 } from '../lib/content';
 import { renderScore } from '../render';
+// VexFlow 오선보/타브(<text> 글리프)용 임베드 폰트(@font-face: Bravura·Academico).
+// scripts/build-content.mjs 가 생성. 없으면 악보 글리프가 .notdef(□)로 깨진다.
+import '../styles/vexflow-fonts.css';
 import { lessonPath, localize } from '../lib/urls';
 import { cleanTitle } from '../views/textUtils';
 import type { Lang } from '../config';

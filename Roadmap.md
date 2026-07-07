@@ -77,6 +77,13 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-07 (버그 수정 — VexFlow 오선보/타브 글리프 깨짐(□) 해결)
+- **증상:** 배포 사이트의 모든 오선보·타브 악보가 `.notdef`(□+X) 박스로 깨져 렌더. 지판 다이어그램(자체 SVG)은 정상.
+- **원인:** VexFlow 5 는 음악 글리프(음자리표·음표·쉼표·타브 클레프…)를 `<text font-family="Bravura,Academico">` 로 그린다(v3/v4 의 baked-in path 방식과 다름). 렌더는 빌드타임 jsdom 에서 SVG 문자열만 생성하고, 브라우저에는 Bravura/Academico 폰트가 없어 글리프가 전부 tofu(□)로 표시됨(타브 프렛 숫자도 Academico 폴백).
+- **해결:** `scripts/build-content.mjs` 에 `generateStaffFonts()` 추가 — vexflow 가 동봉한 woff2(base64 data URI: `bravura.js`·`academico.js`)를 추출해 `@font-face`(Bravura·Academico) CSS(`src/styles/vexflow-fonts.css`, gitignore·빌드시 재생성)로 emit. `LessonView.astro` 에서 1회 import → **레슨 페이지에만** 링크되는 단일 캐시 CSS 에셋(≈365KB, 3개 커리큘럼 공통)으로 번들. 홈/개요 페이지에는 미포함.
+- **검증:** build exit 0(totalDays 52/32/32 유지) · 생성 CSS 에 @font-face 2개·유효 woff2(Bravura 247KB·Academico 22KB, magic `wOF2`) · solo/chord/funk 레슨이 동일 에셋(`_day_.*.css`) 링크·HTML 인라인 폰트 0 · **헤드리스 크롬 렌더 스크린샷으로 음자리표·4/4·음표·타브 클레프 정상 표시 육안 확인**(tofu 박스 소멸). staff.ts 렌더 로직은 무변경.
+
+
 ### 2026-07-07 (『펑크 리듬』 Week 8 완성 = **Month 2 · 전체 커리큘럼 완성** — 레코딩 챌린지)
 - **Week 8 (펑크 머신 레코딩 챌린지) 전량 작성:** day_1~4 × 3언어(12) + week_8_overview×3 = 15파일. 교육 축: D1 8주 무기고 총정리·선택지 카드(커팅 vs 싱글노트)·챌린지 트랙(E·BPM 78) → D2 커팅 그루브 빌딩(벌스) → D3 싱글노트 리프 빌딩(훅)·커팅과 이어붙이기 → D4 최종 레코딩·칼박자 셀프 진단·2개월 회고·클로징.
 - **2개월(8주) 전량 완성·검증:** `npm run build` exit 0, **funk totalDays=32**(월1 16 + 월2 16). D8 페이지 12개 staffsvg≥2·검정 0, 빨강 0, ②JSON ko=en=ja 일치(d1·d4=2, d2·d3=3), ① 494~554자, 프론트매터 3언어 일치.
