@@ -494,32 +494,6 @@ function discoverCurricula() {
 }
 
 /* ---------------------------------------------------------------
-   오선보 폰트 임베드 CSS 생성.
-   VexFlow 5 는 음악 글리프(음자리표·음표·쉼표…)를 <text font-family="Bravura,Academico">
-   로 그린다. 빌드타임 jsdom 렌더에는 폰트가 임베드되지 않으므로, vexflow 가 동봉한
-   woff2(base64 data URI)를 @font-face 로 내보내 레슨 페이지에서 로드한다(없으면 .notdef □ 로 깨짐).
-   --------------------------------------------------------------- */
-function generateStaffFonts() {
-  const fontsDir = join(WEB_APP, 'node_modules', 'vexflow', 'build', 'esm', 'src', 'fonts');
-  const pick = (file) => {
-    const src = readFileSync(join(fontsDir, file), 'utf8');
-    const m = src.match(/data:font\/woff2[^'"]+/);
-    if (!m) fail(`vexflow 폰트 데이터 URI 추출 실패: ${file}`);
-    return m[0];
-  };
-  const bravura = pick('bravura.js');
-  const academico = pick('academico.js');
-  const css =
-    `/* 자동 생성(scripts/build-content.mjs) — 편집 금지. VexFlow 오선보/타브 글리프용 임베드 폰트. */\n` +
-    `@font-face{font-family:'Bravura';font-style:normal;font-weight:normal;font-display:block;src:url('${bravura}') format('woff2');}\n` +
-    `@font-face{font-family:'Academico';font-style:normal;font-weight:normal;font-display:block;src:url('${academico}') format('woff2');}\n`;
-  const outDir = join(WEB_APP, 'src', 'styles');
-  mkdirSync(outDir, { recursive: true });
-  writeFileSync(join(outDir, 'vexflow-fonts.css'), css, 'utf8');
-  console.log('  ✔ 오선보 폰트 CSS 생성: src/styles/vexflow-fonts.css (Bravura+Academico 임베드)');
-}
-
-/* ---------------------------------------------------------------
    메인: 모든 커리큘럼을 빌드해 manifest.json 하나로 집계.
    --------------------------------------------------------------- */
 function main() {
@@ -547,8 +521,6 @@ function main() {
     JSON.stringify(manifest, null, 2) + '\n',
     'utf8',
   );
-  generateStaffFonts();
-
   console.log(
     `\n✔ 완료: 커리큘럼 ${curricula.length}개 · manifest.json` +
       (warnCount ? `  · 경고 ${warnCount}건` : ''),

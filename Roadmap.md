@@ -77,11 +77,12 @@
 
 ## 4. 변경 로그 (Changelog)
 
-### 2026-07-07 (버그 수정 — VexFlow 오선보/타브 글리프 깨짐(□) 해결)
-- **증상:** 배포 사이트의 모든 오선보·타브 악보가 `.notdef`(□+X) 박스로 깨져 렌더. 지판 다이어그램(자체 SVG)은 정상.
-- **원인:** VexFlow 5 는 음악 글리프(음자리표·음표·쉼표·타브 클레프…)를 `<text font-family="Bravura,Academico">` 로 그린다(v3/v4 의 baked-in path 방식과 다름). 렌더는 빌드타임 jsdom 에서 SVG 문자열만 생성하고, 브라우저에는 Bravura/Academico 폰트가 없어 글리프가 전부 tofu(□)로 표시됨(타브 프렛 숫자도 Academico 폴백).
-- **해결:** `scripts/build-content.mjs` 에 `generateStaffFonts()` 추가 — vexflow 가 동봉한 woff2(base64 data URI: `bravura.js`·`academico.js`)를 추출해 `@font-face`(Bravura·Academico) CSS(`src/styles/vexflow-fonts.css`, gitignore·빌드시 재생성)로 emit. `LessonView.astro` 에서 1회 import → **레슨 페이지에만** 링크되는 단일 캐시 CSS 에셋(≈365KB, 3개 커리큘럼 공통)으로 번들. 홈/개요 페이지에는 미포함.
-- **검증:** build exit 0(totalDays 52/32/32 유지) · 생성 CSS 에 @font-face 2개·유효 woff2(Bravura 247KB·Academico 22KB, magic `wOF2`) · solo/chord/funk 레슨이 동일 에셋(`_day_.*.css`) 링크·HTML 인라인 폰트 0 · **헤드리스 크롬 렌더 스크린샷으로 음자리표·4/4·음표·타브 클레프 정상 표시 육안 확인**(tofu 박스 소멸). staff.ts 렌더 로직은 무변경.
+### 2026-07-07 (버그 수정 — 오선보/타브 렌더러 VexFlow 5→4 전면 이관 + 조판 개선)
+- **증상(누적 리포트):** ① 모든 오선보·타브 글리프가 `.notdef`(□) 로 깨짐. ② 음표 스템이 음표머리에서 떨어져 나옴. ③ 타브가 6줄 중 4줄만 보이고 프렛 숫자 미표시. ④ 마디가 많으면 한 줄에 몰려 너무 작게 표시(가독성↓). ⑤ 16분음표가 한 마디 통짜 빔으로 묶임. ⑥ 오선보 음정↔타브 실제음 위치 불일치 의심.
+- **근본 원인:** **VexFlow 5** 는 음악 글리프를 `<text font-family="Bravura">` + 웹폰트로 그리고, 글리프 위치·폭을 **canvas `measureText`(폰트 metrics)** 로 계산한다. 빌드타임 jsdom 엔 canvas·폰트 metrics 가 없어(스텁은 가짜 폭 반환) → 글리프 tofu(①) + 스템/프렛 배치 오류(②③⑥). @font-face 임베드(직전 커밋)로 ①은 완화됐으나 빌드타임 **geometry** 는 여전히 깨짐. node-canvas 는 네이티브 의존이라 CF Pages 빌드 정책상 배제.
+- **해결:** 렌더러를 **VexFlow 4.2.5 로 이관**(`render/staff.ts` 재작성). v4 는 글리프를 **baked 아웃라인 `<path>`(metrics 내장)** 로 그려 폰트·canvas 불필요 → tofu 0·스템 정확·자체완결 SVG. 프렛 숫자만 시스템 폰트 `<text>` 라 `getBBox` 근사 스텁으로 폭 측정. 직전 @font-face 임베드(`generateStaffFonts`·`vexflow-fonts.css` import)는 불필요해져 제거.
+- **조판 개선(동시):** ④ **한 줄에 2마디씩** 배치·세로 스택(자동 줄바꿈). ⑤ 빔을 **박(beat) 단위로 끊음**(16분음표 4개·8분음표 2개씩). 마디 폭=음표 수 비례(오버플로 방지). 세로 높이=음역대 적응(저음 렛저라인이 타브와 겹치지 않게, 고음역은 컴팩트). ⑥ `pitchOf`(string+fret+tuning) 는 concert-pitch 로 타브와 **동일 옥타브** — 스크린샷으로 프렛↔오선 위치 일치 확인.
+- **검증:** `astro check` 0 error · build exit 0(totalDays 52/32/32 유지) · **전체 348 레슨 페이지·384 staffsvg 스캔: tofu 0·검정 누출 0·viewBox 누락 0** · 헤드리스 크롬 렌더로 음자리표·박자표·빔(4개묶음)·6줄 타브·프렛 숫자·저음 렛저라인/타브 비겹침 육안 확인. `vexflow` 의존 5.0.0→4.2.5(package.json/lock).
 
 
 ### 2026-07-07 (『펑크 리듬』 Week 8 완성 = **Month 2 · 전체 커리큘럼 완성** — 레코딩 챌린지)

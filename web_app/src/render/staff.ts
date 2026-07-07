@@ -6,12 +6,18 @@
  *  - `meta.notation` 이 "staff" | "staff+tab" | "rhythm" 일 때 render/index.ts 가 이 함수로 라우팅.
  *  - **핵심**: 같은 tab 데이터(string+fret+duration) 하나에서 오선보와 타브를 **박자 공유**로 함께 그린다.
  *    음정 = string+fret+tuning 으로 결정 계산(할루시네이션 0), 박자 = duration.
- *  - 빌드타임(Node)에서 jsdom + VexFlow SVG 백엔드로 SVG 문자열 생성 → **클라이언트 JS 0**(fretboard/tab 과 동일 계약).
+ *  - 빌드타임(Node)에서 jsdom + VexFlow SVG 백엔드로 SVG 문자열 생성 → **클라이언트 JS 0**.
  *  - 색: role→CSS 변수(color_legend.md), 기본 검정은 currentColor 로 치환(다크모드 자동).
- *  - 루트 <svg class="staffsvg" viewBox=... role="img" aria-label=...>, 고정 width/height 제거(반응형).
  *
- * 한계(v1): 산문 label·technique(H/P/sl/P.M.) 오버레이는 미표기(타브 SVG 렌더러가 담당).
- *           오선보는 음정+박자 전달에 집중한다.
+ * VexFlow 4 채택 사유(기술 결정):
+ *  - v4 는 음악 글리프를 **baked 아웃라인 `<path>`** 로 그린다(폰트 불필요·metrics 내장) → 서버(jsdom)
+ *    렌더에서 음표/스템/음자리표 위치가 정확하고, 브라우저에 음악 폰트가 없어도 tofu(□) 가 없다.
+ *    (v5 는 `<text>`+웹폰트 방식이라 jsdom 에 canvas/폰트 metrics 가 없어 스템 어긋남·글리프 깨짐 발생.)
+ *  - 프렛 숫자만 시스템 폰트 `<text>` 로 그리며, 그 폭 측정에 `<text>.getBBox()` 를 쓰므로 jsdom 에 근사 스텁을 심는다.
+ *
+ * 레이아웃:
+ *  - 한 줄(system)에 **2마디**씩 배치하고 세로로 쌓는다(가독성). 마디가 많으면 여러 줄로 자동 줄바꿈.
+ *  - 8·16분음표 빔은 **박(beat) 단위로 끊는다**(16분음표는 4개씩, 8분음표는 2개씩) — 한 마디 통짜 빔 방지.
  */
 import { JSDOM } from 'jsdom';
 import {
@@ -46,38 +52,44 @@ const DUR: Record<string, string> = {
   eighth: '8',
   sixteenth: '16',
 };
-/** duration → 상대 폭 단위(8분음표=1) */
-const DUR_UNIT: Record<string, number> = { whole: 8, half: 4, quarter: 2, eighth: 1, sixteenth: 0.5 };
+/** duration → 16분음표 단위(정수). 박(beat, 4분음표)=4 → 빔을 박 단위로 끊는 데 사용. */
+const DUR_INT: Record<string, number> = { whole: 16, half: 8, quarter: 4, eighth: 2, sixteenth: 1 };
+const BEAT_INT = 4; // 4분음표 = 1박(분모 4 가정)
 
-/* ---- jsdom 싱글턴(+canvas 텍스트측정 스텁) ---------------------------- */
+/* ---- 레이아웃 상수 ---------------------------------------------------- */
+const MEASURES_PER_ROW = 2; // 한 줄에 2마디
+const MARGIN_X = 12;
+const MARGIN_TOP = 14;
+const CLEF_W = 42; // 음자리표 폭
+const TS_W = 26; // 박자표 폭(정렬용으로 전 줄 예약)
+// 마디 폭은 음표 수에 비례(빽빽한 마디는 넓게, 성긴 마디는 좁게 → 오버플로 방지·자연스러운 조판).
+const PER_NOTE = 28; // 음표(쉼표 포함) 1개당 폭
+const MIN_MW = 150; // 마디 최소 폭
+const MAX_MW = 480; // 마디 최대 폭(16분음표 16개 등 최대 밀도)
+// 세로 레이아웃은 음역대에 따라 적응(저음 렛저라인이 타브와 겹치지 않게, 고음역은 컴팩트하게).
+const PX_PER_SEMI = 2.9; // 반음당 세로 픽셀(오선 간격 근사)
+const TREBLE_TOP_LINE = 64; // 오선보 맨 아래 선 = E4(concert). (실제 음정 = 타브와 동일 옥타브)
+const TREBLE_HI_LINE = 77; // 오선보 맨 위 선 ≈ F5
+
+/* ---- jsdom 싱글턴(+getBBox 텍스트측정 스텁) -------------------------- */
 let _doc: Document | null = null;
 function getDoc(): Document {
   if (_doc) return _doc;
   const dom = new JSDOM('<!DOCTYPE html><body><div id="vf"></div></body>');
   const win = dom.window as unknown as {
     document: Document;
-    HTMLCanvasElement: { prototype: { getContext: unknown } };
+    SVGElement: { prototype: Record<string, unknown> };
   };
-  // VexFlow 5 는 텍스트 폭 측정에 canvas 를 쓴다. jsdom 엔 canvas 가 없어 근사 2D 컨텍스트를 심는다
-  // (네이티브 canvas 의존 회피 — CF Pages 빌드에서 네이티브 빌드 불필요).
-  win.HTMLCanvasElement.prototype.getContext = function getContextStub() {
-    return {
-      font: '',
-      measureText: (t: string) => ({ width: (t ? String(t).length : 0) * 6 }),
-      fillText() {},
-      strokeText() {},
-      save() {},
-      restore() {},
-      beginPath() {},
-      moveTo() {},
-      lineTo() {},
-      stroke() {},
-      fill() {},
-      scale() {},
-      translate() {},
-      rotate() {},
-      clearRect() {},
-    };
+  // VexFlow 4 SVGContext.measureText 는 <text>.getBBox() 로 텍스트 폭을 잰다.
+  // (음악 글리프는 baked path 라 무관 — 오직 프렛 숫자 등 짧은 텍스트에만 영향.)
+  // jsdom 엔 getBBox 가 없어 근사 스텁을 심는다(길이×폰트크기 비례).
+  win.SVGElement.prototype.getBBox = function getBBoxStub(this: {
+    textContent?: string;
+    getAttribute?: (n: string) => string | null;
+  }) {
+    const len = (this.textContent || '').length;
+    const fs = parseFloat((this.getAttribute && this.getAttribute('font-size')) || '10') || 10;
+    return { x: 0, y: 0, width: len * fs * 0.55, height: fs * 1.2 };
   };
   _doc = win.document;
   return _doc;
@@ -122,14 +134,78 @@ function roleColor(n: TabNoteData): string | null {
   return null;
 }
 
-/** 루트 svg 손질: class/role/aria 추가·고정 크기 제거·검정→currentColor(테마). */
-function postProcess(svg: string, title: string): string {
+/** 루트 svg 손질: 고정 크기 제거·viewBox 지정·class/role/aria·검정→currentColor. */
+function postProcess(svg: string, title: string, w: number, h: number): string {
   let out = svg.replace(/^<svg([^>]*)>/, (_m, attrs: string) => {
-    const a = attrs.replace(/\swidth="[^"]*"/, '').replace(/\sheight="[^"]*"/, '');
-    return `<svg${a} class="staffsvg" role="img" aria-label="${esc(title)}">`;
+    const a = attrs
+      .replace(/\swidth="[^"]*"/, '')
+      .replace(/\sheight="[^"]*"/, '')
+      .replace(/\sviewBox="[^"]*"/, '');
+    return `<svg${a} viewBox="0 0 ${w} ${h}" class="staffsvg" role="img" aria-label="${esc(title)}">`;
   });
   out = out.replace(/(fill|stroke)="(?:black|#000000|#000)"/g, '$1="currentColor"');
   return out;
+}
+
+/* ---- 한 마디의 tickable 묶음 ----------------------------------------- */
+interface BuiltMeasure {
+  stave: StaveNote[];
+  tab: (TabNote | GhostNote)[];
+  beams: StaveNote[][];
+}
+
+function buildMeasure(m: Measure, flats: boolean): BuiltMeasure {
+  const stave: StaveNote[] = [];
+  const tab: (TabNote | GhostNote)[] = [];
+  const beams: StaveNote[][] = [];
+  let curBeam: StaveNote[] = [];
+  let pos = 0; // 마디 내 위치(16분 단위)
+  const flush = () => {
+    if (curBeam.length > 1) beams.push(curBeam);
+    curBeam = [];
+  };
+
+  const notes: TabNoteData[] = Array.isArray(m.notes) ? m.notes : [];
+  for (const n of notes) {
+    const durCode = DUR[n.duration] ?? 'q';
+    const unit = DUR_INT[n.duration] ?? 4;
+
+    if (n.rest) {
+      flush();
+      stave.push(new StaveNote({ keys: ['b/4'], duration: `${durCode}r` }));
+      tab.push(new GhostNote(durCode));
+      pos += unit;
+      if (pos % BEAT_INT === 0) flush();
+      continue;
+    }
+
+    const s = n.string;
+    const fret = n.fret;
+    if (typeof s !== 'number' || s < 1 || s > 6 || typeof fret !== 'number') continue;
+
+    const { key, acc } = pitchOf(s, fret, flats);
+    const dotted = !!n.dotted;
+    const sNote = new StaveNote({ keys: [key], duration: durCode + (dotted ? 'd' : '') });
+    if (acc) sNote.addModifier(new Accidental(acc), 0);
+    if (dotted) Dot.buildAndAttach([sNote], { all: true });
+
+    const tNote = new TabNote({ positions: [{ str: s, fret }], duration: durCode });
+
+    const col = roleColor(n) ?? 'currentColor';
+    sNote.setStyle({ fillStyle: col, strokeStyle: col });
+    tNote.setStyle({ fillStyle: col, strokeStyle: col });
+
+    stave.push(sNote);
+    tab.push(tNote);
+
+    // 8·16분음표만 빔 대상. 박(beat) 경계에서 끊는다.
+    if (n.duration === 'eighth' || n.duration === 'sixteenth') curBeam.push(sNote);
+    else flush();
+    pos += unit;
+    if (pos % BEAT_INT === 0) flush();
+  }
+  flush();
+  return { stave, tab, beams };
 }
 
 /* ---- 본체 ------------------------------------------------------------- */
@@ -138,144 +214,126 @@ export function renderStaff(score: Score, mode: StaffMode): string {
   const withTab = mode === 'staff+tab' || mode === 'rhythm';
   const tabData = score.tab;
 
-  if (!tabData || !Array.isArray(tabData.measures)) {
-    return `<svg class="staffsvg" viewBox="0 0 480 60" role="img" aria-label="${esc(title)}"></svg>`;
-  }
+  const emptySvg = (w = 480, h = 60) =>
+    `<svg viewBox="0 0 ${w} ${h}" class="staffsvg" role="img" aria-label="${esc(title)}"></svg>`;
+
+  if (!tabData || !Array.isArray(tabData.measures)) return emptySvg();
 
   const flats = preferFlats(score.meta?.key);
   const [numBeats, beatValue] = (tabData.timeSignature ?? '4/4')
     .split('/')
     .map((x) => parseInt(x, 10));
 
-  // VexFlow 는 음표/임시표/점 생성 시점에도 전역 document 를 참조하므로(폰트 파싱 등),
-  // 노트 구성 전에 미리 jsdom document 를 전역에 세팅하고, 함수 끝에서 원복한다.
   const doc = getDoc();
   const prevDoc = (globalThis as { document?: Document }).document;
   (globalThis as { document?: Document }).document = doc;
   try {
+    // 마디별 tickable 생성 → 전부 비면 빈 SVG
+    const built = (tabData.measures as Measure[]).map((m) => buildMeasure(m, flats));
+    if (built.every((b) => b.stave.length === 0)) return emptySvg();
 
-  // 마디별 tickable 구성(마디 사이 BarNote 삽입 — 두 보이스 정렬 유지)
-  const staffTickables: (StaveNote | BarNote)[] = [];
-  const tabTickables: (TabNote | GhostNote | BarNote)[] = [];
-  const beamGroups: StaveNote[][] = [];
-  let curBeamGroup: StaveNote[] = [];
-  let unitSum = 0;
-
-  const flushBeam = () => {
-    if (curBeamGroup.length > 1) beamGroups.push(curBeamGroup);
-    curBeamGroup = [];
-  };
-
-  (tabData.measures as Measure[]).forEach((m, mi) => {
-    if (mi > 0) {
-      flushBeam();
-      staffTickables.push(new BarNote());
-      tabTickables.push(new BarNote());
+    // 2마디씩 줄(row)로 묶기
+    const rows: BuiltMeasure[][] = [];
+    for (let i = 0; i < built.length; i += MEASURES_PER_ROW) {
+      rows.push(built.slice(i, i + MEASURES_PER_ROW));
     }
-    const notes: TabNoteData[] = Array.isArray(m.notes) ? m.notes : [];
-    for (const n of notes) {
-      const durCode = DUR[n.duration] ?? 'q';
-      unitSum += DUR_UNIT[n.duration] ?? 1;
 
-      if (n.rest) {
-        flushBeam();
-        staffTickables.push(new StaveNote({ keys: ['b/4'], duration: `${durCode}r` }));
-        tabTickables.push(new GhostNote(durCode));
-        continue;
-      }
-
-      const s = n.string;
-      const fret = n.fret;
-      if (typeof s !== 'number' || s < 1 || s > 6 || typeof fret !== 'number') {
-        continue;
-      }
-
-      const { key, acc } = pitchOf(s, fret, flats);
-      const dotted = !!n.dotted;
-      const sNote = new StaveNote({ keys: [key], duration: durCode + (dotted ? 'd' : '') });
-      if (acc) sNote.addModifier(new Accidental(acc), 0);
-      if (dotted) Dot.buildAndAttach([sNote], { all: true });
-
-      const tNote = new TabNote({ positions: [{ str: s, fret }], duration: durCode });
-
-      const col = roleColor(n) ?? 'currentColor';
-      sNote.setStyle({ fillStyle: col, strokeStyle: col });
-      tNote.setStyle({ fillStyle: col, strokeStyle: col });
-
-      staffTickables.push(sNote);
-      tabTickables.push(tNote);
-
-      // 8·16분음표만 연속 빔 그룹핑(마디 넘어가면 flush)
-      if (n.duration === 'eighth' || n.duration === 'sixteenth') {
-        curBeamGroup.push(sNote);
-      } else {
-        flushBeam();
+    // 음역대 기반 적응형 세로 오프셋: 저음(E4 아래)만큼 타브를 내리고, 고음(F5 위)만큼 위 여백 확보.
+    let minMidi = 999;
+    let maxMidi = 0;
+    for (const m of tabData.measures as Measure[]) {
+      for (const n of Array.isArray(m.notes) ? m.notes : []) {
+        if (n.rest || typeof n.string !== 'number' || typeof n.fret !== 'number') continue;
+        const md = (OPEN_MIDI[n.string] ?? 40) + n.fret;
+        if (md < minMidi) minMidi = md;
+        if (md > maxMidi) maxMidi = md;
       }
     }
-  });
-  flushBeam();
+    if (minMidi === 999) {
+      minMidi = TREBLE_TOP_LINE;
+      maxMidi = TREBLE_TOP_LINE;
+    }
+    const belowPx = Math.max(0, TREBLE_TOP_LINE - minMidi) * PX_PER_SEMI; // 저음 렛저라인 여유
+    const abovePx = Math.max(0, maxMidi - TREBLE_HI_LINE) * PX_PER_SEMI; // 고음 렛저라인 여유
+    const trebleDy = Math.round(16 + abovePx);
+    const tabDy = Math.round(trebleDy + 80 + belowPx + 16);
+    const sysH = withTab ? tabDy + 150 : Math.round(trebleDy + 80 + belowPx + 22);
 
-  // 음표가 하나도 없으면 VexFlow 포매터가 던지므로 빈 SVG 로 안전 반환.
-  if (staffTickables.length === 0) {
-    return `<svg class="staffsvg" viewBox="0 0 480 60" role="img" aria-label="${esc(title)}"></svg>`;
-  }
-
-  /* ---- 레이아웃 ---- */
-  const formatWidth = Math.max(240, Math.round(unitSum * 46));
-  const staveW = formatWidth + 90;
-  const x = 10;
-  const staffY = 18;
-  const tabY = withTab ? 120 : staffY;
-  const height = withTab ? 220 : 130;
+    // 마디 폭 = 음표 수 비례(clamp). 줄 폭 = 마디 폭 합. 전체 폭 = 가장 넓은 줄.
+    const measureArea = (mb: BuiltMeasure) =>
+      Math.max(MIN_MW, Math.min(MAX_MW, mb.stave.length * PER_NOTE));
+    const rowNoteArea = rows.map((r) => r.reduce((a, mb) => a + measureArea(mb), 0));
+    const totalW = Math.max(...rowNoteArea.map((w) => CLEF_W + TS_W + w)) + 2 * MARGIN_X;
+    const totalH = MARGIN_TOP + rows.length * sysH + 12;
 
     const host = doc.getElementById('vf')!;
     host.innerHTML = '';
     const renderer = new Renderer(host as unknown as HTMLDivElement, Renderer.Backends.SVG);
-    renderer.resize(staveW + 20, height);
+    renderer.resize(totalW, totalH);
     const ctx = renderer.getContext();
 
-    const stave = new Stave(x, staffY, staveW);
-    stave.addClef('treble');
-    if (tabData.timeSignature) stave.addTimeSignature(tabData.timeSignature);
-    stave.setContext(ctx).draw();
+    rows.forEach((rowMeasures, ri) => {
+      const sysTop = MARGIN_TOP + ri * sysH;
+      const x = MARGIN_X;
+      const mCount = rowMeasures.length;
+      const noteAreaW = rowNoteArea[ri] ?? MIN_MW;
+      const thisStaveW = CLEF_W + TS_W + noteAreaW;
 
-    let tabstave: TabStave | null = null;
-    if (withTab) {
-      tabstave = new TabStave(x, tabY, staveW);
-      tabstave.addClef('tab');
-      tabstave.setContext(ctx).draw();
-    }
+      const stave = new Stave(x, sysTop + trebleDy, thisStaveW);
+      stave.addClef('treble');
+      if (tabData.timeSignature) stave.addTimeSignature(tabData.timeSignature);
 
-    const vStaff = new Voice({ numBeats: numBeats || 4, beatValue: beatValue || 4 })
-      .setStrict(false)
-      .addTickables(staffTickables);
-    const voices: Voice[] = [vStaff];
-    let vTab: Voice | null = null;
-    if (withTab) {
-      vTab = new Voice({ numBeats: numBeats || 4, beatValue: beatValue || 4 })
+      let tabstave: TabStave | null = null;
+      if (withTab) {
+        tabstave = new TabStave(x, sysTop + tabDy, thisStaveW);
+        tabstave.addClef('tab');
+        // 오선보/타브 음표 x 정렬: 타브의 노트 시작 x 를 오선보와 맞춘다.
+        tabstave.setNoteStartX(stave.getNoteStartX());
+      }
+      stave.setContext(ctx).draw();
+      if (tabstave) tabstave.setContext(ctx).draw();
+
+      // 줄의 voice: 마디들을 BarNote 로 이어 붙임
+      const sTick: (StaveNote | BarNote)[] = [];
+      const tTick: (TabNote | GhostNote | BarNote)[] = [];
+      const beams: StaveNote[][] = [];
+      rowMeasures.forEach((mb, mi) => {
+        if (mi > 0) {
+          sTick.push(new BarNote());
+          tTick.push(new BarNote());
+        }
+        sTick.push(...mb.stave);
+        tTick.push(...mb.tab);
+        beams.push(...mb.beams);
+      });
+
+      const vStaff = new Voice({ num_beats: (numBeats || 4) * mCount, beat_value: beatValue || 4 })
         .setStrict(false)
-        .addTickables(tabTickables);
-      voices.push(vTab);
-    }
+        .addTickables(sTick);
+      const voices: Voice[] = [vStaff];
+      let vTab: Voice | null = null;
+      if (withTab) {
+        vTab = new Voice({ num_beats: (numBeats || 4) * mCount, beat_value: beatValue || 4 })
+          .setStrict(false)
+          .addTickables(tTick);
+        voices.push(vTab);
+      }
 
-    const fmt = new Formatter();
-    voices.forEach((v) => fmt.joinVoices([v]));
-    fmt.format(voices, formatWidth);
+      const fmt = new Formatter();
+      voices.forEach((v) => fmt.joinVoices([v]));
+      fmt.format(voices, noteAreaW);
 
-    vStaff.draw(ctx, stave);
-    if (vTab && tabstave) vTab.draw(ctx, tabstave);
-
-    for (const g of beamGroups) {
-      new Beam(g).setContext(ctx).draw();
-    }
-
-    if (withTab && tabstave) {
-      new StaveConnector(stave, tabstave).setType('brace').setContext(ctx).draw();
-      new StaveConnector(stave, tabstave).setType('singleLeft').setContext(ctx).draw();
-    }
+      vStaff.draw(ctx, stave);
+      if (vTab && tabstave) vTab.draw(ctx, tabstave);
+      for (const g of beams) new Beam(g).setContext(ctx).draw();
+      if (withTab && tabstave) {
+        new StaveConnector(stave, tabstave).setType('brace').setContext(ctx).draw();
+        new StaveConnector(stave, tabstave).setType('singleLeft').setContext(ctx).draw();
+      }
+    });
 
     const svg = host.innerHTML;
-    return postProcess(svg, title);
+    return postProcess(svg, title, totalW, totalH);
   } finally {
     if (prevDoc === undefined) delete (globalThis as { document?: Document }).document;
     else (globalThis as { document?: Document }).document = prevDoc;
