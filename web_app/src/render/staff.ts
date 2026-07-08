@@ -162,15 +162,12 @@ function roleColor(n: ColorSource): string | null {
 
 /**
  * 화음 타브 note-level 단색(TabNote 는 position별 색 불가 — tabnote.js applyStyle 은 note 단위).
- * 우선순위: highlight/target(초록) → root(파랑) → color(노랑) → chord_tone(파랑) → scale(색없음).
+ * 색이 만장일치일 때만 그 색을 쓰고, 서로 다른 role 색이 섞이면 중립(currentColor).
+ * 무색(scale/passing)은 상쇄에서 제외 → 유채색이 하나로 모이면 그 색 유지.
  */
 function tabChordColor(entries: ColorSource[]): string | null {
-  if (entries.some((e) => e.highlight || e.target || e.role === 'target'))
-    return 'var(--green-500, #12B886)';
-  if (entries.some((e) => e.role === 'root' || e.isRoot)) return 'var(--primary, #3182F6)';
-  if (entries.some((e) => e.role === 'color')) return 'var(--yellow-500, #FFC043)';
-  if (entries.some((e) => e.role === 'chord_tone')) return 'var(--primary, #3182F6)';
-  return null;
+  const cols = new Set(entries.map(roleColor).filter((c) => c !== null));
+  return cols.size === 1 ? [...cols][0]! : null;
 }
 
 /** 루트 svg 손질: 고정 크기 제거·viewBox 지정·class/role/aria·검정→currentColor. */
