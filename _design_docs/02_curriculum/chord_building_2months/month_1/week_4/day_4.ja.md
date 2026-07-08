@@ -119,6 +119,38 @@ II-V-Iのシェル3つ。ルート（青）とガイドトーン（緑の3度・
 
 ▶ **BPM 78、4回反復。** 指3本のコードが最小移動でつながります。今月の結晶 — これがプロのコンピング。
 
+**例3 — コード全体コンピング。** 例2と同じリズムで、ルートとガイドトーンを別々に弾く代わりに、その小節のシェルコード全体（Dm7 → G7 → Cmaj7）を一度に鳴らします。
+
+```json
+{
+  "id": "m1.w4.d4.full_chord_comp",
+  "type": "tab",
+  "meta": { "title": "Full-chord shell comp (ii-V-I) — staff + tab", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "C", "tempoBpm": 78, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 5, "fret": 5, "duration": "quarter", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 3, "fret": 5, "role": "target", "label": "b7" }, { "string": 2, "fret": 6, "role": "target", "label": "b3" }] },
+      { "string": 5, "fret": 5, "duration": "eighth", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 3, "fret": 5, "role": "target", "label": "b7" }, { "string": 2, "fret": 6, "role": "target", "label": "b3" }] },
+      { "string": 5, "fret": 5, "duration": "eighth", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 3, "fret": 5, "role": "target", "label": "b7" }, { "string": 2, "fret": 6, "role": "target", "label": "b3" }] },
+      { "string": 5, "fret": 5, "duration": "half", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 3, "fret": 5, "role": "target", "label": "b7" }, { "string": 2, "fret": 6, "role": "target", "label": "b3" }] }
+    ]},
+    { "measure": 2, "notes": [
+      { "string": 6, "fret": 3, "duration": "quarter", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 4, "fret": 3, "role": "target", "label": "b7" }, { "string": 3, "fret": 4, "role": "target", "label": "3" }] },
+      { "string": 6, "fret": 3, "duration": "eighth", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 4, "fret": 3, "role": "target", "label": "b7" }, { "string": 3, "fret": 4, "role": "target", "label": "3" }] },
+      { "string": 6, "fret": 3, "duration": "eighth", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 4, "fret": 3, "role": "target", "label": "b7" }, { "string": 3, "fret": 4, "role": "target", "label": "3" }] },
+      { "string": 6, "fret": 3, "duration": "half", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 4, "fret": 3, "role": "target", "label": "b7" }, { "string": 3, "fret": 4, "role": "target", "label": "3" }] }
+    ]},
+    { "measure": 3, "notes": [
+      { "string": 5, "fret": 3, "duration": "quarter", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 3, "fret": 4, "role": "target", "label": "7" }, { "string": 2, "fret": 5, "role": "target", "label": "3" }] },
+      { "string": 5, "fret": 3, "duration": "eighth", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 3, "fret": 4, "role": "target", "label": "7" }, { "string": 2, "fret": 5, "role": "target", "label": "3" }] },
+      { "string": 5, "fret": 3, "duration": "eighth", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 3, "fret": 4, "role": "target", "label": "7" }, { "string": 2, "fret": 5, "role": "target", "label": "3" }] },
+      { "string": 5, "fret": 3, "duration": "half", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 3, "fret": 4, "role": "target", "label": "7" }, { "string": 2, "fret": 5, "role": "target", "label": "3" }] }
+    ]}
+  ]}
+}
+```
+
+▶ **BPM 78。** 例2と同じリズムで、今度はシェルコード全体で。ルート+ガイドトーンのコンピングに慣れたら、こちらへ。
+
 ## ③ 今日の練習（50分ルーティン）
 
 **0〜10分 · ウォームアップ**

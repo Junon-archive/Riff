@@ -119,6 +119,38 @@ The three ii–V–I shells. Only the root (blue) and guide tones (green 3rd & 7
 
 ▶ **BPM 78, repeat 4×.** Three-finger chords connected with minimal movement. The month's crystallization — this is pro comping.
 
+**Example 3 — full-chord comping.** Same rhythm as Example 2, but instead of picking the root and guide tones separately, strike the whole shell chord for that bar (Dm7 → G7 → Cmaj7) at once.
+
+```json
+{
+  "id": "m1.w4.d4.full_chord_comp",
+  "type": "tab",
+  "meta": { "title": "Full-chord shell comp (ii-V-I) — staff + tab", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "C", "tempoBpm": 78, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 5, "fret": 5, "duration": "quarter", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 3, "fret": 5, "role": "target", "label": "b7" }, { "string": 2, "fret": 6, "role": "target", "label": "b3" }] },
+      { "string": 5, "fret": 5, "duration": "eighth", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 3, "fret": 5, "role": "target", "label": "b7" }, { "string": 2, "fret": 6, "role": "target", "label": "b3" }] },
+      { "string": 5, "fret": 5, "duration": "eighth", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 3, "fret": 5, "role": "target", "label": "b7" }, { "string": 2, "fret": 6, "role": "target", "label": "b3" }] },
+      { "string": 5, "fret": 5, "duration": "half", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 3, "fret": 5, "role": "target", "label": "b7" }, { "string": 2, "fret": 6, "role": "target", "label": "b3" }] }
+    ]},
+    { "measure": 2, "notes": [
+      { "string": 6, "fret": 3, "duration": "quarter", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 4, "fret": 3, "role": "target", "label": "b7" }, { "string": 3, "fret": 4, "role": "target", "label": "3" }] },
+      { "string": 6, "fret": 3, "duration": "eighth", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 4, "fret": 3, "role": "target", "label": "b7" }, { "string": 3, "fret": 4, "role": "target", "label": "3" }] },
+      { "string": 6, "fret": 3, "duration": "eighth", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 4, "fret": 3, "role": "target", "label": "b7" }, { "string": 3, "fret": 4, "role": "target", "label": "3" }] },
+      { "string": 6, "fret": 3, "duration": "half", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 4, "fret": 3, "role": "target", "label": "b7" }, { "string": 3, "fret": 4, "role": "target", "label": "3" }] }
+    ]},
+    { "measure": 3, "notes": [
+      { "string": 5, "fret": 3, "duration": "quarter", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 3, "fret": 4, "role": "target", "label": "7" }, { "string": 2, "fret": 5, "role": "target", "label": "3" }] },
+      { "string": 5, "fret": 3, "duration": "eighth", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 3, "fret": 4, "role": "target", "label": "7" }, { "string": 2, "fret": 5, "role": "target", "label": "3" }] },
+      { "string": 5, "fret": 3, "duration": "eighth", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 3, "fret": 4, "role": "target", "label": "7" }, { "string": 2, "fret": 5, "role": "target", "label": "3" }] },
+      { "string": 5, "fret": 3, "duration": "half", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 3, "fret": 4, "role": "target", "label": "7" }, { "string": 2, "fret": 5, "role": "target", "label": "3" }] }
+    ]}
+  ]}
+}
+```
+
+▶ **BPM 78.** Same rhythm as Example 2, now with the whole shell chord. Once the root + guide-tone comp feels comfortable, move on to this.
+
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
