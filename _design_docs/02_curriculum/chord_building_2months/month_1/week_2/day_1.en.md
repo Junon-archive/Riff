@@ -97,10 +97,10 @@ And **the 6th string is unused.** Here a new A-form habit is born — **killing 
     "timeSignature": "4/4",
     "measures": [
       { "measure": 1, "notes": [
-        { "string": 5, "fret": 3, "duration": "quarter", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 5, "fret": 3, "duration": "quarter", "label": "R", "isRoot": true, "role": "root", "chord": [{ "string": 4, "fret": 5, "role": "chord_tone", "label": "5" }, { "string": 3, "fret": 5, "role": "root", "label": "R" }, { "string": 2, "fret": 5, "role": "target", "label": "3" }] },
         { "string": 5, "fret": 3, "duration": "eighth", "rest": true },
-        { "string": 5, "fret": 3, "duration": "eighth", "label": "R", "technique": "palm_mute", "isRoot": true, "role": "root" },
-        { "string": 5, "fret": 3, "duration": "quarter", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 5, "fret": 3, "duration": "eighth", "label": "R", "technique": "palm_mute", "isRoot": true, "role": "root", "chord": [{ "string": 4, "fret": 5, "role": "chord_tone", "label": "5" }, { "string": 3, "fret": 5, "role": "root", "label": "R" }, { "string": 2, "fret": 5, "role": "target", "label": "3" }] },
+        { "string": 5, "fret": 3, "duration": "quarter", "label": "R", "isRoot": true, "role": "root", "chord": [{ "string": 4, "fret": 5, "role": "chord_tone", "label": "5" }, { "string": 3, "fret": 5, "role": "root", "label": "R" }, { "string": 2, "fret": 5, "role": "target", "label": "3" }] },
         { "string": 5, "fret": 3, "duration": "quarter", "rest": true }
       ]}
     ]
