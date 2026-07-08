@@ -80,16 +80,16 @@ Week recap: the root went up to the 4th string, opening the high register, and y
   "meta": { "title": "G-A high-register vamp — staff + tab", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "A", "tempoBpm": 82, "notation": "staff+tab" },
   "tab": { "timeSignature": "4/4", "measures": [
     { "measure": 1, "notes": [
-      { "string": 4, "fret": 5, "duration": "quarter", "label": "R", "isRoot": true, "role": "root" },
-      { "string": 1, "fret": 7, "duration": "eighth", "label": "3", "role": "target", "highlight": true },
-      { "string": 3, "fret": 7, "duration": "eighth", "label": "5", "role": "chord_tone" },
-      { "string": 4, "fret": 5, "duration": "half", "label": "R", "isRoot": true, "role": "root" }
+      { "string": 4, "fret": 5, "duration": "quarter", "label": "R", "isRoot": true, "role": "root", "chord": [{ "string": 3, "fret": 7, "role": "chord_tone", "label": "5" }, { "string": 2, "fret": 8, "role": "root", "label": "R" }, { "string": 1, "fret": 7, "role": "target", "label": "3" }] },
+      { "string": 4, "fret": 5, "duration": "eighth", "role": "root", "label": "R", "chord": [{ "string": 3, "fret": 7, "role": "chord_tone", "label": "5" }, { "string": 2, "fret": 8, "role": "root", "label": "R" }, { "string": 1, "fret": 7, "role": "target", "label": "3" }] },
+      { "string": 4, "fret": 5, "duration": "eighth", "role": "root", "label": "R", "chord": [{ "string": 3, "fret": 7, "role": "chord_tone", "label": "5" }, { "string": 2, "fret": 8, "role": "root", "label": "R" }, { "string": 1, "fret": 7, "role": "target", "label": "3" }] },
+      { "string": 4, "fret": 5, "duration": "half", "label": "R", "isRoot": true, "role": "root", "chord": [{ "string": 3, "fret": 7, "role": "chord_tone", "label": "5" }, { "string": 2, "fret": 8, "role": "root", "label": "R" }, { "string": 1, "fret": 7, "role": "target", "label": "3" }] }
     ]},
     { "measure": 2, "notes": [
-      { "string": 4, "fret": 7, "duration": "quarter", "label": "R", "isRoot": true, "role": "root" },
-      { "string": 1, "fret": 9, "duration": "eighth", "label": "3", "role": "target", "highlight": true },
-      { "string": 3, "fret": 9, "duration": "eighth", "label": "5", "role": "chord_tone" },
-      { "string": 4, "fret": 7, "duration": "half", "label": "R", "isRoot": true, "role": "root" }
+      { "string": 4, "fret": 7, "duration": "quarter", "label": "R", "isRoot": true, "role": "root", "chord": [{ "string": 3, "fret": 9, "role": "chord_tone", "label": "5" }, { "string": 2, "fret": 10, "role": "root", "label": "R" }, { "string": 1, "fret": 9, "role": "target", "label": "3" }] },
+      { "string": 4, "fret": 7, "duration": "eighth", "role": "root", "label": "R", "chord": [{ "string": 3, "fret": 9, "role": "chord_tone", "label": "5" }, { "string": 2, "fret": 10, "role": "root", "label": "R" }, { "string": 1, "fret": 9, "role": "target", "label": "3" }] },
+      { "string": 4, "fret": 7, "duration": "eighth", "role": "root", "label": "R", "chord": [{ "string": 3, "fret": 9, "role": "chord_tone", "label": "5" }, { "string": 2, "fret": 10, "role": "root", "label": "R" }, { "string": 1, "fret": 9, "role": "target", "label": "3" }] },
+      { "string": 4, "fret": 7, "duration": "half", "label": "R", "isRoot": true, "role": "root", "chord": [{ "string": 3, "fret": 9, "role": "chord_tone", "label": "5" }, { "string": 2, "fret": 10, "role": "root", "label": "R" }, { "string": 1, "fret": 9, "role": "target", "label": "3" }] }
     ]}
   ]}
 }
