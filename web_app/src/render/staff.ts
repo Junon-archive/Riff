@@ -139,15 +139,34 @@ function pitchOf(str: number, fret: number, flats: boolean): { key: string; acc:
   return { key: `${name}/${writtenOctave}`, acc };
 }
 
-/** role → 강조색(tab.ts accentColor 와 동일 팔레트). 없으면 null(=currentColor). */
-function roleColor(n: TabNoteData): string | null {
-  const role: NoteRole | undefined = n.role;
-  if (role === 'root' || role === 'chord_tone') return 'var(--primary, #3182F6)';
+/** role/isRoot → 강조색(tab.ts accentColor·color_legend.md 와 동일 팔레트). 없으면 null(=currentColor). */
+interface ColorSource {
+  role?: NoteRole;
+  target?: boolean;
+  highlight?: boolean;
+  isRoot?: boolean;
+}
+function roleColor(n: ColorSource): string | null {
+  const role = n.role;
+  if (role === 'root' || role === 'chord_tone' || n.isRoot) return 'var(--primary, #3182F6)';
   if (role === 'target' || n.target) return 'var(--green-500, #12B886)';
   if (role === 'color') return 'var(--yellow-500, #FFC043)';
   if (role === 'blue_note') return 'var(--rn-blue-note, #7048E8)';
   if (role === 'scale' || role === 'passing') return null;
   if (n.highlight) return 'var(--green-500, #12B886)';
+  return null;
+}
+
+/**
+ * 화음 타브 note-level 단색(TabNote 는 position별 색 불가 — tabnote.js applyStyle 은 note 단위).
+ * 우선순위: highlight/target(초록) → root(파랑) → color(노랑) → chord_tone(파랑) → scale(색없음).
+ */
+function tabChordColor(entries: ColorSource[]): string | null {
+  if (entries.some((e) => e.highlight || e.target || e.role === 'target'))
+    return 'var(--green-500, #12B886)';
+  if (entries.some((e) => e.role === 'root' || e.isRoot)) return 'var(--primary, #3182F6)';
+  if (entries.some((e) => e.role === 'color')) return 'var(--yellow-500, #FFC043)';
+  if (entries.some((e) => e.role === 'chord_tone')) return 'var(--primary, #3182F6)';
   return null;
 }
 
@@ -175,36 +194,40 @@ function postProcess(svg: string, title: string, w: number, h: number): string {
  */
 const MIDDLE_LINE = 3; // 가운데 줄 = written B4
 
-function noteLine(sNote: StaveNote): number {
-  const kp = sNote.getKeyProps();
-  return kp.length ? kp[kp.length - 1]!.line : MIDDLE_LINE;
+/** 한 StaveNote 의 모든 키(화음이면 복수)의 오선 line 목록. */
+function noteLines(sNote: StaveNote): number[] {
+  return sNote.getKeyProps().map((kp) => kp.line);
 }
 
-/** 단음 stem 방향(line 기준). B4(가운데 줄) 포함 위쪽 → DOWN. */
-function singleStemDir(line: number): number {
-  return line >= MIDDLE_LINE ? Stem.DOWN : Stem.UP;
-}
-
-/** 빔 그룹 통일 방향: 가운데 줄에서 가장 먼 음이 결정, 동거리면 다수결, 동점이면 DOWN. */
-function groupStemDir(notes: StaveNote[]): number {
+/**
+ * 여러 line 에서 stem 방향 결정(단음·화음·빔 그룹 공통).
+ * 가운데 줄(B4=3)에서 가장 먼 음이 방향을 정한다(위→DOWN, 아래→UP). 거리는 오선 line 기준(반음 아님).
+ * 위/아래 동거리면 다수결, 그래도 동점이면 DOWN.
+ */
+function dirFromLines(lines: number[]): number {
   let maxLine = -Infinity;
   let minLine = Infinity;
   let nDown = 0;
   let nUp = 0;
-  for (const nt of notes) {
-    const line = noteLine(nt);
+  for (const line of lines) {
     if (line > maxLine) maxLine = line;
     if (line < minLine) minLine = line;
     if (line >= MIDDLE_LINE) nDown++;
     else nUp++;
   }
-  const farAbove = Math.max(0, maxLine - MIDDLE_LINE); // 가운데 줄 위로 가장 먼 거리
-  const farBelow = Math.max(0, MIDDLE_LINE - minLine); // 가운데 줄 아래로 가장 먼 거리
+  if (!Number.isFinite(maxLine)) return Stem.DOWN;
+  const farAbove = Math.max(0, maxLine - MIDDLE_LINE);
+  const farBelow = Math.max(0, MIDDLE_LINE - minLine);
   if (farAbove > farBelow) return Stem.DOWN;
   if (farBelow > farAbove) return Stem.UP;
   if (nDown > nUp) return Stem.DOWN;
   if (nUp > nDown) return Stem.UP;
   return Stem.DOWN; // 동점 → 관례상 DOWN
+}
+
+/** 빔 그룹 통일 방향: 그룹 내 모든 음표의 모든 키를 대상으로 dirFromLines. */
+function groupStemDir(notes: StaveNote[]): number {
+  return dirFromLines(notes.flatMap(noteLines));
 }
 
 /* ---- 한 마디의 tickable 묶음 ----------------------------------------- */
@@ -248,30 +271,63 @@ function buildMeasure(m: Measure, flats: boolean): BuiltMeasure {
     const fret = n.fret;
     if (typeof s !== 'number' || s < 1 || s > 6 || typeof fret !== 'number') continue;
 
-    // 데드 노트(음정 없는 뮤트 타격음): 오선보 노트헤드를 X 글리프로(키 3번째 파트 → tables.js keyProperties),
-    // 타브는 프렛 숫자 대신 "X"(tabToGlyphProps 'X'). 세로 위치·색·stem·beam 은 일반 음표와 동일.
     const dead = n.technique === 'dead_note';
-    const { key, acc } = pitchOf(s, fret, flats);
     const dotted = !!n.dotted;
-    const staffKey = dead ? `${key}/x` : key;
-    const sNote = new StaveNote({ keys: [staffKey], duration: durCode + (dotted ? 'd' : '') });
-    // ★음정 없는 데드 노트에는 임시표(#/♭)를 붙이지 않는다(모순 방지).
-    if (acc && !dead) sNote.addModifier(new Accidental(acc), 0);
+    const durTok = durCode + (dotted ? 'd' : '');
+    // 화음(동시타): 대표음(string/fret) + n.chord[]. 데드 노트엔 화음 미적용.
+    const chordExtra = !dead && Array.isArray(n.chord) && n.chord.length ? n.chord : null;
+
+    // ★VexFlow 요소 생성 순서(StaveNote → Accidental → Dot → Annotation → TabNote)가 vf-auto ID 에
+    //   영향하므로, 단음 경로는 기존 순서를 그대로 유지한다(TabNote 는 Dot/P.M. 뒤에 마지막 생성).
+    let sNote: StaveNote;
+    let tabPositions: { str: number; fret: number | string }[];
+    let tabCol: string;
+    if (chordExtra) {
+      // 대표음(index 0) + 추가 음. VexFlow: keys[i] ↔ setKeyStyle(i) ↔ Accidental index 동일
+      // (_noteHeads[sortedKeyProps[i].index], stavenote.js:360/608 — 원래 keys 인덱스로 색인).
+      const entries = [
+        { string: s, fret, role: n.role, target: n.target, highlight: n.highlight },
+        ...chordExtra,
+      ];
+      const pitches = entries.map((e) => pitchOf(e.string, e.fret, flats));
+      sNote = new StaveNote({ keys: pitches.map((p) => p.key), duration: durTok });
+      pitches.forEach((p, i) => {
+        if (p.acc) sNote.addModifier(new Accidental(p.acc), i);
+      });
+      // 노트헤드별 role 색(setKeyStyle). stem 은 대표음 색(note-level setStyle).
+      const repCol = roleColor(entries[0]!) ?? 'currentColor';
+      sNote.setStyle({ fillStyle: repCol, strokeStyle: repCol });
+      entries.forEach((e, i) => {
+        const c = roleColor(e) ?? 'currentColor';
+        sNote.setKeyStyle(i, { fillStyle: c, strokeStyle: c });
+      });
+      // 타브: 프렛 스택. TabNote 는 position별 색 불가 → note-level 단색(우선순위).
+      tabPositions = entries.map((e) => ({ str: e.string, fret: e.fret as number | string }));
+      tabCol = tabChordColor(entries) ?? 'currentColor';
+    } else {
+      // 단음. 데드 노트는 오선보 X 글리프(키 3번째 파트) + 타브 "X", 임시표 억제.
+      const { key, acc } = pitchOf(s, fret, flats);
+      const staffKey = dead ? `${key}/x` : key;
+      sNote = new StaveNote({ keys: [staffKey], duration: durTok });
+      if (acc && !dead) sNote.addModifier(new Accidental(acc), 0);
+      tabCol = roleColor(n) ?? 'currentColor';
+      sNote.setStyle({ fillStyle: tabCol, strokeStyle: tabCol });
+      tabPositions = [{ str: s, fret: dead ? 'X' : fret }];
+    }
+
     if (dotted) Dot.buildAndAttach([sNote], { all: true });
-    // 팜뮤트(음정 있는 실음): 오선보 위에 "P.M." 주석. (데드 노트=음정 없음과 구분 — dead_note 는 X.)
+    // 팜뮤트(음정 있는 실음): 오선보 위에 "P.M." 주석. (데드 노트=음정 없음과 구분.)
     if (n.technique === 'palm_mute' && !dead) {
       const pm = new Annotation('P.M.');
       pm.setVerticalJustification(Annotation.VerticalJustify.TOP);
       sNote.addModifier(pm, 0);
     }
-    // 단음 기본 방향(그려지는 라인 기준). 빔에 묶이면 flush() 에서 그룹 방향으로 덮어쓴다.
-    sNote.setStemDirection(singleStemDir(noteLine(sNote)));
+    // stem 방향: 단음·화음 공통(모든 키의 line 에서 결정). 빔에 묶이면 flush() 에서 덮어쓴다.
+    sNote.setStemDirection(dirFromLines(noteLines(sNote)));
 
-    const tNote = new TabNote({ positions: [{ str: s, fret: dead ? 'X' : fret }], duration: durCode });
-
-    const col = roleColor(n) ?? 'currentColor';
-    sNote.setStyle({ fillStyle: col, strokeStyle: col });
-    tNote.setStyle({ fillStyle: col, strokeStyle: col });
+    // TabNote 는 마지막에 생성(요소 생성 순서 = 기존과 동일 → 단음 산출물 바이트 불변).
+    const tNote = new TabNote({ positions: tabPositions, duration: durCode });
+    tNote.setStyle({ fillStyle: tabCol, strokeStyle: tabCol });
 
     stave.push(sNote);
     tab.push(tNote);
@@ -320,12 +376,17 @@ export function renderStaff(score: Score, mode: StaffMode): string {
     // 저음 아래(렛저라인)만큼 타브를 내리고, 고음 위만큼 상단 여백을 확보한다.
     let minMidi = 999;
     let maxMidi = 0;
+    const scanMidi = (str: unknown, fr: unknown) => {
+      if (typeof str !== 'number' || typeof fr !== 'number') return;
+      const md = (OPEN_MIDI[str] ?? 40) + fr;
+      if (md < minMidi) minMidi = md;
+      if (md > maxMidi) maxMidi = md;
+    };
     for (const m of tabData.measures as Measure[]) {
       for (const n of Array.isArray(m.notes) ? m.notes : []) {
-        if (n.rest || typeof n.string !== 'number' || typeof n.fret !== 'number') continue;
-        const md = (OPEN_MIDI[n.string] ?? 40) + n.fret;
-        if (md < minMidi) minMidi = md;
-        if (md > maxMidi) maxMidi = md;
+        if (n.rest) continue;
+        scanMidi(n.string, n.fret);
+        if (Array.isArray(n.chord)) for (const c of n.chord) scanMidi(c.string, c.fret); // 화음 음역 포함
       }
     }
     if (minMidi === 999) {

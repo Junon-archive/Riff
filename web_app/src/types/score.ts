@@ -95,6 +95,19 @@ export interface Fretboard {
   barre?: Barre[];
 }
 
+/**
+ * 화음(동시타)의 추가 음. 대표음(TabNote.string/fret)과 같은 박에 동시에 울리는 음들.
+ * 오선보는 노트헤드별 role 색으로, 타브는 프렛 스택(단색)으로 렌더된다.
+ */
+export interface ChordNote {
+  string: number;
+  fret: number;
+  role?: NoteRole;
+  label?: string;
+  isRoot?: boolean;
+  highlight?: boolean;
+}
+
 /** 타브 음표. rest=true 이면 string/fret 은 자리채움용으로 무시하고 duration 만큼 공백 렌더. */
 export interface TabNote {
   string: number;
@@ -103,6 +116,8 @@ export interface TabNote {
   dotted?: boolean;
   rest?: boolean;
   technique?: Technique;
+  /** 화음(동시타): 대표음(string/fret) 위에 함께 울리는 추가 음들. 없으면 단음. */
+  chord?: ChordNote[];
   /** technique=slide 일 때 도착 프렛 */
   slideToFret?: number;
   /** technique=bend 일 때 도착 목표. 예: 'half'(반음), 'full'(온음), 도착 도수 '5' */
