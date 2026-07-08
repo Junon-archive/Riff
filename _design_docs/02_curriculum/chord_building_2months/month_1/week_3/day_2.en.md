@@ -81,6 +81,35 @@ The middle chord, **G7 (V, 6th-string root)** — the bridge connecting the ii a
 
 ▶ **BPM 74.** Alternate the root (5·6·5) and the 3rd-string guide tone (5·4·4). Confirm the guide tone barely moves and repeat 4×. Then strum the whole chords.
 
+**Example 3 — full-chord comping.** Same rhythm as Example 2, but now each hit rings the whole chord for that bar (Dm7 → G7 → Cmaj7) instead of just the root.
+
+```json
+{
+  "id": "m1.w3.d2.full_chord_comp",
+  "type": "tab",
+  "meta": { "title": "Full-chord comp (ii-V-I) — staff + tab", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "C", "tempoBpm": 74, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 5, "fret": 5, "duration": "quarter", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 4, "fret": 7, "role": "chord_tone", "label": "5" }, { "string": 3, "fret": 5, "role": "target", "label": "b7" }, { "string": 2, "fret": 6, "role": "target", "label": "b3" }] },
+      { "string": 5, "fret": 5, "duration": "quarter", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 4, "fret": 7, "role": "chord_tone", "label": "5" }, { "string": 3, "fret": 5, "role": "target", "label": "b7" }, { "string": 2, "fret": 6, "role": "target", "label": "b3" }] },
+      { "string": 5, "fret": 5, "duration": "half", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 4, "fret": 7, "role": "chord_tone", "label": "5" }, { "string": 3, "fret": 5, "role": "target", "label": "b7" }, { "string": 2, "fret": 6, "role": "target", "label": "b3" }] }
+    ]},
+    { "measure": 2, "notes": [
+      { "string": 6, "fret": 3, "duration": "quarter", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 5, "fret": 5, "role": "chord_tone", "label": "5" }, { "string": 4, "fret": 3, "role": "target", "label": "b7" }, { "string": 3, "fret": 4, "role": "target", "label": "3" }, { "string": 2, "fret": 3, "role": "chord_tone", "label": "5" }, { "string": 1, "fret": 3, "role": "root", "label": "R" }] },
+      { "string": 6, "fret": 3, "duration": "quarter", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 5, "fret": 5, "role": "chord_tone", "label": "5" }, { "string": 4, "fret": 3, "role": "target", "label": "b7" }, { "string": 3, "fret": 4, "role": "target", "label": "3" }, { "string": 2, "fret": 3, "role": "chord_tone", "label": "5" }, { "string": 1, "fret": 3, "role": "root", "label": "R" }] },
+      { "string": 6, "fret": 3, "duration": "half", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 5, "fret": 5, "role": "chord_tone", "label": "5" }, { "string": 4, "fret": 3, "role": "target", "label": "b7" }, { "string": 3, "fret": 4, "role": "target", "label": "3" }, { "string": 2, "fret": 3, "role": "chord_tone", "label": "5" }, { "string": 1, "fret": 3, "role": "root", "label": "R" }] }
+    ]},
+    { "measure": 3, "notes": [
+      { "string": 5, "fret": 3, "duration": "quarter", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 4, "fret": 5, "role": "chord_tone", "label": "5" }, { "string": 3, "fret": 4, "role": "target", "label": "7" }, { "string": 2, "fret": 5, "role": "target", "label": "3" }] },
+      { "string": 5, "fret": 3, "duration": "quarter", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 4, "fret": 5, "role": "chord_tone", "label": "5" }, { "string": 3, "fret": 4, "role": "target", "label": "7" }, { "string": 2, "fret": 5, "role": "target", "label": "3" }] },
+      { "string": 5, "fret": 3, "duration": "half", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 4, "fret": 5, "role": "chord_tone", "label": "5" }, { "string": 3, "fret": 4, "role": "target", "label": "7" }, { "string": 2, "fret": 5, "role": "target", "label": "3" }] }
+    ]}
+  ]}
+}
+```
+
+▶ **BPM 74.** Same rhythm as Example 2, now with the whole chord. Once root comping feels natural, move on to this.
+
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
@@ -90,7 +119,7 @@ Play Dm7 → G7 → Cmaj7 in order in one region. Say the root string (5·6·5) 
 Fret both **Example 1** (2nd string 6→6→5) and yesterday's 3rd string (5→4→4). Watch both lines slide almost in place at once.
 
 **20–40 min · Real comping (Example 2 / 70–80 BPM)**
-**Repeat Example 2 at BPM 74 4×.** Feel with your hand that the root travels but the guide tone stays close. Then comp the three whole chords smoothly connected. If your hand leaves the region, it's a fail.
+**Repeat Example 2 at BPM 74 4×.** Feel with your hand that the root travels but the guide tone stays close. Then comp the three whole chords smoothly connected (Example 3). If your hand leaves the region, it's a fail.
 
 **40–50 min · Record & reflect (recommended)**
 Record 30 seconds of ii–V–I. Check: is hand jump minimal at the changes, and do the guide tones connect smoothly?

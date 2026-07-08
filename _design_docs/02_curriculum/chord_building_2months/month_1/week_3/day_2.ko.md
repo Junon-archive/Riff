@@ -81,6 +81,35 @@ i18nKey: "lesson.m1.w3.d2"
 
 ▶ **BPM 74.** 근음(5·6·5)과 3번 줄 가이드톤(5·4·4)을 번갈아. 가이드톤이 거의 안 움직이는 걸 확인하며 4번 반복. 익으면 코드 전체 스트로크로.
 
+**예제 3 — 코드 전체 컴핑.** 예제 2와 같은 리듬인데, 이번엔 근음 한 음 대신 그 마디의 코드 전체(Dm7 → G7 → Cmaj7)를 울려요.
+
+```json
+{
+  "id": "m1.w3.d2.full_chord_comp",
+  "type": "tab",
+  "meta": { "title": "Full-chord comp (ii-V-I) — staff + tab", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "C", "tempoBpm": 74, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 5, "fret": 5, "duration": "quarter", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 4, "fret": 7, "role": "chord_tone", "label": "5" }, { "string": 3, "fret": 5, "role": "target", "label": "b7" }, { "string": 2, "fret": 6, "role": "target", "label": "b3" }] },
+      { "string": 5, "fret": 5, "duration": "quarter", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 4, "fret": 7, "role": "chord_tone", "label": "5" }, { "string": 3, "fret": 5, "role": "target", "label": "b7" }, { "string": 2, "fret": 6, "role": "target", "label": "b3" }] },
+      { "string": 5, "fret": 5, "duration": "half", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 4, "fret": 7, "role": "chord_tone", "label": "5" }, { "string": 3, "fret": 5, "role": "target", "label": "b7" }, { "string": 2, "fret": 6, "role": "target", "label": "b3" }] }
+    ]},
+    { "measure": 2, "notes": [
+      { "string": 6, "fret": 3, "duration": "quarter", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 5, "fret": 5, "role": "chord_tone", "label": "5" }, { "string": 4, "fret": 3, "role": "target", "label": "b7" }, { "string": 3, "fret": 4, "role": "target", "label": "3" }, { "string": 2, "fret": 3, "role": "chord_tone", "label": "5" }, { "string": 1, "fret": 3, "role": "root", "label": "R" }] },
+      { "string": 6, "fret": 3, "duration": "quarter", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 5, "fret": 5, "role": "chord_tone", "label": "5" }, { "string": 4, "fret": 3, "role": "target", "label": "b7" }, { "string": 3, "fret": 4, "role": "target", "label": "3" }, { "string": 2, "fret": 3, "role": "chord_tone", "label": "5" }, { "string": 1, "fret": 3, "role": "root", "label": "R" }] },
+      { "string": 6, "fret": 3, "duration": "half", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 5, "fret": 5, "role": "chord_tone", "label": "5" }, { "string": 4, "fret": 3, "role": "target", "label": "b7" }, { "string": 3, "fret": 4, "role": "target", "label": "3" }, { "string": 2, "fret": 3, "role": "chord_tone", "label": "5" }, { "string": 1, "fret": 3, "role": "root", "label": "R" }] }
+    ]},
+    { "measure": 3, "notes": [
+      { "string": 5, "fret": 3, "duration": "quarter", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 4, "fret": 5, "role": "chord_tone", "label": "5" }, { "string": 3, "fret": 4, "role": "target", "label": "7" }, { "string": 2, "fret": 5, "role": "target", "label": "3" }] },
+      { "string": 5, "fret": 3, "duration": "quarter", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 4, "fret": 5, "role": "chord_tone", "label": "5" }, { "string": 3, "fret": 4, "role": "target", "label": "7" }, { "string": 2, "fret": 5, "role": "target", "label": "3" }] },
+      { "string": 5, "fret": 3, "duration": "half", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 4, "fret": 5, "role": "chord_tone", "label": "5" }, { "string": 3, "fret": 4, "role": "target", "label": "7" }, { "string": 2, "fret": 5, "role": "target", "label": "3" }] }
+    ]}
+  ]}
+}
+```
+
+▶ **BPM 74.** 예제 2와 같은 리듬, 이번엔 코드 전체로. 근음 컴핑이 손에 붙었으면 이걸로 넘어가요.
+
 ## ③ 오늘의 연습 (50분 루틴)
 
 **0~10분 · 워밍업**
@@ -90,7 +119,7 @@ Dm7 → G7 → Cmaj7을 한 구역에서 순서대로. 근음 줄이 5·6·5인 
 **예제 1**(2번 줄 6→6→5)과 어제의 3번 줄(5→4→4)을 둘 다 짚어봐요. 두 라인이 동시에 거의 제자리에서 미끄러지는 걸 눈으로 확인.
 
 **20~40분 · 실전 반주 (예제 2 컴핑 / 70~80 BPM)**
-**예제 2를 BPM 74에서 4번 반복.** 근음은 오가도 가이드톤은 붙어 있음을 손으로. 익으면 세 코드 전체를 부드럽게 이어 컴핑. 손이 한 구역을 벗어나면 실패.
+**예제 2를 BPM 74에서 4번 반복.** 근음은 오가도 가이드톤은 붙어 있음을 손으로. 익으면 세 코드 전체를 부드럽게 이어 컴핑(예제 3). 손이 한 구역을 벗어나면 실패.
 
 **40~50분 · 녹음/셀프 피드백 (권장)**
 II-V-I 30초 녹음. 체크: 전환 시 손 점프가 최소인지, 가이드톤이 매끄럽게 이어지는지.
