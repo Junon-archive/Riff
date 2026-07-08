@@ -106,6 +106,40 @@ i18nKey: "lesson.m2.w7.d3"
 
 ▶ **BPM 76, 4번 반복.** 탑의 C-B-A-G는 그대로 노래하고, 아래 C-G-F-C가 받쳐줘요. 멜로디를 먼저 부르고 코드를 얹는 순서를 몸으로.
 
+**예제 3 — 코드 전체 컴핑.** 멜로디에 입혔던 C - G - F - C를, 이번엔 트라이어드 전체로 울려요. 탑노트 멜로디(C-B-A-G)는 화음 맨 위에서 그대로 노래해요.
+
+```json
+{
+  "id": "m2.w7.d3.full_chord_comp",
+  "type": "tab",
+  "meta": { "title": "Full triad comp (harmonize C-G-F-C) — staff + tab", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "C", "tempoBpm": 76, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 3, "fret": 9, "duration": "quarter", "role": "chord_tone", "label": "3", "chord": [{ "string": 2, "fret": 8, "role": "chord_tone", "label": "5" }, { "string": 1, "fret": 8, "role": "target", "label": "R" }] },
+      { "string": 3, "fret": 9, "duration": "half", "role": "chord_tone", "label": "3", "chord": [{ "string": 2, "fret": 8, "role": "chord_tone", "label": "5" }, { "string": 1, "fret": 8, "role": "target", "label": "R" }] },
+      { "string": 3, "fret": 9, "duration": "quarter", "rest": true }
+    ]},
+    { "measure": 2, "notes": [
+      { "string": 3, "fret": 7, "duration": "quarter", "role": "chord_tone", "label": "5", "chord": [{ "string": 2, "fret": 8, "role": "root", "label": "R" }, { "string": 1, "fret": 7, "role": "target", "label": "3" }] },
+      { "string": 3, "fret": 7, "duration": "half", "role": "chord_tone", "label": "5", "chord": [{ "string": 2, "fret": 8, "role": "root", "label": "R" }, { "string": 1, "fret": 7, "role": "target", "label": "3" }] },
+      { "string": 2, "fret": 8, "duration": "quarter", "rest": true }
+    ]},
+    { "measure": 3, "notes": [
+      { "string": 3, "fret": 5, "duration": "quarter", "role": "chord_tone", "label": "5", "chord": [{ "string": 2, "fret": 6, "role": "root", "label": "R" }, { "string": 1, "fret": 5, "role": "target", "label": "3" }] },
+      { "string": 3, "fret": 5, "duration": "half", "role": "chord_tone", "label": "5", "chord": [{ "string": 2, "fret": 6, "role": "root", "label": "R" }, { "string": 1, "fret": 5, "role": "target", "label": "3" }] },
+      { "string": 2, "fret": 6, "duration": "quarter", "rest": true }
+    ]},
+    { "measure": 4, "notes": [
+      { "string": 3, "fret": 5, "duration": "quarter", "role": "root", "label": "R", "chord": [{ "string": 2, "fret": 5, "role": "chord_tone", "label": "3" }, { "string": 1, "fret": 3, "role": "target", "label": "5" }] },
+      { "string": 3, "fret": 5, "duration": "half", "role": "root", "label": "R", "chord": [{ "string": 2, "fret": 5, "role": "chord_tone", "label": "3" }, { "string": 1, "fret": 3, "role": "target", "label": "5" }] },
+      { "string": 3, "fret": 5, "duration": "quarter", "rest": true }
+    ]}
+  ]}
+}
+```
+
+▶ **BPM 76.** 예제 2와 같은 리듬, 이번엔 코드 전체로. 멜로디를 받치는 화음이 한층 풍성해져요.
+
 ## ③ 오늘의 연습 (50분 루틴)
 
 **0~10분 · 워밍업**

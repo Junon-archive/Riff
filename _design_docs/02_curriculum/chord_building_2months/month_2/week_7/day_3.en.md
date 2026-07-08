@@ -106,6 +106,40 @@ So the progression is **C - G - F - C.** The same melody changes color depending
 
 ▶ **BPM 76, repeat 4×.** The top C-B-A-G keeps singing while C-G-F-C supports below. Feel the order: sing the melody first, then lay the chords on.
 
+**Example 3 — full-chord comping.** The C - G - F - C you harmonized under the melody now rings as the full triad. The top-note melody (C-B-A-G) still sings on top, unchanged.
+
+```json
+{
+  "id": "m2.w7.d3.full_chord_comp",
+  "type": "tab",
+  "meta": { "title": "Full triad comp (harmonize C-G-F-C) — staff + tab", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "C", "tempoBpm": 76, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 3, "fret": 9, "duration": "quarter", "role": "chord_tone", "label": "3", "chord": [{ "string": 2, "fret": 8, "role": "chord_tone", "label": "5" }, { "string": 1, "fret": 8, "role": "target", "label": "R" }] },
+      { "string": 3, "fret": 9, "duration": "half", "role": "chord_tone", "label": "3", "chord": [{ "string": 2, "fret": 8, "role": "chord_tone", "label": "5" }, { "string": 1, "fret": 8, "role": "target", "label": "R" }] },
+      { "string": 3, "fret": 9, "duration": "quarter", "rest": true }
+    ]},
+    { "measure": 2, "notes": [
+      { "string": 3, "fret": 7, "duration": "quarter", "role": "chord_tone", "label": "5", "chord": [{ "string": 2, "fret": 8, "role": "root", "label": "R" }, { "string": 1, "fret": 7, "role": "target", "label": "3" }] },
+      { "string": 3, "fret": 7, "duration": "half", "role": "chord_tone", "label": "5", "chord": [{ "string": 2, "fret": 8, "role": "root", "label": "R" }, { "string": 1, "fret": 7, "role": "target", "label": "3" }] },
+      { "string": 2, "fret": 8, "duration": "quarter", "rest": true }
+    ]},
+    { "measure": 3, "notes": [
+      { "string": 3, "fret": 5, "duration": "quarter", "role": "chord_tone", "label": "5", "chord": [{ "string": 2, "fret": 6, "role": "root", "label": "R" }, { "string": 1, "fret": 5, "role": "target", "label": "3" }] },
+      { "string": 3, "fret": 5, "duration": "half", "role": "chord_tone", "label": "5", "chord": [{ "string": 2, "fret": 6, "role": "root", "label": "R" }, { "string": 1, "fret": 5, "role": "target", "label": "3" }] },
+      { "string": 2, "fret": 6, "duration": "quarter", "rest": true }
+    ]},
+    { "measure": 4, "notes": [
+      { "string": 3, "fret": 5, "duration": "quarter", "role": "root", "label": "R", "chord": [{ "string": 2, "fret": 5, "role": "chord_tone", "label": "3" }, { "string": 1, "fret": 3, "role": "target", "label": "5" }] },
+      { "string": 3, "fret": 5, "duration": "half", "role": "root", "label": "R", "chord": [{ "string": 2, "fret": 5, "role": "chord_tone", "label": "3" }, { "string": 1, "fret": 3, "role": "target", "label": "5" }] },
+      { "string": 3, "fret": 5, "duration": "quarter", "rest": true }
+    ]}
+  ]}
+}
+```
+
+▶ **BPM 76.** Same rhythm as Example 2, but now the full chord rings. The chords supporting the melody feel richer.
+
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
