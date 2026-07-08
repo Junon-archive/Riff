@@ -21,6 +21,6 @@ const canonicalPath = `/c/${curriculum}/`;
 const title = `${cleanTitle(node.titles[lang])} — ${translate(lang, 'common.app_name')}`;
 ---
 
-<Base lang={lang} title={title} canonicalPath={canonicalPath} backHref={localize(lang, '/')}>
+<Base lang={lang} title={title} canonicalPath={canonicalPath} backHref={localize(lang, '/')} showDonate={false}>
   <CurriculumView lang={lang} curriculumId={curriculum!} />
 </Base>

@@ -2,7 +2,7 @@
 
 > 무료 기타 레슨 웹 서비스. 이 문서는 **현재 구현 상황·변경 로그·다음 작업**을 관리하는 단일 대시보드다.
 > 규칙: 작업이 하나 끝날 때마다 이 파일을 갱신한다(`CLAUDE.md` 고정 규칙).
-> 최종 갱신: 2026-07-07 · **라이브: https://guitar-riff.pages.dev**
+> 최종 갱신: 2026-07-08 · **라이브: https://guitar-riff.pages.dev**
 
 ---
 
@@ -76,6 +76,12 @@
 ---
 
 ## 4. 변경 로그 (Changelog)
+
+### 2026-07-08 (UX — 홈·커리큘럼 페이지에서 '후원하기' 하단 CTA 숨김)
+- **변경:** 랜딩(홈)과 커리큘럼 개요 페이지에서 하단 고정 '후원하기' 진입 버튼(`footer-cta`)을 노출하지 않는다. **후원 진입은 레슨 상세 페이지에서만** 유지(월·커리큘럼 완료 시 자동 도네이션 시트 연출도 그대로).
+- **의도:** 학습 시작 전(홈)·목차 탐색 중(커리큘럼) 화면에서는 후원 부담을 덜고, 실제 레슨을 완료한 맥락에서만 자연스럽게 후원을 안내한다.
+- **구현:** `layouts/Base.astro`에 `showDonate?: boolean` prop 추가(기본 `true`). 하단 `footer-cta`를 `{showDonate && …}`로 감쌈. 홈 2개(`pages/index.astro`·`pages/[lang]/index.astro`) + 커리큘럼 2개(`pages/c/[curriculum]/index.astro`·`pages/[lang]/c/[curriculum]/index.astro`)에서 `showDonate={false}` 전달. `app.ts`는 `#openDonateBtn`을 `closest()` 위임으로만 참조 → 버튼 미렌더 시에도 안전(무영향).
+- **검증:** `astro check` 0 error · `npm run build` exit 0(361페이지) · dist HTML 스캔 — 홈(ko/en)·커리큘럼(ko/ja) `footerCta` 0개, 레슨(ko/en) 1개로 의도대로 분기.
 
 ### 2026-07-07 (버그 수정 — 오선보/타브 렌더러 VexFlow 5→4 전면 이관 + 조판 개선)
 - **증상(누적 리포트):** ① 모든 오선보·타브 글리프가 `.notdef`(□) 로 깨짐. ② 음표 스템이 음표머리에서 떨어져 나옴. ③ 타브가 6줄 중 4줄만 보이고 프렛 숫자 미표시. ④ 마디가 많으면 한 줄에 몰려 너무 작게 표시(가독성↓). ⑤ 16분음표가 한 마디 통짜 빔으로 묶임. ⑥ 오선보 음정↔타브 실제음 위치 불일치 의심.

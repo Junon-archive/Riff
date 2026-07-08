@@ -25,9 +25,11 @@ interface Props {
   backHref?: string;
   /** 색인 제외(404 등 에러 페이지). 기본 false. */
   noindex?: boolean;
+  /** 하단 고정 '후원하기' CTA 노출. 홈·커리큘럼 페이지는 false 로 숨긴다(부담 완화). 기본 true. */
+  showDonate?: boolean;
 }
 
-const { lang, title, description, canonicalPath, backHref, noindex = false } = Astro.props;
+const { lang, title, description, canonicalPath, backHref, noindex = false, showDonate = true } = Astro.props;
 const alts = altUrls(canonicalPath);
 const homeHref = lang === 'ko' ? '/' : `/${lang}/`;
 const desc = description ?? translate(lang, 'home.lead');
@@ -125,10 +127,13 @@ const DONATION_BUTTONS: { channel: DonationChannel; iconClass: string; icon: str
 
       <slot />
 
-      {/* 하단 고정 도네이션 진입 — scripts/app.ts 가 클릭 시 도네이션 시트 open */}
-      <div class="footer-cta" id="footerCta">
-        <button class="btn secondary" id="openDonateBtn">💙 <span>{translate(lang, 'donate.footer')}</span></button>
-      </div>
+      {/* 하단 고정 도네이션 진입 — scripts/app.ts 가 클릭 시 도네이션 시트 open.
+          홈·커리큘럼 페이지(showDonate=false)에서는 숨긴다(레슨 페이지에서만 노출). */}
+      {showDonate && (
+        <div class="footer-cta" id="footerCta">
+          <button class="btn secondary" id="openDonateBtn">💙 <span>{translate(lang, 'donate.footer')}</span></button>
+        </div>
+      )}
     </div>
 
     {/*

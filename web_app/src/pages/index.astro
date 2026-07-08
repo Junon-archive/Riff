@@ -11,6 +11,6 @@ const lang = 'ko';
 const title = `${translate(lang, 'common.app_name')} — ${stripAndTruncate(translate(lang, 'home.title'), 60)}`;
 ---
 
-<Base lang={lang} title={title} canonicalPath="/">
+<Base lang={lang} title={title} canonicalPath="/" showDonate={false}>
   <HomeView lang={lang} />
 </Base>
