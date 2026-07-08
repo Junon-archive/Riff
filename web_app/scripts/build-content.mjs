@@ -137,6 +137,8 @@ function validateScore(score, ctx) {
   if (score.meta.stringCount !== 6) at('meta.stringCount 는 6 고정');
   if (score.meta.notation !== undefined && !NOTATIONS.has(score.meta.notation))
     at(`meta.notation 부정확: ${score.meta.notation}`);
+  // 슬래시 노트헤드 미구현이므로 rhythm(슬래시 악보) 금지. 리듬 컴핑은 staff+tab + chord[] 로 표현한다.
+  if (score.meta.notation === 'rhythm') at('meta.notation:"rhythm" 미지원(슬래시 노트헤드 미구현) — staff+tab 사용');
   if (score.meta.feel !== undefined && !FEELS.has(score.meta.feel))
     at(`meta.feel 부정확: ${score.meta.feel}`);
 
@@ -160,10 +162,19 @@ function validateScore(score, ctx) {
         if (n.stroke !== undefined && !STROKES.has(n.stroke)) at(`note.stroke 부정확: ${n.stroke}`);
         if (n.chord !== undefined) {
           if (!Array.isArray(n.chord)) at('note.chord 는 배열');
+          // 화음은 실음 타점에만. 쉼표·데드노트(음정 없는 뮤트 타격)에는 스택 금지.
+          if (n.rest === true) at('chord[] 는 rest:true 음에 붙을 수 없음');
+          if (n.technique === 'dead_note') at('chord[] 는 dead_note 음에 붙을 수 없음');
+          // 대표음(n)은 그 화음의 최저음 = string 번호가 가장 큼. 같은 string 중복 금지.
+          const seenStr = new Set([n.string]);
           for (const ch of n.chord) {
             if (!(ch.string >= 1 && ch.string <= 6)) at(`chord.string 범위(1~6) 위반: ${ch.string}`);
             if (!(ch.fret >= 0 && ch.fret <= 24)) at(`chord.fret 범위(0~24) 위반: ${ch.fret}`);
             if (ch.role !== undefined && !ROLES.has(ch.role)) at(`chord.role 부정확: ${ch.role}`);
+            if (seenStr.has(ch.string)) at(`화음 내 string 중복: ${ch.string}`);
+            seenStr.add(ch.string);
+            if (ch.string > n.string)
+              at(`대표음이 최저음 아님: 대표 string ${n.string} < chord string ${ch.string}`);
           }
         }
         let u = DUR_UNITS[n.duration] ?? 0;
