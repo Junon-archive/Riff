@@ -24,6 +24,12 @@
     "storage_cta": "Back up · restore progress",
     "philosophy": "<strong>With the right order, anyone can play guitar.</strong><br>That's why every lesson here stays free."
   },
+  "contact": {
+    "title": "Channels",
+    "sub": "Follow along for practice videos and updates",
+    "youtube": "YouTube",
+    "instagram": "Instagram"
+  },
   "curr": {
     "eyebrow": "Curriculum",
     "progress": {

@@ -1,0 +1,85 @@
+---
+/**
+ * ContactSection.astro — 랜딩·커리큘럼 페이지 맨 아래 Contact 블록.
+ * YouTube·Instagram 로고 링크(브랜드 원색 유지, 새 탭). 링크 SSOT = config.ts CONTACT_LINKS.
+ * 문구는 i18n contact.* (하드코딩 금지). 레슨 페이지에는 넣지 않는다(홈/커리큘럼 전용).
+ */
+import { translate } from '../lib/i18n';
+import { CONTACT_LINKS } from '../config';
+import type { Lang } from '../config';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+---
+
+<section class="contact">
+  <h2 class="contact-title">{translate(lang, 'contact.title')}</h2>
+  <p class="contact-sub">{translate(lang, 'contact.sub')}</p>
+  <div class="contact-links">
+    {CONTACT_LINKS.map((c) => (
+      <a
+        class="contact-link"
+        href={c.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={translate(lang, `contact.${c.id}`)}
+      >
+        <img src={c.icon} alt="" width={c.w} height={c.h} loading="lazy" decoding="async" />
+      </a>
+    ))}
+  </div>
+</section>
+
+<style>
+  /* 페이지 맨 아래 소셜 채널 — 잔잔한 중앙 정렬, 상단에 옅은 구분선. */
+  .contact {
+    margin-top: 40px;
+    padding: 32px 16px 8px;
+    border-top: 1px solid var(--line);
+    text-align: center;
+  }
+  .contact-title {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--text);
+  }
+  .contact-sub {
+    margin: 6px 0 0;
+    font-size: 13px;
+    color: var(--text-3);
+  }
+  .contact-links {
+    margin-top: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+  }
+  /* 로고를 감싸는 탭 타깃 — 높이 통일(28px), 폭은 로고 비율대로. */
+  .contact-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 12px;
+    transition: transform 0.15s ease, background 0.15s ease;
+  }
+  .contact-link img {
+    height: 28px;
+    width: auto;
+    display: block;
+  }
+  .contact-link:hover {
+    background: var(--card-sub);
+  }
+  .contact-link:active {
+    transform: scale(0.94);
+  }
+  .contact-link:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+  }
+</style>

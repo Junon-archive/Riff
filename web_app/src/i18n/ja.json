@@ -24,6 +24,12 @@
     "storage_cta": "進捗をバックアップ · 復元",
     "philosophy": "<strong>順番さえあれば、ギターは誰でも弾けます。</strong><br>だからこのサイトのレッスンは、ずっと無料です。"
   },
+  "contact": {
+    "title": "チャンネル",
+    "sub": "練習動画やお知らせはこちらで",
+    "youtube": "YouTube",
+    "instagram": "Instagram"
+  },
   "curr": {
     "eyebrow": "カリキュラム",
     "progress": {

@@ -77,6 +77,12 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-08 (UI — 랜딩·커리큘럼 페이지 하단 Contact 섹션)
+- **변경:** 랜딩(홈)·커리큘럼 개요 페이지 맨 아래에 **Contact 섹션** 추가 — YouTube·Instagram 로고 2개(브랜드 원색)를 새 탭 링크로. 레슨 페이지에는 넣지 않음.
+- **구현:** 재사용 컴포넌트 `components/ContactSection.astro`(스코프 스타일) → `HomeView`·`CurriculumView` 하단에 배치. 링크 SSOT = `config.ts` `CONTACT_LINKS`(운영자 url만 교체, 도네이션 채널과 동일 패턴). 문구 = i18n `contact.{title,sub,youtube,instagram}` 3언어(키셋 정합). 로고 원본(SSOT) `assets/contact/*.png` → 최적화 `public/contact/*.webp`(96px·브랜드색·알파 유지, 각 ≈2.4KB).
+- **접근성:** `aria-label`(YouTube/Instagram), `target=_blank rel=noopener noreferrer`, 이미지 `alt=""`·`loading=lazy`·`width/height`(CLS 방지). 다크모드는 시맨틱 토큰 자동 대응.
+- **검증:** `astro check` 0 error · i18n 3언어 키셋 완전 일치 · `npm run build` exit 0(361p) · dist 스캔 — Contact 홈(ko/ja)·커리큘럼(ko/en) 각 1개, 레슨 0개.
+
 ### 2026-07-08 (오선보/타브 — 데드 노트 X + 팜뮤트 P.M. 렌더 + 렌더 계약 문서화)
 - **팜뮤트 "P.M." 렌더:** `render/staff.ts` 가 `technique:"palm_mute"`(음정 있는 실음) 위에 `Annotation("P.M.")`(role 색) 표기. chord_building의 진짜 팜뮤트 20개가 오선보에 P.M.으로 보인다. (funk의 뮤트 타격음은 앞서 dead_note→X 로 이관됨 — 아래.)
 - **데드 노트 X 이관(선행):** `technique:"dead_note"` 신설 → 오선보 X 노트헤드(`.../x`)·타브 "X"(임시표 없음). funk_rhythm의 뮤트 타격음 991개(×3언어) palm_mute→dead_note 치환(주차별 커밋). chord_building 20개는 진짜 팜뮤트라 유지.

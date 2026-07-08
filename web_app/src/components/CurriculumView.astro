@@ -15,6 +15,7 @@ import { translate } from '../lib/i18n';
 import { findCurriculum, getManifest, isMonthSoon, parseDayKey } from '../lib/content';
 import { lessonPath, localize } from '../lib/urls';
 import { cleanTitle } from '../views/textUtils';
+import ContactSection from './ContactSection.astro';
 import type { Lang } from '../config';
 
 interface Props {
@@ -113,4 +114,6 @@ const firstOpenMonthIndex = curriculum.months.findIndex((m) => !isMonthSoon(m));
       );
     })}
   </div>
+
+  <ContactSection lang={lang} />
 </main>

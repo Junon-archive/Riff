@@ -7,6 +7,7 @@ import { translate } from '../lib/i18n';
 import { getManifest } from '../lib/content';
 import { curriculumPath, localize } from '../lib/urls';
 import { cleanTitle } from '../views/textUtils';
+import ContactSection from './ContactSection.astro';
 import type { Lang } from '../config';
 
 interface Props {
@@ -95,4 +96,6 @@ const showInstrumentFilter = instruments.length >= 2;
   <div class="philosophy">
     <p set:html={translate(lang, 'home.philosophy')}></p>
   </div>
+
+  <ContactSection lang={lang} />
 </main>

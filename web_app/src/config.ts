@@ -84,3 +84,29 @@ export const DONATION_ORDER: Record<Lang, DonationChannel[]> = {
   en: ['paypal', 'kakaopay', 'toss'],
   ja: ['paypal', 'kakaopay', 'toss'],
 };
+
+/**
+ * Contact — 랜딩·커리큘럼 페이지 하단 소셜 채널.
+ * 운영자는 url 만 채우면 된다(플러그앤플레이). 로고는 브랜드 원색 유지(public/contact/*.webp),
+ * aria-label 은 i18n `contact.{id}` 키(고유명사라 3언어 동일값).
+ */
+export interface ContactLink {
+  id: 'youtube' | 'instagram';
+  url: string;
+  /** public 기준 절대경로. */
+  icon: string;
+  /** 이미지 원본 크기(CLS 방지 width/height). */
+  w: number;
+  h: number;
+}
+
+export const CONTACT_LINKS: ContactLink[] = [
+  { id: 'youtube', url: 'https://www.youtube.com/@junon_junon', icon: '/contact/youtube.webp', w: 139, h: 96 },
+  {
+    id: 'instagram',
+    url: 'https://www.instagram.com/junon_archive?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==',
+    icon: '/contact/instagram.webp',
+    w: 96,
+    h: 96,
+  },
+];

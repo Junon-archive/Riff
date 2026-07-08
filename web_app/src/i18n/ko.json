@@ -24,6 +24,12 @@
     "storage_cta": "진도 백업 · 복원하기",
     "philosophy": "<strong>배우는 순서만 있으면, 기타는 누구나 칠 수 있어요.</strong><br>그래서 이 사이트의 모든 강의는 계속 무료입니다."
   },
+  "contact": {
+    "title": "채널",
+    "sub": "연습 영상과 소식은 여기에서 이어가요",
+    "youtube": "YouTube",
+    "instagram": "Instagram"
+  },
   "curr": {
     "eyebrow": "커리큘럼",
     "progress": {
