@@ -59,7 +59,7 @@ i18nKey: "lesson.m2.w7.d4"
 {
   "id": "m2.w7.d4.shuffle_groove",
   "type": "tab",
-  "meta": { "title": "Shuffle-feel groove — SWING the 8ths (2 bars)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E", "tempoBpm": 76, "notation": "staff+tab" },
+  "meta": { "title": "Shuffle-feel groove — SWING the 8ths (2 bars)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E", "tempoBpm": 76, "notation": "staff+tab", "feel": "swing8" },
   "tab": { "timeSignature": "4/4", "measures": [
     { "measure": 1, "notes": [
       { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
