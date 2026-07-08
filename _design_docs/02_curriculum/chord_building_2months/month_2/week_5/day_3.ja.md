@@ -112,6 +112,35 @@ i18nKey: "lesson.m2.w5.d3"
 
 ▶ **BPM 76。** 3か所（トップ R → 3 → 5）を順に。低音を押さえてトップノートをのせ、同じGが場所ごとにどれだけ違って聞こえるか比較して。4回反復。
 
+**例3 — コード全体コンピング。** 例2で低音＋トップノートだけ押さえていた3か所（トップ R → 3 → 5）を、今度はトライアド全体で鳴らします。トップノートはそのまま和音の一番上で歌います。
+
+```json
+{
+  "id": "m2.w5.d3.full_chord_comp",
+  "type": "tab",
+  "meta": { "title": "Full triad comp (3 inversions) — staff + tab", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "G", "tempoBpm": 76, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 3, "fret": 4, "duration": "quarter", "role": "chord_tone", "label": "3", "chord": [{ "string": 2, "fret": 3, "role": "chord_tone", "label": "5" }, { "string": 1, "fret": 3, "role": "target", "label": "R" }] },
+      { "string": 3, "fret": 4, "duration": "half", "role": "chord_tone", "label": "3", "chord": [{ "string": 2, "fret": 3, "role": "chord_tone", "label": "5" }, { "string": 1, "fret": 3, "role": "target", "label": "R" }] },
+      { "string": 3, "fret": 4, "duration": "quarter", "rest": true }
+    ]},
+    { "measure": 2, "notes": [
+      { "string": 3, "fret": 7, "duration": "quarter", "role": "chord_tone", "label": "5", "chord": [{ "string": 2, "fret": 8, "role": "root", "label": "R" }, { "string": 1, "fret": 7, "role": "target", "label": "3" }] },
+      { "string": 3, "fret": 7, "duration": "half", "role": "chord_tone", "label": "5", "chord": [{ "string": 2, "fret": 8, "role": "root", "label": "R" }, { "string": 1, "fret": 7, "role": "target", "label": "3" }] },
+      { "string": 3, "fret": 7, "duration": "quarter", "rest": true }
+    ]},
+    { "measure": 3, "notes": [
+      { "string": 3, "fret": 12, "duration": "quarter", "role": "root", "label": "R", "chord": [{ "string": 2, "fret": 12, "role": "chord_tone", "label": "3" }, { "string": 1, "fret": 10, "role": "target", "label": "5" }] },
+      { "string": 3, "fret": 12, "duration": "half", "role": "root", "label": "R", "chord": [{ "string": 2, "fret": 12, "role": "chord_tone", "label": "3" }, { "string": 1, "fret": 10, "role": "target", "label": "5" }] },
+      { "string": 3, "fret": 12, "duration": "quarter", "rest": true }
+    ]}
+  ]}
+}
+```
+
+▶ **BPM 76。** 例2と同じリズムで、今度はどの位置も和音全体で。音がぐっと厚くなるのを感じて。
+
 ## ③ 今日の練習（50分ルーティン）
 
 **0〜10分 · ウォームアップ**

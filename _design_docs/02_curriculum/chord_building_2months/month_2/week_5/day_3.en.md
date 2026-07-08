@@ -112,6 +112,35 @@ All three are the same G (G-B-D), yet one top note changes the color. Pros **cho
 
 ▶ **BPM 76.** Play the three voicings in turn (top R → 3 → 5). Fret the low note and lay the top note on it, comparing how differently the same G sounds in each place. Repeat 4×.
 
+**Example 3 — full-chord comping.** The three voicings (top R → 3 → 5) that Example 2 fretted as just a low note + top note now ring as the full triad. The top note still sings on top, unchanged.
+
+```json
+{
+  "id": "m2.w5.d3.full_chord_comp",
+  "type": "tab",
+  "meta": { "title": "Full triad comp (3 inversions) — staff + tab", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "G", "tempoBpm": 76, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 3, "fret": 4, "duration": "quarter", "role": "chord_tone", "label": "3", "chord": [{ "string": 2, "fret": 3, "role": "chord_tone", "label": "5" }, { "string": 1, "fret": 3, "role": "target", "label": "R" }] },
+      { "string": 3, "fret": 4, "duration": "half", "role": "chord_tone", "label": "3", "chord": [{ "string": 2, "fret": 3, "role": "chord_tone", "label": "5" }, { "string": 1, "fret": 3, "role": "target", "label": "R" }] },
+      { "string": 3, "fret": 4, "duration": "quarter", "rest": true }
+    ]},
+    { "measure": 2, "notes": [
+      { "string": 3, "fret": 7, "duration": "quarter", "role": "chord_tone", "label": "5", "chord": [{ "string": 2, "fret": 8, "role": "root", "label": "R" }, { "string": 1, "fret": 7, "role": "target", "label": "3" }] },
+      { "string": 3, "fret": 7, "duration": "half", "role": "chord_tone", "label": "5", "chord": [{ "string": 2, "fret": 8, "role": "root", "label": "R" }, { "string": 1, "fret": 7, "role": "target", "label": "3" }] },
+      { "string": 3, "fret": 7, "duration": "quarter", "rest": true }
+    ]},
+    { "measure": 3, "notes": [
+      { "string": 3, "fret": 12, "duration": "quarter", "role": "root", "label": "R", "chord": [{ "string": 2, "fret": 12, "role": "chord_tone", "label": "3" }, { "string": 1, "fret": 10, "role": "target", "label": "5" }] },
+      { "string": 3, "fret": 12, "duration": "half", "role": "root", "label": "R", "chord": [{ "string": 2, "fret": 12, "role": "chord_tone", "label": "3" }, { "string": 1, "fret": 10, "role": "target", "label": "5" }] },
+      { "string": 3, "fret": 12, "duration": "quarter", "rest": true }
+    ]}
+  ]}
+}
+```
+
+▶ **BPM 76.** Same rhythm as Example 2, but now every voicing rings as the full chord. Feel the sound fill out.
+
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
