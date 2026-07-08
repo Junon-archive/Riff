@@ -103,22 +103,22 @@ Three 6th-string-root shells. Green is the 3rd & 7th; move just two strings and 
   "meta": { "title": "6th-root shell set comp — staff + tab", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "G", "tempoBpm": 78, "notation": "staff+tab" },
   "tab": { "timeSignature": "4/4", "measures": [
     { "measure": 1, "notes": [
-      { "string": 6, "fret": 3, "duration": "quarter", "label": "R", "isRoot": true, "role": "root" },
-      { "string": 4, "fret": 4, "duration": "eighth", "label": "7", "role": "target", "highlight": true },
-      { "string": 3, "fret": 4, "duration": "eighth", "label": "3", "role": "target", "highlight": true },
-      { "string": 6, "fret": 3, "duration": "half", "label": "R", "isRoot": true, "role": "root" }
+      { "string": 6, "fret": 3, "duration": "quarter", "label": "R", "isRoot": true, "role": "root", "chord": [{ "string": 4, "fret": 4, "role": "target", "label": "7" }, { "string": 3, "fret": 4, "role": "target", "label": "3" }] },
+      { "string": 6, "fret": 3, "duration": "eighth", "role": "root", "label": "R", "chord": [{ "string": 4, "fret": 4, "role": "target", "label": "7" }, { "string": 3, "fret": 4, "role": "target", "label": "3" }] },
+      { "string": 6, "fret": 3, "duration": "eighth", "role": "root", "label": "R", "chord": [{ "string": 4, "fret": 4, "role": "target", "label": "7" }, { "string": 3, "fret": 4, "role": "target", "label": "3" }] },
+      { "string": 6, "fret": 3, "duration": "half", "label": "R", "isRoot": true, "role": "root", "chord": [{ "string": 4, "fret": 4, "role": "target", "label": "7" }, { "string": 3, "fret": 4, "role": "target", "label": "3" }] }
     ]},
     { "measure": 2, "notes": [
-      { "string": 6, "fret": 3, "duration": "quarter", "label": "R", "isRoot": true, "role": "root" },
-      { "string": 4, "fret": 3, "duration": "eighth", "label": "b7", "role": "target", "highlight": true },
-      { "string": 3, "fret": 4, "duration": "eighth", "label": "3", "role": "target", "highlight": true },
-      { "string": 6, "fret": 3, "duration": "half", "label": "R", "isRoot": true, "role": "root" }
+      { "string": 6, "fret": 3, "duration": "quarter", "label": "R", "isRoot": true, "role": "root", "chord": [{ "string": 4, "fret": 3, "role": "target", "label": "b7" }, { "string": 3, "fret": 4, "role": "target", "label": "3" }] },
+      { "string": 6, "fret": 3, "duration": "eighth", "role": "root", "label": "R", "chord": [{ "string": 4, "fret": 3, "role": "target", "label": "b7" }, { "string": 3, "fret": 4, "role": "target", "label": "3" }] },
+      { "string": 6, "fret": 3, "duration": "eighth", "role": "root", "label": "R", "chord": [{ "string": 4, "fret": 3, "role": "target", "label": "b7" }, { "string": 3, "fret": 4, "role": "target", "label": "3" }] },
+      { "string": 6, "fret": 3, "duration": "half", "label": "R", "isRoot": true, "role": "root", "chord": [{ "string": 4, "fret": 3, "role": "target", "label": "b7" }, { "string": 3, "fret": 4, "role": "target", "label": "3" }] }
     ]},
     { "measure": 3, "notes": [
-      { "string": 6, "fret": 3, "duration": "quarter", "label": "R", "isRoot": true, "role": "root" },
-      { "string": 4, "fret": 3, "duration": "eighth", "label": "b7", "role": "target", "highlight": true },
-      { "string": 3, "fret": 3, "duration": "eighth", "label": "b3", "role": "target", "highlight": true },
-      { "string": 6, "fret": 3, "duration": "half", "label": "R", "isRoot": true, "role": "root" }
+      { "string": 6, "fret": 3, "duration": "quarter", "label": "R", "isRoot": true, "role": "root", "chord": [{ "string": 4, "fret": 3, "role": "target", "label": "b7" }, { "string": 3, "fret": 3, "role": "target", "label": "b3" }] },
+      { "string": 6, "fret": 3, "duration": "eighth", "role": "root", "label": "R", "chord": [{ "string": 4, "fret": 3, "role": "target", "label": "b7" }, { "string": 3, "fret": 3, "role": "target", "label": "b3" }] },
+      { "string": 6, "fret": 3, "duration": "eighth", "role": "root", "label": "R", "chord": [{ "string": 4, "fret": 3, "role": "target", "label": "b7" }, { "string": 3, "fret": 3, "role": "target", "label": "b3" }] },
+      { "string": 6, "fret": 3, "duration": "half", "label": "R", "isRoot": true, "role": "root", "chord": [{ "string": 4, "fret": 3, "role": "target", "label": "b7" }, { "string": 3, "fret": 3, "role": "target", "label": "b3" }] }
     ]}
   ]}
 }
