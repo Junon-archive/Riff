@@ -36,6 +36,15 @@
   --primary:   #3182F6;
   --primary-press: #1B64DA;
   --primary-weak:  #E8F3FF;
+
+  /* 커리큘럼 카드 썸네일 그래디언트 오버레이(듀오톤 이미지 위) — 라이트. 다크는 [data-theme] 에서 재정의. */
+  --grad-a: rgba(69,147,252,.55);
+  --grad-b: rgba(27,100,218,.85);
+  /* 이미지 없는 카드(.no-img)용 불투명 브랜드 밴드 — 색을 컴포넌트에 하드코딩하지 않도록 토큰화. */
+  --grad-fallback:
+    radial-gradient(120% 120% at 100% 0%, rgba(255,255,255,.28), transparent 60%),
+    linear-gradient(135deg, var(--blue-500) 0%, var(--blue-600) 55%, var(--blue-700) 100%);
+
   --shadow:    0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(0,0,0,.06);
   --shadow-sm: 0 1px 2px rgba(0,0,0,.05), 0 2px 8px rgba(0,0,0,.04);
 
@@ -71,6 +80,10 @@
   --primary:   #4593FC;
   --primary-press: #3182F6;
   --primary-weak:  #17263D;
+
+  /* 카드 썸네일 그래디언트 오버레이 — 다크(더 낮은 알파 + 짙은 청색으로 은은하게). */
+  --grad-a: rgba(69,147,252,.32);
+  --grad-b: rgba(11,46,107,.90);
   --shadow:    0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.5);
   --shadow-sm: 0 1px 2px rgba(0,0,0,.4), 0 2px 8px rgba(0,0,0,.35);
   --grey-100:  #26262E;

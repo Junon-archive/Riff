@@ -81,6 +81,8 @@ export interface ManifestCurriculum {
   taglines: LangMap | null;
   /** 악기 필터 칩의 키(예: "guitar"/"bass"). 2종 이상일 때만 필터 UI 노출. */
   instrument: string | null;
+  /** 카드 썸네일 이미지(정적 절대경로, 예 "/curriculum/solo-scale.webp"). 없으면 null → 그라디언트 전용 밴드. */
+  image: string | null;
   topic: string | null;
   /** 정렬 전용 내부 등급. 화면에 "입문/중급/고급" 등으로 노출 금지. */
   level: number | null;

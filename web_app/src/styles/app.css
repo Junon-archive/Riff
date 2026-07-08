@@ -158,14 +158,40 @@ h1.display {
 /* .curr-card 는 <a> 링크(SSR)라 기본 display 가 inline이다 — .card 의 border-radius/overflow가
    하나의 박스로 닫히려면 명시적으로 block 화해야 한다(그렇지 않으면 모서리가 사각으로 깨진다). */
 .curr-card { display: block; margin-top: 16px; overflow: hidden; padding: 0; }
+/* 썸네일 밴드: z0 <img>(듀오톤) → z3 그래디언트(::before) → z4 하단 스크림(::after) → z5 .chip.
+   isolation:isolate 로 자체 스태킹 컨텍스트를 열어 z-index 를 카드 내부로 가둔다. */
 .curr-thumb {
+  position: relative; isolation: isolate;
   height: 132px; display: flex; align-items: flex-end; padding: 16px;
-  background:
-    radial-gradient(120% 120% at 100% 0%, rgba(255,255,255,.28), transparent 60%),
-    linear-gradient(135deg, #4593FC 0%, #3182F6 55%, #1B64DA 100%);
   color: #fff;
 }
+/* z0 — 듀오톤 이미지(배경을 덮으므로 그래디언트는 반드시 이 위 레이어여야 한다). */
+.curr-thumb .thumb-img {
+  position: absolute; inset: 0; z-index: 0;
+  width: 100%; height: 100%; object-fit: cover;
+  /* 밴드(≈3.6:1)가 원본(3:2)보다 넓어 세로만 크롭됨 → 세로 위치만 유효.
+     45% = 살짝 위. 하단의 상표 라벨/노브, 상단의 빈 배경을 밴드 밖으로 밀어낸다. */
+  object-position: 50% 45%;
+  filter: url(#duotone-light);
+}
+[data-theme="dark"] .curr-thumb .thumb-img { filter: url(#duotone-dark); }
+/* z3 — 브랜드 블루 그래디언트(색은 tokens.css 변수로만, 하드코딩 금지). */
+.curr-thumb::before {
+  content: ""; position: absolute; inset: 0; z-index: 3; pointer-events: none;
+  background:
+    radial-gradient(120% 120% at 100% 0%, rgba(255,255,255,.20), transparent 60%),
+    linear-gradient(135deg, var(--grad-a) 0%, transparent 45%, var(--grad-b) 100%);
+}
+/* z4 — 하단 스크림(칩/제목 가독성 확보). */
+.curr-thumb::after {
+  content: ""; position: absolute; inset: 0; z-index: 4; pointer-events: none;
+  background: linear-gradient(to top, rgba(5,20,50,.55), transparent 55%);
+}
+/* image 가 없는 커리큘럼(향후 추가분) → .no-img: 이미지/스크림 없이 불투명 브랜드 밴드 유지(색은 토큰). */
+.curr-thumb.no-img::before { background: var(--grad-fallback); }
+.curr-thumb.no-img::after { content: none; }
 .chip {
+  position: relative; z-index: 5;
   display: inline-block; font-size: 12px; font-weight: 700;
   background: rgba(255,255,255,.22); padding: 5px 10px; border-radius: var(--pill);
   backdrop-filter: blur(4px);

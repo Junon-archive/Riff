@@ -468,6 +468,8 @@ function buildCurriculum(curriculumId) {
     titles: curTitles,
     taglines: curMeta?.tagline ?? null,
     instrument: curMeta?.instrument ?? null,
+    // 카드 썸네일 이미지(정적 경로, 언어 무관 단일 문자열). 없으면 null → 카드는 그라디언트 전용 밴드.
+    image: curMeta?.image ?? null,
     topic: curMeta?.topic ?? null,
     level: curMeta?.level ?? null,
     tags: curMeta?.tags ?? [],

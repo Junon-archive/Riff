@@ -94,6 +94,31 @@ const DONATION_BUTTONS: { channel: DonationChannel; iconClass: string; icon: str
     <script src="../scripts/app.ts"></script>
   </head>
   <body>
+    {/*
+      커리큘럼 카드 썸네일 듀오톤 필터(전역, 페이지당 1회) — 카드마다 중복 정의 금지.
+      1단계 feColorMatrix = 휘도 그레이스케일(Rec.709), 2단계 feComponentTransfer = shadow→highlight 2색 매핑.
+      tableValues=[shadow, highlight] 를 0~1 정규화. 라이트: #0B2E6B→#7FB4FF, 다크: #050F24→#4E86D6.
+      CSS 는 [data-theme] 속성 셀렉터로 light/dark 필터를 전환한다(런타임 JS 주입 없음 → View Transitions·Safari 안전).
+    */}
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+      <filter id="duotone-light" color-interpolation-filters="sRGB">
+        <feColorMatrix type="matrix" values=".2126 .7152 .0722 0 0  .2126 .7152 .0722 0 0  .2126 .7152 .0722 0 0  0 0 0 1 0"/>
+        <feComponentTransfer>
+          <feFuncR type="table" tableValues="0.0431 0.4980"/>
+          <feFuncG type="table" tableValues="0.1804 0.7059"/>
+          <feFuncB type="table" tableValues="0.4196 1"/>
+        </feComponentTransfer>
+      </filter>
+      <filter id="duotone-dark" color-interpolation-filters="sRGB">
+        <feColorMatrix type="matrix" values=".2126 .7152 .0722 0 0  .2126 .7152 .0722 0 0  .2126 .7152 .0722 0 0  0 0 0 1 0"/>
+        <feComponentTransfer>
+          <feFuncR type="table" tableValues="0.0196 0.3059"/>
+          <feFuncG type="table" tableValues="0.0588 0.5255"/>
+          <feFuncB type="table" tableValues="0.1412 0.8392"/>
+        </feComponentTransfer>
+      </filter>
+    </svg>
+
     <div class="app">
       <header class="topbar" id="topbar">
         {backHref ? (

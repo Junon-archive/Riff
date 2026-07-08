@@ -77,6 +77,15 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-08 (UI — 커리큘럼 카드 썸네일에 듀오톤 사진 적용)
+- **변경:** 랜딩 카드의 파란 그라디언트 전용 밴드에 **기타 사진을 듀오톤(brand-blue) 처리**해 얹었다. 레이어: `<img>`(듀오톤) → 브랜드 그라디언트(`::before`) → 하단 스크림(`::after`) → 칩. 이미지 없는 커리큘럼(향후 추가분)은 기존 그라디언트 전용 밴드로 그레이스풀 폴백(`.no-img`).
+- **에셋:** 원본(SSOT) `assets/Curriculum_image/*.jpg`(10장, 3개 매핑 외는 풀로 보존)에서 **최적화 사본만** `public/curriculum/{id}.webp` 생성 — 가로 1200px·그레이스케일·WebP q72. 결과 각 21~27KB(목표 120KB 이하). 변환은 일회성 스크립트 `scripts/optimize-curriculum-images.mjs`(빌드 파이프라인 미연결).
+  - solo_scale→solo-scale.webp(27KB) / chord_building→chord-building.webp(25KB) / funk_rhythm→funk-rhythm.webp(21KB)
+- **듀오톤:** JS 0 — `Base.astro` `<body>` 최상단에 SVG 필터 `#duotone-light`/`#duotone-dark` **전역 1쌍**만 정의. CSS 는 `[data-theme]` 속성 셀렉터로 전환(미디어쿼리 미사용, View Transitions·Safari 안전). 그라디언트 색은 전부 `tokens.css` 변수(`--grad-a/-b`, 폴백 `--grad-fallback`) — 컴포넌트 하드코딩 0.
+- **데이터:** `meta.json`에 `image`(언어 무관 단일 경로) 추가 → `build-content.mjs`(`image: curMeta?.image ?? null`) → `types/content.ts`(`image: string|null`) → `build:content`로 manifest 반영. `<img>`는 `alt=""`·`loading="lazy"`·`decoding="async"`·`width/height`(CLS 방지).
+- **프레이밍:** 밴드(≈3.6:1)가 원본(3:2)보다 넓어 세로만 크롭 → `object-position: 50% 45%`(살짝 위)로 통일. 하단 상표 라벨(f홀 라벨 등)·노브, 상단 빈 배경을 밴드 밖으로 밀어냄.
+- **검증:** `astro check` 0 error · `npm run build` exit 0(361p) · dist `/curriculum/*.webp` 3장 포함 · 카드별 올바른 webp 참조 · 필터 페이지당 각 1개 · 라이트/다크 렌더 재현 미리보기로 듀오톤 통일·칩 가독성 육안 확인.
+
 ### 2026-07-08 (UX — 홈·커리큘럼 페이지에서 '후원하기' 하단 CTA 숨김)
 - **변경:** 랜딩(홈)과 커리큘럼 개요 페이지에서 하단 고정 '후원하기' 진입 버튼(`footer-cta`)을 노출하지 않는다. **후원 진입은 레슨 상세 페이지에서만** 유지(월·커리큘럼 완료 시 자동 도네이션 시트 연출도 그대로).
 - **의도:** 학습 시작 전(홈)·목차 탐색 중(커리큘럼) 화면에서는 후원 부담을 덜고, 실제 레슨을 완료한 맥락에서만 자연스럽게 후원을 안내한다.
