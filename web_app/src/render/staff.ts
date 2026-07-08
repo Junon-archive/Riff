@@ -39,6 +39,7 @@ import {
   Stem,
   Annotation,
   Stroke,
+  ChordSymbol,
 } from 'vexflow';
 import type { Score, TabNote as TabNoteData, Measure, NoteRole } from '../types/score';
 
@@ -323,6 +324,12 @@ function buildMeasure(m: Measure, flats: boolean): BuiltMeasure {
       pm.setVerticalJustification(Annotation.VerticalJustify.TOP);
       sNote.addModifier(pm, 0);
     }
+    // 코드 심볼(Cmaj7 등): 음표 위에 표기(주로 리듬 슬래시 악보).
+    if (n.chordSymbol) {
+      const cs = new ChordSymbol();
+      cs.addText(n.chordSymbol);
+      sNote.addModifier(cs, 0);
+    }
     // stem 방향: 단음·화음 공통(모든 키의 line 에서 결정). 빔에 묶이면 flush() 에서 덮어쓴다.
     sNote.setStemDirection(dirFromLines(noteLines(sNote)));
 
@@ -359,7 +366,9 @@ function buildMeasure(m: Measure, flats: boolean): BuiltMeasure {
 /* ---- 본체 ------------------------------------------------------------- */
 export function renderStaff(score: Score, mode: StaffMode): string {
   const title = score.meta?.title ?? 'staff notation';
-  const withTab = mode === 'staff+tab' || mode === 'rhythm';
+  // rhythm = 컴핑 리듬 악보: 타브 미표시(오선보만) + 코드심볼. (리듬 슬래시 노트헤드는 VexFlow 4.2.5
+  //   폰트에 없어 보류 — 현재는 실제 음정 노트헤드로 렌더. 향후 커스텀 슬래시 도입 가능.)
+  const withTab = mode === 'staff+tab';
   const tabData = score.tab;
 
   const emptySvg = (w = 480, h = 60) =>

@@ -120,6 +120,8 @@ export interface TabNote {
   chord?: ChordNote[];
   /** 스트로크 방향. down/up=스트럼(직선 화살표), arpeggio=펼침(물결 브래킷). 없으면 표시 없음. */
   stroke?: 'down' | 'up' | 'arpeggio';
+  /** 코드 심볼(예: "Cmaj7","E9"). 음표 위에 표기. 주로 리듬 슬래시 악보(notation:"rhythm")에서 사용. */
+  chordSymbol?: string;
   /** technique=slide 일 때 도착 프렛 */
   slideToFret?: number;
   /** technique=bend 일 때 도착 목표. 예: 'half'(반음), 'full'(온음), 도착 도수 '5' */
