@@ -101,6 +101,40 @@ i18nKey: "lesson.m2.w7.d2"
 
 ▶ **BPM 78、4回反復。** C-Am-F-Gを循環し、一番上のG-A-A-Gが歌うように。手がネックを大きく跳ばず1区域（3〜6フレット）にとどまるか確認。
 
+**例3 — コード全体コンピング。** 低音＋トップノートだけ押さえていたC - Am - F - Gを、今度はトライアド全体で鳴らします。トップノート・メロディ（G-A-A-G）は和音の一番上でそのまま続きます。
+
+```json
+{
+  "id": "m2.w7.d2.full_chord_comp",
+  "type": "tab",
+  "meta": { "title": "Full triad comp (C-Am-F-G) — staff + tab", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "C", "tempoBpm": 78, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 3, "fret": 5, "duration": "quarter", "role": "root", "label": "R", "chord": [{ "string": 2, "fret": 5, "role": "chord_tone", "label": "3" }, { "string": 1, "fret": 3, "role": "target", "label": "5" }] },
+      { "string": 3, "fret": 5, "duration": "half", "role": "root", "label": "R", "chord": [{ "string": 2, "fret": 5, "role": "chord_tone", "label": "3" }, { "string": 1, "fret": 3, "role": "target", "label": "5" }] },
+      { "string": 3, "fret": 5, "duration": "quarter", "rest": true }
+    ]},
+    { "measure": 2, "notes": [
+      { "string": 3, "fret": 5, "duration": "quarter", "role": "chord_tone", "label": "b3", "chord": [{ "string": 2, "fret": 5, "role": "chord_tone", "label": "5" }, { "string": 1, "fret": 5, "role": "target", "label": "R" }] },
+      { "string": 3, "fret": 5, "duration": "half", "role": "chord_tone", "label": "b3", "chord": [{ "string": 2, "fret": 5, "role": "chord_tone", "label": "5" }, { "string": 1, "fret": 5, "role": "target", "label": "R" }] },
+      { "string": 3, "fret": 5, "duration": "quarter", "rest": true }
+    ]},
+    { "measure": 3, "notes": [
+      { "string": 3, "fret": 5, "duration": "quarter", "role": "chord_tone", "label": "5", "chord": [{ "string": 2, "fret": 6, "role": "root", "label": "R" }, { "string": 1, "fret": 5, "role": "target", "label": "3" }] },
+      { "string": 3, "fret": 5, "duration": "half", "role": "chord_tone", "label": "5", "chord": [{ "string": 2, "fret": 6, "role": "root", "label": "R" }, { "string": 1, "fret": 5, "role": "target", "label": "3" }] },
+      { "string": 2, "fret": 6, "duration": "quarter", "rest": true }
+    ]},
+    { "measure": 4, "notes": [
+      { "string": 3, "fret": 4, "duration": "quarter", "role": "chord_tone", "label": "3", "chord": [{ "string": 2, "fret": 3, "role": "chord_tone", "label": "5" }, { "string": 1, "fret": 3, "role": "target", "label": "R" }] },
+      { "string": 3, "fret": 4, "duration": "half", "role": "chord_tone", "label": "3", "chord": [{ "string": 2, "fret": 3, "role": "chord_tone", "label": "5" }, { "string": 1, "fret": 3, "role": "target", "label": "R" }] },
+      { "string": 3, "fret": 4, "duration": "quarter", "rest": true }
+    ]}
+  ]}
+}
+```
+
+▶ **BPM 78。** 例2と同じリズムで、今度はコード全体で。進行がぐっと厚みを増して聞こえます。
+
 ## ③ 今日の練習（50分ルーティン）
 
 **0〜10分 · ウォームアップ**

@@ -101,6 +101,40 @@ The secret is **common tones.** Grab C and Am in these spots and the two lower n
 
 ▶ **BPM 78, repeat 4×.** Cycle C-Am-F-G with the top G-A-A-G singing. Check the hand doesn't jump big and stays in one region (frets 3–6).
 
+**Example 3 — full-chord comping.** The C - Am - F - G progression that Example 2 fretted as just a low note + top note now rings as the full triad. The top-note melody (G-A-A-G) still carries on top, unchanged.
+
+```json
+{
+  "id": "m2.w7.d2.full_chord_comp",
+  "type": "tab",
+  "meta": { "title": "Full triad comp (C-Am-F-G) — staff + tab", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "C", "tempoBpm": 78, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 3, "fret": 5, "duration": "quarter", "role": "root", "label": "R", "chord": [{ "string": 2, "fret": 5, "role": "chord_tone", "label": "3" }, { "string": 1, "fret": 3, "role": "target", "label": "5" }] },
+      { "string": 3, "fret": 5, "duration": "half", "role": "root", "label": "R", "chord": [{ "string": 2, "fret": 5, "role": "chord_tone", "label": "3" }, { "string": 1, "fret": 3, "role": "target", "label": "5" }] },
+      { "string": 3, "fret": 5, "duration": "quarter", "rest": true }
+    ]},
+    { "measure": 2, "notes": [
+      { "string": 3, "fret": 5, "duration": "quarter", "role": "chord_tone", "label": "b3", "chord": [{ "string": 2, "fret": 5, "role": "chord_tone", "label": "5" }, { "string": 1, "fret": 5, "role": "target", "label": "R" }] },
+      { "string": 3, "fret": 5, "duration": "half", "role": "chord_tone", "label": "b3", "chord": [{ "string": 2, "fret": 5, "role": "chord_tone", "label": "5" }, { "string": 1, "fret": 5, "role": "target", "label": "R" }] },
+      { "string": 3, "fret": 5, "duration": "quarter", "rest": true }
+    ]},
+    { "measure": 3, "notes": [
+      { "string": 3, "fret": 5, "duration": "quarter", "role": "chord_tone", "label": "5", "chord": [{ "string": 2, "fret": 6, "role": "root", "label": "R" }, { "string": 1, "fret": 5, "role": "target", "label": "3" }] },
+      { "string": 3, "fret": 5, "duration": "half", "role": "chord_tone", "label": "5", "chord": [{ "string": 2, "fret": 6, "role": "root", "label": "R" }, { "string": 1, "fret": 5, "role": "target", "label": "3" }] },
+      { "string": 2, "fret": 6, "duration": "quarter", "rest": true }
+    ]},
+    { "measure": 4, "notes": [
+      { "string": 3, "fret": 4, "duration": "quarter", "role": "chord_tone", "label": "3", "chord": [{ "string": 2, "fret": 3, "role": "chord_tone", "label": "5" }, { "string": 1, "fret": 3, "role": "target", "label": "R" }] },
+      { "string": 3, "fret": 4, "duration": "half", "role": "chord_tone", "label": "3", "chord": [{ "string": 2, "fret": 3, "role": "chord_tone", "label": "5" }, { "string": 1, "fret": 3, "role": "target", "label": "R" }] },
+      { "string": 3, "fret": 4, "duration": "quarter", "rest": true }
+    ]}
+  ]}
+}
+```
+
+▶ **BPM 78.** Same rhythm as Example 2, but now the full chord rings. The progression sounds much fuller.
+
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
