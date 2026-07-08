@@ -77,6 +77,12 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-08 (오선보/타브 — 데드 노트 X + 팜뮤트 P.M. 렌더 + 렌더 계약 문서화)
+- **팜뮤트 "P.M." 렌더:** `render/staff.ts` 가 `technique:"palm_mute"`(음정 있는 실음) 위에 `Annotation("P.M.")`(role 색) 표기. chord_building의 진짜 팜뮤트 20개가 오선보에 P.M.으로 보인다. (funk의 뮤트 타격음은 앞서 dead_note→X 로 이관됨 — 아래.)
+- **데드 노트 X 이관(선행):** `technique:"dead_note"` 신설 → 오선보 X 노트헤드(`.../x`)·타브 "X"(임시표 없음). funk_rhythm의 뮤트 타격음 991개(×3언어) palm_mute→dead_note 치환(주차별 커밋). chord_building 20개는 진짜 팜뮤트라 유지.
+- **문서화(향후 커리큘럼 자동 적용):** `web_app/docs/technical_spec.md` §5.4 를 현행 렌더 계약으로 갱신 — VexFlow 4.2.5 고정, treble-8vb 표기 옥타브, stem 방향 규칙(가운데 줄 B4 기준), 빔 박 단위·Beam 선생성, 레이아웃(2마디/줄·음역대 적응 높이), technique 렌더(dead_note X·palm_mute P.M.). `00_curriculum_authoring_playbook.md`·`fretboard_score_schema.json` 에 dead_note vs palm_mute 구분 명시. staff.ts 헤더 계약 갱신.
+- **검증:** astro check 0 error · build exit 0(totalDays 52/32/32) · dist 렌더 assertion: chord P.M.=20·funk P.M.=0·funk X(dead)=991·chord X=0(무변경) · 헤드리스 렌더로 P.M.(role 색, 음표 위)·임시표 유지 육안 확인.
+
 ### 2026-07-08 (문서 — 카드 썸네일 듀오톤 패턴을 신규 커리큘럼 재사용 가이드로 정리)
 - **목적:** 향후 추가 커리큘럼도 코드 수정 없이 썸네일 사진(듀오톤)을 갖도록 SOP·계약을 SSOT 문서에 명문화.
 - `_design_docs/00_curriculum_authoring_playbook.md`: §2에 `meta.json`(카드 메타 발원, `image` 필드 포함) 추가, §6 체크리스트에 썸네일 항목, **§8 신설**(원본↔최적화 분리·`optimize-curriculum-images.mjs`·배선 3곳·렌더 계약·품질 체크).

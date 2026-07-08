@@ -327,9 +327,18 @@ export function renderStaff(score: Score, mode: 'staff' | 'staff+tab' | 'rhythm'
 - `type=tab` 이면서 `meta.notation` 이 `"staff"|"staff+tab"|"rhythm"` 일 때 사용(§5.5 `renderScore` 가 라우팅). fretboard/기본 타브는 자체 SVG(§5.2·5.3) 유지.
 - **핵심 계약:** 같은 `tab` 데이터(string+fret+duration) 하나에서 **오선보 + 타브를 위아래로 결합**하고 **박자·리듬을 공유**한다(VexFlow `Stave`+`TabStave`+`StaveConnector`, 두 `Voice` 공동 포맷). 음정 = `string`+`fret`+`tuning` 결정 계산(할루시네이션 0), 박자 = `duration`(빔·플래그·점).
   - `"staff"` = 오선보만, `"staff+tab"` = 오선보+타브, `"rhythm"` = 리듬 컴핑(현재 staff+tab 로 렌더).
-- **빌드타임 전용**: Node(빌드) 에서 `jsdom`(devDep) 로 DOM 을 제공하고 VexFlow SVG 백엔드로 **SVG 문자열**을 만든다. **클라이언트 JS 0**(fretboard/tab 과 동일 — 런타임 프레임워크 없음 유지). jsdom 캔버스 텍스트측정은 경량 스텁으로 대체(네이티브 canvas 불필요 → CF Pages 빌드 안전). 전역 `document` 는 렌더 동안만 세팅 후 원복.
-- 색: `role`→CSS 변수(fretboard/tab 과 동일 팔레트, `color_legend.md`), 기본 검정은 `currentColor` 로 치환(다크모드 자동). **SVG 루트 요소는 `class="staffsvg"`** — `.fretboard, .tabsvg, .staffsvg` 컨테이너 계약(반응형 `viewBox`, `width:100%`).
-- 한계(v1): 산문 label·technique 오버레이는 미표기(타브 SVG 렌더러가 담당). 오선보는 음정+박자 전달에 집중.
+- **VexFlow 버전 = 4.2.5 고정**(2026-07-07 v5→v4 이관): v4 는 음악 글리프를 **baked 아웃라인 `<path>`(metrics 내장)** 로 그려 폰트·canvas 불필요 → jsdom 빌드타임에서 음표/스템/음자리표 위치가 정확하고 브라우저 폰트 없이도 tofu(□) 없음. (v5 는 `<text>`+웹폰트+canvas measureText 라 jsdom 에서 글리프 깨짐·스템 어긋남 발생.) 프렛 숫자만 시스템 폰트 `<text>` → jsdom 에 `getBBox` 근사 스텁.
+- **빌드타임 전용**: Node(빌드) 에서 `jsdom`(devDep) 로 DOM 을 제공하고 VexFlow SVG 백엔드로 **SVG 문자열**을 만든다. **클라이언트 JS 0**(fretboard/tab 과 동일 — 런타임 프레임워크 없음 유지). 전역 `document` 는 렌더 동안만 세팅 후 원복.
+- 색: `role`→CSS 변수(fretboard/tab 과 동일 팔레트, `color_legend.md`), 기본 검정은 `currentColor` 로 치환(다크모드 자동). **SVG 루트 요소는 `class="staffsvg"`** — `.fretboard, .tabsvg, .staffsvg` 컨테이너 계약(반응형 `viewBox`, `width:100%`). 오선보 노트헤드는 role 별 색, 타브 프렛 숫자는 note-level 단색.
+- **조판 규칙(모든 커리큘럼 자동 적용 — 콘텐츠는 데이터만 정확히 주면 된다):**
+  - **표기 옥타브 = treble-8vb(기타 이조 표기).** 실제음(concert, `OPEN_MIDI`)은 그대로, 오선보 "표기"만 +1 옥타브(`WRITTEN_OCTAVE_SHIFT`) + 클레프에 "8". → 다른 기타 악보와 위치 정렬, 실제음은 타브와 일치.
+  - **stem 방향:** 그려지는 라인(`keyProps.line`, 임시표 무관) 기준. 단음 = 가운데 줄 B4(line 3) 포함 위 → DOWN, 아래 → UP. 빔 그룹 = 가운데 줄에서 가장 먼 음이 방향 결정(동거리 다수결·동점 DOWN).
+  - **빔:** 8·16분음표를 **박(beat) 단위**로 끊어 묶는다(16분 4개·8분 2개씩). `Beam` 은 반드시 `draw` **이전**에 생성해야 개별 flag 가 억제되고 stem 길이가 보정된다.
+  - **레이아웃:** 한 줄(system)에 2마디씩 세로 스택(자동 줄바꿈), 마디 폭 = 음표 수 비례(오버플로 방지), 세로 높이 = 음역대 적응(저음 렛저라인이 타브와 안 겹치게).
+- **technique 렌더(오선보/타브 오버레이 — v1 한계였던 부분, 이제 지원):**
+  - `dead_note`(음정 없는 뮤트 타격음: 고스트/뮤트 스크래치/커팅) → **오선보 X 노트헤드**(키 3번째 파트 `.../x`) + **타브 "X"**(`fret:"X"`). 음정 없으므로 **임시표(#/♭) 미부착.** 색·stem·beam 은 일반 음표와 동일.
+  - `palm_mute`(음정 있는 팜뮤트) → 실음(노트헤드·프렛·색·stem 정상) + 오선보 위 **"P.M." 주석**(`Annotation`, role 색).
+  - **데이터 저작 지침:** 펑크의 뮤트 스크래치·고스트는 `dead_note`, 진짜 팜뮤트만 `palm_mute`(구분: `color_legend.md`/`00_curriculum_authoring_playbook.md`·`fretboard_score_schema.json`). 그 외 technique(H/P/sl/bend/vib/harmonic) 오버레이는 자체 타브 SVG(§5.3)에서만 표기.
 
 ### 5.5 디스패치 & 마운트 계약
 

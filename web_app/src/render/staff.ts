@@ -8,6 +8,8 @@
  *    음정 = string+fret+tuning 으로 결정 계산(할루시네이션 0), 박자 = duration.
  *  - 빌드타임(Node)에서 jsdom + VexFlow SVG 백엔드로 SVG 문자열 생성 → **클라이언트 JS 0**.
  *  - 색: role→CSS 변수(color_legend.md), 기본 검정은 currentColor 로 치환(다크모드 자동).
+ *  - 표기 옥타브 = treble-8vb(WRITTEN_OCTAVE_SHIFT). stem 방향·빔(박 단위)은 표준 조판 규칙.
+ *  - technique: dead_note→X 노트헤드/타브 "X"(임시표 없음), palm_mute→"P.M." 주석. (그 외는 자체 타브 SVG 담당)
  *
  * VexFlow 4 채택 사유(기술 결정):
  *  - v4 는 음악 글리프를 **baked 아웃라인 `<path>`** 로 그린다(폰트 불필요·metrics 내장) → 서버(jsdom)
@@ -35,6 +37,7 @@ import {
   BarNote,
   GhostNote,
   Stem,
+  Annotation,
 } from 'vexflow';
 import type { Score, TabNote as TabNoteData, Measure, NoteRole } from '../types/score';
 
@@ -255,6 +258,12 @@ function buildMeasure(m: Measure, flats: boolean): BuiltMeasure {
     // ★음정 없는 데드 노트에는 임시표(#/♭)를 붙이지 않는다(모순 방지).
     if (acc && !dead) sNote.addModifier(new Accidental(acc), 0);
     if (dotted) Dot.buildAndAttach([sNote], { all: true });
+    // 팜뮤트(음정 있는 실음): 오선보 위에 "P.M." 주석. (데드 노트=음정 없음과 구분 — dead_note 는 X.)
+    if (n.technique === 'palm_mute' && !dead) {
+      const pm = new Annotation('P.M.');
+      pm.setVerticalJustification(Annotation.VerticalJustify.TOP);
+      sNote.addModifier(pm, 0);
+    }
     // 단음 기본 방향(그려지는 라인 기준). 빔에 묶이면 flush() 에서 그룹 방향으로 덮어쓴다.
     sNote.setStemDirection(singleStemDir(noteLine(sNote)));
 
