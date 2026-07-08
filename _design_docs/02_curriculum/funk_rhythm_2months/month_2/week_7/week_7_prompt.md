@@ -10,7 +10,7 @@
 4. 무조건적인 속도 올리기를 절대 유도하지 않는다. 느린 템포(메트로놈 60~70)에서 오른손 모터를 유지한 채, 음의 '길이(끊고 늘림)'를 의도대로 컨트롤하고 셔플 특유의 흔들리는 느낌을 '타는' 것을 최우선으로 강조한다. 이번 주의 핵심은 **음 길이 컨트롤(여음을 칼같이 끊는 스타카토) 및 16비트 셔플 리듬 맛보기**다.
 
 5. **연습용 예제 릭/그루브를 반드시 포함한다(개념 설명만으로 끝내지 말 것).** 각 day 마다 그날 배운 리듬·테크닉을 **실제로 쳐볼 수 있는 구체 예제**를 최소 2개, `type:"tab"` 표준 JSON으로 제시한다.
-   - 리듬·컴핑이 핵심인 날 → `meta.notation:"staff+tab"`(오선보+타브, **박자 공유**)으로 2~4마디 그루브 패턴 1개 이상. 스타카토(끊는 음)는 짧은 `duration` + 바로 뒤 `rest`로, 뮤트 커팅·고스트는 `technique:"palm_mute"`로 표기.
+   - 리듬·컴핑이 핵심인 날 → `meta.notation:"staff+tab"`(오선보+타브, **박자 공유**)으로 2~4마디 그루브 패턴 1개 이상. 스타카토(끊는 음)는 짧은 `duration` + 바로 뒤 `rest`로, 뮤트 커팅·고스트는 `technique:"dead_note"`로 표기.
    - 멜로디/싱글 노트가 핵심인 날 → `meta.notation:"staff+tab"`으로 1~2마디 실전 프레이즈 1개 이상.
    - 예제는 반드시 **그날의 프렛 구역·근음 줄 안에서 실제로 운지 가능**해야 하고(string/fret 정확), `duration`으로 리듬을 명시하며, 도수·음이름은 `label`, 색은 `role` 규약(color_legend.md)을 따른다. 지어내지 말 것.
    - 각 예제 JSON 바로 아래에 **연주 안내 한 줄**(권장 BPM · 반복 방법 · 무엇을 느껴야 하는지)을 산문으로 붙인다.
@@ -84,12 +84,12 @@
 - **사용하지 않는 현**: `dots`에서 **생략**. '반드시 뮤트(✕)'만 `{ "string": N, "fret": 0, "muted": true }`.
 - **도수·음이름은 오직 `label`에** 문자열로만(예: `"R"`, `"b3"`, `"3"`, `"5"`, `"b7"`, `"7"`, `"9"`). ⛔ `interval`·`degree`·`note`·`chord_name`·`root_string`·`base_fret`·`top_note`·`diagram_type`·`tempo`·`tempo_bpm`·`fret_range`·`articulation`·`feel` 같은 필드명은 **절대 쓰지 않는다**(스키마에 없어 렌더 실패).
 - `label`엔 음악 기호만 — 서술 문장 금지. 뉘앙스는 산문에서.
-- **근음** `"isRoot": true`. **바레**는 `fretboard.barre` 배열. `finger`: `0`~`4`. `duration`: `"whole"`/`"half"`/`"quarter"`/`"eighth"`/`"sixteenth"` 문자열만. `technique`: `none`/`hammer_on`/`pull_off`/`slide`/`bend`/`vibrato`/`palm_mute`/`harmonic`.
+- **근음** `"isRoot": true`. **바레**는 `fretboard.barre` 배열. `finger`: `0`~`4`. `duration`: `"whole"`/`"half"`/`"quarter"`/`"eighth"`/`"sixteenth"` 문자열만. `technique`: `none`/`hammer_on`/`pull_off`/`slide`/`bend`/`vibrato`/`palm_mute`/`dead_note`/`harmonic`.
 - **`role`로 색을 부여**(색 = `color_legend.md`): R → `root`(+`isRoot`) **파랑** / 3·5·7 코드톤 → `chord_tone` **파랑** / 텐션 → `color` **노랑** / 주목할 자리 → `target`+`highlight` **초록** / 블루노트 → `blue_note` **보라** / 일반 → `scale`/`passing`(색 없음). ⛔ "빨강/red/赤" 금지.
 
 **펑크 리듬을 표준 스키마로 표기하는 법 (반드시 준수):**
 - 리듬 예제는 `type:"tab"` + `meta.notation:"staff+tab"`(또는 리듬만이면 `"rhythm"`).
-- **실제로 울리는 음** = `notes[]` 항목 하나(코드는 대표음 하나, 폼 전체는 별도 `fretboard_diagram`). **뮤트 커팅·고스트** = `"technique":"palm_mute"`.
+- **실제로 울리는 음** = `notes[]` 항목 하나(코드는 대표음 하나, 폼 전체는 별도 `fretboard_diagram`). **뮤트 커팅·고스트** = `"technique":"dead_note"`.
 - **스타카토(여음을 칼같이 끊는 음)** = 짧은 `duration`(예: `sixteenth`) + **바로 뒤에 `rest`** 로 표기하고, "친 직후 손을 줄에 얹어 여음을 끊는다"는 원리를 산문으로 설명한다(articulation 필드는 없음).
 - **레가토(끝까지 늘리는 음)** = 더 긴 `duration`(예: `eighth`/`quarter`)으로 표기하고 산문으로 보충한다.
 - **셔플/스윙 필**은 렌더러가 스윙 기호로 그리지 않는다 → `meta.title`·산문에 "16비트 셔플(스윙) 필"이라고 명시하고, 입으로 부르는 흔들림('두-바 두-바')으로 체감시킨다. `feel` 필드는 쓰지 않는다.

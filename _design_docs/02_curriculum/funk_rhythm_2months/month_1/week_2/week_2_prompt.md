@@ -10,7 +10,7 @@
 4. 무조건적인 속도 올리기를 절대 유도하지 않는다. 느린 템포(메트로놈 60~70)에서 오른손 모터를 멈추지 않은 채, 왼손 힘 조절로 '고스트 노트'의 타악기 소리를 내는 감각을 최우선으로 강조한다. 이번 주의 핵심은 **왼손 퍼커션 '고스트 노트' — 힘을 빼고 줄에 손을 얹어 내는 타악기 소리, 그리고 실제음과의 대비**다.
 
 5. **연습용 예제 릭/그루브를 반드시 포함한다(개념 설명만으로 끝내지 말 것).** 각 day 마다 그날 배운 리듬·테크닉을 **실제로 쳐볼 수 있는 구체 예제**를 최소 2개, `type:"tab"` 표준 JSON으로 제시한다.
-   - 리듬·컴핑·스크래치가 핵심인 날 → `meta.notation:"staff+tab"`(오선보+타브, **박자 공유**)으로 2~4마디 그루브 패턴 1개 이상. 소리 없는 자리는 `rest`, 뮤트 스크래치/커팅·고스트 타격은 `technique:"palm_mute"`.
+   - 리듬·컴핑·스크래치가 핵심인 날 → `meta.notation:"staff+tab"`(오선보+타브, **박자 공유**)으로 2~4마디 그루브 패턴 1개 이상. 소리 없는 자리는 `rest`, 뮤트 스크래치/커팅·고스트 타격은 `technique:"dead_note"`.
    - 싱글 노트 라인·멜로디가 핵심인 날 → `meta.notation:"staff+tab"`으로 1~2마디 실전 프레이즈 1개 이상.
    - 예제는 반드시 **그날의 프렛 구역·근음 줄 안에서 실제로 운지 가능**해야 하고(string/fret 정확), `duration`으로 리듬을 명시하며, 도수·음이름은 `label`, 색은 `role` 규약(color_legend.md)을 따른다. 지어내지 말 것(스키마 밖 금지).
    - 각 예제 JSON 바로 아래에 **연주 안내 한 줄**(권장 BPM · 반복 방법 · 무엇을 느껴야 하는지)을 산문으로 붙인다. 정답이 아니라 '따라 칠 예시'로 제시.
@@ -60,7 +60,7 @@
 }
 ```
 
-**② 리듬/그루브 악보 — `type: "tab"` + `meta.notation: "staff+tab"` (실제음 = 일반 음, 고스트 = `palm_mute`)**
+**② 리듬/그루브 악보 — `type: "tab"` + `meta.notation: "staff+tab"` (실제음 = 일반 음, 고스트 = `dead_note`)**
 ```json
 {
   "id": "m1.w2.d3.strum_ghost_mix",
@@ -71,8 +71,8 @@
     "measures": [
       { "measure": 1, "notes": [
         { "string": 5, "fret": 7, "duration": "sixteenth", "label": "R", "isRoot": true, "role": "root" },
-        { "string": 5, "fret": 7, "duration": "sixteenth", "technique": "palm_mute", "role": "scale" },
-        { "string": 5, "fret": 7, "duration": "sixteenth", "technique": "palm_mute", "role": "scale" },
+        { "string": 5, "fret": 7, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+        { "string": 5, "fret": 7, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
         { "string": 5, "fret": 7, "duration": "sixteenth", "label": "R", "isRoot": true, "role": "root" }
       ]}
     ]
@@ -87,13 +87,13 @@
 - **도수·음이름은 오직 `label`에** 문자열로만 쓴다(예: `"R"`, `"b3"`, `"3"`, `"5"`, `"b7"`, `"7"`, `"9"`). ⛔ `interval`·`degree`·`note`·`chord_name`·`root_string`·`base_fret`·`top_note`·`diagram_type`·`tempo`·`tempo_bpm`·`fret_range` 같은 필드명은 **절대 쓰지 않는다**(스키마에 없어 렌더 실패).
 - `label`에는 **음악 기호(도수·음이름)만** — 서술 문장 금지(지판에 그대로 노출됨). 뉘앙스는 산문에서 설명한다.
 - **근음**은 `"isRoot": true`. **바레**는 `fretboard.barre` 배열 `{ "fret","fromString","toString","finger" }`로 표기한다.
-- `finger`: `0`=개방/무지정, `1`=검지 ~ `4`=새끼. `duration`: `"whole"`/`"half"`/`"quarter"`/`"eighth"`/`"sixteenth"` 문자열만. `technique`: `"none"`/`"hammer_on"`/`"pull_off"`/`"slide"`/`"bend"`/`"vibrato"`/`"palm_mute"`/`"harmonic"` 중 하나.
+- `finger`: `0`=개방/무지정, `1`=검지 ~ `4`=새끼. `duration`: `"whole"`/`"half"`/`"quarter"`/`"eighth"`/`"sixteenth"` 문자열만. `technique`: `"none"`/`"hammer_on"`/`"pull_off"`/`"slide"`/`"bend"`/`"vibrato"`/`"palm_mute"`/`"dead_note"`/`"harmonic"` 중 하나.
 - **`role`로 색을 부여한다**(색 = `color_legend.md`): 근음 R → `"role":"root"`+`"isRoot":true` → **파랑** / 3·5·7 코드톤 → `"role":"chord_tone"` → **파랑** / 9·11·13 텐션 → `"role":"color"` → **노랑** / 지금 주목할 자리 → `"role":"target"`+`"highlight":true` → **초록** / 블루노트 b5·b3 → `"role":"blue_note"` → **보라** / 일반 스케일·경과음 → `"role":"scale"`/`"passing"`(색 없음). ⛔ "빨강/red/赤" 금지.
 
 **펑크 리듬을 표준 스키마로 표기하는 법 (반드시 준수):**
 - 리듬/스트로크 예제는 `type:"tab"`으로 내고 `meta.notation:"staff+tab"`(박자를 오선보로) 또는 리듬만 보일 땐 `"rhythm"`을 붙인다.
 - **실제로 울리는 스트로크/음** = `notes[]` 항목 하나로. 코드 스트로크는 대표음 하나(보이싱 근음 또는 탑스트링)로 리듬만 표기하고, 코드 폼 전체는 별도 `fretboard_diagram`으로 병기한다.
-- **고스트 노트·뮤트 스크래치**('퍽'·'치'처럼 음정 없는 타악 소리) = 그 음에 `"technique":"palm_mute"`를 준다. 실제음과 고스트의 **대비**(따-치-치-따)는 산문으로 또렷이 설명한다.
+- **고스트 노트·뮤트 스크래치**('퍽'·'치'처럼 음정 없는 타악 소리) = 그 음에 `"technique":"dead_note"`를 준다. 실제음과 고스트의 **대비**(따-치-치-따)는 산문으로 또렷이 설명한다.
 - **소리 없는 자리** = `"rest": true`(duration만큼 공백). 오른손은 멈추지 않는다는 점을 산문으로 명시한다.
 - **업/다운 피킹 방향·강약(악센트)**은 렌더러가 기호로 그리지 않는다 → **산문(필요하면 표)으로 설명**한다. '지금 특히 주목할 자리'는 그 음에 `"highlight": true`(→ 초록)로 눈에 띄게 할 수 있다.
 - 16비트 모터는 `"sixteenth"` duration으로 채운다.
@@ -103,8 +103,8 @@
 핵심 메시지: "펑크의 그루브는 '실제 음'과 '퍽 소리(고스트 노트)'의 대비에서 나온다. 오른손 모터는 그대로, 왼손은 눌렀다 힘을 뺐다 하며 드럼처럼 리듬을 만든다. 음이 없는 자리가 오히려 그루브를 살린다."
 
 # 4일 커리큘럼 설계 지침
-- day_1: 고스트 노트란? 왼손 힘을 완전히 빼 줄에 얹기만 했을 때 나는 '퍽/치' 소리 원리. 실제 음과의 소리 차이 시연 설명(예제에서 실제음=일반 음, 고스트=`palm_mute`로 대비).
-- day_2: 오른손 모터를 유지한 채 고스트 노트만 연속으로. 1주차의 뮤트 스크래치를 '의도된 리듬 악기'로 승격(`palm_mute` 연속 예제).
+- day_1: 고스트 노트란? 왼손 힘을 완전히 빼 줄에 얹기만 했을 때 나는 '퍽/치' 소리 원리. 실제 음과의 소리 차이 시연 설명(예제에서 실제음=일반 음, 고스트=`dead_note`로 대비).
+- day_2: 오른손 모터를 유지한 채 고스트 노트만 연속으로. 1주차의 뮤트 스크래치를 '의도된 리듬 악기'로 승격(`dead_note` 연속 예제).
 - day_3: 실제 코드 스트로크 + 고스트 노트 섞기. 어느 16비트 위치에 실제음, 어느 위치에 고스트를 둘지 배치 훈련(혼합 `staff+tab` 예제 필수).
 - day_4: 주간 통합. 실제음과 고스트를 교대로 배치한 4마디 그루브를 백킹 트랙 위에서. 드럼처럼 들리는지 확인.
 

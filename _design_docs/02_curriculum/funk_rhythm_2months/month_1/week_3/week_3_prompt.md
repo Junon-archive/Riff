@@ -10,7 +10,7 @@
 4. 무조건적인 속도 올리기를 절대 유도하지 않는다. 느린 템포(메트로놈 60~70)에서 오른손 모터를 균일하게 유지한 채, 특정 16비트 위치에만 '악센트(강세)'를 정확히 꽂는 컨트롤을 최우선으로 강조한다. 이번 주의 핵심은 **16비트 1-e-&-a 중 원하는 1~2개 위치에만 정확히 악센트(강세) 넣기**다.
 
 5. **연습용 예제 릭/그루브를 반드시 포함한다(개념 설명만으로 끝내지 말 것).** 각 day 마다 그날 배운 리듬·테크닉을 **실제로 쳐볼 수 있는 구체 예제**를 최소 2개, `type:"tab"` 표준 JSON으로 제시한다.
-   - 리듬·컴핑·스크래치가 핵심인 날 → `meta.notation:"staff+tab"`(오선보+타브, **박자 공유**)으로 2~4마디 그루브 패턴 1개 이상. 소리 없는 자리는 `rest`, 뮤트 스크래치/커팅·고스트 타격은 `technique:"palm_mute"`.
+   - 리듬·컴핑·스크래치가 핵심인 날 → `meta.notation:"staff+tab"`(오선보+타브, **박자 공유**)으로 2~4마디 그루브 패턴 1개 이상. 소리 없는 자리는 `rest`, 뮤트 스크래치/커팅·고스트 타격은 `technique:"dead_note"`.
    - 싱글 노트 라인·멜로디가 핵심인 날 → `meta.notation:"staff+tab"`으로 1~2마디 실전 프레이즈 1개 이상.
    - 예제는 반드시 **그날의 프렛 구역·근음 줄 안에서 실제로 운지 가능**해야 하고(string/fret 정확), `duration`으로 리듬을 명시하며, 도수·음이름은 `label`, 색은 `role` 규약(color_legend.md)을 따른다. 지어내지 말 것(스키마 밖 금지).
    - 각 예제 JSON 바로 아래에 **연주 안내 한 줄**(권장 BPM · 반복 방법 · 무엇을 느껴야 하는지)을 산문으로 붙인다. 정답이 아니라 '따라 칠 예시'로 제시.
@@ -69,10 +69,10 @@
     "timeSignature": "4/4",
     "measures": [
       { "measure": 1, "notes": [
-        { "string": 5, "fret": 7, "duration": "sixteenth", "technique": "palm_mute", "role": "scale" },
-        { "string": 5, "fret": 7, "duration": "sixteenth", "technique": "palm_mute", "role": "scale" },
+        { "string": 5, "fret": 7, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+        { "string": 5, "fret": 7, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
         { "string": 5, "fret": 7, "duration": "sixteenth", "label": "R", "isRoot": true, "role": "target", "highlight": true },
-        { "string": 5, "fret": 7, "duration": "sixteenth", "technique": "palm_mute", "role": "scale" }
+        { "string": 5, "fret": 7, "duration": "sixteenth", "technique": "dead_note", "role": "scale" }
       ]}
     ]
   }
@@ -84,13 +84,13 @@
 - **사용하지 않는 현**: `dots`에서 **생략**. '반드시 뮤트(✕)'만 `{ "string": N, "fret": 0, "muted": true }`.
 - **도수·음이름은 오직 `label`에** 문자열로만(예: `"R"`, `"b3"`, `"3"`, `"5"`, `"b7"`, `"7"`, `"9"`). ⛔ `interval`·`degree`·`note`·`chord_name`·`root_string`·`base_fret`·`top_note`·`diagram_type`·`tempo`·`tempo_bpm`·`fret_range` 필드명 **절대 금지**(렌더 실패).
 - `label`엔 음악 기호만 — 서술 문장 금지. 뉘앙스는 산문에서.
-- **근음** `"isRoot": true`. **바레**는 `fretboard.barre` 배열. `finger`: `0`~`4`. `duration`: `"whole"`/`"half"`/`"quarter"`/`"eighth"`/`"sixteenth"` 문자열만. `technique`: `none`/`hammer_on`/`pull_off`/`slide`/`bend`/`vibrato`/`palm_mute`/`harmonic`.
+- **근음** `"isRoot": true`. **바레**는 `fretboard.barre` 배열. `finger`: `0`~`4`. `duration`: `"whole"`/`"half"`/`"quarter"`/`"eighth"`/`"sixteenth"` 문자열만. `technique`: `none`/`hammer_on`/`pull_off`/`slide`/`bend`/`vibrato`/`palm_mute`/`dead_note`/`harmonic`.
 - **`role`로 색을 부여**(색 = `color_legend.md`): R → `root`(+`isRoot`) **파랑** / 코드톤 → `chord_tone` **파랑** / 텐션 → `color` **노랑** / 주목할 자리 → `target`+`highlight` **초록** / 블루노트 → `blue_note` **보라** / 일반 → `scale`/`passing`(색 없음). ⛔ "빨강/red/赤" 금지.
 
 **펑크 리듬을 표준 스키마로 표기하는 법 (반드시 준수):**
 - 리듬/스트로크 예제는 `type:"tab"` + `meta.notation:"staff+tab"`(또는 리듬만이면 `"rhythm"`).
 - **실제로 울리는 스트로크/음** = `notes[]` 항목 하나(코드는 대표음 하나로 리듬만, 폼 전체는 별도 `fretboard_diagram`).
-- **고스트 노트·뮤트 스크래치** = `"technique":"palm_mute"`.
+- **고스트 노트·뮤트 스크래치** = `"technique":"dead_note"`.
 - **소리 없는 자리** = `"rest": true`. 오른손은 멈추지 않음을 산문으로 명시.
 - **악센트(강약)·업/다운 피킹 방향**은 렌더러가 기호(>·П/V)로 그리지 않는다 → **산문으로 설명**한다. 대신 **악센트를 꽂는 그 자리**는 그 음에 `"role":"target"` + `"highlight": true`(→ 초록)를 주어 눈에 띄게 한다. 강세는 **1~2개 위치로 제한**하고 나머지는 약하게 흘린다는 철학을 산문에서 강조한다.
 - 16비트 모터는 `"sixteenth"` duration으로 채운다.
@@ -102,7 +102,7 @@
 # 4일 커리큘럼 설계 지침
 - day_1: 악센트란? 균일한 모터 위에 특정 위치만 음량을 키우는 개념. 먼저 '한 박의 &'에만 악센트(그 자리를 `target`+`highlight`로 표기).
 - day_2: 악센트 위치 옮기기. "e"에만, "a"에만 등 위치를 바꿔가며 같은 패턴이 전혀 다른 그루브가 됨을 체감(각 예제에서 강세 자리를 `highlight`).
-- day_3: 고스트 노트(2주차) + 악센트(3주차) 결합. 약한 고스트(`palm_mute`)들 사이에서 악센트 한 방(`highlight`)이 튀어나오는 대비 훈련.
+- day_3: 고스트 노트(2주차) + 악센트(3주차) 결합. 약한 고스트(`dead_note`)들 사이에서 악센트 한 방(`highlight`)이 튀어나오는 대비 훈련.
 - day_4: 주간 통합. 악센트 1~2개 + 고스트 + 실제음을 섞은 4마디 그루브를 백킹 트랙 위에서. 강세가 드럼 스네어와 맞물리는지 확인.
 
 # 데일리 50분 루틴 (③ 오늘의 연습에 반드시 이 타임테이블 적용)

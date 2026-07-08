@@ -10,7 +10,7 @@
 4. 무조건적인 속도 올리기를 절대 유도하지 않는다. 느린 템포(메트로놈 60~70)에서 오른손 모터를 멈추지 않은 채, 1·2·3번 줄만 정확히 타격하는 컨트롤을 최우선으로 강조한다. 이번 주의 핵심은 **미니멀 펑크 보이싱 — 1·2·3번 줄만 사용하는 고음역 찰진 트라이어드 폼 암기 및 타격**이다.
 
 5. **연습용 예제 릭/그루브를 반드시 포함한다(개념 설명만으로 끝내지 말 것).** 각 day 마다 그날 배운 코드·리듬·테크닉을 **실제로 쳐볼 수 있는 구체 예제**를 최소 2개, `type:"tab"` 표준 JSON으로 제시한다.
-   - 리듬·컴핑·커팅이 핵심인 날 → `meta.notation:"staff+tab"`(오선보+타브, **박자 공유**)으로 2~4마디 커팅 그루브 1개 이상. 소리 없는 자리는 `rest`, 뮤트 커팅·고스트 타격은 `technique:"palm_mute"`.
+   - 리듬·컴핑·커팅이 핵심인 날 → `meta.notation:"staff+tab"`(오선보+타브, **박자 공유**)으로 2~4마디 커팅 그루브 1개 이상. 소리 없는 자리는 `rest`, 뮤트 커팅·고스트 타격은 `technique:"dead_note"`.
    - 멜로디/싱글 노트가 핵심인 날 → `meta.notation:"staff+tab"`으로 1~2마디 실전 프레이즈 1개 이상.
    - 예제는 반드시 **그날의 프렛 구역·근음 줄(1·2·3번) 안에서 실제로 운지 가능**해야 하고(string/fret 정확), `duration`으로 리듬을 명시하며, 도수·음이름은 `label`, 색은 `role` 규약(color_legend.md)을 따른다. 지어내지 말 것.
    - 각 예제 JSON 바로 아래에 **연주 안내 한 줄**(권장 BPM · 반복 방법 · 무엇을 느껴야 하는지)을 산문으로 붙인다.
@@ -71,8 +71,8 @@
     "measures": [
       { "measure": 1, "notes": [
         { "string": 2, "fret": 2, "duration": "sixteenth", "label": "5", "role": "target", "highlight": true },
-        { "string": 2, "fret": 2, "duration": "sixteenth", "technique": "palm_mute", "role": "scale" },
-        { "string": 2, "fret": 2, "duration": "sixteenth", "technique": "palm_mute", "role": "scale" },
+        { "string": 2, "fret": 2, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+        { "string": 2, "fret": 2, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
         { "string": 2, "fret": 2, "duration": "sixteenth", "label": "5", "role": "chord_tone" }
       ]}
     ]
@@ -85,13 +85,13 @@
 - **사용하지 않는 현**: `dots`에서 **생략**. 다만 이번 주는 '4·5·6번은 반드시 뮤트(✕)'를 보여주는 게 교육 포인트이므로 `{ "string": N, "fret": 0, "muted": true }`로 표기한다.
 - **도수·음이름은 오직 `label`에** 문자열로만(예: `"R"`, `"b3"`, `"3"`, `"5"`, `"b7"`, `"7"`, `"9"`). ⛔ `interval`·`degree`·`note`·`chord_name`·`root_string`·`base_fret`·`top_note`·`diagram_type`·`tempo`·`tempo_bpm`·`fret_range` 필드명 **절대 금지**(렌더 실패).
 - `label`엔 음악 기호만 — 서술 문장 금지. 뉘앙스는 산문에서.
-- **근음** `"isRoot": true`. **바레**는 `fretboard.barre` 배열. `finger`: `0`~`4`. `duration`: `"whole"`/`"half"`/`"quarter"`/`"eighth"`/`"sixteenth"` 문자열만. `technique`: `none`/`hammer_on`/`pull_off`/`slide`/`bend`/`vibrato`/`palm_mute`/`harmonic`.
+- **근음** `"isRoot": true`. **바레**는 `fretboard.barre` 배열. `finger`: `0`~`4`. `duration`: `"whole"`/`"half"`/`"quarter"`/`"eighth"`/`"sixteenth"` 문자열만. `technique`: `none`/`hammer_on`/`pull_off`/`slide`/`bend`/`vibrato`/`palm_mute`/`dead_note`/`harmonic`.
 - **`role`로 색을 부여**(색 = `color_legend.md`): R → `root`(+`isRoot`) **파랑** / 3·5·7 코드톤 → `chord_tone` **파랑** / 텐션 → `color` **노랑** / 주목할 자리 → `target`+`highlight` **초록** / 블루노트 → `blue_note` **보라** / 일반 → `scale`/`passing`(색 없음). ⛔ "빨강/red/赤" 금지.
 
 **펑크 리듬을 표준 스키마로 표기하는 법 (반드시 준수):**
 - 리듬/스트로크 예제는 `type:"tab"` + `meta.notation:"staff+tab"`(또는 리듬만이면 `"rhythm"`).
 - **실제로 울리는 스트로크/음** = `notes[]` 항목 하나(3줄 트라이어드는 대표음 하나, 예: 1번 또는 2번줄로 리듬만 표기하고, 폼 전체는 별도 `fretboard_diagram`).
-- **뮤트 커팅·고스트 타격** = `"technique":"palm_mute"`. **소리 없는 자리** = `"rest": true`(오른손은 멈추지 않음을 산문으로).
+- **뮤트 커팅·고스트 타격** = `"technique":"dead_note"`. **소리 없는 자리** = `"rest": true`(오른손은 멈추지 않음을 산문으로).
 - **악센트·업/다운 피킹 방향**은 렌더러가 기호로 그리지 않는다 → **산문으로 설명**. 악센트 자리는 `"role":"target"`+`"highlight": true`(→ 초록)로 눈에 띄게 한다.
 - 오른손이 4·5·6번 줄 공간까지 헛되이 지나가도 되니 왼손 뮤트로 아랫줄이 새지 않게 하는 감각을 산문으로 강조한다. 16비트 모터는 `"sixteenth"` duration으로 채운다.
 
@@ -102,7 +102,7 @@
 # 4일 커리큘럼 설계 지침
 - day_1: 왜 펑크는 고음역 3줄인가. 1·2·3번 줄 메이저 트라이어드 폼(루트가 3번줄) 소개와 소리 특성(4·5·6번은 `muted`).
 - day_2: 마이너 트라이어드 및 다른 자리(인버전) 맛보기. 같은 3줄 안에서 손가락만 바꿔 색 변화(각 폼을 `fretboard_diagram`으로 대조).
-- day_3: 3줄 트라이어드 + 아랫줄 뮤트를 섞은 커팅. 오른손이 넓게 지나가도 3줄만 울리게 하는 왼손 뮤트(`palm_mute` 활용 커팅 예제).
+- day_3: 3줄 트라이어드 + 아랫줄 뮤트를 섞은 커팅. 오른손이 넓게 지나가도 3줄만 울리게 하는 왼손 뮤트(`dead_note` 활용 커팅 예제).
 - day_4: 주간 통합. 3줄 트라이어드로 고스트·악센트(1개월차 복습)를 얹어 4마디 커팅 그루브를 백킹 트랙 위에서.
 
 # 데일리 50분 루틴 (③ 오늘의 연습에 반드시 이 타임테이블 적용)

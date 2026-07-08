@@ -63,6 +63,7 @@
 이 항목들은 커리큘럼이 바뀌어도 **바꾸지 않는다.**
 - **표준 악보 스키마:** `03_data_schema/fretboard_score_schema.json` 참조. 이미지 생성 AI 금지, JSON→렌더만(Zero-Hallucination).
   - 필드 규약: `id/type/meta` 필수, `type`∈{scale_shape, fretboard_diagram, tab}, `meta`(stringCount:6·tuning 대문자 E·tempoBpm), 지판=`startFret`+`fretSpan`+`dots`, 도수·음이름=`label`(**음악 기호만, 한국어 서술 금지**), 강조=`highlight`/`role`/`target`, tab `duration`=단어형, `technique` enum, `slideToFret`/`bendTarget`, 여백=`rest`.
+  - **데드 노트 vs 팜뮤트 (혼동 주의):** `technique:"dead_note"` = **음정 없는 뮤트 타격음**(왼손을 줄에 얹고 피킹 — 고스트/뮤트 스크래치/커팅의 '퍽·치'). 렌더러가 **타브 X·오선보 X 노트헤드**로 그린다(음정 없으므로 임시표 없음). `technique:"palm_mute"` = **음정은 있으나** 오른손 손날로 눌러 답답하게 내는 소리(P.M.). 펑크의 뮤트 스크래치·고스트는 **dead_note**, 진짜 팜뮤트만 palm_mute.
 - **토스체(TOSS tone) — KR/EN/JP 공통:** 친절·**차분**·격려·자세한 설명, 매뉴얼조 금지. "오늘 왜 이걸 하냐면요…" 식 도입 후킹. **긁지 않기(No needling):** 독자를 도발·몰아세우지 않는다 — "솔직히 말할게요/Let's be honest/正直に言いますね" 도입, "그거 맞아요?" 반문, "90%는 함정" 깎아내리기 금지. 같은 사실을 부드럽게 설명한다. EN/JP도 토스체 **기능적 등가** 재현(직역 금지). 톤 가이드 SSOT: `04_localization/translation_map.md` §1.
 - **특정 도구 의존 금지:** GarageBand·특정 앱 언급 금지. "아무 녹음 앱/폰 음성 메모"로 도구중립·크로스플랫폼. 녹음은 매일 강제 아닌 권장.
 - **주 4일 × 50분 루틴:** ③오늘의 연습은 항상 0-10 워밍업 / 10-20 두뇌 훈련 / 20-40 실전 즉흥 / 40-50 녹음·자가 피드백. day 본문은 ①이론 ②시각자료 ③루틴 ④팁 4단.

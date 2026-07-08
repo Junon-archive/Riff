@@ -10,7 +10,7 @@
 4. 무조건적인 속도 올리기를 절대 유도하지 않는다. 이번 주는 새 테크닉을 외우는 주가 아니라, 지난 7주간 배운 모터·고스트·악센트·3줄 커팅·싱글 노트·스타카토·셔플을 '섞어서 나만의 그루브로 창작'하는 주다. 느린 템포에서 그루브를 타는 것을 최우선으로 한다. 이번 주의 핵심은 **펑크 머신 레코딩 챌린지 — 나만의 리듬을 메이킹하고 칼박자로 셀프 피드백하기**다.
 
 5. **연습용 예제 릭/그루브를 반드시 포함한다(개념 설명만으로 끝내지 말 것).** 각 day 마다 그날 조합할 리듬·테크닉을 **실제로 쳐볼 수 있는 구체 예제**를 최소 2개, `type:"tab"` 표준 JSON으로 제시한다. 이번 주 예제는 '정답'이 아니라 '영감을 주는 선택지'로 제시하고, 학생이 자기 버전을 만들도록 유도한다.
-   - 커팅 그루브 날 → `meta.notation:"staff+tab"`(오선보+타브, **박자 공유**)으로 커팅 그루브 선택지 1개 이상. 소리 없는 자리는 `rest`, 뮤트 커팅·고스트는 `technique:"palm_mute"`, 스타카토는 짧은 `duration`+`rest`.
+   - 커팅 그루브 날 → `meta.notation:"staff+tab"`(오선보+타브, **박자 공유**)으로 커팅 그루브 선택지 1개 이상. 소리 없는 자리는 `rest`, 뮤트 커팅·고스트는 `technique:"dead_note"`, 스타카토는 짧은 `duration`+`rest`.
    - 싱글 노트 리프 날 → `meta.notation:"staff+tab"`으로 베이스와 대화하는 리프 선택지 1개 이상.
    - 예제는 반드시 **그날의 프렛 구역·근음 줄 안에서 실제로 운지 가능**해야 하고(string/fret 정확), `duration`으로 리듬을 명시하며, 도수·음이름은 `label`, 색은 `role` 규약(color_legend.md)을 따른다. 지어내지 말 것.
    - 각 예제 JSON 바로 아래에 **연주 안내 한 줄**(권장 BPM · 반복 방법 · 무엇을 느껴야 하는지)을 산문으로 붙인다.
@@ -70,7 +70,7 @@
     "measures": [
       { "measure": 1, "notes": [
         { "string": 5, "fret": 7, "duration": "sixteenth", "label": "R", "isRoot": true, "role": "target", "highlight": true },
-        { "string": 5, "fret": 7, "duration": "sixteenth", "technique": "palm_mute", "role": "scale" },
+        { "string": 5, "fret": 7, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
         { "string": 5, "fret": 7, "duration": "sixteenth", "rest": true },
         { "string": 5, "fret": 7, "duration": "sixteenth", "label": "R", "isRoot": true, "role": "root" }
       ]}
@@ -84,13 +84,13 @@
 - **사용하지 않는 현**: `dots`에서 **생략**. '반드시 뮤트(✕)'만 `{ "string": N, "fret": 0, "muted": true }`.
 - **도수·음이름은 오직 `label`에** 문자열로만(예: `"R"`, `"b3"`, `"3"`, `"5"`, `"b7"`, `"7"`, `"9"`). ⛔ `interval`·`degree`·`note`·`chord_name`·`root_string`·`base_fret`·`top_note`·`diagram_type`·`tempo`·`tempo_bpm`·`fret_range`·`articulation`·`feel` 같은 필드명은 **절대 쓰지 않는다**(스키마에 없어 렌더 실패).
 - `label`엔 음악 기호만 — 서술 문장 금지. 뉘앙스는 산문에서.
-- **근음** `"isRoot": true`. **바레**는 `fretboard.barre` 배열. `finger`: `0`~`4`. `duration`: `"whole"`/`"half"`/`"quarter"`/`"eighth"`/`"sixteenth"` 문자열만. `technique`: `none`/`hammer_on`/`pull_off`/`slide`/`bend`/`vibrato`/`palm_mute`/`harmonic`.
+- **근음** `"isRoot": true`. **바레**는 `fretboard.barre` 배열. `finger`: `0`~`4`. `duration`: `"whole"`/`"half"`/`"quarter"`/`"eighth"`/`"sixteenth"` 문자열만. `technique`: `none`/`hammer_on`/`pull_off`/`slide`/`bend`/`vibrato`/`palm_mute`/`dead_note`/`harmonic`.
 - **`role`로 색을 부여**(색 = `color_legend.md`): R → `root`(+`isRoot`) **파랑** / 3·5·7 코드톤 → `chord_tone` **파랑** / 텐션 → `color` **노랑** / 주목할 자리 → `target`+`highlight` **초록** / 블루노트 → `blue_note` **보라** / 일반 → `scale`/`passing`(색 없음). ⛔ "빨강/red/赤" 금지.
 
 **펑크 리듬을 표준 스키마로 표기하는 법 (지난 8주 총정리 — 반드시 준수):**
 - 리듬/스트로크 예제는 `type:"tab"` + `meta.notation:"staff+tab"`(또는 리듬만이면 `"rhythm"`).
 - **실제로 울리는 스트로크/음** = `notes[]` 항목 하나(코드는 대표음 하나, 폼 전체는 별도 `fretboard_diagram`). 싱글 노트 라인은 string/fret 정확히.
-- **고스트 노트·뮤트 커팅** = `"technique":"palm_mute"`. **소리 없는 자리(빈 피킹)** = `"rest": true`.
+- **고스트 노트·뮤트 커팅** = `"technique":"dead_note"`. **소리 없는 자리(빈 피킹)** = `"rest": true`.
 - **스타카토** = 짧은 `duration` + 뒤에 `rest`. **레가토** = 더 긴 `duration`. (원리는 산문으로)
 - **악센트·업/다운 피킹 방향·셔플 필**은 렌더러가 기호로 그리지 않는다 → **산문(및 `meta.title`)으로 설명**한다. 악센트/주목할 자리는 `"role":"target"`+`"highlight": true`(→ 초록).
 - 16비트 모터는 `"sixteenth"` duration으로 채운다.
