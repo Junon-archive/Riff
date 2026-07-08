@@ -124,6 +124,12 @@ const TECHNIQUES = new Set([
 const ROLES = new Set(['root', 'chord_tone', 'target', 'color', 'blue_note', 'scale', 'passing']);
 const STROKES = new Set(['down', 'up', 'arpeggio']); // 스트럼/아르페지오
 const FEELS = new Set(['straight', 'swing8', 'swing16']);
+// 렌더러 역량 가드: staff.ts(VexFlow, notation=staff/staff+tab/rhythm)가 실제로 그리는 technique.
+// bend/hammer_on/pull_off/slide/vibrato/harmonic 은 staff.ts 미구현 → 오선보 경로에서 쓰면 화면에
+// 조용히 사라진다. 이 기법이 필요하면 tab.ts 경로(notation 미지정/"tab")로 내야 한다(tab.ts는 전부 그림).
+// ★staff.ts 에 새 기법 렌더를 추가하면 이 Set 한 줄만 넓히면 된다(락이 아니라 능력 계약).
+const STAFF_TECHNIQUES = new Set(['none', 'palm_mute', 'dead_note']);
+const STAFF_NOTATIONS = new Set(['staff', 'staff+tab', 'rhythm']);
 // duration → 16분음표 단위(마디 박자합 검산용). dotted 는 1.5배.
 const DUR_UNITS = { whole: 16, half: 8, quarter: 4, eighth: 2, sixteenth: 1 };
 
@@ -144,6 +150,8 @@ function validateScore(score, ctx) {
 
   if (score.type === 'tab') {
     if (!score.tab || !Array.isArray(score.tab.measures)) at('tab.measures 누락');
+    // 오선보(staff.ts) 경로면 렌더 가능한 technique 만 허용(미구현 기법이 화면에서 조용히 사라지는 것 방지).
+    const staffRoute = STAFF_NOTATIONS.has(score.meta.notation);
     // 마디 박자합 = timeSignature (렌더러가 검사 안 하던 것을 게이트로 승격).
     const [tsNum, tsDen] = (score.tab.timeSignature ?? '4/4').split('/').map((x) => parseInt(x, 10));
     const expectUnits = (tsNum || 4) * (16 / (tsDen || 4));
@@ -158,6 +166,8 @@ function validateScore(score, ctx) {
         if (!DURATIONS.has(n.duration)) at(`note.duration 부정확: ${n.duration}`);
         if (n.technique !== undefined && !TECHNIQUES.has(n.technique))
           at(`note.technique 부정확: ${n.technique}`);
+        if (staffRoute && n.technique !== undefined && !STAFF_TECHNIQUES.has(n.technique))
+          at(`오선보(notation:"${score.meta.notation}") 경로 미지원 technique: "${n.technique}" — 밴딩/해머링 등은 tab.ts 경로(notation 미지정/"tab")로 내거나 staff.ts에 렌더 추가 후 STAFF_TECHNIQUES 확장`);
         if (n.role !== undefined && !ROLES.has(n.role)) at(`note.role 부정확: ${n.role}`);
         if (n.stroke !== undefined && !STROKES.has(n.stroke)) at(`note.stroke 부정확: ${n.stroke}`);
         if (n.chord !== undefined) {
