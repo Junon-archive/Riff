@@ -34,6 +34,7 @@ import {
   Dot,
   BarNote,
   GhostNote,
+  Stem,
 } from 'vexflow';
 import type { Score, TabNote as TabNoteData, Measure, NoteRole } from '../types/score';
 
@@ -160,6 +161,49 @@ function postProcess(svg: string, title: string, w: number, h: number): string {
   return out;
 }
 
+/* ---- stem(꼬리) 방향 결정 --------------------------------------------
+ * 표준 조판 규칙. 판정은 "그려지는 위치"인 오선 라인(VexFlow keyProps.line) 기준이다
+ * (임시표는 라인을 바꾸지 않으므로 MIDI 거리로 재면 안 됨). VexFlow treble 라인:
+ * 맨 아래 E4=1 … 가운데 줄 B4=3 … 맨 위 F5=5.
+ *  - 단음: line >= 3(B4 이상) → DOWN, line < 3 → UP. (가운데 줄 B4 = DOWN)
+ *  - 빔 그룹: 가운데 줄에서 "가장 멀리 떨어진 음"이 방향 결정(위쪽이면 DOWN, 아래쪽이면 UP).
+ *    거리는 라인 스텝 기준. 위/아래 동일 거리면 다수결, 그래도 동점이면 DOWN.
+ *    ※ VexFlow 기본 빔 로직은 (line-3) 합(평균)이라 "가장 먼 음" 규칙과 어긋날 수 있어 직접 지정한다.
+ */
+const MIDDLE_LINE = 3; // 가운데 줄 = written B4
+
+function noteLine(sNote: StaveNote): number {
+  const kp = sNote.getKeyProps();
+  return kp.length ? kp[kp.length - 1]!.line : MIDDLE_LINE;
+}
+
+/** 단음 stem 방향(line 기준). B4(가운데 줄) 포함 위쪽 → DOWN. */
+function singleStemDir(line: number): number {
+  return line >= MIDDLE_LINE ? Stem.DOWN : Stem.UP;
+}
+
+/** 빔 그룹 통일 방향: 가운데 줄에서 가장 먼 음이 결정, 동거리면 다수결, 동점이면 DOWN. */
+function groupStemDir(notes: StaveNote[]): number {
+  let maxLine = -Infinity;
+  let minLine = Infinity;
+  let nDown = 0;
+  let nUp = 0;
+  for (const nt of notes) {
+    const line = noteLine(nt);
+    if (line > maxLine) maxLine = line;
+    if (line < minLine) minLine = line;
+    if (line >= MIDDLE_LINE) nDown++;
+    else nUp++;
+  }
+  const farAbove = Math.max(0, maxLine - MIDDLE_LINE); // 가운데 줄 위로 가장 먼 거리
+  const farBelow = Math.max(0, MIDDLE_LINE - minLine); // 가운데 줄 아래로 가장 먼 거리
+  if (farAbove > farBelow) return Stem.DOWN;
+  if (farBelow > farAbove) return Stem.UP;
+  if (nDown > nUp) return Stem.DOWN;
+  if (nUp > nDown) return Stem.UP;
+  return Stem.DOWN; // 동점 → 관례상 DOWN
+}
+
 /* ---- 한 마디의 tickable 묶음 ----------------------------------------- */
 interface BuiltMeasure {
   stave: StaveNote[];
@@ -174,7 +218,12 @@ function buildMeasure(m: Measure, flats: boolean): BuiltMeasure {
   let curBeam: StaveNote[] = [];
   let pos = 0; // 마디 내 위치(16분 단위)
   const flush = () => {
-    if (curBeam.length > 1) beams.push(curBeam);
+    if (curBeam.length > 1) {
+      // 빔으로 묶이는 그룹: 통일 방향으로 덮어쓴다(Beam 은 auto_stem=false 라 이 방향을 유지).
+      const dir = groupStemDir(curBeam);
+      for (const nt of curBeam) nt.setStemDirection(dir);
+      beams.push(curBeam);
+    }
     curBeam = [];
   };
 
@@ -201,6 +250,8 @@ function buildMeasure(m: Measure, flats: boolean): BuiltMeasure {
     const sNote = new StaveNote({ keys: [key], duration: durCode + (dotted ? 'd' : '') });
     if (acc) sNote.addModifier(new Accidental(acc), 0);
     if (dotted) Dot.buildAndAttach([sNote], { all: true });
+    // 단음 기본 방향(그려지는 라인 기준). 빔에 묶이면 flush() 에서 그룹 방향으로 덮어쓴다.
+    sNote.setStemDirection(singleStemDir(noteLine(sNote)));
 
     const tNote = new TabNote({ positions: [{ str: s, fret }], duration: durCode });
 
