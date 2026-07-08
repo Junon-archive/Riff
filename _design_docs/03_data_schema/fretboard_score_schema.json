@@ -34,7 +34,12 @@
         "notation": {
           "type": "string",
           "enum": ["tab", "staff", "staff+tab", "rhythm"],
-          "description": "type=tab 렌더 힌트(선택). 미지정/'tab'=자체 타브 SVG, 'staff'=오선보만, 'staff+tab'=오선보+타브 결합(박자 공유, VexFlow render/staff.ts), 'rhythm'=리듬 컴핑(현재 staff+tab 로 렌더). fretboard_diagram/scale_shape 에는 영향 없음."
+          "description": "type=tab 렌더 힌트(선택). 미지정/'tab'=자체 타브 SVG, 'staff'=오선보만, 'staff+tab'=오선보+타브 결합(박자 공유, VexFlow render/staff.ts), 'rhythm'=컴핑 리듬 악보(타브 미표시·오선보만·코드심볼; 리듬 슬래시 노트헤드는 VexFlow 4.2.5 폰트 부재로 보류→현재 실제 음정 노트헤드). fretboard_diagram/scale_shape 에는 영향 없음."
+        },
+        "feel": {
+          "type": "string",
+          "enum": ["straight", "swing8", "swing16"],
+          "description": "리듬 필(선택). swing8/swing16=오선보 위 'Swing 8ths/16ths' 텍스트로 표기(악보는 정박, 스윙은 지시 텍스트로 — 삼잇단 미도입). 기본 straight."
         }
       }
     },
@@ -122,7 +127,7 @@
                     },
                     "slideToFret": { "type": "integer", "minimum": 0, "maximum": 24, "description": "슬라이드 도착 프렛(구 slide_to 통일). technique=slide일 때." },
                     "bendTarget": { "type": "string", "description": "벤딩 도착 목표(구 bend_target 통일). 예: 'half'(반음), 'full'(온음), 또는 도착 도수 '5'. technique=bend일 때." },
-                    "label": { "type": "string", "description": "도수/음이름 표기(구 degree 통일). 예: R, b3, 3, 'G7-3(B)'" },
+                    "label": { "type": "string", "description": "도수/음이름 표기(구 degree 통일). 예: R, b3, 3, 'G7-3(B)'. 오선보에서 단음 아래에 렌더(화음 chord[] 있는 음표에는 생략)." },
                     "target": { "type": "boolean", "default": false, "description": "코드톤 착지 목표음 여부(주로 3도). 구 target 통일." },
                     "highlight": { "type": "boolean", "default": false, "description": "시각 강조(색채음/블루노트/타겟)." },
                     "role": {
@@ -130,7 +135,29 @@
                       "enum": ["root", "chord_tone", "target", "color", "blue_note", "scale", "passing"],
                       "description": "음의 교육적 역할(선택). fretboard.dots.role과 동일 의미."
                     },
-                    "finger": { "type": "integer", "minimum": 0, "maximum": 4 }
+                    "finger": { "type": "integer", "minimum": 0, "maximum": 4 },
+                    "chord": {
+                      "type": "array",
+                      "description": "화음(동시타): 대표음(string/fret) 위에 같은 박에 함께 울리는 추가 음들. 오선보는 노트헤드별 role 색, 타브는 프렛 스택(note-level 단색). 도수 label 은 화음 음표엔 생략.",
+                      "items": {
+                        "type": "object",
+                        "required": ["string", "fret"],
+                        "properties": {
+                          "string": { "type": "integer", "minimum": 1, "maximum": 6 },
+                          "fret": { "type": "integer", "minimum": 0, "maximum": 24 },
+                          "role": { "type": "string", "enum": ["root", "chord_tone", "target", "color", "blue_note", "scale", "passing"] },
+                          "label": { "type": "string" },
+                          "isRoot": { "type": "boolean" },
+                          "highlight": { "type": "boolean" }
+                        }
+                      }
+                    },
+                    "stroke": {
+                      "type": "string",
+                      "enum": ["down", "up", "arpeggio"],
+                      "description": "스트로크 방향(선택). down/up=스트럼(직선 화살표), arpeggio=펼침(물결 브래킷). 오선보·타브 양쪽 표기. 없으면 표시 없음."
+                    },
+                    "chordSymbol": { "type": "string", "description": "코드 심볼(예: 'Cmaj7','E9'). 음표 위에 표기. 주로 notation:'rhythm' 컴핑 악보에서 사용." }
                   }
                 }
               }

@@ -121,6 +121,11 @@ const NOTATIONS = new Set(['tab', 'staff', 'staff+tab', 'rhythm']);
 const TECHNIQUES = new Set([
   'none', 'hammer_on', 'pull_off', 'slide', 'bend', 'vibrato', 'palm_mute', 'dead_note', 'harmonic',
 ]);
+const ROLES = new Set(['root', 'chord_tone', 'target', 'color', 'blue_note', 'scale', 'passing']);
+const STROKES = new Set(['down', 'up', 'arpeggio']); // 스트럼/아르페지오
+const FEELS = new Set(['straight', 'swing8', 'swing16']);
+// duration → 16분음표 단위(마디 박자합 검산용). dotted 는 1.5배.
+const DUR_UNITS = { whole: 16, half: 8, quarter: 4, eighth: 2, sixteenth: 1 };
 
 function validateScore(score, ctx) {
   const at = (m) => fail(`악보 스키마 위반 [${ctx}]: ${m}`);
@@ -132,18 +137,41 @@ function validateScore(score, ctx) {
   if (score.meta.stringCount !== 6) at('meta.stringCount 는 6 고정');
   if (score.meta.notation !== undefined && !NOTATIONS.has(score.meta.notation))
     at(`meta.notation 부정확: ${score.meta.notation}`);
+  if (score.meta.feel !== undefined && !FEELS.has(score.meta.feel))
+    at(`meta.feel 부정확: ${score.meta.feel}`);
 
   if (score.type === 'tab') {
     if (!score.tab || !Array.isArray(score.tab.measures)) at('tab.measures 누락');
+    // 마디 박자합 = timeSignature (렌더러가 검사 안 하던 것을 게이트로 승격).
+    const [tsNum, tsDen] = (score.tab.timeSignature ?? '4/4').split('/').map((x) => parseInt(x, 10));
+    const expectUnits = (tsNum || 4) * (16 / (tsDen || 4));
     for (const meas of score.tab.measures) {
       if (!Array.isArray(meas.notes)) at('tab.measures[].notes 누락');
+      let units = 0;
       for (const n of meas.notes) {
         if (typeof n.string !== 'number' || typeof n.fret !== 'number')
           at('note.string/fret 누락');
+        if (!(n.string >= 1 && n.string <= 6)) at(`note.string 범위(1~6) 위반: ${n.string}`);
+        if (!(n.fret >= 0 && n.fret <= 24)) at(`note.fret 범위(0~24) 위반: ${n.fret}`);
         if (!DURATIONS.has(n.duration)) at(`note.duration 부정확: ${n.duration}`);
         if (n.technique !== undefined && !TECHNIQUES.has(n.technique))
           at(`note.technique 부정확: ${n.technique}`);
+        if (n.role !== undefined && !ROLES.has(n.role)) at(`note.role 부정확: ${n.role}`);
+        if (n.stroke !== undefined && !STROKES.has(n.stroke)) at(`note.stroke 부정확: ${n.stroke}`);
+        if (n.chord !== undefined) {
+          if (!Array.isArray(n.chord)) at('note.chord 는 배열');
+          for (const ch of n.chord) {
+            if (!(ch.string >= 1 && ch.string <= 6)) at(`chord.string 범위(1~6) 위반: ${ch.string}`);
+            if (!(ch.fret >= 0 && ch.fret <= 24)) at(`chord.fret 범위(0~24) 위반: ${ch.fret}`);
+            if (ch.role !== undefined && !ROLES.has(ch.role)) at(`chord.role 부정확: ${ch.role}`);
+          }
+        }
+        let u = DUR_UNITS[n.duration] ?? 0;
+        if (n.dotted) u *= 1.5;
+        units += u;
       }
+      if (units !== expectUnits)
+        at(`마디 ${meas.measure ?? '?'} 박자합 ${units} ≠ ${expectUnits}(${tsNum}/${tsDen})`);
     }
   } else {
     if (!score.fretboard || typeof score.fretboard !== 'object')
