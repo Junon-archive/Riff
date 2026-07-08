@@ -65,24 +65,24 @@ i18nKey: "lesson.m2.w8.d4"
   "meta": { "title": "Final comp (9ths + groove) — staff + tab", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "C", "tempoBpm": 80, "notation": "staff+tab" },
   "tab": { "timeSignature": "4/4", "measures": [
     { "measure": 1, "notes": [
-      { "string": 5, "fret": 5, "duration": "quarter", "label": "R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 5, "duration": "quarter", "label": "R", "isRoot": true, "role": "root", "chord": [{ "string": 4, "fret": 3, "role": "target", "label": "b3" }, { "string": 3, "fret": 5, "role": "target", "label": "b7" }, { "string": 2, "fret": 5, "role": "color", "label": "9" }] },
       { "string": 5, "fret": 5, "duration": "eighth", "rest": true },
-      { "string": 2, "fret": 5, "duration": "eighth", "label": "9", "technique": "palm_mute", "role": "color" },
-      { "string": 4, "fret": 3, "duration": "quarter", "label": "b3", "role": "target", "highlight": true },
+      { "string": 5, "fret": 5, "duration": "eighth", "technique": "palm_mute", "role": "root", "label": "R", "chord": [{ "string": 4, "fret": 3, "role": "target", "label": "b3" }, { "string": 3, "fret": 5, "role": "target", "label": "b7" }, { "string": 2, "fret": 5, "role": "color", "label": "9" }] },
+      { "string": 5, "fret": 5, "duration": "quarter", "role": "root", "label": "R", "chord": [{ "string": 4, "fret": 3, "role": "target", "label": "b3" }, { "string": 3, "fret": 5, "role": "target", "label": "b7" }, { "string": 2, "fret": 5, "role": "color", "label": "9" }] },
       { "string": 5, "fret": 5, "duration": "quarter", "rest": true }
     ]},
     { "measure": 2, "notes": [
-      { "string": 6, "fret": 3, "duration": "quarter", "label": "R", "isRoot": true, "role": "root" },
+      { "string": 6, "fret": 3, "duration": "quarter", "label": "R", "isRoot": true, "role": "root", "chord": [{ "string": 4, "fret": 3, "role": "target", "label": "b7" }, { "string": 3, "fret": 4, "role": "target", "label": "3" }] },
       { "string": 6, "fret": 3, "duration": "eighth", "rest": true },
-      { "string": 3, "fret": 4, "duration": "eighth", "label": "3", "technique": "palm_mute", "role": "target", "highlight": true },
-      { "string": 4, "fret": 3, "duration": "quarter", "label": "b7", "role": "target", "highlight": true },
+      { "string": 6, "fret": 3, "duration": "eighth", "technique": "palm_mute", "role": "root", "label": "R", "chord": [{ "string": 4, "fret": 3, "role": "target", "label": "b7" }, { "string": 3, "fret": 4, "role": "target", "label": "3" }] },
+      { "string": 6, "fret": 3, "duration": "quarter", "role": "root", "label": "R", "chord": [{ "string": 4, "fret": 3, "role": "target", "label": "b7" }, { "string": 3, "fret": 4, "role": "target", "label": "3" }] },
       { "string": 6, "fret": 3, "duration": "quarter", "rest": true }
     ]},
     { "measure": 3, "notes": [
-      { "string": 5, "fret": 3, "duration": "quarter", "label": "R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 3, "duration": "quarter", "label": "R", "isRoot": true, "role": "root", "chord": [{ "string": 4, "fret": 2, "role": "chord_tone", "label": "3" }, { "string": 3, "fret": 4, "role": "chord_tone", "label": "7" }, { "string": 2, "fret": 3, "role": "color", "label": "9" }] },
       { "string": 5, "fret": 3, "duration": "eighth", "rest": true },
-      { "string": 2, "fret": 3, "duration": "eighth", "label": "9", "technique": "palm_mute", "role": "color" },
-      { "string": 3, "fret": 4, "duration": "half", "label": "7", "role": "chord_tone" }
+      { "string": 5, "fret": 3, "duration": "eighth", "technique": "palm_mute", "role": "root", "label": "R", "chord": [{ "string": 4, "fret": 2, "role": "chord_tone", "label": "3" }, { "string": 3, "fret": 4, "role": "chord_tone", "label": "7" }, { "string": 2, "fret": 3, "role": "color", "label": "9" }] },
+      { "string": 5, "fret": 3, "duration": "half", "role": "root", "label": "R", "chord": [{ "string": 4, "fret": 2, "role": "chord_tone", "label": "3" }, { "string": 3, "fret": 4, "role": "chord_tone", "label": "7" }, { "string": 2, "fret": 3, "role": "color", "label": "9" }] }
     ]}
   ]}
 }

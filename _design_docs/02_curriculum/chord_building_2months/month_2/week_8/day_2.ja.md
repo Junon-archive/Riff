@@ -47,10 +47,10 @@ i18nKey: "lesson.m2.w8.d2"
   "meta": { "title": "Groove A (staccato + rests) — staff + tab", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "C", "tempoBpm": 84, "notation": "staff+tab" },
   "tab": { "timeSignature": "4/4", "measures": [
     { "measure": 1, "notes": [
-      { "string": 5, "fret": 3, "duration": "quarter", "label": "R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 3, "duration": "quarter", "label": "R", "isRoot": true, "role": "root", "chord": [{ "string": 3, "fret": 4, "role": "target", "label": "7" }, { "string": 2, "fret": 5, "role": "target", "label": "3" }] },
       { "string": 5, "fret": 3, "duration": "eighth", "rest": true },
-      { "string": 3, "fret": 4, "duration": "eighth", "label": "7", "technique": "palm_mute", "role": "target", "highlight": true },
-      { "string": 2, "fret": 5, "duration": "quarter", "label": "3", "role": "target", "highlight": true },
+      { "string": 5, "fret": 3, "duration": "eighth", "technique": "palm_mute", "role": "root", "label": "R", "chord": [{ "string": 3, "fret": 4, "role": "target", "label": "7" }, { "string": 2, "fret": 5, "role": "target", "label": "3" }] },
+      { "string": 5, "fret": 3, "duration": "quarter", "role": "root", "label": "R", "chord": [{ "string": 3, "fret": 4, "role": "target", "label": "7" }, { "string": 2, "fret": 5, "role": "target", "label": "3" }] },
       { "string": 5, "fret": 3, "duration": "quarter", "rest": true }
     ]}
   ]}
@@ -68,12 +68,12 @@ i18nKey: "lesson.m2.w8.d2"
   "meta": { "title": "Groove B (syncopation) — staff + tab", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "C", "tempoBpm": 84, "notation": "staff+tab" },
   "tab": { "timeSignature": "4/4", "measures": [
     { "measure": 1, "notes": [
-      { "string": 5, "fret": 3, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 3, "duration": "eighth", "label": "R", "isRoot": true, "role": "root", "chord": [{ "string": 3, "fret": 4, "role": "target", "label": "7" }, { "string": 2, "fret": 5, "role": "target", "label": "3" }] },
       { "string": 5, "fret": 3, "duration": "eighth", "rest": true },
-      { "string": 2, "fret": 5, "duration": "quarter", "label": "3", "role": "target", "highlight": true },
-      { "string": 3, "fret": 4, "duration": "eighth", "label": "7", "technique": "palm_mute", "role": "target", "highlight": true },
+      { "string": 5, "fret": 3, "duration": "quarter", "role": "root", "label": "R", "chord": [{ "string": 3, "fret": 4, "role": "target", "label": "7" }, { "string": 2, "fret": 5, "role": "target", "label": "3" }] },
+      { "string": 5, "fret": 3, "duration": "eighth", "technique": "palm_mute", "role": "root", "label": "R", "chord": [{ "string": 3, "fret": 4, "role": "target", "label": "7" }, { "string": 2, "fret": 5, "role": "target", "label": "3" }] },
       { "string": 3, "fret": 4, "duration": "eighth", "rest": true },
-      { "string": 5, "fret": 3, "duration": "quarter", "label": "R", "isRoot": true, "role": "root" }
+      { "string": 5, "fret": 3, "duration": "quarter", "label": "R", "isRoot": true, "role": "root", "chord": [{ "string": 3, "fret": 4, "role": "target", "label": "7" }, { "string": 2, "fret": 5, "role": "target", "label": "3" }] }
     ]}
   ]}
 }
