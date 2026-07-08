@@ -38,6 +38,7 @@ import {
   GhostNote,
   Stem,
   Annotation,
+  Stroke,
 } from 'vexflow';
 import type { Score, TabNote as TabNoteData, Measure, NoteRole } from '../types/score';
 
@@ -328,6 +329,19 @@ function buildMeasure(m: Measure, flats: boolean): BuiltMeasure {
     // TabNote 는 마지막에 생성(요소 생성 순서 = 기존과 동일 → 단음 산출물 바이트 불변).
     const tNote = new TabNote({ positions: tabPositions, duration: durCode });
     tNote.setStyle({ fillStyle: tabCol, strokeStyle: tabCol });
+
+    // 스트로크: down/up=스트럼(직선+화살표), arpeggio=펼침(물결 브래킷). 오선보·타브 양쪽 부착.
+    // (strokes.js: BRUSH=fillRect+arrowhead, ARPEGGIO_DIRECTIONLESS=wiggly, isTabNote 분기 모두 지원.)
+    if (n.stroke) {
+      const st =
+        n.stroke === 'down'
+          ? Stroke.Type.BRUSH_DOWN
+          : n.stroke === 'up'
+            ? Stroke.Type.BRUSH_UP
+            : Stroke.Type.ARPEGGIO_DIRECTIONLESS;
+      sNote.addStroke(0, new Stroke(st));
+      tNote.addStroke(0, new Stroke(st));
+    }
 
     stave.push(sNote);
     tab.push(tNote);

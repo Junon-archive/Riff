@@ -118,6 +118,8 @@ export interface TabNote {
   technique?: Technique;
   /** 화음(동시타): 대표음(string/fret) 위에 함께 울리는 추가 음들. 없으면 단음. */
   chord?: ChordNote[];
+  /** 스트로크 방향. down/up=스트럼(직선 화살표), arpeggio=펼침(물결 브래킷). 없으면 표시 없음. */
+  stroke?: 'down' | 'up' | 'arpeggio';
   /** technique=slide 일 때 도착 프렛 */
   slideToFret?: number;
   /** technique=bend 일 때 도착 목표. 예: 'half'(반음), 'full'(온음), 도착 도수 '5' */
