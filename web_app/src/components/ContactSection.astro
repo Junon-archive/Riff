@@ -59,7 +59,9 @@ const { lang } = Astro.props;
     align-items: center;
     gap: 18px;
   }
-  /* 로고를 감싸는 탭 타깃 — 높이 통일(28px), 폭은 로고 비율대로. */
+  /* 로고를 감싸는 탭 타깃 — 가로폭 통일(40px), 높이는 로고 비율대로.
+     (YouTube 139:96, Instagram 96:96 로 종횡비가 달라 높이 기준으로 맞추면
+      정사각 Instagram 이 좁아 보인다 → 가로폭을 일치시킨다.) */
   .contact-link {
     display: inline-flex;
     align-items: center;
@@ -68,8 +70,8 @@ const { lang } = Astro.props;
     transition: transform 0.15s ease, background 0.15s ease;
   }
   .contact-link img {
-    height: 28px;
-    width: auto;
+    width: 40px;
+    height: auto;
     display: block;
   }
   .contact-link:hover {
