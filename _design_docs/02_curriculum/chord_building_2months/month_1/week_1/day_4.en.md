@@ -115,6 +115,27 @@ Isn't that something? Four chords are, in the end, just the **up/down combinatio
 
 ▶ **BPM 80, repeat 4×.** Once the root-b7-b3 groove is comfortable, expand to the **integration cycle:** in the same spot, change only the 3rd-string (3↔b3) and 4th-string (R↔b7) fingers to cycle **G → Gm → G7 → Gm7,** one bar each.
 
+**Example 3 — full-chord comping.** Same rhythm as Example 2, but each hit (root, b7, b3) rings the whole Gm7 chord instead of a single note.
+
+```json
+{
+  "id": "m1.w1.d4.full_chord_comp",
+  "type": "tab",
+  "meta": { "title": "Full-chord comp (Gm7) — staff + tab", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "Gm", "tempoBpm": 80, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 6, "fret": 3, "duration": "quarter", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 5, "fret": 5, "role": "chord_tone", "label": "5" }, { "string": 4, "fret": 3, "role": "target", "label": "b7" }, { "string": 3, "fret": 3, "role": "target", "label": "b3" }, { "string": 2, "fret": 3, "role": "chord_tone", "label": "5" }, { "string": 1, "fret": 3, "role": "root", "label": "R" }] },
+      { "string": 4, "fret": 3, "duration": "eighth", "rest": true },
+      { "string": 6, "fret": 3, "duration": "eighth", "technique": "palm_mute", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 5, "fret": 5, "role": "chord_tone", "label": "5" }, { "string": 4, "fret": 3, "role": "target", "label": "b7" }, { "string": 3, "fret": 3, "role": "target", "label": "b3" }, { "string": 2, "fret": 3, "role": "chord_tone", "label": "5" }, { "string": 1, "fret": 3, "role": "root", "label": "R" }] },
+      { "string": 6, "fret": 3, "duration": "quarter", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 5, "fret": 5, "role": "chord_tone", "label": "5" }, { "string": 4, "fret": 3, "role": "target", "label": "b7" }, { "string": 3, "fret": 3, "role": "target", "label": "b3" }, { "string": 2, "fret": 3, "role": "chord_tone", "label": "5" }, { "string": 1, "fret": 3, "role": "root", "label": "R" }] },
+      { "string": 6, "fret": 3, "duration": "quarter", "rest": true }
+    ]}
+  ]}
+}
+```
+
+▶ **BPM 80.** Same groove as Example 2, now with the whole chord. Once the root-b7-b3 comp feels comfortable, move on to this.
+
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**

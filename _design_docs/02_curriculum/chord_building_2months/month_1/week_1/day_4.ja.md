@@ -115,6 +115,27 @@ i18nKey: "lesson.m1.w1.d4"
 
 ▶ **BPM 80、4回反復。** ルート-b7-b3のグルーヴに慣れたら、**統合循環**へ：同じ場所で3弦（3↔b3）・4弦（R↔b7）の指だけ変えて、**G → Gm → G7 → Gm7**を1小節ずつ循環します。
 
+**例3 — コード全体コンピング。** 例2と同じリズムで、ルート・b7・b3の各打点で単音の代わりにGm7のコード全体を鳴らします。
+
+```json
+{
+  "id": "m1.w1.d4.full_chord_comp",
+  "type": "tab",
+  "meta": { "title": "Full-chord comp (Gm7) — staff + tab", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "Gm", "tempoBpm": 80, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 6, "fret": 3, "duration": "quarter", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 5, "fret": 5, "role": "chord_tone", "label": "5" }, { "string": 4, "fret": 3, "role": "target", "label": "b7" }, { "string": 3, "fret": 3, "role": "target", "label": "b3" }, { "string": 2, "fret": 3, "role": "chord_tone", "label": "5" }, { "string": 1, "fret": 3, "role": "root", "label": "R" }] },
+      { "string": 4, "fret": 3, "duration": "eighth", "rest": true },
+      { "string": 6, "fret": 3, "duration": "eighth", "technique": "palm_mute", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 5, "fret": 5, "role": "chord_tone", "label": "5" }, { "string": 4, "fret": 3, "role": "target", "label": "b7" }, { "string": 3, "fret": 3, "role": "target", "label": "b3" }, { "string": 2, "fret": 3, "role": "chord_tone", "label": "5" }, { "string": 1, "fret": 3, "role": "root", "label": "R" }] },
+      { "string": 6, "fret": 3, "duration": "quarter", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 5, "fret": 5, "role": "chord_tone", "label": "5" }, { "string": 4, "fret": 3, "role": "target", "label": "b7" }, { "string": 3, "fret": 3, "role": "target", "label": "b3" }, { "string": 2, "fret": 3, "role": "chord_tone", "label": "5" }, { "string": 1, "fret": 3, "role": "root", "label": "R" }] },
+      { "string": 6, "fret": 3, "duration": "quarter", "rest": true }
+    ]}
+  ]}
+}
+```
+
+▶ **BPM 80。** 例2と同じグルーヴで、今度はコード全体で。ルート-b7-b3のコンピングに慣れたら、こちらへ。
+
 ## ③ 今日の練習（50分ルーティン）
 
 **0〜10分 · ウォームアップ**
