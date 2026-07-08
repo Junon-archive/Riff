@@ -101,6 +101,27 @@ i18nKey: "lesson.m1.w2.d4"
 
 ▶ **BPM 80、4回反復。** グルーヴに慣れたら**統合循環**：同じ場所で2弦（3↔b3）・3弦（R/7/b7）の指だけ変えて、**C → Cm → C7 → Cm7 → Cmaj7**を1小節ずつ。
 
+**例3 — コード全体コンピング。** 例2と同じリズムで、ルート・7度・3度の各打点で単音の代わりにCmaj7のコード全体を鳴らします。
+
+```json
+{
+  "id": "m1.w2.d4.full_chord_comp",
+  "type": "tab",
+  "meta": { "title": "Full-chord comp (Cmaj7) — staff + tab", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "C", "tempoBpm": 80, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 5, "fret": 3, "duration": "quarter", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 4, "fret": 5, "role": "chord_tone", "label": "5" }, { "string": 3, "fret": 4, "role": "target", "label": "7" }, { "string": 2, "fret": 5, "role": "chord_tone", "label": "3" }] },
+      { "string": 3, "fret": 4, "duration": "eighth", "rest": true },
+      { "string": 5, "fret": 3, "duration": "eighth", "technique": "palm_mute", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 4, "fret": 5, "role": "chord_tone", "label": "5" }, { "string": 3, "fret": 4, "role": "target", "label": "7" }, { "string": 2, "fret": 5, "role": "chord_tone", "label": "3" }] },
+      { "string": 5, "fret": 3, "duration": "quarter", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 4, "fret": 5, "role": "chord_tone", "label": "5" }, { "string": 3, "fret": 4, "role": "target", "label": "7" }, { "string": 2, "fret": 5, "role": "chord_tone", "label": "3" }] },
+      { "string": 5, "fret": 3, "duration": "quarter", "rest": true }
+    ]}
+  ]}
+}
+```
+
+▶ **BPM 80。** 例2と同じグルーヴで、今度はコード全体で。ルート-7-3のコンピングに慣れたら、こちらへ。
+
 ## ③ 今日の練習（50分ルーティン）
 
 **0〜10分 · ウォームアップ**

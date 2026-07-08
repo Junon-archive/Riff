@@ -101,6 +101,27 @@ i18nKey: "lesson.m1.w2.d4"
 
 ▶ **BPM 80, 4번 반복.** 그루브가 익으면 **통합 순환**: 같은 자리에서 2번 줄(3↔b3)·3번 줄(R/7/b7) 손가락만 바꿔 **C → Cm → C7 → Cm7 → Cmaj7** 을 한 마디씩.
 
+**예제 3 — 코드 전체 컴핑.** 예제 2와 같은 리듬으로, 근음·7도·3도 자리마다 낱음 대신 Cmaj7 코드 전체를 울려요.
+
+```json
+{
+  "id": "m1.w2.d4.full_chord_comp",
+  "type": "tab",
+  "meta": { "title": "Full-chord comp (Cmaj7) — staff + tab", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "C", "tempoBpm": 80, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 5, "fret": 3, "duration": "quarter", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 4, "fret": 5, "role": "chord_tone", "label": "5" }, { "string": 3, "fret": 4, "role": "target", "label": "7" }, { "string": 2, "fret": 5, "role": "chord_tone", "label": "3" }] },
+      { "string": 3, "fret": 4, "duration": "eighth", "rest": true },
+      { "string": 5, "fret": 3, "duration": "eighth", "technique": "palm_mute", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 4, "fret": 5, "role": "chord_tone", "label": "5" }, { "string": 3, "fret": 4, "role": "target", "label": "7" }, { "string": 2, "fret": 5, "role": "chord_tone", "label": "3" }] },
+      { "string": 5, "fret": 3, "duration": "quarter", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 4, "fret": 5, "role": "chord_tone", "label": "5" }, { "string": 3, "fret": 4, "role": "target", "label": "7" }, { "string": 2, "fret": 5, "role": "chord_tone", "label": "3" }] },
+      { "string": 5, "fret": 3, "duration": "quarter", "rest": true }
+    ]}
+  ]}
+}
+```
+
+▶ **BPM 80.** 예제 2와 같은 그루브, 이번엔 코드 전체로. 근음-7-3 컴핑이 익으면 이걸로.
+
 ## ③ 오늘의 연습 (50분 루틴)
 
 **0~10분 · 워밍업**

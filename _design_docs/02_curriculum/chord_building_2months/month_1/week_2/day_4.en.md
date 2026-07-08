@@ -101,6 +101,27 @@ Today's reference chord, **Cmaj7 (A-form)** — the 3rd-string 7 (fret 4, green)
 
 ▶ **BPM 80, repeat 4×.** Once the groove settles, expand to the **integration cycle:** in the same spot, change only the 2nd-string (3↔b3) and 3rd-string (R/7/b7) fingers to play **C → Cm → C7 → Cm7 → Cmaj7,** one bar each.
 
+**Example 3 — full-chord comping.** Same rhythm as Example 2, but each hit (root, 7th, 3rd) rings the whole Cmaj7 chord instead of a single note.
+
+```json
+{
+  "id": "m1.w2.d4.full_chord_comp",
+  "type": "tab",
+  "meta": { "title": "Full-chord comp (Cmaj7) — staff + tab", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "C", "tempoBpm": 80, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 5, "fret": 3, "duration": "quarter", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 4, "fret": 5, "role": "chord_tone", "label": "5" }, { "string": 3, "fret": 4, "role": "target", "label": "7" }, { "string": 2, "fret": 5, "role": "chord_tone", "label": "3" }] },
+      { "string": 3, "fret": 4, "duration": "eighth", "rest": true },
+      { "string": 5, "fret": 3, "duration": "eighth", "technique": "palm_mute", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 4, "fret": 5, "role": "chord_tone", "label": "5" }, { "string": 3, "fret": 4, "role": "target", "label": "7" }, { "string": 2, "fret": 5, "role": "chord_tone", "label": "3" }] },
+      { "string": 5, "fret": 3, "duration": "quarter", "role": "root", "isRoot": true, "label": "R", "chord": [{ "string": 4, "fret": 5, "role": "chord_tone", "label": "5" }, { "string": 3, "fret": 4, "role": "target", "label": "7" }, { "string": 2, "fret": 5, "role": "chord_tone", "label": "3" }] },
+      { "string": 5, "fret": 3, "duration": "quarter", "rest": true }
+    ]}
+  ]}
+}
+```
+
+▶ **BPM 80.** Same groove as Example 2, now with the whole chord. Once the root-7-3 comp feels comfortable, move on to this.
+
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
