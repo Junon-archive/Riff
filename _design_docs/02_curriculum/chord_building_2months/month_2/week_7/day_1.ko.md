@@ -91,6 +91,30 @@ i18nKey: "lesson.m2.w7.d1"
 
 ▶ **BPM 76.** 둘 다 G인데 탑노트가 R(1:3)에서 3(1:7)로 옮겨가요. "코드는 같아도 탑을 고르면 멜로디가 시작된다"를 손으로. 4번 반복.
 
+**예제 3 — 코드 전체 컴핑.** 예제 2에서 낮은 음 + 탑노트로만 짚던 같은 G(탑 R → 3)를, 이번엔 트라이어드 전체로 울려요. 탑노트는 그대로 화음 맨 위에서 노래해요.
+
+```json
+{
+  "id": "m2.w7.d1.full_chord_comp",
+  "type": "tab",
+  "meta": { "title": "Full triad comp (same G, different top) — staff + tab", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "G", "tempoBpm": 76, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 3, "fret": 4, "duration": "quarter", "role": "chord_tone", "label": "3", "chord": [{ "string": 2, "fret": 3, "role": "chord_tone", "label": "5" }, { "string": 1, "fret": 3, "role": "target", "label": "R" }] },
+      { "string": 3, "fret": 4, "duration": "half", "role": "chord_tone", "label": "3", "chord": [{ "string": 2, "fret": 3, "role": "chord_tone", "label": "5" }, { "string": 1, "fret": 3, "role": "target", "label": "R" }] },
+      { "string": 3, "fret": 4, "duration": "quarter", "rest": true }
+    ]},
+    { "measure": 2, "notes": [
+      { "string": 3, "fret": 7, "duration": "quarter", "role": "chord_tone", "label": "5", "chord": [{ "string": 2, "fret": 8, "role": "root", "label": "R" }, { "string": 1, "fret": 7, "role": "target", "label": "3" }] },
+      { "string": 3, "fret": 7, "duration": "half", "role": "chord_tone", "label": "5", "chord": [{ "string": 2, "fret": 8, "role": "root", "label": "R" }, { "string": 1, "fret": 7, "role": "target", "label": "3" }] },
+      { "string": 3, "fret": 7, "duration": "quarter", "rest": true }
+    ]}
+  ]}
+}
+```
+
+▶ **BPM 76.** 예제 2와 같은 리듬, 이번엔 화음 전체로. 코드가 한층 풍성하게 울리는 걸 느껴보세요.
+
 ## ③ 오늘의 연습 (50분 루틴)
 
 **0~10분 · 워밍업**

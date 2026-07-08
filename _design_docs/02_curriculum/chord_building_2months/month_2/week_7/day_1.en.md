@@ -91,6 +91,30 @@ Today is a warm-up. Grab the same **G chord** in two positions by changing only 
 
 ▶ **BPM 76.** Both are G, but the top note moves from R (1:3) to 3 (1:7). Feel with your hand that "even the same chord starts a melody once you choose the top." Repeat 4×.
 
+**Example 3 — full-chord comping.** The same G (top R → 3) that Example 2 fretted as just a low note + top note now rings as the full triad. The top note still sings on top, unchanged.
+
+```json
+{
+  "id": "m2.w7.d1.full_chord_comp",
+  "type": "tab",
+  "meta": { "title": "Full triad comp (same G, different top) — staff + tab", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "G", "tempoBpm": 76, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 3, "fret": 4, "duration": "quarter", "role": "chord_tone", "label": "3", "chord": [{ "string": 2, "fret": 3, "role": "chord_tone", "label": "5" }, { "string": 1, "fret": 3, "role": "target", "label": "R" }] },
+      { "string": 3, "fret": 4, "duration": "half", "role": "chord_tone", "label": "3", "chord": [{ "string": 2, "fret": 3, "role": "chord_tone", "label": "5" }, { "string": 1, "fret": 3, "role": "target", "label": "R" }] },
+      { "string": 3, "fret": 4, "duration": "quarter", "rest": true }
+    ]},
+    { "measure": 2, "notes": [
+      { "string": 3, "fret": 7, "duration": "quarter", "role": "chord_tone", "label": "5", "chord": [{ "string": 2, "fret": 8, "role": "root", "label": "R" }, { "string": 1, "fret": 7, "role": "target", "label": "3" }] },
+      { "string": 3, "fret": 7, "duration": "half", "role": "chord_tone", "label": "5", "chord": [{ "string": 2, "fret": 8, "role": "root", "label": "R" }, { "string": 1, "fret": 7, "role": "target", "label": "3" }] },
+      { "string": 3, "fret": 7, "duration": "quarter", "rest": true }
+    ]}
+  ]}
+}
+```
+
+▶ **BPM 76.** Same rhythm as Example 2, but now the full chord rings. Feel the chord fill out.
+
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**

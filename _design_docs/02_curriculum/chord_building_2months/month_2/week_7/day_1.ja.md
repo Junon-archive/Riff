@@ -91,6 +91,30 @@ i18nKey: "lesson.m2.w7.d1"
 
 ▶ **BPM 76。** どちらもGですが、トップノートがR（1:3）から3（1:7）へ移ります。「同じコードでもトップを選べばメロディが始まる」を手で。4回反復。
 
+**例3 — コード全体コンピング。** 例2で低音＋トップノートだけ押さえていた同じG（トップ R → 3）を、今度はトライアド全体で鳴らします。トップノートはそのまま和音の一番上で歌います。
+
+```json
+{
+  "id": "m2.w7.d1.full_chord_comp",
+  "type": "tab",
+  "meta": { "title": "Full triad comp (same G, different top) — staff + tab", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "G", "tempoBpm": 76, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 3, "fret": 4, "duration": "quarter", "role": "chord_tone", "label": "3", "chord": [{ "string": 2, "fret": 3, "role": "chord_tone", "label": "5" }, { "string": 1, "fret": 3, "role": "target", "label": "R" }] },
+      { "string": 3, "fret": 4, "duration": "half", "role": "chord_tone", "label": "3", "chord": [{ "string": 2, "fret": 3, "role": "chord_tone", "label": "5" }, { "string": 1, "fret": 3, "role": "target", "label": "R" }] },
+      { "string": 3, "fret": 4, "duration": "quarter", "rest": true }
+    ]},
+    { "measure": 2, "notes": [
+      { "string": 3, "fret": 7, "duration": "quarter", "role": "chord_tone", "label": "5", "chord": [{ "string": 2, "fret": 8, "role": "root", "label": "R" }, { "string": 1, "fret": 7, "role": "target", "label": "3" }] },
+      { "string": 3, "fret": 7, "duration": "half", "role": "chord_tone", "label": "5", "chord": [{ "string": 2, "fret": 8, "role": "root", "label": "R" }, { "string": 1, "fret": 7, "role": "target", "label": "3" }] },
+      { "string": 3, "fret": 7, "duration": "quarter", "rest": true }
+    ]}
+  ]}
+}
+```
+
+▶ **BPM 76。** 例2と同じリズムで、今度は和音全体で。コードがぐっと豊かに響くのを感じて。
+
 ## ③ 今日の練習（50分ルーティン）
 
 **0〜10分 · ウォームアップ**
