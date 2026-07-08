@@ -77,6 +77,14 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-08 (T3 데이터 마이그레이션 — 컴핑/커팅 단음 축약 → chord[] 풀 화음 승격)
+- **배경:** funk·chord_building 커리큘럼의 컴핑/커팅 예제가 근음·가이드톤 **단음**으로 축약돼, 산문의 "코드/트라이어드를 스트로크·울린다"와 달리 화면엔 한 음만 보였다. `TabNote.chord[]`(동시타) 필드로 풀 보이싱을 표기해 산문에 데이터를 맞췄다.
+- **변환 규칙(reading i):** 각 실음 타점 = 그 마디 코드의 풀 보이싱. 대표음=최저음(string 최대), chord[]=나머지(지판 dot의 string/fret/role/label 그대로). 타점이 이미 대표음이면 기존 필드 보존+chord[] 추가(funk 악센트·label 보존), 걷는 가이드톤이면 대표음으로 재구성(단음 움직임 소멸=의도). 리듬/쉼표/dead_note/palm_mute/마디수/박자합 절대 불변. 3언어 동일 편집.
+- **T2.5 렌더 선수정:** `tabChordColor` 를 "혼합 role 화음은 중립색"으로(만장일치 색만 채택). 스태프는 setKeyStyle 무영향.
+- **T3-0 검증기 강화:** `build-content.mjs validateScore` 에 chord[] string 중복 금지·rest/dead 공존 금지·대표음≥모든 chord string·notation:"rhythm" 거부 추가. 마이그레이션 SSOT = `_design_docs/02_curriculum/_t3_worksheet.md`.
+- **적용 결과:** **CHORD 44블록**(funk 20: w4·w5 각 8·w8 4 / chord 24: w1~w6·w8) + **feel:swing8 2블록**(funk w7 셔플, meta만). funk w5d2 는 산문대로 major/minor 분할 스택. **chord w7d1(보이스 리딩·탑노트 멜로디)은 KEEP 확정**(구조가 KEEP 형제와 동일 + 같은코드 다른보이싱 → 사용자 승인, 45→44). solo_scale·지판(fretboard_diagram)·이론 도출 음 0.
+- **검증(주차별 커밋 14개):** V1 build 0 · V2 ko/en/ja json 동일 · V3 변환 온셋 vf-notehead=1+chord.length(스태프 그룹수 불변) · V5 비대상·solo 105블록 바이트 불변(vf-auto ID 정규화) · apply 단계 원본 온셋∈배정 보이싱 단언 · 레시피 75스택 전건 지판 대조.
+
 ### 2026-07-08 (UI — 랜딩·커리큘럼 페이지 하단 Contact 섹션)
 - **변경:** 랜딩(홈)·커리큘럼 개요 페이지 맨 아래에 **Contact 섹션** 추가 — YouTube·Instagram 로고 2개(브랜드 원색)를 새 탭 링크로. 레슨 페이지에는 넣지 않음.
 - **구현:** 재사용 컴포넌트 `components/ContactSection.astro`(스코프 스타일) → `HomeView`·`CurriculumView` 하단에 배치. 링크 SSOT = `config.ts` `CONTACT_LINKS`(운영자 url만 교체, 도네이션 채널과 동일 패턴). 문구 = i18n `contact.{title,sub,youtube,instagram}` 3언어(키셋 정합). 로고 원본(SSOT) `assets/contact/*.png` → 최적화 `public/contact/*.webp`(96px·브랜드색·알파 유지, 각 ≈2.4KB).
