@@ -77,6 +77,12 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-08 (문서 — 카드 썸네일 듀오톤 패턴을 신규 커리큘럼 재사용 가이드로 정리)
+- **목적:** 향후 추가 커리큘럼도 코드 수정 없이 썸네일 사진(듀오톤)을 갖도록 SOP·계약을 SSOT 문서에 명문화.
+- `_design_docs/00_curriculum_authoring_playbook.md`: §2에 `meta.json`(카드 메타 발원, `image` 필드 포함) 추가, §6 체크리스트에 썸네일 항목, **§8 신설**(원본↔최적화 분리·`optimize-curriculum-images.mjs`·배선 3곳·렌더 계약·품질 체크).
+- `web_app/docs/technical_spec.md` §4.4: 카드 메타 발원=`meta.json`으로 갱신(OPEN-2 해소), `image: string|null` 필드·public/curriculum webp·듀오톤 렌더 포인터 명시.
+- `web_app/docs/design_spec.md` §4.6: 썸네일을 듀오톤 4겹 레이어(img→그라디언트→스크림→칩)·전역 SVG 필터·`[data-theme]` 전환·토큰(`--grad-a/-b`, `--grad-fallback`)·`.no-img` 폴백 계약으로 재기술.
+
 ### 2026-07-08 (UI — 커리큘럼 카드 썸네일에 듀오톤 사진 적용)
 - **변경:** 랜딩 카드의 파란 그라디언트 전용 밴드에 **기타 사진을 듀오톤(brand-blue) 처리**해 얹었다. 레이어: `<img>`(듀오톤) → 브랜드 그라디언트(`::before`) → 하단 스크림(`::after`) → 칩. 이미지 없는 커리큘럼(향후 추가분)은 기존 그라디언트 전용 밴드로 그레이스풀 폴백(`.no-img`).
 - **에셋:** 원본(SSOT) `assets/Curriculum_image/*.jpg`(10장, 3개 매핑 외는 풀로 보존)에서 **최적화 사본만** `public/curriculum/{id}.webp` 생성 — 가로 1200px·그레이스케일·WebP q72. 결과 각 21~27KB(목표 120KB 이하). 변환은 일회성 스크립트 `scripts/optimize-curriculum-images.mjs`(빌드 파이프라인 미연결).

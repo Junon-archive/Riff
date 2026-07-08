@@ -272,13 +272,15 @@
 ### 4.6 커리큘럼 카드(`.curr-card`)
 
 - 컨테이너: `.card.curr-card.tap { margin-top:16px; overflow:hidden; padding:0; }`
-- 썸네일(`.curr-thumb`): `height:132px; padding:16px; display:flex; align-items:flex-end;` 배경 = 방사형 하이라이트 + 대각선 그라데이션:
-  ```css
-  background:
-    radial-gradient(120% 120% at 100% 0%, rgba(255,255,255,.28), transparent 60%),
-    linear-gradient(135deg, #4593FC 0%, #3182F6 55%, #1B64DA 100%);
-  color:#fff;
-  ```
+- 썸네일(`.curr-thumb`): `height:132px; padding:16px; display:flex; align-items:flex-end; position:relative; isolation:isolate; color:#fff;`
+- **듀오톤 사진 레이어(커리큘럼에 `image`가 있을 때).** z 순서로 4겹:
+  - **z0 `<img.thumb-img>`** — `position:absolute; inset:0; width/height:100%; object-fit:cover; object-position:50% 45%;`. 듀오톤은 `filter:url(#duotone-light)`, `[data-theme="dark"] .curr-thumb .thumb-img { filter:url(#duotone-dark); }`. (밴드 ≈3.6:1이 원본 3:2보다 넓어 세로만 크롭 → 세로 위치만 유효. 45%로 상표 라벨·노브를 밴드 밖으로.) 이미지 요구: `alt=""`·`loading="lazy"`·`decoding="async"`·`width/height` 명시(CLS 방지).
+  - **z3 `::before`(그라디언트)** — `radial-gradient(120% 120% at 100% 0%, rgba(255,255,255,.20), transparent 60%), linear-gradient(135deg, var(--grad-a) 0%, transparent 45%, var(--grad-b) 100%)`. **색은 토큰만**(`--grad-a/-b`, `tokens.css` — 라이트/다크 재정의). 하드코딩 금지.
+  - **z4 `::after`(하단 스크림)** — `linear-gradient(to top, rgba(5,20,50,.55), transparent 55%)`. 칩·제목 가독성 확보.
+  - **z5 `.chip`** — `position:relative; z-index:5;`.
+- **듀오톤 SVG 필터:** `#duotone-light`/`#duotone-dark`를 `Base.astro` `<body>` 최상단에 **전역 1쌍**만 정의(페이지당 1회, 카드 중복 금지). feColorMatrix(휘도 그레이스케일) → feComponentTransfer([shadow,highlight] 2색). 라이트 `#0B2E6B→#7FB4FF`, 다크 `#050F24→#4E86D6`. **`[data-theme]` 속성 셀렉터로 전환**(`prefers-color-scheme` 금지 — §6 다크모드 방식과 통일, JS 주입 없이 View Transitions·Safari 안전).
+- **폴백(`image`가 null — 향후 커리큘럼):** `<img>` 미렌더 + `.curr-thumb.no-img` → `::before`가 불투명 브랜드 밴드(`var(--grad-fallback)`), `::after` 없음. 사진 없이도 카드가 깨지지 않는다(그레이스풀 디그레이데이션).
+- 데이터·추가 절차: 커리큘럼 `image` 필드는 `technical_spec.md` §4.4, 신규 커리큘럼 썸네일 SOP는 `_design_docs/00_curriculum_authoring_playbook.md` §8.
 - 썸네일 내부 `.chip`: `font:12px/700; background:rgba(255,255,255,.22); padding:5px 10px; border-radius:999px; backdrop-filter:blur(4px);`
 - 본문(`.curr-body`): `padding:18px 20px 20px;` → 제목(`h3`, 19px/800) → 설명(`.muted`, 14px) → `.curr-meta`(플렉스 wrap, gap 6px) 안에 `.meta-pill`(12px/600, `background:var(--grey-100)`) 다건.
 - 클릭 시 해당 커리큘럼의 `curriculum` 뷰로 이동.

@@ -40,6 +40,7 @@
 
 ```
 02_curriculum/{curriculum_id}/
+├── meta.json                       # 커리큘럼 카드 메타(제목·태그라인·분류·썸네일 이미지) — 아래 규약
 ├── overview.md                     # 커리큘럼 마스터 개요(대상 레벨·아크·철학)
 ├── month_N/
 │   ├── month_N_overview.md
@@ -55,6 +56,11 @@
 - **프론트매터(각 day):** `title`(언어별 번역), `dayKey`·`estMinutes`(=50)·`i18nKey`(=`lesson.mN.wN.dN`)는 **3언어 동일**, 번역본은 `lang: en|ja` 추가.
 - **id(악보 JSON):** dayKey로 시작(예: `m3.w9.d3.four_note_sequence_dorian`).
 - 세부 규약: `01_architecture/state_storage.md`(dayKey), `04_localization/curriculum_i18n.md`(언어 파일).
+
+**`meta.json` (커리큘럼 루트, 카드 메타의 발원 — 랜딩 카드에 노출):**
+- 필드: `id`, `title`/`tagline`/`forWho`(각 `{ko,en,ja}`), `instrument`("guitar" 등), `topic`, `level`(정렬 전용 내부값 — 화면에 "입문/중급/고급" 노출 금지), `tags[]`, `durationMonths`, **`image`**.
+- **`image`(썸네일 사진):** 언어 무관 **단일 문자열**, 커리큘럼당 1장. 값 = 정적 절대경로 `/curriculum/{id}.webp`(예: `"/curriculum/funk-rhythm.webp"`). 생략/누락 시 카드는 브랜드 그라디언트 전용 밴드로 폴백(그레이스풀). 이미지 준비·듀오톤 렌더 규약은 **아래 §8**.
+- 파이프라인: `meta.json` → `scripts/build-content.mjs`(각 필드 `curMeta?.X ?? null`) → `src/content/manifest.json`(gitignore, 빌드시 재생성) → 카드 렌더(`HomeView.astro`). meta.json만 채우면 코드 수정 0.
 
 ---
 
@@ -137,8 +143,9 @@
 - [ ] **미니레슨** 종류와 배치 위치
 - [ ] Week 0 온보딩 필요 여부·내용
 - [ ] 주차별 프롬프트(week_n_prompt.md) — 표준 스키마 블록은 복붙, 내용만 교체
+- [ ] **`meta.json`** — 제목·태그라인·forWho·instrument·durationMonths + **썸네일 `image`**(§8 절차로 webp 생성 후 경로 기입)
 
-**착수 순서:** 대상 레벨 → overview → 주차 프롬프트(표준 스키마 임베드) → 파일럿 생성/검증 → 월별 롤아웃.
+**착수 순서:** 대상 레벨 → overview → `meta.json` → 주차 프롬프트(표준 스키마 임베드) → 파일럿 생성/검증 → 월별 롤아웃 → **썸네일 이미지(§8)**.
 
 ---
 
@@ -156,6 +163,29 @@
 | **52파일 일괄 생성 유혹** | 한 번에 다 뽑으면 드리프트·토큰 낭비 | **파일럿 → 월별 배치 → 게이트**. 각 배치 검증 통과 후 진행 |
 | **에이전트 병렬 드리프트** | 여러 에이전트가 병렬 생성 시 포맷 미세 차이(섹션 제목 공백 등) | 동일 규칙셋·모범 샘플을 모든 에이전트에 동일 전달, 마지막에 design-sync 스윕으로 정정 |
 | **긁는(도발) 어투 혼입** | 생성 콘텐츠에 "솔직히 말할게요/그거 맞아요?/90%는 함정" 같은 몰아세우는 토스답지 않은 도입이 다수 섞임(ko→en/ja로 전파) | 톤 가이드에 "긁지 않기" 규칙 명문화(translation_map §1). 생성·번역 프롬프트에 도발 금지 명시. 완료 후 도발 마커 grep 스윕(ko/en/ja). "긁다"(피킹 용어)·부드러운 팁은 오탐이니 유지 |
+
+---
+
+## 8. 커리큘럼 카드 썸네일 (사진 + 듀오톤) — 재사용 SOP
+
+랜딩 카드 썸네일은 **기타 사진을 brand-blue 듀오톤**으로 처리해 얹는다. 신규 커리큘럼도 아래 절차만 따르면 자동 적용된다(코드 수정 0, 런타임 JS 0). 세부 렌더 계약은 `web_app/docs/design_spec.md` §4.6, 데이터는 `technical_spec.md` §4.4.
+
+**원본·최적화 (SSOT ↔ 산출물 분리):**
+- 원본(SSOT): `web_app/assets/Curriculum_image/`에 그대로 보존. 가로형(3:2/16:9 무관 — 밴드가 세로만 크롭).
+- 최적화 사본만 커밋 대상 `web_app/public/curriculum/{id}.webp`로 생성. **일회성 스크립트** `web_app/scripts/optimize-curriculum-images.mjs`(빌드 파이프라인 **미연결** — 필요할 때 `node scripts/optimize-curriculum-images.mjs` 수동 실행).
+- 변환 스펙: **가로 1200px·그레이스케일·WebP q72·각 120KB 이하**(그레이스케일이어도 듀오톤 1단계가 휘도 추출이라 결과 동일, 용량만 절감). 신규 이미지는 스크립트의 `MAP` 배열에 `{ src, out }` 한 줄만 추가.
+- 파일명 = **커리큘럼 id 기반 시맨틱**(예: `funk-rhythm.webp`). 괄호·공백 금지(정적 경로·glob 안전).
+
+**배선(3곳 + 재빌드):** ① `meta.json`에 `"image": "/curriculum/{id}.webp"` → ② (이미 반영됨) `build-content.mjs`가 `image: curMeta?.image ?? null`로 전달 → ③ (이미 반영됨) `types/content.ts` `ManifestCurriculum.image` → **`npm run build:content`**로 manifest 반영. `manifest.json`은 직접 편집 금지(gitignore·재생성).
+
+**렌더(공통, 재사용 — 손댈 필요 없음):**
+- 레이어(`.curr-thumb`, z 순서): `<img>`(듀오톤) → 그라디언트(`::before`) → 하단 스크림(`::after`) → `.chip`.
+- 듀오톤 = **전역 SVG 필터** `#duotone-light`/`#duotone-dark`(`Base.astro` `<body>` 최상단, 페이지당 1쌍). CSS는 `[data-theme]` 속성 셀렉터로 light/dark 전환(미디어쿼리 금지 — 프로젝트 다크모드 방식과 통일, View Transitions·Safari 안전).
+- 색은 전부 `tokens.css` 변수(`--grad-a/-b`, 폴백 `--grad-fallback`) — 컴포넌트 하드코딩 금지.
+- `object-position: 50% 45%`(공통 기본): 밴드(≈3.6:1)가 원본(3:2)보다 넓어 **세로만 크롭**된다. 하단 상표 라벨(f홀 라벨·헤드스톡 로고)·노브, 상단 빈 배경이 밴드 밖으로 밀려나도록 확인. 특정 사진이 안 맞으면 그 사진만 값 조정.
+- `image`가 null인 커리큘럼은 `<img>` 미렌더 + `.no-img`로 **기존 그라디언트 전용 밴드** 폴백(그레이스풀 디그레이데이션).
+
+**품질 체크:** [ ] webp 각 120KB 이하 [ ] `alt=""`·`loading="lazy"`·`decoding="async"`·`width/height`(CLS 방지) [ ] 라이트/다크 토글 시 듀오톤+그라디언트 동시 전환 [ ] 칩·제목이 어떤 사진 위에서도 가독 [ ] 브랜드 로고·상표 라벨이 밴드 밖으로 크롭.
 
 ---
 

@@ -230,7 +230,9 @@ web_app/
 
 - **총 Day 수(`totalDays`)** 는 매니페스트에서 조회 → 진도율·아낀 레슨비 계산의 분모(state_storage §3).
 - 월/주/일 트리는 커리큘럼 계층 뷰(아코디언)와 이전/다음 Day 평탄화의 소스.
-- 커리큘럼 카드 메타(태그·설명·소요시간 pill)는 커리큘럼 개요 md(`overview.md`)에서 추출하거나 매니페스트 확장 필드로 담는다(§12 OPEN-2).
+- **커리큘럼 카드 메타는 `_design_docs/02_curriculum/{id}/meta.json`이 발원**이다(OPEN-2 해소). `build-content.mjs`가 이를 읽어 매니페스트 커리큘럼 노드에 담고, 런타임(`types/content.ts` `ManifestCurriculum`)이 소비한다. 필드: `titles`/`taglines`/`forWho`(각 `{ko,en,ja}`), `instrument`·`topic`·`level`(정렬 전용 내부값, 화면 노출 금지)·`tags[]`·`durationMonths`, 그리고 **`image`**.
+  - **`image: string | null`** — 카드 썸네일 사진의 정적 절대경로(언어 무관 단일값, 예 `"/curriculum/funk-rhythm.webp"`). `meta.json`에 없으면 `null` → 카드는 그라디언트 전용 밴드로 폴백. 실제 파일은 `public/curriculum/*.webp`(원본 `assets/Curriculum_image/`에서 `scripts/optimize-curriculum-images.mjs`로 생성 — 1200px·그레이스케일·q72·≤120KB). 카드는 이 사진을 **brand-blue 듀오톤**(전역 SVG 필터)으로 렌더한다 — 렌더 계약은 `design_spec.md` §4.6, 신규 커리큘럼 추가 절차는 `_design_docs/00_curriculum_authoring_playbook.md` §8.
+  - 각 필드는 `curMeta?.X ?? null`로 매핑되므로 **meta.json만 채우면 코드 수정 0**(Modular 원칙).
 
 ### 4.5 검증 게이트 (빌드 실패 조건)
 
@@ -635,7 +637,7 @@ export const DEFAULT_CURRICULUM_ID = 'solo_scale_3months';
 ### 열린 항목 (OPEN)
 
 - **OPEN-1:** ~~i18n `common.app_name` "Guitar Archive" → "Riff" 로 교정~~ **완료**(ko/en/ja 3언어 전부 "Riff" 확인, 2026-07-03).
-- **OPEN-2:** 커리큘럼 카드 메타(태그/설명/소요시간 pill) 소스 확정 — `overview.md` 추출 vs 매니페스트 확장 필드.
+- ~~**OPEN-2:** 커리큘럼 카드 메타(태그/설명/소요시간 pill) 소스 확정 — `overview.md` 추출 vs 매니페스트 확장 필드.~~ **해소:** `meta.json`(커리큘럼 루트) → `build-content.mjs` → manifest 로 확정(§4.4). 썸네일 `image` 필드 포함.
 - **OPEN-3:** 아낀 레슨비 언어별 통화 표기(원/￥/$) 환산·반올림 규칙 확정(단가는 ₩20,000 고정, 표시 통화 매핑만).
 - **OPEN-4:** ~~목업 `data-i` → 캐논 dot-path 전량 치환 + 신규 키 3벌 추가~~ **완료**(방향은 반대로 확정 — 목업 `data-i`가 정본, `_design_docs/04_localization/i18n_key_map.md` 산출 완료, §7.4). 잔여 구현 과제(하드코딩 결제버튼·토스트 바인딩)는 §7.4 목록과 §13.2로 이관.
 - **OPEN-5:** PWA/오프라인 채택 여부.
