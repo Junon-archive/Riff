@@ -40,6 +40,7 @@ import {
   Annotation,
   Stroke,
   ChordSymbol,
+  StaveModifierPosition,
 } from 'vexflow';
 import type { Score, TabNote as TabNoteData, Measure, NoteRole } from '../types/score';
 
@@ -330,6 +331,13 @@ function buildMeasure(m: Measure, flats: boolean): BuiltMeasure {
       cs.addText(n.chordSymbol);
       sNote.addModifier(cs, 0);
     }
+    // 도수/음이름 label(R·3·b7 등): 음표 아래에 표기. 화음(chord[])이 있는 음표에는 붙이지 않는다(겹침 방지).
+    // (P.M. 은 TOP, label 은 BOTTOM 이라 상하 충돌 없음.)
+    if (n.label && !chordExtra) {
+      const lb = new Annotation(n.label);
+      lb.setVerticalJustification(Annotation.VerticalJustify.BOTTOM);
+      sNote.addModifier(lb, 0);
+    }
     // stem 방향: 단음·화음 공통(모든 키의 line 에서 결정). 빔에 묶이면 flush() 에서 덮어쓴다.
     sNote.setStemDirection(dirFromLines(noteLines(sNote)));
 
@@ -450,6 +458,22 @@ export function renderStaff(score: Score, mode: StaffMode): string {
       // 8vb 주석과 합쳐져 "다른 기타 악보와 위치 정렬 + 실제음 정확"이 성립한다.
       stave.addClef('treble', 'default', '8vb');
       if (tabData.timeSignature) stave.addTimeSignature(tabData.timeSignature);
+      // 각 줄 첫 마디에 마디 번호.
+      const firstMeasureNum =
+        (tabData.measures[ri * MEASURES_PER_ROW] as Measure | undefined)?.measure ??
+        ri * MEASURES_PER_ROW + 1;
+      stave.setMeasure(firstMeasureNum);
+      if (ri === 0) {
+        // 템포(♩=bpm)와 스윙 필(정박 악보 + "Swing …" 지시)은 첫 줄에만.
+        if (typeof score.meta?.tempoBpm === 'number') {
+          stave.setTempo({ duration: 'q', bpm: score.meta.tempoBpm }, -2);
+        }
+        const feel = score.meta?.feel;
+        if (feel === 'swing8' || feel === 'swing16') {
+          const label = feel === 'swing16' ? 'Swing 16ths' : 'Swing 8ths';
+          stave.setText(label, StaveModifierPosition.ABOVE);
+        }
+      }
 
       let tabstave: TabStave | null = null;
       if (withTab) {

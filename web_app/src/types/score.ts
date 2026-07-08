@@ -62,6 +62,8 @@ export interface ScoreMeta {
    * fretboard_diagram/scale_shape 에는 영향 없음.
    */
   notation?: 'tab' | 'staff' | 'staff+tab' | 'rhythm';
+  /** 리듬 필. swing8/swing16=오선보 위 "Swing 8ths/16ths" 텍스트(악보는 정박, 스윙은 지시로). 기본 straight. */
+  feel?: 'straight' | 'swing8' | 'swing16';
 }
 
 /** 지판 다이어그램의 짚는 음(dot). string 1=고음e … 6=저음E, fret 0=개방현. */
