@@ -97,19 +97,19 @@ The three D-key ii–V–I chords. Only shifted two frets up from C — the layo
   "meta": { "title": "ii-V-I comp (D key) — staff + tab", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "D", "tempoBpm": 74, "notation": "staff+tab" },
   "tab": { "timeSignature": "4/4", "measures": [
     { "measure": 1, "notes": [
-      { "string": 5, "fret": 7, "duration": "quarter", "label": "R", "isRoot": true, "role": "root" },
-      { "string": 3, "fret": 7, "duration": "quarter", "label": "b7", "role": "target", "highlight": true },
-      { "string": 5, "fret": 7, "duration": "half", "label": "R", "isRoot": true, "role": "root" }
+      { "string": 5, "fret": 7, "duration": "quarter", "label": "R", "isRoot": true, "role": "root", "chord": [{ "string": 4, "fret": 9, "role": "chord_tone", "label": "5" }, { "string": 3, "fret": 7, "role": "target", "label": "b7" }, { "string": 2, "fret": 8, "role": "target", "label": "b3" }] },
+      { "string": 5, "fret": 7, "duration": "quarter", "role": "root", "label": "R", "chord": [{ "string": 4, "fret": 9, "role": "chord_tone", "label": "5" }, { "string": 3, "fret": 7, "role": "target", "label": "b7" }, { "string": 2, "fret": 8, "role": "target", "label": "b3" }] },
+      { "string": 5, "fret": 7, "duration": "half", "label": "R", "isRoot": true, "role": "root", "chord": [{ "string": 4, "fret": 9, "role": "chord_tone", "label": "5" }, { "string": 3, "fret": 7, "role": "target", "label": "b7" }, { "string": 2, "fret": 8, "role": "target", "label": "b3" }] }
     ]},
     { "measure": 2, "notes": [
-      { "string": 6, "fret": 5, "duration": "quarter", "label": "R", "isRoot": true, "role": "root" },
-      { "string": 3, "fret": 6, "duration": "quarter", "label": "3", "role": "target", "highlight": true },
-      { "string": 6, "fret": 5, "duration": "half", "label": "R", "isRoot": true, "role": "root" }
+      { "string": 6, "fret": 5, "duration": "quarter", "label": "R", "isRoot": true, "role": "root", "chord": [{ "string": 5, "fret": 7, "role": "chord_tone", "label": "5" }, { "string": 4, "fret": 5, "role": "target", "label": "b7" }, { "string": 3, "fret": 6, "role": "target", "label": "3" }, { "string": 2, "fret": 5, "role": "chord_tone", "label": "5" }, { "string": 1, "fret": 5, "role": "root", "label": "R" }] },
+      { "string": 6, "fret": 5, "duration": "quarter", "role": "root", "label": "R", "chord": [{ "string": 5, "fret": 7, "role": "chord_tone", "label": "5" }, { "string": 4, "fret": 5, "role": "target", "label": "b7" }, { "string": 3, "fret": 6, "role": "target", "label": "3" }, { "string": 2, "fret": 5, "role": "chord_tone", "label": "5" }, { "string": 1, "fret": 5, "role": "root", "label": "R" }] },
+      { "string": 6, "fret": 5, "duration": "half", "label": "R", "isRoot": true, "role": "root", "chord": [{ "string": 5, "fret": 7, "role": "chord_tone", "label": "5" }, { "string": 4, "fret": 5, "role": "target", "label": "b7" }, { "string": 3, "fret": 6, "role": "target", "label": "3" }, { "string": 2, "fret": 5, "role": "chord_tone", "label": "5" }, { "string": 1, "fret": 5, "role": "root", "label": "R" }] }
     ]},
     { "measure": 3, "notes": [
-      { "string": 5, "fret": 5, "duration": "quarter", "label": "R", "isRoot": true, "role": "root" },
-      { "string": 3, "fret": 6, "duration": "quarter", "label": "7", "role": "target", "highlight": true },
-      { "string": 5, "fret": 5, "duration": "half", "label": "R", "isRoot": true, "role": "root" }
+      { "string": 5, "fret": 5, "duration": "quarter", "label": "R", "isRoot": true, "role": "root", "chord": [{ "string": 4, "fret": 7, "role": "chord_tone", "label": "5" }, { "string": 3, "fret": 6, "role": "target", "label": "7" }, { "string": 2, "fret": 7, "role": "target", "label": "3" }] },
+      { "string": 5, "fret": 5, "duration": "quarter", "role": "root", "label": "R", "chord": [{ "string": 4, "fret": 7, "role": "chord_tone", "label": "5" }, { "string": 3, "fret": 6, "role": "target", "label": "7" }, { "string": 2, "fret": 7, "role": "target", "label": "3" }] },
+      { "string": 5, "fret": 5, "duration": "half", "label": "R", "isRoot": true, "role": "root", "chord": [{ "string": 4, "fret": 7, "role": "chord_tone", "label": "5" }, { "string": 3, "fret": 6, "role": "target", "label": "7" }, { "string": 2, "fret": 7, "role": "target", "label": "3" }] }
     ]}
   ]}
 }
