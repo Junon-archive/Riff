@@ -245,15 +245,20 @@ function buildMeasure(m: Measure, flats: boolean): BuiltMeasure {
     const fret = n.fret;
     if (typeof s !== 'number' || s < 1 || s > 6 || typeof fret !== 'number') continue;
 
+    // 데드 노트(음정 없는 뮤트 타격음): 오선보 노트헤드를 X 글리프로(키 3번째 파트 → tables.js keyProperties),
+    // 타브는 프렛 숫자 대신 "X"(tabToGlyphProps 'X'). 세로 위치·색·stem·beam 은 일반 음표와 동일.
+    const dead = n.technique === 'dead_note';
     const { key, acc } = pitchOf(s, fret, flats);
     const dotted = !!n.dotted;
-    const sNote = new StaveNote({ keys: [key], duration: durCode + (dotted ? 'd' : '') });
-    if (acc) sNote.addModifier(new Accidental(acc), 0);
+    const staffKey = dead ? `${key}/x` : key;
+    const sNote = new StaveNote({ keys: [staffKey], duration: durCode + (dotted ? 'd' : '') });
+    // ★음정 없는 데드 노트에는 임시표(#/♭)를 붙이지 않는다(모순 방지).
+    if (acc && !dead) sNote.addModifier(new Accidental(acc), 0);
     if (dotted) Dot.buildAndAttach([sNote], { all: true });
     // 단음 기본 방향(그려지는 라인 기준). 빔에 묶이면 flush() 에서 그룹 방향으로 덮어쓴다.
     sNote.setStemDirection(singleStemDir(noteLine(sNote)));
 
-    const tNote = new TabNote({ positions: [{ str: s, fret }], duration: durCode });
+    const tNote = new TabNote({ positions: [{ str: s, fret: dead ? 'X' : fret }], duration: durCode });
 
     const col = roleColor(n) ?? 'currentColor';
     sNote.setStyle({ fillStyle: col, strokeStyle: col });

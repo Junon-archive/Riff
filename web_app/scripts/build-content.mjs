@@ -117,6 +117,10 @@ function extractJsonBlocks(md) {
 const SCORE_TYPES = new Set(['fretboard_diagram', 'tab', 'scale_shape']);
 const DURATIONS = new Set(['whole', 'half', 'quarter', 'eighth', 'sixteenth']);
 const NOTATIONS = new Set(['tab', 'staff', 'staff+tab', 'rhythm']);
+// technique enum(오타 조용히 통과 방지). dead_note=음정 없는 뮤트 타격음(타브 X), palm_mute=음정 있는 P.M.
+const TECHNIQUES = new Set([
+  'none', 'hammer_on', 'pull_off', 'slide', 'bend', 'vibrato', 'palm_mute', 'dead_note', 'harmonic',
+]);
 
 function validateScore(score, ctx) {
   const at = (m) => fail(`악보 스키마 위반 [${ctx}]: ${m}`);
@@ -137,6 +141,8 @@ function validateScore(score, ctx) {
         if (typeof n.string !== 'number' || typeof n.fret !== 'number')
           at('note.string/fret 누락');
         if (!DURATIONS.has(n.duration)) at(`note.duration 부정확: ${n.duration}`);
+        if (n.technique !== undefined && !TECHNIQUES.has(n.technique))
+          at(`note.technique 부정확: ${n.technique}`);
       }
     }
   } else {

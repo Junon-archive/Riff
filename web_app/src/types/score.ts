@@ -23,7 +23,11 @@ export type NoteRole =
 /** 음길이. 구 '2'→half, '4'→quarter, '8'→eighth, '16'→sixteenth 로 정규화. */
 export type Duration = 'whole' | 'half' | 'quarter' | 'eighth' | 'sixteenth';
 
-/** 주법. 구 hammer→hammer_on, pull→pull_off 정규화. */
+/**
+ * 주법. 구 hammer→hammer_on, pull→pull_off 정규화.
+ * dead_note = 음정 없는 뮤트 타격음(왼손을 줄에 얹고 피킹) → 타브 X·오선보 X 노트헤드.
+ * palm_mute = 음정은 있으나 오른손 손날로 눌러 답답하게(P.M.). 둘은 별개 기술이다.
+ */
 export type Technique =
   | 'none'
   | 'hammer_on'
@@ -32,6 +36,7 @@ export type Technique =
   | 'bend'
   | 'vibrato'
   | 'palm_mute'
+  | 'dead_note'
   | 'harmonic';
 
 /** finger: 0=개방/무지정, 1=검지 … 4=새끼 */

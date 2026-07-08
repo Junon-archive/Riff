@@ -116,9 +116,9 @@
                     "rest": { "type": "boolean", "default": false, "description": "쉼표(여백/프레이징 표현에 사용). 렌더러 계약: rest=true이면 string/fret은 자리채움용으로 무시하고 duration만큼 공백으로 렌더한다." },
                     "technique": {
                       "type": "string",
-                      "enum": ["none", "hammer_on", "pull_off", "slide", "bend", "vibrato", "palm_mute", "harmonic"],
+                      "enum": ["none", "hammer_on", "pull_off", "slide", "bend", "vibrato", "palm_mute", "dead_note", "harmonic"],
                       "default": "none",
-                      "description": "구 hammer→hammer_on, pull→pull_off 정규화. fade_out은 렌더 대상 아님(제거)."
+                      "description": "구 hammer→hammer_on, pull→pull_off 정규화. fade_out은 렌더 대상 아님(제거). dead_note=음정 없는 뮤트 타격음(고스트/뮤트 스크래치/커팅)→타브 X·오선보 X 노트헤드. palm_mute=음정 있으나 오른손 손날로 눌러 답답하게(P.M.). 둘은 별개."
                     },
                     "slideToFret": { "type": "integer", "minimum": 0, "maximum": 24, "description": "슬라이드 도착 프렛(구 slide_to 통일). technique=slide일 때." },
                     "bendTarget": { "type": "string", "description": "벤딩 도착 목표(구 bend_target 통일). 예: 'half'(반음), 'full'(온음), 또는 도착 도수 '5'. technique=bend일 때." },
