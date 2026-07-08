@@ -6,13 +6,14 @@
 
 | 처리 | 개수 | 내역 |
 |---|---|---|
-| CHORD | 45 | funk 20(w4:8, w5:8, w8:4) + chord 25 |
-| KEEP | 83 | 나머지 전부 |
+| CHORD | 44 | funk 20(w4:8, w5:8, w8:4) + chord 24 (w7d1 KEEP 확정으로 25→24) |
+| KEEP | 84 | 나머지 전부 (w7d1 포함) |
 | SLASH | 0 | (chord w8d2 t1·t2는 CHORD로 흡수) |
 | SPLIT | 0 | — |
 | 합계 | 128 | chord 64 + funk 64 |
+| (별도) feel:swing8 | 2 | funk w7d3·w7d4 셔플 (meta만, 음 불변) |
 
-**애매 12블록 판정(05 §1 1차 채택, 단 예외):** w1d1t2·w2d1t2=CHORD, w1d4t2·w2d4t2·w3d2t2·w3d4t2·w4d4t2=KEEP, w4d2t2·w4d3t2·w7d1t2=CHORD, w8d2 t1·t2=CHORD. **예외: chord w5.d3.t2=KEEP.**
+**애매 12블록 판정(05 §1 1차 채택, 단 예외):** w1d1t2·w2d1t2=CHORD, w1d4t2·w2d4t2·w3d2t2·w3d4t2·w4d4t2=KEEP, w4d2t2·w4d3t2=CHORD, w8d2 t1·t2=CHORD. **예외: chord w5.d3.t2=KEEP, chord w7.d1.t2=KEEP(§2, 사용자 확정).**
 **화음-멜로디 4블록 KEEP(범위 밖):** chord w5d3t2, w7d2t2, w7d3t2, w7d4t2 — 낮은음과 탑노트가 서로 다른 duration의 별개 타점이라 단일 화음으로 합치면 박자합이 깨진다.
 
 ## 1. 변환 규칙 (reading i — 확정)
@@ -27,7 +28,7 @@
 ## 2. 특수·보류 항목
 
 - **funk w5d2 (color_1bar/color_2bar) = maj/min 분할:** 산문이 "예제1 앞절반 메이저/뒤절반 마이너, 예제2 m1 메이저·m2 마이너"를 명시. 균일 스택이 아니라 **온셋 위치(마디 전/후반, 마디번호)로 major/minor 스택을 나눠** 적용. major=③w5d1 emaj_triad, minor=①w5d2 emin_triad. (표2에 first_half/second_half·measure_1/2로 기재)
-- **⚠ chord w7.d1 (same_chord_top_comp) = [정지조건] 보류:** 같은 코드명 "G major triad"가 한 블록 안에서 m1(3도 베이스, top=R)·m2(5도 베이스, top=3) **서로 다른 인버전**을 가짐 → "같은 코드명이 주차 안에서 서로 다른 보이싱" [정지조건]에 문자적으로 해당. 게다가 구조가 KEEP된 화음-멜로디 블록(낮은음 quarter + 지속 탑 half)과 동일. **데이터 적용 전 사용자 확정 필요.** chord w7 주차 도달 전 별도 보고. (표2에 ⚠보류 표기, 자동 적용 대상에서 제외 → 실제 자동 적용은 CHORD 44 + w7d1 보류 1)
+- **chord w7.d1 (same_chord_top_comp) = KEEP 확정(사용자 승인):** [정지조건] "같은 코드명 다른 보이싱" 발동 + 구조가 KEEP된 화음-멜로디 형제(w7d2/d3/d4)와 동일(낮은음 quarter + 지속 탑노트 half, 탑노트가 R→3으로 노래=w7 주제인 보이스 리딩). reading(i)로 합치면 탑노트 멜로디가 사라져 레슨 취지 훼손. **사용자 확정: KEEP(미변경).** → 최종 CHORD 45→44. 표2의 w7d1 ⚠행은 적용하지 않음(참고용 도출값).
 
 ## 3. 검증 상태
 
