@@ -342,9 +342,14 @@ export function renderStaff(score: Score, mode: StaffMode): string {
       voices.forEach((v) => fmt.joinVoices([v]));
       fmt.format(voices, noteAreaW);
 
+      // ★ Beam 은 draw 이전에 생성한다. Beam 생성자가 각 음표에 note.beam 을 세팅하면
+      //   StaveNote.draw 시 shouldDrawFlag()=false 가 되어 개별 flag(꼬리)가 억제되고
+      //   stem 길이도 beamed 로 보정된다. (draw 이후 생성하면 flag 가 이미 그려져 빔과 겹친다.)
+      const beamObjs = beams.map((g) => new Beam(g));
+
       vStaff.draw(ctx, stave);
       if (vTab && tabstave) vTab.draw(ctx, tabstave);
-      for (const g of beams) new Beam(g).setContext(ctx).draw();
+      for (const b of beamObjs) b.setContext(ctx).draw();
       if (withTab && tabstave) {
         new StaveConnector(stave, tabstave).setType('brace').setContext(ctx).draw();
         new StaveConnector(stave, tabstave).setType('singleLeft').setContext(ctx).draw();
