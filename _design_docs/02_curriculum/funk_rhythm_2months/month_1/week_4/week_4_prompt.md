@@ -36,7 +36,7 @@
 - `meta`: `{ "title", "stringCount": 6, "tuning": ["E","A","D","G","B","E"], "key"?, "tempoBpm"?, "notation"? }`
   - `title`에 코드명·근음 줄을 담는다(예: `"E9 — 6현 근음"`). ※ 별도 `chord_name` 필드는 쓰지 않는다 — 코드명은 `title`에.
   - `tuning`은 6번(저음 E)→1번(고음 e) 순서, 고음현도 대문자 `"E"`. 템포는 `tempoBpm` 하나로만(`tempo`/`tempo_bpm` 금지).
-  - `notation`(선택): `"tab"` | `"staff"` | `"staff+tab"`(오선보+타브 결합, **박자 공유**) | `"rhythm"`. **원코드 잼이므로 무게중심은 리듬**이다 — 그루브 예제는 `"staff+tab"`(또는 `"rhythm"`)으로 낸다. `type: "tab"` 데이터에만 의미가 있다.
+  - `notation`(선택): `"tab"` | `"staff"` | `"staff+tab"`(오선보+타브 결합, **박자 공유**). **원코드 잼이므로 무게중심은 리듬**이다 — 그루브 예제는 모두 `"staff+tab"`으로 낸다. ⛔ `"rhythm"`(리듬 슬래시)은 현재 렌더러 미지원이므로 쓰지 않는다. `type: "tab"` 데이터에만 의미가 있다.
 
 **① 코드 폼 다이어그램 — `type: "fretboard_diagram"` (E9의 9도가 어디인지 `label`로 보여줄 것)**
 ```json
@@ -89,8 +89,8 @@
 - **`role`로 색을 부여**(색 = `color_legend.md`): R → `root`(+`isRoot`) **파랑** / 3·5·7 코드톤 → `chord_tone` **파랑** / 9·11·13 텐션 → `color` **노랑** / 주목할 자리 → `target`+`highlight` **초록** / 블루노트 → `blue_note` **보라** / 일반 → `scale`/`passing`(색 없음). ⛔ "빨강/red/赤" 금지.
 
 **펑크 리듬을 표준 스키마로 표기하는 법 (반드시 준수):**
-- 리듬/스트로크 예제는 `type:"tab"` + `meta.notation:"staff+tab"`(또는 리듬만이면 `"rhythm"`). 리듬 예제에도 코드명은 `meta.title`에 적는다(별도 `chord` 필드 금지).
-- **실제로 울리는 스트로크/음** = `notes[]` 항목 하나. 코드 스트로크는 대표음 하나(E9의 근음 또는 탑스트링)로 리듬만 표기하고, 코드 폼 전체는 별도 `fretboard_diagram`으로 병기한다.
+- 리듬/스트로크 예제는 `type:"tab"` + `meta.notation:"staff+tab"`. 리듬 예제에도 코드명은 `meta.title`에 적는다(코드명은 `meta.title`에 — 별도 `chord_name` 필드는 금지; 화음 보이싱 스택은 `chord[]` 사용).
+- **실제로 울리는 음** = `notes[]` 항목으로 표기한다. **코드 스트로크(동시타)는 `chord[]`로 쌓는다** — 대표음은 그 화음의 **최저음**(string 번호 최대)을 `string`/`fret`에, 나머지 음은 `chord[]`에 담고 각 음의 `role`은 같은 날 지판(fretboard) dot과 맞춘다(`chord[]`는 마디 박자합에 기여하지 않음). E9 코드 폼 전체를 따로 보이려면 `fretboard_diagram`을 병기한다. **싱글 노트 라인·고스트 단타는 단음으로** 둔다(화음으로 합치지 않음). `stroke`는 아르페지오(펼침)에만 쓰고, 동시 스트럼은 `stroke` 없이 화음 표기만으로 나타낸다.
 - **고스트 노트·뮤트 커팅** = `"technique":"dead_note"`. **소리 없는 자리** = `"rest": true`(오른손은 멈추지 않음을 산문으로).
 - **악센트·업/다운 피킹 방향**은 렌더러가 기호로 그리지 않는다 → **산문으로 설명**. 악센트 꽂는 자리는 `"role":"target"`+`"highlight": true`(→ 초록)로 눈에 띄게 한다.
 - 16비트 모터는 `"sixteenth"` duration으로 채운다.

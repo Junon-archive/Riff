@@ -34,9 +34,9 @@
 - `id`: `"m{월}.w{주}.d{일}.슬러그"` (예: `"m2.w8.d1.groove_card_1"`).
 - `type`: `"fretboard_diagram"`(코드/지판 다이어그램) | `"scale_shape"`(스케일 폼) | `"tab"`(시간순 악보 = 타브·리듬·멜로디 라인).
 - `meta`: `{ "title", "stringCount": 6, "tuning": ["E","A","D","G","B","E"], "key"?, "tempoBpm"?, "notation"? }`
-  - `title`에 코드명·리듬 이름을 담는다(예: `"E9 커팅 그루브 카드"`). ※ 별도 `chord_name`·`feel` 필드는 쓰지 않는다.
+  - `title`에 코드명·리듬 이름을 담는다(예: `"E9 커팅 그루브 카드"`). ※ 별도 `chord_name` 필드는 쓰지 않는다(코드명은 `title`에). 셔플/스윙은 `meta.feel`(`"swing8"`|`"swing16"`)로 지정한다.
   - `tuning`은 6번(저음 E)→1번(고음 e) 순서, 고음현도 대문자 `"E"`. 템포는 `tempoBpm` 하나로만(`tempo`/`tempo_bpm` 금지).
-  - `notation`(선택): `"tab"` | `"staff"` | `"staff+tab"`(오선보+타브 결합, **박자 공유**) | `"rhythm"`. **무게중심은 리듬 창작**이므로 그루브 카드는 `"staff+tab"`(또는 `"rhythm"`)으로 낸다. `type: "tab"` 데이터에만 의미가 있다.
+  - `notation`(선택): `"tab"` | `"staff"` | `"staff+tab"`(오선보+타브 결합, **박자 공유**). **무게중심은 리듬 창작**이므로 그루브 카드는 모두 `"staff+tab"`으로 낸다. ⛔ `"rhythm"`(리듬 슬래시)은 현재 렌더러 미지원이므로 쓰지 않는다. `type: "tab"` 데이터에만 의미가 있다.
 
 **① 코드 폼 다이어그램 — `type: "fretboard_diagram"` (필요할 때 최소한으로 병기)**
 ```json
@@ -82,17 +82,17 @@
 # 필드 규약 (반드시 준수 — 어기면 렌더가 깨진다)
 - **현 번호**: `6`=저음 E ~ `1`=고음 e. **프렛**: 정수, 개방현 `fret: 0`.
 - **사용하지 않는 현**: `dots`에서 **생략**. '반드시 뮤트(✕)'만 `{ "string": N, "fret": 0, "muted": true }`.
-- **도수·음이름은 오직 `label`에** 문자열로만(예: `"R"`, `"b3"`, `"3"`, `"5"`, `"b7"`, `"7"`, `"9"`). ⛔ `interval`·`degree`·`note`·`chord_name`·`root_string`·`base_fret`·`top_note`·`diagram_type`·`tempo`·`tempo_bpm`·`fret_range`·`articulation`·`feel` 같은 필드명은 **절대 쓰지 않는다**(스키마에 없어 렌더 실패).
+- **도수·음이름은 오직 `label`에** 문자열로만(예: `"R"`, `"b3"`, `"3"`, `"5"`, `"b7"`, `"7"`, `"9"`). ⛔ `interval`·`degree`·`note`·`chord_name`·`root_string`·`base_fret`·`top_note`·`diagram_type`·`tempo`·`tempo_bpm`·`fret_range`·`articulation` 같은 필드명은 **절대 쓰지 않는다**(스키마에 없어 렌더 실패).
 - `label`엔 음악 기호만 — 서술 문장 금지. 뉘앙스는 산문에서.
 - **근음** `"isRoot": true`. **바레**는 `fretboard.barre` 배열. `finger`: `0`~`4`. `duration`: `"whole"`/`"half"`/`"quarter"`/`"eighth"`/`"sixteenth"` 문자열만. `technique`: `none`/`hammer_on`/`pull_off`/`slide`/`bend`/`vibrato`/`palm_mute`/`dead_note`/`harmonic`.
 - **`role`로 색을 부여**(색 = `color_legend.md`): R → `root`(+`isRoot`) **파랑** / 3·5·7 코드톤 → `chord_tone` **파랑** / 텐션 → `color` **노랑** / 주목할 자리 → `target`+`highlight` **초록** / 블루노트 → `blue_note` **보라** / 일반 → `scale`/`passing`(색 없음). ⛔ "빨강/red/赤" 금지.
 
 **펑크 리듬을 표준 스키마로 표기하는 법 (지난 8주 총정리 — 반드시 준수):**
-- 리듬/스트로크 예제는 `type:"tab"` + `meta.notation:"staff+tab"`(또는 리듬만이면 `"rhythm"`).
-- **실제로 울리는 스트로크/음** = `notes[]` 항목 하나(코드는 대표음 하나, 폼 전체는 별도 `fretboard_diagram`). 싱글 노트 라인은 string/fret 정확히.
+- 리듬/스트로크 예제는 `type:"tab"` + `meta.notation:"staff+tab"`.
+- **실제로 울리는 음** = `notes[]` 항목으로 표기한다. **코드 스트로크(동시타)는 `chord[]`로 쌓는다** — 대표음은 그 화음의 **최저음**(string 번호 최대)을 `string`/`fret`에, 나머지 음은 `chord[]`에 담고 각 음의 `role`은 같은 날 지판(fretboard) dot과 맞춘다(`chord[]`는 마디 박자합에 기여하지 않음). 코드 폼 전체를 따로 보이려면 `fretboard_diagram`을 병기한다. **싱글 노트 라인·고스트 단타는 단음으로** 둔다(화음으로 합치지 않음, string/fret 정확히). `stroke`는 아르페지오(펼침)에만 쓰고, 동시 스트럼은 `stroke` 없이 화음 표기만으로 나타낸다.
 - **고스트 노트·뮤트 커팅** = `"technique":"dead_note"`. **소리 없는 자리(빈 피킹)** = `"rest": true`.
 - **스타카토** = 짧은 `duration` + 뒤에 `rest`. **레가토** = 더 긴 `duration`. (원리는 산문으로)
-- **악센트·업/다운 피킹 방향·셔플 필**은 렌더러가 기호로 그리지 않는다 → **산문(및 `meta.title`)으로 설명**한다. 악센트/주목할 자리는 `"role":"target"`+`"highlight": true`(→ 초록).
+- **악센트·업/다운 피킹 방향**은 렌더러가 기호로 그리지 않는다 → **산문으로 설명**한다(악센트/주목할 자리는 `"role":"target"`+`"highlight": true`→ 초록). **셔플/스윙 필은 `meta.feel`(`"swing8"`|`"swing16"`)로 지정**한다.
 - 16비트 모터는 `"sixteenth"` duration으로 채운다.
 
 # 이번 주차 목표 (2개월차 8주차)

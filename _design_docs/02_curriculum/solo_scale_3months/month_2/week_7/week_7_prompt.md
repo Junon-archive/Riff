@@ -84,7 +84,7 @@
 - dots/notes의 도수·음이름은 "label"에 문자열로 표기(예: R, b3, 3, 5). interval/degree/note 라는 필드명 금지.
 - (중요) `label` 값은 **음악 기호(음이름·도수)만** 쓴다 — 예: R, b3, 3, 5, "Dm7-3(F)". "밝은 3도 착지" 같은 한국어/영어 서술 문장 금지(그대로 EN/JP 지판에 노출됨). 밝은/어두운/착지 뉘앙스는 JSON 밖 산문에서 설명한다.
 - duration 은 "whole"/"half"/"quarter"/"eighth"/"sixteenth" 문자열만 사용. ("2"/"4"/"8"/"16" 숫자 금지)
-- technique 은 "none"/"hammer_on"/"pull_off"/"slide"/"bend"/"vibrato"/"palm_mute"/"harmonic" 중 하나. (hammer/pull/fade_out 금지)
+- technique 은 "none"/"hammer_on"/"pull_off"/"slide"/"bend"/"vibrato"/"palm_mute"/"dead_note"/"harmonic" 중 하나. (hammer/pull/fade_out 금지) dead_note=음정 없는 뮤트 타격음(타브에 X)·palm_mute=음정 있는 실제 팜뮤트(P.M.)로 둘은 별개.
   · 슬라이드 도착 프렛은 "slideToFret"(정수), 벤딩 목표는 "bendTarget"(예: "half"/"full"/"5")로 표기.
 - 코드톤 착지 목표음(주로 3도)은 tab에서 "target": true. 근음은 "isRoot": true. 강조는 "highlight": true.
 - 음의 역할이 뚜렷하면 "role": "root"|"chord_tone"|"target"|"color"|"blue_note"|"scale"|"passing" 을 부여(1·3·5는 chord_tone, 타겟 3도는 target).

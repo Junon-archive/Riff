@@ -90,7 +90,7 @@
 - dots/notes의 도수·음이름은 "label"에 문자열로 표기(예: R, b3, 3, 5, 6, b7, 'A7-3(C#)'). ♭/♯ 대신 b/# 로 표기 통일. interval/degree/note 라는 필드명 금지.
 - (중요) `label` 값은 **음악 기호(음이름·도수)만** 쓴다 — 예: R, b3, 3, 5, "Dm7-3(F)". "밝은 3도 착지" 같은 한국어/영어 서술 문장 금지(그대로 EN/JP 지판에 노출됨). 밝은/어두운/착지 뉘앙스는 JSON 밖 산문에서 설명한다.
 - duration 은 "whole"/"half"/"quarter"/"eighth"/"sixteenth" 문자열만 사용. ("2"/"4"/"8"/"16" 숫자 금지)
-- technique 은 "none"/"hammer_on"/"pull_off"/"slide"/"bend"/"vibrato"/"palm_mute"/"harmonic" 중 하나. (hammer/pull/fade_out 금지) · 슬라이드 도착 프렛은 "slideToFret"(정수), 벤딩 목표는 "bendTarget"(예: "half"/"full"/"5")로 표기.
+- technique 은 "none"/"hammer_on"/"pull_off"/"slide"/"bend"/"vibrato"/"palm_mute"/"dead_note"/"harmonic" 중 하나. (hammer/pull/fade_out 금지) dead_note=음정 없는 뮤트 타격음(타브에 X)·palm_mute=음정 있는 실제 팜뮤트(P.M.)로 둘은 별개. · 슬라이드 도착 프렛은 "slideToFret"(정수), 벤딩 목표는 "bendTarget"(예: "half"/"full"/"5")로 표기.
 - 여백은 `"rest": true` 로 표기하십시오(프레이징 미니레슨의 '쉼표' 를 데이터로 반영). 각 코드의 3도 착지 타겟·색채음에는 `"highlight": true` 를 부여하고, 역할을 "role"로 명확화하십시오(코드톤 착지 3도 → role:"target", 색채음 → role:"color"/"blue_note"). 근음은 "isRoot": true.
 
 이제 위 규칙을 100% 반영하여 day_1.md ~ day_4.md 파일 4개를 생성하십시오.

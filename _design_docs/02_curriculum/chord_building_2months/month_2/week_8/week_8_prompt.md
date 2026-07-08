@@ -10,7 +10,7 @@
 4. 무조건적인 코드 모양 암기를 유도하지 않는다. 이번 주는 새 폼을 외우는 주가 아니라, 그동안 배운 6·5·4현 근음 보이싱과 텐션·탑노트 리딩을 '섞어서 창의적으로 쓰는' 주다. 제공하는 모든 예시 보이싱에는 **근음 줄(`title`·`isRoot`)과 인터벌(`label`)**을 반드시 명시하고, 정답이 아니라 '선택지'로 제시한다.
 
 5. **연습용 예제 릭/프레이즈를 반드시 포함한다(개념 다이어그램만으로 끝내지 말 것).** 각 day 마다 그날 배운 코드·보이싱·전환을 **실제로 쳐볼 수 있는 구체 예제**를 최소 2개, `type:"tab"` 표준 JSON으로 제시한다.
-   - 컴핑/리듬이 핵심인 날 → `meta.notation:"staff+tab"`(오선보+타브, **박자 공유**)으로 컴핑 리듬 패턴 1개 이상. 쉼표는 `rest`, 뮤트 커팅은 `palm_mute`.
+   - 컴핑/리듬이 핵심인 날 → `meta.notation:"staff+tab"`(오선보+타브, **박자 공유**)으로 컴핑 리듬 패턴 1개 이상. **컴핑 화음은 `chord[]`(동시타)로 쌓는다** — 대표음은 그 화음의 **최저음**(string 번호가 가장 큰 음)을 `string`/`fret`에 두고 나머지는 `chord[]`에 담으며, 각 음의 `role`·`label`은 같은 날 지판(fretboard) dot과 맞춘다(화음에선 도수 label 텍스트가 안 나오니 도수는 **색=`role`**으로 전달). `chord[]`는 마디 박자합에 기여하지 않아 기존 리듬 타점에 스택만 얹는 셈이다. 쉼표는 `rest`, 뮤트 커팅(음정 없는 X)은 `technique:"dead_note"`, 음정 있는 실제 팜뮤트만 `palm_mute`.
    - 멜로디/가이드톤/탑노트가 핵심인 날 → `meta.notation:"staff+tab"`으로 1~2마디 짜리 실전 프레이즈(가이드톤 라인·탑노트 멜로디) 1개 이상.
    - 예제는 반드시 **그날의 프렛 구역·근음 줄 안에서 실제로 운지 가능**해야 하고(string/fret 정확), `duration`으로 리듬을 명시하며, 도수는 `label`, 색은 `role` 규약(color_legend.md)을 따른다. 지어내지 말 것(스키마 밖 금지).
    - 각 예제 JSON 바로 아래에 **연주 안내 한 줄**(권장 BPM · 반복 방법 · 무엇을 느껴야 하는지)을 산문으로 붙인다. 정답이 아니라 '따라 칠 예시'로 제시.
@@ -25,7 +25,7 @@
   - `title`에 코드명·근음 줄을 담는다(예: `"Am9 — 5현 근음"`). ※ 별도 `chord_name`/`root_string` 필드는 쓰지 않는다. 이번 주는 근음 줄이 6·5·4로 섞이므로 `title`과 `isRoot`로 반드시 드러낸다.
   - `tuning`은 6번(저음 E)→1번(고음 e) 순서, 고음현도 대문자 `"E"`.
   - 템포는 `tempoBpm` 하나로만 표기(`tempo`/`tempo_bpm` 금지).
-  - `notation`(선택): `"tab"`(기본, 타브만) | `"staff"`(오선보만) | `"staff+tab"`(오선보+타브를 위아래로 결합 — **박자·리듬을 두 보표가 공유**) | `"rhythm"`(리듬 슬래시). 리듬 컴핑 패턴은 `"rhythm"`, 탑노트·멜로디 라인은 `"staff+tab"`(음정+박자 동시). `type: "tab"` 데이터에만 의미가 있다.
+  - `notation`(선택): `"tab"`(기본, 타브만) | `"staff"`(오선보만) | `"staff+tab"`(오선보+타브를 위아래로 결합 — **박자·리듬을 두 보표가 공유**). 탑노트·멜로디 라인은 물론 **리듬 컴핑 패턴도 모두 `"staff+tab"`**(음정+박자 동시)으로 낸다. ⛔ `"rhythm"`(리듬 슬래시 노트헤드)은 현재 렌더러 미지원이므로 쓰지 않는다. `type: "tab"` 데이터에만 의미가 있다.
 
 **① 코드/지판 다이어그램 — `type: "fretboard_diagram"` (근음 줄을 섞어 쓰므로 title·isRoot로 근음 줄 명시)**
 ```json
@@ -48,17 +48,21 @@
 }
 ```
 
-**② 리듬/그루브 컴핑 — `type: "tab"` + `meta.notation: "rhythm"` (리듬 슬래시)**
+**② 리듬/그루브 컴핑 — `type: "tab"` + `meta.notation: "staff+tab"`**
 ```json
 {
   "id": "m2.w8.d2.comping_groove",
   "type": "tab",
-  "meta": { "title": "R&B 컴핑 그루브 패턴", "stringCount": 6, "tuning": ["E","A","D","G","B","E"], "key": "Am", "tempoBpm": 92, "notation": "rhythm" },
+  "meta": { "title": "R&B 컴핑 그루브 패턴", "stringCount": 6, "tuning": ["E","A","D","G","B","E"], "key": "Am", "tempoBpm": 92, "notation": "staff+tab" },
   "tab": {
     "timeSignature": "4/4",
     "measures": [
       { "measure": 1, "notes": [
-        { "string": 3, "fret": 5, "duration": "eighth", "label": "b3", "role": "chord_tone" },
+        { "string": 5, "fret": 5, "duration": "eighth", "label": "R", "role": "root", "isRoot": true, "chord": [
+          { "string": 4, "fret": 5, "label": "b7", "role": "chord_tone" },
+          { "string": 3, "fret": 5, "label": "b3", "role": "chord_tone" },
+          { "string": 2, "fret": 7, "label": "9", "role": "color" }
+        ] },
         { "string": 3, "fret": 5, "duration": "eighth", "rest": true },
         { "string": 3, "fret": 5, "duration": "eighth", "label": "b3", "technique": "palm_mute", "role": "chord_tone" }
       ]}
@@ -74,14 +78,15 @@
 - **도수·음이름은 오직 `label`에** 문자열로만 쓴다(예: `"R"`, `"b3"`, `"3"`, `"5"`, `"b7"`, `"7"`, `"9"`, `"3(B)"`). 기본음("R","b3","3","5","b7","7")과 텐션("9" 등)을 구분해 표기한다. ⛔ `interval`·`degree`·`note`·`chord_name`·`root_string`·`base_fret`·`top_note`·`diagram_type` 같은 필드명은 **절대 쓰지 않는다**(스키마에 없어 렌더 실패).
 - `label`에는 **음악 기호(도수·음이름)만** — 서술 문장 금지(지판에 그대로 노출됨). 뉘앙스는 JSON 밖 산문에서 설명한다.
 - **근음**은 `"isRoot": true`. **바레**는 `fretboard.barre` 배열 `{ "fret","fromString","toString","finger" }`로 표기한다(같은 finger 반복 대신 이 배열을 우선 사용).
-- `finger`: `0`=개방/무지정, `1`=검지 ~ `4`=새끼. `duration`: `"whole"`/`"half"`/`"quarter"`/`"eighth"`/`"sixteenth"` 문자열만. 리듬의 쉼표는 `"rest": true`. `technique`: `"none"`/`"hammer_on"`/`"pull_off"`/`"slide"`/`"bend"`/`"vibrato"`/`"palm_mute"`/`"harmonic"` 중 하나.
+- `finger`: `0`=개방/무지정, `1`=검지 ~ `4`=새끼. `duration`: `"whole"`/`"half"`/`"quarter"`/`"eighth"`/`"sixteenth"` 문자열만. 리듬의 쉼표는 `"rest": true`. `technique`: `"none"`/`"hammer_on"`/`"pull_off"`/`"slide"`/`"bend"`/`"vibrato"`/`"palm_mute"`/`"dead_note"`/`"harmonic"` 중 하나. (dead_note=음정 없는 뮤트 타격 X, palm_mute=음정 있는 P.M. — 별개.)
+- **화음(동시타)은 `chord[]`로 쌓는다**: 대표음(`string`/`fret`)은 그 화음의 **최저음**(string 번호 최대), 나머지 음은 `chord[]` 배열(각 `{ "string","fret","role","label" }`)에 넣는다. `chord[]`는 박자합에 기여하지 않으므로 리듬은 대표음의 `duration`으로만 계산된다. 화음 각 음의 `role`은 같은 날 지판 dot과 맞춰 **색으로 도수를 전달**한다(화음엔 label 텍스트 미표시). **단선율(가이드톤·탑노트 멜로디·싱글 리프)은 화음으로 합치지 말고 단음으로 둔다.** `stroke`는 아르페지오(펼침 `"arpeggio"`)에만 쓰고, 동시 스트로크(스트럼)는 `stroke` 없이 화음 표기만으로 나타낸다.
 - **`role`로 색을 부여한다**(실제 렌더 색 = `color_legend.md`):
   - 근음 R → `"role": "root"` + `"isRoot": true` → **파랑**
   - 3·5·7 등 코드 기본 구성음 → `"role": "chord_tone"` → **파랑**
   - 9·11·13 등 **텐션(색채음)** → `"role": "color"` → **노랑**
   - '지금 주목할 변화음' → `"role": "target"` + `"highlight": true` → **초록**
   - 그 코드의 **탑노트(가장 높이 울리는 음)**를 강조하려면 그 음에 `"highlight": true`(→ **초록**)를 주고, 산문에서 "가장 높은 음 = 탑노트"라고 설명한다. ※ `top_note` 필드는 없다 — `highlight`로 대신한다.
-- **오선보+타브·리듬**이 더 적합한 자료는 `type: "tab"`으로 내고 `meta.notation`을 붙인다 — 멜로디·가이드톤·탑노트 라인은 `"staff+tab"`(오선보와 타브가 위아래로 함께, **박자를 공유**), 오선보만은 `"staff"`, 리듬 컴핑은 `"rhythm"`. 데이터는 위 tab 스키마 그대로이며, 음정은 string+fret+tuning으로, 박자는 duration으로 자동 계산된다.
+- **오선보+타브·리듬**이 더 적합한 자료는 `type: "tab"`으로 내고 `meta.notation`을 붙인다 — 멜로디·가이드톤·탑노트 라인도, 리듬 컴핑도 모두 `"staff+tab"`(오선보와 타브가 위아래로 함께, **박자를 공유**), 오선보만은 `"staff"`. ⛔ `"rhythm"`(리듬 슬래시)은 현재 미지원이라 쓰지 않는다. 데이터는 위 tab 스키마 그대로이며, 음정은 string+fret+tuning으로, 박자는 duration으로 자동 계산된다.
 
 # 이번 주차 목표 (2개월차 8주차)
 **코드 메이커 레코딩 챌린지 — R&B/재즈 백킹 트랙 위에서 배운 모든 근음 보이싱을 섞어 창의적으로 반주하고, 녹음을 스스로 분석하기.**
@@ -89,7 +94,7 @@
 
 # 4일 커리큘럼 설계 지침
 - day_1: 챌린지 오리엔테이션. 지난 8주 총복습 지도(6·5·4현 근음, 쉘, 텐션, 탑노트)를 한 장으로 정리하고, 이번 주 챌린지용 백킹 트랙 진행(예: R&B 스타일 II-V-I 순환 또는 4마디 루프)을 구체적으로 제시. 같은 진행을 여러 근음 보이싱으로 잡는 '선택지 카드'를 `fretboard_diagram`으로 여러 개 제공.
-- day_2: 리듬/그루브 챌린지. 같은 코드라도 컴핑 리듬(백킹 패턴)을 바꿔 그루브를 만드는 법. 리듬 슬래시 패턴을 `type: "tab"` + `meta.notation: "rhythm"`으로 예시 제시(쉼표는 `rest`, 뮤트 커팅은 `palm_mute`).
+- day_2: 리듬/그루브 챌린지. 같은 코드라도 컴핑 리듬(백킹 패턴)을 바꿔 그루브를 만드는 법. 그루브 패턴을 `type: "tab"` + `meta.notation: "staff+tab"`으로 예시 제시(쉼표는 `rest`, 뮤트 커팅은 `technique:"dead_note"`, 컴핑 화음은 `chord[]`로 스택).
 - day_3: 텐션·탑노트를 얹은 '나만의 편곡' 만들기. 밋밋한 진행에 9도와 탑노트 멜로디를 더해 세련되게 리하모니. 학생이 자기 버전을 설계하도록 워크시트형 안내.
 - day_4: 최종 레코딩 & 셀프 분석. 완성한 컴핑을 통째로 녹음하고, 상세 분석 체크리스트로 스스로 진단. 2개월 여정 회고와 다음 달로의 다리 놓기.
 

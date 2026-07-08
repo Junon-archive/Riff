@@ -35,8 +35,8 @@
 - `type`: `"fretboard_diagram"`(지판 다이어그램) | `"scale_shape"`(스케일 폼) | `"tab"`(시간순 악보 = 타브·리듬·멜로디 라인).
 - `meta`: `{ "title", "stringCount": 6, "tuning": ["E","A","D","G","B","E"], "key"?, "tempoBpm"?, "notation"? }`
   - `title`에 코드명·리듬 이름을 담는다(예: `"스타카토 vs 레가토 비교"`, `"16비트 셔플 그루브"`). ※ 별도 `chord_name` 필드는 쓰지 않는다.
-  - `tuning`은 6번(저음 E)→1번(고음 e) 순서, 고음현도 대문자 `"E"`. 템포는 `tempoBpm` 하나로만(`tempo`/`tempo_bpm` 금지). ※ 별도 `feel` 필드는 없다 — 셔플 여부는 `title`·산문으로 표기.
-  - `notation`(선택): `"tab"` | `"staff"` | `"staff+tab"`(오선보+타브 결합, **박자 공유**) | `"rhythm"`. **리듬이 핵심**이므로 스타카토/셔플 그루브는 `"staff+tab"`(또는 `"rhythm"`)으로 낸다. `type: "tab"` 데이터에만 의미가 있다.
+  - `tuning`은 6번(저음 E)→1번(고음 e) 순서, 고음현도 대문자 `"E"`. 템포는 `tempoBpm` 하나로만(`tempo`/`tempo_bpm` 금지). ※ 셔플/스윙은 `meta.feel`(`"swing8"`|`"swing16"`)로 지정한다 — 렌더러가 오선보 위에 'Swing 8ths/16ths'로 표기(악보 음표는 정박).
+  - `notation`(선택): `"tab"` | `"staff"` | `"staff+tab"`(오선보+타브 결합, **박자 공유**). **리듬이 핵심**이므로 스타카토/셔플 그루브는 모두 `"staff+tab"`으로 낸다. ⛔ `"rhythm"`(리듬 슬래시)은 현재 렌더러 미지원이므로 쓰지 않는다. `type: "tab"` 데이터에만 의미가 있다.
 
 **① 코드 폼 다이어그램 — `type: "fretboard_diagram"`**
 ```json
@@ -82,17 +82,17 @@
 # 필드 규약 (반드시 준수 — 어기면 렌더가 깨진다)
 - **현 번호**: `6`=저음 E ~ `1`=고음 e. **프렛**: 정수, 개방현 `fret: 0`.
 - **사용하지 않는 현**: `dots`에서 **생략**. '반드시 뮤트(✕)'만 `{ "string": N, "fret": 0, "muted": true }`.
-- **도수·음이름은 오직 `label`에** 문자열로만(예: `"R"`, `"b3"`, `"3"`, `"5"`, `"b7"`, `"7"`, `"9"`). ⛔ `interval`·`degree`·`note`·`chord_name`·`root_string`·`base_fret`·`top_note`·`diagram_type`·`tempo`·`tempo_bpm`·`fret_range`·`articulation`·`feel` 같은 필드명은 **절대 쓰지 않는다**(스키마에 없어 렌더 실패).
+- **도수·음이름은 오직 `label`에** 문자열로만(예: `"R"`, `"b3"`, `"3"`, `"5"`, `"b7"`, `"7"`, `"9"`). ⛔ `interval`·`degree`·`note`·`chord_name`·`root_string`·`base_fret`·`top_note`·`diagram_type`·`tempo`·`tempo_bpm`·`fret_range`·`articulation` 같은 필드명은 **절대 쓰지 않는다**(스키마에 없어 렌더 실패).
 - `label`엔 음악 기호만 — 서술 문장 금지. 뉘앙스는 산문에서.
 - **근음** `"isRoot": true`. **바레**는 `fretboard.barre` 배열. `finger`: `0`~`4`. `duration`: `"whole"`/`"half"`/`"quarter"`/`"eighth"`/`"sixteenth"` 문자열만. `technique`: `none`/`hammer_on`/`pull_off`/`slide`/`bend`/`vibrato`/`palm_mute`/`dead_note`/`harmonic`.
 - **`role`로 색을 부여**(색 = `color_legend.md`): R → `root`(+`isRoot`) **파랑** / 3·5·7 코드톤 → `chord_tone` **파랑** / 텐션 → `color` **노랑** / 주목할 자리 → `target`+`highlight` **초록** / 블루노트 → `blue_note` **보라** / 일반 → `scale`/`passing`(색 없음). ⛔ "빨강/red/赤" 금지.
 
 **펑크 리듬을 표준 스키마로 표기하는 법 (반드시 준수):**
-- 리듬 예제는 `type:"tab"` + `meta.notation:"staff+tab"`(또는 리듬만이면 `"rhythm"`).
-- **실제로 울리는 음** = `notes[]` 항목 하나(코드는 대표음 하나, 폼 전체는 별도 `fretboard_diagram`). **뮤트 커팅·고스트** = `"technique":"dead_note"`.
+- 리듬 예제는 `type:"tab"` + `meta.notation:"staff+tab"`.
+- **실제로 울리는 음** = `notes[]` 항목으로 표기한다. **코드 스트로크(동시타)는 `chord[]`로 쌓는다** — 대표음은 그 화음의 **최저음**(string 번호 최대)을 `string`/`fret`에, 나머지 음은 `chord[]`에 담고 각 음의 `role`은 같은 날 지판(fretboard) dot과 맞춘다(`chord[]`는 마디 박자합에 기여하지 않음). 코드 폼 전체를 따로 보이려면 `fretboard_diagram`을 병기한다. **싱글 노트 라인·고스트 단타는 단음으로** 둔다(화음으로 합치지 않음). `stroke`는 아르페지오(펼침)에만 쓰고, 동시 스트럼은 `stroke` 없이 화음 표기만으로 나타낸다. **뮤트 커팅·고스트** = `"technique":"dead_note"`.
 - **스타카토(여음을 칼같이 끊는 음)** = 짧은 `duration`(예: `sixteenth`) + **바로 뒤에 `rest`** 로 표기하고, "친 직후 손을 줄에 얹어 여음을 끊는다"는 원리를 산문으로 설명한다(articulation 필드는 없음).
 - **레가토(끝까지 늘리는 음)** = 더 긴 `duration`(예: `eighth`/`quarter`)으로 표기하고 산문으로 보충한다.
-- **셔플/스윙 필**은 렌더러가 스윙 기호로 그리지 않는다 → `meta.title`·산문에 "16비트 셔플(스윙) 필"이라고 명시하고, 입으로 부르는 흔들림('두-바 두-바')으로 체감시킨다. `feel` 필드는 쓰지 않는다.
+- **셔플/스윙 필**은 `meta.feel`(`"swing8"`|`"swing16"`)로 지정한다 — 렌더러가 오선보 위에 'Swing 8ths/16ths'로 표기하고 악보 음표는 정박으로 둔다. 산문·`meta.title`로도 '셔플 필'을 설명하고 입으로 부르는 흔들림('두-바 두-바')으로 체감시킨다.
 - **악센트·업/다운 피킹 방향**도 산문으로 설명한다. 주목할 자리는 `"role":"target"`+`"highlight": true`(→ 초록).
 
 # 이번 주차 목표 (2개월차 7주차)
@@ -102,7 +102,7 @@
 # 4일 커리큘럼 설계 지침
 - day_1: 스타카토란? 친 직후 손을 줄에 얹어 여음을 끊는 뮤트 기술. 같은 패턴을 스타카토(짧은 음+`rest`)/레가토(긴 음)로 비교.
 - day_2: 스타카토와 레가토를 한 마디 안에서 섞기. 어느 음을 끊고 어느 음을 늘릴지 `duration`+`rest`로 설계.
-- day_3: 16비트 셔플 소개. 정박(straight)과 셔플(swing)의 흔들림 차이를 입으로 부르며 체감. 셔플 예제는 `meta.title`·산문에 셔플임을 명시.
+- day_3: 16비트 셔플 소개. 정박(straight)과 셔플(swing)의 흔들림 차이를 입으로 부르며 체감. 셔플 예제는 `meta.feel:"swing16"`으로 지정하고 산문·`meta.title`로도 셔플임을 명시.
 - day_4: 주간 통합. 스타카토 컨트롤 + 셔플 필을 섞은 4마디 그루브를 백킹 트랙 위에서.
 
 # 데일리 50분 루틴 (③ 오늘의 연습에 반드시 이 타임테이블 적용)
