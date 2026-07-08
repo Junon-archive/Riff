@@ -40,8 +40,14 @@ import type { Score, TabNote as TabNoteData, Measure, NoteRole } from '../types/
 export type StaffMode = 'staff' | 'staff+tab' | 'rhythm';
 
 /* ---- 기하/음악 상수 --------------------------------------------------- */
-/** 개방현 MIDI(표준 EADGBE). 1=고음e(E4) … 6=저음E(E2). */
+/** 개방현 MIDI(표준 EADGBE). 1=고음e(E4) … 6=저음E(E2). concert pitch(실제 울리는 음). */
 const OPEN_MIDI: Record<number, number> = { 1: 64, 2: 59, 3: 55, 4: 50, 5: 45, 6: 40 };
+/**
+ * 기타는 이조악기 — 표준 표기는 **treble-8vb(기타 클레프)**: 실제음보다 한 옥타브 위로 적고
+ * 클레프 아래 작은 "8"을 단다. OPEN_MIDI(실제음)는 그대로 두고, 오선보 "표기 옥타브"만 +1 한다.
+ * (실제음 계산·타브는 불변. 클레프 8vb 주석과 반드시 한 세트로 적용해야 음정이 정확하다.)
+ */
+const WRITTEN_OCTAVE_SHIFT = 1;
 const SHARP = ['c', 'c#', 'd', 'd#', 'e', 'f', 'f#', 'g', 'g#', 'a', 'a#', 'b'];
 const FLAT = ['c', 'db', 'd', 'eb', 'e', 'f', 'gb', 'g', 'ab', 'a', 'bb', 'b'];
 /** duration → VexFlow 코드 */
@@ -67,9 +73,11 @@ const PER_NOTE = 28; // 음표(쉼표 포함) 1개당 폭
 const MIN_MW = 150; // 마디 최소 폭
 const MAX_MW = 480; // 마디 최대 폭(16분음표 16개 등 최대 밀도)
 // 세로 레이아웃은 음역대에 따라 적응(저음 렛저라인이 타브와 겹치지 않게, 고음역은 컴팩트하게).
+// ★ 기준선은 오선보에 실제로 "그려지는" 표기 음(written MIDI) 기준이다. 음표도 표기 옥타브(concert+SHIFT)로
+//    비교해야 렛저라인 여백이 맞다. (WRITTEN_OCTAVE_SHIFT 를 바꾸면 아래 두 상수는 그대로 두고 노트 비교만 shift.)
 const PX_PER_SEMI = 2.9; // 반음당 세로 픽셀(오선 간격 근사)
-const TREBLE_TOP_LINE = 64; // 오선보 맨 아래 선 = E4(concert). (실제 음정 = 타브와 동일 옥타브)
-const TREBLE_HI_LINE = 77; // 오선보 맨 위 선 ≈ F5
+const TREBLE_TOP_LINE = 64; // 오선보 맨 아래 선 = 표기 E4(MIDI 64)
+const TREBLE_HI_LINE = 77; // 오선보 맨 위 선 = 표기 F5(MIDI 77)
 
 /* ---- jsdom 싱글턴(+getBBox 텍스트측정 스텁) -------------------------- */
 let _doc: Document | null = null;
@@ -110,16 +118,21 @@ function preferFlats(key?: string): boolean {
   return /^(F|Bb|Eb|Ab|Db|Gb|Cb)/.test(k) || /b/.test(k);
 }
 
-/** string+fret → VexFlow key('f#/4') + 임시표('#'|'b'|null) */
+/**
+ * string+fret → VexFlow key('f#/4') + 임시표('#'|'b'|null).
+ * midi = 실제음(concert). 표기 옥타브만 WRITTEN_OCTAVE_SHIFT 만큼 올려 기타 8vb 표기로 그린다
+ * (실제음/타브는 불변). 클레프의 '8vb' 주석과 함께 쓰여야 음정이 정확하다.
+ */
 function pitchOf(str: number, fret: number, flats: boolean): { key: string; acc: string | null } {
   const open = OPEN_MIDI[str] ?? 40;
   const midi = open + fret;
   const names = flats ? FLAT : SHARP;
   const pc = ((midi % 12) + 12) % 12;
   const name = names[pc]!;
-  const octave = Math.floor(midi / 12) - 1;
+  const concertOctave = Math.floor(midi / 12) - 1;
+  const writtenOctave = concertOctave + WRITTEN_OCTAVE_SHIFT;
   const acc = name.includes('#') ? '#' : name.includes('b') ? 'b' : null;
-  return { key: `${name}/${octave}`, acc };
+  return { key: `${name}/${writtenOctave}`, acc };
 }
 
 /** role → 강조색(tab.ts accentColor 와 동일 팔레트). 없으면 null(=currentColor). */
@@ -238,7 +251,8 @@ export function renderStaff(score: Score, mode: StaffMode): string {
       rows.push(built.slice(i, i + MEASURES_PER_ROW));
     }
 
-    // 음역대 기반 적응형 세로 오프셋: 저음(E4 아래)만큼 타브를 내리고, 고음(F5 위)만큼 위 여백 확보.
+    // 음역대 기반 적응형 세로 오프셋: 오선보에 "그려지는" 표기 음역(concert+SHIFT 옥타브)을 기준으로
+    // 저음 아래(렛저라인)만큼 타브를 내리고, 고음 위만큼 상단 여백을 확보한다.
     let minMidi = 999;
     let maxMidi = 0;
     for (const m of tabData.measures as Measure[]) {
@@ -253,8 +267,11 @@ export function renderStaff(score: Score, mode: StaffMode): string {
       minMidi = TREBLE_TOP_LINE;
       maxMidi = TREBLE_TOP_LINE;
     }
-    const belowPx = Math.max(0, TREBLE_TOP_LINE - minMidi) * PX_PER_SEMI; // 저음 렛저라인 여유
-    const abovePx = Math.max(0, maxMidi - TREBLE_HI_LINE) * PX_PER_SEMI; // 고음 렛저라인 여유
+    // concert MIDI → 표기(written) MIDI: pitchOf 와 동일하게 옥타브를 올려(반음 12×SHIFT) 비교.
+    const writtenMin = minMidi + 12 * WRITTEN_OCTAVE_SHIFT;
+    const writtenMax = maxMidi + 12 * WRITTEN_OCTAVE_SHIFT;
+    const belowPx = Math.max(0, TREBLE_TOP_LINE - writtenMin) * PX_PER_SEMI; // 저음 렛저라인 여유
+    const abovePx = Math.max(0, writtenMax - TREBLE_HI_LINE) * PX_PER_SEMI; // 고음 렛저라인 여유
     const trebleDy = Math.round(16 + abovePx);
     const tabDy = Math.round(trebleDy + 80 + belowPx + 16);
     const sysH = withTab ? tabDy + 150 : Math.round(trebleDy + 80 + belowPx + 22);
@@ -280,7 +297,9 @@ export function renderStaff(score: Score, mode: StaffMode): string {
       const thisStaveW = CLEF_W + TS_W + noteAreaW;
 
       const stave = new Stave(x, sysTop + trebleDy, thisStaveW);
-      stave.addClef('treble');
+      // 기타 표기: treble-8vb(클레프 아래 작은 "8"). 음표는 pitchOf 에서 +1 옥타브로 표기 →
+      // 8vb 주석과 합쳐져 "다른 기타 악보와 위치 정렬 + 실제음 정확"이 성립한다.
+      stave.addClef('treble', 'default', '8vb');
       if (tabData.timeSignature) stave.addTimeSignature(tabData.timeSignature);
 
       let tabstave: TabStave | null = null;
