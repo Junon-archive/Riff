@@ -77,6 +77,13 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-08 (T4 — 컴핑 "예제3 풀 화음" 5일 신규 저작 + 생성 프롬프트·플레이북 갱신)
+- **배경:** T3에서 KEEP으로 남긴 근음+가이드톤 컴핑(예제2)들은 산문의 "익으면 코드 전체를 스트로크" 확장구를 보여줄 시각 자료가 없었다. 그 확장구용 **예제 3(코드 전체 컴핑)** 을 5개 day에 새로 저작.
+- **대상·구성:** chord_building m1 — w3d2(Dm7·G7·Cmaj7), w1d4(Gm7), w2d4(Cmaj7), w3d4(ii-V-I-I 루프), w4d4(쉘 ii-V-I). 각 day ②섹션 끝에 신규 `full_chord_comp` 블록 1개 추가. **예제2와 리듬(마디·온셋·duration·rest·technique) 완전 동일**, 각 온셋만 단음→그 마디 코드 풀 보이싱(대표음=최저음, chord[]=나머지). 보이싱은 그날/그주 지판 dot에서만 취득(w3d2·w3d4는 Dm7·G7·Cmaj7 일부를 같은 주 w3d1 지판에서). 기존 블록·다른 day 무수정.
+- **분담:** 데이터(JSON 블록)는 결정론적 생성기+지판 대조로 본체 처리, 산문(② 소개·▶ 캡션·③ 참조 3언어)은 localization-writer, 프롬프트·플레이북은 general-purpose 서브에이전트에 위임 후 검증.
+- **T4b:** week_*_prompt.md **29개** 전부 + 플레이북에 렌더 8규칙 반영(컴핑=chord[], 단선율은 단음, 스윙=meta.feel, dead_note/palm_mute 구분, stroke=arpeggio 전용, notation:"rhythm"·슬래시 금지). 스키마 JSON은 score.ts와 이미 정합(무변경).
+- **검증(6커밋):** 각 day V1 build 0 · V2 ko/en/ja json 블록 동일 · V3 새 블록 vf-notehead 델타=Σchord.length(마디·쉼표·dead 예제2와 동일) · V5 비대상·solo 바이트 불변(신규 키만 추가). T4b V1 build 0 + 대상 외 무변경.
+
 ### 2026-07-08 (T3 데이터 마이그레이션 — 컴핑/커팅 단음 축약 → chord[] 풀 화음 승격)
 - **배경:** funk·chord_building 커리큘럼의 컴핑/커팅 예제가 근음·가이드톤 **단음**으로 축약돼, 산문의 "코드/트라이어드를 스트로크·울린다"와 달리 화면엔 한 음만 보였다. `TabNote.chord[]`(동시타) 필드로 풀 보이싱을 표기해 산문에 데이터를 맞췄다.
 - **변환 규칙(reading i):** 각 실음 타점 = 그 마디 코드의 풀 보이싱. 대표음=최저음(string 최대), chord[]=나머지(지판 dot의 string/fret/role/label 그대로). 타점이 이미 대표음이면 기존 필드 보존+chord[] 추가(funk 악센트·label 보존), 걷는 가이드톤이면 대표음으로 재구성(단음 움직임 소멸=의도). 리듬/쉼표/dead_note/palm_mute/마디수/박자합 절대 불변. 3언어 동일 편집.
