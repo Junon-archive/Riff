@@ -49,21 +49,21 @@ Today's shape, the E major triad. Use only the 1st/2nd/3rd strings and mute the 
   "tab": { "timeSignature": "4/4", "measures": [
     { "measure": 1, "notes": [
       { "string": 3, "fret": 9, "duration": "sixteenth", "role": "chord_tone", "label": "R" },
-      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "palm_mute", "role": "scale" },
-      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "palm_mute", "role": "scale" },
-      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "palm_mute", "role": "scale" },
+      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
       { "string": 3, "fret": 9, "duration": "sixteenth", "role": "chord_tone", "label": "R" },
-      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "palm_mute", "role": "scale" },
-      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "palm_mute", "role": "scale" },
-      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "palm_mute", "role": "scale" },
+      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
       { "string": 3, "fret": 9, "duration": "sixteenth", "role": "chord_tone", "label": "R" },
-      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "palm_mute", "role": "scale" },
-      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "palm_mute", "role": "scale" },
-      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "palm_mute", "role": "scale" },
+      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
       { "string": 3, "fret": 9, "duration": "sixteenth", "role": "chord_tone", "label": "R" },
-      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "palm_mute", "role": "scale" },
-      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "palm_mute", "role": "scale" },
-      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "palm_mute", "role": "scale" }
+      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" }
     ]}
   ]}
 }
@@ -80,40 +80,40 @@ Today's shape, the E major triad. Use only the 1st/2nd/3rd strings and mute the 
   "meta": { "title": "Triad cutting on the off-beat (2 bars)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E", "tempoBpm": 68, "notation": "staff+tab" },
   "tab": { "timeSignature": "4/4", "measures": [
     { "measure": 1, "notes": [
-      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "palm_mute", "role": "scale" },
-      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "palm_mute", "role": "scale" },
+      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
       { "string": 3, "fret": 9, "duration": "sixteenth", "role": "chord_tone", "label": "R" },
-      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "palm_mute", "role": "scale" },
-      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "palm_mute", "role": "scale" },
-      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "palm_mute", "role": "scale" },
+      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
       { "string": 3, "fret": 9, "duration": "sixteenth", "role": "chord_tone", "label": "R" },
-      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "palm_mute", "role": "scale" },
-      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "palm_mute", "role": "scale" },
-      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "palm_mute", "role": "scale" },
+      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
       { "string": 3, "fret": 9, "duration": "sixteenth", "role": "chord_tone", "label": "R" },
-      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "palm_mute", "role": "scale" },
-      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "palm_mute", "role": "scale" },
-      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "palm_mute", "role": "scale" },
+      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
       { "string": 3, "fret": 9, "duration": "sixteenth", "role": "chord_tone", "label": "R" },
-      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "palm_mute", "role": "scale" }
+      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" }
     ]},
     { "measure": 2, "notes": [
-      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "palm_mute", "role": "scale" },
-      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "palm_mute", "role": "scale" },
+      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
       { "string": 3, "fret": 9, "duration": "sixteenth", "role": "chord_tone", "label": "R" },
-      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "palm_mute", "role": "scale" },
-      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "palm_mute", "role": "scale" },
-      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "palm_mute", "role": "scale" },
+      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
       { "string": 3, "fret": 9, "duration": "sixteenth", "role": "chord_tone", "label": "R" },
-      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "palm_mute", "role": "scale" },
-      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "palm_mute", "role": "scale" },
-      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "palm_mute", "role": "scale" },
+      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
       { "string": 3, "fret": 9, "duration": "sixteenth", "role": "chord_tone", "label": "R" },
-      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "palm_mute", "role": "scale" },
-      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "palm_mute", "role": "scale" },
-      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "palm_mute", "role": "scale" },
+      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
       { "string": 3, "fret": 9, "duration": "sixteenth", "role": "chord_tone", "label": "R" },
-      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "palm_mute", "role": "scale" }
+      { "string": 3, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" }
     ]}
   ]}
 }
