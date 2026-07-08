@@ -77,6 +77,13 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-09 (검증 — 렌더러 역량 가드 + 의미 불변식 회귀 체크로 기존 커리큘럼 보호)
+- **배경:** 미래에 밴딩·해머링을 쓰는 커리큘럼 추가 시 기존 3개 커리큘럼 렌더가 안 바뀌게 보호하되, "픽셀 락"의 뻣뻣함 없이 미래 개선은 자유롭게 두고 싶음.
+- **가드(build-content.mjs):** 렌더러 역량 계약 — notation이 staff/staff+tab/rhythm(→staff.ts)이면 technique는 `STAFF_TECHNIQUES{none,palm_mute,dead_note}`만 허용. staff.ts 미구현 기법(bend·hammer_on·pull_off·slide·vibrato·harmonic)을 오선보 경로에서 쓰면 빌드 차단 → tab.ts 경로(notation 미지정/"tab")로 내거나 staff.ts 렌더 추가 후 Set 확장. 락이 아니라 능력 계약(한 곳 수정으로 확장).
+- **회귀 체크(scripts/check-invariants.mjs + curriculum-invariants.json):** 픽셀이 아니라 블록별 **의미 지문**(notation/마디수/박자합/온셋·쉼표·dead·노트헤드 수/technique 집합/지판 dot)만 대조. 렌더 코스메틱 개선은 통과, 내용 회귀만 차단. `--update`로 정당한 변경 시 baseline(315블록) 갱신 → 리뷰에서 diff 확인.
+- **효과:** solo(tab 경로)는 밴딩·해머링·비브라토 자유 유지. chord/funk(staff 경로)는 미지원 기법 차단. 미래 렌더러 개선은 의미 지문만 지키면 자유.
+- **검증:** build exit 0(기존 데이터 통과), 가드 음성 테스트 통과, check-invariants 재실행 회귀 0.
+
 ### 2026-07-08 (컴핑 "예제3 풀 화음" 확장 — chord w7 4일 + w5d3 보이스 리딩 블록)
 - **배경:** T4에서 근음+가이드톤 컴핑 5일에 예제3(풀 화음)을 추가했다. 이번엔 **보이스 리딩/전위 계열**(w5d3 3전위, w7d1~d4 탑노트 멜로디 컴핑) 5일에 같은 "코드 전체 컴핑" 예제3을 추가.
 - **구성:** 각 day 예제2(낮은음+탑노트 2음 컴핑, 일부는 굴린 3음)의 **리듬을 그대로 재사용**하고, 각 온셋을 그 마디 트라이어드 풀 보이싱으로. **탑노트 멜로디는 화음의 최상단 음으로 보존**되어 보이스 리딩 학습 취지 유지. 대표음=최저음(주로 3번 줄), 기존 블록 무수정.
