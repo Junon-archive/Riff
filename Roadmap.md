@@ -78,6 +78,21 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-09 (신규 커리큘럼 — 왕초보 일렉 트랙 신설: 주차 프롬프트+meta+overview, 백로그 09)
+- **배경:** 기존 3트랙(solo/chord/funk)이 전부 `level 2`(코드는 침/곡은 쳐봄 전제)라, PRD 입문자 페르소나 '지훈'을 받아줄 트랙이 부재 → 최다 유입 예상 구간이 비어 있었음. `beginner_electric_1month`(**level 1**, 기존 3트랙 아래 입구) 신설로 채움.
+- **범위(구상·저작 세션):** 방향 확정(오픈코드/스트럼 제외·일렉 한정·파워코드 무게·펜타 맛보기·하루 30분·완성물 4/4 4마디) → 주차 프롬프트 4개 + meta.json + month_1·week_1~4 overview(3언어) 작성. **day 문서는 미착수**(다음 세션).
+- **완성물 설계:** 전량 오리지널 작곡(저작권 0), 유명 규칙 차용(펜타 프레이징·bVI-bVII-i 클라이밍·i-bVI-bIII-bVII 루프·조용/시끄러움). 주간 완성물 = 스파이더 크로매틱 → Em 펜타 리프 → 팜뮤트 파워코드 리프 → 코러스 루프(졸업곡). 유명 목표곡은 이름만 지목(탭 외부조달).
+- **프롬프트 설계 핵심:** funk 프롬프트를 골격 차용 + level-2 부분 왕초보 교체 + **06(인라인 배치)·08(산문 하이라이트) 이후 간극을 프롬프트에 처음부터 내장**(retrofit 방지) + 완성물 리프를 정확 JSON으로 **핀 고정**(창작 금지).
+- **검증:** meta.json parse OK · 핀 고정 리프 6종(스파이더·Em리프·파워코드리프·코러스루프 등) **마디 박자합 4.0** 스크립트 확인 · 무관 파일 미포함. (day 미저작이라 `npm run build` 대상 아님.)
+- **문서:** `05_update_backlog/09_beginner-electric-curriculum.md` status→IN_PROGRESS(체크리스트·§13 주차 프롬프트 작성법 반영), README 인덱스 갱신.
+- **다음:** 각 프롬프트 실행 → `day_N.{ko,en,ja}.md` 16일치 생성 → 빌드 검증 · 대표 이미지 제작.
+
+### 2026-07-09 (백로그 08 — 하이라이트 A방식, chord_building_2months 전체 8주로 확대)
+- **범위:** `chord_building_2months`의 나머지 7주(month_1/week_2~4 + month_2/week_5~8, 각 4 day) × 3언어 = 84파일. week_1(파일럿)은 이미 완료 상태라 손대지 않음. A방식 레시피(볼드+하이라이트 겹침 허용, 문법 자족 단위 명사구 1순위, 논점 병렬 문단은 논점마다 1개씩 3개+ 허용, 헤딩·예제캡션·완료기준줄·④팁 섹션 전부 제외)를 그대로 기계적 적용.
+- **결과 — day별 `<mark>` 개수(ko/en/ja 3언어 전부 일치):** week2 10·11·13·10 / week3 9·9·8·10 / week4 12·10·10·12 / week5 11·12·14·11 / week6 12·11·11·12 / week7 9·11·11·13 / week8 12·11·12·15.
+- **검증:** 84파일 전량에 대해 스크립트로 (1) 3언어 `<mark>` 개수 일치 (2) `<mark></mark>` 태그 balance (3) ④ 섹션·'오늘의 완료 기준' 줄 `<mark>` 0개 (4) 악보 ```json 블록 HEAD 대비 바이트 불변(git 커밋 전 상태 대비 diff)을 자동 확인 — 전부 통과. `npm run build` 361p 성공, `node scripts/check-invariants.mjs` 315블록 회귀 0.
+- **다음:** `05_update_backlog/08_Highlight.md` 잔여 — solo_scale_3months(intro+52day×3언어), funk_rhythm_2months(intro+32day×3언어).
+
 ### 2026-07-09 (PWA 트랙 A·B·C — 설치형 PWA 토대, 백로그 07)
 - **설치형 PWA 코드 구현(iOS 홈 + Android 무스토어 설치 충족):** 매니페스트(`public/manifest.webmanifest`, name Riff·standalone), 앱 아이콘 4종(`public/icons/`, 픽 로고 파생 — 192·512·maskable 512·apple-touch 180, 생성기 `scripts/generate-pwa-icons.mjs`), **hand-rolled 서비스워커**(`public/sw.js`, 의존성 0 — 앱 셸 precache + 방문분 런타임: HTML NetworkFirst·`/_astro/*` CacheFirst·기타 SWR, `CACHE_VERSION` 무효화·autoUpdate), `Base.astro <head>` 메타(manifest·theme-color 라이트/다크·애플 홈설치 3종·apple-touch-icon) + SW 등록(배포 도메인 한정).
 - **@vite-pwa/astro 미채택:** 무런타임 devDep 최소 원칙·락파일/빌드설정 무변경·버전 호환 리스크 0 위해 SW 직접 작성. 클라이언트 추가는 SW 하나뿐.
