@@ -18,6 +18,32 @@ Today's melody descends: **C → B → A → G** (1st string frets 8 → 7 → 5
 - **A (top) ← F chord** (A is F's 3rd)
 - **G (top) ← C chord** (G is C's 5th)
 
+```json
+{
+  "id": "m2.w7.d3.c_top_c",
+  "type": "fretboard_diagram",
+  "meta": { "title": "C triad — top note C (R)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "C" },
+  "fretboard": { "startFret": 7, "fretSpan": 4, "dots": [
+    { "string": 3, "fret": 9, "finger": 3, "label": "3", "role": "chord_tone" },
+    { "string": 2, "fret": 8, "finger": 2, "label": "5", "role": "chord_tone" },
+    { "string": 1, "fret": 8, "finger": 1, "label": "R", "isRoot": true, "role": "target", "highlight": true }
+  ]}
+}
+```
+
+```json
+{
+  "id": "m2.w7.d3.g_top_b",
+  "type": "fretboard_diagram",
+  "meta": { "title": "G triad — top note B (3)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "G" },
+  "fretboard": { "startFret": 6, "fretSpan": 4, "dots": [
+    { "string": 3, "fret": 7, "finger": 1, "label": "5", "role": "chord_tone" },
+    { "string": 2, "fret": 8, "finger": 3, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 1, "fret": 7, "finger": 1, "label": "3", "role": "target", "highlight": true }
+  ]}
+}
+```
+
 So the progression is **C - G - F - C.** The same melody changes color depending on which chord you lay beneath. Today you learn the feel that "the melody comes first; chords support it." It's only yesterday reversed in direction — the materials are the same, so don't feel pressured. Try this once and your ear starts noticing, before your head does, why the chords in a song you love sit so close together. It's the first step to hearing music from a songwriter's point of view.
 
 ## ② Visuals

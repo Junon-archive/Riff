@@ -14,6 +14,38 @@ i18nKey: "lesson.m2.w5.d2"
 - **G 메이저** — 1번 줄 7프렛(B, 3도)이 탑노트.
 - **G 마이너** — 1번 줄 6프렛(B♭, b3)이 탑노트.
 
+```json
+{
+  "id": "m2.w5.d2.g_major_dform",
+  "type": "fretboard_diagram",
+  "meta": { "title": "G major — 4th-string root (D-shape)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "G" },
+  "fretboard": { "startFret": 5, "fretSpan": 5, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 0, "muted": true },
+    { "string": 4, "fret": 5, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 3, "fret": 7, "finger": 2, "label": "5", "role": "chord_tone" },
+    { "string": 2, "fret": 8, "finger": 4, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 1, "fret": 7, "finger": 3, "label": "3", "role": "target", "highlight": true }
+  ]}
+}
+```
+
+```json
+{
+  "id": "m2.w5.d2.gm_dform",
+  "type": "fretboard_diagram",
+  "meta": { "title": "Gm — 4th-string root (D-shape)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "Gm" },
+  "fretboard": { "startFret": 5, "fretSpan": 5, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 0, "muted": true },
+    { "string": 4, "fret": 5, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 3, "fret": 7, "finger": 3, "label": "5", "role": "chord_tone" },
+    { "string": 2, "fret": 8, "finger": 4, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 1, "fret": 6, "finger": 2, "label": "b3", "role": "target", "highlight": true }
+  ]}
+}
+```
+
 즉 1번 줄 손가락 하나를 **7 ↔ 6프렛**으로 옮기면 밝음↔어둠이 전환돼요. 고음역에선 이 변화가 특히 선명하게 들려요. 탑노트가 밝은 3도냐 어두운 b3냐가 곧 코드의 표정이니까요. R·5는 그대로, 오직 맨 위 한 음만. 손가락 하나로 곡의 표정을 밝게도, 어둡게도 만드는 거예요. 지난달 배운 그 3도 스위치가, 이제 맨 위에서 노래하니 훨씬 더 극적으로 들려요. 어렵지 않아요 — 옮기는 건 딱 한 프렛이니까요. 오늘 하나만 챙기면 돼요: "밝게 하고 싶으면 3도, 어둡게 하고 싶으면 b3."
 
 ## ② 시각 자료

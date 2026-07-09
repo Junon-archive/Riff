@@ -15,6 +15,31 @@ The essence of a dominant 7 is, in a word, **tension.** Unlike a major chord tha
 
 On the fretboard, lower yesterday's G major **4th string, fret 5 (R=G)** to **fret 3 (b7=F)** and you have G7 — leaving the 3rd (3rd string, fret 4, B) alone, moving only the 4th string two frets down. Now this week's picture snaps into focus — **3rd string = the 3rd (bright/dark) switch, 4th string = the 7th (tension) switch.** Just two strings, two switches. Tomorrow you'll combine them to make four chords at will. Today, just lock in this one 4th-string switch.
 
+```json
+{
+  "id": "m1.w1.d3.g7_eform",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "G7 — 6th-string root (E-form dominant)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "G"
+  },
+  "fretboard": {
+    "startFret": 3,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 6, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 5, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 4, "fret": 3, "finger": 1, "label": "b7", "role": "target", "highlight": true },
+      { "string": 3, "fret": 4, "finger": 2, "label": "3", "role": "chord_tone" },
+      { "string": 2, "fret": 3, "finger": 1, "label": "5", "role": "chord_tone" },
+      { "string": 1, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" }
+    ]
+  }
+}
+```
+
 ## ② Visuals
 
 **G7 (E-form)** — only the 4th string dropped from fret 5 to 3. The green is the freshly added **b7 (F)**, the source of the tension.

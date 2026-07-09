@@ -13,6 +13,38 @@ The week's finish line. The 4th-string-root D-shape is **one shape,** so sliding
 
 The simplest example: a **G → A** vibe. Slide the same D-shape **up two frets** and G (root at fret 5) becomes A (root at fret 7). Same hand shape, moved whole. Both chords have the 3rd (the bright note) on top, so going back and forth feels crisp and pop. When one hand shape pops out a mood like a pop-song intro, you're reaching the moment where "comping turns into music." Last week's shells were clean inside a band; this week's D-shape sparkles even played alone — a different stage entirely.
 
+```json
+{
+  "id": "m2.w5.d4.g_dform",
+  "type": "fretboard_diagram",
+  "meta": { "title": "G major — 4th-string root (D-shape)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "G" },
+  "fretboard": { "startFret": 5, "fretSpan": 5, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 0, "muted": true },
+    { "string": 4, "fret": 5, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 3, "fret": 7, "finger": 2, "label": "5", "role": "chord_tone" },
+    { "string": 2, "fret": 8, "finger": 4, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 1, "fret": 7, "finger": 3, "label": "3", "role": "target", "highlight": true }
+  ]}
+}
+```
+
+```json
+{
+  "id": "m2.w5.d4.a_dform",
+  "type": "fretboard_diagram",
+  "meta": { "title": "A major — 4th-string root (D-shape)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "A" },
+  "fretboard": { "startFret": 6, "fretSpan": 5, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 0, "muted": true },
+    { "string": 4, "fret": 7, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 3, "fret": 9, "finger": 2, "label": "5", "role": "chord_tone" },
+    { "string": 2, "fret": 10, "finger": 4, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 1, "fret": 9, "finger": 3, "label": "3", "role": "target", "highlight": true }
+  ]}
+}
+```
+
 Week recap: the root went up to the 4th string, opening the high register, and you gained the new R·3·5 layout plus the idea of the **top note.** Next week (6), you lay a **9th tension** onto this high register to make the color shimmer.
 
 ## ② Visuals

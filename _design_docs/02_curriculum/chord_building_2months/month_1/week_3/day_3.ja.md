@@ -17,6 +17,54 @@ Cを全音（2フレット）上へ押すと**Dキー**になります：
 - **A7 (V)** — 6弦ルート、5フレット。（CのG7を2フレット上へ）
 - **Dmaj7 (I)** — 5弦ルート、5フレット。（CのCmaj7を2フレット上へ）
 
+```json
+{
+  "id": "m1.w3.d3.em7",
+  "type": "fretboard_diagram",
+  "meta": { "title": "Em7 (ii) — 5th-string root", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "D" },
+  "fretboard": { "startFret": 6, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 7, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 4, "fret": 9, "finger": 3, "label": "5", "role": "chord_tone" },
+    { "string": 3, "fret": 7, "finger": 1, "label": "b7", "role": "target", "highlight": true },
+    { "string": 2, "fret": 8, "finger": 2, "label": "b3", "role": "target", "highlight": true },
+    { "string": 1, "fret": 0, "muted": true }
+  ]}
+}
+```
+
+```json
+{
+  "id": "m1.w3.d3.a7",
+  "type": "fretboard_diagram",
+  "meta": { "title": "A7 (V) — 6th-string root", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "D" },
+  "fretboard": { "startFret": 4, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 5, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 5, "fret": 7, "finger": 3, "label": "5", "role": "chord_tone" },
+    { "string": 4, "fret": 5, "finger": 1, "label": "b7", "role": "target", "highlight": true },
+    { "string": 3, "fret": 6, "finger": 2, "label": "3", "role": "target", "highlight": true },
+    { "string": 2, "fret": 5, "finger": 1, "label": "5", "role": "chord_tone" },
+    { "string": 1, "fret": 5, "finger": 1, "label": "R", "isRoot": true, "role": "root" }
+  ]}
+}
+```
+
+```json
+{
+  "id": "m1.w3.d3.dmaj7",
+  "type": "fretboard_diagram",
+  "meta": { "title": "Dmaj7 (I) — 5th-string root", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "D" },
+  "fretboard": { "startFret": 4, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 5, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 4, "fret": 7, "finger": 3, "label": "5", "role": "chord_tone" },
+    { "string": 3, "fret": 6, "finger": 2, "label": "7", "role": "target", "highlight": true },
+    { "string": 2, "fret": 7, "finger": 4, "label": "3", "role": "target", "highlight": true },
+    { "string": 1, "fret": 0, "muted": true }
+  ]}
+}
+```
+
 指の形は1つも変わりません。ルート弦交差（5・6・5）も、ガイドトーンが半音ずつ動くのも同じ。**形を暗記したのではなく「パターン」を学んだから**、12キーどこへでも動かせるんです。これがインターバルでコードを学んだ人の特権です。つまり、12キーを別々に覚える必要がないということ — 今日このパターン1つをしっかり押さえれば、残りのキーはほぼタダで手に入ります。
 
 ## ② ビジュアル

@@ -15,6 +15,19 @@ i18nKey: "lesson.m1.w3.d2"
 
 **② 가이드톤은 반음씩.** 어제 3번 줄에서 7도→3도→7도가 5→4→4로 거의 안 움직인 걸 봤죠. 오늘은 **또 다른 가이드톤 라인**을 봐요. 2번 줄에서 Dm7의 3도(F) → G7의 7도(F) → Cmaj7의 3도(E): **6→6→5프렛.** F는 그대로 있다가 E로 반음만 내려가요. 두 가이드톤 라인(3번 줄·2번 줄)이 동시에 거의 제자리에서 미끄러지는 게 보이스 리딩의 실체예요. 신기하지 않아요? 코드는 세 개나 바뀌는데, 정작 위에서 노래하는 음들은 거의 붙어 있는 거예요. 이 감각만 손에 익히면 어떤 진행이든 매끄러워져요.
 
+```json
+{
+  "id": "m1.w3.d2.guide_tone_line2",
+  "type": "tab",
+  "meta": { "title": "Guide-tone line #2 (ii-V-I) — staff + tab", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "C", "tempoBpm": 66, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "pattern": "guide_tone_3rds", "measures": [
+    { "measure": 1, "notes": [ { "string": 2, "fret": 6, "duration": "whole", "label": "Dm7-b3(F)", "role": "target", "highlight": true } ]},
+    { "measure": 2, "notes": [ { "string": 2, "fret": 6, "duration": "whole", "label": "G7-b7(F)", "role": "target", "highlight": true } ]},
+    { "measure": 3, "notes": [ { "string": 2, "fret": 5, "duration": "whole", "label": "Cmaj7-3(E)", "role": "target", "highlight": true } ]}
+  ]}
+}
+```
+
 ## ② 시각 자료
 
 가운데 코드 **G7(V, 6현 근음)** — II와 I을 잇는 다리예요. 초록이 가이드톤(3도·7도).

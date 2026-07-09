@@ -14,6 +14,46 @@ Good news today — there's **no new principle to learn.** We reuse last week's 
 - **Minor switch = 2nd string.** Lower the 3rd (2nd string, fret 5, E) a half step to b3 (fret 4, E♭). → **Cm**
 - **Dominant-7 switch = 3rd string.** Lower the octave root (3rd string, fret 5, C) two frets to b7 (fret 3, B♭). → **C7**
 
+```json
+{
+  "id": "m1.w2.d2.cm_aform",
+  "type": "fretboard_diagram",
+  "meta": { "title": "Cm — 5th-string root (A-form)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "Cm" },
+  "fretboard": {
+    "startFret": 3,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 6, "fret": 0, "muted": true },
+      { "string": 5, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 5, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 3, "fret": 5, "finger": 4, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 2, "fret": 4, "finger": 2, "label": "b3", "role": "target", "highlight": true },
+      { "string": 1, "fret": 0, "muted": true }
+    ]
+  }
+}
+```
+
+```json
+{
+  "id": "m1.w2.d2.c7_aform",
+  "type": "fretboard_diagram",
+  "meta": { "title": "C7 — 5th-string root (A-form)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "C" },
+  "fretboard": {
+    "startFret": 3,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 6, "fret": 0, "muted": true },
+      { "string": 5, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 5, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 3, "fret": 3, "finger": 1, "label": "b7", "role": "target", "highlight": true },
+      { "string": 2, "fret": 5, "finger": 4, "label": "3", "role": "chord_tone" },
+      { "string": 1, "fret": 0, "muted": true }
+    ]
+  }
+}
+```
+
 In the 6th-string form the 3rd was on the 3rd string and the 7th on the 4th. In the 5th-string form (A-form), the **3rd simply moved to the 2nd string and the 7th to the 3rd string.** When the root changes, the switches' home addresses change too — feeling that in your hands is all today asks. The principle (lower the 3rd for minor, add the b7 for 7) is 100% identical to last week, so you just get comfortable with the new spots. Once it's in your hands, 6th-string or 5th-string, you're free either way.
 
 ## ② Visuals

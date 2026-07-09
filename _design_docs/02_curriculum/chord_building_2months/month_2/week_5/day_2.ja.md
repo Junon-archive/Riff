@@ -14,6 +14,38 @@ i18nKey: "lesson.m2.w5.d2"
 - **Gメジャー** — 1弦7フレット（B、3度）がトップノート。
 - **Gマイナー** — 1弦6フレット（B♭、b3）がトップノート。
 
+```json
+{
+  "id": "m2.w5.d2.g_major_dform",
+  "type": "fretboard_diagram",
+  "meta": { "title": "G major — 4th-string root (D-shape)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "G" },
+  "fretboard": { "startFret": 5, "fretSpan": 5, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 0, "muted": true },
+    { "string": 4, "fret": 5, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 3, "fret": 7, "finger": 2, "label": "5", "role": "chord_tone" },
+    { "string": 2, "fret": 8, "finger": 4, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 1, "fret": 7, "finger": 3, "label": "3", "role": "target", "highlight": true }
+  ]}
+}
+```
+
+```json
+{
+  "id": "m2.w5.d2.gm_dform",
+  "type": "fretboard_diagram",
+  "meta": { "title": "Gm — 4th-string root (D-shape)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "Gm" },
+  "fretboard": { "startFret": 5, "fretSpan": 5, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 0, "muted": true },
+    { "string": 4, "fret": 5, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 3, "fret": 7, "finger": 3, "label": "5", "role": "chord_tone" },
+    { "string": 2, "fret": 8, "finger": 4, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 1, "fret": 6, "finger": 2, "label": "b3", "role": "target", "highlight": true }
+  ]}
+}
+```
+
 つまり1弦の指1本を**7 ↔ 6フレット**へ動かすと明るさ↔暗さが切り替わります。高音域ではこの変化が特に鮮明。トップノートが明るい3度か暗いb3かが、そのままコードの表情だからです。R・5はそのまま、一番上の1音だけ。指1本で曲の表情を明るくも暗くもできるんです。先月学んだあの3度スイッチが、いまや一番上で歌うので、ずっとドラマチックに聞こえます。難しくありません — 動かすのはたった1フレットですから。今日はこれだけ持ち帰ればOK：「明るくしたいなら3度、暗くしたいならb3」。
 
 ## ② ビジュアル

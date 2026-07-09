@@ -17,6 +17,26 @@ i18nKey: "lesson.m1.w2.d3"
 - **3弦4フレット＝7**（長7度）→ **Maj7**
 - **3弦3フレット＝b7**（短7度）→ **ドミナント7**
 
+```json
+{
+  "id": "m1.w2.d3.cmaj7_aform",
+  "type": "fretboard_diagram",
+  "meta": { "title": "Cmaj7 — 5th-string root (A-form)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "C" },
+  "fretboard": {
+    "startFret": 3,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 6, "fret": 0, "muted": true },
+      { "string": 5, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 5, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 3, "fret": 4, "finger": 2, "label": "7", "role": "target", "highlight": true },
+      { "string": 2, "fret": 5, "finger": 4, "label": "3", "role": "chord_tone" },
+      { "string": 1, "fret": 0, "muted": true }
+    ]
+  }
+}
+```
+
 つまり**b7（3フレット）とMaj7の7（4フレット）はちょうど1フレット、半音差**。でもこの半分のマスがまるで違う感情を作ります。b7（ドミナント）は「早く解決したい」とやきもきする緊張、Maj7の7は「浮遊した、幻想的で洗練された」未完。シティポップの切なさ、ジャズバラードのあのぼんやり霞んだ色 — 全部このMaj7 1つから来ています。半音差が最初は微妙に聞こえても大丈夫。今日はこの2つを3弦で並べて押さえ、その半音が作る感情の違いを耳でしっかり聞き分けます。
 
 ## ② ビジュアル

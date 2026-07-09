@@ -17,6 +17,31 @@ i18nKey: "lesson.m1.w1.d2"
 
 지판에서는 3번 줄의 **4프렛(B, 3도)** 을 한 칸 아래 **3프렛(B♭, b3)** 으로 내리기만 하면 돼요. 손가락 하나, 한 프렛. 그게 전부인데 코드의 표정이 '밝음'에서 '슬픔'으로 확 바뀝니다. 나머지 R·5는 하나도 안 건드려요.
 
+```json
+{
+  "id": "m1.w1.d2.gm_eform",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "Gm — 6th-string root (E-form minor)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "Gm"
+  },
+  "fretboard": {
+    "startFret": 3,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 6, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 5, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 4, "fret": 5, "finger": 4, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 3, "finger": 1, "label": "b3", "role": "target", "highlight": true },
+      { "string": 2, "fret": 3, "finger": 1, "label": "5", "role": "chord_tone" },
+      { "string": 1, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" }
+    ]
+  }
+}
+```
+
 처음엔 "이게 진짜 다야?" 싶을 만큼 허무할 수도 있는데, **그 허무함이 정상이에요.** 원래 좋은 원리는 이렇게 단순하거든요. 밝음과 슬픔을 가르는 건 언제나 3도 하나 — 오늘은 그 사실을 손으로 딱 한 번 느껴두는 날이에요.
 
 왜 이게 중요하냐면, 앞으로 어떤 코드를 만나도 "이 코드의 3도가 어디지? 그게 장3도야 단3도야?"만 물으면 밝은지 어두운지 바로 알 수 있거든요. 모양 60개를 외우는 대신 **3도 한 자리**만 추적하면 돼요. Am이든 Cm이든 Fm이든, "아, 3도만 반음 내리면 되지" 하고 스스로 만들어내게 됩니다.

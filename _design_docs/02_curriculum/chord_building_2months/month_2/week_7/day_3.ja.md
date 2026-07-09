@@ -18,6 +18,32 @@ i18nKey: "lesson.m2.w7.d3"
 - **A（トップ）← Fコード**（AはFの3度）
 - **G（トップ）← Cコード**（GはCの5度）
 
+```json
+{
+  "id": "m2.w7.d3.c_top_c",
+  "type": "fretboard_diagram",
+  "meta": { "title": "C triad — top note C (R)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "C" },
+  "fretboard": { "startFret": 7, "fretSpan": 4, "dots": [
+    { "string": 3, "fret": 9, "finger": 3, "label": "3", "role": "chord_tone" },
+    { "string": 2, "fret": 8, "finger": 2, "label": "5", "role": "chord_tone" },
+    { "string": 1, "fret": 8, "finger": 1, "label": "R", "isRoot": true, "role": "target", "highlight": true }
+  ]}
+}
+```
+
+```json
+{
+  "id": "m2.w7.d3.g_top_b",
+  "type": "fretboard_diagram",
+  "meta": { "title": "G triad — top note B (3)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "G" },
+  "fretboard": { "startFret": 6, "fretSpan": 4, "dots": [
+    { "string": 3, "fret": 7, "finger": 1, "label": "5", "role": "chord_tone" },
+    { "string": 2, "fret": 8, "finger": 3, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 1, "fret": 7, "finger": 1, "label": "3", "role": "target", "highlight": true }
+  ]}
+}
+```
+
 つまり進行は **C - G - F - C**。同じメロディも下にどのコードを敷くかで色が変わります。今日は「メロディが先、コードはそれを支える」感覚を身につけます。昨日と方向が逆なだけで、使う材料は同じなので気負わないで。今日これを一度やってみると、好きな曲のコードがなぜあんなに近くに寄り添っているのか、頭より先に耳が気づきはじめます。作曲家の視点で曲を聴く、その第一歩です。
 
 ## ② ビジュアル

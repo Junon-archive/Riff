@@ -17,6 +17,31 @@ i18nKey: "lesson.m1.w1.d2"
 
 最初は「これで本当に全部？」と物足りなく感じるかもしれませんが、**その物足りなさが正常です。** いい原理はこんなに単純なんです。明暗を分けるのはいつも3度1つ — 今日はそれを手で一度、しっかり感じる日です。
 
+```json
+{
+  "id": "m1.w1.d2.gm_eform",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "Gm — 6th-string root (E-form minor)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "Gm"
+  },
+  "fretboard": {
+    "startFret": 3,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 6, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 5, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 4, "fret": 5, "finger": 4, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 3, "finger": 1, "label": "b3", "role": "target", "highlight": true },
+      { "string": 2, "fret": 3, "finger": 1, "label": "5", "role": "chord_tone" },
+      { "string": 1, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" }
+    ]
+  }
+}
+```
+
 なぜ重要か。これから先どんなコードに出会っても「このコードの3度はどこ？ 長3度か短3度か？」を問うだけで、明るいか暗いか一瞬で分かります。60個の形を覚える代わりに、**3度という1か所**だけ追えばいい。Am・Cm・Fm、どれも「あ、3度を半音下げればいい」と自分で作れるようになります。
 
 ## ② ビジュアル

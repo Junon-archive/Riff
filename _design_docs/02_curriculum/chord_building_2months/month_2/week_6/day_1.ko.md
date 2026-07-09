@@ -16,6 +16,38 @@ i18nKey: "lesson.m2.w6.d1"
 - **Maj7의 뼈대** = R(C) · 3(E) · 7(B). (여기까진 지난 달에 배운 코드톤이에요.)
 - **여기에 9도(D)를 얹으면** = **Maj9**. R·3·7 위에 D 하나가 반짝 뿌려져요.
 
+```json
+{
+  "id": "m2.w6.d1.cmaj7_shell",
+  "type": "fretboard_diagram",
+  "meta": { "title": "Cmaj7 skeleton (R·3·7)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "C" },
+  "fretboard": { "startFret": 1, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 3, "finger": 2, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 4, "fret": 2, "finger": 1, "label": "3", "role": "chord_tone" },
+    { "string": 3, "fret": 4, "finger": 4, "label": "7", "role": "chord_tone" },
+    { "string": 2, "fret": 0, "muted": true },
+    { "string": 1, "fret": 0, "muted": true }
+  ]}
+}
+```
+
+```json
+{
+  "id": "m2.w6.d1.cmaj9",
+  "type": "fretboard_diagram",
+  "meta": { "title": "Cmaj9 — 5th-string root (add 9)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "C" },
+  "fretboard": { "startFret": 1, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 3, "finger": 2, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 4, "fret": 2, "finger": 1, "label": "3", "role": "chord_tone" },
+    { "string": 3, "fret": 4, "finger": 4, "label": "7", "role": "chord_tone" },
+    { "string": 2, "fret": 3, "finger": 3, "label": "9", "role": "color" },
+    { "string": 1, "fret": 0, "muted": true }
+  ]}
+}
+```
+
 핵심은 이거예요: R·3·7이 코드의 **뼈대(파랑)**라면, 9도는 그 위에 뿌리는 **색(노랑)**이에요. 뼈대는 그대로 두고 색만 더하는 거죠. 시티팝·재즈·R&B의 그 세련된 울림이 바로 이 9도에서 나와요. 겁먹지 마세요 — 새 코드를 통째로 외우는 게 아니에요. 이미 잡고 있는 코드에 손가락 하나만 더 얹는 거죠. 아는 코드 위에 반짝이 하나 뿌리는 것뿐이니, 오늘은 "9도는 어렵지 않다"는 것만 손으로 확인하면 충분해요.
 
 ## ② 시각 자료

@@ -17,6 +17,31 @@ On the fretboard, drop the **4th fret (B, the 3rd) on the 3rd string** one fret 
 
 At first it might feel almost anticlimactic — "wait, that's really it?" — and **that emptiness is normal.** Good principles are simple like that. Bright vs. sad is always decided by one note, the 3rd; today you just feel that once, in your hands.
 
+```json
+{
+  "id": "m1.w1.d2.gm_eform",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "Gm — 6th-string root (E-form minor)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "Gm"
+  },
+  "fretboard": {
+    "startFret": 3,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 6, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 5, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 4, "fret": 5, "finger": 4, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 3, "finger": 1, "label": "b3", "role": "target", "highlight": true },
+      { "string": 2, "fret": 3, "finger": 1, "label": "5", "role": "chord_tone" },
+      { "string": 1, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" }
+    ]
+  }
+}
+```
+
 Why it matters: from now on, for any chord you meet, just ask "where's the 3rd, and is it major or minor?" and you instantly know whether it's a bright or dark chord. Instead of memorizing 60 shapes, you track **one spot: the 3rd.** Am, Cm, Fm — you'll make them yourself, thinking "ah, just drop the 3rd a half step."
 
 ## ② Visuals

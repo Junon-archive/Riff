@@ -16,6 +16,38 @@ i18nKey: "lesson.m2.w6.d1"
 - **Maj7の骨組み** ＝ R（C）· 3（E）· 7（B）。（ここまでは先月学んだコードトーン。）
 - **ここに9度（D）をのせると** ＝ **Maj9**。R·3·7の上にDが1つきらりと振りかけられます。
 
+```json
+{
+  "id": "m2.w6.d1.cmaj7_shell",
+  "type": "fretboard_diagram",
+  "meta": { "title": "Cmaj7 skeleton (R·3·7)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "C" },
+  "fretboard": { "startFret": 1, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 3, "finger": 2, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 4, "fret": 2, "finger": 1, "label": "3", "role": "chord_tone" },
+    { "string": 3, "fret": 4, "finger": 4, "label": "7", "role": "chord_tone" },
+    { "string": 2, "fret": 0, "muted": true },
+    { "string": 1, "fret": 0, "muted": true }
+  ]}
+}
+```
+
+```json
+{
+  "id": "m2.w6.d1.cmaj9",
+  "type": "fretboard_diagram",
+  "meta": { "title": "Cmaj9 — 5th-string root (add 9)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "C" },
+  "fretboard": { "startFret": 1, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 3, "finger": 2, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 4, "fret": 2, "finger": 1, "label": "3", "role": "chord_tone" },
+    { "string": 3, "fret": 4, "finger": 4, "label": "7", "role": "chord_tone" },
+    { "string": 2, "fret": 3, "finger": 3, "label": "9", "role": "color" },
+    { "string": 1, "fret": 0, "muted": true }
+  ]}
+}
+```
+
 核心はこれ：R·3·7がコードの**骨組み（青）**なら、9度はその上に振りかける**色（黄色）**。骨組みはそのまま、色だけ足す。シティポップ・ジャズ・R&Bのあの洗練された響きは、まさにこの9度から。怖がらないで — 新しいコードを丸ごと覚えるわけじゃありません。すでに押さえているコードに指を1本足すだけ。知っているコードの上にキラキラを1つ振りかけるだけなので、今日は「9度は難しくない」と手で確かめれば十分です。
 
 ## ② ビジュアル

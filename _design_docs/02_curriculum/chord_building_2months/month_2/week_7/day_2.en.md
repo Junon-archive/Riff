@@ -13,6 +13,22 @@ Today you thread a real progression — **C - Am - F - G** (one of pop's most co
 
 Choose the top-note melody like this: **G → A → A → G.** (1st string fret 3 → 5 → 5 → 3.) Up one note (a major 2nd), stay, back down. No big jumps.
 
+```json
+{
+  "id": "m2.w7.d2.top_line_camfg",
+  "type": "tab",
+  "meta": { "title": "Top-note line (C-Am-F-G) — staff + tab", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "C", "tempoBpm": 72, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 1, "fret": 3, "duration": "quarter", "label": "5(G)", "role": "target", "highlight": true },
+      { "string": 1, "fret": 5, "duration": "quarter", "label": "R(A)", "role": "target", "highlight": true },
+      { "string": 1, "fret": 5, "duration": "quarter", "label": "3(A)", "role": "target", "highlight": true },
+      { "string": 1, "fret": 3, "duration": "quarter", "label": "R(G)", "role": "target", "highlight": true }
+    ]}
+  ]}
+}
+```
+
 The secret is **common tones.** Grab C and Am in these spots and the two lower notes (C·E) are **identical.** So C→Am moves only the 1st string, G→A — leave the rest planted. Am→F keeps the top A the same. Pros find this "least-movement path" to connect chords, and as a result the top note sings. Isn't it something? The chords change, your hand barely moves, and yet a melody flows up top. That's the true identity of the polished comping you always liked — not magic, just the result of keeping the common tones planted.
 
 ## ② Visuals

@@ -15,6 +15,31 @@ i18nKey: "lesson.m1.w1.d3"
 
 指板では、昨日のGメジャーの**4弦5フレット（R=G）**を**3フレット（b7=F）**へ下げるとG7になります。3度（3弦4フレット、B）はそのまま、4弦だけ2フレット下へ。さあ、これで今週の絵がきれいに整います — **3弦＝3度（明暗）スイッチ、4弦＝7度（緊張）スイッチ。** たった2弦、2つのスイッチ。明日はこの2つを合わせて4つのコードを自在に作ります。今日は4弦のスイッチ1つだけ、確実に手に馴染ませて。
 
+```json
+{
+  "id": "m1.w1.d3.g7_eform",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "G7 — 6th-string root (E-form dominant)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "G"
+  },
+  "fretboard": {
+    "startFret": 3,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 6, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 5, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 4, "fret": 3, "finger": 1, "label": "b7", "role": "target", "highlight": true },
+      { "string": 3, "fret": 4, "finger": 2, "label": "3", "role": "chord_tone" },
+      { "string": 2, "fret": 3, "finger": 1, "label": "5", "role": "chord_tone" },
+      { "string": 1, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" }
+    ]
+  }
+}
+```
+
 ## ② ビジュアル
 
 Gメジャーから4弦だけ5→3フレットに下げた**G7（Eフォーム）**。緑が今日新しく入った**b7（F）**、緊張の正体です。

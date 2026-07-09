@@ -13,6 +13,38 @@ i18nKey: "lesson.m2.w5.d4"
 
 一番簡単な例：**G → A**のバイブ。同じDフォームを**2フレット上へ**ずらすと、G（ルート5フレット）がA（ルート7フレット）になります。手の形はそのまま、丸ごと上へ。両コードともトップノートが3度（明るい音）なので、行き来すると澄んでポップな感じになります。手の形1つでポップスのイントロみたいな空気がふっと出ると、そろそろ「コンピングが音楽になる」瞬間が近づいています。先週のシェルがバンドの中で澄んでいたなら、今週のDフォームは一人で弾いてもキラキラ鳴る — 舞台が違うんです。
 
+```json
+{
+  "id": "m2.w5.d4.g_dform",
+  "type": "fretboard_diagram",
+  "meta": { "title": "G major — 4th-string root (D-shape)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "G" },
+  "fretboard": { "startFret": 5, "fretSpan": 5, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 0, "muted": true },
+    { "string": 4, "fret": 5, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 3, "fret": 7, "finger": 2, "label": "5", "role": "chord_tone" },
+    { "string": 2, "fret": 8, "finger": 4, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 1, "fret": 7, "finger": 3, "label": "3", "role": "target", "highlight": true }
+  ]}
+}
+```
+
+```json
+{
+  "id": "m2.w5.d4.a_dform",
+  "type": "fretboard_diagram",
+  "meta": { "title": "A major — 4th-string root (D-shape)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "A" },
+  "fretboard": { "startFret": 6, "fretSpan": 5, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 0, "muted": true },
+    { "string": 4, "fret": 7, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 3, "fret": 9, "finger": 2, "label": "5", "role": "chord_tone" },
+    { "string": 2, "fret": 10, "finger": 4, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 1, "fret": 9, "finger": 3, "label": "3", "role": "target", "highlight": true }
+  ]}
+}
+```
+
 今週のまとめ：ルートが4弦へ上がって高音域が開き、R·3·5の新しい配置と**トップノート**という概念を得ました。来週（6週目）はこの高音域の上に**9度テンション**をのせて色を華やかにします。
 
 ## ② ビジュアル

@@ -17,6 +17,54 @@ C키를 온음(두 프렛) 위로 밀면 **D키**가 돼요:
 - **A7 (V)** — 6현 근음, 5프렛. (C키 G7을 두 프렛 위로)
 - **Dmaj7 (I)** — 5현 근음, 5프렛. (C키 Cmaj7을 두 프렛 위로)
 
+```json
+{
+  "id": "m1.w3.d3.em7",
+  "type": "fretboard_diagram",
+  "meta": { "title": "Em7 (ii) — 5th-string root", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "D" },
+  "fretboard": { "startFret": 6, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 7, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 4, "fret": 9, "finger": 3, "label": "5", "role": "chord_tone" },
+    { "string": 3, "fret": 7, "finger": 1, "label": "b7", "role": "target", "highlight": true },
+    { "string": 2, "fret": 8, "finger": 2, "label": "b3", "role": "target", "highlight": true },
+    { "string": 1, "fret": 0, "muted": true }
+  ]}
+}
+```
+
+```json
+{
+  "id": "m1.w3.d3.a7",
+  "type": "fretboard_diagram",
+  "meta": { "title": "A7 (V) — 6th-string root", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "D" },
+  "fretboard": { "startFret": 4, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 5, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 5, "fret": 7, "finger": 3, "label": "5", "role": "chord_tone" },
+    { "string": 4, "fret": 5, "finger": 1, "label": "b7", "role": "target", "highlight": true },
+    { "string": 3, "fret": 6, "finger": 2, "label": "3", "role": "target", "highlight": true },
+    { "string": 2, "fret": 5, "finger": 1, "label": "5", "role": "chord_tone" },
+    { "string": 1, "fret": 5, "finger": 1, "label": "R", "isRoot": true, "role": "root" }
+  ]}
+}
+```
+
+```json
+{
+  "id": "m1.w3.d3.dmaj7",
+  "type": "fretboard_diagram",
+  "meta": { "title": "Dmaj7 (I) — 5th-string root", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "D" },
+  "fretboard": { "startFret": 4, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 5, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 4, "fret": 7, "finger": 3, "label": "5", "role": "chord_tone" },
+    { "string": 3, "fret": 6, "finger": 2, "label": "7", "role": "target", "highlight": true },
+    { "string": 2, "fret": 7, "finger": 4, "label": "3", "role": "target", "highlight": true },
+    { "string": 1, "fret": 0, "muted": true }
+  ]}
+}
+```
+
 손가락 모양은 하나도 안 바뀌어요. 근음 줄 교차(5·6·5)도, 가이드톤이 반음씩 움직이는 것도 똑같아요. **모양을 외운 게 아니라 '패턴'을 배웠기 때문에** 12개 키 어디로든 밀 수 있는 거예요. 이게 인터벌로 코드를 배운 사람의 특권이에요. 다시 말해, 12개 키를 따로 외울 일이 없다는 뜻이죠 — 오늘 이 패턴 하나만 제대로 밀어보면, 나머지 키는 거의 거저예요.
 
 ## ② 시각 자료

@@ -13,6 +13,22 @@ i18nKey: "lesson.m2.w7.d2"
 
 トップノート・メロディをこう選びます：**G → A → A → G。**（1弦3フレット → 5フレット → 5フレット → 3フレット。）1音（長2度）上がってそのまま、また下がる。大きなジャンプがありません。
 
+```json
+{
+  "id": "m2.w7.d2.top_line_camfg",
+  "type": "tab",
+  "meta": { "title": "Top-note line (C-Am-F-G) — staff + tab", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "C", "tempoBpm": 72, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 1, "fret": 3, "duration": "quarter", "label": "5(G)", "role": "target", "highlight": true },
+      { "string": 1, "fret": 5, "duration": "quarter", "label": "R(A)", "role": "target", "highlight": true },
+      { "string": 1, "fret": 5, "duration": "quarter", "label": "3(A)", "role": "target", "highlight": true },
+      { "string": 1, "fret": 3, "duration": "quarter", "label": "R(G)", "role": "target", "highlight": true }
+    ]}
+  ]}
+}
+```
+
 秘密は**共通音**。CとAmをこの位置で押さえると、下の2音（C·E）が**同じ**です。だからC→Amは1弦だけG→Aに動かせば終わり（残りは付けたまま）。Am→FもトップはAのまま。プロはこの「最も動かない道」を見つけてコードをつなぎ、結果トップノートが歌います。不思議じゃないですか？　コードは変わるのに手はほとんど動かない、それでも一番上ではメロディが流れている。あなたが好きだったあの洗練された伴奏の正体はこれです — 魔法ではなく、共通音を付けたままにした結果なんです。
 
 ## ② ビジュアル

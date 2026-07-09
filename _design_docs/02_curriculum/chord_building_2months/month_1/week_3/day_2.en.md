@@ -15,6 +15,19 @@ Yesterday you saw the ii–V–I concept. Today you actually connect **Dm7 (5th)
 
 **② Guide tones move a half step.** Yesterday on the 3rd string, 7th→3rd→7th barely moved (5→4→4). Today, see **another guide-tone line.** On the 2nd string, Dm7's 3rd (F) → G7's 7th (F) → Cmaj7's 3rd (E): **frets 6→6→5.** F stays, then drops a half step to E. Two guide-tone lines (3rd & 2nd strings) sliding almost in place at once — that's the reality of voice leading. Isn't that something? Three whole chords change, yet the notes singing on top stay nearly glued in place. Get this feel into your hands and any progression turns smooth.
 
+```json
+{
+  "id": "m1.w3.d2.guide_tone_line2",
+  "type": "tab",
+  "meta": { "title": "Guide-tone line #2 (ii-V-I) — staff + tab", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "C", "tempoBpm": 66, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "pattern": "guide_tone_3rds", "measures": [
+    { "measure": 1, "notes": [ { "string": 2, "fret": 6, "duration": "whole", "label": "Dm7-b3(F)", "role": "target", "highlight": true } ]},
+    { "measure": 2, "notes": [ { "string": 2, "fret": 6, "duration": "whole", "label": "G7-b7(F)", "role": "target", "highlight": true } ]},
+    { "measure": 3, "notes": [ { "string": 2, "fret": 5, "duration": "whole", "label": "Cmaj7-3(E)", "role": "target", "highlight": true } ]}
+  ]}
+}
+```
+
 ## ② Visuals
 
 The middle chord, **G7 (V, 6th-string root)** — the bridge connecting the ii and the I. Green = guide tones (3rd & 7th).

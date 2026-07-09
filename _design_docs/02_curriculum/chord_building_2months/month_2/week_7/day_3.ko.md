@@ -18,6 +18,32 @@ i18nKey: "lesson.m2.w7.d3"
 - **A(탑) ← F 코드** (A는 F의 3도)
 - **G(탑) ← C 코드** (G는 C의 5도)
 
+```json
+{
+  "id": "m2.w7.d3.c_top_c",
+  "type": "fretboard_diagram",
+  "meta": { "title": "C triad — top note C (R)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "C" },
+  "fretboard": { "startFret": 7, "fretSpan": 4, "dots": [
+    { "string": 3, "fret": 9, "finger": 3, "label": "3", "role": "chord_tone" },
+    { "string": 2, "fret": 8, "finger": 2, "label": "5", "role": "chord_tone" },
+    { "string": 1, "fret": 8, "finger": 1, "label": "R", "isRoot": true, "role": "target", "highlight": true }
+  ]}
+}
+```
+
+```json
+{
+  "id": "m2.w7.d3.g_top_b",
+  "type": "fretboard_diagram",
+  "meta": { "title": "G triad — top note B (3)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "G" },
+  "fretboard": { "startFret": 6, "fretSpan": 4, "dots": [
+    { "string": 3, "fret": 7, "finger": 1, "label": "5", "role": "chord_tone" },
+    { "string": 2, "fret": 8, "finger": 3, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 1, "fret": 7, "finger": 1, "label": "3", "role": "target", "highlight": true }
+  ]}
+}
+```
+
 즉 진행은 **C - G - F - C**. 같은 멜로디도 아래에 어떤 코드를 까느냐로 색이 달라져요. 오늘은 "멜로디가 먼저, 코드는 그걸 받쳐준다"는 감각을 익힙니다. 어제와 방향만 반대일 뿐, 쓰는 재료는 똑같으니 부담 갖지 마세요. 오늘 이걸 한번 해보면, 좋아하는 노래의 코드가 왜 그렇게 붙어 있었는지 귀가 먼저 알아채기 시작해요. 작곡가의 시점으로 곡을 듣게 되는 첫걸음이에요.
 
 ## ② 시각 자료

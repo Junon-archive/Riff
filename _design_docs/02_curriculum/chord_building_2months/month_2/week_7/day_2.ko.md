@@ -13,6 +13,22 @@ i18nKey: "lesson.m2.w7.d2"
 
 탑노트 멜로디를 이렇게 골라요: **G → A → A → G.** (1번 줄 3프렛 → 5프렛 → 5프렛 → 3프렛.) 한 음(장2도) 올라갔다가 그대로, 다시 내려와요. 큰 점프가 없죠.
 
+```json
+{
+  "id": "m2.w7.d2.top_line_camfg",
+  "type": "tab",
+  "meta": { "title": "Top-note line (C-Am-F-G) — staff + tab", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "C", "tempoBpm": 72, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 1, "fret": 3, "duration": "quarter", "label": "5(G)", "role": "target", "highlight": true },
+      { "string": 1, "fret": 5, "duration": "quarter", "label": "R(A)", "role": "target", "highlight": true },
+      { "string": 1, "fret": 5, "duration": "quarter", "label": "3(A)", "role": "target", "highlight": true },
+      { "string": 1, "fret": 3, "duration": "quarter", "label": "R(G)", "role": "target", "highlight": true }
+    ]}
+  ]}
+}
+```
+
 비밀은 **공통음**이에요. C와 Am을 이 자리로 잡으면 아래 두 음(C·E)이 **똑같아요.** 그래서 C→Am은 1번 줄 하나만 G→A로 움직이면 끝(나머진 붙여 둠). Am→F도 탑은 A 그대로. 프로는 이렇게 "가장 안 움직이는 길"을 찾아 코드를 잇고, 그 결과 맨 위 음이 노래해요. 신기하지 않아요? 코드는 바뀌는데 손은 거의 안 움직이고, 그런데도 맨 위에서는 멜로디가 흘러요. 여러분이 좋아하던 그 세련된 반주의 정체가 바로 이거예요 — 마법이 아니라, 공통음을 붙여 둔 결과일 뿐이죠.
 
 ## ② 시각 자료

@@ -15,6 +15,19 @@ i18nKey: "lesson.m1.w3.d2"
 
 **② ガイドトーンは半音ずつ。** 昨日3弦で7度→3度→7度がほぼ動かなかった（5→4→4）。今日は**別のガイドトーン・ライン**を見ます。2弦でDm7の3度（F）→ G7の7度（F）→ Cmaj7の3度（E）：**6→6→5フレット。** Fはそのまま、最後にEへ半音だけ。2つのガイドトーン・ライン（3弦・2弦）が同時にほぼその場で滑る — これがボイスリーディングの実体です。不思議じゃないですか？　コードは3つも変わるのに、上で歌っている音はほとんど貼りついたまま。この感覚さえ手に入れば、どんな進行も滑らかになります。
 
+```json
+{
+  "id": "m1.w3.d2.guide_tone_line2",
+  "type": "tab",
+  "meta": { "title": "Guide-tone line #2 (ii-V-I) — staff + tab", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "C", "tempoBpm": 66, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "pattern": "guide_tone_3rds", "measures": [
+    { "measure": 1, "notes": [ { "string": 2, "fret": 6, "duration": "whole", "label": "Dm7-b3(F)", "role": "target", "highlight": true } ]},
+    { "measure": 2, "notes": [ { "string": 2, "fret": 6, "duration": "whole", "label": "G7-b7(F)", "role": "target", "highlight": true } ]},
+    { "measure": 3, "notes": [ { "string": 2, "fret": 5, "duration": "whole", "label": "Cmaj7-3(E)", "role": "target", "highlight": true } ]}
+  ]}
+}
+```
+
 ## ② ビジュアル
 
 真ん中のコード**G7（V、6弦ルート）** — IIとIをつなぐ橋です。緑＝ガイドトーン（3度・7度）。

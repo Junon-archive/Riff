@@ -14,6 +14,46 @@ i18nKey: "lesson.m1.w2.d2"
 - **マイナースイッチ＝2弦。** 3度（2弦5フレット、E）を半音下げてb3（4フレット、E♭）。→ **Cm**
 - **ドミナント7スイッチ＝3弦。** オクターブルート（3弦5フレット、C）を2フレット下げてb7（3フレット、B♭）。→ **C7**
 
+```json
+{
+  "id": "m1.w2.d2.cm_aform",
+  "type": "fretboard_diagram",
+  "meta": { "title": "Cm — 5th-string root (A-form)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "Cm" },
+  "fretboard": {
+    "startFret": 3,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 6, "fret": 0, "muted": true },
+      { "string": 5, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 5, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 3, "fret": 5, "finger": 4, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 2, "fret": 4, "finger": 2, "label": "b3", "role": "target", "highlight": true },
+      { "string": 1, "fret": 0, "muted": true }
+    ]
+  }
+}
+```
+
+```json
+{
+  "id": "m1.w2.d2.c7_aform",
+  "type": "fretboard_diagram",
+  "meta": { "title": "C7 — 5th-string root (A-form)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "C" },
+  "fretboard": {
+    "startFret": 3,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 6, "fret": 0, "muted": true },
+      { "string": 5, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 5, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 3, "fret": 3, "finger": 1, "label": "b7", "role": "target", "highlight": true },
+      { "string": 2, "fret": 5, "finger": 4, "label": "3", "role": "chord_tone" },
+      { "string": 1, "fret": 0, "muted": true }
+    ]
+  }
+}
+```
+
 6弦フォームでは3度が3弦、7度が4弦でした。5弦フォーム（Aフォーム）では**3度が2弦、7度が3弦**へ引っ越しただけ。ルートが変わればスイッチの住所も変わる — これを手で確認するのが今日のすべてです。原理（3度を下げればマイナー、b7を足せば7）は先週と100％同じなので、新しい場所に慣れるだけ。一度手に付けば、6弦でも5弦でも自在です。
 
 ## ② ビジュアル

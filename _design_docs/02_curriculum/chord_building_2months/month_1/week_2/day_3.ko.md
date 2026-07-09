@@ -17,6 +17,26 @@ i18nKey: "lesson.m1.w2.d3"
 - **3번 줄 4프렛 = 7**(장7도) → **Maj7**
 - **3번 줄 3프렛 = b7**(단7도) → **도미넌트 7**
 
+```json
+{
+  "id": "m1.w2.d3.cmaj7_aform",
+  "type": "fretboard_diagram",
+  "meta": { "title": "Cmaj7 — 5th-string root (A-form)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "C" },
+  "fretboard": {
+    "startFret": 3,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 6, "fret": 0, "muted": true },
+      { "string": 5, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 5, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 3, "fret": 4, "finger": 2, "label": "7", "role": "target", "highlight": true },
+      { "string": 2, "fret": 5, "finger": 4, "label": "3", "role": "chord_tone" },
+      { "string": 1, "fret": 0, "muted": true }
+    ]
+  }
+}
+```
+
 즉 **b7(3프렛)과 Maj7의 7(4프렛)은 딱 한 프렛, 반음 차이**예요. 그런데 이 반 칸이 완전히 다른 감정을 만들어요. b7(도미넌트)은 "빨리 해결되고 싶어" 하는 안달난 긴장이고, Maj7의 7은 "떠 있는, 몽환적이고 세련된" 미완이에요. 시티팝의 아련함, 재즈 발라드의 그 아른한 색 — 전부 이 Maj7 하나에서 나와요. 반음 차이가 처음엔 미묘하게 들려도 괜찮아요. 오늘은 이 둘을 3번 줄에서 나란히 짚어 보며, 그 반음이 만드는 감정 차이를 귀로 확실히 구분해 둡니다.
 
 ## ② 시각 자료

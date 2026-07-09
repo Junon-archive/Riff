@@ -14,6 +14,38 @@ Yesterday you saw that in the D-shape **the 3rd is the top note (1st string).** 
 - **G major** — the top note is the 3rd (B) on the 1st string, fret 7.
 - **G minor** — the top note is the b3 (B♭) on the 1st string, fret 6.
 
+```json
+{
+  "id": "m2.w5.d2.g_major_dform",
+  "type": "fretboard_diagram",
+  "meta": { "title": "G major — 4th-string root (D-shape)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "G" },
+  "fretboard": { "startFret": 5, "fretSpan": 5, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 0, "muted": true },
+    { "string": 4, "fret": 5, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 3, "fret": 7, "finger": 2, "label": "5", "role": "chord_tone" },
+    { "string": 2, "fret": 8, "finger": 4, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 1, "fret": 7, "finger": 3, "label": "3", "role": "target", "highlight": true }
+  ]}
+}
+```
+
+```json
+{
+  "id": "m2.w5.d2.gm_dform",
+  "type": "fretboard_diagram",
+  "meta": { "title": "Gm — 4th-string root (D-shape)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "Gm" },
+  "fretboard": { "startFret": 5, "fretSpan": 5, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 0, "muted": true },
+    { "string": 4, "fret": 5, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 3, "fret": 7, "finger": 3, "label": "5", "role": "chord_tone" },
+    { "string": 2, "fret": 8, "finger": 4, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 1, "fret": 6, "finger": 2, "label": "b3", "role": "target", "highlight": true }
+  ]}
+}
+```
+
 So moving one 1st-string finger between **frets 7 ↔ 6** switches bright↔dark. Up high, this change is especially vivid — whether the top note is a bright 3rd or a dark b3 *is* the chord's expression. R·5 stay put; only the single topmost note moves. With one finger you turn a song's expression bright or dark. That 3rd switch you learned last month now sings up top, so it reads far more dramatically. It's not hard — you're only moving one fret. Just take one thing away today: "want it bright, play the 3rd; want it dark, play the b3."
 
 ## ② Visuals

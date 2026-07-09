@@ -14,6 +14,46 @@ i18nKey: "lesson.m1.w2.d2"
 - **마이너 스위치 = 2번 줄.** 3도(2번 줄 5프렛, E)를 반음 내려 b3(4프렛, E♭). → **Cm**
 - **도미넌트7 스위치 = 3번 줄.** 옥타브 근음(3번 줄 5프렛, C)을 두 칸 내려 b7(3프렛, B♭). → **C7**
 
+```json
+{
+  "id": "m1.w2.d2.cm_aform",
+  "type": "fretboard_diagram",
+  "meta": { "title": "Cm — 5th-string root (A-form)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "Cm" },
+  "fretboard": {
+    "startFret": 3,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 6, "fret": 0, "muted": true },
+      { "string": 5, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 5, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 3, "fret": 5, "finger": 4, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 2, "fret": 4, "finger": 2, "label": "b3", "role": "target", "highlight": true },
+      { "string": 1, "fret": 0, "muted": true }
+    ]
+  }
+}
+```
+
+```json
+{
+  "id": "m1.w2.d2.c7_aform",
+  "type": "fretboard_diagram",
+  "meta": { "title": "C7 — 5th-string root (A-form)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "C" },
+  "fretboard": {
+    "startFret": 3,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 6, "fret": 0, "muted": true },
+      { "string": 5, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 5, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 3, "fret": 3, "finger": 1, "label": "b7", "role": "target", "highlight": true },
+      { "string": 2, "fret": 5, "finger": 4, "label": "3", "role": "chord_tone" },
+      { "string": 1, "fret": 0, "muted": true }
+    ]
+  }
+}
+```
+
 6현 폼에서는 3도가 3번 줄, 7도가 4번 줄이었죠. 5현 폼(A 폼)에서는 **3도가 2번 줄, 7도가 3번 줄**로 이사한 것뿐이에요. 근음이 바뀌면 스위치의 집 주소도 바뀐다 — 이걸 손으로 확인하는 게 오늘의 전부예요. 원리(3도 내리면 마이너, b7 더하면 7)는 지난주와 100% 똑같으니, 새 자리에만 익숙해지면 돼요. 한 번 손에 붙으면 6현이든 5현이든 자유자재예요.
 
 ## ② 시각 자료

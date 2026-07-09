@@ -16,6 +16,38 @@ Lay this one note onto a chord you already hold and the color turns bright. Toda
 - **The Maj7 skeleton** = R (C) · 3 (E) · 7 (B). (These are the chord tones from last month.)
 - **Add the 9th (D)** = **Maj9.** One D sprinkled bright over R·3·7.
 
+```json
+{
+  "id": "m2.w6.d1.cmaj7_shell",
+  "type": "fretboard_diagram",
+  "meta": { "title": "Cmaj7 skeleton (R·3·7)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "C" },
+  "fretboard": { "startFret": 1, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 3, "finger": 2, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 4, "fret": 2, "finger": 1, "label": "3", "role": "chord_tone" },
+    { "string": 3, "fret": 4, "finger": 4, "label": "7", "role": "chord_tone" },
+    { "string": 2, "fret": 0, "muted": true },
+    { "string": 1, "fret": 0, "muted": true }
+  ]}
+}
+```
+
+```json
+{
+  "id": "m2.w6.d1.cmaj9",
+  "type": "fretboard_diagram",
+  "meta": { "title": "Cmaj9 — 5th-string root (add 9)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "C" },
+  "fretboard": { "startFret": 1, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 3, "finger": 2, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 4, "fret": 2, "finger": 1, "label": "3", "role": "chord_tone" },
+    { "string": 3, "fret": 4, "finger": 4, "label": "7", "role": "chord_tone" },
+    { "string": 2, "fret": 3, "finger": 3, "label": "9", "role": "color" },
+    { "string": 1, "fret": 0, "muted": true }
+  ]}
+}
+```
+
 The key: if R·3·7 are the chord's **skeleton (blue),** the 9th is the **color (yellow)** sprinkled on top. Leave the skeleton and just add color. That sophisticated ring of city-pop, jazz, and R&B comes precisely from this 9th. Don't be scared off — you're not memorizing a whole new chord. You add just one finger onto a chord you already hold. It's only sprinkling one sparkle over a chord you know, so today it's enough to feel with your hands that "the 9th isn't hard."
 
 ## ② Visuals

@@ -15,6 +15,31 @@ i18nKey: "lesson.m1.w1.d3"
 
 지판에서는 어제 G 메이저의 **4번 줄 5프렛(R=G)** 을 **3프렛(b7=F)** 으로 내리면 G7이 돼요. 3도(3번 줄 4프렛, B)는 그대로 두고, 4번 줄만 두 칸 아래로. 자, 이제 이번 주의 그림이 딱 정리됩니다 — **3번 줄 = 3도(밝음/어둠) 스위치, 4번 줄 = 7도(긴장) 스위치.** 딱 두 줄, 두 스위치예요. 내일이면 이 둘을 합쳐 네 가지 코드를 자유자재로 만들 거예요. 오늘은 4번 줄 스위치 하나만 확실히 손에 익혀요.
 
+```json
+{
+  "id": "m1.w1.d3.g7_eform",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "G7 — 6th-string root (E-form dominant)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "G"
+  },
+  "fretboard": {
+    "startFret": 3,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 6, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 5, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 4, "fret": 3, "finger": 1, "label": "b7", "role": "target", "highlight": true },
+      { "string": 3, "fret": 4, "finger": 2, "label": "3", "role": "chord_tone" },
+      { "string": 2, "fret": 3, "finger": 1, "label": "5", "role": "chord_tone" },
+      { "string": 1, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" }
+    ]
+  }
+}
+```
+
 ## ② 시각 자료
 
 G 메이저에서 4번 줄만 5→3프렛으로 내린 **G7(E 폼)**. 초록이 오늘 새로 들어온 **b7(F)**, 긴장의 정체예요.

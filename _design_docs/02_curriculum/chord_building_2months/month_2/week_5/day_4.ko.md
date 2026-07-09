@@ -13,6 +13,38 @@ i18nKey: "lesson.m2.w5.d4"
 
 가장 간단한 예: **G → A** 바이브. 같은 D 폼을 **두 프렛 위로** 밀면 G(5프렛 근음)가 A(7프렛 근음)가 돼요. 손 모양은 그대로, 통째로 위로. 두 코드 다 탑노트가 3도(밝은 음)라, 왔다 갔다 하면 청량하고 팝적인 느낌이 나요. 손 모양 하나로 팝송 인트로 같은 분위기가 툭 나오면, 슬슬 "반주가 음악이 되는" 순간이 오는 거예요. 지난주 쉘이 밴드 속에서 깔끔했다면, 이번 D 폼은 혼자 쳐도 반짝이는 소리라 무대가 달라요.
 
+```json
+{
+  "id": "m2.w5.d4.g_dform",
+  "type": "fretboard_diagram",
+  "meta": { "title": "G major — 4th-string root (D-shape)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "G" },
+  "fretboard": { "startFret": 5, "fretSpan": 5, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 0, "muted": true },
+    { "string": 4, "fret": 5, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 3, "fret": 7, "finger": 2, "label": "5", "role": "chord_tone" },
+    { "string": 2, "fret": 8, "finger": 4, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 1, "fret": 7, "finger": 3, "label": "3", "role": "target", "highlight": true }
+  ]}
+}
+```
+
+```json
+{
+  "id": "m2.w5.d4.a_dform",
+  "type": "fretboard_diagram",
+  "meta": { "title": "A major — 4th-string root (D-shape)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "A" },
+  "fretboard": { "startFret": 6, "fretSpan": 5, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 0, "muted": true },
+    { "string": 4, "fret": 7, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 3, "fret": 9, "finger": 2, "label": "5", "role": "chord_tone" },
+    { "string": 2, "fret": 10, "finger": 4, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 1, "fret": 9, "finger": 3, "label": "3", "role": "target", "highlight": true }
+  ]}
+}
+```
+
 한 주 정리: 근음이 4번 줄로 올라가 고음역이 열렸고, R·3·5의 새 배치와 **탑노트**라는 개념을 얻었어요. 다음 주(6주차)엔 이 고음역 위에 **9도 텐션**을 얹어 색을 화사하게 만듭니다.
 
 ## ② 시각 자료

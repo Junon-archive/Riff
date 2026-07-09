@@ -17,6 +17,26 @@ It's all on the **3rd string** — this string is the 7th's "three-way":
 - **3rd string, fret 4 = 7** (major 7th) → **Maj7**
 - **3rd string, fret 3 = b7** (minor 7th) → **dominant 7**
 
+```json
+{
+  "id": "m1.w2.d3.cmaj7_aform",
+  "type": "fretboard_diagram",
+  "meta": { "title": "Cmaj7 — 5th-string root (A-form)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "C" },
+  "fretboard": {
+    "startFret": 3,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 6, "fret": 0, "muted": true },
+      { "string": 5, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 5, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 3, "fret": 4, "finger": 2, "label": "7", "role": "target", "highlight": true },
+      { "string": 2, "fret": 5, "finger": 4, "label": "3", "role": "chord_tone" },
+      { "string": 1, "fret": 0, "muted": true }
+    ]
+  }
+}
+```
+
 So **the b7 (fret 3) and the Maj7's 7 (fret 4) are exactly one fret — a half step — apart.** Yet that half step makes completely different emotions. The b7 (dominant) is an antsy tension that "wants to resolve fast"; the Maj7's 7 is a "floating, dreamy, sophisticated" unfinished. City-pop's wistfulness, that hazy color of a jazz ballad — it all comes from this one Maj7. If the half-step difference sounds subtle at first, that's fine. Today you place the two side by side on the 3rd string and lock in, by ear, the emotional difference that one half step makes.
 
 ## ② Visuals
