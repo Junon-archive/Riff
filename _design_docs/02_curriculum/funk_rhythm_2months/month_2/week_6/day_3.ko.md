@@ -13,6 +13,34 @@ i18nKey: "lesson.m2.w6.d3"
 
 원리는 지난달 그대로예요. 라인의 실제음('따')은 왼손을 눌러 또렷이 울리고, 음과 음 사이의 빈 16비트 자리는 왼손 힘을 뺀 고스트('퍽')로 채워요. 그러면 듬성듬성하던 라인이 '따-퍽-퍽-따-퍽'처럼 쉴 틈 없이 굴러가는 그루브가 돼요. 오른손 모터는 처음부터 끝까지 안 멈추고, 왼손이 '누를지 뺄지'만 오가는 거죠.
 
+```json
+{
+  "id": "m2.w6.d3.ghost_1bar",
+  "type": "tab",
+  "meta": { "title": "Single note + ghost fill (1 bar)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E", "tempoBpm": 74, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 5, "fret": 7, "duration": "sixteenth", "role": "root", "isRoot": true, "label": "R" },
+      { "string": 5, "fret": 7, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 7, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 7, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 7, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 7, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 4, "fret": 7, "duration": "sixteenth", "role": "scale", "label": "4" },
+      { "string": 5, "fret": 7, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 7, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 7, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 7, "duration": "sixteenth", "role": "root", "isRoot": true, "label": "R" },
+      { "string": 5, "fret": 7, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 7, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 10, "duration": "sixteenth", "role": "scale", "label": "b3" },
+      { "string": 5, "fret": 7, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 7, "duration": "sixteenth", "technique": "dead_note", "role": "scale" }
+    ]}
+  ]}
+}
+```
+
 이게 왜 강력하냐면, 라인의 음이 몇 개 안 되어도 그루브가 꽉 차게 들리거든요. 나일 로저스식 커팅이 코드로 그루브를 채웠다면, 오늘은 단음 라인 + 고스트로 똑같이 꽉 찬 느낌을 내는 거예요. 음은 적게, 그루브는 진하게.
 
 라인 음과 고스트를 번갈아 내는 게 처음엔 헷갈려요. 특히 실제음 자리에서만 정확히 왼손을 누르고 곧바로 빼는 타이밍이 어렵죠. 당연해요. 오늘은 라인이 단순해도 좋으니, '음은 또렷, 사이는 퍽'이라는 대비만 살리세요. 이 대비가 살면 단 몇 개의 음으로도 방을 그루브로 채울 수 있어요. 이게 펑크의 마법이에요 — 많이 치는 게 아니라, 적게 치되 사이를 그루브로 메우는 것. 오늘 이 감각을 잡으면 '음을 아끼는 즐거움'을 처음 알게 돼요.

@@ -16,6 +16,54 @@ i18nKey: "lesson.m1.w4.d3"
 
 まとめると3つの性格は：
 
+```json
+{
+  "id": "m1.w4.d3.cmaj7_shell",
+  "type": "fretboard_diagram",
+  "meta": { "title": "Cmaj7 shell — 5th-string root", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "C" },
+  "fretboard": { "startFret": 3, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 4, "fret": 0, "muted": true },
+    { "string": 3, "fret": 4, "finger": 2, "label": "7", "role": "target", "highlight": true },
+    { "string": 2, "fret": 5, "finger": 3, "label": "3", "role": "target", "highlight": true },
+    { "string": 1, "fret": 0, "muted": true }
+  ]}
+}
+```
+
+```json
+{
+  "id": "m1.w4.d3.c7_shell",
+  "type": "fretboard_diagram",
+  "meta": { "title": "C7 shell — 5th-string root", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "C" },
+  "fretboard": { "startFret": 3, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 4, "fret": 0, "muted": true },
+    { "string": 3, "fret": 3, "finger": 1, "label": "b7", "role": "target", "highlight": true },
+    { "string": 2, "fret": 5, "finger": 3, "label": "3", "role": "target", "highlight": true },
+    { "string": 1, "fret": 0, "muted": true }
+  ]}
+}
+```
+
+```json
+{
+  "id": "m1.w4.d3.cm7_shell",
+  "type": "fretboard_diagram",
+  "meta": { "title": "Cm7 shell — 5th-string root", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "Cm" },
+  "fretboard": { "startFret": 3, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 4, "fret": 0, "muted": true },
+    { "string": 3, "fret": 3, "finger": 1, "label": "b7", "role": "target", "highlight": true },
+    { "string": 2, "fret": 4, "finger": 2, "label": "b3", "role": "target", "highlight": true },
+    { "string": 1, "fret": 0, "muted": true }
+  ]}
+}
+```
+
 - **Cmaj7シェル** ＝ 3弦4（7）· 2弦5（3）
 - **C7シェル** ＝ 3弦3（b7）· 2弦5（3）
 - **Cm7シェル** ＝ 3弦3（b7）· 2弦4（b3）

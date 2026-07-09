@@ -15,6 +15,34 @@ i18nKey: "lesson.m1.w1.d1"
 
 いちばん大事な感覚はこれ。**右手はミシンや振り子のように、絶対に止まりません。** 実際に弦を弾こうが弾くまいが、前腕ではなく手首が休まず上下に揺れ続けます。この揺れこそがグルーヴのエンジンです。
 
+```json
+{
+  "id": "m1.w1.d1.motor_1bar",
+  "type": "tab",
+  "meta": { "title": "16th-note muted motor (1 bar)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E", "tempoBpm": 65, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 5, "fret": 5, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "technique": "dead_note", "role": "scale" }
+    ]}
+  ]}
+}
+```
+
 最初は手がぎこちなく、拍がにじむのが当たり前 — それが正常です。今日はきれいな音を出すのが目的ではなく、左手を弦の上にそっと乗せて音程を殺したまま、「チキチキ」の揺れだけを体に刻みます。このモーター1つが定着すれば、これから習うどんなファンク・リズムも、この揺れの上に乗せるだけで済むんです。今日一日、音を一つも出さず手を揺らすだけで終わっても成功です。その「止まらない手」こそが、これからの2か月を支えてくれる本当の力なんですから。
 
 ## ② ビジュアル資料

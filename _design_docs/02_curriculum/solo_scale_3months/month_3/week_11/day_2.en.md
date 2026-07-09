@@ -118,6 +118,33 @@ At the funk tempo of 100, roll through A Dorian as a **16th-note 4-note sequence
 **10–20 min · Brain training — mapping the Am7↔D9 3rd switch**
 Keep the metronome at 100. On the target map, alternate between just two notes: **Am7→C (3rd string, 5th fret) ↔ D9→F# (2nd string, 7th fret).** One hit per click, short and palm-muted. When you fret F#, say out loud "this is D9's 3rd and also Dorian's ♮6." Pass the test once you can switch between the two notes with your eyes closed.
 
+```json
+{
+  "id": "m3.w11.d2.funk_target_map",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "Funk target map Am7 -> D9 (A Dorian, b3 & major 3rd = Dorian nat6)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A Dorian (funk vamp)",
+    "scale": "A Dorian",
+    "tempoBpm": 100
+  },
+  "fretboard": {
+    "startFret": 5,
+    "fretSpan": 5,
+    "dots": [
+      { "string": 4, "fret": 7, "finger": 2, "label": "Am7 R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 5, "finger": 1, "label": "Am7-b3(C)", "highlight": true, "role": "target" },
+      { "string": 2, "fret": 5, "finger": 1, "label": "Am7-5(E)", "role": "chord_tone" },
+      { "string": 3, "fret": 7, "finger": 3, "label": "D9 R", "isRoot": true, "role": "root" },
+      { "string": 2, "fret": 7, "finger": 3, "label": "D9-3(F#)", "highlight": true, "role": "target" },
+      { "string": 5, "fret": 9, "finger": 4, "label": "6(color=D9-3 F#)", "highlight": true, "role": "color" }
+    ]
+  }
+}
+```
+
 **20–40 min · Real-world improv (Am7–D9 funk vamp / 96–100 BPM) — tightness mission**
 Put on "funk backing track Am7 D9" or "A Dorian funk vamp." Two missions. ① Switch 3rds between C↔F# whenever the chord changes. ② **Keep every note short with palm-muted staccato, cutting the rests exactly on the beat in between.** It's the exact opposite of yesterday — dragging is a fail, **snapping out short and resting clean** is a win.
 

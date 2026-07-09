@@ -108,6 +108,35 @@ At the slow blues tempo of 63, run through A Mixolydian in **4-note groups** (A-
 **10–20 min · Brain training — mapping each chord's 3rd and blue note**
 Metronome off. On the target map, spot and fret just three notes: **A7→C# (3rd string, 6th fret), D7→F# (2nd string, 7th fret), E7→G# (4th string, 6th fret).** Then do 10 reps of sliding the blue note C (3rd string, 5th fret) up a half step into C#. Say "this chord, this note" out loud as you go — it doubles how fast it sticks.
 
+```json
+{
+  "id": "m3.w11.d1.blues_target_map",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "Blues target map A7 -> D7 -> E7 (A Mixolydian, 3rds + blue note)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A Mixolydian (blues I-IV-V)",
+    "scale": "A Mixolydian + b3 blue note",
+    "tempoBpm": 63
+  },
+  "fretboard": {
+    "startFret": 4,
+    "fretSpan": 5,
+    "dots": [
+      { "string": 6, "fret": 5, "finger": 1, "label": "A7 R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 7, "finger": 3, "label": "A7 R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 6, "finger": 3, "label": "A7-3(C#)", "highlight": true, "role": "target" },
+      { "string": 3, "fret": 5, "finger": 1, "label": "b3(C blue)", "highlight": true, "role": "blue_note" },
+      { "string": 5, "fret": 5, "finger": 1, "label": "D7 R", "isRoot": true, "role": "root" },
+      { "string": 2, "fret": 7, "finger": 3, "label": "D7-3(F#)", "highlight": true, "role": "target" },
+      { "string": 5, "fret": 7, "finger": 3, "label": "E7 R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 6, "finger": 2, "label": "E7-3(G#)", "highlight": true, "role": "target" }
+    ]
+  }
+}
+```
+
 **20–40 min · Real-world improv (A blues backing / 60–63 BPM) — layback mission**
 Put on any "slow blues in A backing track" you can find. Two missions only. ① Every time the chord shifts A7→D7→E7, land on its 3rd (C#→F#→G#). ② **Come in slightly behind the click on every landing note (layback), then let it ring with a long vibrato.** Don't try to play a lot of notes. Always leave a full beat of rest after each phrase.
 

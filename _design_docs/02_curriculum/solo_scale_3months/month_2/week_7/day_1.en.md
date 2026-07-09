@@ -109,6 +109,44 @@ With the metronome at 66, repeat the 1-3-5 arpeggio above in eighth notes, up th
 **10–20 min · Brain training (today's target = C / ♭3)**
 Turn off the metronome and find just the **C (♭3)** spots on the map. At least three: string 5 fret 3, string 3 fret 5, string 1 fret 8. Call out "C!" out loud every time you fret one. Once you're comfortable, close your eyes and go random: "C, next C, next C" — you pass if your hand reaches a different C position within 3 seconds. If you've got extra time, do the same with the three E (5th) spots.
 
+```json
+{
+  "id": "m2.w7.d1.am_chord_tone_map",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "Am chord tones (A-C-E) across the neck, 3rd (C) highlighted",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "tempoBpm": 66
+  },
+  "fretboard": {
+    "startFret": 0,
+    "fretSpan": 12,
+    "dots": [
+      { "string": 6, "fret": 0, "label": "5", "role": "chord_tone" },
+      { "string": 6, "fret": 5, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 6, "fret": 8, "label": "b3", "role": "target", "highlight": true },
+      { "string": 5, "fret": 0, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 3, "label": "b3", "role": "target", "highlight": true },
+      { "string": 5, "fret": 7, "label": "5", "role": "chord_tone" },
+      { "string": 4, "fret": 2, "label": "5", "role": "chord_tone" },
+      { "string": 4, "fret": 7, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 10, "label": "b3", "role": "target", "highlight": true },
+      { "string": 3, "fret": 2, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 5, "label": "b3", "role": "target", "highlight": true },
+      { "string": 3, "fret": 9, "label": "5", "role": "chord_tone" },
+      { "string": 2, "fret": 1, "label": "b3", "role": "target", "highlight": true },
+      { "string": 2, "fret": 5, "label": "5", "role": "chord_tone" },
+      { "string": 2, "fret": 10, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 1, "fret": 0, "label": "5", "role": "chord_tone" },
+      { "string": 1, "fret": 5, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 1, "fret": 8, "label": "b3", "role": "target", "highlight": true }
+    ]
+  }
+}
+```
+
 **20–40 min · Real-world feel — Am one-chord backing (BPM 66–70)**
 Put on any "Am backing track slow" you find. Just one rule: **use only the three notes A·C·E.** Passing tones (the pentatonic's D and G) are off-limits today. Instead of just noodling around with three notes, whenever you feel like stopping, **land on C** — and try picking a different position each time.
 

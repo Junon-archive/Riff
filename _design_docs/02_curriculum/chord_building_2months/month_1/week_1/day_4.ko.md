@@ -18,6 +18,31 @@ i18nKey: "lesson.m1.w1.d4"
 
 두 스위치를 표로 그려 보면 이렇게 딱 4칸이 나와요:
 
+```json
+{
+  "id": "m1.w1.d4.gm7_eform",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "Gm7 — 6th-string root (E-form)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "Gm"
+  },
+  "fretboard": {
+    "startFret": 3,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 6, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 5, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 4, "fret": 3, "finger": 1, "label": "b7", "role": "target", "highlight": true },
+      { "string": 3, "fret": 3, "finger": 1, "label": "b3", "role": "target", "highlight": true },
+      { "string": 2, "fret": 3, "finger": 1, "label": "5", "role": "chord_tone" },
+      { "string": 1, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" }
+    ]
+  }
+}
+```
+
 - **Maj** = 3도 그대로 · 7도 그대로 (3번 줄 4, 4번 줄 5)
 - **m** = 3도 내림 · 7도 그대로 (3번 줄 3, 4번 줄 5)
 - **7** = 3도 그대로 · 7도 내림 (3번 줄 4, 4번 줄 3)

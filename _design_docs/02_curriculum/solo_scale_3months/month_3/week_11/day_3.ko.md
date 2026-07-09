@@ -104,6 +104,34 @@ i18nKey: "lesson.m3.w11.d3"
 **10~20분 · 두뇌 훈련 — A5/G5/D5 3도 매핑**
 메트로놈 끄고, 타겟 지도에서 **A5→C#(3번 6프렛), G5→B(3번 4프렛), D5→F#(2번 7프렛)** 세 음을 눈으로 찍고 손으로 짚어요. ♭7(G, 2번 8프렛)도 한 번씩 눌러 색을 확인. "이 코드엔 이 음"을 소리 내 부르며.
 
+```json
+{
+  "id": "m3.w11.d3.rock_target_map",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "Rock target map A5 -> G5 -> D5 (A Mixolydian, 3rds + b7 color)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A Mixolydian (rock I-bVII-IV)",
+    "scale": "A Mixolydian",
+    "tempoBpm": 120
+  },
+  "fretboard": {
+    "startFret": 4,
+    "fretSpan": 7,
+    "dots": [
+      { "string": 6, "fret": 5, "finger": 1, "label": "A5 R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 6, "finger": 3, "label": "A5-3(C#)", "highlight": true, "role": "target" },
+      { "string": 3, "fret": 4, "finger": 1, "label": "G5-3(B) / bend to C#", "highlight": true, "role": "target" },
+      { "string": 5, "fret": 10, "finger": 4, "label": "G5 R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 5, "finger": 1, "label": "D5 R", "isRoot": true, "role": "root" },
+      { "string": 2, "fret": 7, "finger": 3, "label": "D5-3(F#)", "highlight": true, "role": "target" },
+      { "string": 2, "fret": 8, "finger": 4, "label": "b7(G color)", "highlight": true, "role": "color" }
+    ]
+  }
+}
+```
+
 **20~40분 · 실전 즉흥 (A5–G5–D5 락 백킹 / 116~120 BPM) — 롱톤·벤딩 미션**
 "rock backing track A5 G5 D5" 또는 "A Mixolydian rock jam" 하나 틀어요. 미션 둘. ① 코드 바뀔 때 C#→B→F#로 3도 스위칭. ② **음을 많이 치지 말고, 한 음을 과감히 벤딩해 롱톤으로 길게 우려내기.** 큰 벤딩 전엔 한 박 통째로 비워 드라마를 만드세요.
 

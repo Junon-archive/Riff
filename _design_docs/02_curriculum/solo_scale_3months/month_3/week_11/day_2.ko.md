@@ -117,6 +117,33 @@ i18nKey: "lesson.m3.w11.d2"
 **10~20분 · 두뇌 훈련 — Am7↔D9 3도 스위칭 매핑**
 메트로놈 100 유지. 타겟 지도에서 **Am7→C(3번 5프렛) ↔ D9→F#(2번 7프렛)** 딱 두 음만 번갈아 짚으세요. 클릭 한 번에 한 번씩, 팜뮤트로 짧게. F#를 짚을 땐 "이건 D9 3도이자 도리안 ♮6"이라고 소리 내 부르며. 눈 감고 두 음을 오갈 수 있으면 통과.
 
+```json
+{
+  "id": "m3.w11.d2.funk_target_map",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "Funk target map Am7 -> D9 (A Dorian, b3 & major 3rd = Dorian nat6)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A Dorian (funk vamp)",
+    "scale": "A Dorian",
+    "tempoBpm": 100
+  },
+  "fretboard": {
+    "startFret": 5,
+    "fretSpan": 5,
+    "dots": [
+      { "string": 4, "fret": 7, "finger": 2, "label": "Am7 R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 5, "finger": 1, "label": "Am7-b3(C)", "highlight": true, "role": "target" },
+      { "string": 2, "fret": 5, "finger": 1, "label": "Am7-5(E)", "role": "chord_tone" },
+      { "string": 3, "fret": 7, "finger": 3, "label": "D9 R", "isRoot": true, "role": "root" },
+      { "string": 2, "fret": 7, "finger": 3, "label": "D9-3(F#)", "highlight": true, "role": "target" },
+      { "string": 5, "fret": 9, "finger": 4, "label": "6(color=D9-3 F#)", "highlight": true, "role": "color" }
+    ]
+  }
+}
+```
+
 **20~40분 · 실전 즉흥 (Am7–D9 펑크 뱀프 / 96~100 BPM) — 타이트 미션**
 "funk backing track Am7 D9" 또는 "A Dorian funk vamp" 하나 틀어요. 미션 둘. ① 코드 바뀔 때 C↔F#로 3도 스위칭. ② **모든 음을 팜뮤트 스타카토로 짧게, 사이사이 쉼표를 정확한 박자에 자르기.** 어제와 정반대예요 — 늘어뜨리면 실패, **짧게 툭 던지고 칼같이 쉬면** 성공.
 

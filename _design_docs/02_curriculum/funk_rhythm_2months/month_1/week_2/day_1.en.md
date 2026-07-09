@@ -15,6 +15,34 @@ A ghost note is played with the left hand fully relaxed, fingers merely resting 
 
 Funk's groove comes precisely from this **contrast between real notes and ghosts.** A clear "ta" (left hand pressed, ringing) against a dead "chick" (relaxed, choked). Alternate them — "ta-chick-chick-ta" — and a flat run of 16ths suddenly starts to grind like a drum. The right-hand motor is exactly Week 1's. The only thing that changes is one thing: **left-hand pressure** — press (ta), release (chick).
 
+```json
+{
+  "id": "m1.w2.d1.contrast_1bar",
+  "type": "tab",
+  "meta": { "title": "Real vs ghost — contrast (1 bar)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E", "tempoBpm": 64, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 2, "fret": 9, "duration": "sixteenth", "role": "chord_tone", "label": "3" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "role": "chord_tone", "label": "3" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "role": "chord_tone", "label": "3" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "role": "chord_tone", "label": "3" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" }
+    ]}
+  ]}
+}
+```
+
 At first the ghost will ring too loud, or make no sound at all — that's normal. The feel of releasing "just enough to choke it" takes a few days. Don't rush. Today, just telling "ta" from "chick" clearly by ear, from the same hand position, is enough. The moment this ta/chick contrast settles into your hand, your strumming stops being a flat chord and starts turning into a percussion instrument that plays rhythm. Today you only need to fasten that first button.
 
 ## ② Visuals

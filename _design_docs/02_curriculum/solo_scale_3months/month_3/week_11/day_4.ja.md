@@ -117,6 +117,33 @@ lang: ja
 **10〜20分・頭のトレーニング — スイッチング判断表の暗唱マッピング**
 メトロノームを止めて、「ブルースならミクソリディアン・C#、ファンクならドリアン・C↔F#、ロックならミクソリディアン・C#↔B」と**声に出して唱えながら**該当する音を押さえます。ジャンル名を呼ばれて0.5秒以内にその3度へ手が動けば合格です。これが実戦スイッチングの反射神経になります。
 
+```json
+{
+  "id": "m3.w11.d4.medley_switch_map",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "Genre switching map (blues A7 / funk Am7-D9 / rock A5-G5) - 3rds on one string",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A (blues Mixolydian / funk Dorian / rock Mixolydian)",
+    "scale": "Genre switching map",
+    "tempoBpm": 92
+  },
+  "fretboard": {
+    "startFret": 4,
+    "fretSpan": 5,
+    "dots": [
+      { "string": 4, "fret": 7, "finger": 3, "label": "A R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 5, "finger": 1, "label": "D R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 6, "finger": 3, "label": "Blues/Rock A-3(C#)", "highlight": true, "role": "target" },
+      { "string": 3, "fret": 5, "finger": 2, "label": "Funk Am7-b3(C)", "highlight": true, "role": "target" },
+      { "string": 3, "fret": 4, "finger": 1, "label": "Rock G5-3(B)", "highlight": true, "role": "target" },
+      { "string": 2, "fret": 7, "finger": 4, "label": "Funk D9-3(F#)", "highlight": true, "role": "target" }
+    ]
+  }
+}
+```
+
 **20〜40分・実戦即興（ブルース→ファンク→ロックメドレーバッキング／88〜92 BPM）— ムード転換ミッション**
 ジャンルが変わるバッキングを2つつなげて流すか（ブルースジャム→ファンクジャム→ロックジャム）、メドレートラックを一つ流します。ミッションは三つ。①区間ごとにモードを乗り換える。②その区間の3度に着地する。③**継ぎ目でフレージングのムード（休符の性格・ダイナミクス・奏法）を丸ごと変える。**転換後の最初の一節では、前のジャンルのモチーフを新しいジャンルの語法で返して滑らかにつなぎましょう。
 

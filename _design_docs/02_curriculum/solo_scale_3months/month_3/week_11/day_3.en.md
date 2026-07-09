@@ -105,6 +105,34 @@ At the rock tempo of 120, run through A Mixolydian in a 4-note sequence once, th
 **10–20 min · Brain training — mapping the A5/G5/D5 3rds**
 Metronome off. On the target map, spot and fret **A5→C# (3rd string, 6th fret), G5→B (3rd string, 4th fret), D5→F# (2nd string, 7th fret).** Play ♭7 (G, 2nd string, 8th fret) once too, to hear the color. Say "this chord, this note" out loud as you go.
 
+```json
+{
+  "id": "m3.w11.d3.rock_target_map",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "Rock target map A5 -> G5 -> D5 (A Mixolydian, 3rds + b7 color)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A Mixolydian (rock I-bVII-IV)",
+    "scale": "A Mixolydian",
+    "tempoBpm": 120
+  },
+  "fretboard": {
+    "startFret": 4,
+    "fretSpan": 7,
+    "dots": [
+      { "string": 6, "fret": 5, "finger": 1, "label": "A5 R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 6, "finger": 3, "label": "A5-3(C#)", "highlight": true, "role": "target" },
+      { "string": 3, "fret": 4, "finger": 1, "label": "G5-3(B) / bend to C#", "highlight": true, "role": "target" },
+      { "string": 5, "fret": 10, "finger": 4, "label": "G5 R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 5, "finger": 1, "label": "D5 R", "isRoot": true, "role": "root" },
+      { "string": 2, "fret": 7, "finger": 3, "label": "D5-3(F#)", "highlight": true, "role": "target" },
+      { "string": 2, "fret": 8, "finger": 4, "label": "b7(G color)", "highlight": true, "role": "color" }
+    ]
+  }
+}
+```
+
 **20–40 min · Real-world improv (A5–G5–D5 rock backing / 116–120 BPM) — long-tone & bend mission**
 Put on "rock backing track A5 G5 D5" or "A Mixolydian rock jam." Two missions. ① Switch 3rds C#→B→F# whenever the chord changes. ② **Don't play a lot of notes — boldly bend one note and milk it long as a sustained tone.** Before every big bend, leave a full beat empty to build the drama.
 

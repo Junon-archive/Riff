@@ -19,6 +19,54 @@ So:
 - **C9** = 3rd string 3 (b7) · 4th string 2 (3)
 - **Cm9** = 3rd string 3 (b7) · 4th string 1 (b3)
 
+```json
+{
+  "id": "m2.w6.d4.cmaj9",
+  "type": "fretboard_diagram",
+  "meta": { "title": "Cmaj9 — 5th-string root", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "C" },
+  "fretboard": { "startFret": 1, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 3, "finger": 2, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 4, "fret": 2, "finger": 1, "label": "3", "role": "chord_tone" },
+    { "string": 3, "fret": 4, "finger": 4, "label": "7", "role": "chord_tone" },
+    { "string": 2, "fret": 3, "finger": 3, "label": "9", "role": "color" },
+    { "string": 1, "fret": 0, "muted": true }
+  ]}
+}
+```
+
+```json
+{
+  "id": "m2.w6.d4.c9",
+  "type": "fretboard_diagram",
+  "meta": { "title": "C9 — 5th-string root", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "C" },
+  "fretboard": { "startFret": 1, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 3, "finger": 2, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 4, "fret": 2, "finger": 1, "label": "3", "role": "chord_tone" },
+    { "string": 3, "fret": 3, "finger": 3, "label": "b7", "role": "chord_tone" },
+    { "string": 2, "fret": 3, "finger": 4, "label": "9", "role": "color" },
+    { "string": 1, "fret": 0, "muted": true }
+  ]}
+}
+```
+
+```json
+{
+  "id": "m2.w6.d4.cm9",
+  "type": "fretboard_diagram",
+  "meta": { "title": "Cm9 — 5th-string root", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "Cm" },
+  "fretboard": { "startFret": 1, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 3, "finger": 3, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 4, "fret": 1, "finger": 1, "label": "b3", "role": "chord_tone" },
+    { "string": 3, "fret": 3, "finger": 2, "label": "b7", "role": "chord_tone" },
+    { "string": 2, "fret": 3, "finger": 4, "label": "9", "role": "color" },
+    { "string": 1, "fret": 0, "muted": true }
+  ]}
+}
+```
+
 The color (9th) stays on top; only the skeleton (3rd & 7th) switches with your fingers — the two switches from month 1 are alive in the 9-chords too. Add Week 5's top-note feel, and next week (7) you'll connect these upper notes into a **melody.** In a single week you've come to flip between maj9, 9, and m9 with a two-finger switch. Why city-pop comping always sounded so polished — that secret now sits in your hands.
 
 ## ② Visuals

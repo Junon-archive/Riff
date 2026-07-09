@@ -16,6 +16,54 @@ Yesterday you dieted G7 into a shell (R·b7·3). Today you build a **set** of 6t
 
 The combination of these two strings gives all three characters:
 
+```json
+{
+  "id": "m1.w4.d2.gmaj7_shell",
+  "type": "fretboard_diagram",
+  "meta": { "title": "Gmaj7 shell — 6th-string root", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "G" },
+  "fretboard": { "startFret": 3, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 5, "fret": 0, "muted": true },
+    { "string": 4, "fret": 4, "finger": 2, "label": "7", "role": "target", "highlight": true },
+    { "string": 3, "fret": 4, "finger": 3, "label": "3", "role": "target", "highlight": true },
+    { "string": 2, "fret": 0, "muted": true },
+    { "string": 1, "fret": 0, "muted": true }
+  ]}
+}
+```
+
+```json
+{
+  "id": "m1.w4.d2.g7_shell",
+  "type": "fretboard_diagram",
+  "meta": { "title": "G7 shell — 6th-string root", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "G" },
+  "fretboard": { "startFret": 3, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 5, "fret": 0, "muted": true },
+    { "string": 4, "fret": 3, "finger": 1, "label": "b7", "role": "target", "highlight": true },
+    { "string": 3, "fret": 4, "finger": 2, "label": "3", "role": "target", "highlight": true },
+    { "string": 2, "fret": 0, "muted": true },
+    { "string": 1, "fret": 0, "muted": true }
+  ]}
+}
+```
+
+```json
+{
+  "id": "m1.w4.d2.gm7_shell",
+  "type": "fretboard_diagram",
+  "meta": { "title": "Gm7 shell — 6th-string root", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "Gm" },
+  "fretboard": { "startFret": 3, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 5, "fret": 0, "muted": true },
+    { "string": 4, "fret": 3, "finger": 1, "label": "b7", "role": "target", "highlight": true },
+    { "string": 3, "fret": 3, "finger": 1, "label": "b3", "role": "target", "highlight": true },
+    { "string": 2, "fret": 0, "muted": true },
+    { "string": 1, "fret": 0, "muted": true }
+  ]}
+}
+```
+
 - **Gmaj7 shell** = 4th string 4 (7) · 3rd string 4 (3)
 - **G7 shell** = 4th string 3 (b7) · 3rd string 4 (3)
 - **Gm7 shell** = 4th string 3 (b7) · 3rd string 3 (b3)

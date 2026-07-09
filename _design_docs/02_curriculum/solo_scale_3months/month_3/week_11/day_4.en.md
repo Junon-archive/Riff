@@ -117,6 +117,33 @@ At the medium tempo of 92, shuttle across **3rd string, frets 4-5-6 (B, C, C#)**
 **10–20 min · Brain training — reciting the switching cheat sheet**
 Metronome off. Say out loud, "blues means Mixolydian, C#; funk means Dorian, C↔F#; rock means Mixolydian, C#↔B" while fretting the corresponding notes. You pass once, upon hearing a genre named, your hand reaches the right 3rd within half a second. This is the reflex you need for real-world switching.
 
+```json
+{
+  "id": "m3.w11.d4.medley_switch_map",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "Genre switching map (blues A7 / funk Am7-D9 / rock A5-G5) - 3rds on one string",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A (blues Mixolydian / funk Dorian / rock Mixolydian)",
+    "scale": "Genre switching map",
+    "tempoBpm": 92
+  },
+  "fretboard": {
+    "startFret": 4,
+    "fretSpan": 5,
+    "dots": [
+      { "string": 4, "fret": 7, "finger": 3, "label": "A R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 5, "finger": 1, "label": "D R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 6, "finger": 3, "label": "Blues/Rock A-3(C#)", "highlight": true, "role": "target" },
+      { "string": 3, "fret": 5, "finger": 2, "label": "Funk Am7-b3(C)", "highlight": true, "role": "target" },
+      { "string": 3, "fret": 4, "finger": 1, "label": "Rock G5-3(B)", "highlight": true, "role": "target" },
+      { "string": 2, "fret": 7, "finger": 4, "label": "Funk D9-3(F#)", "highlight": true, "role": "target" }
+    ]
+  }
+}
+```
+
 **20–40 min · Real-world improv (blues→funk→rock medley backing / 88–92 BPM) — mood-switch mission**
 Chain together backing tracks from different genres (blues jam → funk jam → rock jam), or put on one medley track. Three missions. ① Switch modes at each section. ② Land on that section's 3rd. ③ **Completely change the phrasing mood (character of rests, dynamics, technique) right at each seam.** In the first phrase after a transition, answer the previous genre's motif in the new genre's language to keep it smooth.
 

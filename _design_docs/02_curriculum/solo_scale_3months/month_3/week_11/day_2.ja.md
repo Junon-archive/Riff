@@ -118,6 +118,33 @@ lang: ja
 **10〜20分・頭のトレーニング — Am7↔D9 3度スイッチングのマッピング**
 メトロノーム100を維持。ターゲットマップから**Am7→C（3弦5フレット）↔D9→F#（2弦7フレット）**のたった2音だけを交互に押さえます。クリック1回につき1回、パームミュートで短く。F#を押さえるときは「これはD9の3度でありドリアンの♮6」と声に出しながら。目を閉じて2音を行き来できたら合格です。
 
+```json
+{
+  "id": "m3.w11.d2.funk_target_map",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "Funk target map Am7 -> D9 (A Dorian, b3 & major 3rd = Dorian nat6)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A Dorian (funk vamp)",
+    "scale": "A Dorian",
+    "tempoBpm": 100
+  },
+  "fretboard": {
+    "startFret": 5,
+    "fretSpan": 5,
+    "dots": [
+      { "string": 4, "fret": 7, "finger": 2, "label": "Am7 R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 5, "finger": 1, "label": "Am7-b3(C)", "highlight": true, "role": "target" },
+      { "string": 2, "fret": 5, "finger": 1, "label": "Am7-5(E)", "role": "chord_tone" },
+      { "string": 3, "fret": 7, "finger": 3, "label": "D9 R", "isRoot": true, "role": "root" },
+      { "string": 2, "fret": 7, "finger": 3, "label": "D9-3(F#)", "highlight": true, "role": "target" },
+      { "string": 5, "fret": 9, "finger": 4, "label": "6(color=D9-3 F#)", "highlight": true, "role": "color" }
+    ]
+  }
+}
+```
+
 **20〜40分・実戦即興（Am7–D9ファンクヴァンプ／96〜100 BPM）— タイト・ミッション**
 「funk backing track Am7 D9」または「A Dorian funk vamp」を一つ流します。ミッションは二つ。①コードが変わったらC↔F#で3度スイッチング。②**すべての音をパームミュート・スタッカートで短く、間を正確な拍で切ること。**昨日と正反対です — 伸ばしたら失敗、**短くパッと投げてスパッと休めば**成功です。
 

@@ -16,6 +16,22 @@ i18nKey: "lesson.m2.w6.d2"
 
 ポイントは9度が**同じ場所（2弦）**に来ること。昨日のMaj9の9度もD、今日のm9の9度もD — ルートがCなら9度は常にD。骨組み（3度・7度）だけマイナーに変わり、**色（9度）はそのまま上に**。公式が一度手に入れば、maj9でもm9でも9度をのせる動作は同じです。だから今日学ぶのは新しいコードではなく、昨日の動作をそのままマイナーへ移すだけ。手がすでに覚えている場所で、骨組みだけ暗くして色は上にそのままのせる感じです。昨日Maj9ができたなら、今日のm9も必ずできます。
 
+```json
+{
+  "id": "m2.w6.d2.cm9",
+  "type": "fretboard_diagram",
+  "meta": { "title": "Cm9 — 5th-string root (add 9)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "Cm" },
+  "fretboard": { "startFret": 1, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 3, "finger": 3, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 4, "fret": 1, "finger": 1, "label": "b3", "role": "chord_tone" },
+    { "string": 3, "fret": 3, "finger": 2, "label": "b7", "role": "chord_tone" },
+    { "string": 2, "fret": 3, "finger": 4, "label": "9", "role": "color" },
+    { "string": 1, "fret": 0, "muted": true }
+  ]}
+}
+```
+
 ## ② ビジュアル
 
 まず**Cm7の骨組み**（R·b3·b7）。青がマイナーの骨格。

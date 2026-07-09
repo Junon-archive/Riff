@@ -15,6 +15,34 @@ i18nKey: "lesson.m1.w2.d1"
 
 ファンクのグルーヴは、まさにこの**実音とゴーストの対比**から生まれます。左手をしっかり押さえて鳴る「タ」と、力を抜いて詰まる「チッ」。「タ・チッ・チッ・タ」のように交互に出すと、のっぺりした16ビートが急にドラムのようにうねりだします。右手のモーターはWeek 1のまま。変わるのはたった1つ、**左手の圧力** — 押さえる（タ）、抜く（チッ）を行き来するだけです。
 
+```json
+{
+  "id": "m1.w2.d1.contrast_1bar",
+  "type": "tab",
+  "meta": { "title": "Real vs ghost — contrast (1 bar)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E", "tempoBpm": 64, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 2, "fret": 9, "duration": "sixteenth", "role": "chord_tone", "label": "3" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "role": "chord_tone", "label": "3" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "role": "chord_tone", "label": "3" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "role": "chord_tone", "label": "3" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" }
+    ]}
+  ]}
+}
+```
+
 最初はゴーストが大きく鳴りすぎたり、逆にまったく鳴らなかったりが普通です。「ちょうど詰まるだけ」抜く感覚は数日かかります。焦らないで。今日は同じ位置で「タ」と「チッ」の音の違いを耳ではっきり聞き分ける、それだけで十分です。この「タ」と「チッ」の対比が手になじんだ瞬間、あなたのストロークはのっぺりしたコードではなく、リズムを奏でる打楽器へと変わりはじめます。今日はその最初のボタンをかけるだけでいい。
 
 ## ② ビジュアル資料

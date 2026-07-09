@@ -16,6 +16,22 @@ Yesterday you laid the 9th on Maj7 to make Maj9. Today you lay the same 9th (D) 
 
 The point: the 9th lands on the **same spot (2nd string).** Yesterday's Maj9 9th was D, today's m9 9th is D too — with the root at C, the 9th is always D. Only the skeleton (3rd & 7th) turns minor; the **color (9th) stays on top.** Once the formula is in your hand, the motion to add the 9th is identical for maj9 or m9. So today you're not learning a new chord — you're moving yesterday's motion straight over to minor. On a spot your hand already remembers, you just darken the skeleton and leave the color on top. If you got Maj9 yesterday, you'll get m9 today for sure.
 
+```json
+{
+  "id": "m2.w6.d2.cm9",
+  "type": "fretboard_diagram",
+  "meta": { "title": "Cm9 — 5th-string root (add 9)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "Cm" },
+  "fretboard": { "startFret": 1, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 3, "finger": 3, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 4, "fret": 1, "finger": 1, "label": "b3", "role": "chord_tone" },
+    { "string": 3, "fret": 3, "finger": 2, "label": "b7", "role": "chord_tone" },
+    { "string": 2, "fret": 3, "finger": 4, "label": "9", "role": "color" },
+    { "string": 1, "fret": 0, "muted": true }
+  ]}
+}
+```
+
 ## ② Visuals
 
 First, the **Cm7 skeleton** (R·b3·b7). Blue is the minor frame.

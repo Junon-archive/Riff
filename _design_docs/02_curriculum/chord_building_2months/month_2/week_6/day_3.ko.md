@@ -16,6 +16,22 @@ i18nKey: "lesson.m2.w6.d3"
 
 오늘의 포인트는 **9도가 맨 위(탑노트)에 온다**는 거예요. 기본 C7에선 맨 위가 b7이었는데, C9에선 그 위에 9도(D)가 얹혀 코드의 인상이 확 밝아져요. 텐션이 탑에 오면 특히 화사하게 들려요 — 이게 다음 주(7주차) 탑노트 리딩의 씨앗이에요. 지금 완벽하게 소화하지 못해도 괜찮아요. "9도를 맨 위에 얹으면 밝아진다"는 것만 귀로 확인해 두면, 다음 주에 이 음들을 멜로디로 이을 때 훨씬 수월해져요. 오늘은 maj9·m9·9 세 형제가 다 모인 날이라고 생각하세요.
 
+```json
+{
+  "id": "m2.w6.d3.c9",
+  "type": "fretboard_diagram",
+  "meta": { "title": "C9 — 5th-string root (add 9)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "C" },
+  "fretboard": { "startFret": 1, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 3, "finger": 2, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 4, "fret": 2, "finger": 1, "label": "3", "role": "chord_tone" },
+    { "string": 3, "fret": 3, "finger": 3, "label": "b7", "role": "chord_tone" },
+    { "string": 2, "fret": 3, "finger": 4, "label": "9", "role": "color" },
+    { "string": 1, "fret": 0, "muted": true }
+  ]}
+}
+```
+
 ## ② 시각 자료
 
 먼저 **C7 뼈대**(R·3·b7). 파랑 골격, 맨 위는 b7이에요.

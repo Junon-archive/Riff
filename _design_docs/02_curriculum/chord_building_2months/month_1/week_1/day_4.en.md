@@ -18,6 +18,31 @@ Today's new chord, **m7,** is simply both switches **lowered.** That is, minor (
 
 Draw the two switches as a table and you get exactly four cells:
 
+```json
+{
+  "id": "m1.w1.d4.gm7_eform",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "Gm7 — 6th-string root (E-form)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "Gm"
+  },
+  "fretboard": {
+    "startFret": 3,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 6, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 5, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 4, "fret": 3, "finger": 1, "label": "b7", "role": "target", "highlight": true },
+      { "string": 3, "fret": 3, "finger": 1, "label": "b3", "role": "target", "highlight": true },
+      { "string": 2, "fret": 3, "finger": 1, "label": "5", "role": "chord_tone" },
+      { "string": 1, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" }
+    ]
+  }
+}
+```
+
 - **Maj** = 3rd as-is · 7th as-is (3rd string 4, 4th string 5)
 - **m** = 3rd lowered · 7th as-is (3rd string 3, 4th string 5)
 - **7** = 3rd as-is · 7th lowered (3rd string 4, 4th string 3)

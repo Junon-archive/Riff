@@ -16,6 +16,22 @@ i18nKey: "lesson.m2.w6.d2"
 
 포인트는 9도가 **똑같은 자리(2번 줄)**에 온다는 거예요. 어제 Maj9의 9도도 D, 오늘 m9의 9도도 D — 근음이 C면 9도는 항상 D예요. 뼈대(3도·7도)만 마이너로 바뀌고, **색(9도)은 그대로 위에**. 공식이 한 번 손에 익으면 maj9든 m9든 9도 얹는 동작은 똑같아요. 그러니까 오늘 배우는 건 새 코드가 아니라, 어제 배운 그 동작을 마이너에 그대로 옮기는 거예요. 손이 이미 기억하는 자리에, 뼈대만 어둡게 바꾸고 색은 그대로 얹는 셈이죠. 어제 Maj9가 됐다면 오늘 m9도 반드시 됩니다.
 
+```json
+{
+  "id": "m2.w6.d2.cm9",
+  "type": "fretboard_diagram",
+  "meta": { "title": "Cm9 — 5th-string root (add 9)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "Cm" },
+  "fretboard": { "startFret": 1, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 3, "finger": 3, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 4, "fret": 1, "finger": 1, "label": "b3", "role": "chord_tone" },
+    { "string": 3, "fret": 3, "finger": 2, "label": "b7", "role": "chord_tone" },
+    { "string": 2, "fret": 3, "finger": 4, "label": "9", "role": "color" },
+    { "string": 1, "fret": 0, "muted": true }
+  ]}
+}
+```
+
 ## ② 시각 자료
 
 먼저 **Cm7 뼈대**(R·b3·b7). 파랑이 마이너 골격.

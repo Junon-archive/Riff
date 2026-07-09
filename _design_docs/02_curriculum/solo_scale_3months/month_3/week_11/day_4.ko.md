@@ -116,6 +116,33 @@ i18nKey: "lesson.m3.w11.d4"
 **10~20분 · 두뇌 훈련 — 스위칭 판단표 암송 매핑**
 메트로놈 끄고, "블루스면 믹솔리디안·C#, 펑크면 도리안·C↔F#, 락이면 믹솔리디안·C#↔B"를 **소리 내 외우며** 해당 음을 짚어요. 장르 이름을 부르면 0.5초 안에 그 3도에 손이 가면 통과. 이게 실전 스위칭의 반사신경이에요.
 
+```json
+{
+  "id": "m3.w11.d4.medley_switch_map",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "Genre switching map (blues A7 / funk Am7-D9 / rock A5-G5) - 3rds on one string",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A (blues Mixolydian / funk Dorian / rock Mixolydian)",
+    "scale": "Genre switching map",
+    "tempoBpm": 92
+  },
+  "fretboard": {
+    "startFret": 4,
+    "fretSpan": 5,
+    "dots": [
+      { "string": 4, "fret": 7, "finger": 3, "label": "A R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 5, "finger": 1, "label": "D R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 6, "finger": 3, "label": "Blues/Rock A-3(C#)", "highlight": true, "role": "target" },
+      { "string": 3, "fret": 5, "finger": 2, "label": "Funk Am7-b3(C)", "highlight": true, "role": "target" },
+      { "string": 3, "fret": 4, "finger": 1, "label": "Rock G5-3(B)", "highlight": true, "role": "target" },
+      { "string": 2, "fret": 7, "finger": 4, "label": "Funk D9-3(F#)", "highlight": true, "role": "target" }
+    ]
+  }
+}
+```
+
 **20~40분 · 실전 즉흥 (블루스→펑크→락 메들리 백킹 / 88~92 BPM) — 무드 전환 미션**
 장르가 바뀌는 백킹을 두 개 이어 틀거나(블루스 잼 → 펑크 잼 → 락 잼), 메들리 트랙 하나를 틀어요. 미션 셋. ① 구간마다 모드 갈아타기. ② 그 구간 3도에 착지. ③ **이음매에서 프레이징 무드(쉼표 성격·다이내믹·주법)를 통째로 바꾸기.** 전환 첫 소절은 앞 장르 모티프를 새 장르 어법으로 되받아 매끄럽게 이어요.
 

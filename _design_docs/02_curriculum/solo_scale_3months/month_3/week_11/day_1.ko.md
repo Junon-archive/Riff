@@ -107,6 +107,35 @@ i18nKey: "lesson.m3.w11.d1"
 **10~20분 · 두뇌 훈련 — 코드별 3도·블루노트 매핑**
 메트로놈 끄고, 타겟 지도에서 **A7→C#(3번 6프렛), D7→F#(2번 7프렛), E7→G#(4번 6프렛)** 세 개만 눈으로 찍고 손으로 짚어요. 그다음 블루노트 C(3번 5프렛)에서 C#로 반음 밀어 붙이는 동작을 10번. "이 코드엔 이 음"을 입으로 부르면서 하면 각인 속도가 2배예요.
 
+```json
+{
+  "id": "m3.w11.d1.blues_target_map",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "Blues target map A7 -> D7 -> E7 (A Mixolydian, 3rds + blue note)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A Mixolydian (blues I-IV-V)",
+    "scale": "A Mixolydian + b3 blue note",
+    "tempoBpm": 63
+  },
+  "fretboard": {
+    "startFret": 4,
+    "fretSpan": 5,
+    "dots": [
+      { "string": 6, "fret": 5, "finger": 1, "label": "A7 R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 7, "finger": 3, "label": "A7 R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 6, "finger": 3, "label": "A7-3(C#)", "highlight": true, "role": "target" },
+      { "string": 3, "fret": 5, "finger": 1, "label": "b3(C blue)", "highlight": true, "role": "blue_note" },
+      { "string": 5, "fret": 5, "finger": 1, "label": "D7 R", "isRoot": true, "role": "root" },
+      { "string": 2, "fret": 7, "finger": 3, "label": "D7-3(F#)", "highlight": true, "role": "target" },
+      { "string": 5, "fret": 7, "finger": 3, "label": "E7 R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 6, "finger": 2, "label": "E7-3(G#)", "highlight": true, "role": "target" }
+    ]
+  }
+}
+```
+
 **20~40분 · 실전 즉흥 (A 블루스 백킹 / 60~63 BPM) — 레이백 미션**
 아무 앱·영상에서 "slow blues in A backing track" 하나 틀어요. 미션은 딱 둘. ① 코드가 A7→D7→E7으로 바뀔 때마다 그 3도(C#→F#→G#)에 착지. ② **모든 착지 음을 클릭보다 살짝 늦게(레이백) 들어가서 비브라토로 길게 늘어뜨리기.** 음을 많이 치려 하지 마세요. 한 프레이즈 던지고 **한 박 쉬는** 여백을 반드시 넣어요.
 

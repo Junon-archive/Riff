@@ -105,6 +105,34 @@ lang: ja
 **10〜20分・頭のトレーニング — A5/G5/D5の3度マッピング**
 メトロノームを止めて、ターゲットマップから**A5→C#（3弦6フレット）、G5→B（3弦4フレット）、D5→F#（2弦7フレット）**の3音を目で確認して指で押さえます。♭7（G、2弦8フレット）も一度押さえて色を確認。「このコードにはこの音」と声に出しながら。
 
+```json
+{
+  "id": "m3.w11.d3.rock_target_map",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "Rock target map A5 -> G5 -> D5 (A Mixolydian, 3rds + b7 color)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A Mixolydian (rock I-bVII-IV)",
+    "scale": "A Mixolydian",
+    "tempoBpm": 120
+  },
+  "fretboard": {
+    "startFret": 4,
+    "fretSpan": 7,
+    "dots": [
+      { "string": 6, "fret": 5, "finger": 1, "label": "A5 R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 6, "finger": 3, "label": "A5-3(C#)", "highlight": true, "role": "target" },
+      { "string": 3, "fret": 4, "finger": 1, "label": "G5-3(B) / bend to C#", "highlight": true, "role": "target" },
+      { "string": 5, "fret": 10, "finger": 4, "label": "G5 R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 5, "finger": 1, "label": "D5 R", "isRoot": true, "role": "root" },
+      { "string": 2, "fret": 7, "finger": 3, "label": "D5-3(F#)", "highlight": true, "role": "target" },
+      { "string": 2, "fret": 8, "finger": 4, "label": "b7(G color)", "highlight": true, "role": "color" }
+    ]
+  }
+}
+```
+
 **20〜40分・実戦即興（A5–G5–D5ロックバッキング／116〜120 BPM）— ロングトーン・ベンド・ミッション**
 「rock backing track A5 G5 D5」または「A Mixolydian rock jam」を一つ流します。ミッションは二つ。①コードが変わるたびにC#→B→F#で3度スイッチング。②**音数を増やさず、一つの音を大胆にベンドしてロングトーンで長く鳴らし切ること。**大きなベンドの前には1拍まるごと空けてドラマを作ってください。
 

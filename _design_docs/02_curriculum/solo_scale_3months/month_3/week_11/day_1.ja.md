@@ -108,6 +108,35 @@ lang: ja
 **10〜20分・頭のトレーニング — コードごとの3度・ブルーノートのマッピング**
 メトロノームを止めて、ターゲットマップから**A7→C#（3弦6フレット）、D7→F#（2弦7フレット）、E7→G#（4弦6フレット）**の3つだけを目で確認して指で押さえます。それからブルーノートC（3弦5フレット）からC#へ半音押し上げる動作を10回。「このコードにはこの音」と声に出しながらやると、身につくスピードが2倍になります。
 
+```json
+{
+  "id": "m3.w11.d1.blues_target_map",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "Blues target map A7 -> D7 -> E7 (A Mixolydian, 3rds + blue note)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A Mixolydian (blues I-IV-V)",
+    "scale": "A Mixolydian + b3 blue note",
+    "tempoBpm": 63
+  },
+  "fretboard": {
+    "startFret": 4,
+    "fretSpan": 5,
+    "dots": [
+      { "string": 6, "fret": 5, "finger": 1, "label": "A7 R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 7, "finger": 3, "label": "A7 R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 6, "finger": 3, "label": "A7-3(C#)", "highlight": true, "role": "target" },
+      { "string": 3, "fret": 5, "finger": 1, "label": "b3(C blue)", "highlight": true, "role": "blue_note" },
+      { "string": 5, "fret": 5, "finger": 1, "label": "D7 R", "isRoot": true, "role": "root" },
+      { "string": 2, "fret": 7, "finger": 3, "label": "D7-3(F#)", "highlight": true, "role": "target" },
+      { "string": 5, "fret": 7, "finger": 3, "label": "E7 R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 6, "finger": 2, "label": "E7-3(G#)", "highlight": true, "role": "target" }
+    ]
+  }
+}
+```
+
 **20〜40分・実戦即興（Aブルースバッキング／60〜63 BPM）— レイバック・ミッション**
 どこかのアプリや動画で「slow blues in A backing track」を一つ流します。ミッションはたった二つ。①コードがA7→D7→E7と変わるたびに、その3度（C#→F#→G#）に着地する。②**すべての着地音をクリックより少し遅れて（レイバック）入り、ビブラートで長く伸ばす。**音数を増やそうとしないでください。一つフレーズを投げたら**必ず1拍休む**間を入れてください。
 

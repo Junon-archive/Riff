@@ -104,6 +104,44 @@ C 코드톤(C·E·G)을 넥 전체(0~12프렛)에 매핑했어요. 초록 강조
 **10~20분 · 두뇌 훈련 (오늘의 타겟 = E / 3)**
 메트로놈 끄고, 지도에서 **E(3)만** 찾아 짚어요. 최소 3군데: 4번 2프렛, 2번 5프렛, 1번 0프렛(개방). 짚을 때마다 "이!" 하고 소리 내요. 익숙해지면 눈 감고 랜덤으로 E→E→E. 3초 안에 다른 포지션 E로 손이 가면 통과. **어제 Am의 5도였던 E가 오늘은 C의 3도**라는 걸 한 번씩 되뇌면 머릿속 지도가 더 단단해져요.
 
+```json
+{
+  "id": "m2.w7.d2.c_chord_tone_map",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "C major chord tones (C-E-G) across the neck, 3rd (E) highlighted",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "C major",
+    "tempoBpm": 66
+  },
+  "fretboard": {
+    "startFret": 0,
+    "fretSpan": 12,
+    "dots": [
+      { "string": 6, "fret": 0, "label": "3", "role": "target", "highlight": true },
+      { "string": 6, "fret": 3, "label": "5", "role": "chord_tone" },
+      { "string": 6, "fret": 8, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 3, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 7, "label": "3", "role": "target", "highlight": true },
+      { "string": 5, "fret": 10, "label": "5", "role": "chord_tone" },
+      { "string": 4, "fret": 2, "label": "3", "role": "target", "highlight": true },
+      { "string": 4, "fret": 5, "label": "5", "role": "chord_tone" },
+      { "string": 4, "fret": 10, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 0, "label": "5", "role": "chord_tone" },
+      { "string": 3, "fret": 5, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 9, "label": "3", "role": "target", "highlight": true },
+      { "string": 2, "fret": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 2, "fret": 5, "label": "3", "role": "target", "highlight": true },
+      { "string": 2, "fret": 8, "label": "5", "role": "chord_tone" },
+      { "string": 1, "fret": 0, "label": "3", "role": "target", "highlight": true },
+      { "string": 1, "fret": 3, "label": "5", "role": "chord_tone" },
+      { "string": 1, "fret": 8, "label": "R", "isRoot": true, "role": "root" }
+    ]
+  }
+}
+```
+
 **20~40분 · 실전 즉흥 (C 원코드 백킹 / 66~70 BPM)**
 "C major backing track slow" 아무거나 틀어요. 규칙: **C·E·G 세 음만.** 멈출 땐 반드시 **E에 착지.** 오픈 포지션에서만 놀지 말고, 5~9프렛 쪽 E(2번 5프렛, 3번 9프렛)에도 손을 뻗어 착지해보세요.
 

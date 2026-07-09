@@ -16,6 +16,22 @@ i18nKey: "lesson.m2.w6.d3"
 
 今日のポイントは**9度が一番上（トップノート）に来る**こと。基本のC7では一番上がb7でしたが、C9ではその上に9度（D）がのって、コードの印象がぐっと明るくなります。テンションがトップに来ると特に華やかに聞こえます — これが来週（7週目）のトップノート・リーディングの種です。今すぐ完璧に消化できなくても大丈夫。「9度を一番上にのせると明るくなる」と耳で確かめておけば、来週この音をメロディにつなぐときがぐっと楽になります。今日はmaj9・m9・9の三兄弟が全員そろった日だと思ってください。
 
+```json
+{
+  "id": "m2.w6.d3.c9",
+  "type": "fretboard_diagram",
+  "meta": { "title": "C9 — 5th-string root (add 9)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "C" },
+  "fretboard": { "startFret": 1, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 3, "finger": 2, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 4, "fret": 2, "finger": 1, "label": "3", "role": "chord_tone" },
+    { "string": 3, "fret": 3, "finger": 3, "label": "b7", "role": "chord_tone" },
+    { "string": 2, "fret": 3, "finger": 4, "label": "9", "role": "color" },
+    { "string": 1, "fret": 0, "muted": true }
+  ]}
+}
+```
+
 ## ② ビジュアル
 
 まず**C7の骨組み**（R·3·b7）。青の骨格、一番上はb7。

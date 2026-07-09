@@ -16,6 +16,22 @@ Now you lay the 9th onto a dominant 7 (C7) to make **C9.** Add the 9th's (D) col
 
 Today's point: the **9th comes on top (the top note).** In plain C7 the top was the b7, but in C9 the 9th (D) sits above it, brightening the chord's impression sharply. A tension on top sounds especially shimmering — this is the seed of next week's (7) top-note leading. It's fine if you can't fully digest it right now. Just confirm by ear that "putting the 9th on top brightens it," and connecting these notes into a melody next week gets much easier. Think of today as the day all three siblings — maj9, m9, 9 — are gathered.
 
+```json
+{
+  "id": "m2.w6.d3.c9",
+  "type": "fretboard_diagram",
+  "meta": { "title": "C9 — 5th-string root (add 9)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "C" },
+  "fretboard": { "startFret": 1, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 3, "finger": 2, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 4, "fret": 2, "finger": 1, "label": "3", "role": "chord_tone" },
+    { "string": 3, "fret": 3, "finger": 3, "label": "b7", "role": "chord_tone" },
+    { "string": 2, "fret": 3, "finger": 4, "label": "9", "role": "color" },
+    { "string": 1, "fret": 0, "muted": true }
+  ]}
+}
+```
+
 ## ② Visuals
 
 First, the **C7 skeleton** (R·3·b7). Blue frame, top is the b7.

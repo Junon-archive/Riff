@@ -16,6 +16,54 @@ Yesterday you learned the 6th-string-root shells. Today the root drops to the **
 
 So the three characters are:
 
+```json
+{
+  "id": "m1.w4.d3.cmaj7_shell",
+  "type": "fretboard_diagram",
+  "meta": { "title": "Cmaj7 shell — 5th-string root", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "C" },
+  "fretboard": { "startFret": 3, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 4, "fret": 0, "muted": true },
+    { "string": 3, "fret": 4, "finger": 2, "label": "7", "role": "target", "highlight": true },
+    { "string": 2, "fret": 5, "finger": 3, "label": "3", "role": "target", "highlight": true },
+    { "string": 1, "fret": 0, "muted": true }
+  ]}
+}
+```
+
+```json
+{
+  "id": "m1.w4.d3.c7_shell",
+  "type": "fretboard_diagram",
+  "meta": { "title": "C7 shell — 5th-string root", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "C" },
+  "fretboard": { "startFret": 3, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 4, "fret": 0, "muted": true },
+    { "string": 3, "fret": 3, "finger": 1, "label": "b7", "role": "target", "highlight": true },
+    { "string": 2, "fret": 5, "finger": 3, "label": "3", "role": "target", "highlight": true },
+    { "string": 1, "fret": 0, "muted": true }
+  ]}
+}
+```
+
+```json
+{
+  "id": "m1.w4.d3.cm7_shell",
+  "type": "fretboard_diagram",
+  "meta": { "title": "Cm7 shell — 5th-string root", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "Cm" },
+  "fretboard": { "startFret": 3, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 4, "fret": 0, "muted": true },
+    { "string": 3, "fret": 3, "finger": 1, "label": "b7", "role": "target", "highlight": true },
+    { "string": 2, "fret": 4, "finger": 2, "label": "b3", "role": "target", "highlight": true },
+    { "string": 1, "fret": 0, "muted": true }
+  ]}
+}
+```
+
 - **Cmaj7 shell** = 3rd string 4 (7) · 2nd string 5 (3)
 - **C7 shell** = 3rd string 3 (b7) · 2nd string 5 (3)
 - **Cm7 shell** = 3rd string 3 (b7) · 2nd string 4 (b3)

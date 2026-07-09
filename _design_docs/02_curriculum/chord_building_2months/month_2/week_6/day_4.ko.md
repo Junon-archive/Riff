@@ -19,6 +19,54 @@ i18nKey: "lesson.m2.w6.d4"
 - **C9** = 3번 줄 3(b7) · 4번 줄 2(3)
 - **Cm9** = 3번 줄 3(b7) · 4번 줄 1(b3)
 
+```json
+{
+  "id": "m2.w6.d4.cmaj9",
+  "type": "fretboard_diagram",
+  "meta": { "title": "Cmaj9 — 5th-string root", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "C" },
+  "fretboard": { "startFret": 1, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 3, "finger": 2, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 4, "fret": 2, "finger": 1, "label": "3", "role": "chord_tone" },
+    { "string": 3, "fret": 4, "finger": 4, "label": "7", "role": "chord_tone" },
+    { "string": 2, "fret": 3, "finger": 3, "label": "9", "role": "color" },
+    { "string": 1, "fret": 0, "muted": true }
+  ]}
+}
+```
+
+```json
+{
+  "id": "m2.w6.d4.c9",
+  "type": "fretboard_diagram",
+  "meta": { "title": "C9 — 5th-string root", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "C" },
+  "fretboard": { "startFret": 1, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 3, "finger": 2, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 4, "fret": 2, "finger": 1, "label": "3", "role": "chord_tone" },
+    { "string": 3, "fret": 3, "finger": 3, "label": "b7", "role": "chord_tone" },
+    { "string": 2, "fret": 3, "finger": 4, "label": "9", "role": "color" },
+    { "string": 1, "fret": 0, "muted": true }
+  ]}
+}
+```
+
+```json
+{
+  "id": "m2.w6.d4.cm9",
+  "type": "fretboard_diagram",
+  "meta": { "title": "Cm9 — 5th-string root", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "Cm" },
+  "fretboard": { "startFret": 1, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 3, "finger": 3, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 4, "fret": 1, "finger": 1, "label": "b3", "role": "chord_tone" },
+    { "string": 3, "fret": 3, "finger": 2, "label": "b7", "role": "chord_tone" },
+    { "string": 2, "fret": 3, "finger": 4, "label": "9", "role": "color" },
+    { "string": 1, "fret": 0, "muted": true }
+  ]}
+}
+```
+
 색(9도)은 위에 고정, 뼈대(3도·7도)만 손가락으로 스위치 — 1개월차에 배운 두 스위치가 9코드에서도 똑같이 살아 있어요. 여기에 5주차의 탑노트 감각을 더하면, 다음 주(7주차)엔 이 위쪽 음들을 **멜로디로** 잇습니다. 한 주 만에 maj9·9·m9 세 개를 손가락 두 개 스위치로 오갈 수 있게 된 거예요. 시티팝 반주가 왜 그렇게 세련되게 들렸는지, 이제 그 비밀이 여러분 손안에 있어요.
 
 ## ② 시각 자료

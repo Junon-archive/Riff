@@ -13,6 +13,34 @@ i18nKey: "lesson.m2.w6.d3"
 
 原理は先月そのまま。ラインの実音（タ）は左手を押さえてはっきり鳴らし、音と音の間の空いた16ビットの場所は左手の力を抜いたゴースト（チャッ）で埋めます。するとまばらだったラインが「タ・チャッ・チャッ・タ・チャッ」のように休みなく回るグルーヴになります。右手モーターは最初から最後まで止まらず、左手が「押さえるか抜くか」だけを行き来するんです。
 
+```json
+{
+  "id": "m2.w6.d3.ghost_1bar",
+  "type": "tab",
+  "meta": { "title": "Single note + ghost fill (1 bar)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E", "tempoBpm": 74, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 5, "fret": 7, "duration": "sixteenth", "role": "root", "isRoot": true, "label": "R" },
+      { "string": 5, "fret": 7, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 7, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 7, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 7, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 7, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 4, "fret": 7, "duration": "sixteenth", "role": "scale", "label": "4" },
+      { "string": 5, "fret": 7, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 7, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 7, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 7, "duration": "sixteenth", "role": "root", "isRoot": true, "label": "R" },
+      { "string": 5, "fret": 7, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 7, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 10, "duration": "sixteenth", "role": "scale", "label": "b3" },
+      { "string": 5, "fret": 7, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 7, "duration": "sixteenth", "technique": "dead_note", "role": "scale" }
+    ]}
+  ]}
+}
+```
+
 なぜ強力かというと、ラインの音が数個しかなくてもグルーヴがぎっしり聞こえるからです。ナイル・ロジャース式カッティングがコードでグルーヴを埋めたなら、今日は単音ライン＋ゴーストで同じくぎっしりした感じを出すんです。音は少なく、グルーヴは濃く。
 
 ラインの音とゴーストを交互に出すのは最初は戸惑います。特に実音の場所でだけ正確に左手を押さえてすぐ抜くタイミングが難しい。当然です。今日はラインが単純でもいいので、「音ははっきり、間はチャッ」という対比を生かしてください。この対比が生きれば、たった数音で部屋をグルーヴで満たせます。これがファンクの魔法です — たくさん弾くのではなく、少なく弾いて間をグルーヴで埋める。今日この感覚をつかめば、「音を節約する楽しさ」を初めて知るはずです。

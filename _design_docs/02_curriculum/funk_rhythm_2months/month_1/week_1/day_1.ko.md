@@ -15,6 +15,34 @@ i18nKey: "lesson.m1.w1.d1"
 
 가장 중요한 감각은 이거예요. **오른손은 재봉틀이나 시계추처럼 절대 멈추지 않아요.** 음을 실제로 치든 안 치든, 팔뚝이 아니라 손목이 쉬지 않고 아래위로 흔들립니다. 이 흔들림이 곧 그루브의 엔진이에요.
 
+```json
+{
+  "id": "m1.w1.d1.motor_1bar",
+  "type": "tab",
+  "meta": { "title": "16th-note muted motor (1 bar)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E", "tempoBpm": 65, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 5, "fret": 5, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "technique": "dead_note", "role": "scale" }
+    ]}
+  ]}
+}
+```
+
 처음엔 손이 뻑뻑하고 박이 뭉개지는 게 당연해요 — 그게 정상이에요. 오늘은 깨끗한 소리를 내려는 게 아니라, 왼손을 줄 위에 살짝 얹어 음정을 죽인 채 '치키치키' 흔들림만 몸에 새깁니다. 이 모터 하나만 자리 잡으면, 앞으로 배울 어떤 펑크 리듬도 이 흔들림 위에 얹기만 하면 되니까요. 오늘 하루는 소리 하나 없이 손만 흔들다 끝나도 성공이에요. 그 '멈추지 않는 손'이야말로 앞으로 두 달을 버티게 해줄 진짜 힘이거든요.
 
 ## ② 시각 자료

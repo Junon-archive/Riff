@@ -13,6 +13,34 @@ The single-note line you drew so far, left as is, has big gaps between notes and
 
 The principle is exactly last month's. Press the left hand on the line's real notes ("ta") to ring them clearly, and fill the empty 16th slots between notes with relaxed ghosts ("chuck"). Then a sparse line becomes a groove rolling nonstop like "ta-chuck-chuck-ta-chuck." The right-hand motor never stops start to finish; the left hand only alternates "press or release."
 
+```json
+{
+  "id": "m2.w6.d3.ghost_1bar",
+  "type": "tab",
+  "meta": { "title": "Single note + ghost fill (1 bar)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E", "tempoBpm": 74, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 5, "fret": 7, "duration": "sixteenth", "role": "root", "isRoot": true, "label": "R" },
+      { "string": 5, "fret": 7, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 7, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 7, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 7, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 7, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 4, "fret": 7, "duration": "sixteenth", "role": "scale", "label": "4" },
+      { "string": 5, "fret": 7, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 7, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 7, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 7, "duration": "sixteenth", "role": "root", "isRoot": true, "label": "R" },
+      { "string": 5, "fret": 7, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 7, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 10, "duration": "sixteenth", "role": "scale", "label": "b3" },
+      { "string": 5, "fret": 7, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 7, "duration": "sixteenth", "technique": "dead_note", "role": "scale" }
+    ]}
+  ]}
+}
+```
+
 Why is this powerful? Even with only a few line notes, the groove sounds full. Where Nile-Rodgers-style cutting filled the groove with chords, today you get the same fullness from a single-note line + ghosts. Few notes, thick groove.
 
 Alternating line notes and ghosts is confusing at first. Especially the timing of pressing the left hand precisely only on the real notes and releasing right after is hard. Of course. Today, even if the line is simple, bring out the "note clear, gaps chuck" contrast. Once that lives, just a few notes can fill a room with groove. This is funk's magic — not playing a lot, but playing little and filling the gaps with groove. Grab this feel today and you'll first taste the joy of rationing notes.

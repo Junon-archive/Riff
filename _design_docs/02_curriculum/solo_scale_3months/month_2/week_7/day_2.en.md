@@ -105,6 +105,44 @@ With the metronome at 66, run the open C arpeggio above in eighth notes, up then
 **10–20 min · Brain training (today's target = E / 3rd)**
 Turn off the metronome and find just the **E (3rd)** spots on the map. At least three: string 4 fret 2, string 2 fret 5, string 1 fret 0 (open). Call out "E!" out loud every time you fret one. Once comfortable, close your eyes and go random: E → E → E. You pass if your hand reaches a different E position within 3 seconds. Repeating to yourself that **the E that was Am's 5th yesterday is today's 3rd of C** makes the map in your head stick harder.
 
+```json
+{
+  "id": "m2.w7.d2.c_chord_tone_map",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "C major chord tones (C-E-G) across the neck, 3rd (E) highlighted",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "C major",
+    "tempoBpm": 66
+  },
+  "fretboard": {
+    "startFret": 0,
+    "fretSpan": 12,
+    "dots": [
+      { "string": 6, "fret": 0, "label": "3", "role": "target", "highlight": true },
+      { "string": 6, "fret": 3, "label": "5", "role": "chord_tone" },
+      { "string": 6, "fret": 8, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 3, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 7, "label": "3", "role": "target", "highlight": true },
+      { "string": 5, "fret": 10, "label": "5", "role": "chord_tone" },
+      { "string": 4, "fret": 2, "label": "3", "role": "target", "highlight": true },
+      { "string": 4, "fret": 5, "label": "5", "role": "chord_tone" },
+      { "string": 4, "fret": 10, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 0, "label": "5", "role": "chord_tone" },
+      { "string": 3, "fret": 5, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 9, "label": "3", "role": "target", "highlight": true },
+      { "string": 2, "fret": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 2, "fret": 5, "label": "3", "role": "target", "highlight": true },
+      { "string": 2, "fret": 8, "label": "5", "role": "chord_tone" },
+      { "string": 1, "fret": 0, "label": "3", "role": "target", "highlight": true },
+      { "string": 1, "fret": 3, "label": "5", "role": "chord_tone" },
+      { "string": 1, "fret": 8, "label": "R", "isRoot": true, "role": "root" }
+    ]
+  }
+}
+```
+
 **20–40 min · Real-world feel — C one-chord backing (BPM 66–70)**
 Put on any "C major backing track slow" you find. Rule: **only C·E·G.** Whenever you stop, **land on E.** Don't just stay in open position — reach for the E's around frets 5–9 too (string 2 fret 5, string 3 fret 9).
 

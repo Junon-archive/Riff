@@ -15,6 +15,34 @@ i18nKey: "lesson.m1.w2.d1"
 
 펑크의 그루브는 바로 이 **실제음과 고스트의 대비**에서 나와요. 왼손을 꾹 눌러 또렷이 울리는 '따'와, 힘을 빼서 퍽 하고 죽는 '치'. "따-치-치-따"처럼 둘이 번갈아 나오면, 밋밋하던 16비트가 갑자기 드럼처럼 꿀렁이기 시작해요. 오른손 모터는 1주차 그대로예요. 달라지는 건 딱 하나, **왼손의 압력** — 눌렀다(따), 뺐다(치)를 오가는 거죠.
 
+```json
+{
+  "id": "m1.w2.d1.contrast_1bar",
+  "type": "tab",
+  "meta": { "title": "Real vs ghost — contrast (1 bar)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E", "tempoBpm": 64, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 2, "fret": 9, "duration": "sixteenth", "role": "chord_tone", "label": "3" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "role": "chord_tone", "label": "3" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "role": "chord_tone", "label": "3" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "role": "chord_tone", "label": "3" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" }
+    ]}
+  ]}
+}
+```
+
 처음엔 고스트가 너무 크게 울려버리거나, 반대로 아예 소리가 안 나는 게 정상이에요. 압력을 '딱 죽을 만큼만' 빼는 감각은 며칠 걸려요. 조급해하지 마세요. 오늘은 같은 자리에서 '따'와 '치'의 소리 차이를 귀로 또렷이 구분하는 것, 그거 하나면 충분해요. 이 '따'와 '치'의 대비 하나가 손에 붙는 순간, 여러분의 스트로크는 더 이상 밋밋한 코드가 아니라 리듬을 연주하는 타악기로 바뀌기 시작해요. 오늘은 그 첫 단추만 꿰면 됩니다.
 
 ## ② 시각 자료

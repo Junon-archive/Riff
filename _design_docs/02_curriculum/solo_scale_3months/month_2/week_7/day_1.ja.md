@@ -109,6 +109,44 @@ Amコードトーン（A・C・E）をネック全体（0〜12フレット）に
 **10〜20分・頭のトレーニング（今日のターゲット＝C／♭3）**
 メトロノームを止めて、地図から**C（♭3）だけ**を見つけて押さえます。最低3か所：5弦3フレット、3弦5フレット、1弦8フレット。押さえるたびに声に出して「シー！」と呼びましょう。慣れてきたら目を閉じてランダムに「C、次のC、次のC」——3秒以内に別のポジションのCへ手が動けば合格です。余裕があれば、E（5度）の3か所も同じ方法でやってみましょう。
 
+```json
+{
+  "id": "m2.w7.d1.am_chord_tone_map",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "Am chord tones (A-C-E) across the neck, 3rd (C) highlighted",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "tempoBpm": 66
+  },
+  "fretboard": {
+    "startFret": 0,
+    "fretSpan": 12,
+    "dots": [
+      { "string": 6, "fret": 0, "label": "5", "role": "chord_tone" },
+      { "string": 6, "fret": 5, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 6, "fret": 8, "label": "b3", "role": "target", "highlight": true },
+      { "string": 5, "fret": 0, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 3, "label": "b3", "role": "target", "highlight": true },
+      { "string": 5, "fret": 7, "label": "5", "role": "chord_tone" },
+      { "string": 4, "fret": 2, "label": "5", "role": "chord_tone" },
+      { "string": 4, "fret": 7, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 10, "label": "b3", "role": "target", "highlight": true },
+      { "string": 3, "fret": 2, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 5, "label": "b3", "role": "target", "highlight": true },
+      { "string": 3, "fret": 9, "label": "5", "role": "chord_tone" },
+      { "string": 2, "fret": 1, "label": "b3", "role": "target", "highlight": true },
+      { "string": 2, "fret": 5, "label": "5", "role": "chord_tone" },
+      { "string": 2, "fret": 10, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 1, "fret": 0, "label": "5", "role": "chord_tone" },
+      { "string": 1, "fret": 5, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 1, "fret": 8, "label": "b3", "role": "target", "highlight": true }
+    ]
+  }
+}
+```
+
 **20〜40分・実戦感覚 — Amワンコードバッキング（BPM 66〜70）**
 「Am backing track slow」で検索して何か一つ流します。ルールは一つだけ。**A・C・Eの3音だけを使う。**経過音（ペンタの D・G）は今日は禁止です。3音だけで単調に遊ぶのではなく、止まりたくなったら必ず**Cに着地**。指板のあちこち、違うポジションのCを選びながら着地してみましょう。
 

@@ -16,6 +16,26 @@ i18nKey: "lesson.m1.w2.d4"
 
 この2本の組み合わせだけで5コードが全部出ます：
 
+```json
+{
+  "id": "m1.w2.d4.cmaj7_ref",
+  "type": "fretboard_diagram",
+  "meta": { "title": "Cmaj7 — 5th-string root (A-form)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "C" },
+  "fretboard": {
+    "startFret": 3,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 6, "fret": 0, "muted": true },
+      { "string": 5, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 5, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 3, "fret": 4, "finger": 2, "label": "7", "role": "target", "highlight": true },
+      { "string": 2, "fret": 5, "finger": 4, "label": "3", "role": "chord_tone" },
+      { "string": 1, "fret": 0, "muted": true }
+    ]
+  }
+}
+```
+
 - **C（メジャー）** ＝ 2弦5（3）· 3弦5（R）
 - **Cm** ＝ 2弦4（b3）· 3弦5（R）
 - **C7** ＝ 2弦5（3）· 3弦3（b7）
