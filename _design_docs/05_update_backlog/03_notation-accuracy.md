@@ -1,6 +1,6 @@
 ---
 id: 03-notation-accuracy
-status: TODO
+status: IN_PROGRESS (② 튜닝 수정 완료 2026-07-09 — ① 조표·③ 다현+지판 대기)
 priority: medium
 risk: high
 depends_on: []          # 문서 내부 순서: 튜닝 → 6현일반화. 조표는 독립.
@@ -16,7 +16,9 @@ owner: null
 **포함:** ① 조표(key signature) 렌더 / ② ★튜닝 지뢰 수정 / ③ 6현 하드 가정 → 다현 일반화.
 **성격:** ①은 저위험 독립. ②는 잠재 버그 수정(지금은 무해). ③은 이 백로그에서 가장 무거움(스키마 3중 락). **②는 ③의 선행조건.**
 
-## ★ 먼저 알아야 할 잠재 버그 (튜닝 무시)
+## ★ 먼저 알아야 할 잠재 버그 (튜닝 무시) — ✅ 2026-07-09 수정 완료
+
+> **해결:** `staff.ts`에 `resolveOpenMidi(meta)` 추가 — `meta.tuning`(현 이름 배열)을 읽어 각 현의 표준 개방음 anchor에 **±6반음 최근접 옥타브**로 해석해 개방현 MIDI를 계산한다. tuning 없거나 stringCount와 길이 불일치면 표준 `OPEN_MIDI`로 폴백. `pitchOf`·음역 스캔의 `OPEN_MIDI[str]` 하드코딩을 이 함수로 대체. **검증:** 골든 스냅샷(dist 전체 md5) before==after 바이트 불변(기존 116일 표준 튜닝 데이터 무영향) + 격리 렌더로 Drop-D가 D2로 정확히 바뀜 확인. tab.ts 현이름 gutter의 tuning 파생은 4/5현 거터가 바뀌는 ③으로 이월(표준에서 `e`↔`E` 대소문자 차이로 불변 깨짐 방지).
 
 `meta.tuning` 을 스키마엔 선언했으나 **렌더러가 안 읽는다.**
 - `web_app/src/render/staff.ts:51` `OPEN_MIDI = {1:64,...,6:40}` (표준 EADGBE 하드코딩).
@@ -80,8 +82,8 @@ owner: null
 ## 체크리스트
 
 - [ ] ① meta.keySignature 필드 + staff.ts addKeySignature
-- [ ] ② staff.ts/tab.ts 가 meta.tuning 읽어 음정 계산 (OPEN_MIDI 대체)
-- [ ] ② 골든 스냅샷 기존 6현 픽셀 불변 확인
+- [x] ② staff.ts 가 meta.tuning 읽어 음정 계산 (`resolveOpenMidi`로 OPEN_MIDI 하드코딩 대체) — 2026-07-09. tab.ts 현이름 파생은 ③으로 이월(대소문자 불변 이슈)
+- [x] ② 골든 스냅샷 기존 6현 픽셀 불변 확인 — dist 전체 md5 before==after(`31d885e9…`), invariants 315블록 회귀 0, Drop-D 격리 렌더로 튜닝 반영 확인
 - [ ] ③ stringCount 리터럴6 → 집합 (타입·스키마·검증기)
 - [ ] ③ 타브 줄 수·string 범위 stringCount 구동
 - [ ] ③ **fretboard.ts 다현화**(N_STR→stringCount, 현이름=tuning, 좌표·굵기 일반화) — 승인 완료

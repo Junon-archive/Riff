@@ -47,8 +47,36 @@ import type { Score, TabNote as TabNoteData, Measure, NoteRole } from '../types/
 export type StaffMode = 'staff' | 'staff+tab' | 'rhythm';
 
 /* ---- 기하/음악 상수 --------------------------------------------------- */
-/** 개방현 MIDI(표준 EADGBE). 1=고음e(E4) … 6=저음E(E2). concert pitch(실제 울리는 음). */
+/** 개방현 MIDI(표준 EADGBE). 1=고음e(E4) … 6=저음E(E2). concert pitch(실제 울리는 음). meta.tuning 없거나 형식 불일치 시 폴백. */
 const OPEN_MIDI: Record<number, number> = { 1: 64, 2: 59, 3: 55, 4: 50, 5: 45, 6: 40 };
+/** 음이름(옥타브 없음) → 피치클래스(0=C … 11=B). meta.tuning 해석용. */
+const NOTE_PC: Record<string, number> = {
+  C: 0, 'C#': 1, Db: 1, D: 2, 'D#': 3, Eb: 3, E: 4, F: 5,
+  'F#': 6, Gb: 6, G: 7, 'G#': 8, Ab: 8, A: 9, 'A#': 10, Bb: 10, B: 11,
+};
+/**
+ * meta.tuning(현 이름 배열, index0=최저현 … 표준 EADGBE)을 읽어 "현 번호 → 개방현 실제음 MIDI"
+ * 함수를 만든다. tuning 이 없거나 stringCount 와 길이가 안 맞으면 표준(OPEN_MIDI)으로 폴백
+ * → 기존 6현 표준 데이터는 결과 MIDI **불변**(따라서 렌더 SVG 바이트 불변).
+ * 음이름만 있고 옥타브가 없으므로 각 현의 표준 개방음(anchor)에 **±6반음 이내 최근접 옥타브**로
+ * 해석한다(Drop-D=D2, DADGAD 등 비표준도 자연스럽게 맞음). ★03② 튜닝 무시 잠재 버그 수정.
+ */
+function resolveOpenMidi(meta?: { tuning?: unknown; stringCount?: number }): (str: number) => number {
+  const std = (str: number): number => OPEN_MIDI[str] ?? 40;
+  const tuning = meta?.tuning;
+  const n = meta?.stringCount ?? 6;
+  if (!Array.isArray(tuning) || tuning.length !== n) return std;
+  return (str: number): number => {
+    const raw = tuning[n - str]; // 현 번호 str(1=최고음) → tuning index (n-str)
+    if (typeof raw !== 'string') return std(str);
+    const pc = NOTE_PC[raw.trim()];
+    if (pc == null) return std(str);
+    const anchor = std(str);
+    let midi = anchor - (((anchor % 12) - pc + 12) % 12); // anchor 이하 같은 pc
+    if (anchor - midi > 6) midi += 12; // ±6 이내 최근접 옥타브
+    return midi;
+  };
+}
 /**
  * 기타는 이조악기 — 표준 표기는 **treble-8vb(기타 클레프)**: 실제음보다 한 옥타브 위로 적고
  * 클레프 아래 작은 "8"을 단다. OPEN_MIDI(실제음)는 그대로 두고, 오선보 "표기 옥타브"만 +1 한다.
@@ -130,8 +158,13 @@ function preferFlats(key?: string): boolean {
  * midi = 실제음(concert). 표기 옥타브만 WRITTEN_OCTAVE_SHIFT 만큼 올려 기타 8vb 표기로 그린다
  * (실제음/타브는 불변). 클레프의 '8vb' 주석과 함께 쓰여야 음정이 정확하다.
  */
-function pitchOf(str: number, fret: number, flats: boolean): { key: string; acc: string | null } {
-  const open = OPEN_MIDI[str] ?? 40;
+function pitchOf(
+  str: number,
+  fret: number,
+  flats: boolean,
+  openOf: (str: number) => number,
+): { key: string; acc: string | null } {
+  const open = openOf(str);
   const midi = open + fret;
   const names = flats ? FLAT : SHARP;
   const pc = ((midi % 12) + 12) % 12;
@@ -237,7 +270,7 @@ interface BuiltMeasure {
   beams: StaveNote[][];
 }
 
-function buildMeasure(m: Measure, flats: boolean): BuiltMeasure {
+function buildMeasure(m: Measure, flats: boolean, openOf: (str: number) => number): BuiltMeasure {
   const stave: StaveNote[] = [];
   const tab: (TabNote | GhostNote)[] = [];
   const beams: StaveNote[][] = [];
@@ -289,7 +322,7 @@ function buildMeasure(m: Measure, flats: boolean): BuiltMeasure {
         { string: s, fret, role: n.role, target: n.target, highlight: n.highlight },
         ...chordExtra,
       ];
-      const pitches = entries.map((e) => pitchOf(e.string, e.fret, flats));
+      const pitches = entries.map((e) => pitchOf(e.string, e.fret, flats, openOf));
       sNote = new StaveNote({ keys: pitches.map((p) => p.key), duration: durTok });
       pitches.forEach((p, i) => {
         if (p.acc) sNote.addModifier(new Accidental(p.acc), i);
@@ -306,7 +339,7 @@ function buildMeasure(m: Measure, flats: boolean): BuiltMeasure {
       tabCol = tabChordColor(entries) ?? 'currentColor';
     } else {
       // 단음. 데드 노트는 오선보 X 글리프(키 3번째 파트) + 타브 "X", 임시표 억제.
-      const { key, acc } = pitchOf(s, fret, flats);
+      const { key, acc } = pitchOf(s, fret, flats, openOf);
       const staffKey = dead ? `${key}/x` : key;
       sNote = new StaveNote({ keys: [staffKey], duration: durTok });
       if (acc && !dead) sNote.addModifier(new Accidental(acc), 0);
@@ -382,6 +415,8 @@ export function renderStaff(score: Score, mode: StaffMode): string {
   if (!tabData || !Array.isArray(tabData.measures)) return emptySvg();
 
   const flats = preferFlats(score.meta?.key);
+  // 개방현 실제음 = meta.tuning 계산(없으면 표준 EADGBE 폴백). ★03② — OPEN_MIDI 하드코딩 대체.
+  const openOf = resolveOpenMidi(score.meta);
   const [numBeats, beatValue] = (tabData.timeSignature ?? '4/4')
     .split('/')
     .map((x) => parseInt(x, 10));
@@ -391,7 +426,7 @@ export function renderStaff(score: Score, mode: StaffMode): string {
   (globalThis as { document?: Document }).document = doc;
   try {
     // 마디별 tickable 생성 → 전부 비면 빈 SVG
-    const built = (tabData.measures as Measure[]).map((m) => buildMeasure(m, flats));
+    const built = (tabData.measures as Measure[]).map((m) => buildMeasure(m, flats, openOf));
     if (built.every((b) => b.stave.length === 0)) return emptySvg();
 
     // 2마디씩 줄(row)로 묶기
@@ -406,7 +441,7 @@ export function renderStaff(score: Score, mode: StaffMode): string {
     let maxMidi = 0;
     const scanMidi = (str: unknown, fr: unknown) => {
       if (typeof str !== 'number' || typeof fr !== 'number') return;
-      const md = (OPEN_MIDI[str] ?? 40) + fr;
+      const md = openOf(str) + fr;
       if (md < minMidi) minMidi = md;
       if (md > maxMidi) maxMidi = md;
     };
