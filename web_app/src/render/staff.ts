@@ -43,6 +43,10 @@ import {
   StaveModifierPosition,
   StaveTie,
   Tuplet,
+  Bend,
+  Vibrato,
+  Curve,
+  TabSlide,
 } from 'vexflow';
 import type { Score, TabNote as TabNoteData, Measure, NoteRole } from '../types/score';
 
@@ -201,12 +205,19 @@ function pitchOf(
   return { key: `${name}/${writtenOctave}`, acc };
 }
 
+/** 벤딩 목표 → Bend 글리프 라벨. 'full'→'full', 'half'→'½', 그 외는 그대로. */
+function bendLabel(target?: string): string {
+  if (!target || target === 'full') return 'full';
+  if (target === 'half') return '½';
+  return target;
+}
+
 /**
- * ★02-A: 표현 기법 → 오선보 위 텍스트 마커(기존 palm_mute='P.M.' Annotation 관례와 동일).
- * 밴딩·해머온·풀오프·슬라이드·비브라토·하모닉을 담백한 기보 관례 약어로 표기(양 모드 공통·jsdom 안전).
- * dead_note(X 노트헤드)·palm_mute(P.M.)는 별도 경로라 여기서 제외.
+ * ★02-A(고도화): 오선보 위 작은 텍스트 라벨. 이음줄/사선의 **동반 라벨**(H·P·sl)과 하모닉(harm.),
+ * 그리고 staff-only 모드에서 native 글리프를 못 그리는 밴딩·비브라토의 폴백 라벨을 반환.
+ * withTab 모드에선 밴딩·비브라토는 타브측 native 글리프(Bend/Vibrato)로 그리므로 라벨 생략.
  */
-function techniqueMark(n: TabNoteData): string | null {
+function techniqueLetter(n: TabNoteData, withTab: boolean): string | null {
   switch (n.technique) {
     case 'hammer_on':
       return 'H';
@@ -214,12 +225,12 @@ function techniqueMark(n: TabNoteData): string | null {
       return 'P';
     case 'slide':
       return n.slideToFret != null ? `sl.${n.slideToFret}` : 'sl.';
-    case 'bend':
-      return `bend ${n.bendTarget ?? 'full'}`;
-    case 'vibrato':
-      return 'vib.';
     case 'harmonic':
       return 'harm.';
+    case 'bend':
+      return withTab ? null : `bend ${bendLabel(n.bendTarget)}`;
+    case 'vibrato':
+      return withTab ? null : 'vib.';
     default:
       return null;
   }
@@ -322,6 +333,8 @@ interface BuiltMeasure {
   tieAfter: boolean[];
   /** 잇단음 그룹(★02-C): 연속 num개 음 묶음. */
   tuplets: { notes: StaveNote[]; num: number; inSpaceOf: number }[];
+  /** stave[i]→[i+1] 연결(★02-A 고도화): 이음줄(hammer/pull) 또는 슬라이드 사선. stave 와 같은 길이. */
+  linkAfter: (null | { kind: 'slur' } | { kind: 'slide'; dir: number })[];
 }
 
 function buildMeasure(
@@ -330,11 +343,13 @@ function buildMeasure(
   openOf: (str: number) => number,
   nStr: number,
   beatInt: number,
+  withTab: boolean,
 ): BuiltMeasure {
   const stave: StaveNote[] = [];
   const tab: (TabNote | GhostNote)[] = [];
   const beams: StaveNote[][] = [];
   const tieAfter: boolean[] = [];
+  const linkAfter: BuiltMeasure['linkAfter'] = [];
   const tuplets: { notes: StaveNote[]; num: number; inSpaceOf: number }[] = [];
   let curTup: StaveNote[] = [];
   let curTupSpec: { num: number; inSpaceOf: number } | null = null;
@@ -368,6 +383,7 @@ function buildMeasure(
       stave.push(new StaveNote({ keys: ['b/4'], duration: `${durCode}r` }));
       tab.push(new GhostNote(durCode));
       tieAfter.push(false);
+      linkAfter.push(null);
       pos += unit;
       if (pos % beatInt === 0) flush();
       continue;
@@ -428,10 +444,10 @@ function buildMeasure(
       pm.setVerticalJustification(Annotation.VerticalJustify.TOP);
       sNote.addModifier(pm, 0);
     }
-    // ★02-A: 밴딩·해머온·풀오프·슬라이드·비브라토·하모닉 → 오선보 위 텍스트 마커.
-    const tMark = techniqueMark(n);
-    if (tMark && !dead) {
-      const tm = new Annotation(tMark);
+    // ★02-A(고도화): 이음줄/사선/하모닉의 동반 글자 라벨(H·P·sl·harm.), staff-only 밴딩·비브라토 폴백.
+    const tLetter = dead ? null : techniqueLetter(n, withTab);
+    if (tLetter) {
+      const tm = new Annotation(tLetter);
       tm.setVerticalJustification(Annotation.VerticalJustify.TOP);
       sNote.addModifier(tm, 0);
     }
@@ -454,6 +470,11 @@ function buildMeasure(
     // TabNote 는 마지막에 생성(요소 생성 순서 = 기존과 동일 → 단음 산출물 바이트 불변).
     const tNote = new TabNote({ positions: tabPositions, duration: durCode });
     tNote.setStyle({ fillStyle: tabCol, strokeStyle: tabCol });
+    // ★02-A(고도화): 타브측 native 글리프 — 밴딩=벤딩 화살표, 비브라토=물결선.
+    if (withTab && !dead) {
+      if (n.technique === 'bend') tNote.addModifier(new Bend(bendLabel(n.bendTarget)), 0);
+      else if (n.technique === 'vibrato') tNote.addModifier(new Vibrato(), 0);
+    }
 
     // 스트로크: down/up=스트럼(직선+화살표), arpeggio=펼침(물결 브래킷). 오선보·타브 양쪽 부착.
     // (strokes.js: BRUSH=fillRect+arrowhead, ARPEGGIO_DIRECTIONLESS=wiggly, isTabNote 분기 모두 지원.)
@@ -471,6 +492,11 @@ function buildMeasure(
     stave.push(sNote);
     tab.push(tNote);
     tieAfter.push(!!n.tiedToNext);
+    // ★02-A(고도화): 이음줄(hammer/pull)·슬라이드 사선은 다음 음과 연결 → linkAfter 로 표시(render 단계 그림).
+    if (n.technique === 'hammer_on' || n.technique === 'pull_off') linkAfter.push({ kind: 'slur' });
+    else if (n.technique === 'slide')
+      linkAfter.push({ kind: 'slide', dir: n.slideToFret != null ? Math.sign(n.slideToFret - fret) : 1 });
+    else linkAfter.push(null);
 
     // ★02-C 잇단음: 연속된 tuplet 음을 num개씩 묶는다.
     if (n.tuplet) {
@@ -489,7 +515,7 @@ function buildMeasure(
   }
   flush();
   flushTup();
-  return { stave, tab, beams, tieAfter, tuplets };
+  return { stave, tab, beams, tieAfter, tuplets, linkAfter };
 }
 
 /* ---- 본체 ------------------------------------------------------------- */
@@ -523,7 +549,7 @@ export function renderStaff(score: Score, mode: StaffMode): string {
   try {
     // 마디별 tickable 생성 → 전부 비면 빈 SVG
     const built = (tabData.measures as Measure[]).map((m) =>
-      buildMeasure(m, flats, openOf, nStr, beatInt),
+      buildMeasure(m, flats, openOf, nStr, beatInt, withTab),
     );
     if (built.every((b) => b.stave.length === 0)) return emptySvg();
 
@@ -620,8 +646,10 @@ export function renderStaff(score: Score, mode: StaffMode): string {
       const sTick: (StaveNote | BarNote)[] = [];
       const tTick: (TabNote | GhostNote | BarNote)[] = [];
       const beams: StaveNote[][] = [];
-      const flatStave: StaveNote[] = []; // BarNote 제외한 실제 음 순서(붙임줄 인접 판정용)
+      const flatStave: StaveNote[] = []; // BarNote 제외한 실제 음 순서(붙임줄/이음줄 인접 판정용)
+      const flatTab: (TabNote | GhostNote)[] = [];
       const flatTie: boolean[] = [];
+      const flatLink: BuiltMeasure['linkAfter'] = [];
       const tupGroups: { notes: StaveNote[]; num: number; inSpaceOf: number }[] = [];
       rowMeasures.forEach((mb, mi) => {
         if (mi > 0) {
@@ -632,7 +660,9 @@ export function renderStaff(score: Score, mode: StaffMode): string {
         tTick.push(...mb.tab);
         beams.push(...mb.beams);
         flatStave.push(...mb.stave);
+        flatTab.push(...mb.tab);
         flatTie.push(...mb.tieAfter);
+        flatLink.push(...mb.linkAfter);
         tupGroups.push(...mb.tuplets);
       });
       // ★02-C 잇단음: Tuplet 은 format 전에 생성해야 tick 배분이 맞다(생성자가 note tick 을 조정).
@@ -676,6 +706,25 @@ export function renderStaff(score: Score, mode: StaffMode): string {
         })
           .setContext(ctx)
           .draw();
+      }
+      // ★02-A(고도화): 이음줄(hammer/pull=Curve 슬러) · 슬라이드(TabSlide 사선). 행 경계 넘는 연결은 생략.
+      for (let i = 0; i < flatStave.length - 1; i++) {
+        const link = flatLink[i];
+        if (!link) continue;
+        if (link.kind === 'slur') {
+          new Curve(flatStave[i]!, flatStave[i + 1]!, {}).setContext(ctx).draw();
+        } else if (link.kind === 'slide' && withTab) {
+          const a = flatTab[i];
+          const b = flatTab[i + 1];
+          if (a instanceof TabNote && b instanceof TabNote) {
+            new TabSlide(
+              { first_note: a, last_note: b, first_indices: [0], last_indices: [0] },
+              link.dir >= 0 ? TabSlide.SLIDE_UP : TabSlide.SLIDE_DOWN,
+            )
+              .setContext(ctx)
+              .draw();
+          }
+        }
       }
       if (withTab && tabstave) {
         new StaveConnector(stave, tabstave).setType('brace').setContext(ctx).draw();

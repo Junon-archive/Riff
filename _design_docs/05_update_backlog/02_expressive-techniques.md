@@ -74,7 +74,7 @@ owner: null
 
 ## 체크리스트
 
-- [x] A: staff.ts에 bend/hammer_on/pull_off/slide/vibrato/harmonic 렌더 분기 — 2026-07-09. 오선보 위 텍스트 마커(Annotation, 기존 P.M. 관례) H·P·sl·bend·vib·harm. (슬러/벤딩화살표 글리프 고도화는 후속 여지)
+- [x] A: staff.ts에 bend/hammer_on/pull_off/slide/vibrato/harmonic 렌더 분기 — 2026-07-09 (텍스트 마커) → **고도화 완료(2026-07-09): 정식 글리프**. bend=타브 `Bend` 벤딩 화살표(목표 라벨), vibrato=`Vibrato` 물결선, hammer_on/pull_off=`Curve` 이음줄 슬러(+H·P 라벨), slide=`TabSlide` 사선(+sl 라벨). harmonic='harm.' 텍스트(VexFlow 하모닉 글리프 부재로 라벨 유지). staff-only 모드는 밴딩·비브라토도 텍스트 폴백. 인접 연결(슬러·슬라이드)은 tie와 동일한 flat 배열 인접 판정(행 경계 넘는 연결 생략).
 - [x] A: STAFF_TECHNIQUES 완화(구현된 6종 추가) — 2026-07-09
 - [x] B: `tiedToNext` 필드(타입·스키마) + StaveTie 렌더(오선보 곡선, 행 경계 넘는 tie는 생략) — 2026-07-09
 - [x] C: `tuplet:{num,inSpaceOf}` 필드 + Tuplet 렌더 + validateScore 박자합 예외(inSpaceOf/num 환산 + fp 오차 1e-6 허용) — 2026-07-09

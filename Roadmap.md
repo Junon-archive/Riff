@@ -81,6 +81,11 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-09 (백로그 02-A 고도화 — 표현기법 텍스트 마커 → 정식 글리프)
+- **업그레이드:** bend=타브 `Bend`(벤딩 화살표+목표 라벨), vibrato=`Vibrato`(물결선), hammer_on/pull_off=`Curve`(이음줄 슬러)+H·P 라벨, slide=`TabSlide`(사선)+sl 라벨. harmonic는 'harm.' 텍스트 유지(VexFlow 하모닉 글리프 부재). staff-only 모드는 밴딩·비브라토 텍스트 폴백.
+- **구현:** 인접 연결(슬러·슬라이드)은 02-B tie와 동일한 flat 배열 인접 판정(`linkAfter`), 행 경계 넘는 연결 생략. 타브측 native 글리프는 `withTab`일 때만 부착.
+- **기존 무영향:** 기존 116일 staff 경로에 이 6기법 0건 → 변경 전/후 **dist 전체 md5 `31d885e9…` 바이트 동일**. invariants 315블록 회귀 0, astro check 0err, build 361p. 격리 렌더로 6기법 글리프(path 증가) 실동작 확인.
+
 ### 2026-07-09 (백로그 02 완료 — 오선보 표현기법 A·B·C·D)
 - **A 기법 렌더:** staff.ts가 bend·hammer_on·pull_off·slide·vibrato·harmonic를 오선보 위 텍스트 마커(Annotation, 기존 P.M. 관례)로 표기 → `STAFF_TECHNIQUES` 가드를 6종 완화(순서: 렌더 후 완화). (슬러/벤딩화살표 글리프 고도화는 후속 여지.)
 - **B 붙임줄:** `tiedToNext` 필드(타입·스키마) + `StaveTie` 곡선(오선보). 행 경계 넘는 tie는 생략.
