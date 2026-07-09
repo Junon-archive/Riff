@@ -39,7 +39,7 @@ There's exactly one reference point: the **root (R).** Today we dissect a chord 
 ```
 
 - **R (root)** — the G on the 6th, 4th, and 1st strings. The chord's name, and its home.
-- **3 (3rd)** — the B on the 3rd string. The note that sets the chord's **<mark>expression</mark>.** Bright or dark is entirely decided by this **<mark>3rd</mark>**.
+- **3 (3rd)** — the B on the 3rd string. The note that sets **<mark>the chord's expression</mark>.** Bright or dark is entirely decided by this **<mark>3rd</mark>**.
 - **5 (5th)** — the D on the 5th and 2nd strings. A pillar that thickens the chord. It doesn't change the character.
 
 So G major isn't a "complicated six-finger shape" — it's just **the three ingredients R·3·5 placed over a 6th-string root.** Not six unfamiliar dots, but three familiar ingredients — see it that way and a chord suddenly feels light. Today, fully break down by eye where these three notes live. Pay special attention to the **<mark>3rd (B)</mark>.** All week long, **every change happens at just two spots — <mark>the 3rd and the 7th</mark>** — "lower this a half step for minor, add that for a 7." Put this map in your head today, and the next three days are a breeze.
@@ -148,7 +148,7 @@ Put on a "G major backing track" and **repeat Example 2's comping rhythm 4× at 
 **40–50 min · Record & reflect (recommended)**
 Record 30 seconds of your last comp and play it back. Check just one thing: **<mark>are all six strings alive</mark>,** or did one die and choke? If one's dead, just fix that finger's angle tomorrow.
 
-**Done when:** you can ring G major (E-form) cleanly on all six strings, fret and name R·3·5 with your eyes closed, and <mark>repeat Example 2's comping rhythm steadily</mark> at BPM 75.
+**Done when:** you can ring G major (E-form) cleanly on all six strings, fret and name R·3·5 with your eyes closed, and repeat Example 2's comping rhythm steadily at BPM 75.
 
 ## ④ Tips / common mistakes
 

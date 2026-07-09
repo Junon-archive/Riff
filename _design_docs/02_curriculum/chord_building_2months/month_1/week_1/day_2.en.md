@@ -155,7 +155,7 @@ No backing track needed. **Repeat Example 2 at BPM 75 4×** — bar 1 G, bar 2 G
 **40–50 min · Record & reflect (recommended)**
 Record 30 seconds of G ↔ Gm. Check: <mark>does another string die during the switch</mark>, and does the b3 ring clearly? If it mushes, stand the 3rd-string fingertip up more.
 
-**Done when:** you can <mark>switch G ↔ Gm smoothly</mark> using only fret 4↔3 on the 3rd string, and fret the b3 with your eyes closed.
+**Done when:** you can switch G ↔ Gm smoothly using only fret 4↔3 on the 3rd string, and fret the b3 with your eyes closed.
 
 ## ④ Tips / common mistakes
 

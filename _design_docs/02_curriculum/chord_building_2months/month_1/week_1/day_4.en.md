@@ -175,7 +175,7 @@ Distinguish all four chords with just two questions: <mark>"Is the 3rd down? Is 
 **40–50 min · Record & reflect (recommended)**
 Record 30 seconds of one lap of the integration cycle. Check: <mark>does a stray string die when chords change</mark>, and are all four characters clearly distinct?
 
-**Done when:** over one root, you can <mark>cycle G → Gm → G7 → Gm7 smoothly</mark> using only the 3rd- and 4th-string fingers. (Week 1 complete!)
+**Done when:** over one root, you can cycle G → Gm → G7 → Gm7 smoothly using only the 3rd- and 4th-string fingers. (Week 1 complete!)
 
 ## ④ Tips / common mistakes
 

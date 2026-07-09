@@ -11,7 +11,7 @@ i18nKey: "lesson.m1.w1.d3"
 
 Through yesterday, the 3rd split bright (major) from dark (minor). Today we handle a new axis, the **7th** — specifically the **b7 (minor 7th).** Add one b7 to a major chord and you get a **dominant 7 (e.g., G7).** The name sounds grand, but the job is the same as yesterday: just <mark>laying one note on</mark>.
 
-The essence of a dominant 7 is, in a word, **<mark>tension</mark>.** Unlike a major chord that sits there comfortably, once the b7 comes in there's a pull — "I want to go somewhere, I want to resolve fast." That wriggling blues-guitar feel, the stickiness of funk, the thrill of jazz — it all comes from this one b7. Isn't that wild? One note plants <mark>a "want to go"</mark> into the chord.
+The essence of a dominant 7 is, **<mark>in a word, tension</mark>.** Unlike a major chord that sits there comfortably, once the b7 comes in there's a pull — "I want to go somewhere, I want to resolve fast." That wriggling blues-guitar feel, the stickiness of funk, the thrill of jazz — it all comes from this one b7. Isn't that wild? One note plants <mark>a "want to go"</mark> into the chord.
 
 On the fretboard, lower yesterday's G major **4th string, fret 5 (R=G)** to **fret 3 (b7=F)** and you have G7 — leaving the 3rd (3rd string, fret 4, B) alone, moving only the 4th string two frets down. Now this week's picture snaps into focus — **3rd string = <mark>the 3rd (bright/dark) switch</mark>, 4th string = <mark>the 7th (tension) switch</mark>.** Just two strings, two switches. Tomorrow you'll combine them to make four chords at will. Today, just lock in this one 4th-string switch.
 
@@ -151,7 +151,7 @@ Fret **Example 1** and name R·3·5·b7 aloud, then isolate just the **b7 (F)** 
 **40–50 min · Record & reflect (recommended)**
 Record 30 seconds of G ↔ G7. Check: does the **<mark>b7 ring clearly</mark>** (not dead) on G7, and does the switch stay clean?
 
-**Done when:** you can switch G ↔ G7 using only fret 5↔3 on the 4th string, and <mark>fret the b7 with your eyes closed</mark>.
+**Done when:** you can switch G ↔ G7 using only fret 5↔3 on the 4th string, and fret the b7 with your eyes closed.
 
 ## ④ Tips / common mistakes
 
