@@ -637,6 +637,19 @@ function buildDay(weekPath, dayNum, loc, curriculumId) {
     }
   }
 
+  // 악보는 현재 ②시각 자료 섹션에서만 렌더된다. 다른 섹션(①이론/③연습/④팁)의 ```json 블록은
+  // 조용히 증발하므로 경고한다(저작 실수 방지 — 백로그 01 Part B). Part A 도입 시 이 경고는 해제.
+  for (const lang of LANGS) {
+    for (const sec of ['theory', 'practice', 'tips']) {
+      const stray = extractJsonBlocks(sectionsByLang[lang][sec]).length;
+      if (stray > 0) {
+        warn(
+          `[${koFm.dayKey}] ${lang} ${sec} 섹션에 악보 JSON ${stray}개 — 현재 ②시각 자료 섹션 밖 악보는 렌더되지 않고 사라집니다(visual 섹션으로 옮기세요).`,
+        );
+      }
+    }
+  }
+
   // 산문(언어별) HTML
   const prose = {};
   const titles = {};
