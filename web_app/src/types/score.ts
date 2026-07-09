@@ -46,9 +46,9 @@ export interface ScoreMeta {
   title: string;
   titleI18nKey?: string;
   instrument?: 'guitar';
-  /** 표준 6현 고정 */
-  stringCount: 6;
-  /** 6번(저음 E)→1번(고음 e) 순서. 표준 EADGBE. */
+  /** 현 수. 기타=6, 베이스=4·5(6). tuning 길이와 일치. */
+  stringCount: 4 | 5 | 6;
+  /** 최저현→최고현 순서(index0=최저현). 예: 6현 EADGBE, 4현 EADG, 5현 BEADG. 길이=stringCount. */
   tuning?: string[];
   /** 조성/스케일 (예: A minor, A Dorian, C major) */
   key?: string;

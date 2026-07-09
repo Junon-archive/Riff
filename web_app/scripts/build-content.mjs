@@ -162,7 +162,14 @@ function validateScore(score, ctx) {
   if (!SCORE_TYPES.has(score.type)) at(`type 부정확: ${score.type}`);
   if (!score.meta || typeof score.meta !== 'object') at('meta 누락');
   if (typeof score.meta.title !== 'string') at('meta.title 누락');
-  if (score.meta.stringCount !== 6) at('meta.stringCount 는 6 고정');
+  if (![4, 5, 6].includes(score.meta.stringCount)) at(`meta.stringCount 는 4·5·6 만 허용: ${score.meta.stringCount}`);
+  // 유효 현 수(범위검사 상한). 잘못된 값이면 6으로 폴백해 후속 검사 진행.
+  const nStr = [4, 5, 6].includes(score.meta.stringCount) ? score.meta.stringCount : 6;
+  // tuning 이 있으면 길이가 stringCount 와 일치해야 함(음정 계산·타브/지판 줄 수의 전제).
+  if (score.meta.tuning !== undefined) {
+    if (!Array.isArray(score.meta.tuning) || score.meta.tuning.length !== nStr)
+      at(`meta.tuning 길이는 stringCount(${nStr})와 일치해야 함: ${JSON.stringify(score.meta.tuning)}`);
+  }
   if (score.meta.notation !== undefined && !NOTATIONS.has(score.meta.notation))
     at(`meta.notation 부정확: ${score.meta.notation}`);
   // 슬래시 노트헤드 미구현이므로 rhythm(슬래시 악보) 금지. 리듬 컴핑은 staff+tab + chord[] 로 표현한다.
@@ -183,7 +190,7 @@ function validateScore(score, ctx) {
       for (const n of meas.notes) {
         if (typeof n.string !== 'number' || typeof n.fret !== 'number')
           at('note.string/fret 누락');
-        if (!(n.string >= 1 && n.string <= 6)) at(`note.string 범위(1~6) 위반: ${n.string}`);
+        if (!(n.string >= 1 && n.string <= nStr)) at(`note.string 범위(1~${nStr}) 위반: ${n.string}`);
         if (!(n.fret >= 0 && n.fret <= 24)) at(`note.fret 범위(0~24) 위반: ${n.fret}`);
         if (!DURATIONS.has(n.duration)) at(`note.duration 부정확: ${n.duration}`);
         if (n.technique !== undefined && !TECHNIQUES.has(n.technique))
@@ -200,7 +207,7 @@ function validateScore(score, ctx) {
           // 대표음(n)은 그 화음의 최저음 = string 번호가 가장 큼. 같은 string 중복 금지.
           const seenStr = new Set([n.string]);
           for (const ch of n.chord) {
-            if (!(ch.string >= 1 && ch.string <= 6)) at(`chord.string 범위(1~6) 위반: ${ch.string}`);
+            if (!(ch.string >= 1 && ch.string <= nStr)) at(`chord.string 범위(1~${nStr}) 위반: ${ch.string}`);
             if (!(ch.fret >= 0 && ch.fret <= 24)) at(`chord.fret 범위(0~24) 위반: ${ch.fret}`);
             if (ch.role !== undefined && !ROLES.has(ch.role)) at(`chord.role 부정확: ${ch.role}`);
             if (seenStr.has(ch.string)) at(`화음 내 string 중복: ${ch.string}`);
@@ -226,6 +233,11 @@ function validateScore(score, ctx) {
     for (const d of fb.dots) {
       if (typeof d.string !== 'number' || typeof d.fret !== 'number')
         at('dot.string/fret 누락');
+      else if (!(d.string >= 1 && d.string <= nStr)) at(`dot.string 범위(1~${nStr}) 위반: ${d.string}`);
+    }
+    for (const b of Array.isArray(fb.barre) ? fb.barre : []) {
+      if (!(b.fromString >= 1 && b.fromString <= nStr) || !(b.toString >= 1 && b.toString <= nStr))
+        at(`barre string 범위(1~${nStr}) 위반: ${b.fromString}~${b.toString}`);
     }
   }
   return score;

@@ -270,7 +270,12 @@ interface BuiltMeasure {
   beams: StaveNote[][];
 }
 
-function buildMeasure(m: Measure, flats: boolean, openOf: (str: number) => number): BuiltMeasure {
+function buildMeasure(
+  m: Measure,
+  flats: boolean,
+  openOf: (str: number) => number,
+  nStr: number,
+): BuiltMeasure {
   const stave: StaveNote[] = [];
   const tab: (TabNote | GhostNote)[] = [];
   const beams: StaveNote[][] = [];
@@ -302,7 +307,7 @@ function buildMeasure(m: Measure, flats: boolean, openOf: (str: number) => numbe
 
     const s = n.string;
     const fret = n.fret;
-    if (typeof s !== 'number' || s < 1 || s > 6 || typeof fret !== 'number') continue;
+    if (typeof s !== 'number' || s < 1 || s > nStr || typeof fret !== 'number') continue;
 
     const dead = n.technique === 'dead_note';
     const dotted = !!n.dotted;
@@ -417,6 +422,7 @@ export function renderStaff(score: Score, mode: StaffMode): string {
   const flats = preferFlats(score.meta?.key);
   // 개방현 실제음 = meta.tuning 계산(없으면 표준 EADGBE 폴백). ★03② — OPEN_MIDI 하드코딩 대체.
   const openOf = resolveOpenMidi(score.meta);
+  const nStr = score.meta?.stringCount ?? 6; // ★03③ — string 범위 상한(6=기존 불변)
   const [numBeats, beatValue] = (tabData.timeSignature ?? '4/4')
     .split('/')
     .map((x) => parseInt(x, 10));
@@ -426,7 +432,7 @@ export function renderStaff(score: Score, mode: StaffMode): string {
   (globalThis as { document?: Document }).document = doc;
   try {
     // 마디별 tickable 생성 → 전부 비면 빈 SVG
-    const built = (tabData.measures as Measure[]).map((m) => buildMeasure(m, flats, openOf));
+    const built = (tabData.measures as Measure[]).map((m) => buildMeasure(m, flats, openOf, nStr));
     if (built.every((b) => b.stave.length === 0)) return emptySvg();
 
     // 2마디씩 줄(row)로 묶기

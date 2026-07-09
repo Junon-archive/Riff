@@ -18,7 +18,6 @@ const PAD_T = 26;
 const PAD_B = 30; // 프렛 번호 라벨
 const ROW_H = 36; // 현 간격(세로) — 점 위 도수 라벨이 위 현의 점에 가리지 않도록 넉넉히
 const COL_W = 48; // 프렛 간격(가로)
-const N_STR = 6; // 표준 6현 고정
 const DOT_R = 10; // 점 반경(작게) — 위/아래 현 라벨과 겹침 방지
 
 /* ---- 유틸 ------------------------------------------------------------- */
@@ -37,16 +36,17 @@ function warn(msg: string): void {
   }
 }
 
-/** 현 번호(1=고음e … 6=저음E) → 표시 이름. tuning 은 6→1(저E..고e) 순서. */
+/** 현 번호(1=최고음 … n=최저음) → 표시 이름. tuning 은 최저현→최고현(index0=최저) 순서. */
 function stringName(stringNum: number, meta: ScoreMeta): string {
-  const fallback = ['e', 'B', 'G', 'D', 'A', 'E']; // index0=string1(고e)
+  const n = meta.stringCount ?? 6;
+  const fallback = ['e', 'B', 'G', 'D', 'A', 'E']; // 6현 표준(index0=string1 고e)
   const tuning = meta.tuning;
-  if (Array.isArray(tuning) && tuning.length === N_STR) {
-    // tuning[0]=6번(저E) … tuning[5]=1번(고e) → 현 번호 s 의 이름 = tuning[6-s]
-    const raw = tuning[N_STR - stringNum];
+  if (Array.isArray(tuning) && tuning.length === n) {
+    // tuning[0]=최저현(n번) … 현 번호 s 의 이름 = tuning[n-s]
+    const raw = tuning[n - stringNum];
     if (typeof raw === 'string' && raw.length > 0) {
-      // 1번 현은 관례상 소문자 e
-      return stringNum === 1 ? raw.toLowerCase() : raw;
+      // 6현 기타 관례: 1번 현(고음 e)만 소문자. 베이스(4·5현)는 대문자 그대로.
+      return n === 6 && stringNum === 1 ? raw.toLowerCase() : raw;
     }
   }
   return fallback[stringNum - 1] ?? '?';
@@ -80,6 +80,7 @@ function dotStyle(dot: Dot): { fill: string; text: string; outlined: boolean } {
 export function renderFretboard(score: Score): string {
   const fb = score.fretboard;
   const title = score.meta?.title ?? 'fretboard diagram';
+  const n = score.meta?.stringCount ?? 6; // 현 수(6=기존 불변, 4·5=베이스)
 
   if (!fb) {
     warn(`score ${score.id}: fretboard 데이터 없음`);
@@ -100,7 +101,7 @@ export function renderFretboard(score: Score): string {
   const lastFret = firstFret + nCells - 1;
 
   const W = PAD_L + COL_W * nCells + PAD_R;
-  const H = PAD_T + ROW_H * (N_STR - 1) + PAD_B;
+  const H = PAD_T + ROW_H * (n - 1) + PAD_B;
 
   // 좌표 계산기
   const sy = (stringNum: number): number => PAD_T + (stringNum - 1) * ROW_H; // 1=top
@@ -114,7 +115,7 @@ export function renderFretboard(score: Score): string {
 
   /* ---- 프렛 라인(세로) + 프렛 번호 ---- */
   const topY = sy(1);
-  const botY = sy(N_STR);
+  const botY = sy(n);
   for (let c = 0; c <= nCells; c++) {
     const x = fx(c);
     if (c === 0 && hasNut) {
@@ -137,9 +138,9 @@ export function renderFretboard(score: Score): string {
   }
 
   /* ---- 현(가로선) + 현 이름 ---- */
-  for (let s = 1; s <= N_STR; s++) {
+  for (let s = 1; s <= n; s++) {
     const y = sy(s);
-    // 저음현(6)일수록 두껍게
+    // 저음현(번호 큰 현)일수록 두껍게
     const sw = (1.0 + (s - 1) * 0.18).toFixed(2);
     parts.push(
       `<line x1="${fx(0)}" y1="${y}" x2="${W - PAD_R}" y2="${y}" stroke="currentColor" stroke-width="${sw}" opacity="0.3"/>`,
@@ -156,7 +157,7 @@ export function renderFretboard(score: Score): string {
       warn(`score ${score.id}: barre fret ${b.fret} 가 표시 범위(${firstFret}~${lastFret}) 밖`);
       continue;
     }
-    if (b.fromString < 1 || b.fromString > 6 || b.toString < 1 || b.toString > 6) {
+    if (b.fromString < 1 || b.fromString > n || b.toString < 1 || b.toString > n) {
       warn(`score ${score.id}: barre string 범위 밖 (${b.fromString}~${b.toString})`);
       continue;
     }
@@ -178,8 +179,8 @@ export function renderFretboard(score: Score): string {
   for (const dot of dots) {
     const s = dot.string;
     const f = dot.fret;
-    if (typeof s !== 'number' || s < 1 || s > 6) {
-      warn(`score ${score.id}: dot string ${s} 범위 밖(1~6) — 스킵`);
+    if (typeof s !== 'number' || s < 1 || s > n) {
+      warn(`score ${score.id}: dot string ${s} 범위 밖(1~${n}) — 스킵`);
       continue;
     }
     const y = sy(s);

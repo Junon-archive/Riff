@@ -19,13 +19,13 @@
         "title": { "type": "string" },
         "titleI18nKey": { "type": "string", "description": "제목 다국어 키(선택)" },
         "instrument": { "type": "string", "enum": ["guitar"], "default": "guitar" },
-        "stringCount": { "type": "integer", "enum": [6], "default": 6, "description": "표준 6현 고정" },
+        "stringCount": { "type": "integer", "enum": [4, 5, 6], "default": 6, "description": "현 수. 기타=6, 베이스=4·5(6). tuning 길이와 일치해야 함(검증기 강제)." },
         "tuning": {
           "type": "array",
-          "description": "6번(저음 E)→1번(고음 e) 순서. 표준 EADGBE. (고음현도 'E' 대문자로 표기)",
+          "description": "최저현→최고현 순서(index0=최저현, 예: 6현 기타 EADGBE, 4현 베이스 EADG, 5현 베이스 BEADG). 길이=stringCount. (고음현도 대문자로 표기)",
           "items": { "type": "string" },
           "default": ["E", "A", "D", "G", "B", "E"],
-          "minItems": 6,
+          "minItems": 4,
           "maxItems": 6
         },
         "key": { "type": "string", "description": "조성/스케일 (예: A minor, A Dorian, C major)" },

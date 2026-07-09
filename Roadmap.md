@@ -81,6 +81,14 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-09 (백로그 03③ — 다현 일반화 + 지판 다현화: stringCount 4·5·6, tab·fretboard·검증기·타입·스키마)
+- **범위:** 6현 하드코딩을 stringCount(4·5·6) 구동으로 일반화 — 스키마(`stringCount` enum·`tuning` minItems 4·description), 타입(`score.ts` `stringCount: 4|5|6`), 검증기(`build-content.mjs` stringCount 집합·**tuning 길이=stringCount**·note/chord/dot/barre string 범위 1~stringCount), `tab.ts`(줄 수·현이름·범위), `fretboard.ts`(N_STR→n·현이름·좌표·굵기·범위), `staff.ts`(string 범위 상한). **fretboard.ts 다현화 = 승인받은 03③/10-B4 통합.**
+- **현이름 규약:** 6현은 기존 관례 `e,B,G,D,A,E`(고음 e 소문자) 그대로 반환 → 바이트 불변. 4·5현은 `meta.tuning`(index0=최저현)에서 파생(대문자), 예: 4현 EADG→`G,D,A,E`, 5현 BEADG→`G,D,A,E,B`.
+- **기존 무영향 증명:** 변경 전/후 **dist 전체 md5 `31d885e9…` 바이트 완전 동일**(기존 116일 전부 stringCount=6 → 모든 분기가 6일 때 기존 수식으로 환원). `check-invariants` 315블록 회귀 0, astro check 0 errors, build 361p.
+- **신기능 실동작 확인:** 격리 렌더로 4·5·6현 각각 타브 줄 수(4/5/6)·현이름·지판 현 수 정확, 4현 오선보 정상 생성.
+- **범위 밖(다음):** 베이스 클레프(bass clef 8vb)·slap(T/P)·instrument enum·베이스 튜닝 기본값 = 10 베이스 엔진(B1·B2·B3). 조표 = 03①. (지판 다현화가 03③에 포함되며 완료돼 10-B4 대부분 선반영됨.)
+- **다음:** 02(표현기법 오선보) → 10(베이스 엔진 B1~B3) → 커리큘럼 저작.
+
 ### 2026-07-09 (백로그 03② — 튜닝 무시 잠재 버그 수정: staff.ts가 meta.tuning 읽어 음정 계산)
 - **배경:** `staff.ts`가 `OPEN_MIDI`(EADGBE) 하드코딩으로 `meta.tuning`을 무시 → Drop-D/DADGAD 등 비표준 튜닝 커리큘럼이 오면 오선보 음정이 **조용히 틀리게** 그려질 잠재 버그(Zero-Hallucination 위반). 모든 다현·베이스 작업의 하드 선행.
 - **수정:** `resolveOpenMidi(meta)` 추가 — 현 이름 배열을 각 현 표준 개방음 anchor에 **±6반음 최근접 옥타브**로 해석해 개방현 MIDI 계산(Drop-D=D2 등 자연 정합). tuning 없거나 stringCount와 길이 불일치면 표준 폴백. `pitchOf`·음역 스캔의 `OPEN_MIDI[str]`를 이 함수로 대체.

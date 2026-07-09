@@ -1,6 +1,6 @@
 ---
 id: 03-notation-accuracy
-status: IN_PROGRESS (② 튜닝 수정 완료 2026-07-09 — ① 조표·③ 다현+지판 대기)
+status: IN_PROGRESS (②③ 완료 2026-07-09 — 튜닝 수정 + 다현 일반화(타브·지판·검증기·타입·스키마) — ① 조표만 대기)
 priority: medium
 risk: high
 depends_on: []          # 문서 내부 순서: 튜닝 → 6현일반화. 조표는 독립.
@@ -84,10 +84,11 @@ owner: null
 - [ ] ① meta.keySignature 필드 + staff.ts addKeySignature
 - [x] ② staff.ts 가 meta.tuning 읽어 음정 계산 (`resolveOpenMidi`로 OPEN_MIDI 하드코딩 대체) — 2026-07-09. tab.ts 현이름 파생은 ③으로 이월(대소문자 불변 이슈)
 - [x] ② 골든 스냅샷 기존 6현 픽셀 불변 확인 — dist 전체 md5 before==after(`31d885e9…`), invariants 315블록 회귀 0, Drop-D 격리 렌더로 튜닝 반영 확인
-- [ ] ③ stringCount 리터럴6 → 집합 (타입·스키마·검증기)
-- [ ] ③ 타브 줄 수·string 범위 stringCount 구동
-- [ ] ③ **fretboard.ts 다현화**(N_STR→stringCount, 현이름=tuning, 좌표·굵기 일반화) — 승인 완료
-- [ ] ③ 골든 스냅샷 기존 6현 **지판** 픽셀 불변 확인
+- [x] ③ stringCount 리터럴6 → 집합(4·5·6) (타입 `score.ts`·스키마·검증기 `build-content.mjs`) — 2026-07-09. + tuning 길이=stringCount 검증 추가
+- [x] ③ 타브(`tab.ts`) 줄 수·현이름·string 범위 stringCount/tuning 구동 (6현 이름 `e,B,G,D,A,E` 관례 유지, 4·5현은 tuning 파생)
+- [x] ③ **fretboard.ts 다현화**(N_STR→stringCount, 현이름=tuning, 소문자 e는 6현만, 좌표·굵기·범위 일반화) — 승인 완료·구현 완료
+- [x] ③ staff.ts string 범위(`s>6`)도 stringCount 구동
+- [x] ③ 골든 스냅샷 기존 6현 **오선보·지판·타브** 픽셀 불변 확인 — dist 전체 md5 `31d885e9…` before==after, invariants 315블록 회귀 0, 4·5현 픽스처 렌더 정상(타브 4/5줄·이름·지판)
 - [ ] V1~V5 통과 + Roadmap·이 문서 갱신
 
 ## 미해결 질문 (사람 결정)

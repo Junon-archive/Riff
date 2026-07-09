@@ -10,10 +10,23 @@
  *    vibrato(물결), palm_mute(P.M.), harmonic(⟨⟩).
  *  - 색: currentColor + CSS 변수(다크모드 자동), 좌표는 수학적으로 계산.
  */
-import type { Score, TabNote, Measure, NoteRole } from '../types/score';
+import type { Score, TabNote, Measure, NoteRole, ScoreMeta } from '../types/score';
 
 /* ---- 기하 상수 -------------------------------------------------------- */
-const N_STR = 6;
+const STD6_NAMES = ['e', 'B', 'G', 'D', 'A', 'E']; // index0=1번현(고음 e) … 5=6번현(저음 E)
+/**
+ * 타브 현 이름(display, index0=최상단=1번현 최고음 … n-1=최하단=최저음).
+ * 6현은 기존 관례(고음 e 소문자)를 그대로 반환 → 바이트 불변.
+ * 4·5현은 meta.tuning(index0=최저현)에서 파생(대문자). tuning 없으면 표준 상위 n개 폴백.
+ */
+function tabStringNames(meta: ScoreMeta | undefined, n: number): string[] {
+  if (n === 6) return STD6_NAMES;
+  const tuning = meta?.tuning;
+  if (Array.isArray(tuning) && tuning.length === n) {
+    return Array.from({ length: n }, (_, i) => String(tuning[n - 1 - i]));
+  }
+  return STD6_NAMES.slice(6 - n);
+}
 const LABEL_W = 22; // 현 이름 거터
 const PAD_L = 14;
 const PAD_R = 20;
@@ -78,6 +91,8 @@ function accentColor(note: TabNote): string {
 export function renderTab(score: Score): string {
   const tab = score.tab;
   const title = score.meta?.title ?? 'tab notation';
+  const nStr = score.meta?.stringCount ?? 6; // 현 수(6=기존 불변, 4·5=베이스)
+  const botI = nStr - 1; // 최하단 줄 index
 
   if (!tab || !Array.isArray(tab.measures)) {
     warn(`score ${score.id}: tab 데이터 없음`);
@@ -107,8 +122,8 @@ export function renderTab(score: Score): string {
         continue;
       }
       const s = note.string;
-      if (typeof s !== 'number' || s < 1 || s > 6) {
-        warn(`score ${score.id}: tab note string ${s} 범위 밖(1~6) — 스킵(폭은 유지)`);
+      if (typeof s !== 'number' || s < 1 || s > nStr) {
+        warn(`score ${score.id}: tab note string ${s} 범위 밖(1~${nStr}) — 스킵(폭은 유지)`);
         cursor += w;
         continue;
       }
@@ -119,7 +134,7 @@ export function renderTab(score: Score): string {
   });
 
   const W = cursor + PAD_R;
-  const H = HEAD_T + ROW_H * (N_STR - 1) + FOOT_B;
+  const H = HEAD_T + ROW_H * botI + FOOT_B;
 
   const parts: string[] = [];
   parts.push(
@@ -136,25 +151,25 @@ export function renderTab(score: Score): string {
     );
   }
 
-  /* ---- 3) 6줄 + 현 이름 ---- */
-  const names = ['e', 'B', 'G', 'D', 'A', 'E']; // i0..5
-  for (let i = 0; i < N_STR; i++) {
+  /* ---- 3) n줄 + 현 이름 ---- */
+  const names = tabStringNames(score.meta, nStr); // i0..(nStr-1)
+  for (let i = 0; i < nStr; i++) {
     const y = lineY(i);
     parts.push(
       `<line x1="${startX}" y1="${y}" x2="${W - PAD_R}" y2="${y}" stroke="currentColor" stroke-width="1.2" opacity="0.3"/>`,
     );
     parts.push(
-      `<text x="${PAD_L}" y="${y + 4}" font-size="12" font-weight="700" fill="currentColor" opacity="0.5">${names[i]}</text>`,
+      `<text x="${PAD_L}" y="${y + 4}" font-size="12" font-weight="700" fill="currentColor" opacity="0.5">${esc(names[i] ?? '')}</text>`,
     );
   }
   // 좌측 세로 마감선
   parts.push(
-    `<line x1="${startX}" y1="${lineY(0)}" x2="${startX}" y2="${lineY(5)}" stroke="currentColor" stroke-width="1.6" opacity="0.4"/>`,
+    `<line x1="${startX}" y1="${lineY(0)}" x2="${startX}" y2="${lineY(botI)}" stroke="currentColor" stroke-width="1.6" opacity="0.4"/>`,
   );
   // 마디선
   for (const bx of barX) {
     parts.push(
-      `<line x1="${bx}" y1="${lineY(0)}" x2="${bx}" y2="${lineY(5)}" stroke="currentColor" stroke-width="1.2" opacity="0.35"/>`,
+      `<line x1="${bx}" y1="${lineY(0)}" x2="${bx}" y2="${lineY(botI)}" stroke="currentColor" stroke-width="1.2" opacity="0.35"/>`,
     );
   }
 
@@ -246,7 +261,7 @@ export function renderTab(score: Score): string {
     // 강조 노트: 하단에 label(도수/음이름)
     if (n.label && emphasized) {
       parts.push(
-        `<text x="${p.x}" y="${lineY(5) + 15}" text-anchor="middle" font-size="9" font-weight="700" fill="${col}">${esc(n.label)}</text>`,
+        `<text x="${p.x}" y="${lineY(botI) + 15}" text-anchor="middle" font-size="9" font-weight="700" fill="${col}">${esc(n.label)}</text>`,
       );
     }
     // dotted 점 표기
