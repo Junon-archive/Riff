@@ -187,8 +187,7 @@ function validateScore(score, ctx) {
   }
   if (score.meta.notation !== undefined && !NOTATIONS.has(score.meta.notation))
     at(`meta.notation 부정확: ${score.meta.notation}`);
-  // 슬래시 노트헤드 미구현이므로 rhythm(슬래시 악보) 금지. 리듬 컴핑은 staff+tab + chord[] 로 표현한다.
-  if (score.meta.notation === 'rhythm') at('meta.notation:"rhythm" 미지원(슬래시 노트헤드 미구현) — staff+tab 사용');
+  // ★04 rhythm(슬래시 리듬 악보): staff.ts 자체 슬래시 바 path 로 구현 → 허용(구 차단 해제 2026-07-09).
   if (score.meta.keySignature !== undefined && !KEY_SIGNATURES.has(score.meta.keySignature))
     at(`meta.keySignature 부정확(VexFlow 조 이름 아님): ${score.meta.keySignature}`);
   if (score.meta.feel !== undefined && !FEELS.has(score.meta.feel))

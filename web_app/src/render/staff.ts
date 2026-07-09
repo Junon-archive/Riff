@@ -360,6 +360,8 @@ interface BuiltMeasure {
   tuplets: { notes: StaveNote[]; num: number; inSpaceOf: number }[];
   /** stave[i]→[i+1] 연결(★02-A 고도화): 이음줄(hammer/pull) 또는 슬라이드 사선. stave 와 같은 길이. */
   linkAfter: (null | { kind: 'slur' } | { kind: 'slide'; dir: number })[];
+  /** 슬래시 리듬(★04): 노트헤드 숨긴 리듬 음 → 가운데 줄에 커스텀 슬래시 바 오버레이 대상. */
+  slashes: { note: StaveNote; open: boolean }[];
 }
 
 function buildMeasure(
@@ -369,12 +371,14 @@ function buildMeasure(
   nStr: number,
   beatInt: number,
   withTab: boolean,
+  rhythm: boolean,
 ): BuiltMeasure {
   const stave: StaveNote[] = [];
   const tab: (TabNote | GhostNote)[] = [];
   const beams: StaveNote[][] = [];
   const tieAfter: boolean[] = [];
   const linkAfter: BuiltMeasure['linkAfter'] = [];
+  const slashes: BuiltMeasure['slashes'] = [];
   const tuplets: { notes: StaveNote[]; num: number; inSpaceOf: number }[] = [];
   let curTup: StaveNote[] = [];
   let curTupSpec: { num: number; inSpaceOf: number } | null = null;
@@ -409,6 +413,30 @@ function buildMeasure(
       tab.push(new GhostNote(durCode));
       tieAfter.push(false);
       linkAfter.push(null);
+      pos += unit;
+      if (pos % beatInt === 0) flush();
+      continue;
+    }
+
+    // ★04 슬래시 리듬: 음정 무시, 가운데 줄(b/4)에 노트헤드 숨긴 리듬 음 → 슬래시 바 오버레이.
+    if (rhythm) {
+      const durTok = durCode + (n.dotted ? 'd' : '');
+      const rNote = new StaveNote({ keys: ['b/4'], duration: durTok });
+      if (n.dotted) Dot.buildAndAttach([rNote], { all: true });
+      rNote.setKeyStyle(0, { fillStyle: 'transparent', strokeStyle: 'transparent' }); // 노트헤드 숨김
+      rNote.setStemDirection(Stem.UP);
+      if (n.chordSymbol) {
+        const cs = new ChordSymbol();
+        cs.addText(n.chordSymbol);
+        rNote.addModifier(cs, 0);
+      }
+      stave.push(rNote);
+      tab.push(new GhostNote(durCode)); // 배열 정합용(rhythm 은 타브 미표시)
+      tieAfter.push(false);
+      linkAfter.push(null);
+      slashes.push({ note: rNote, open: n.duration === 'half' || n.duration === 'whole' });
+      if (n.duration === 'eighth' || n.duration === 'sixteenth') curBeam.push(rNote);
+      else flush();
       pos += unit;
       if (pos % beatInt === 0) flush();
       continue;
@@ -540,14 +568,14 @@ function buildMeasure(
   }
   flush();
   flushTup();
-  return { stave, tab, beams, tieAfter, tuplets, linkAfter };
+  return { stave, tab, beams, tieAfter, tuplets, linkAfter, slashes };
 }
 
 /* ---- 본체 ------------------------------------------------------------- */
 export function renderStaff(score: Score, mode: StaffMode): string {
   const title = score.meta?.title ?? 'staff notation';
-  // rhythm = 컴핑 리듬 악보: 타브 미표시(오선보만) + 코드심볼. (리듬 슬래시 노트헤드는 VexFlow 4.2.5
-  //   폰트에 없어 보류 — 현재는 실제 음정 노트헤드로 렌더. 향후 커스텀 슬래시 도입 가능.)
+  // rhythm = 컴핑 리듬 악보: 타브 미표시(오선보만) + 코드심볼. ★04: 노트헤드를 숨기고 가운데 줄에
+  //   자체 슬래시 바(path)를 오버레이(VexFlow 4.2.5 폰트에 rhythm slash 글리프 없음 → 자체 구현).
   const withTab = mode === 'staff+tab';
   const tabData = score.tab;
 
@@ -577,8 +605,9 @@ export function renderStaff(score: Score, mode: StaffMode): string {
   (globalThis as { document?: Document }).document = doc;
   try {
     // 마디별 tickable 생성 → 전부 비면 빈 SVG
+    const isRhythm = mode === 'rhythm';
     const built = (tabData.measures as Measure[]).map((m) =>
-      buildMeasure(m, flats, openOf, nStr, beatInt, withTab),
+      buildMeasure(m, flats, openOf, nStr, beatInt, withTab, isRhythm),
     );
     if (built.every((b) => b.stave.length === 0)) return emptySvg();
 
@@ -679,6 +708,7 @@ export function renderStaff(score: Score, mode: StaffMode): string {
       const flatTab: (TabNote | GhostNote)[] = [];
       const flatTie: boolean[] = [];
       const flatLink: BuiltMeasure['linkAfter'] = [];
+      const flatSlashes: BuiltMeasure['slashes'] = [];
       const tupGroups: { notes: StaveNote[]; num: number; inSpaceOf: number }[] = [];
       rowMeasures.forEach((mb, mi) => {
         if (mi > 0) {
@@ -692,6 +722,7 @@ export function renderStaff(score: Score, mode: StaffMode): string {
         flatTab.push(...mb.tab);
         flatTie.push(...mb.tieAfter);
         flatLink.push(...mb.linkAfter);
+        flatSlashes.push(...mb.slashes);
         tupGroups.push(...mb.tuplets);
       });
       // ★02-C 잇단음: Tuplet 은 format 전에 생성해야 tick 배분이 맞다(생성자가 note tick 을 조정).
@@ -753,6 +784,23 @@ export function renderStaff(score: Score, mode: StaffMode): string {
               .setContext(ctx)
               .draw();
           }
+        }
+      }
+      // ★04 슬래시 리듬: 노트헤드 숨긴 리듬 음 위치(가운데 줄)에 커스텀 슬래시 바(자체 path).
+      if (isRhythm && flatSlashes.length) {
+        const midY = stave.getYForLine(2); // b/4 = 가운데 줄
+        const hw = 5.5;
+        const hh = 6.5;
+        for (const { note, open } of flatSlashes) {
+          const cx = note.getAbsoluteX();
+          ctx.save();
+          ctx.setLineWidth(open ? 2.2 : 4.6);
+          ctx.setStrokeStyle('currentColor');
+          ctx.beginPath();
+          ctx.moveTo(cx - hw, midY + hh);
+          ctx.lineTo(cx + hw, midY - hh);
+          ctx.stroke();
+          ctx.restore();
         }
       }
       if (withTab && tabstave) {

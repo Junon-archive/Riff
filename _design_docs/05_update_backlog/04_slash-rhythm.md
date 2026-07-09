@@ -1,6 +1,6 @@
 ---
 id: 04-slash-rhythm
-status: TODO
+status: DONE (자체 슬래시 바 path 렌더 + rhythm 차단 해제, 기존 바이트 불변, 2026-07-09)
 priority: low
 risk: medium
 depends_on: []
@@ -53,12 +53,12 @@ owner: null
 
 ## 체크리스트
 
-- [ ] 슬래시 노트헤드 커스텀 글리프 렌더 (staff.ts)
-- [ ] chordSymbol 슬래시 위 병기 + 겹침/높이 실측
-- [ ] render/index.ts rhythm 라우팅 연결
-- [ ] build-content.mjs:141 rhythm 차단 해제
-- [ ] playbook 8규칙의 "rhythm/슬래시 금지" 문구 갱신
-- [ ] V1~V3 통과 + Roadmap·이 문서 갱신
+- [x] 슬래시 노트헤드 커스텀 글리프 렌더 (staff.ts) — 2026-07-09. VexFlow 폰트에 rhythm slash 글리프 없음 확인 → 노트헤드 투명 처리 + 가운데 줄에 자체 슬래시 바(ctx path, 채움=quarter+/열림=half·whole). 스템·빔·간격은 VexFlow가 처리
+- [x] chordSymbol 슬래시 위 병기 — 기존 ChordSymbol modifier 재사용
+- [x] render/index.ts rhythm 라우팅 연결 — 이미 `renderStaff(score,'rhythm')` 라우팅 존재
+- [x] build-content rhythm 차단 해제 — 2026-07-09
+- [x] playbook 8규칙 "rhythm/슬래시 금지" 문구 갱신 — 지원됨으로 수정(§8), 09 참조도 갱신
+- [x] V1~V3 통과 — dist md5 `31d885e9…` before==after(기존 불변), invariants 315블록 회귀 0, rhythm 픽스처로 슬래시 바 5개·코드심볼·투명 노트헤드 확인
 
 ## 미해결 질문 (사람 결정)
 
