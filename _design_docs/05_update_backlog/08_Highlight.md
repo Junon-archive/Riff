@@ -1,6 +1,6 @@
 ---
 id: 08-highlight
-status: IN_PROGRESS (Phase 0·1 완료, Phase 2 파일럿 1개월 1주 완료 — 나머지 배치 대기)
+status: DONE (Phase 0·1·2 전량 완료 — chord·funk·solo 3커리큘럼 intro 3종 + day 116개 × 3언어 하이라이트 적용, 2026-07-09)
 priority: medium
 risk: low
 depends_on: []
@@ -135,12 +135,14 @@ depends_on: []
 **Phase 2 — 실행(배치)**
 - [x] chord_building intro 1종 × 3언어 (하이라이트+볼드, A방식 재적용) — 2026-07-09, ko는 파일럿에서 A방식 적용됨; en/ja를 A방식으로 신규 반영(문단당 볼드+하이라이트 겹침 1개 — 8-week chord-building system / voice-leading / record your own comping 등가 3언어)
 - [x] chord_building month_1/week_1 (day 1~4) × 3언어 (하이라이트, A방식 재적용) — 2026-07-09, 구 B방식(볼드 회피·술어 절단) 파일럿을 폐기하고 A방식(볼드 겹침 허용 + 명사구 우선 문법 경계)으로 12파일 전체 재작성. day별 `<mark>` 개수: day1=16/16/16, day2=15/15/15, day3=15/15/15, day4=15/15/15(ko/en/ja). 악보 JSON 블록 3언어 바이트 HEAD 대비 불변 확인, `<mark></mark>` 태그 balance 확인, check-invariants 315블록 회귀 0.
-- [ ] chord_building 나머지 28 day × 3언어 (하이라이트, A방식) — 남은 7주
-- [ ] solo_scale intro 1종 × 3언어 + 52 day × 3언어 (하이라이트) — 주 단위 배치
-- [ ] funk_rhythm intro 1종 × 3언어 + 32 day × 3언어 (하이라이트) — 주 단위 배치
-- [x] V1~V3 통과(파일럿 범위) + Roadmap·이 문서 갱신 — 2026-07-09
+- [x] chord_building 나머지 28 day × 3언어 (하이라이트, A방식) — 2026-07-09, month_1/week_2~4 + month_2/week_5~8 전체 7주 완료. day별 `<mark>` 개수(ko/en/ja 항상 일치): w2d1=10 d2=11 d3=13 d4=10 / w3d1=9 d2=9 d3=8 d4=10 / w4d1=12 d2=10 d3=10 d4=12 / w5d1=11 d2=12 d3=14 d4=11 / w6d1=12 d2=11 d3=11 d4=12 / w7d1=9 d2=11 d3=11 d4=13 / w8d1=12 d2=11 d3=12 d4=15. 검증: 84파일 전부 ④섹션 0개·완료기준 줄 0개·`<mark></mark>` 균형·악보 JSON 블록 HEAD 대비 바이트 불변(git diff 확인) 통과. `npm run build` 361p 성공, `check-invariants.mjs` 315블록 회귀 0.
+- [x] funk_rhythm intro 1종 × 3언어 + 32 day × 3언어 (하이라이트) — 2026-07-09 완료. intro(3언어 각 5개) + week_1~8 전 32일. day별 `<mark>` 3언어 일치(11~16). 에이전트 세션 한도로 week_6/day_3 ja가 8/13에서 끊긴 것을 이어받아 13으로 복구, 나머지 9일(w6d4·w7·w8) 재위임 완료. ④=0·완료기준줄=0·악보블록 바이트불변.
+- [x] solo_scale intro 1종 × 3언어 + 52 day × 3언어 (하이라이트) — 2026-07-09 완료. intro(3언어 각 6개) + week_0~12 전 52일. day별 `<mark>` 3언어 일치(11~14). week_6/day_2 ja가 0/12에서 끊긴 것을 이어받아 12로 복구, 나머지 26일(w6d3~4·w7~8·month_3 w9~12) 재위임 완료. ④=0·완료기준줄=0·악보블록 바이트불변.
+- [x] V1~V3 통과(전 범위) + Roadmap·이 문서 갱신 — 2026-07-09. 최종 전수 검증: 3커리큘럼 116일 전량 3언어 mark 패리티·`<mark>` balance·④섹션 0·완료기준줄 0·악보 JSON 바이트불변, `npm run build` 361p, `check-invariants.mjs` 315블록 회귀 0. 총 `<mark>` 4182개.
 
-## 미해결 질문 (사람 결정)
+## 미해결 질문 (사람 결정) — ✅ 전부 해결됨(2026-07-09)
+
+> 아래 질문은 파일럿·레시피 동결 과정에서 모두 확정됐다. **하늘색**=`--prose-hl`(blue-500 20% 라이트/30% 다크, 스코어 `--highlight` 초록과 분리) · **토큰 전략**=신규 `--prose-hl` · **intro 저장**=`inline()` 포매터로 `**…**`·`<mark>` 변환 · **밀도**=문단당 1~2개(병렬 논점 문단은 논점마다) · **볼드/하이라이트**=겹침 허용(A방식) · **파일럿 범위**=chord_building intro+월1주1 · **배치 단위**=주. 기록 보존용으로 원문 질문을 남긴다.
 
 - **하늘색 정확한 값** — `#E8F3FF`(blue-50) 그대로 vs 더 연하게/진하게. 다크모드 대응 값.
 - **토큰 전략** — 신규 `--prose-hl`(권장, 스코어 초록과 분리) vs `--highlight` 재정의(color_legend까지 갱신해야 함).
