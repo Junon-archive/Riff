@@ -103,8 +103,75 @@ i18nKey: "lesson.m3.w12.d1"
 **0~10분 · 워밍업 (BPM 92) — 4연음 시퀀스로 손 데우기**
 메트로놈 92(우리 곡 템포)에 맞춰, '하나의 집' 포지션 안에서 4연음 시퀀스를 굴려요. 6번 줄부터 한 줄에 4음씩(예: 5·7·8·... 다음 줄로) 16분음표로 올라갔다 내려와요. 상하행 통암기 아니고, "네 개씩 묶어서 굴린다"는 감각만. 손가락이 5~9프렛 자리에 자연스럽게 눕도록.
 
+```json
+{
+  "id": "m3.w12.d1.composite_position",
+  "type": "scale_shape",
+  "meta": {
+    "title": "A composite position (Dorian + Mixolydian merged, frets 5-9)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A (Dorian/Mixolydian composite)",
+    "scale": "A Dorian + A Mixolydian",
+    "tempoBpm": 92
+  },
+  "fretboard": {
+    "startFret": 5,
+    "fretSpan": 5,
+    "dots": [
+      { "string": 6, "fret": 5, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 6, "fret": 7, "finger": 3, "label": "2", "role": "scale" },
+      { "string": 6, "fret": 8, "finger": 4, "label": "b3", "role": "target", "highlight": true },
+      { "string": 5, "fret": 5, "finger": 1, "label": "4", "role": "scale" },
+      { "string": 5, "fret": 7, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 5, "fret": 9, "finger": 4, "label": "6", "role": "color", "highlight": true },
+      { "string": 4, "fret": 5, "finger": 1, "label": "b7", "role": "color", "highlight": true },
+      { "string": 4, "fret": 7, "finger": 3, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 5, "finger": 1, "label": "b3", "role": "target", "highlight": true },
+      { "string": 3, "fret": 6, "finger": 2, "label": "3", "role": "target", "highlight": true },
+      { "string": 3, "fret": 7, "finger": 3, "label": "4", "role": "scale" },
+      { "string": 2, "fret": 5, "finger": 1, "label": "5", "role": "chord_tone" },
+      { "string": 2, "fret": 7, "finger": 3, "label": "6", "role": "color", "highlight": true },
+      { "string": 2, "fret": 8, "finger": 4, "label": "b7", "role": "color", "highlight": true },
+      { "string": 1, "fret": 5, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 1, "fret": 8, "finger": 4, "label": "b3", "role": "target", "highlight": true },
+      { "string": 1, "fret": 9, "finger": 4, "label": "3", "role": "target", "highlight": true }
+    ]
+  }
+}
+```
+
 **10~20분 · 두뇌 훈련 (착지점 지도 각인) — 악기 내려놓고 시작**
 첫 번째 지도를 보며 소리 내서 외워요. "Am7이면 C, D7이면 F#, A7이면 C#." 그다음 기타를 들고 백킹 없이 코드 이름만 스스로 불러요. "Am7!" 하고 C(3번 5프렛) 짚고, "D7!" 하고 F#(2번 7프렛) 짚고, "A7!" 하고 C#(3번 6프렛) 짚고. **C와 C#이 한 프렛 차이**라는 걸 손끝으로 확인하는 게 오늘의 하이라이트.
+
+```json
+{
+  "id": "m3.w12.d1.original_solo_target_tones",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "Original solo - key target tones (Dorian + Mixolydian composite)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "scale": "Composite (Dorian + Mixolydian)",
+    "tempoBpm": 92
+  },
+  "fretboard": {
+    "startFret": 5,
+    "fretSpan": 8,
+    "dots": [
+      { "string": 4, "fret": 7, "finger": 3, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 1, "fret": 5, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 5, "finger": 1, "label": "b3", "role": "target", "highlight": true },
+      { "string": 1, "fret": 8, "finger": 4, "label": "b3", "role": "target", "highlight": true },
+      { "string": 3, "fret": 6, "finger": 2, "label": "3", "role": "target", "highlight": true },
+      { "string": 1, "fret": 9, "finger": 4, "label": "3", "role": "target", "highlight": true },
+      { "string": 2, "fret": 7, "finger": 3, "label": "6", "role": "color", "highlight": true },
+      { "string": 2, "fret": 8, "finger": 4, "label": "b7", "role": "color", "highlight": true },
+      { "string": 2, "fret": 5, "finger": 1, "label": "5", "role": "chord_tone" }
+    ]
+  }
+}
+```
 
 **20~40분 · 실전 즉흥 (Am7-D7-A7 백킹 / 92 BPM)**
 유튜브·앱에서 "A minor Dorian jam" 또는 "A7 groove backing track" 느린 걸 하나 틀어요(정확히 우리 진행이 아니어도 OK — Am7·D7·A7 계열이면 충분). 규칙 딱 하나: **멜로디 만들려고 애쓰지 말고, 코드 바뀔 때마다 그 코드의 3도만 길게 착지.** 오늘은 작곡이 아니라 '지도 위를 걷는' 날이에요.

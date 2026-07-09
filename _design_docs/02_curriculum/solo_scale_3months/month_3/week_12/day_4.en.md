@@ -68,6 +68,41 @@ A retake **doesn't mean re-recording the whole song every time.** It means re-re
 **0–10 min · Warm-up (BPM 92) — warming up just the seam**
 Loop just the excerpt above (the two-bar seam) at metronome 92. Especially smooth out the finger move from bar 4's ending C (3rd string, 5th fret) to bar 5's C# (3rd string, 6th fret), and the blue-note bend right after (1st string, 8th fret → C# pitch). Today's warm-up is time spent loosening the song's weakest joint.
 
+```json
+{
+  "id": "m3.w12.d4.switch_retake_excerpt",
+  "type": "tab",
+  "meta": {
+    "title": "Retake excerpt - the mode-switch seam (D7 -> A7, bars 4-5)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A (Dorian/Mixolydian composite)",
+    "tempoBpm": 92
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "composition",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 3, "fret": 7, "duration": "eighth", "technique": "none", "label": "4", "role": "scale" },
+        { "string": 3, "fret": 9, "duration": "eighth", "technique": "none", "label": "5", "role": "chord_tone" },
+        { "string": 2, "fret": 7, "duration": "quarter", "technique": "vibrato", "label": "6", "role": "color", "highlight": true },
+        { "string": 1, "fret": 5, "duration": "quarter", "rest": true },
+        { "string": 3, "fret": 5, "duration": "quarter", "technique": "none", "label": "b3", "role": "passing" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 3, "fret": 6, "duration": "quarter", "technique": "vibrato", "label": "3", "role": "target", "highlight": true },
+        { "string": 1, "fret": 5, "duration": "eighth", "rest": true },
+        { "string": 2, "fret": 8, "duration": "eighth", "technique": "none", "label": "b7", "role": "color", "highlight": true },
+        { "string": 1, "fret": 8, "duration": "eighth", "technique": "bend", "bendTarget": "half", "label": "b3", "role": "blue_note", "highlight": true },
+        { "string": 1, "fret": 9, "duration": "quarter", "technique": "none", "label": "3", "role": "target", "highlight": true },
+        { "string": 1, "fret": 5, "duration": "eighth", "rest": true }
+      ]}
+    ]
+  }
+}
+```
+
 **10–20 min · Brain training (scoring yesterday's recording on the four criteria)**
 Pull up yesterday's full recording and slow the playback down — once at **0.75x**, once at **0.5x**. Draw four columns on paper (landing / color / vibrato / timing) and mark each one with just a △ or ○. Then pinpoint **the one section** with the most △'s. Nine times out of ten, it'll be the seam (bars 4-5).
 

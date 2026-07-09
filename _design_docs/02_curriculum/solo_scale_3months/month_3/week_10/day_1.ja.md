@@ -130,11 +130,105 @@ Aミクソリディアン＝**A B C# D E F# G**。メジャースケールから
 **0〜10分・ウォームアップ（BPM 90）——4連音シーケンスでフォームを目覚めさせる**
 メトロノーム90に合わせて、Position 1を4連音（16分音符）で1周上行します。ブロックを上下になぞるだけなのは禁止です。「4音ずつまとめて」A-B-C#-D／B-C#-D-E……という具合に押し上げていきます。C#（長3度）を通るたびに、心の中で「ここが明るい音!」とハンコを押しましょう。手が固まったらBPM 80に落として大丈夫です。
 
+```json
+{
+  "id": "m3.w10.d1.a_mixolydian_pos1",
+  "type": "scale_shape",
+  "meta": {
+    "title": "A Mixolydian - Position 1 (major 3rd C# & b7 G)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A Mixolydian",
+    "scale": "A Mixolydian",
+    "tempoBpm": 90
+  },
+  "fretboard": {
+    "startFret": 4,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 6, "fret": 5, "finger": 2, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 6, "fret": 7, "finger": 4, "label": "2", "role": "scale" },
+      { "string": 5, "fret": 4, "finger": 1, "label": "3", "role": "target", "highlight": true },
+      { "string": 5, "fret": 5, "finger": 2, "label": "4", "role": "scale" },
+      { "string": 5, "fret": 7, "finger": 4, "label": "5", "role": "chord_tone" },
+      { "string": 4, "fret": 4, "finger": 1, "label": "6", "role": "scale" },
+      { "string": 4, "fret": 5, "finger": 2, "label": "b7", "role": "color", "highlight": true },
+      { "string": 4, "fret": 7, "finger": 4, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 4, "finger": 1, "label": "2", "role": "scale" },
+      { "string": 3, "fret": 6, "finger": 3, "label": "3", "role": "target", "highlight": true },
+      { "string": 3, "fret": 7, "finger": 4, "label": "4", "role": "scale" },
+      { "string": 2, "fret": 5, "finger": 2, "label": "5", "role": "chord_tone" },
+      { "string": 2, "fret": 7, "finger": 4, "label": "6", "role": "scale" },
+      { "string": 2, "fret": 8, "finger": 4, "label": "b7", "role": "color", "highlight": true },
+      { "string": 1, "fret": 5, "finger": 2, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 1, "fret": 7, "finger": 4, "label": "2", "role": "scale" }
+    ]
+  }
+}
+```
+
 **10〜20分・頭のトレーニング（ターゲット＝GとC#）**
 メトロノームを止めて、Position 1の中で**♭7 Gだけ**を2か所（4弦5フレット、2弦8フレット）見つけて押さえます。押さえるたびに「これは緊張」と声に出して。次は**長3度C#だけ**を2か所（5弦4フレット、3弦6フレット）押さえながら「これは解決」。最後にGを1つ押さえて→一番近いC#へ手を移動する動きを5回。目を閉じてG・C#をそれぞれ3秒以内に押さえられたら合格です。
 
+```json
+{
+  "id": "m3.w10.d1.identity_tension_map",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "Identity notes: b7(G) tension -> major 3rd(C#) resolution, with b3(C) blue note",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A Mixolydian",
+    "tempoBpm": 90
+  },
+  "fretboard": {
+    "startFret": 4,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 4, "fret": 7, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 5, "label": "b7", "role": "color", "highlight": true },
+      { "string": 3, "fret": 5, "label": "b3", "role": "blue_note", "highlight": true },
+      { "string": 3, "fret": 6, "label": "3", "role": "target", "highlight": true }
+    ]
+  }
+}
+```
+
 **20〜40分・実戦即興（A7ワンコードバッキング／80〜90 BPM）**
 「A7 vamp backing track」または「A7 groove jam」を流します。ミッションはひとつだけ。**フレーズを終わらせるときは必ずC#（長3度）に着地すること。**途中はペンタトニックのように自由に遊んでOKです。ただし文の句点はいつもC#。余裕があれば、今日のブルージーなリック（C→C#半音ベンド）を2、3回混ぜてみましょう。C#に着地した瞬間、バッキングと「カチッ」とかみ合う感覚があれば成功です。
+
+```json
+{
+  "id": "m3.w10.d1.bluesy_mixolydian_lick",
+  "type": "tab",
+  "meta": {
+    "title": "Bluesy Mixolydian lick (b3 blue note -> major 3rd, b7 tension -> 3rd)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A Mixolydian",
+    "tempoBpm": 90
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "blues_line",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 4, "fret": 7, "duration": "quarter", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 3, "fret": 5, "duration": "eighth", "technique": "bend", "bendTarget": "half", "label": "b3", "role": "blue_note", "highlight": true },
+        { "string": 3, "fret": 6, "duration": "quarter", "label": "3", "target": true, "role": "target", "highlight": true },
+        { "string": 3, "fret": 7, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 2, "fret": 5, "duration": "quarter", "label": "5", "role": "chord_tone" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 2, "fret": 8, "duration": "quarter", "label": "b7", "role": "color", "highlight": true },
+        { "string": 2, "fret": 7, "duration": "eighth", "label": "6", "role": "scale" },
+        { "string": 2, "fret": 5, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 3, "fret": 6, "duration": "half", "technique": "vibrato", "label": "3", "target": true, "role": "target", "highlight": true }
+      ]}
+    ]
+  }
+}
+```
 
 **40〜50分・録音・フィードバック（推奨）**
 どんな録音ツール（スマホのボイスメモでもOK）でも構わないので、最後のジャムを30秒録音します。聴き直して、チェックするのはひとつだけ。**フレーズの終わりが本当にC#で止まっていたか、それとも癖で根音Aや♭3のCに流れてしまっていたか。**C#で止まっていなければ、その癖を明日から直していきましょう。

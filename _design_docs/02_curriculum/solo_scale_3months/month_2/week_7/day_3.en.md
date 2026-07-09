@@ -14,6 +14,38 @@ Here's why we're doing this today — up until yesterday, you drew the Am map an
 
 Here's the key idea. Am's 3rd is **C**; C's 3rd is **E**. So when moving from Am to C, there's exactly one move we're aiming for: **C → E**. This is called a "guide tone" — like a thread guiding you through the chord progression. It's also a preview of the ii-V-I guide-tone lines coming next week (W8).
 
+```json
+{
+  "id": "m2.w7.d3.am_c_guide_tone_map",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "Am 3rd (C) <-> C 3rd (E) guide-tone landing map across the neck",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor / C major",
+    "tempoBpm": 68
+  },
+  "fretboard": {
+    "startFret": 0,
+    "fretSpan": 12,
+    "dots": [
+      { "string": 6, "fret": 5, "label": "Am:R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 0, "label": "Am:R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 3, "label": "C", "role": "target", "highlight": true },
+      { "string": 5, "fret": 7, "label": "E", "role": "target", "highlight": true },
+      { "string": 4, "fret": 7, "label": "Am:R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 5, "label": "C", "role": "target", "highlight": true },
+      { "string": 3, "fret": 9, "label": "E", "role": "target", "highlight": true },
+      { "string": 2, "fret": 1, "label": "C", "role": "target", "highlight": true },
+      { "string": 2, "fret": 5, "label": "E", "role": "target", "highlight": true },
+      { "string": 1, "fret": 0, "label": "E", "role": "target", "highlight": true },
+      { "string": 1, "fret": 8, "label": "C", "role": "target", "highlight": true },
+      { "string": 1, "fret": 12, "label": "E", "role": "target", "highlight": true }
+    ]
+  }
+}
+```
+
 And here's the magic part: on the fretboard, this **C → E move is absurdly close.** The classic example: **string 3 fret 5 (C) → string 2 fret 5 (E).** Same fret, just shift one finger to the neighboring string. The chord changes, but your hand barely moves at all. We're going to burn that "minimal movement" thrill into your body today.
 
 One more time: this isn't speed practice. It's timing training for **landing exactly on the 3rd** the instant the chord changes — so if anything, we go even slower. If the landing's off, it doesn't matter how fast you play, it's a bust.
@@ -95,6 +127,41 @@ Now the real connection. Measure 1: Am (land on the 3rd, C) → Measure 2: C (a 
 
 **0–10 min · Warm-up (BPM 68)**
 With the metronome at 68, repeat the connecting phrase above in eighth notes. Focus on just one spot: the move from measure 1 to 2, **string 3 fret 5 (C) → string 2 fret 5 (E).** Same fret, neighboring string. Just slide one finger over. Keep going until this move is smooth, with no gap in the sound.
+
+```json
+{
+  "id": "m2.w7.d3.am_to_c_connection",
+  "type": "tab",
+  "meta": {
+    "title": "Am -> C connection: land 3rd C, minimal move to 3rd E",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor / C major",
+    "tempoBpm": 68
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "guide_tone_3rds",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 6, "fret": 5, "duration": "eighth", "label": "Am:R", "isRoot": true, "role": "root" },
+        { "string": 6, "fret": 8, "duration": "eighth", "label": "Am:b3(C)", "target": true, "highlight": true, "role": "target" },
+        { "string": 5, "fret": 7, "duration": "eighth", "label": "Am:5(E)", "role": "chord_tone" },
+        { "string": 4, "fret": 7, "duration": "eighth", "label": "Am:R", "isRoot": true, "role": "root" },
+        { "string": 2, "fret": 5, "duration": "eighth", "label": "Am:5(E)", "role": "chord_tone" },
+        { "string": 1, "fret": 5, "duration": "eighth", "label": "Am:R", "isRoot": true, "role": "root" },
+        { "string": 3, "fret": 5, "duration": "quarter", "label": "Am:b3(C)", "target": true, "highlight": true, "role": "target" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 2, "fret": 5, "duration": "quarter", "label": "C:3(E)", "target": true, "highlight": true, "role": "target" },
+        { "string": 3, "fret": 5, "duration": "quarter", "label": "C:R", "isRoot": true, "role": "root" },
+        { "string": 4, "fret": 5, "duration": "quarter", "label": "C:5(G)", "role": "chord_tone" },
+        { "string": 2, "fret": 5, "duration": "quarter", "technique": "vibrato", "label": "C:3(E)", "target": true, "highlight": true, "role": "target" }
+      ]}
+    ]
+  }
+}
+```
 
 **10–20 min · Brain training (finding minimal C→E moves)**
 Turn off the metronome and find three nearby **C-E pairs** on the map. For example: (string 3 fret 5 · string 2 fret 5), (string 5 fret 3 · string 5 fret 7), (string 2 fret 1 · string 2 fret 5), (string 1 fret 8 · string 1 fret 12). For each pair, go back and forth saying "C for Am, E when the chord changes." You pass if you can go back and forth within a pair in 3 seconds, even with your eyes closed.

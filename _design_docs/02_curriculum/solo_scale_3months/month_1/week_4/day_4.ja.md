@@ -116,6 +116,55 @@ lang: ja
 **10〜20分・頭のトレーニング（カプストーン・リック＋コール/レスポンスの感覚をつかむ）**
 カプストーン・リックを手に馴染ませながら、その構造を意識します。「1小節目は質問（開き）、3・4小節目は答え（閉じ）」という会話の構造を、口で「質問〜、答え！」と数えながら弾いてみましょう。特に2小節目の前の**休符（余白）**は、本当に空っぽにしてください——初心者はこの沈黙に耐えられず音を詰め込みがちですが、その余白こそが次のフレーズを生かすんです。
 
+```json
+{
+  "id": "m1.w4.d4.capstone_call_response_lick",
+  "type": "tab",
+  "meta": {
+    "title": "1-month capstone — call & response over Am7 (all skills combined)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A blues",
+    "tempoBpm": 80
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "call_and_response",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 6, "fret": 5, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 5, "fret": 5, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 6, "fret": 8, "duration": "eighth", "label": "b3", "highlight": true, "role": "target" },
+        { "string": 5, "fret": 7, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 5, "fret": 6, "duration": "eighth", "label": "b5", "highlight": true, "role": "passing" },
+        { "string": 5, "fret": 5, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 6, "fret": 5, "duration": "quarter", "label": "R", "isRoot": true, "role": "root" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 1, "fret": 1, "duration": "quarter", "rest": true, "label": "rest" },
+        { "string": 3, "fret": 5, "duration": "eighth", "label": "b3", "highlight": true, "role": "target" },
+        { "string": 3, "fret": 7, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 3, "fret": 8, "duration": "quarter", "technique": "vibrato", "label": "b5", "highlight": true, "role": "blue_note" },
+        { "string": 3, "fret": 7, "duration": "quarter", "label": "4", "role": "scale" }
+      ]},
+      { "measure": 3, "notes": [
+        { "string": 2, "fret": 5, "duration": "eighth", "label": "5(ref E)", "role": "chord_tone" },
+        { "string": 3, "fret": 7, "duration": "half", "technique": "bend", "bendTarget": "full", "label": "4>5", "highlight": true, "role": "scale" },
+        { "string": 3, "fret": 5, "duration": "eighth", "label": "b3", "highlight": true, "role": "target" },
+        { "string": 4, "fret": 5, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 4, "fret": 7, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" }
+      ]},
+      { "measure": 4, "notes": [
+        { "string": 4, "fret": 7, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 3, "fret": 7, "duration": "eighth", "technique": "slide", "slideToFret": 5, "label": "4>b3", "highlight": true, "role": "target" },
+        { "string": 3, "fret": 5, "duration": "half", "technique": "vibrato", "label": "b3", "target": true, "highlight": true, "role": "target" },
+        { "string": 4, "fret": 7, "duration": "quarter", "technique": "vibrato", "label": "R", "isRoot": true, "role": "root" }
+      ]}
+    ]
+  }
+}
+```
+
 **20〜40分・実戦即興＆全体録音（Am7ワンコードバッキング／75〜80 BPM）**
 今日のメインです。バッキングを流して、**最初から最後まで2〜3分を丸ごと録音**してください（スマホのボイスメモでもOK）。ルール：**コール＆レスポンスで対話するように。** 質問のフレーズは♭5や4度で開いたままにし、答えは必ず♭3・根音に着地＋ヴィブラートで閉じます。カプストーン・リックを種にしつつ、そのまま繰り返さず少しずつ変形させましょう。ミスしても止まらず続けてください——実戦は本来、止まらないものです。
 

@@ -89,8 +89,63 @@ i18nKey: "lesson.m2.w8.d1"
 **0~10분 · 워밍업 (BPM 76) — 3도 감각 예열**
 메트로놈 76에 맞춰, 위 '집' 자리에서 세 가이드톤만 4분음표로 번갈아 짚어요. F(4번 3프렛) → B(3번 4프렛) → E(4번 2프렛), 한 음당 클릭 한 번. 짚을 때마다 소리 내서 "파! 시! 미!" 하고 불러요. 음이름을 입으로 붙이는 게 오늘 예열의 핵심이에요.
 
+```json
+{
+  "id": "m2.w8.d1.guide_tone_map",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "ii-V-I guide tones home shape (Dm7 F / G7 B / Cmaj7 E)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "C major (ii-V-I)",
+    "tempoBpm": 76
+  },
+  "fretboard": {
+    "startFret": 0,
+    "fretSpan": 5,
+    "dots": [
+      { "string": 4, "fret": 0, "label": "Dm7 R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 3, "finger": 3, "label": "Dm7-3(F)", "highlight": true, "role": "target" },
+      { "string": 3, "fret": 0, "label": "G7 R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 4, "finger": 4, "label": "G7-3(B)", "highlight": true, "role": "target" },
+      { "string": 2, "fret": 1, "label": "Cmaj7 R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 2, "finger": 2, "label": "Cmaj7-3(E)", "highlight": true, "role": "target" }
+    ]
+  }
+}
+```
+
 **10~20분 · 두뇌 훈련 (F·B·E를 여러 자리에서 즉시 짚기)**
 메트로놈 끄고, 두 번째 지도를 보며 **F만** 세 자리(4번 3프렛, 1번 1프렛, 2번 6프렛)를 눈으로 찍고 손으로 짚어요. 그다음 **B만**, 그다음 **E만**. 각 음당 "가장 가까운 자리 → 그다음 자리" 최소 이동 경로를 찾는 게 포인트. 마지막엔 눈 감고 '집' 자리 F·B·E 세 개를 3초 안에 짚으면 통과.
+
+```json
+{
+  "id": "m2.w8.d1.guide_tone_positions",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "Guide tones F/B/E across the neck (multiple positions)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "C major (ii-V-I)",
+    "tempoBpm": 76
+  },
+  "fretboard": {
+    "startFret": 0,
+    "fretSpan": 8,
+    "dots": [
+      { "string": 4, "fret": 3, "label": "Dm7-3(F)", "highlight": true, "role": "target" },
+      { "string": 1, "fret": 1, "label": "Dm7-3(F)", "highlight": true, "role": "target" },
+      { "string": 2, "fret": 6, "label": "Dm7-3(F)", "highlight": true, "role": "target" },
+      { "string": 3, "fret": 4, "label": "G7-3(B)", "highlight": true, "role": "target" },
+      { "string": 2, "fret": 0, "label": "G7-3(B)", "highlight": true, "role": "target" },
+      { "string": 5, "fret": 2, "label": "G7-3(B)", "highlight": true, "role": "target" },
+      { "string": 4, "fret": 2, "label": "Cmaj7-3(E)", "highlight": true, "role": "target" },
+      { "string": 1, "fret": 0, "label": "Cmaj7-3(E)", "highlight": true, "role": "target" },
+      { "string": 2, "fret": 5, "label": "Cmaj7-3(E)", "highlight": true, "role": "target" }
+    ]
+  }
+}
+```
 
 **20~40분 · 실전 즉흥 (Dm7-G7-Cmaj7 백킹 / 70~76 BPM)**
 유튜브·앱에서 "ii V I backing track C major slow" 하나 틀어요. 규칙 딱 하나: **다른 건 아무것도 하지 말고, 코드가 바뀔 때마다 그 코드의 3도(F/B/E)만 '집' 자리에서 길게 짚기.** 멜로디도 리듬도 신경 끄고, 오직 '코드 바뀜 = 3도 짚음' 반사신경만 만들어요. 아직 어긋나도 괜찮아요. 오늘은 위치 각인이 목표예요.

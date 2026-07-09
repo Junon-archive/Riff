@@ -17,6 +17,39 @@ i18nKey: "lesson.m1.w3.d1"
 
 기억할 좌표는 변함없어요. **A(R) · C(♭3) · D(4) · E(5) · G(♭7).** 위치만 12프렛 위로 옮겼을 뿐, 음의 역할은 똑같아요. 특히 **C(♭3)**, 이 녀석이 4번 블록에선 **5번 줄 15프렛**과 **2번 줄 13프렛**에 살아요. 여기가 오늘의 초록불이에요.
 
+```json
+{
+  "id": "m1.w3.d1.pentatonic_box4",
+  "type": "scale_shape",
+  "meta": {
+    "title": "A minor pentatonic — Box 4 (12th position)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "scale": "A minor pentatonic",
+    "tempoBpm": 80
+  },
+  "fretboard": {
+    "startFret": 11,
+    "fretSpan": 5,
+    "dots": [
+      { "string": 6, "fret": 12, "finger": 1, "label": "5", "role": "chord_tone" },
+      { "string": 6, "fret": 15, "finger": 4, "label": "b7", "role": "scale" },
+      { "string": 5, "fret": 12, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 15, "finger": 4, "label": "b3", "role": "target", "highlight": true },
+      { "string": 4, "fret": 12, "finger": 1, "label": "4", "role": "scale" },
+      { "string": 4, "fret": 14, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 3, "fret": 12, "finger": 1, "label": "b7", "role": "scale" },
+      { "string": 3, "fret": 14, "finger": 3, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 2, "fret": 13, "finger": 1, "label": "b3", "role": "target", "highlight": true },
+      { "string": 2, "fret": 15, "finger": 3, "label": "4", "role": "scale" },
+      { "string": 1, "fret": 12, "finger": 1, "label": "5", "role": "chord_tone" },
+      { "string": 1, "fret": 15, "finger": 4, "label": "b7", "role": "scale" }
+    ]
+  }
+}
+```
+
 ## ② 시각 자료
 
 먼저 오늘의 새 집, **4번 블록**이에요. 근음 A(5번 줄 12프렛)를 중심으로, 초록 강조가 착지 타겟인 C(♭3)예요.
@@ -104,6 +137,44 @@ i18nKey: "lesson.m1.w3.d1"
 
 **20~40분 · 실전 즉흥 (Am 원코드 백킹 / 75~80 BPM)**
 "Am backing track" 아무거나 하나. 오늘의 규칙: **연주는 3번 블록(9프렛)에서 시작해서, 곡 중간에 반드시 슬라이드로 4번 블록(12프렛)으로 이사 간 뒤, C(♭3)에 착지하고 멈추기.** 위 연결 라인을 그대로 써도 좋고, 변형해도 좋아요. 핵심은 "낮은 블록에서 시작 → 슬라이드로 위로 이사 → 타겟 착지"의 흐름을 한 프레이즈 안에서 만드는 거예요. 최소 8번 반복.
+
+```json
+{
+  "id": "m1.w3.d1.box3_to_box4_slide",
+  "type": "tab",
+  "meta": {
+    "title": "Box 3 -> Box 4 sliding connection (land on b3)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "tempoBpm": 80
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "block_connection",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 5, "fret": 12, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 4, "fret": 10, "duration": "eighth", "label": "b3", "highlight": true, "role": "target" },
+        { "string": 4, "fret": 12, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 3, "fret": 9, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 3, "fret": 12, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 2, "fret": 10, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 2, "fret": 13, "duration": "eighth", "label": "b3", "highlight": true, "role": "target" },
+        { "string": 1, "fret": 12, "duration": "eighth", "label": "5", "role": "chord_tone" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 1, "fret": 10, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 2, "fret": 13, "duration": "eighth", "label": "b3", "highlight": true, "role": "target" },
+        { "string": 3, "fret": 12, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 4, "fret": 12, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 5, "fret": 12, "duration": "eighth", "technique": "slide", "slideToFret": 15, "label": "R", "isRoot": true, "role": "root" },
+        { "string": 5, "fret": 15, "duration": "quarter", "dotted": true, "technique": "vibrato", "label": "b3", "target": true, "highlight": true, "role": "target" }
+      ]}
+    ]
+  }
+}
+```
 
 **40~50분 · 녹음/피드백 (권장)**
 아무 녹음 앱(폰 음성 메모도 OK)으로 30초만. 다시 들으며 딱 한 가지: **슬라이드 도착음(C)의 음정이 정확한가.** 슬라이드는 눈으로 프렛을 못 보고 손 감각으로 미끄러지니까, 15프렛을 지나치거나 못 미치기 쉬워요. 재생 속도를 늦춰 들을 수 있으면 도착 순간을 더 잘 잡아낼 수 있어요. 도착이 흐릿하면 그 슬라이드만 10번 따로 반복.

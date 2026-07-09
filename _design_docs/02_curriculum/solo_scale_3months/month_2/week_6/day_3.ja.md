@@ -14,6 +14,43 @@ lang: ja
 
 だから今日は往復ドリルをやります。武器は**4連符シーケンス**（16分音符4つ組）。4連符で指板を止まらずに転がしながら、コードがAmなら暗い**b3（C）**へストンと落ち、コードがCなら明るい**3度（E）**へふわりと降ります。運指は1度も変えません。瞬間的に判断するのは「今どこに帰るか」だけです。
 
+```json
+{
+  "id": "m2.w6.d3.two_landing_map",
+  "type": "scale_shape",
+  "meta": {
+    "title": "Two landing notes — C (Am b3 / C R) and E (C 3 / Am 5)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "C major / A minor (relative)",
+    "scale": "C major (relative to A natural minor)",
+    "tempoBpm": 88
+  },
+  "fretboard": {
+    "startFret": 5,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 6, "fret": 5, "finger": 1, "label": "A (6/R)", "isRoot": true, "role": "root" },
+      { "string": 6, "fret": 7, "finger": 3, "label": "B (7/2)", "role": "scale" },
+      { "string": 6, "fret": 8, "finger": 4, "label": "C = b3(Am)/R(C)", "role": "target", "highlight": true },
+      { "string": 5, "fret": 5, "finger": 1, "label": "D (2/4)", "role": "scale" },
+      { "string": 5, "fret": 7, "finger": 3, "label": "E = 3(C)/5(Am)", "role": "target", "highlight": true },
+      { "string": 5, "fret": 8, "finger": 4, "label": "F (4/b6)", "role": "scale" },
+      { "string": 4, "fret": 5, "finger": 1, "label": "G (5/b7)", "role": "scale" },
+      { "string": 4, "fret": 7, "finger": 3, "label": "A (6/R)", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 5, "finger": 1, "label": "C = b3(Am)/R(C)", "role": "target", "highlight": true },
+      { "string": 3, "fret": 7, "finger": 3, "label": "D (2/4)", "role": "scale" },
+      { "string": 2, "fret": 5, "finger": 1, "label": "E = 3(C)/5(Am)", "role": "target", "highlight": true },
+      { "string": 2, "fret": 6, "finger": 2, "label": "F (4/b6)", "role": "scale" },
+      { "string": 2, "fret": 8, "finger": 4, "label": "G (5/b7)", "role": "scale" },
+      { "string": 1, "fret": 5, "finger": 1, "label": "A (6/R)", "isRoot": true, "role": "root" },
+      { "string": 1, "fret": 7, "finger": 3, "label": "B (7/2)", "role": "scale" },
+      { "string": 1, "fret": 8, "finger": 4, "label": "C = b3(Am)/R(C)", "role": "target", "highlight": true }
+    ]
+  }
+}
+```
+
 ここに本当に大事なポイントがあります。下の二つの小節を見ると、音符の位置がほとんど同じです。手はまったく同じ軌道をたどります。それなのに1小節目はCで止まり（Amの暗さ）、2小節目はEで止まります（Cの明るさ）。この「同じ手・違う着地」を繰り返していると、後でバッキングでコードが急に変わっても、手が勝手に着地点を切り替えてくれるようになります。今日はその回路を通す日です。
 
 ## ② 視覚資料
@@ -116,6 +153,56 @@ lang: ja
 
 **10〜20分・頭のトレーニング（着地の切り替え＝C↔E）**
 メトロノームはつけたまま、上の二つの小節を**交互に**弾きます。1小節目（C着地）→2小節目（E着地）→また1小節目……と無限に繰り返します。着地の直前に頭の中で「暗い（C）」「明るい（E）」と先に唱えてから手をそちらへ向かわせます。手の軌道は同じで最後の一音だけを乗り換える感覚を3分以内に自動化できれば合格です。
+
+```json
+{
+  "id": "m2.w6.d3.center_shift_4note",
+  "type": "tab",
+  "meta": {
+    "title": "4-note sequence drill — resolve to C (Am b3) then E (C bright 3rd)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "C major / A minor (relative)",
+    "tempoBpm": 88
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "4note_sequence",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 6, "fret": 5, "duration": "sixteenth", "label": "A (R in Am)", "role": "root" },
+        { "string": 6, "fret": 7, "duration": "sixteenth", "label": "B (2)", "role": "scale" },
+        { "string": 6, "fret": 8, "duration": "sixteenth", "label": "C (b3)", "highlight": true, "role": "scale" },
+        { "string": 5, "fret": 5, "duration": "sixteenth", "label": "D (4)", "role": "scale" },
+        { "string": 6, "fret": 7, "duration": "sixteenth", "label": "B (2)", "role": "scale" },
+        { "string": 6, "fret": 8, "duration": "sixteenth", "label": "C (b3)", "highlight": true, "role": "scale" },
+        { "string": 5, "fret": 5, "duration": "sixteenth", "label": "D (4)", "role": "scale" },
+        { "string": 5, "fret": 7, "duration": "sixteenth", "label": "E (5)", "role": "chord_tone" },
+        { "string": 6, "fret": 8, "duration": "sixteenth", "label": "C (b3)", "highlight": true, "role": "scale" },
+        { "string": 5, "fret": 5, "duration": "sixteenth", "label": "D (4)", "role": "scale" },
+        { "string": 5, "fret": 7, "duration": "sixteenth", "label": "E (5)", "role": "chord_tone" },
+        { "string": 5, "fret": 8, "duration": "sixteenth", "label": "F (b6)", "role": "scale" },
+        { "string": 3, "fret": 5, "duration": "quarter", "label": "C = b3(Am)", "target": true, "highlight": true, "role": "target" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 6, "fret": 5, "duration": "sixteenth", "label": "A (6 in C)", "role": "scale" },
+        { "string": 6, "fret": 7, "duration": "sixteenth", "label": "B (7)", "role": "scale" },
+        { "string": 6, "fret": 8, "duration": "sixteenth", "label": "C (R)", "role": "root" },
+        { "string": 5, "fret": 5, "duration": "sixteenth", "label": "D (2)", "role": "scale" },
+        { "string": 6, "fret": 7, "duration": "sixteenth", "label": "B (7)", "role": "scale" },
+        { "string": 6, "fret": 8, "duration": "sixteenth", "label": "C (R)", "role": "root" },
+        { "string": 5, "fret": 5, "duration": "sixteenth", "label": "D (2)", "role": "scale" },
+        { "string": 5, "fret": 7, "duration": "sixteenth", "label": "E (3)", "highlight": true, "role": "scale" },
+        { "string": 6, "fret": 8, "duration": "sixteenth", "label": "C (R)", "role": "root" },
+        { "string": 5, "fret": 5, "duration": "sixteenth", "label": "D (2)", "role": "scale" },
+        { "string": 5, "fret": 7, "duration": "sixteenth", "label": "E (3)", "highlight": true, "role": "scale" },
+        { "string": 5, "fret": 8, "duration": "sixteenth", "label": "F (4)", "role": "scale" },
+        { "string": 5, "fret": 7, "duration": "quarter", "label": "E = 3(C)", "target": true, "highlight": true, "role": "target" }
+      ]}
+    ]
+  }
+}
+```
 
 **20〜40分・実戦即興（Am↔C切り替えバッキング／BPM 84〜88）**
 「Am C vamp backing track」を一つ流します。ルールは、4連符で止まらずに転がしながら**コードの音を耳で聴いて**、AmならCに、CならEに着地すること。コードが変わる瞬間を逃さないことが核心です。最初は反応が遅れても大丈夫。反応速度は今日一日でぐっと速くなります。

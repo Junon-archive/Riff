@@ -16,6 +16,43 @@ A half-step is the stickiest, most magnetic relationship on a guitar. F is a not
 
 Of course, just like B yesterday, F is a **passing tone.** It's not an Am chord tone (A·C·E), so don't settle on it. There are two resolutions: the strongest is **F → E (5th)**, and going a bit further around, **F → E → D → C (♭3)**, eventually arriving at our home base C. Today F's coordinates in Box 1 are two spots: **5th string 8th fret** and **2nd string 6th fret.** Picture each sliding a half-step down into the E right below it (5th string 7th fret, 2nd string 5th fret).
 
+```json
+{
+  "id": "m2.w5.d3.pentatonic_add_6th",
+  "type": "scale_shape",
+  "meta": {
+    "title": "A minor pentatonic + added 6th (F) resolving to 5th (E)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "scale": "A natural minor (partial)",
+    "tempoBpm": 85
+  },
+  "fretboard": {
+    "startFret": 5,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 6, "fret": 5, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 6, "fret": 7, "finger": 3, "label": "2", "role": "passing", "highlight": true },
+      { "string": 6, "fret": 8, "finger": 4, "label": "b3", "role": "target", "highlight": true },
+      { "string": 5, "fret": 5, "finger": 1, "label": "4", "role": "scale" },
+      { "string": 5, "fret": 7, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 5, "fret": 8, "finger": 4, "label": "6", "role": "passing", "highlight": true },
+      { "string": 4, "fret": 5, "finger": 1, "label": "b7", "role": "scale" },
+      { "string": 4, "fret": 7, "finger": 3, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 5, "finger": 1, "label": "b3", "role": "target", "highlight": true },
+      { "string": 3, "fret": 7, "finger": 3, "label": "4", "role": "scale" },
+      { "string": 2, "fret": 5, "finger": 1, "label": "5", "role": "chord_tone" },
+      { "string": 2, "fret": 6, "finger": 2, "label": "6", "role": "passing", "highlight": true },
+      { "string": 2, "fret": 8, "finger": 4, "label": "b7", "role": "scale" },
+      { "string": 1, "fret": 5, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 1, "fret": 7, "finger": 3, "label": "2", "role": "passing", "highlight": true },
+      { "string": 1, "fret": 8, "finger": 4, "label": "b3", "role": "target", "highlight": true }
+    ]
+  }
+}
+```
+
 ## ② Visual Reference
 
 Alongside yesterday's B (green), today adds two spots of **F (6th, highlighted in green)** to the pentatonic — 5th string 8th fret, 2nd string 6th fret. Each is a bridge sliding a half-step down into the E (5th) right below it.
@@ -101,6 +138,44 @@ Today's drill. Measure 1 repeats the **F → E (5th)** half-step resolution, and
 
 **0–10 min · Warm-up (BPM 85)**
 Set the metronome to 85 and loosen up with everything so far — 3 minutes of the 3rd-interval sequence, 2 minutes of the A-B-C four-note run. Then spend 5 minutes on today's **F → E** half-step resolution (measure 1), slow. As you drop from F to E, let your fingers stay connected like they're "sliding." Drop to BPM 75 if it clumps.
+
+```json
+{
+  "id": "m2.w5.d3.f_passing_resolve",
+  "type": "tab",
+  "meta": {
+    "title": "6th(F) passing tone resolving to 5th(E) and to b3(C)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "tempoBpm": 85
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "3rd_interval",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 5, "fret": 5, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 5, "fret": 7, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 5, "fret": 8, "duration": "eighth", "label": "6", "highlight": true, "role": "passing" },
+        { "string": 5, "fret": 7, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 5, "fret": 5, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 5, "fret": 8, "duration": "eighth", "label": "6", "highlight": true, "role": "passing" },
+        { "string": 5, "fret": 7, "duration": "quarter", "label": "5", "role": "chord_tone" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 2, "fret": 8, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 2, "fret": 6, "duration": "eighth", "label": "6", "highlight": true, "role": "passing" },
+        { "string": 2, "fret": 5, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 3, "fret": 7, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 2, "fret": 5, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 3, "fret": 7, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 3, "fret": 5, "duration": "quarter", "label": "b3", "target": true, "highlight": true, "role": "target" }
+      ]}
+    ]
+  }
+}
+```
 
 **10–20 min · Brain training (today's target = the two F spots)**
 Metronome off. In Box 1, find and fret **only F (6th).** 5th string 8th fret, 2nd string 6th fret — just two spots. Every time you fret it, say out loud "pulled down a half-step to E," and add the motion of **sliding immediately down to E.** Pass when you can find both F's with your eyes closed and resolve each one to E.

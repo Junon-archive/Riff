@@ -109,6 +109,42 @@ i18nKey: "lesson.m2.w8.d3"
 **20~40분 · 실전 즉흥 (Dm7-G7-Cmaj7 백킹 / 70~76 BPM)**
 백킹 위에서 위 **여백 드릴**부터 시작해요. "3도 짚고 → 쉬고 → 다음 3도 준비." 여백이 무섭겠지만 그 침묵이 여러분 편이에요. 익숙해지면 **빠른 착지 라인(첫 번째 JSON)** 으로 넘어가 음을 채워요. 규칙은 변함없어요. **연결음은 자유, 코드 바뀌는 첫 박엔 무조건 3도.** 늦었다 싶으면 다음 코드는 여백을 더 두고 준비.
 
+```json
+{
+  "id": "m2.w8.d3.arrival_with_space",
+  "type": "tab",
+  "meta": {
+    "title": "Land the 3rd, then leave space (arrival drill with rests)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "C major (ii-V-I)",
+    "tempoBpm": 76
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "guide_tone_3rds",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 4, "fret": 3, "duration": "quarter", "label": "Dm7-3(F)", "target": true, "highlight": true, "role": "target" },
+        { "string": 3, "fret": 2, "duration": "eighth", "label": "A", "role": "chord_tone" },
+        { "string": 2, "fret": 1, "duration": "eighth", "label": "C", "role": "scale" },
+        { "string": 4, "fret": 3, "duration": "half", "rest": true, "label": "rest" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 3, "fret": 4, "duration": "quarter", "label": "G7-3(B)", "target": true, "highlight": true, "role": "target" },
+        { "string": 2, "fret": 3, "duration": "eighth", "label": "D", "role": "chord_tone" },
+        { "string": 1, "fret": 3, "duration": "eighth", "label": "G", "isRoot": true, "role": "root" },
+        { "string": 3, "fret": 4, "duration": "half", "rest": true, "label": "rest" }
+      ]},
+      { "measure": 3, "notes": [
+        { "string": 4, "fret": 2, "duration": "half", "technique": "vibrato", "label": "Cmaj7-3(E)", "target": true, "highlight": true, "role": "target" },
+        { "string": 4, "fret": 2, "duration": "half", "rest": true, "label": "rest" }
+      ]}
+    ]
+  }
+}
+```
+
 **40~50분 · 녹음/피드백 (권장)**
 30초 녹음. 재생하며 딱 하나 귀로 좇아요: **코드가 바뀌는 순간과 내 3도가 겹치는가.** 어긋난 지점을 찾으면, 그 코드만 재생 속도를 늦춰 "얼마나 늦었는지/빨랐는지"를 확인. 늦는 버릇이 있으면 그 코드 한 박 전에 손을 미리 얹는 연습으로 교정.
 

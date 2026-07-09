@@ -113,8 +113,89 @@ Run through this week's weapons — the Box 4 and 5 sequences, and the full-neck
 **10–20 min · Brain training (nearest-C reflex)**
 No metronome. Looking at the compass map, run this challenge: place your hand at any random spot on the neck (say, the 4th string 12th fret), and within one second, fret the nearest C (♭3). Is it the 5th string 15th fret? The 2nd string 13th fret? Instantly aim for a C you can reach without moving much. Repeat this at 3–4 different spots up the neck. Pass when you can snag the nearest C within one second, every time. This is today's core skill.
 
+```json
+{
+  "id": "m1.w3.d4.am_chord_tone_full_neck",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "Am chord tones (R / b3 / 5) across the full neck",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "tempoBpm": 85
+  },
+  "fretboard": {
+    "startFret": 0,
+    "fretSpan": 15,
+    "dots": [
+      { "string": 6, "fret": 0, "label": "5", "role": "chord_tone" },
+      { "string": 6, "fret": 5, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 6, "fret": 8, "label": "b3", "role": "target", "highlight": true },
+      { "string": 6, "fret": 12, "label": "5", "role": "chord_tone" },
+      { "string": 5, "fret": 0, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 3, "label": "b3", "role": "target", "highlight": true },
+      { "string": 5, "fret": 7, "label": "5", "role": "chord_tone" },
+      { "string": 5, "fret": 12, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 15, "label": "b3", "role": "target", "highlight": true },
+      { "string": 4, "fret": 2, "label": "5", "role": "chord_tone" },
+      { "string": 4, "fret": 7, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 10, "label": "b3", "role": "target", "highlight": true },
+      { "string": 4, "fret": 14, "label": "5", "role": "chord_tone" },
+      { "string": 3, "fret": 2, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 5, "label": "b3", "role": "target", "highlight": true },
+      { "string": 3, "fret": 9, "label": "5", "role": "chord_tone" },
+      { "string": 3, "fret": 14, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 2, "fret": 1, "label": "b3", "role": "target", "highlight": true },
+      { "string": 2, "fret": 5, "label": "5", "role": "chord_tone" },
+      { "string": 2, "fret": 10, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 2, "fret": 13, "label": "b3", "role": "target", "highlight": true },
+      { "string": 1, "fret": 0, "label": "5", "role": "chord_tone" },
+      { "string": 1, "fret": 5, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 1, "fret": 8, "label": "b3", "role": "target", "highlight": true },
+      { "string": 1, "fret": 12, "label": "5", "role": "chord_tone" }
+    ]
+  }
+}
+```
+
 **20–40 min · Real-world improv (Am one-chord backing, 80–90 BPM)**
 Today's main event — this week's graduation test. Play the backing track, rule: ① Open a phrase up high on the neck (frets 12–17) → land right there on the nearest C, with vibrato. ② Open the next phrase in the middle of the neck (frets 7–12) → land there on that spot's nearby C. Use the example lick above as a starting point, but try it like a call-and-response — "ask up high, answer down below." Never run away to fret 5 — this is training you to land right where you already are. At least 6 phrases, landing on a nearby C every time.
+
+```json
+{
+  "id": "m1.w3.d4.nearest_3rd_landing",
+  "type": "tab",
+  "meta": {
+    "title": "Nearest-3rd landing over Am (high box -> mid box)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "tempoBpm": 85
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "3rd_interval",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 3, "fret": 14, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 2, "fret": 15, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 2, "fret": 17, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 1, "fret": 15, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 2, "fret": 17, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 3, "fret": 14, "duration": "eighth", "technique": "slide", "slideToFret": 17, "label": "R", "isRoot": true, "role": "root" },
+        { "string": 3, "fret": 17, "duration": "quarter", "technique": "vibrato", "label": "b3", "target": true, "highlight": true, "role": "target" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 3, "fret": 12, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 4, "fret": 14, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 4, "fret": 12, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 5, "fret": 12, "duration": "eighth", "technique": "slide", "slideToFret": 15, "label": "R", "isRoot": true, "role": "root" },
+        { "string": 5, "fret": 15, "duration": "half", "technique": "vibrato", "label": "b3", "target": true, "highlight": true, "role": "target" }
+      ]}
+    ]
+  }
+}
+```
 
 **40–50 min · Record & reflect (recommended)**
 Make sure to record today. This is your proof of graduation for this week's "Owning the Pentatonic Neck" chapter. Listen back and check: ① Did every phrase end on a chord tone (C or A)? ② Did you ever miss the beat while dragging your hand far away just to land — if so, aim for a closer C next time. ③ Did you use the top, middle, and bottom of the neck fairly evenly? Slow down playback and any lag in your landing timing will jump right out at you.

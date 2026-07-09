@@ -138,8 +138,111 @@ i18nKey: "lesson.m3.w9.d4"
 **0~10분 · 워밍업 (BPM 85) — 착지음 두 개 예열**
 메트로놈 85에 맞춰 착지 지도의 두 목표만 번갈아 짚어요. C(3번 5프렛) ↔ F#(2번 7프렛), 각 음에 비브라토 얹어 4분음표로. 입으로 "Am7 C, D7 F샵" 부르면서. 오늘 손이 기억할 건 결국 이 두 음이에요.
 
+```json
+{
+  "id": "m3.w9.d4.landing_map",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "Landing map - C for Am7, F#(color) for D7",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A Dorian (Am7 - D7)",
+    "tempoBpm": 85
+  },
+  "fretboard": {
+    "startFret": 5,
+    "fretSpan": 6,
+    "dots": [
+      { "string": 6, "fret": 5, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 7, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 2, "fret": 10, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 5, "label": "Am7-b3(C)", "role": "target", "highlight": true },
+      { "string": 1, "fret": 8, "label": "Am7-b3(C)", "role": "target", "highlight": true },
+      { "string": 5, "fret": 9, "label": "D7-3(F#)=6", "role": "color", "highlight": true },
+      { "string": 2, "fret": 7, "label": "D7-3(F#)=6", "role": "color", "highlight": true }
+    ]
+  }
+}
+```
+
 **10~20분 · 두뇌 훈련 (8마디 본보기 손에 얹기)**
 아직 백킹 없이, 8마디 본보기를 마디별로 천천히. 막히는 마디만 5번씩 반복. 특히 2·4·6·8마디의 **착지음(비브라토)** 과 3·7마디 머리의 **여백(쉼표)** 을 정확히. 여백은 '실수로 멈춘 것'처럼 어색하면 안 되고, **의도된 숨**처럼 당당하게 비우세요.
+
+```json
+{
+  "id": "m3.w9.d4.eight_bar_dorian_solo",
+  "type": "tab",
+  "meta": {
+    "title": "8-bar A Dorian solo over Am7-D7 (F# color + 3rd targeting)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A Dorian (Am7 - D7)",
+    "tempoBpm": 85
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "guide_tone_3rds",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 4, "fret": 7, "duration": "quarter", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 4, "fret": 9, "duration": "eighth", "label": "2", "role": "scale" },
+        { "string": 3, "fret": 5, "duration": "eighth", "label": "b3", "role": "scale" },
+        { "string": 3, "fret": 7, "duration": "quarter", "label": "4", "role": "scale" },
+        { "string": 3, "fret": 9, "duration": "quarter", "label": "5", "role": "chord_tone" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 2, "fret": 8, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 2, "fret": 7, "duration": "eighth", "label": "6", "role": "color", "highlight": true },
+        { "string": 3, "fret": 9, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 3, "fret": 7, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 3, "fret": 5, "duration": "half", "technique": "vibrato", "label": "b3", "role": "target", "highlight": true }
+      ]},
+      { "measure": 3, "notes": [
+        { "string": 3, "fret": 5, "duration": "quarter", "rest": true, "label": "rest" },
+        { "string": 3, "fret": 7, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 3, "fret": 9, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 2, "fret": 7, "duration": "quarter", "label": "6", "role": "color", "highlight": true },
+        { "string": 3, "fret": 9, "duration": "quarter", "label": "5", "role": "chord_tone" }
+      ]},
+      { "measure": 4, "notes": [
+        { "string": 2, "fret": 8, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 2, "fret": 10, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 2, "fret": 8, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 3, "fret": 9, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 2, "fret": 7, "duration": "half", "technique": "vibrato", "label": "6", "role": "color", "highlight": true }
+      ]},
+      { "measure": 5, "notes": [
+        { "string": 2, "fret": 10, "duration": "quarter", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 1, "fret": 8, "duration": "eighth", "label": "b3", "role": "scale" },
+        { "string": 1, "fret": 7, "duration": "eighth", "label": "2", "role": "scale" },
+        { "string": 2, "fret": 10, "duration": "quarter", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 2, "fret": 8, "duration": "quarter", "label": "b7", "role": "scale" }
+      ]},
+      { "measure": 6, "notes": [
+        { "string": 3, "fret": 9, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 2, "fret": 7, "duration": "eighth", "label": "6", "role": "color", "highlight": true },
+        { "string": 2, "fret": 8, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 2, "fret": 10, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 1, "fret": 8, "duration": "half", "technique": "vibrato", "label": "b3", "role": "target", "highlight": true }
+      ]},
+      { "measure": 7, "notes": [
+        { "string": 3, "fret": 9, "duration": "quarter", "rest": true, "label": "rest" },
+        { "string": 2, "fret": 10, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 2, "fret": 8, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 3, "fret": 9, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 3, "fret": 7, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 3, "fret": 9, "duration": "quarter", "label": "5", "role": "chord_tone" }
+      ]},
+      { "measure": 8, "notes": [
+        { "string": 3, "fret": 9, "duration": "quarter", "label": "5", "role": "chord_tone" },
+        { "string": 2, "fret": 8, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 3, "fret": 9, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 2, "fret": 7, "duration": "half", "technique": "vibrato", "label": "6", "role": "color", "highlight": true }
+      ]}
+    ]
+  }
+}
+```
 
 **20~40분 · 실전 즉흥 (Am7-D7 vamp / 80~85 BPM)**
 "Am7 D7 vamp backing track" 을 틀어요. 먼저 8마디 본보기를 백킹 위에 **두 바퀴** 그대로. 그다음이 진짜예요: 본보기를 버리고 **직접 8마디를 즉흥**하되, 규칙 두 개만 지켜요 — **① Am7 끝엔 C, D7 끝엔 F# 착지 / ② 각 프레이즈 끝에 한 박 이상 여백.** 사이는 3도든 4연음이든 자유. 매 바퀴 조금씩 다르게 시도해 보세요.

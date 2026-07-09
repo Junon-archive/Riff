@@ -136,11 +136,114 @@ Third, today's **position shift lick.** Bar 1 plays around in Position 1 and han
 **0–10 min · Warm-up (BPM 90) — Position 2 4-note sequence**
 Take the 4-note sequence you ran in Position 1 yesterday and run it in **Position 2** today. Ascend in groups of four within the 7-11 fret zone. Your hand will still feel unfamiliar, so it's fine to start at 80. Stay color-aware every time you pass C# (6th string 9th fret, 4th string 11th fret, 1st string 9th fret).
 
+```json
+{
+  "id": "m3.w10.d3.a_mixolydian_pos2",
+  "type": "scale_shape",
+  "meta": {
+    "title": "A Mixolydian - Position 2 (root on 4th string, frets 7-11)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A Mixolydian",
+    "scale": "A Mixolydian",
+    "tempoBpm": 90
+  },
+  "fretboard": {
+    "startFret": 7,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 6, "fret": 7, "finger": 1, "label": "2", "role": "scale" },
+      { "string": 6, "fret": 9, "finger": 3, "label": "3", "role": "target", "highlight": true },
+      { "string": 6, "fret": 10, "finger": 4, "label": "4", "role": "scale" },
+      { "string": 5, "fret": 7, "finger": 1, "label": "5", "role": "chord_tone" },
+      { "string": 5, "fret": 9, "finger": 3, "label": "6", "role": "scale" },
+      { "string": 5, "fret": 10, "finger": 4, "label": "b7", "role": "color", "highlight": true },
+      { "string": 4, "fret": 7, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 9, "finger": 3, "label": "2", "role": "scale" },
+      { "string": 4, "fret": 11, "finger": 4, "label": "3", "role": "target", "highlight": true },
+      { "string": 3, "fret": 7, "finger": 1, "label": "4", "role": "scale" },
+      { "string": 3, "fret": 9, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 3, "fret": 11, "finger": 4, "label": "6", "role": "scale" },
+      { "string": 2, "fret": 8, "finger": 2, "label": "b7", "role": "color", "highlight": true },
+      { "string": 2, "fret": 10, "finger": 4, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 1, "fret": 7, "finger": 1, "label": "2", "role": "scale" },
+      { "string": 1, "fret": 9, "finger": 3, "label": "3", "role": "target", "highlight": true },
+      { "string": 1, "fret": 10, "finger": 4, "label": "4", "role": "scale" }
+    ]
+  }
+}
+```
+
 **10–20 min · Brain training (linking C# across forms)**
 Looking at the connection map, practice fretting **Position 1's C# (3rd string, 6th fret)** → then moving your hand to **Position 2's C# (1st string, 9th fret).** Go back and forth between two C#s that share a name but sit in different spots. Then do the same with G (4th string 5th fret ↔ 5th string 10th fret). Finally, repeat the 1st string 5→9 slide 10 times on its own, making sure the slide lands precisely on the 9th fret (C#) every time.
 
+```json
+{
+  "id": "m3.w10.d3.position_connection_map",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "Connecting Position 1 & 2: shared root and slide path (1st string 5->9)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A Mixolydian",
+    "tempoBpm": 90
+  },
+  "fretboard": {
+    "startFret": 4,
+    "fretSpan": 6,
+    "dots": [
+      { "string": 6, "fret": 5, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 1, "fret": 5, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 6, "label": "3", "role": "target", "highlight": true },
+      { "string": 4, "fret": 5, "label": "b7", "role": "color", "highlight": true },
+      { "string": 4, "fret": 7, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 1, "fret": 9, "label": "3", "role": "target", "highlight": true },
+      { "string": 6, "fret": 9, "label": "3", "role": "target", "highlight": true },
+      { "string": 5, "fret": 10, "label": "b7", "role": "color", "highlight": true },
+      { "string": 2, "fret": 10, "label": "R", "isRoot": true, "role": "root" }
+    ]
+  }
+}
+```
+
 **20–40 min · Real-world feel (A7 vamp / 80–90 BPM) — form-shifting mission**
 Put on an "A7 vamp backing track," with today's mission: **move from Position 1 → (slide) → Position 2 at least once within a single phrase.** Play around down below, slide up, land on C# up top, then slide back down again. It's fine if the movement feels choppy at first. Pick a set slide point and repeat it, and it'll get smoother and smoother.
+
+```json
+{
+  "id": "m3.w10.d3.position_shift_lick",
+  "type": "tab",
+  "meta": {
+    "title": "Position shift lick: Pos1 -> slide -> Pos2, land on major 3rd",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A Mixolydian",
+    "tempoBpm": 90
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "block_connection",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 4, "fret": 7, "duration": "quarter", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 3, "fret": 4, "duration": "eighth", "label": "2", "role": "scale" },
+        { "string": 3, "fret": 6, "duration": "eighth", "label": "3", "target": true, "role": "target", "highlight": true },
+        { "string": 2, "fret": 5, "duration": "quarter", "label": "5", "role": "chord_tone" },
+        { "string": 2, "fret": 7, "duration": "eighth", "label": "6", "role": "scale" },
+        { "string": 2, "fret": 8, "duration": "eighth", "label": "b7", "role": "color", "highlight": true }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 1, "fret": 5, "duration": "eighth", "technique": "slide", "slideToFret": 9, "label": "R", "isRoot": true, "role": "root" },
+        { "string": 1, "fret": 9, "duration": "eighth", "label": "3", "target": true, "role": "target", "highlight": true },
+        { "string": 1, "fret": 10, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 2, "fret": 8, "duration": "eighth", "label": "b7", "role": "color", "highlight": true },
+        { "string": 4, "fret": 10, "duration": "eighth", "technique": "bend", "bendTarget": "half", "label": "b3", "role": "blue_note", "highlight": true },
+        { "string": 4, "fret": 11, "duration": "quarter", "dotted": true, "technique": "vibrato", "label": "3", "target": true, "role": "target", "highlight": true }
+      ]}
+    ]
+  }
+}
+```
 
 **40–50 min · Record & reflect (recommended)**
 Record 30 seconds with any recorder. Check: (1) did the slide stop exactly on the target fret (9) — not falling short or overshooting, and (2) after switching forms, did you land well on C#? Slow down playback and zoom in with your ear on the moment the slide arrives.

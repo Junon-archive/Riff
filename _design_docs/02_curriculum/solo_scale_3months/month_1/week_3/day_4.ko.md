@@ -112,8 +112,89 @@ i18nKey: "lesson.m1.w3.d4"
 **10~20분 · 두뇌 훈련 (가장 가까운 C 반사신경)**
 메트로놈 없이, 나침반 맵을 보며 챌린지. 넥의 아무 지점(예: 4번 줄 12프렛)에 손을 얹고, **거기서 가장 가까운 C(♭3)가 어딘지 1초 안에 짚기.** 5번 줄 15프렛? 2번 줄 13프렛? 손을 크게 안 움직이고 닿는 C를 순간 조준. 넥 위쪽 3~4군데 지점에서 각각 반복. 매번 1초 안에 가까운 C를 낚으면 통과. 이게 오늘의 핵심 감각이에요.
 
+```json
+{
+  "id": "m1.w3.d4.am_chord_tone_full_neck",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "Am chord tones (R / b3 / 5) across the full neck",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "tempoBpm": 85
+  },
+  "fretboard": {
+    "startFret": 0,
+    "fretSpan": 15,
+    "dots": [
+      { "string": 6, "fret": 0, "label": "5", "role": "chord_tone" },
+      { "string": 6, "fret": 5, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 6, "fret": 8, "label": "b3", "role": "target", "highlight": true },
+      { "string": 6, "fret": 12, "label": "5", "role": "chord_tone" },
+      { "string": 5, "fret": 0, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 3, "label": "b3", "role": "target", "highlight": true },
+      { "string": 5, "fret": 7, "label": "5", "role": "chord_tone" },
+      { "string": 5, "fret": 12, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 15, "label": "b3", "role": "target", "highlight": true },
+      { "string": 4, "fret": 2, "label": "5", "role": "chord_tone" },
+      { "string": 4, "fret": 7, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 10, "label": "b3", "role": "target", "highlight": true },
+      { "string": 4, "fret": 14, "label": "5", "role": "chord_tone" },
+      { "string": 3, "fret": 2, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 5, "label": "b3", "role": "target", "highlight": true },
+      { "string": 3, "fret": 9, "label": "5", "role": "chord_tone" },
+      { "string": 3, "fret": 14, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 2, "fret": 1, "label": "b3", "role": "target", "highlight": true },
+      { "string": 2, "fret": 5, "label": "5", "role": "chord_tone" },
+      { "string": 2, "fret": 10, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 2, "fret": 13, "label": "b3", "role": "target", "highlight": true },
+      { "string": 1, "fret": 0, "label": "5", "role": "chord_tone" },
+      { "string": 1, "fret": 5, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 1, "fret": 8, "label": "b3", "role": "target", "highlight": true },
+      { "string": 1, "fret": 12, "label": "5", "role": "chord_tone" }
+    ]
+  }
+}
+```
+
 **20~40분 · 실전 즉흥 (Am 원코드 백킹 / 80~90 BPM)**
 오늘의 메인, 이번 주 졸업 시험이에요. 백킹 틀고 규칙: **① 넥 위쪽(12~17프렛)에서 한 프레이즈 열고 → 그 자리에서 가장 가까운 C에 착지·비브라토. ② 그다음 프레이즈는 넥 중간(7~12프렛)에서 열고 → 또 그 자리의 가까운 C에 착지.** 위 예시 리크를 출발점으로 쓰되, 콜앤리스폰스처럼 "위에서 묻고, 아래에서 답하기"를 해보세요. 절대 5프렛으로 도망가지 말고, 있는 자리에서 착지하는 훈련. 최소 6개 프레이즈, 매번 가까운 C 착지.
+
+```json
+{
+  "id": "m1.w3.d4.nearest_3rd_landing",
+  "type": "tab",
+  "meta": {
+    "title": "Nearest-3rd landing over Am (high box -> mid box)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "tempoBpm": 85
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "3rd_interval",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 3, "fret": 14, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 2, "fret": 15, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 2, "fret": 17, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 1, "fret": 15, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 2, "fret": 17, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 3, "fret": 14, "duration": "eighth", "technique": "slide", "slideToFret": 17, "label": "R", "isRoot": true, "role": "root" },
+        { "string": 3, "fret": 17, "duration": "quarter", "technique": "vibrato", "label": "b3", "target": true, "highlight": true, "role": "target" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 3, "fret": 12, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 4, "fret": 14, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 4, "fret": 12, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 5, "fret": 12, "duration": "eighth", "technique": "slide", "slideToFret": 15, "label": "R", "isRoot": true, "role": "root" },
+        { "string": 5, "fret": 15, "duration": "half", "technique": "vibrato", "label": "b3", "target": true, "highlight": true, "role": "target" }
+      ]}
+    ]
+  }
+}
+```
 
 **40~50분 · 녹음/피드백 (권장)**
 오늘은 꼭 녹음하세요. 이번 주 결과물이자 "펜타토닉 넥 장악" 챕터의 졸업 증명이니까요. 다시 들으며 체크: ① 프레이즈 끝이 매번 코드톤(C 또는 A)에 걸렸나. ② 착지하려고 손을 멀리 옮기다 박자를 놓친 적은 없나 — 있었다면 다음엔 더 가까운 C를 노리세요. ③ 넥 위·중간·아래를 골고루 썼나. 재생 속도를 늦춰 들으면 착지 타이밍이 밀렸는지 또렷이 잡혀요.

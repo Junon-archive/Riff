@@ -116,6 +116,55 @@ Light warm-up. Run A blues Box 1 in 3rds, ascending and descending, once each, t
 **10–20 min · Brain training (getting a feel for the capstone lick + call/response)**
 Get the capstone lick into your hands while staying aware of its structure. Play through it while saying out loud, **"question~ answer!"** to mark the "measure 1 is the question (open), measures 3–4 are the answer (closed)" conversation structure. Pay special attention to the **rest (the gap) before measure 2** — actually leave it empty. Beginners can't stand this silence and rush to fill it with notes, but that empty space is exactly what brings the next phrase to life.
 
+```json
+{
+  "id": "m1.w4.d4.capstone_call_response_lick",
+  "type": "tab",
+  "meta": {
+    "title": "1-month capstone — call & response over Am7 (all skills combined)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A blues",
+    "tempoBpm": 80
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "call_and_response",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 6, "fret": 5, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 5, "fret": 5, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 6, "fret": 8, "duration": "eighth", "label": "b3", "highlight": true, "role": "target" },
+        { "string": 5, "fret": 7, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 5, "fret": 6, "duration": "eighth", "label": "b5", "highlight": true, "role": "passing" },
+        { "string": 5, "fret": 5, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 6, "fret": 5, "duration": "quarter", "label": "R", "isRoot": true, "role": "root" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 1, "fret": 1, "duration": "quarter", "rest": true, "label": "rest" },
+        { "string": 3, "fret": 5, "duration": "eighth", "label": "b3", "highlight": true, "role": "target" },
+        { "string": 3, "fret": 7, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 3, "fret": 8, "duration": "quarter", "technique": "vibrato", "label": "b5", "highlight": true, "role": "blue_note" },
+        { "string": 3, "fret": 7, "duration": "quarter", "label": "4", "role": "scale" }
+      ]},
+      { "measure": 3, "notes": [
+        { "string": 2, "fret": 5, "duration": "eighth", "label": "5(ref E)", "role": "chord_tone" },
+        { "string": 3, "fret": 7, "duration": "half", "technique": "bend", "bendTarget": "full", "label": "4>5", "highlight": true, "role": "scale" },
+        { "string": 3, "fret": 5, "duration": "eighth", "label": "b3", "highlight": true, "role": "target" },
+        { "string": 4, "fret": 5, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 4, "fret": 7, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" }
+      ]},
+      { "measure": 4, "notes": [
+        { "string": 4, "fret": 7, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 3, "fret": 7, "duration": "eighth", "technique": "slide", "slideToFret": 5, "label": "4>b3", "highlight": true, "role": "target" },
+        { "string": 3, "fret": 5, "duration": "half", "technique": "vibrato", "label": "b3", "target": true, "highlight": true, "role": "target" },
+        { "string": 4, "fret": 7, "duration": "quarter", "technique": "vibrato", "label": "R", "isRoot": true, "role": "root" }
+      ]}
+    ]
+  }
+}
+```
+
 **20–40 min · Real-world improv & full recording (Am7 one-chord backing, 75–80 BPM)**
 Today's main event. Play the backing track and record **the whole 2–3 minutes, start to finish** (a phone voice memo is fine). Rule: **converse via call and response.** Leave question phrases open on ♭5 or the 4th, and always close answers by landing on ♭3 or the root + vibrato. Use the capstone lick as a seed, but don't just repeat it — vary it gradually. If you slip up, don't stop, keep going — real playing never stops.
 

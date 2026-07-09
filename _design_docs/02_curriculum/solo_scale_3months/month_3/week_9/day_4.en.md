@@ -139,8 +139,111 @@ Second, here's the **8-bar improv model**. The Am7 sections land on C, the D7 se
 **0–10 min · Warm-up (BPM 85) — warming up the two landing notes**
 With the metronome at 85, alternate between just the two targets on the landing map. C (string 3 fret 5) ↔ F# (string 2 fret 7), each with vibrato, in quarter notes. Say it out loud as you go: "Am7, C — D7, F-sharp." At the end of the day, these two notes are what your hand needs to remember.
 
+```json
+{
+  "id": "m3.w9.d4.landing_map",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "Landing map - C for Am7, F#(color) for D7",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A Dorian (Am7 - D7)",
+    "tempoBpm": 85
+  },
+  "fretboard": {
+    "startFret": 5,
+    "fretSpan": 6,
+    "dots": [
+      { "string": 6, "fret": 5, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 7, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 2, "fret": 10, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 5, "label": "Am7-b3(C)", "role": "target", "highlight": true },
+      { "string": 1, "fret": 8, "label": "Am7-b3(C)", "role": "target", "highlight": true },
+      { "string": 5, "fret": 9, "label": "D7-3(F#)=6", "role": "color", "highlight": true },
+      { "string": 2, "fret": 7, "label": "D7-3(F#)=6", "role": "color", "highlight": true }
+    ]
+  }
+}
+```
+
 **10–20 min · Brain training (getting the 8-bar model under your fingers)**
 Without the backing track yet, go through the 8-bar model slowly, bar by bar. Repeat any bar you get stuck on five times. Pay special attention to getting the **landing notes (with vibrato)** in bars 2, 4, 6, and 8, and the **space (rest)** at the top of bars 3 and 7, exactly right. That space shouldn't feel awkward, like an accidental stop — leave it empty confidently, like an **intentional breath**.
+
+```json
+{
+  "id": "m3.w9.d4.eight_bar_dorian_solo",
+  "type": "tab",
+  "meta": {
+    "title": "8-bar A Dorian solo over Am7-D7 (F# color + 3rd targeting)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A Dorian (Am7 - D7)",
+    "tempoBpm": 85
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "guide_tone_3rds",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 4, "fret": 7, "duration": "quarter", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 4, "fret": 9, "duration": "eighth", "label": "2", "role": "scale" },
+        { "string": 3, "fret": 5, "duration": "eighth", "label": "b3", "role": "scale" },
+        { "string": 3, "fret": 7, "duration": "quarter", "label": "4", "role": "scale" },
+        { "string": 3, "fret": 9, "duration": "quarter", "label": "5", "role": "chord_tone" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 2, "fret": 8, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 2, "fret": 7, "duration": "eighth", "label": "6", "role": "color", "highlight": true },
+        { "string": 3, "fret": 9, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 3, "fret": 7, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 3, "fret": 5, "duration": "half", "technique": "vibrato", "label": "b3", "role": "target", "highlight": true }
+      ]},
+      { "measure": 3, "notes": [
+        { "string": 3, "fret": 5, "duration": "quarter", "rest": true, "label": "rest" },
+        { "string": 3, "fret": 7, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 3, "fret": 9, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 2, "fret": 7, "duration": "quarter", "label": "6", "role": "color", "highlight": true },
+        { "string": 3, "fret": 9, "duration": "quarter", "label": "5", "role": "chord_tone" }
+      ]},
+      { "measure": 4, "notes": [
+        { "string": 2, "fret": 8, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 2, "fret": 10, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 2, "fret": 8, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 3, "fret": 9, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 2, "fret": 7, "duration": "half", "technique": "vibrato", "label": "6", "role": "color", "highlight": true }
+      ]},
+      { "measure": 5, "notes": [
+        { "string": 2, "fret": 10, "duration": "quarter", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 1, "fret": 8, "duration": "eighth", "label": "b3", "role": "scale" },
+        { "string": 1, "fret": 7, "duration": "eighth", "label": "2", "role": "scale" },
+        { "string": 2, "fret": 10, "duration": "quarter", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 2, "fret": 8, "duration": "quarter", "label": "b7", "role": "scale" }
+      ]},
+      { "measure": 6, "notes": [
+        { "string": 3, "fret": 9, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 2, "fret": 7, "duration": "eighth", "label": "6", "role": "color", "highlight": true },
+        { "string": 2, "fret": 8, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 2, "fret": 10, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 1, "fret": 8, "duration": "half", "technique": "vibrato", "label": "b3", "role": "target", "highlight": true }
+      ]},
+      { "measure": 7, "notes": [
+        { "string": 3, "fret": 9, "duration": "quarter", "rest": true, "label": "rest" },
+        { "string": 2, "fret": 10, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 2, "fret": 8, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 3, "fret": 9, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 3, "fret": 7, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 3, "fret": 9, "duration": "quarter", "label": "5", "role": "chord_tone" }
+      ]},
+      { "measure": 8, "notes": [
+        { "string": 3, "fret": 9, "duration": "quarter", "label": "5", "role": "chord_tone" },
+        { "string": 2, "fret": 8, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 3, "fret": 9, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 2, "fret": 7, "duration": "half", "technique": "vibrato", "label": "6", "role": "color", "highlight": true }
+      ]}
+    ]
+  }
+}
+```
 
 **20–40 min · Real-world improv (Am7-D7 vamp / 80–85 BPM)**
 Put on an "Am7 D7 vamp backing track." First, play through the 8-bar model exactly as-is, **twice**, over the backing track. Then comes the real thing: drop the model and **improvise your own 8 bars**, following just two rules — **① land on C at the end of Am7, F# at the end of D7. ② leave at least one beat of space at the end of every phrase.** Fill the rest however you like, with 3rds or 4-note groups or anything else. Try something a little different each time through.

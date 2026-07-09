@@ -103,6 +103,42 @@ Set the metronome to 90 and run through the **complete A natural minor Box 1** o
 **10–20 min · Brain training (today's target = landing on C + the four B/F positions)**
 Metronome off. Get the integration lick above into your hands, especially the final **C (3rd string, 5th fret) vibrato landing.** Vibrato is a gentle side-to-side shake of the wrist that makes the note "tremble." No need for a big shake — keep it even. Then fret all four B and F spots (B: 6/7, 1/7; F: 5/8, 2/6) with your eyes closed, confirming each one's resolution direction (B up to C, F down to E) once more.
 
+```json
+{
+  "id": "m2.w5.d4.natural_minor_jam_lick",
+  "type": "tab",
+  "meta": {
+    "title": "A natural minor jam lick — B & F as color, resolving to b3 (C) with vibrato",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "tempoBpm": 90
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "4note_sequence",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 6, "fret": 5, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 6, "fret": 7, "duration": "eighth", "label": "2", "highlight": true, "role": "passing" },
+        { "string": 6, "fret": 8, "duration": "quarter", "label": "b3", "target": true, "highlight": true, "role": "target" },
+        { "string": 5, "fret": 5, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 5, "fret": 7, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 5, "fret": 8, "duration": "eighth", "label": "6", "highlight": true, "role": "passing" },
+        { "string": 5, "fret": 7, "duration": "eighth", "label": "5", "role": "chord_tone" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 2, "fret": 5, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 2, "fret": 6, "duration": "eighth", "label": "6", "highlight": true, "role": "passing" },
+        { "string": 2, "fret": 5, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 3, "fret": 7, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 3, "fret": 5, "duration": "half", "technique": "vibrato", "label": "b3", "target": true, "highlight": true, "role": "target" }
+      ]}
+    ]
+  }
+}
+```
+
 **20–40 min · Real-world improv (Am one-chord backing, 85–90 BPM)**
 Put on an "Am backing track" and today, use the **complete 7 notes freely.** Two rules: ① B and F are passing tones only (no settling on them), ② **every phrase ends with a vibrato landing on C.** Snap together this week's building blocks (3rd-interval pairs, A-B-C, F-E) like Lego pieces and improvise a short 4-bar solo. It's fine to repeat the same thing — today's goal is simply the **first experience of a complete scale turning into a song in your hands.**
 

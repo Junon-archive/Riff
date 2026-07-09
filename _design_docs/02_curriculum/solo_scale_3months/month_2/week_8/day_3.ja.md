@@ -110,6 +110,42 @@ lang: ja
 **20〜40分・実戦即興（Dm7-G7-Cmaj7バッキング／BPM 70〜76）**
 バッキングの上で、上の**余白ドリル**から始めます。「3度を押さえる→休む→次の3度を準備する。」余白が怖く感じるかもしれませんが、その沈黙こそが味方です。慣れてきたら**速い着地ライン（一つ目のJSON）**に進んで音を埋めていきます。ルールは変わりません。**つなぎの音は自由、コードが変わる1拍目には必ず3度。**遅れたなと感じたら、次のコードでは余白を多めにとって準備しましょう。
 
+```json
+{
+  "id": "m2.w8.d3.arrival_with_space",
+  "type": "tab",
+  "meta": {
+    "title": "Land the 3rd, then leave space (arrival drill with rests)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "C major (ii-V-I)",
+    "tempoBpm": 76
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "guide_tone_3rds",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 4, "fret": 3, "duration": "quarter", "label": "Dm7-3(F)", "target": true, "highlight": true, "role": "target" },
+        { "string": 3, "fret": 2, "duration": "eighth", "label": "A", "role": "chord_tone" },
+        { "string": 2, "fret": 1, "duration": "eighth", "label": "C", "role": "scale" },
+        { "string": 4, "fret": 3, "duration": "half", "rest": true, "label": "rest" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 3, "fret": 4, "duration": "quarter", "label": "G7-3(B)", "target": true, "highlight": true, "role": "target" },
+        { "string": 2, "fret": 3, "duration": "eighth", "label": "D", "role": "chord_tone" },
+        { "string": 1, "fret": 3, "duration": "eighth", "label": "G", "isRoot": true, "role": "root" },
+        { "string": 3, "fret": 4, "duration": "half", "rest": true, "label": "rest" }
+      ]},
+      { "measure": 3, "notes": [
+        { "string": 4, "fret": 2, "duration": "half", "technique": "vibrato", "label": "Cmaj7-3(E)", "target": true, "highlight": true, "role": "target" },
+        { "string": 4, "fret": 2, "duration": "half", "rest": true, "label": "rest" }
+      ]}
+    ]
+  }
+}
+```
+
 **40〜50分・録音・フィードバック（推奨）**
 30秒録音します。再生しながら耳で追うのは一つだけ。**コードが変わる瞬間と自分の3度が重なっているか。**ずれている箇所を見つけたら、そのコードだけ再生速度を落として「どれくらい遅かったか/早かったか」を確認します。遅れる癖があるなら、そのコードの一拍前に手をあらかじめ置いておく練習で矯正しましょう。
 

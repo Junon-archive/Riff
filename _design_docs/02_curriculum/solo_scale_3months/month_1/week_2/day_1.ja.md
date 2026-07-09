@@ -12,6 +12,39 @@ lang: ja
 
 今日なぜこれをやるかというと、先週は第1ボックス（5フレット）を手だけじゃなく耳にも刻み込みましたよね。実はここがポイントで、第1ボックスだけを掘り続けると、5〜8フレットという狭い檻に閉じ込められやすいんです。即興が窮屈に感じる本当の理由がこれなんです。「音を自由に選べる」ためには、指板が広くなければいけません。だから今週はネックの上のほうへお引っ越しします。今日はその最初の新居、**第2ボックス（7〜10フレット）**です。
 
+```json
+{
+  "id": "m1.w2.d1.pentatonic_box2",
+  "type": "scale_shape",
+  "meta": {
+    "title": "A minor pentatonic — Box 2 (connects up from Box 1)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "scale": "A minor pentatonic",
+    "tempoBpm": 70
+  },
+  "fretboard": {
+    "startFret": 7,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 6, "fret": 8, "finger": 2, "label": "b3", "role": "target", "highlight": true },
+      { "string": 6, "fret": 10, "finger": 4, "label": "4", "role": "scale" },
+      { "string": 5, "fret": 7, "finger": 1, "label": "5", "role": "chord_tone" },
+      { "string": 5, "fret": 10, "finger": 4, "label": "b7", "role": "scale" },
+      { "string": 4, "fret": 7, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 10, "finger": 4, "label": "b3", "role": "target", "highlight": true },
+      { "string": 3, "fret": 7, "finger": 1, "label": "4", "role": "scale" },
+      { "string": 3, "fret": 9, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 2, "fret": 8, "finger": 2, "label": "b7", "role": "scale" },
+      { "string": 2, "fret": 10, "finger": 4, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 1, "fret": 8, "finger": 2, "label": "b3", "role": "target", "highlight": true },
+      { "string": 1, "fret": 10, "finger": 4, "label": "4", "role": "scale" }
+    ]
+  }
+}
+```
+
 でも、ここでほとんどの人がつまずきます。第2ボックスもまた「上行–下行でラララ…」と丸暗記しようとするんです。それだと檻が一つ増えるだけ。私たちが欲しいのは檻じゃなく**高速道路**です。第1ボックスから第2ボックスへ、車線変更するみたいにスーッと移る道。その道を作る道具が**スライド**なんです。
 
 ポイントはこれです。第1ボックスと第2ボックスは**ぴったり隣り合って音を共有**しています。例えば4弦を見ると、第1ボックスのA（7フレット、根音）と第2ボックスのC（10フレット、♭3）が同じ弦の上にあります。つまりAを押さえた指を**10フレットまで滑らせるだけ**で、気づけば第2ボックスに着地していて、しかもその着地音が私たちの永遠のターゲット、**C（♭3）**なんです。スライド一回で「ボックス移動＋ターゲット着地」が同時に完成するわけです。今日はこの橋を一本、しっかり架けます。
@@ -100,6 +133,44 @@ lang: ja
 
 **10〜20分・頭のトレーニング（今日のターゲット＝C／♭3、そしてスライドの橋）**
 メトロノームを止めて、上の接続ラインの**核心となる一つの動作だけ**を繰り返します。4弦7フレット（A）を人差し指で押さえ→10フレット（C）まで滑らせる。このスライドを20回。ポイントは二つ。①到着フレット（10）で**きっちり止まって**、C音が生きていること。②滑っている間、指の圧を弦から離さないこと（離すと音が途切れます）。目を閉じても10フレットにピタッと止まれれば合格です。
+
+```json
+{
+  "id": "m1.w2.d1.box1_to_box2_slide",
+  "type": "tab",
+  "meta": {
+    "title": "Box 1 -> Box 2 sliding connection (land on b3)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "tempoBpm": 70
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "block_connection",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 6, "fret": 5, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 6, "fret": 8, "duration": "eighth", "label": "b3", "highlight": true, "role": "target" },
+        { "string": 5, "fret": 5, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 5, "fret": 7, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 4, "fret": 5, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 4, "fret": 7, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 4, "fret": 7, "duration": "quarter", "technique": "slide", "slideToFret": 10, "label": "b3", "target": true, "highlight": true, "role": "target" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 3, "fret": 7, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 3, "fret": 9, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 2, "fret": 8, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 2, "fret": 10, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 1, "fret": 8, "duration": "eighth", "label": "b3", "highlight": true, "role": "target" },
+        { "string": 1, "fret": 10, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 1, "fret": 8, "duration": "quarter", "technique": "vibrato", "label": "b3", "target": true, "highlight": true, "role": "target" }
+      ]}
+    ]
+  }
+}
+```
 
 **20〜40分・実戦即興（Amワンコードバッキング／BPM 70）**
 「Am backing track slow」あたりを一つ流します。ルールは一つだけ。**第1ボックスから始めて、今日習った4弦スライドで第2ボックスに渡り、第2ボックスの中でC（♭3）に着地して止まる。**まだ派手なフレーズは気にしなくて大丈夫です。「第1ボックス→橋→第2ボックス→C着地」というこの一連の旅が途切れずに転がれば、今日は大成功です。慣れてきたら逆に、第2ボックスから始めて第1ボックスへスライドで降りてみましょう（10フレットC→7フレットAへの逆スライド）。

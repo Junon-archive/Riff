@@ -94,6 +94,67 @@ To the metronome at 92, run a pattern of interval-of-a-3rd jumps inside the "one
 **10–20 min · Brain training (getting the motif into your hands)**
 No backing track — just repeat the call motif (D-E-C + rest) 10 times. **Sing it along with your voice too** — "da-da-daaah... (rest)." Then layer in the response. Alternate between the call and response, and train yourself to resist the urge to fill that awkward "silence" between them. That restraint is today's real skill.
 
+```json
+{
+  "id": "m3.w12.d2.motif_response",
+  "type": "tab",
+  "meta": {
+    "title": "Original solo motif - the RESPONSE (D7 F# color -> A7 mode switch to major 3rd)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A Dorian/Mixolydian",
+    "tempoBpm": 92
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "call_and_response",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 2, "fret": 5, "duration": "eighth", "technique": "none", "label": "5", "role": "scale" },
+        { "string": 2, "fret": 7, "duration": "quarter", "technique": "vibrato", "label": "6", "role": "color", "highlight": true },
+        { "string": 1, "fret": 5, "duration": "quarter", "rest": true },
+        { "string": 2, "fret": 5, "duration": "eighth", "technique": "none", "label": "5", "role": "scale" },
+        { "string": 2, "fret": 7, "duration": "eighth", "technique": "none", "label": "6", "role": "color", "highlight": true },
+        { "string": 2, "fret": 8, "duration": "eighth", "technique": "none", "label": "b7", "role": "color", "highlight": true }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 3, "fret": 5, "duration": "eighth", "technique": "none", "label": "b3", "role": "passing" },
+        { "string": 3, "fret": 6, "duration": "quarter", "technique": "vibrato", "label": "3", "role": "target", "highlight": true },
+        { "string": 1, "fret": 5, "duration": "quarter", "rest": true },
+        { "string": 2, "fret": 8, "duration": "quarter", "technique": "none", "label": "b7", "role": "color", "highlight": true },
+        { "string": 1, "fret": 5, "duration": "eighth", "rest": true }
+      ]}
+    ]
+  }
+}
+```
+
+```json
+{
+  "id": "m3.w12.d2.motif_call",
+  "type": "tab",
+  "meta": {
+    "title": "Original solo motif - the CALL (Am7, land on b3)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A Dorian (over Am7)",
+    "tempoBpm": 92
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "call_and_response",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 3, "fret": 7, "duration": "eighth", "technique": "none", "label": "4", "role": "scale" },
+        { "string": 3, "fret": 9, "duration": "eighth", "technique": "none", "label": "5", "role": "chord_tone" },
+        { "string": 3, "fret": 5, "duration": "quarter", "technique": "vibrato", "label": "b3", "role": "target", "highlight": true },
+        { "string": 1, "fret": 5, "duration": "half", "rest": true }
+      ]}
+    ]
+  }
+}
+```
+
 **20–40 min · Real composing (Am7-D7-A7 backing / 88–92 BPM)**
 Start the backing track and layer call → response over the actual chords. Then comes the real composing part: **answer the response slightly differently every time.** Sometimes hold F# longer, sometimes switch to C#, sometimes leave a bigger gap. Pick 2-3 variations you like and remember them. That's the raw material for tomorrow's finished solo.
 

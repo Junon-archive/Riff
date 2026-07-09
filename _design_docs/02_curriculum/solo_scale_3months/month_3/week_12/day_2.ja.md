@@ -94,6 +94,67 @@ lang: ja
 **10〜20分・頭のトレーニング（モチーフを手に馴染ませる）**
 バッキングなしで、コールのモチーフ（D-E-C＋休み）だけを10回繰り返します。このとき**口でも一緒に歌ってください**——「タ・ダ・ダーン…（休み）」。それからレスポンスを重ねます。コールとレスポンスを交互に弾きながら、その間の「沈黙」が気まずくて埋めたくなる衝動をぐっと我慢する練習です。その我慢する力が今日の実力です。
 
+```json
+{
+  "id": "m3.w12.d2.motif_response",
+  "type": "tab",
+  "meta": {
+    "title": "Original solo motif - the RESPONSE (D7 F# color -> A7 mode switch to major 3rd)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A Dorian/Mixolydian",
+    "tempoBpm": 92
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "call_and_response",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 2, "fret": 5, "duration": "eighth", "technique": "none", "label": "5", "role": "scale" },
+        { "string": 2, "fret": 7, "duration": "quarter", "technique": "vibrato", "label": "6", "role": "color", "highlight": true },
+        { "string": 1, "fret": 5, "duration": "quarter", "rest": true },
+        { "string": 2, "fret": 5, "duration": "eighth", "technique": "none", "label": "5", "role": "scale" },
+        { "string": 2, "fret": 7, "duration": "eighth", "technique": "none", "label": "6", "role": "color", "highlight": true },
+        { "string": 2, "fret": 8, "duration": "eighth", "technique": "none", "label": "b7", "role": "color", "highlight": true }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 3, "fret": 5, "duration": "eighth", "technique": "none", "label": "b3", "role": "passing" },
+        { "string": 3, "fret": 6, "duration": "quarter", "technique": "vibrato", "label": "3", "role": "target", "highlight": true },
+        { "string": 1, "fret": 5, "duration": "quarter", "rest": true },
+        { "string": 2, "fret": 8, "duration": "quarter", "technique": "none", "label": "b7", "role": "color", "highlight": true },
+        { "string": 1, "fret": 5, "duration": "eighth", "rest": true }
+      ]}
+    ]
+  }
+}
+```
+
+```json
+{
+  "id": "m3.w12.d2.motif_call",
+  "type": "tab",
+  "meta": {
+    "title": "Original solo motif - the CALL (Am7, land on b3)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A Dorian (over Am7)",
+    "tempoBpm": 92
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "call_and_response",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 3, "fret": 7, "duration": "eighth", "technique": "none", "label": "4", "role": "scale" },
+        { "string": 3, "fret": 9, "duration": "eighth", "technique": "none", "label": "5", "role": "chord_tone" },
+        { "string": 3, "fret": 5, "duration": "quarter", "technique": "vibrato", "label": "b3", "role": "target", "highlight": true },
+        { "string": 1, "fret": 5, "duration": "half", "rest": true }
+      ]}
+    ]
+  }
+}
+```
+
 **20〜40分・実戦作曲（Am7-D7-A7バッキング／88〜92 BPM）**
 バッキングを流し、コール→レスポンスを実際のコードの上に乗せます。それから本当の作曲がスタート：**レスポンスを毎回少しずつ違うふうに**受け取ってみてください。あるときはF#を長く、あるときはC#にスイッチ、あるときは余白をもっと大きく。気に入った変形を2〜3個選んで覚えておきましょう。それが明日の完成ソロの材料になります。
 

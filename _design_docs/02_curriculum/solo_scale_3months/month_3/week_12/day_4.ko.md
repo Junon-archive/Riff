@@ -67,6 +67,41 @@ i18nKey: "lesson.m3.w12.d4"
 **0~10분 · 워밍업 (BPM 92) — 이음새만 예열**
 메트로놈 92로 위 발췌(이음새 두 마디)만 반복해요. 특히 4마디 끝 C(3번 5프렛)에서 5마디 C#(3번 6프렛)로 넘어가는 손가락 이동과, 이어지는 블루노트 벤딩(1번 8프렛→C# 음정)을 매끄럽게. 오늘 워밍업은 곡의 가장 약한 관절을 푸는 시간이에요.
 
+```json
+{
+  "id": "m3.w12.d4.switch_retake_excerpt",
+  "type": "tab",
+  "meta": {
+    "title": "Retake excerpt - the mode-switch seam (D7 -> A7, bars 4-5)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A (Dorian/Mixolydian composite)",
+    "tempoBpm": 92
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "composition",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 3, "fret": 7, "duration": "eighth", "technique": "none", "label": "4", "role": "scale" },
+        { "string": 3, "fret": 9, "duration": "eighth", "technique": "none", "label": "5", "role": "chord_tone" },
+        { "string": 2, "fret": 7, "duration": "quarter", "technique": "vibrato", "label": "6", "role": "color", "highlight": true },
+        { "string": 1, "fret": 5, "duration": "quarter", "rest": true },
+        { "string": 3, "fret": 5, "duration": "quarter", "technique": "none", "label": "b3", "role": "passing" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 3, "fret": 6, "duration": "quarter", "technique": "vibrato", "label": "3", "role": "target", "highlight": true },
+        { "string": 1, "fret": 5, "duration": "eighth", "rest": true },
+        { "string": 2, "fret": 8, "duration": "eighth", "technique": "none", "label": "b7", "role": "color", "highlight": true },
+        { "string": 1, "fret": 8, "duration": "eighth", "technique": "bend", "bendTarget": "half", "label": "b3", "role": "blue_note", "highlight": true },
+        { "string": 1, "fret": 9, "duration": "quarter", "technique": "none", "label": "3", "role": "target", "highlight": true },
+        { "string": 1, "fret": 5, "duration": "eighth", "rest": true }
+      ]}
+    ]
+  }
+}
+```
+
 **10~20분 · 두뇌 훈련 (4대 기준으로 어제 녹음 채점)**
 어제 통 녹음을 꺼내 재생 속도를 **0.75배**로 늦춰 한 번, **0.5배**로 한 번 들어요. 종이에 네 칸(착지·색채·비브라토·타이밍)을 그리고 각 항목을 △/○ 로만 표시. 그다음 가장 △가 많은 **구간 한 곳**을 특정하세요. 십중팔구 이음새(4→5마디)일 거예요.
 

@@ -103,6 +103,42 @@ lang: ja
 **10〜20分・頭のトレーニング（今日のターゲット＝着地C＋B・Fの4か所）**
 メトロノームを止めて、上の統合リックを手に馴染ませます。特に最後の**C（3弦5フレット）ビブラート着地**を繰り返し。ビブラートは手首を左右に軽く揺らして音を「震わせる」ものです。大きく揺らす必要はありません、一定に。そして、B（6/7、1/7）とF（5/8、2/6）の4か所を目を閉じて押さえながら、それぞれの解決方向（B↑C、F↓E）をもう一度確認しましょう。
 
+```json
+{
+  "id": "m2.w5.d4.natural_minor_jam_lick",
+  "type": "tab",
+  "meta": {
+    "title": "A natural minor jam lick — B & F as color, resolving to b3 (C) with vibrato",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "tempoBpm": 90
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "4note_sequence",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 6, "fret": 5, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 6, "fret": 7, "duration": "eighth", "label": "2", "highlight": true, "role": "passing" },
+        { "string": 6, "fret": 8, "duration": "quarter", "label": "b3", "target": true, "highlight": true, "role": "target" },
+        { "string": 5, "fret": 5, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 5, "fret": 7, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 5, "fret": 8, "duration": "eighth", "label": "6", "highlight": true, "role": "passing" },
+        { "string": 5, "fret": 7, "duration": "eighth", "label": "5", "role": "chord_tone" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 2, "fret": 5, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 2, "fret": 6, "duration": "eighth", "label": "6", "highlight": true, "role": "passing" },
+        { "string": 2, "fret": 5, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 3, "fret": 7, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 3, "fret": 5, "duration": "half", "technique": "vibrato", "label": "b3", "target": true, "highlight": true, "role": "target" }
+      ]}
+    ]
+  }
+}
+```
+
 **20〜40分・実戦即興（Amワンコードバッキング／85〜90 BPM）**
 「Am backing track」を流して、今日は**完成した7音全部**を自由に使いましょう。ルールは2つ：①B・Fは経過音としてのみ（居座り禁止）、②**すべてのフレーズの終わりはCにビブラートで着地。**今週学んだパーツ（3度ペア、A-B-C、F-E）をレゴのようにつなぎ合わせて、4小節の短いソロを即興で作ってみてください。同じものを繰り返してもOKです——今日は「完成したスケールが自分の手で歌になる」という最初の体験を目指しましょう。
 

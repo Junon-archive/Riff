@@ -154,11 +154,126 @@ i18nKey: "lesson.m3.w9.d3"
 **0~10분 · 워밍업 (BPM 80) — 4연음 시퀀스**
 메트로놈 80에 맞춰 첫 번째 4연음 시퀀스를 굴려요. 손가락이 촘촘하게 구르는 느낌을 유지하면서, F#(5번 9프렛)이 물결 위로 떠오를 때 살짝 또렷하게. 왕복(올라갔다 같은 패턴으로 내려오기)까지 하면 손이 확 풀려요.
 
+```json
+{
+  "id": "m3.w9.d3.four_note_sequence_dorian",
+  "type": "tab",
+  "meta": {
+    "title": "A Dorian 4-note sequence (F# rises in groups 3-4)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A Dorian",
+    "tempoBpm": 80
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "4note_sequence",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 6, "fret": 5, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 6, "fret": 7, "duration": "eighth", "label": "2", "role": "scale" },
+        { "string": 6, "fret": 8, "duration": "eighth", "label": "b3", "role": "scale" },
+        { "string": 5, "fret": 5, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 6, "fret": 7, "duration": "eighth", "label": "2", "role": "scale" },
+        { "string": 6, "fret": 8, "duration": "eighth", "label": "b3", "role": "scale" },
+        { "string": 5, "fret": 5, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 5, "fret": 7, "duration": "eighth", "label": "5", "role": "chord_tone" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 6, "fret": 8, "duration": "eighth", "label": "b3", "role": "scale" },
+        { "string": 5, "fret": 5, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 5, "fret": 7, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 5, "fret": 9, "duration": "eighth", "label": "6", "role": "color", "highlight": true },
+        { "string": 5, "fret": 5, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 5, "fret": 7, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 5, "fret": 9, "duration": "eighth", "label": "6", "role": "color", "highlight": true },
+        { "string": 4, "fret": 5, "duration": "eighth", "label": "b7", "role": "scale" }
+      ]}
+    ]
+  }
+}
+```
+
 **10~20분 · 두뇌 훈련 (착지 3도 매핑)**
 두 번째 지도를 보며 **Am7의 C** 세 자리와 **D7의 F#** 두 자리를 번갈아 짚어요. 입으로 "Am7이면 C, D7이면 F#" 하고 부르면서. 마지막엔 눈 감고 "지금 D7! → 가장 가까운 F#" 을 3초 안에 짚으면 통과. **코드 이름 → 착지음**이 반사가 되게 만드는 거예요.
 
+```json
+{
+  "id": "m3.w9.d3.am7_d7_target_thirds",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "Target 3rds: Am7-b3(C) and D7-3(F#) which is the Dorian color",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A Dorian (Am7 - D7)",
+    "tempoBpm": 80
+  },
+  "fretboard": {
+    "startFret": 5,
+    "fretSpan": 5,
+    "dots": [
+      { "string": 4, "fret": 7, "label": "Am7 R", "isRoot": true, "role": "root" },
+      { "string": 6, "fret": 5, "label": "Am7 R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 5, "label": "Am7-b3(C)", "role": "target", "highlight": true },
+      { "string": 6, "fret": 8, "label": "Am7-b3(C)", "role": "target", "highlight": true },
+      { "string": 1, "fret": 8, "label": "Am7-b3(C)", "role": "target", "highlight": true },
+      { "string": 3, "fret": 7, "label": "D7 R", "isRoot": true, "role": "root" },
+      { "string": 2, "fret": 7, "label": "D7-3(F#)=6", "role": "color", "highlight": true },
+      { "string": 5, "fret": 9, "label": "D7-3(F#)=6", "role": "color", "highlight": true }
+    ]
+  }
+}
+```
+
 **20~40분 · 실전 즉흥 (Am7-D7 vamp / 76~80 BPM)**
 "Am7 D7 vamp backing track" 을 틀어요(두 마디씩 왕복). 미션 딱 하나: **코드가 바뀔 때마다 그 코드의 3도에 착지.** Am7 구간 끝엔 C, D7 구간 끝엔 F#. 세 번째 4마디 라인을 그대로 얹어 시작해도 좋아요. 사이는 자유롭게 채우되, **착지음만은 반드시** 코드에 맞추기.
+
+```json
+{
+  "id": "m3.w9.d3.chord_change_targeting",
+  "type": "tab",
+  "meta": {
+    "title": "Am7 lands on C(b3), D7 lands on F#(6) - target the changes",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A Dorian (Am7 - D7)",
+    "tempoBpm": 80
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "guide_tone_3rds",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 5, "fret": 7, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 4, "fret": 5, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 4, "fret": 7, "duration": "quarter", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 4, "fret": 9, "duration": "eighth", "label": "2", "role": "scale" },
+        { "string": 3, "fret": 5, "duration": "eighth", "label": "b3", "role": "scale" },
+        { "string": 3, "fret": 7, "duration": "quarter", "label": "4", "role": "scale" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 3, "fret": 9, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 3, "fret": 7, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 3, "fret": 5, "duration": "half", "technique": "vibrato", "label": "b3", "role": "target", "highlight": true },
+        { "string": 4, "fret": 7, "duration": "quarter", "label": "R", "isRoot": true, "role": "root" }
+      ]},
+      { "measure": 3, "notes": [
+        { "string": 3, "fret": 7, "duration": "quarter", "label": "4", "role": "scale" },
+        { "string": 3, "fret": 9, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 2, "fret": 8, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 2, "fret": 10, "duration": "quarter", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 2, "fret": 8, "duration": "quarter", "label": "b7", "role": "scale" }
+      ]},
+      { "measure": 4, "notes": [
+        { "string": 2, "fret": 8, "duration": "quarter", "label": "b7", "role": "scale" },
+        { "string": 3, "fret": 9, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 2, "fret": 8, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 2, "fret": 7, "duration": "half", "technique": "vibrato", "label": "6", "role": "color", "highlight": true }
+      ]}
+    ]
+  }
+}
+```
 
 **40~50분 · 녹음/피드백 (권장)**
 마지막 잼 30초를 녹음. 다시 들으며 둘 체크: **① D7로 바뀌는 순간 F#에 착지했나 / ② 그때 소리가 '반짝' 밝아졌나.** 재생 속도를 0.75배로 늦춰, 코드 체인지와 착지 타이밍이 겹치는지 점검하세요.

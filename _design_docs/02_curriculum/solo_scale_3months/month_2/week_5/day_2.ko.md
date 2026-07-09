@@ -15,6 +15,41 @@ i18nKey: "lesson.m2.w5.d2"
 
 연습 방식은 **4연음(16분음표 4개 묶음)** 이에요. 3도 인터벌이 "건너뛰기"라면, 4연음은 "촘촘하게 채우기"예요. B가 새로 들어오면서 A-B-C가 붙어버렸으니, 이제 촘촘한 16분으로 굴려도 음이 뭉치지 않고 흘러요. 오늘부터 지판 위 B의 좌표를 확실히 외워두세요 — 1폼 기준 **6번 줄 7프렛**과 **1번 줄 7프렛**, 딱 두 자리예요. 이 두 B가 각각 바로 옆(한 프렛 위)의 C로 미끄러져 들어가는 그림을 눈에 새기면 됩니다.
 
+```json
+{
+  "id": "m2.w5.d2.pentatonic_add_2nd",
+  "type": "scale_shape",
+  "meta": {
+    "title": "A minor pentatonic + added 2nd (B) as passing tone to b3 (C)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "scale": "A natural minor (partial)",
+    "tempoBpm": 80
+  },
+  "fretboard": {
+    "startFret": 5,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 6, "fret": 5, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 6, "fret": 7, "finger": 3, "label": "2", "role": "passing", "highlight": true },
+      { "string": 6, "fret": 8, "finger": 4, "label": "b3", "role": "target", "highlight": true },
+      { "string": 5, "fret": 5, "finger": 1, "label": "4", "role": "scale" },
+      { "string": 5, "fret": 7, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 4, "fret": 5, "finger": 1, "label": "b7", "role": "scale" },
+      { "string": 4, "fret": 7, "finger": 3, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 5, "finger": 1, "label": "b3", "role": "target", "highlight": true },
+      { "string": 3, "fret": 7, "finger": 3, "label": "4", "role": "scale" },
+      { "string": 2, "fret": 5, "finger": 1, "label": "5", "role": "chord_tone" },
+      { "string": 2, "fret": 8, "finger": 4, "label": "b7", "role": "scale" },
+      { "string": 1, "fret": 5, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 1, "fret": 7, "finger": 3, "label": "2", "role": "passing", "highlight": true },
+      { "string": 1, "fret": 8, "finger": 4, "label": "b3", "role": "target", "highlight": true }
+    ]
+  }
+}
+```
+
 ## ② 시각 자료
 
 펜타토닉 1폼에 **B(2도, 초록 강조)** 두 자리가 새로 꼈어요 — 6번 줄 7프렛, 1번 줄 7프렛. 각각 바로 위 C(♭3, 초록)로 흘러들어가는 다리예요.
@@ -95,6 +130,41 @@ i18nKey: "lesson.m2.w5.d2"
 
 **0~10분 · 워밍업 (BPM 80)**
 메트로놈 80에 맞춰 **어제의 3도 인터벌 시퀀스**로 손을 먼저 풀어요. 5분. 그다음 5분은 오늘의 4연음 A-B-C 드릴을 저속으로. 한 박에 16분 4개("딴다다다")가 클릭 하나에 정확히 떨어지게. 뭉치면 BPM 70으로.
+
+```json
+{
+  "id": "m2.w5.d2.b_passing_to_third_4note",
+  "type": "tab",
+  "meta": {
+    "title": "4-note sequence: 2nd(B) passing tone resolving to Am 3rd (C)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "tempoBpm": 80
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "4note_sequence",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 6, "fret": 5, "duration": "sixteenth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 6, "fret": 7, "duration": "sixteenth", "label": "2", "highlight": true, "role": "passing" },
+        { "string": 6, "fret": 8, "duration": "sixteenth", "label": "b3", "target": true, "highlight": true, "role": "target" },
+        { "string": 5, "fret": 5, "duration": "sixteenth", "label": "4", "role": "scale" },
+        { "string": 5, "fret": 7, "duration": "sixteenth", "label": "5", "role": "chord_tone" },
+        { "string": 5, "fret": 5, "duration": "sixteenth", "label": "4", "role": "scale" },
+        { "string": 6, "fret": 8, "duration": "sixteenth", "label": "b3", "target": true, "highlight": true, "role": "target" },
+        { "string": 6, "fret": 7, "duration": "sixteenth", "label": "2", "highlight": true, "role": "passing" },
+        { "string": 6, "fret": 5, "duration": "sixteenth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 6, "fret": 7, "duration": "sixteenth", "label": "2", "highlight": true, "role": "passing" },
+        { "string": 6, "fret": 8, "duration": "sixteenth", "label": "b3", "target": true, "highlight": true, "role": "target" },
+        { "string": 5, "fret": 5, "duration": "sixteenth", "label": "4", "role": "scale" },
+        { "string": 6, "fret": 8, "duration": "quarter", "label": "b3", "target": true, "highlight": true, "role": "target" }
+      ]}
+    ]
+  }
+}
+```
 
 **10~20분 · 두뇌 훈련 (오늘의 타겟 = B 두 자리)**
 메트로놈 끄고, 1폼에서 **B(2도)만** 찾아 짚으세요. 6번 줄 7프렛, 1번 줄 7프렛 — 딱 두 군데. 짚을 때마다 "이건 다리, 못 머물러" 하고 소리 내 말하면서 **곧바로 한 프렛 위 C로 미끄러져** 나오는 동작까지 붙여요. 눈 감고 두 B를 짚고 각각 C로 해결하면 통과.

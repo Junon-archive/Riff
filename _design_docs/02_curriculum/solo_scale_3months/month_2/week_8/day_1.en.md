@@ -90,8 +90,63 @@ Second, those same F, B, and E notes show up all over the neck. We've scattered 
 **0–10 min · Warm-up (BPM 76) — Warming up your sense of the 3rd**
 With the metronome at 76, fret just the three guide tones in the "home" position, alternating in quarter notes: F (string 4, fret 3) → B (string 3, fret 4) → E (string 4, fret 2), one note per click. Every time you fret one, say it out loud: "F! B! E!" Attaching the note names to your voice is the whole point of today's warm-up.
 
+```json
+{
+  "id": "m2.w8.d1.guide_tone_map",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "ii-V-I guide tones home shape (Dm7 F / G7 B / Cmaj7 E)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "C major (ii-V-I)",
+    "tempoBpm": 76
+  },
+  "fretboard": {
+    "startFret": 0,
+    "fretSpan": 5,
+    "dots": [
+      { "string": 4, "fret": 0, "label": "Dm7 R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 3, "finger": 3, "label": "Dm7-3(F)", "highlight": true, "role": "target" },
+      { "string": 3, "fret": 0, "label": "G7 R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 4, "finger": 4, "label": "G7-3(B)", "highlight": true, "role": "target" },
+      { "string": 2, "fret": 1, "label": "Cmaj7 R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 2, "finger": 2, "label": "Cmaj7-3(E)", "highlight": true, "role": "target" }
+    ]
+  }
+}
+```
+
 **10–20 min · Brain training (instantly finding F, B, E across multiple positions)**
 Turn off the metronome. Looking at the second map, spot **just the F's** with your eyes — three positions (string 4 fret 3, string 1 fret 1, string 2 fret 6) — and fret each one. Then do the same for **just B**, then **just E**. The point is finding the shortest path from "nearest spot → next spot" for each note. Finish by closing your eyes and fretting the three "home" spots — F, B, E — within 3 seconds. That's a pass.
+
+```json
+{
+  "id": "m2.w8.d1.guide_tone_positions",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "Guide tones F/B/E across the neck (multiple positions)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "C major (ii-V-I)",
+    "tempoBpm": 76
+  },
+  "fretboard": {
+    "startFret": 0,
+    "fretSpan": 8,
+    "dots": [
+      { "string": 4, "fret": 3, "label": "Dm7-3(F)", "highlight": true, "role": "target" },
+      { "string": 1, "fret": 1, "label": "Dm7-3(F)", "highlight": true, "role": "target" },
+      { "string": 2, "fret": 6, "label": "Dm7-3(F)", "highlight": true, "role": "target" },
+      { "string": 3, "fret": 4, "label": "G7-3(B)", "highlight": true, "role": "target" },
+      { "string": 2, "fret": 0, "label": "G7-3(B)", "highlight": true, "role": "target" },
+      { "string": 5, "fret": 2, "label": "G7-3(B)", "highlight": true, "role": "target" },
+      { "string": 4, "fret": 2, "label": "Cmaj7-3(E)", "highlight": true, "role": "target" },
+      { "string": 1, "fret": 0, "label": "Cmaj7-3(E)", "highlight": true, "role": "target" },
+      { "string": 2, "fret": 5, "label": "Cmaj7-3(E)", "highlight": true, "role": "target" }
+    ]
+  }
+}
+```
 
 **20–40 min · Real-world feel — improv (Dm7-G7-Cmaj7 backing track / BPM 70–76)**
 Find and play a "ii V I backing track C major slow" video or app. Just one rule: **don't do anything else — every time the chord changes, hold the 3rd (F/B/E) of that chord, played from the "home" position, for a long note.** Forget about melody, forget about rhythm — you're only building one reflex: "chord change = fret the 3rd." It's totally fine if you're off. Today's goal is locking in the locations.

@@ -15,6 +15,39 @@ i18nKey: "lesson.m1.w1.d1"
 
 기억할 좌표는 딱 A 마이너 펜타토닉 5음이에요: **A(근음) · C(♭3) · D(4) · E(5) · G(♭7)**. 이 중에서 오늘 특별히 눈도장 찍을 음은 **C(♭3)**. 이게 Am 코드의 3도, 즉 앞으로 3개월 내내 "착지점"이 될 음이에요. 지금은 그냥 "아, C가 여기 여기 여기 초록불이구나" 정도만 눈에 익혀두세요.
 
+```json
+{
+  "id": "m1.w1.d1.pentatonic_box1",
+  "type": "scale_shape",
+  "meta": {
+    "title": "A minor pentatonic — Box 1",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "scale": "A minor pentatonic",
+    "tempoBpm": 60
+  },
+  "fretboard": {
+    "startFret": 5,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 6, "fret": 5, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 6, "fret": 8, "finger": 4, "label": "b3", "role": "target", "highlight": true },
+      { "string": 5, "fret": 5, "finger": 1, "label": "4", "role": "scale" },
+      { "string": 5, "fret": 7, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 4, "fret": 5, "finger": 1, "label": "b7", "role": "scale" },
+      { "string": 4, "fret": 7, "finger": 3, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 5, "finger": 1, "label": "b3", "role": "target", "highlight": true },
+      { "string": 3, "fret": 7, "finger": 3, "label": "4", "role": "scale" },
+      { "string": 2, "fret": 5, "finger": 1, "label": "5", "role": "chord_tone" },
+      { "string": 2, "fret": 8, "finger": 4, "label": "b7", "role": "scale" },
+      { "string": 1, "fret": 5, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 1, "fret": 8, "finger": 4, "label": "b3", "role": "target", "highlight": true }
+    ]
+  }
+}
+```
+
 ## ② 시각 자료
 
 Am 펜타토닉 1번 블록 (5프렛 근음). 초록 강조(♭3=C)가 앞으로의 타겟음이에요.
@@ -96,6 +129,44 @@ Am 펜타토닉 1번 블록 (5프렛 근음). 초록 강조(♭3=C)가 앞으로
 
 **0~10분 · 워밍업 (BPM 60)**
 메트로놈 60에 맞춰 4연음 시퀀스를 6번 줄부터 1번 줄 끝까지 상행만. 아직 하행은 안 해요. 한 박에 16분음표 4개, 즉 "딴다다다" 한 묶음이 정확히 클릭 한 번에 떨어지게. 얼터네이트 피킹(다운-업-다운-업) 고정.
+
+```json
+{
+  "id": "m1.w1.d1.four_note_sequence",
+  "type": "tab",
+  "meta": {
+    "title": "4-note (16th) ascending sequence — Am pentatonic Box 1",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "tempoBpm": 60
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "4note_sequence",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 6, "fret": 5, "duration": "sixteenth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 6, "fret": 8, "duration": "sixteenth", "label": "b3", "highlight": true, "role": "target" },
+        { "string": 5, "fret": 5, "duration": "sixteenth", "label": "4", "role": "scale" },
+        { "string": 5, "fret": 7, "duration": "sixteenth", "label": "5", "role": "chord_tone" },
+        { "string": 6, "fret": 8, "duration": "sixteenth", "label": "b3", "highlight": true, "role": "target" },
+        { "string": 5, "fret": 5, "duration": "sixteenth", "label": "4", "role": "scale" },
+        { "string": 5, "fret": 7, "duration": "sixteenth", "label": "5", "role": "chord_tone" },
+        { "string": 4, "fret": 5, "duration": "sixteenth", "label": "b7", "role": "scale" },
+        { "string": 5, "fret": 5, "duration": "sixteenth", "label": "4", "role": "scale" },
+        { "string": 5, "fret": 7, "duration": "sixteenth", "label": "5", "role": "chord_tone" },
+        { "string": 4, "fret": 5, "duration": "sixteenth", "label": "b7", "role": "scale" },
+        { "string": 4, "fret": 7, "duration": "sixteenth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 5, "fret": 7, "duration": "sixteenth", "label": "5", "role": "chord_tone" },
+        { "string": 4, "fret": 5, "duration": "sixteenth", "label": "b7", "role": "scale" },
+        { "string": 4, "fret": 7, "duration": "sixteenth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 3, "fret": 5, "duration": "sixteenth", "label": "b3", "highlight": true, "role": "target" }
+      ]}
+    ]
+  }
+}
+```
 
 **10~20분 · 두뇌 훈련 (오늘의 타겟 = C / ♭3)**
 메트로놈 끄고, 지판 위에서 **C(♭3)만** 찾아 짚어보세요. 6번 8프렛, 3번 5프렛, 1번 8프렛 — 이 세 군데. 짚을 때마다 소리 내서 "씨!" 하고 불러요. 위치를 손이 아니라 이름으로 기억시키는 과정이에요. 3분 안에 세 군데를 눈 감고 짚을 수 있으면 통과.

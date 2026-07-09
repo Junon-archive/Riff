@@ -22,6 +22,41 @@ And now for today's real main event. We've been quietly *using* bends all along 
 
 To sum up: today we're finding where ♭5 lives in Box 1, and learning to **sound it out through accurate bending.**
 
+```json
+{
+  "id": "m1.w4.d1.a_blues_scale_box1",
+  "type": "scale_shape",
+  "meta": {
+    "title": "A blues scale — Box 1 (pentatonic + b5)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A blues",
+    "scale": "A blues scale",
+    "tempoBpm": 70
+  },
+  "fretboard": {
+    "startFret": 5,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 6, "fret": 5, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 6, "fret": 8, "finger": 4, "label": "b3", "role": "target", "highlight": true },
+      { "string": 5, "fret": 5, "finger": 1, "label": "4", "role": "scale" },
+      { "string": 5, "fret": 6, "finger": 2, "label": "b5", "role": "blue_note", "highlight": true },
+      { "string": 5, "fret": 7, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 4, "fret": 5, "finger": 1, "label": "b7", "role": "scale" },
+      { "string": 4, "fret": 7, "finger": 3, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 5, "finger": 1, "label": "b3", "role": "target", "highlight": true },
+      { "string": 3, "fret": 7, "finger": 3, "label": "4", "role": "scale" },
+      { "string": 3, "fret": 8, "finger": 4, "label": "b5", "role": "blue_note", "highlight": true },
+      { "string": 2, "fret": 5, "finger": 1, "label": "5", "role": "chord_tone" },
+      { "string": 2, "fret": 8, "finger": 4, "label": "b7", "role": "scale" },
+      { "string": 1, "fret": 5, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 1, "fret": 8, "finger": 4, "label": "b3", "role": "target", "highlight": true }
+    ]
+  }
+}
+```
+
 ## ② Visual Reference
 
 Here's A blues scale Box 1. Two new ♭5 spots (highlighted in purple) have joined the five pentatonic notes — 5th string 6th fret, and 3rd string 8th fret. Those two are today's stars.
@@ -105,6 +140,38 @@ Turn off the metronome. In Box 1, find and fret **only the ♭5 notes** — just
 
 **20–40 min · Real-world feel — improv (Am7 one-chord backing, 65–70 BPM) + bending accuracy focus**
 Pull up an "Am7 blues backing track slow" on YouTube or an app. Today's mission is one thing only: **bending accuracy.** Repeat the phrase above over the backing track, and every time you do the full bend (4→5), **first ping the 2nd string 5th fret (E) to plant the target pitch in your ear**, then match your bend precisely to that height. When pushing with your ring finger, line up your middle and index behind it and push as a trio. Mix in the half-step bend (4→♭5) too, and try "making" the blue note yourself.
+
+```json
+{
+  "id": "m1.w4.d1.accurate_bend_phrase",
+  "type": "tab",
+  "meta": {
+    "title": "Accurate bending — full bend to 5 (match reference) & half bend to b5",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A blues",
+    "tempoBpm": 70
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "blues_phrasing",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 2, "fret": 5, "duration": "quarter", "label": "5(ref E)", "role": "chord_tone" },
+        { "string": 3, "fret": 7, "duration": "half", "technique": "bend", "bendTarget": "full", "label": "4>5", "highlight": true, "role": "scale" },
+        { "string": 3, "fret": 5, "duration": "quarter", "label": "b3", "target": true, "highlight": true, "role": "target" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 3, "fret": 5, "duration": "eighth", "label": "b3", "highlight": true, "role": "target" },
+        { "string": 3, "fret": 7, "duration": "eighth", "technique": "bend", "bendTarget": "half", "label": "4>b5", "highlight": true, "role": "blue_note" },
+        { "string": 3, "fret": 7, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 3, "fret": 5, "duration": "eighth", "label": "b3", "highlight": true, "role": "target" },
+        { "string": 4, "fret": 7, "duration": "half", "technique": "vibrato", "label": "R", "isRoot": true, "role": "root" }
+      ]}
+    ]
+  }
+}
+```
 
 **40–50 min · Record & reflect (recommended)**
 Record just 30 seconds of the bending phrase with any recorder you've got (a phone voice memo is fine). Listen back and check one thing: **did the bent note land exactly on the target pitch?** If it fell short (pitch too low), your finger strength wasn't enough; if it overshot, you pushed too far. Slow down the playback if you need to, so you can zoom in with your ear on the exact moment the bend arrives.

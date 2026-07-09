@@ -106,8 +106,76 @@ lang: ja
 **10〜20分・頭のトレーニング（ネック全体の♭5マッピング）**
 上のネックマップを見ながら、6弦から1弦まで、各弦の♭5（紫の点）を1か所ずつ順番に押さえていきます。押さえるたびに「ここがこの区域のブルーノート」と場所を刻み込みます。そのあとは目を閉じて、まず5弦6フレット・3弦8フレット（第1ボックスの2か所）から、余裕があれば他の弦まで。5か所以上を目を閉じて押さえられたら合格です。
 
+```json
+{
+  "id": "m1.w4.d2.b5_neck_map_all_blocks",
+  "type": "scale_shape",
+  "meta": {
+    "title": "A blues b5 map across the whole neck (all 5 boxes)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A blues",
+    "scale": "A blues scale",
+    "tempoBpm": 70
+  },
+  "fretboard": {
+    "startFret": 5,
+    "fretSpan": 13,
+    "dots": [
+      { "string": 6, "fret": 5, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 6, "fret": 11, "label": "b5", "role": "blue_note", "highlight": true },
+      { "string": 6, "fret": 17, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 6, "label": "b5", "role": "blue_note", "highlight": true },
+      { "string": 5, "fret": 12, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 7, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 13, "label": "b5", "role": "blue_note", "highlight": true },
+      { "string": 3, "fret": 8, "label": "b5", "role": "blue_note", "highlight": true },
+      { "string": 3, "fret": 14, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 2, "fret": 10, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 2, "fret": 16, "label": "b5", "role": "blue_note", "highlight": true },
+      { "string": 1, "fret": 5, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 1, "fret": 11, "label": "b5", "role": "blue_note", "highlight": true },
+      { "string": 1, "fret": 17, "label": "R", "isRoot": true, "role": "root" }
+    ]
+  }
+}
+```
+
 **20〜40分・実戦即興（Am7ワンコードバッキング／65〜70 BPM）——スライド/ベンドで♭5を表現**
 バッキングを流してルール通りに：**♭5には必ずスライドかベンドで「入って」表現し、着地音には必ず遅く広いヴィブラートをかける。** 今日は平坦にプツンと切れる音を一つも作らないでください。フレーズの終わりは♭3（C）か根音（A）に着地→手首ヴィブラートで歌わせます。上のフレーズを骨組みにして、少しずつ変形してみましょう。
+
+```json
+{
+  "id": "m1.w4.d2.vibrato_expression_phrase",
+  "type": "tab",
+  "meta": {
+    "title": "Vibrato expression — slide into b5 + wide slow vibrato on landings",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A blues",
+    "tempoBpm": 70
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "blues_phrasing",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 5, "fret": 5, "duration": "eighth", "technique": "slide", "slideToFret": 6, "label": "4>b5", "highlight": true, "role": "blue_note" },
+        { "string": 5, "fret": 6, "duration": "quarter", "technique": "vibrato", "label": "b5", "highlight": true, "role": "blue_note" },
+        { "string": 5, "fret": 7, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 3, "fret": 5, "duration": "half", "technique": "vibrato", "label": "b3", "target": true, "highlight": true, "role": "target" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 4, "fret": 7, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 3, "fret": 5, "duration": "eighth", "label": "b3", "highlight": true, "role": "target" },
+        { "string": 3, "fret": 7, "duration": "quarter", "technique": "bend", "bendTarget": "full", "label": "4>5", "highlight": true, "role": "scale" },
+        { "string": 3, "fret": 5, "duration": "quarter", "technique": "vibrato", "label": "b3", "target": true, "highlight": true, "role": "target" },
+        { "string": 4, "fret": 7, "duration": "quarter", "technique": "vibrato", "label": "R", "isRoot": true, "role": "root" }
+      ]}
+    ]
+  }
+}
+```
 
 **40〜50分・録音・フィードバック（推奨）**
 30秒録音して聴き直します。チェック項目：①ヴィブラートの揺れが**一定の周期**できれいか、それとも怯えたようにバラバラか。②着地音のたびにヴィブラートがかかっていたか、それともただ切れていたか。③♭5がスライドやベンドで自然に入っていたか。必要なら再生速度を落として、ヴィブラートの周期を耳で拡大してみましょう。

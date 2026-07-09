@@ -93,6 +93,67 @@ i18nKey: "lesson.m3.w12.d2"
 **10~20분 · 두뇌 훈련 (모티프 손에 얹기)**
 백킹 없이, 콜 모티프(D-E-C + 쉼)만 10번 반복해요. 이때 **입으로도 같이 부르세요** — "따-다-담… (쉼)." 그다음 리스폰스를 얹어요. 콜과 리스폰스를 번갈아 치며, 둘 사이의 '침묵'이 어색해서 채우고 싶은 충동을 꾹 참는 훈련이에요. 그 참는 힘이 오늘 실력이에요.
 
+```json
+{
+  "id": "m3.w12.d2.motif_response",
+  "type": "tab",
+  "meta": {
+    "title": "Original solo motif - the RESPONSE (D7 F# color -> A7 mode switch to major 3rd)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A Dorian/Mixolydian",
+    "tempoBpm": 92
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "call_and_response",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 2, "fret": 5, "duration": "eighth", "technique": "none", "label": "5", "role": "scale" },
+        { "string": 2, "fret": 7, "duration": "quarter", "technique": "vibrato", "label": "6", "role": "color", "highlight": true },
+        { "string": 1, "fret": 5, "duration": "quarter", "rest": true },
+        { "string": 2, "fret": 5, "duration": "eighth", "technique": "none", "label": "5", "role": "scale" },
+        { "string": 2, "fret": 7, "duration": "eighth", "technique": "none", "label": "6", "role": "color", "highlight": true },
+        { "string": 2, "fret": 8, "duration": "eighth", "technique": "none", "label": "b7", "role": "color", "highlight": true }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 3, "fret": 5, "duration": "eighth", "technique": "none", "label": "b3", "role": "passing" },
+        { "string": 3, "fret": 6, "duration": "quarter", "technique": "vibrato", "label": "3", "role": "target", "highlight": true },
+        { "string": 1, "fret": 5, "duration": "quarter", "rest": true },
+        { "string": 2, "fret": 8, "duration": "quarter", "technique": "none", "label": "b7", "role": "color", "highlight": true },
+        { "string": 1, "fret": 5, "duration": "eighth", "rest": true }
+      ]}
+    ]
+  }
+}
+```
+
+```json
+{
+  "id": "m3.w12.d2.motif_call",
+  "type": "tab",
+  "meta": {
+    "title": "Original solo motif - the CALL (Am7, land on b3)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A Dorian (over Am7)",
+    "tempoBpm": 92
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "call_and_response",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 3, "fret": 7, "duration": "eighth", "technique": "none", "label": "4", "role": "scale" },
+        { "string": 3, "fret": 9, "duration": "eighth", "technique": "none", "label": "5", "role": "chord_tone" },
+        { "string": 3, "fret": 5, "duration": "quarter", "technique": "vibrato", "label": "b3", "role": "target", "highlight": true },
+        { "string": 1, "fret": 5, "duration": "half", "rest": true }
+      ]}
+    ]
+  }
+}
+```
+
 **20~40분 · 실전 작곡 (Am7-D7-A7 백킹 / 88~92 BPM)**
 백킹을 틀고 콜 → 리스폰스를 실제 코드 위에 얹어요. 그다음이 진짜 작곡: **리스폰스를 매번 조금씩 다르게** 되받아 보세요. 어떤 땐 F#를 길게, 어떤 땐 C#로 스위치, 어떤 땐 여백을 더 크게. 마음에 드는 변형 2~3개를 골라 기억해 두세요. 그게 내일 완성 솔로의 재료예요.
 

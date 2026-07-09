@@ -18,6 +18,39 @@ And today's real assignment isn't to memorize Box 4 in isolation — it's to sti
 
 The coordinates to remember never change: A (R) · C (♭3) · D (4) · E (5) · G (♭7). Only the location moved up 12 frets — the role of each note stays exactly the same. And especially C (♭3): in Box 4, it lives on the 5th string 15th fret and the 2nd string 13th fret. That's today's green light.
 
+```json
+{
+  "id": "m1.w3.d1.pentatonic_box4",
+  "type": "scale_shape",
+  "meta": {
+    "title": "A minor pentatonic — Box 4 (12th position)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "scale": "A minor pentatonic",
+    "tempoBpm": 80
+  },
+  "fretboard": {
+    "startFret": 11,
+    "fretSpan": 5,
+    "dots": [
+      { "string": 6, "fret": 12, "finger": 1, "label": "5", "role": "chord_tone" },
+      { "string": 6, "fret": 15, "finger": 4, "label": "b7", "role": "scale" },
+      { "string": 5, "fret": 12, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 15, "finger": 4, "label": "b3", "role": "target", "highlight": true },
+      { "string": 4, "fret": 12, "finger": 1, "label": "4", "role": "scale" },
+      { "string": 4, "fret": 14, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 3, "fret": 12, "finger": 1, "label": "b7", "role": "scale" },
+      { "string": 3, "fret": 14, "finger": 3, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 2, "fret": 13, "finger": 1, "label": "b3", "role": "target", "highlight": true },
+      { "string": 2, "fret": 15, "finger": 3, "label": "4", "role": "scale" },
+      { "string": 1, "fret": 12, "finger": 1, "label": "5", "role": "chord_tone" },
+      { "string": 1, "fret": 15, "finger": 4, "label": "b7", "role": "scale" }
+    ]
+  }
+}
+```
+
 ## ② Visual Reference
 
 First, today's new home: Box 4. Centered on the root A (5th string, 12th fret), the notes highlighted in green are C (♭3) — today's landing target.
@@ -105,6 +138,44 @@ Metronome off. Inside Box 4, find and fret just the two C (♭3) spots — 5th s
 
 **20–40 min · Real-world improv (Am one-chord backing, 75–80 BPM)**
 Pull up any "Am backing track." Today's rule: start playing in Box 3 (fret 9), and partway through, you must slide up into Box 4 (fret 12), then land on C (♭3) and stop. Feel free to use the connecting line above exactly, or improvise your own variation. The key is building the flow of "start low → slide up → land on the target" inside a single phrase. Repeat at least 8 times.
+
+```json
+{
+  "id": "m1.w3.d1.box3_to_box4_slide",
+  "type": "tab",
+  "meta": {
+    "title": "Box 3 -> Box 4 sliding connection (land on b3)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "tempoBpm": 80
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "block_connection",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 5, "fret": 12, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 4, "fret": 10, "duration": "eighth", "label": "b3", "highlight": true, "role": "target" },
+        { "string": 4, "fret": 12, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 3, "fret": 9, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 3, "fret": 12, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 2, "fret": 10, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 2, "fret": 13, "duration": "eighth", "label": "b3", "highlight": true, "role": "target" },
+        { "string": 1, "fret": 12, "duration": "eighth", "label": "5", "role": "chord_tone" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 1, "fret": 10, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 2, "fret": 13, "duration": "eighth", "label": "b3", "highlight": true, "role": "target" },
+        { "string": 3, "fret": 12, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 4, "fret": 12, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 5, "fret": 12, "duration": "eighth", "technique": "slide", "slideToFret": 15, "label": "R", "isRoot": true, "role": "root" },
+        { "string": 5, "fret": 15, "duration": "quarter", "dotted": true, "technique": "vibrato", "label": "b3", "target": true, "highlight": true, "role": "target" }
+      ]}
+    ]
+  }
+}
+```
 
 **40–50 min · Record & reflect (recommended)**
 Record just 30 seconds with whatever you've got — voice memo app, any recorder. Listen back and check one thing only: is the pitch of the note you land on (C) actually accurate? Since you're sliding by feel rather than watching the fret, it's easy to overshoot or undershoot the 15th fret. If you can slow down playback, it'll help you catch that landing moment more clearly. If the landing sounds fuzzy, isolate that slide and repeat it 10 times on its own.

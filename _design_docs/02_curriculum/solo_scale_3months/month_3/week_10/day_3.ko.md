@@ -135,11 +135,114 @@ Position 2는 근음 A를 **4번 줄 7프렛**에 두는 자리예요. 대략 7~
 **0~10분 · 워밍업 (BPM 90) — Position 2 4연음 시퀀스**
 어제 Position 1에서 돌린 4연음을 오늘은 **Position 2**에서. 7~11프렛 자리에서 네 음씩 묶어 상행. 손이 아직 낯설 테니 80에서 시작해도 좋아요. C#(6번 9프렛, 4번 11프렛, 1번 9프렛)을 지날 때마다 색을 의식하세요.
 
+```json
+{
+  "id": "m3.w10.d3.a_mixolydian_pos2",
+  "type": "scale_shape",
+  "meta": {
+    "title": "A Mixolydian - Position 2 (root on 4th string, frets 7-11)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A Mixolydian",
+    "scale": "A Mixolydian",
+    "tempoBpm": 90
+  },
+  "fretboard": {
+    "startFret": 7,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 6, "fret": 7, "finger": 1, "label": "2", "role": "scale" },
+      { "string": 6, "fret": 9, "finger": 3, "label": "3", "role": "target", "highlight": true },
+      { "string": 6, "fret": 10, "finger": 4, "label": "4", "role": "scale" },
+      { "string": 5, "fret": 7, "finger": 1, "label": "5", "role": "chord_tone" },
+      { "string": 5, "fret": 9, "finger": 3, "label": "6", "role": "scale" },
+      { "string": 5, "fret": 10, "finger": 4, "label": "b7", "role": "color", "highlight": true },
+      { "string": 4, "fret": 7, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 9, "finger": 3, "label": "2", "role": "scale" },
+      { "string": 4, "fret": 11, "finger": 4, "label": "3", "role": "target", "highlight": true },
+      { "string": 3, "fret": 7, "finger": 1, "label": "4", "role": "scale" },
+      { "string": 3, "fret": 9, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 3, "fret": 11, "finger": 4, "label": "6", "role": "scale" },
+      { "string": 2, "fret": 8, "finger": 2, "label": "b7", "role": "color", "highlight": true },
+      { "string": 2, "fret": 10, "finger": 4, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 1, "fret": 7, "finger": 1, "label": "2", "role": "scale" },
+      { "string": 1, "fret": 9, "finger": 3, "label": "3", "role": "target", "highlight": true },
+      { "string": 1, "fret": 10, "finger": 4, "label": "4", "role": "scale" }
+    ]
+  }
+}
+```
+
 **10~20분 · 두뇌 훈련 (폼 간 C# 잇기)**
 연결 지도를 보며, **Position 1의 C#(3번 6프렛)** 을 짚고 → **Position 2의 C#(1번 9프렛)** 으로 손을 옮기는 연습. 이름은 같고 자리만 다른 두 C#을 왕복해요. 다음엔 G도 똑같이(4번 5프렛 ↔ 5번 10프렛). 마지막으로 1번 줄 5→9 슬라이드만 10번 반복해서 슬라이드가 정확히 9프렛(C#)에 멈추게 만드세요.
 
+```json
+{
+  "id": "m3.w10.d3.position_connection_map",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "Connecting Position 1 & 2: shared root and slide path (1st string 5->9)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A Mixolydian",
+    "tempoBpm": 90
+  },
+  "fretboard": {
+    "startFret": 4,
+    "fretSpan": 6,
+    "dots": [
+      { "string": 6, "fret": 5, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 1, "fret": 5, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 6, "label": "3", "role": "target", "highlight": true },
+      { "string": 4, "fret": 5, "label": "b7", "role": "color", "highlight": true },
+      { "string": 4, "fret": 7, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 1, "fret": 9, "label": "3", "role": "target", "highlight": true },
+      { "string": 6, "fret": 9, "label": "3", "role": "target", "highlight": true },
+      { "string": 5, "fret": 10, "label": "b7", "role": "color", "highlight": true },
+      { "string": 2, "fret": 10, "label": "R", "isRoot": true, "role": "root" }
+    ]
+  }
+}
+```
+
 **20~40분 · 실전 즉흥 (A7 vamp / 80~90 BPM) — 폼 이동 미션**
 "A7 vamp backing track"을 틀고, 오늘의 미션: **한 프레이즈 안에서 Position 1 → (슬라이드) → Position 2로 최소 한 번 이동하기.** 아래에서 놀다가 슬라이드로 올라가 위에서 C#에 착지, 다시 슬라이드로 내려오기. 처음엔 이동이 뚝뚝 끊겨도 돼요. 슬라이드 지점을 정해두고 반복하면 점점 매끄러워져요.
+
+```json
+{
+  "id": "m3.w10.d3.position_shift_lick",
+  "type": "tab",
+  "meta": {
+    "title": "Position shift lick: Pos1 -> slide -> Pos2, land on major 3rd",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A Mixolydian",
+    "tempoBpm": 90
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "block_connection",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 4, "fret": 7, "duration": "quarter", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 3, "fret": 4, "duration": "eighth", "label": "2", "role": "scale" },
+        { "string": 3, "fret": 6, "duration": "eighth", "label": "3", "target": true, "role": "target", "highlight": true },
+        { "string": 2, "fret": 5, "duration": "quarter", "label": "5", "role": "chord_tone" },
+        { "string": 2, "fret": 7, "duration": "eighth", "label": "6", "role": "scale" },
+        { "string": 2, "fret": 8, "duration": "eighth", "label": "b7", "role": "color", "highlight": true }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 1, "fret": 5, "duration": "eighth", "technique": "slide", "slideToFret": 9, "label": "R", "isRoot": true, "role": "root" },
+        { "string": 1, "fret": 9, "duration": "eighth", "label": "3", "target": true, "role": "target", "highlight": true },
+        { "string": 1, "fret": 10, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 2, "fret": 8, "duration": "eighth", "label": "b7", "role": "color", "highlight": true },
+        { "string": 4, "fret": 10, "duration": "eighth", "technique": "bend", "bendTarget": "half", "label": "b3", "role": "blue_note", "highlight": true },
+        { "string": 4, "fret": 11, "duration": "quarter", "dotted": true, "technique": "vibrato", "label": "3", "target": true, "role": "target", "highlight": true }
+      ]}
+    ]
+  }
+}
+```
 
 **40~50분 · 녹음/피드백 (권장)**
 아무 녹음 앱으로 30초 녹음. 체크: (1) 슬라이드가 목표 프렛(9)에 정확히 멈췄는지 — 못 미치거나 지나치지 않았는지, (2) 폼을 옮긴 뒤에도 C#에 잘 착지했는지. 재생 속도를 늦춰 슬라이드 도착 순간을 귀로 확대해 확인하세요.

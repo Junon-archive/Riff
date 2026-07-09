@@ -111,11 +111,88 @@ i18nKey: "lesson.m2.w8.d2"
 **0~10분 · 워밍업 (BPM 76) — 3도 시퀀스**
 위 `3rd_interval` 워밍업을 메트로놈 76에 8분음표로. 3도 간격의 손 모양(아래 줄–위 줄 왔다 갔다)을 몸에 익히면서, 초록 음(B·E·F)이 나올 때만 살짝 강조해서 짚어요. "3도로 움직이는데 그 안에 가이드톤이 숨어 있다"를 귀로 확인하는 시간.
 
+```json
+{
+  "id": "m2.w8.d2.third_interval_warmup",
+  "type": "tab",
+  "meta": {
+    "title": "Diatonic 3rds warmup surfacing guide tones (C major)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "C major (ii-V-I)",
+    "tempoBpm": 76
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "3rd_interval",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 3, "fret": 0, "duration": "eighth", "label": "G", "role": "scale" },
+        { "string": 2, "fret": 0, "duration": "eighth", "label": "G7-3(B)", "highlight": true, "role": "target" },
+        { "string": 3, "fret": 2, "duration": "eighth", "label": "A", "role": "scale" },
+        { "string": 2, "fret": 1, "duration": "eighth", "label": "C", "role": "scale" },
+        { "string": 3, "fret": 4, "duration": "eighth", "label": "G7-3(B)", "highlight": true, "role": "target" },
+        { "string": 2, "fret": 3, "duration": "eighth", "label": "D", "role": "scale" },
+        { "string": 3, "fret": 5, "duration": "eighth", "label": "C", "role": "scale" },
+        { "string": 2, "fret": 5, "duration": "eighth", "label": "Cmaj7-3(E)", "highlight": true, "role": "target" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 2, "fret": 1, "duration": "eighth", "label": "C", "role": "scale" },
+        { "string": 1, "fret": 0, "duration": "eighth", "label": "Cmaj7-3(E)", "highlight": true, "role": "target" },
+        { "string": 2, "fret": 3, "duration": "eighth", "label": "D", "role": "scale" },
+        { "string": 1, "fret": 1, "duration": "eighth", "label": "Dm7-3(F)", "highlight": true, "role": "target" },
+        { "string": 2, "fret": 5, "duration": "eighth", "label": "Cmaj7-3(E)", "highlight": true, "role": "target" },
+        { "string": 1, "fret": 3, "duration": "eighth", "label": "G", "role": "scale" },
+        { "string": 2, "fret": 6, "duration": "eighth", "label": "Dm7-3(F)", "highlight": true, "role": "target" },
+        { "string": 1, "fret": 5, "duration": "eighth", "label": "A", "role": "scale" }
+      ]}
+    ]
+  }
+}
+```
+
 **10~20분 · 두뇌 훈련 (F→B→E 최소 이동 경로 찾기)**
 메트로놈 끄고, 본론 라인의 **착지음 세 개만** 연결해 봐요. F(4번 3프렛) → B(3번 4프렛) → E(4번 2프렛). 손이 거의 안 움직이죠? 세 음이 한 줌 안에 있어요. 특히 **F→E는 같은 줄 한 프렛**이라는 걸 손끝으로 확인. 눈 감고 이 세 음만 순서대로 뚝딱 짚으면 통과.
 
 **20~40분 · 실전 즉흥 (Dm7-G7-Cmaj7 백킹 / 72~76 BPM)**
 백킹을 틀고, 본론 라인을 그대로 몇 번 연주해 몸에 붙여요. 익숙해지면 **연결음(중간 음)만 조금씩 바꾸되 착지음 F·B·E는 절대 안 바꾸기.** 예를 들어 1마디 중간을 다른 Dm7 음으로 채워도, 마디 끝→다음 마디 첫 박은 무조건 3도 착지. "골격은 F·B·E, 살은 자유"가 오늘의 즉흥 규칙이에요.
+
+```json
+{
+  "id": "m2.w8.d2.guide_tone_line",
+  "type": "tab",
+  "meta": {
+    "title": "ii-V-I guide tone line (Dm7 F -> G7 B -> Cmaj7 E)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "C major (ii-V-I)",
+    "tempoBpm": 76
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "guide_tone_3rds",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 4, "fret": 3, "duration": "quarter", "label": "Dm7-3(F)", "target": true, "highlight": true, "role": "target" },
+        { "string": 3, "fret": 2, "duration": "quarter", "label": "A", "role": "chord_tone" },
+        { "string": 2, "fret": 3, "duration": "quarter", "label": "D", "isRoot": true, "role": "root" },
+        { "string": 2, "fret": 1, "duration": "quarter", "label": "C", "role": "passing" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 3, "fret": 4, "duration": "quarter", "label": "G7-3(B)", "target": true, "highlight": true, "role": "target" },
+        { "string": 4, "fret": 5, "duration": "quarter", "label": "G", "isRoot": true, "role": "root" },
+        { "string": 3, "fret": 2, "duration": "quarter", "label": "A", "role": "scale" },
+        { "string": 4, "fret": 3, "duration": "quarter", "label": "F", "role": "chord_tone" }
+      ]},
+      { "measure": 3, "notes": [
+        { "string": 4, "fret": 2, "duration": "half", "technique": "vibrato", "label": "Cmaj7-3(E)", "target": true, "highlight": true, "role": "target" },
+        { "string": 2, "fret": 1, "duration": "quarter", "label": "C", "isRoot": true, "role": "root" },
+        { "string": 1, "fret": 0, "duration": "quarter", "label": "Cmaj7-3(E)", "target": true, "highlight": true, "role": "target" }
+      ]}
+    ]
+  }
+}
+```
 
 **40~50분 · 녹음/피드백 (권장)**
 30초 녹음 후 재생. 체크 둘: ① 코드 바뀌는 순간에 3도가 **정확히 울렸나**, 반 박 늦지 않았나. ② 2마디 F가 3마디 E로 넘어갈 때 **반음이 부드럽게 미끄러졌나**, 아니면 뚝 끊겼나. 필요하면 재생 속도를 늦춰 그 이음매를 귀로 확대해 보세요.

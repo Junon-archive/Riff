@@ -155,11 +155,126 @@ Third, here's a 4-bar line that burns "chord change = landing change" into your 
 **0–10 min · Warm-up (BPM 80) — 4-note sequence**
 With the metronome at 80, roll through the first 4-note sequence. Keep that tight, rolling feel in your fingers, and add just a touch of clarity when F# (string 5 fret 9) rises up onto the wave. Doing it both up and back (climb, then come back down the same pattern) really loosens your hand up.
 
+```json
+{
+  "id": "m3.w9.d3.four_note_sequence_dorian",
+  "type": "tab",
+  "meta": {
+    "title": "A Dorian 4-note sequence (F# rises in groups 3-4)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A Dorian",
+    "tempoBpm": 80
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "4note_sequence",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 6, "fret": 5, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 6, "fret": 7, "duration": "eighth", "label": "2", "role": "scale" },
+        { "string": 6, "fret": 8, "duration": "eighth", "label": "b3", "role": "scale" },
+        { "string": 5, "fret": 5, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 6, "fret": 7, "duration": "eighth", "label": "2", "role": "scale" },
+        { "string": 6, "fret": 8, "duration": "eighth", "label": "b3", "role": "scale" },
+        { "string": 5, "fret": 5, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 5, "fret": 7, "duration": "eighth", "label": "5", "role": "chord_tone" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 6, "fret": 8, "duration": "eighth", "label": "b3", "role": "scale" },
+        { "string": 5, "fret": 5, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 5, "fret": 7, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 5, "fret": 9, "duration": "eighth", "label": "6", "role": "color", "highlight": true },
+        { "string": 5, "fret": 5, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 5, "fret": 7, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 5, "fret": 9, "duration": "eighth", "label": "6", "role": "color", "highlight": true },
+        { "string": 4, "fret": 5, "duration": "eighth", "label": "b7", "role": "scale" }
+      ]}
+    ]
+  }
+}
+```
+
 **10–20 min · Brain training (mapping landing 3rds)**
 Looking at the second map, alternate between fretting **Am7's C** (three spots) and **D7's F#** (two spots). Say it out loud as you go: "Am7 means C, D7 means F#." Finally, close your eyes: "D7 now! → the nearest F#" — if you can find it within 3 seconds, you pass. The goal is making "chord name → landing note" into a reflex.
 
+```json
+{
+  "id": "m3.w9.d3.am7_d7_target_thirds",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "Target 3rds: Am7-b3(C) and D7-3(F#) which is the Dorian color",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A Dorian (Am7 - D7)",
+    "tempoBpm": 80
+  },
+  "fretboard": {
+    "startFret": 5,
+    "fretSpan": 5,
+    "dots": [
+      { "string": 4, "fret": 7, "label": "Am7 R", "isRoot": true, "role": "root" },
+      { "string": 6, "fret": 5, "label": "Am7 R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 5, "label": "Am7-b3(C)", "role": "target", "highlight": true },
+      { "string": 6, "fret": 8, "label": "Am7-b3(C)", "role": "target", "highlight": true },
+      { "string": 1, "fret": 8, "label": "Am7-b3(C)", "role": "target", "highlight": true },
+      { "string": 3, "fret": 7, "label": "D7 R", "isRoot": true, "role": "root" },
+      { "string": 2, "fret": 7, "label": "D7-3(F#)=6", "role": "color", "highlight": true },
+      { "string": 5, "fret": 9, "label": "D7-3(F#)=6", "role": "color", "highlight": true }
+    ]
+  }
+}
+```
+
 **20–40 min · Real-world improv (Am7-D7 vamp / 76–80 BPM)**
 Put on an "Am7 D7 vamp backing track" (alternating every two bars). One mission: **land on that chord's 3rd every time the chord changes.** C at the end of the Am7 section, F# at the end of the D7 section. Feel free to start by dropping the third 4-bar line straight on top. Fill the space in between freely — just make sure the **landing note** always matches the chord.
+
+```json
+{
+  "id": "m3.w9.d3.chord_change_targeting",
+  "type": "tab",
+  "meta": {
+    "title": "Am7 lands on C(b3), D7 lands on F#(6) - target the changes",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A Dorian (Am7 - D7)",
+    "tempoBpm": 80
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "guide_tone_3rds",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 5, "fret": 7, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 4, "fret": 5, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 4, "fret": 7, "duration": "quarter", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 4, "fret": 9, "duration": "eighth", "label": "2", "role": "scale" },
+        { "string": 3, "fret": 5, "duration": "eighth", "label": "b3", "role": "scale" },
+        { "string": 3, "fret": 7, "duration": "quarter", "label": "4", "role": "scale" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 3, "fret": 9, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 3, "fret": 7, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 3, "fret": 5, "duration": "half", "technique": "vibrato", "label": "b3", "role": "target", "highlight": true },
+        { "string": 4, "fret": 7, "duration": "quarter", "label": "R", "isRoot": true, "role": "root" }
+      ]},
+      { "measure": 3, "notes": [
+        { "string": 3, "fret": 7, "duration": "quarter", "label": "4", "role": "scale" },
+        { "string": 3, "fret": 9, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 2, "fret": 8, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 2, "fret": 10, "duration": "quarter", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 2, "fret": 8, "duration": "quarter", "label": "b7", "role": "scale" }
+      ]},
+      { "measure": 4, "notes": [
+        { "string": 2, "fret": 8, "duration": "quarter", "label": "b7", "role": "scale" },
+        { "string": 3, "fret": 9, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 2, "fret": 8, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 2, "fret": 7, "duration": "half", "technique": "vibrato", "label": "6", "role": "color", "highlight": true }
+      ]}
+    ]
+  }
+}
+```
 
 **40–50 min · Record & reflect (recommended)**
 Record the last 30 seconds of your jam. Listen back and check two things: **① did you land on F# the moment it switched to D7? ② did the sound "sparkle" brighter right then?** Slow playback to 0.75x to check whether the chord change and your landing line up.

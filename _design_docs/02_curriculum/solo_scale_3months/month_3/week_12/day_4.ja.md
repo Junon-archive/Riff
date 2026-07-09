@@ -68,6 +68,41 @@ lang: ja
 **0〜10分・ウォームアップ（BPM 92）— 継ぎ目だけ予熱**
 メトロノーム92で上の抜粋（継ぎ目の2小節）だけを繰り返します。特に4小節目終わりのC（3弦5フレット）から5小節目のC#（3弦6フレット）へ移る指の動きと、そのあとに続くブルーノートベンディング（1弦8フレット→C#の音程）を滑らかに。今日のウォームアップは曲の一番弱い関節をほぐす時間です。
 
+```json
+{
+  "id": "m3.w12.d4.switch_retake_excerpt",
+  "type": "tab",
+  "meta": {
+    "title": "Retake excerpt - the mode-switch seam (D7 -> A7, bars 4-5)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A (Dorian/Mixolydian composite)",
+    "tempoBpm": 92
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "composition",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 3, "fret": 7, "duration": "eighth", "technique": "none", "label": "4", "role": "scale" },
+        { "string": 3, "fret": 9, "duration": "eighth", "technique": "none", "label": "5", "role": "chord_tone" },
+        { "string": 2, "fret": 7, "duration": "quarter", "technique": "vibrato", "label": "6", "role": "color", "highlight": true },
+        { "string": 1, "fret": 5, "duration": "quarter", "rest": true },
+        { "string": 3, "fret": 5, "duration": "quarter", "technique": "none", "label": "b3", "role": "passing" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 3, "fret": 6, "duration": "quarter", "technique": "vibrato", "label": "3", "role": "target", "highlight": true },
+        { "string": 1, "fret": 5, "duration": "eighth", "rest": true },
+        { "string": 2, "fret": 8, "duration": "eighth", "technique": "none", "label": "b7", "role": "color", "highlight": true },
+        { "string": 1, "fret": 8, "duration": "eighth", "technique": "bend", "bendTarget": "half", "label": "b3", "role": "blue_note", "highlight": true },
+        { "string": 1, "fret": 9, "duration": "quarter", "technique": "none", "label": "3", "role": "target", "highlight": true },
+        { "string": 1, "fret": 5, "duration": "eighth", "rest": true }
+      ]}
+    ]
+  }
+}
+```
+
 **10〜20分・頭のトレーニング（4大基準で昨日の録音を採点）**
 昨日の通し録音を取り出して、再生速度を**0.75倍**に落として一回、**0.5倍**でもう一回聴きます。紙に4つの枠（着地・色彩・ビブラート・タイミング）を描いて、それぞれを△／○だけで表示。そのあと、いちばん△が多い**区間をひとつ**特定してください。おそらく十中八九、継ぎ目（4→5小節目）のはずです。
 

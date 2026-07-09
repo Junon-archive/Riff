@@ -14,6 +14,39 @@ lang: ja
 
 第5ボックスは14〜17フレットに住んでいます。根音Aが6弦17フレット、そして1弦17フレットにあります。さあ、ここで魔法が起きます。6弦17フレットのAは……6弦5フレット（第1ボックスの根音）から、ちょうど12フレット上なんです。12フレット＝1オクターブ。つまり第5ボックスの頂上は、第1ボックスとまったく同じ形なんです。ネックをずっと上がっていくと、第5ボックスの次にはまた第1ボックスが（1オクターブ上で）現れる。地図が一周して元の場所に戻ってくるんですね。ペンタトニックが「5つのボックスが無限にループする輪」だということを、今日このオクターブ地点で目で確かめることになります。
 
+```json
+{
+  "id": "m1.w3.d2.pentatonic_box5",
+  "type": "scale_shape",
+  "meta": {
+    "title": "A minor pentatonic — Box 5 (wraps to Box 1 an octave up)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "scale": "A minor pentatonic",
+    "tempoBpm": 80
+  },
+  "fretboard": {
+    "startFret": 13,
+    "fretSpan": 5,
+    "dots": [
+      { "string": 6, "fret": 15, "finger": 1, "label": "b7", "role": "scale" },
+      { "string": 6, "fret": 17, "finger": 3, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 15, "finger": 1, "label": "b3", "role": "target", "highlight": true },
+      { "string": 5, "fret": 17, "finger": 3, "label": "4", "role": "scale" },
+      { "string": 4, "fret": 14, "finger": 1, "label": "5", "role": "chord_tone" },
+      { "string": 4, "fret": 17, "finger": 4, "label": "b7", "role": "scale" },
+      { "string": 3, "fret": 14, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 17, "finger": 4, "label": "b3", "role": "target", "highlight": true },
+      { "string": 2, "fret": 15, "finger": 1, "label": "4", "role": "scale" },
+      { "string": 2, "fret": 17, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 1, "fret": 15, "finger": 1, "label": "b7", "role": "scale" },
+      { "string": 1, "fret": 17, "finger": 3, "label": "R", "isRoot": true, "role": "root" }
+    ]
+  }
+}
+```
+
 だから今日は二つのことをつなぎます。一つ目は第4↔第5接続（昨日学んだ引っ越しの感覚の延長）、二つ目は第5→オクターブ上の第1の接続です。特に二つ目が重要です。第5ボックスの一番上（1弦17フレットのA）に到達すると、あなたは実は「第1ボックスの根音」に再び立っているんです。つまりネックの端は壁ではなく、また始まりの地点なんですね。これを知っていると、即興のときに「上に逃げ場がない」という恐怖が消えます。上に行っても結局、知っているパターンが繰り返されるだけですから。
 
 今日のターゲットC（♭3）は、第5ボックスでは5弦15フレットと3弦17フレットにあります。ネックのほぼ端っこですね。ここにあるCも、下のボックスのCとまったく同じ「切ないマイナー3度」です。位置が高いだけで、役割は何も変わりません。
@@ -104,6 +137,43 @@ lang: ja
 
 **20〜40分・実戦即興（Am ワンコードバッキング／78〜85 BPM）**
 バッキングを流してルール：第4ボックス（12フレット）から始める→第5ボックス（14フレット）へ引っ越す→ネックの頂上のA（1弦17フレットまたは6弦17フレット）まで上がったら、再び着地音（CまたはA）でフレーズを閉じます。上へとことん押し上げる感覚を楽しんでください。ネックの端に到達したら「ここがまた第1ボックスなんだ」と思い出しながら、そこで1オクターブ上のリックをぽんと投げてみてもいいですね。
+
+```json
+{
+  "id": "m1.w3.d2.box4_to_box5_octave",
+  "type": "tab",
+  "meta": {
+    "title": "Box 4 -> Box 5 -> octave root (wrap point)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "tempoBpm": 80
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "block_connection",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 6, "fret": 12, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 6, "fret": 15, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 5, "fret": 12, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 5, "fret": 15, "duration": "eighth", "label": "b3", "highlight": true, "role": "target" },
+        { "string": 4, "fret": 12, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 4, "fret": 14, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 3, "fret": 12, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 3, "fret": 14, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 2, "fret": 13, "duration": "eighth", "label": "b3", "highlight": true, "role": "target" },
+        { "string": 2, "fret": 15, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 1, "fret": 12, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 1, "fret": 15, "duration": "eighth", "technique": "slide", "slideToFret": 17, "label": "b7", "role": "scale" },
+        { "string": 1, "fret": 17, "duration": "half", "technique": "vibrato", "label": "R", "isRoot": true, "target": true, "highlight": true, "role": "root" }
+      ]}
+    ]
+  }
+}
+```
 
 **40〜50分・録音・フィードバック（推奨）**
 30秒録音。チェック：①第5ボックスの狭いフレットで音がつぶれたりミュートしたりしていないか。②ネックの頂上まで上がったフレーズが「迷子にならず」着地できちんと閉じられたか。高いフレットは音が細くシャープになるのでミュートが起きやすいです。再生して音が詰まった弦があれば、その位置の運指を点検しましょう。

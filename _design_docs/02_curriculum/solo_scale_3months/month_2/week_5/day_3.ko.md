@@ -15,6 +15,43 @@ i18nKey: "lesson.m2.w5.d3"
 
 물론 F도 어제의 B처럼 **경과음**이에요. Am 코드톤(A·C·E)이 아니니까 눌러앉으면 안 돼요. 해결지는 두 곳: 가장 강한 건 **F → E(5도)**, 그리고 조금 돌아가면 **F → E → D → C(♭3)** 로 흘러 결국 우리의 홈베이스 C에 도착하는 길이에요. 오늘 F의 좌표는 1폼 기준 **5번 줄 8프렛**과 **2번 줄 6프렛**, 두 자리. 각각 바로 아래 E(5번 7프렛, 2번 5프렛)로 반음 미끄러지는 그림을 눈에 새기세요.
 
+```json
+{
+  "id": "m2.w5.d3.pentatonic_add_6th",
+  "type": "scale_shape",
+  "meta": {
+    "title": "A minor pentatonic + added 6th (F) resolving to 5th (E)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "scale": "A natural minor (partial)",
+    "tempoBpm": 85
+  },
+  "fretboard": {
+    "startFret": 5,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 6, "fret": 5, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 6, "fret": 7, "finger": 3, "label": "2", "role": "passing", "highlight": true },
+      { "string": 6, "fret": 8, "finger": 4, "label": "b3", "role": "target", "highlight": true },
+      { "string": 5, "fret": 5, "finger": 1, "label": "4", "role": "scale" },
+      { "string": 5, "fret": 7, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 5, "fret": 8, "finger": 4, "label": "6", "role": "passing", "highlight": true },
+      { "string": 4, "fret": 5, "finger": 1, "label": "b7", "role": "scale" },
+      { "string": 4, "fret": 7, "finger": 3, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 5, "finger": 1, "label": "b3", "role": "target", "highlight": true },
+      { "string": 3, "fret": 7, "finger": 3, "label": "4", "role": "scale" },
+      { "string": 2, "fret": 5, "finger": 1, "label": "5", "role": "chord_tone" },
+      { "string": 2, "fret": 6, "finger": 2, "label": "6", "role": "passing", "highlight": true },
+      { "string": 2, "fret": 8, "finger": 4, "label": "b7", "role": "scale" },
+      { "string": 1, "fret": 5, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 1, "fret": 7, "finger": 3, "label": "2", "role": "passing", "highlight": true },
+      { "string": 1, "fret": 8, "finger": 4, "label": "b3", "role": "target", "highlight": true }
+    ]
+  }
+}
+```
+
 ## ② 시각 자료
 
 펜타토닉에 어제의 B(초록)에 더해 오늘의 **F(6도, 초록 강조)** 두 자리가 꼈어요 — 5번 줄 8프렛, 2번 줄 6프렛. 각각 바로 아래 E(5도)로 반음 흘러내리는 다리예요.
@@ -100,6 +137,44 @@ i18nKey: "lesson.m2.w5.d3"
 
 **0~10분 · 워밍업 (BPM 85)**
 메트로놈 85에 맞춰 어제까지의 손을 먼저 풀어요 — 3도 인터벌 시퀀스 3분, A-B-C 4연음 2분. 그다음 5분은 오늘의 **F → E** 반음 해결(1마디)을 저속으로. F에서 E로 내려올 때 손가락이 "미끄러지듯" 붙게. 뭉치면 BPM 75로.
+
+```json
+{
+  "id": "m2.w5.d3.f_passing_resolve",
+  "type": "tab",
+  "meta": {
+    "title": "6th(F) passing tone resolving to 5th(E) and to b3(C)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "tempoBpm": 85
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "3rd_interval",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 5, "fret": 5, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 5, "fret": 7, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 5, "fret": 8, "duration": "eighth", "label": "6", "highlight": true, "role": "passing" },
+        { "string": 5, "fret": 7, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 5, "fret": 5, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 5, "fret": 8, "duration": "eighth", "label": "6", "highlight": true, "role": "passing" },
+        { "string": 5, "fret": 7, "duration": "quarter", "label": "5", "role": "chord_tone" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 2, "fret": 8, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 2, "fret": 6, "duration": "eighth", "label": "6", "highlight": true, "role": "passing" },
+        { "string": 2, "fret": 5, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 3, "fret": 7, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 2, "fret": 5, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 3, "fret": 7, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 3, "fret": 5, "duration": "quarter", "label": "b3", "target": true, "highlight": true, "role": "target" }
+      ]}
+    ]
+  }
+}
+```
 
 **10~20분 · 두뇌 훈련 (오늘의 타겟 = F 두 자리)**
 메트로놈 끄고, 1폼에서 **F(6도)만** 찾아 짚으세요. 5번 줄 8프렛, 2번 줄 6프렛 — 딱 두 군데. 짚을 때마다 "반음 아래 E로 당겨진다" 하고 소리 내며 **곧바로 아래 E로 미끄러져** 나오는 동작까지 붙여요. 눈 감고 두 F를 짚고 각각 E로 해결하면 통과.

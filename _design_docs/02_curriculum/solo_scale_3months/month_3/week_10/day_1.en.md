@@ -130,11 +130,105 @@ Third, today's bluesy lick. Bar 1 starts on the root, then **half-step bends the
 **0–10 min · Warm-up (BPM 90) — waking up the shape with a 4-note sequence**
 With the metronome at 90, run Position 1 ascending in groups of four sixteenth notes. No just scraping up and down the block. Push upward "four notes at a time": A-B-C#-D / B-C#-D-E … like that. Every time you pass through C# (major 3rd), mentally stamp it: "this is the bright one!" If your hand tenses up, drop to BPM 80.
 
+```json
+{
+  "id": "m3.w10.d1.a_mixolydian_pos1",
+  "type": "scale_shape",
+  "meta": {
+    "title": "A Mixolydian - Position 1 (major 3rd C# & b7 G)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A Mixolydian",
+    "scale": "A Mixolydian",
+    "tempoBpm": 90
+  },
+  "fretboard": {
+    "startFret": 4,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 6, "fret": 5, "finger": 2, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 6, "fret": 7, "finger": 4, "label": "2", "role": "scale" },
+      { "string": 5, "fret": 4, "finger": 1, "label": "3", "role": "target", "highlight": true },
+      { "string": 5, "fret": 5, "finger": 2, "label": "4", "role": "scale" },
+      { "string": 5, "fret": 7, "finger": 4, "label": "5", "role": "chord_tone" },
+      { "string": 4, "fret": 4, "finger": 1, "label": "6", "role": "scale" },
+      { "string": 4, "fret": 5, "finger": 2, "label": "b7", "role": "color", "highlight": true },
+      { "string": 4, "fret": 7, "finger": 4, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 4, "finger": 1, "label": "2", "role": "scale" },
+      { "string": 3, "fret": 6, "finger": 3, "label": "3", "role": "target", "highlight": true },
+      { "string": 3, "fret": 7, "finger": 4, "label": "4", "role": "scale" },
+      { "string": 2, "fret": 5, "finger": 2, "label": "5", "role": "chord_tone" },
+      { "string": 2, "fret": 7, "finger": 4, "label": "6", "role": "scale" },
+      { "string": 2, "fret": 8, "finger": 4, "label": "b7", "role": "color", "highlight": true },
+      { "string": 1, "fret": 5, "finger": 2, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 1, "fret": 7, "finger": 4, "label": "2", "role": "scale" }
+    ]
+  }
+}
+```
+
 **10–20 min · Brain training (targets = G and C#)**
 Metronome off. In Position 1, find just **♭7 G** in its two spots (4th string 5th fret, 2nd string 8th fret) and fret them, saying "this is tension" out loud each time. Next, find just **major 3rd C#** in its two spots (5th string 4th fret, 3rd string 6th fret), saying "this is resolution." Finally, fret one G, then move to the nearest C# — repeat this move 5 times. You pass when you can fret G and C# with your eyes closed within 3 seconds.
 
+```json
+{
+  "id": "m3.w10.d1.identity_tension_map",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "Identity notes: b7(G) tension -> major 3rd(C#) resolution, with b3(C) blue note",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A Mixolydian",
+    "tempoBpm": 90
+  },
+  "fretboard": {
+    "startFret": 4,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 4, "fret": 7, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 5, "label": "b7", "role": "color", "highlight": true },
+      { "string": 3, "fret": 5, "label": "b3", "role": "blue_note", "highlight": true },
+      { "string": 3, "fret": 6, "label": "3", "role": "target", "highlight": true }
+    ]
+  }
+}
+```
+
 **20–40 min · Real-world feel (A7 one-chord backing / 80–90 BPM)**
 Put on an "A7 vamp backing track" or "A7 groove jam." One mission: **always land on C# (major 3rd) whenever you end a phrase.** Feel free to play around like pentatonic in the middle. But the period at the end of every sentence is always C#. If you've got room, weave in today's bluesy lick (C→C# half-step bend) two or three times. Success is when landing on C# gives you that "click" feeling of locking into the backing track.
+
+```json
+{
+  "id": "m3.w10.d1.bluesy_mixolydian_lick",
+  "type": "tab",
+  "meta": {
+    "title": "Bluesy Mixolydian lick (b3 blue note -> major 3rd, b7 tension -> 3rd)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A Mixolydian",
+    "tempoBpm": 90
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "blues_line",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 4, "fret": 7, "duration": "quarter", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 3, "fret": 5, "duration": "eighth", "technique": "bend", "bendTarget": "half", "label": "b3", "role": "blue_note", "highlight": true },
+        { "string": 3, "fret": 6, "duration": "quarter", "label": "3", "target": true, "role": "target", "highlight": true },
+        { "string": 3, "fret": 7, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 2, "fret": 5, "duration": "quarter", "label": "5", "role": "chord_tone" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 2, "fret": 8, "duration": "quarter", "label": "b7", "role": "color", "highlight": true },
+        { "string": 2, "fret": 7, "duration": "eighth", "label": "6", "role": "scale" },
+        { "string": 2, "fret": 5, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 3, "fret": 6, "duration": "half", "technique": "vibrato", "label": "3", "target": true, "role": "target", "highlight": true }
+      ]}
+    ]
+  }
+}
+```
 
 **40–50 min · Record & reflect (recommended)**
 Record 30 seconds of your last jam with any recorder (voice memo app works fine). Listen back and check just one thing: **did my phrase endings really stop on C#, or did they habitually drift to the root A or the ♭3 C?** If they didn't stop on C#, that's the habit to fix tomorrow.

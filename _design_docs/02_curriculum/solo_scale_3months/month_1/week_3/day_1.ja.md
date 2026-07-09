@@ -18,6 +18,39 @@ lang: ja
 
 覚えておくべき座標は変わりません。A（R）・C（♭3）・D（4）・E（5）・G（♭7）。位置が12フレット上に移っただけで、音の役割はまったく同じです。特にC（♭3）、この音は第4ボックスでは5弦15フレットと2弦13フレットに住んでいます。ここが今日の緑の印です。
 
+```json
+{
+  "id": "m1.w3.d1.pentatonic_box4",
+  "type": "scale_shape",
+  "meta": {
+    "title": "A minor pentatonic — Box 4 (12th position)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "scale": "A minor pentatonic",
+    "tempoBpm": 80
+  },
+  "fretboard": {
+    "startFret": 11,
+    "fretSpan": 5,
+    "dots": [
+      { "string": 6, "fret": 12, "finger": 1, "label": "5", "role": "chord_tone" },
+      { "string": 6, "fret": 15, "finger": 4, "label": "b7", "role": "scale" },
+      { "string": 5, "fret": 12, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 15, "finger": 4, "label": "b3", "role": "target", "highlight": true },
+      { "string": 4, "fret": 12, "finger": 1, "label": "4", "role": "scale" },
+      { "string": 4, "fret": 14, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 3, "fret": 12, "finger": 1, "label": "b7", "role": "scale" },
+      { "string": 3, "fret": 14, "finger": 3, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 2, "fret": 13, "finger": 1, "label": "b3", "role": "target", "highlight": true },
+      { "string": 2, "fret": 15, "finger": 3, "label": "4", "role": "scale" },
+      { "string": 1, "fret": 12, "finger": 1, "label": "5", "role": "chord_tone" },
+      { "string": 1, "fret": 15, "finger": 4, "label": "b7", "role": "scale" }
+    ]
+  }
+}
+```
+
 ## ② 視覚資料
 
 まず今日の新居、第4ボックスです。根音A（5弦12フレット）を中心に、緑にハイライトされているのが着地ターゲットのC（♭3）です。
@@ -105,6 +138,44 @@ lang: ja
 
 **20〜40分・実戦即興（Am ワンコードバッキング／75〜80 BPM）**
 「Am backing track」で何でも一つ流します。今日のルール：演奏は第3ボックス（9フレット）から始めて、曲の途中で必ずスライドで第4ボックス（12フレット）へ引っ越し、C（♭3）に着地して止まる。上の接続ラインをそのまま使ってもいいですし、アレンジしてもOKです。大事なのは「低いボックスから始める→スライドで上へ引っ越す→ターゲットに着地」という流れを、一つのフレーズの中で作ることです。最低8回繰り返してください。
+
+```json
+{
+  "id": "m1.w3.d1.box3_to_box4_slide",
+  "type": "tab",
+  "meta": {
+    "title": "Box 3 -> Box 4 sliding connection (land on b3)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "tempoBpm": 80
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "block_connection",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 5, "fret": 12, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 4, "fret": 10, "duration": "eighth", "label": "b3", "highlight": true, "role": "target" },
+        { "string": 4, "fret": 12, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 3, "fret": 9, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 3, "fret": 12, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 2, "fret": 10, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 2, "fret": 13, "duration": "eighth", "label": "b3", "highlight": true, "role": "target" },
+        { "string": 1, "fret": 12, "duration": "eighth", "label": "5", "role": "chord_tone" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 1, "fret": 10, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 2, "fret": 13, "duration": "eighth", "label": "b3", "highlight": true, "role": "target" },
+        { "string": 3, "fret": 12, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 4, "fret": 12, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 5, "fret": 12, "duration": "eighth", "technique": "slide", "slideToFret": 15, "label": "R", "isRoot": true, "role": "root" },
+        { "string": 5, "fret": 15, "duration": "quarter", "dotted": true, "technique": "vibrato", "label": "b3", "target": true, "highlight": true, "role": "target" }
+      ]}
+    ]
+  }
+}
+```
 
 **40〜50分・録音・フィードバック（推奨）**
 手元の録音アプリ（スマホのボイスメモでもOK）で30秒だけ。聴き直してチェックするのは一つだけ。スライドの到着音（C）の音程が正確か。スライドは目でフレットを見ずに手の感覚で滑らせるので、15フレットを行き過ぎたり届かなかったりしやすいんです。再生速度を落として聴けると、到着の瞬間をもっとよく捉えられます。到着があいまいなら、そのスライドだけを10回別で繰り返しましょう。

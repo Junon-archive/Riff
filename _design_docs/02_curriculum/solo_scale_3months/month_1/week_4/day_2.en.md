@@ -106,8 +106,76 @@ Set the scale aside for a moment and focus on vibrato alone. Fret the 3rd string
 **10–20 min · Brain training (mapping ♭5 across the whole neck)**
 Looking at the map above, work through strings 6 to 1, fretting each string's one ♭5 (purple dot) in order. Every time you fret one, lock in the location by saying "this is the blue note in this zone." Then close your eyes and find them: start with 5th string 6th fret and 3rd string 8th fret (the two Box 1 spots), and if you've got room, keep going through the other strings. Pass when you can fret 5 or more spots with your eyes closed.
 
+```json
+{
+  "id": "m1.w4.d2.b5_neck_map_all_blocks",
+  "type": "scale_shape",
+  "meta": {
+    "title": "A blues b5 map across the whole neck (all 5 boxes)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A blues",
+    "scale": "A blues scale",
+    "tempoBpm": 70
+  },
+  "fretboard": {
+    "startFret": 5,
+    "fretSpan": 13,
+    "dots": [
+      { "string": 6, "fret": 5, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 6, "fret": 11, "label": "b5", "role": "blue_note", "highlight": true },
+      { "string": 6, "fret": 17, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 6, "label": "b5", "role": "blue_note", "highlight": true },
+      { "string": 5, "fret": 12, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 7, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 13, "label": "b5", "role": "blue_note", "highlight": true },
+      { "string": 3, "fret": 8, "label": "b5", "role": "blue_note", "highlight": true },
+      { "string": 3, "fret": 14, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 2, "fret": 10, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 2, "fret": 16, "label": "b5", "role": "blue_note", "highlight": true },
+      { "string": 1, "fret": 5, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 1, "fret": 11, "label": "b5", "role": "blue_note", "highlight": true },
+      { "string": 1, "fret": 17, "label": "R", "isRoot": true, "role": "root" }
+    ]
+  }
+}
+```
+
 **20–40 min · Real-world improv (Am7 one-chord backing, 65–70 BPM) — expressing ♭5 through slide/bend**
 Play the backing track and follow this rule: **always "enter" ♭5 via a slide or bend, and always finish landing notes with slow, wide vibrato.** Don't let a single note today cut off flat and dead. End each phrase landing on ♭3 (C) or the root (A) → sing it with wrist vibrato. Use the phrase above as your skeleton and vary it little by little.
+
+```json
+{
+  "id": "m1.w4.d2.vibrato_expression_phrase",
+  "type": "tab",
+  "meta": {
+    "title": "Vibrato expression — slide into b5 + wide slow vibrato on landings",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A blues",
+    "tempoBpm": 70
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "blues_phrasing",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 5, "fret": 5, "duration": "eighth", "technique": "slide", "slideToFret": 6, "label": "4>b5", "highlight": true, "role": "blue_note" },
+        { "string": 5, "fret": 6, "duration": "quarter", "technique": "vibrato", "label": "b5", "highlight": true, "role": "blue_note" },
+        { "string": 5, "fret": 7, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 3, "fret": 5, "duration": "half", "technique": "vibrato", "label": "b3", "target": true, "highlight": true, "role": "target" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 4, "fret": 7, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 3, "fret": 5, "duration": "eighth", "label": "b3", "highlight": true, "role": "target" },
+        { "string": 3, "fret": 7, "duration": "quarter", "technique": "bend", "bendTarget": "full", "label": "4>5", "highlight": true, "role": "scale" },
+        { "string": 3, "fret": 5, "duration": "quarter", "technique": "vibrato", "label": "b3", "target": true, "highlight": true, "role": "target" },
+        { "string": 4, "fret": 7, "duration": "quarter", "technique": "vibrato", "label": "R", "isRoot": true, "role": "root" }
+      ]}
+    ]
+  }
+}
+```
 
 **40–50 min · Record & reflect (recommended)**
 Record 30 seconds, then listen back. Check: ① Is the vibrato shaking a nice, **consistent rhythm**, or is it uneven and scared-sounding? ② Did every landing note get vibrato, or did some just cut off? ③ Did ♭5 enter naturally via slide or bend? Slow down playback if you need to, so you can zoom in with your ear on the vibrato cycle.

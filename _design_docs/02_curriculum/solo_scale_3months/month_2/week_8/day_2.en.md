@@ -112,11 +112,88 @@ Now for today's main event: the **guide tone line**. Three measures = three chor
 **0–10 min · Warm-up (BPM 76) — 3rds sequence**
 Play the `3rd_interval` warm-up above at metronome 76, in eighth notes. Get used to the hand shape of moving in 3rds (back and forth between the lower and higher string), and give a slight extra emphasis whenever a highlighted note (B, E, F) comes up. This is your time to hear, with your own ears, that "moving in 3rds hides the guide tones inside."
 
+```json
+{
+  "id": "m2.w8.d2.third_interval_warmup",
+  "type": "tab",
+  "meta": {
+    "title": "Diatonic 3rds warmup surfacing guide tones (C major)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "C major (ii-V-I)",
+    "tempoBpm": 76
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "3rd_interval",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 3, "fret": 0, "duration": "eighth", "label": "G", "role": "scale" },
+        { "string": 2, "fret": 0, "duration": "eighth", "label": "G7-3(B)", "highlight": true, "role": "target" },
+        { "string": 3, "fret": 2, "duration": "eighth", "label": "A", "role": "scale" },
+        { "string": 2, "fret": 1, "duration": "eighth", "label": "C", "role": "scale" },
+        { "string": 3, "fret": 4, "duration": "eighth", "label": "G7-3(B)", "highlight": true, "role": "target" },
+        { "string": 2, "fret": 3, "duration": "eighth", "label": "D", "role": "scale" },
+        { "string": 3, "fret": 5, "duration": "eighth", "label": "C", "role": "scale" },
+        { "string": 2, "fret": 5, "duration": "eighth", "label": "Cmaj7-3(E)", "highlight": true, "role": "target" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 2, "fret": 1, "duration": "eighth", "label": "C", "role": "scale" },
+        { "string": 1, "fret": 0, "duration": "eighth", "label": "Cmaj7-3(E)", "highlight": true, "role": "target" },
+        { "string": 2, "fret": 3, "duration": "eighth", "label": "D", "role": "scale" },
+        { "string": 1, "fret": 1, "duration": "eighth", "label": "Dm7-3(F)", "highlight": true, "role": "target" },
+        { "string": 2, "fret": 5, "duration": "eighth", "label": "Cmaj7-3(E)", "highlight": true, "role": "target" },
+        { "string": 1, "fret": 3, "duration": "eighth", "label": "G", "role": "scale" },
+        { "string": 2, "fret": 6, "duration": "eighth", "label": "Dm7-3(F)", "highlight": true, "role": "target" },
+        { "string": 1, "fret": 5, "duration": "eighth", "label": "A", "role": "scale" }
+      ]}
+    ]
+  }
+}
+```
+
 **10–20 min · Brain training (finding the shortest F→B→E path)**
 Turn off the metronome and connect just the **three landing notes** of the main line: F (string 4, fret 3) → B (string 3, fret 4) → E (string 4, fret 2). Your hand barely moves, right? All three notes fit within a handful of frets. Feel with your fingertips, especially, that **F→E is just one fret on the same string.** Close your eyes and fret these three notes in order without hesitation — that's a pass.
 
 **20–40 min · Real-world feel — improv (Dm7-G7-Cmaj7 backing track / BPM 72–76)**
 Play the backing track and run through the main line as-is a few times to get it into your body. Once it feels comfortable, start **changing just the connecting notes (the notes in between), while never touching the landing notes F, B, E.** For example, you can fill the middle of measure 1 with a different Dm7 note, but the end of the measure → first beat of the next measure must always land on the 3rd. "Bones are F·B·E, flesh is free" is today's improv rule.
+
+```json
+{
+  "id": "m2.w8.d2.guide_tone_line",
+  "type": "tab",
+  "meta": {
+    "title": "ii-V-I guide tone line (Dm7 F -> G7 B -> Cmaj7 E)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "C major (ii-V-I)",
+    "tempoBpm": 76
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "guide_tone_3rds",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 4, "fret": 3, "duration": "quarter", "label": "Dm7-3(F)", "target": true, "highlight": true, "role": "target" },
+        { "string": 3, "fret": 2, "duration": "quarter", "label": "A", "role": "chord_tone" },
+        { "string": 2, "fret": 3, "duration": "quarter", "label": "D", "isRoot": true, "role": "root" },
+        { "string": 2, "fret": 1, "duration": "quarter", "label": "C", "role": "passing" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 3, "fret": 4, "duration": "quarter", "label": "G7-3(B)", "target": true, "highlight": true, "role": "target" },
+        { "string": 4, "fret": 5, "duration": "quarter", "label": "G", "isRoot": true, "role": "root" },
+        { "string": 3, "fret": 2, "duration": "quarter", "label": "A", "role": "scale" },
+        { "string": 4, "fret": 3, "duration": "quarter", "label": "F", "role": "chord_tone" }
+      ]},
+      { "measure": 3, "notes": [
+        { "string": 4, "fret": 2, "duration": "half", "technique": "vibrato", "label": "Cmaj7-3(E)", "target": true, "highlight": true, "role": "target" },
+        { "string": 2, "fret": 1, "duration": "quarter", "label": "C", "isRoot": true, "role": "root" },
+        { "string": 1, "fret": 0, "duration": "quarter", "label": "Cmaj7-3(E)", "target": true, "highlight": true, "role": "target" }
+      ]}
+    ]
+  }
+}
+```
 
 **40–50 min · Record & reflect (recommended)**
 Record 30 seconds, then play it back. Check two things: ① When the chord changed, did the 3rd **ring out exactly right**, or was it half a beat late? ② When measure 2's F moved into measure 3's E, did the half step **slide smoothly**, or did it cut off abruptly? If needed, slow down playback to zoom in on that seam with your ears.

@@ -110,6 +110,42 @@ Metronome at 76, quarter notes. Fret F (beat 1) ... B (beat 1) ... E (beat 1) in
 **20–40 min · Real-world feel — improv (Dm7-G7-Cmaj7 backing track / BPM 70–76)**
 Start with the **space drill** above, over the backing track. "Land the 3rd → rest → prep the next 3rd." The silence might feel scary, but that silence is on your side. Once it feels comfortable, move on to the **fast landing line (the first JSON)** and fill in more notes. The rule stays the same: **connecting notes are free, but the first beat of every chord change is always the 3rd.** If you feel like you were late, give yourself more space on the next chord to get ready.
 
+```json
+{
+  "id": "m2.w8.d3.arrival_with_space",
+  "type": "tab",
+  "meta": {
+    "title": "Land the 3rd, then leave space (arrival drill with rests)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "C major (ii-V-I)",
+    "tempoBpm": 76
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "guide_tone_3rds",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 4, "fret": 3, "duration": "quarter", "label": "Dm7-3(F)", "target": true, "highlight": true, "role": "target" },
+        { "string": 3, "fret": 2, "duration": "eighth", "label": "A", "role": "chord_tone" },
+        { "string": 2, "fret": 1, "duration": "eighth", "label": "C", "role": "scale" },
+        { "string": 4, "fret": 3, "duration": "half", "rest": true, "label": "rest" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 3, "fret": 4, "duration": "quarter", "label": "G7-3(B)", "target": true, "highlight": true, "role": "target" },
+        { "string": 2, "fret": 3, "duration": "eighth", "label": "D", "role": "chord_tone" },
+        { "string": 1, "fret": 3, "duration": "eighth", "label": "G", "isRoot": true, "role": "root" },
+        { "string": 3, "fret": 4, "duration": "half", "rest": true, "label": "rest" }
+      ]},
+      { "measure": 3, "notes": [
+        { "string": 4, "fret": 2, "duration": "half", "technique": "vibrato", "label": "Cmaj7-3(E)", "target": true, "highlight": true, "role": "target" },
+        { "string": 4, "fret": 2, "duration": "half", "rest": true, "label": "rest" }
+      ]}
+    ]
+  }
+}
+```
+
 **40–50 min · Record & reflect (recommended)**
 Record 30 seconds. Play it back and track just one thing with your ears: **does the moment the chord changes line up with my 3rd?** If you find a spot that's off, slow down playback just for that chord and check "how late/early was I?" If you have a habit of being late, correct it by practicing resting your hand on the note one beat before that chord arrives.
 

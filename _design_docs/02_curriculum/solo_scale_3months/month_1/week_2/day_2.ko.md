@@ -13,6 +13,39 @@ i18nKey: "lesson.m1.w2.d2"
 
 3번 블록엔 반가운 얼굴이 하나 있어요. 근음 A가 **5번 줄 12프렛**에 딱 앉아 있거든요. 12프렛은 지판의 정중앙, 점(인레이)이 두 개 찍힌 그 자리예요. 눈으로 찾기가 아주 쉬워요. 그래서 3번 블록은 위치 각인이 은근 편해요. "12프렛 = A" 이 하나만 잡으면 나머지가 그 주변에 딸려 와요.
 
+```json
+{
+  "id": "m1.w2.d2.pentatonic_box3",
+  "type": "scale_shape",
+  "meta": {
+    "title": "A minor pentatonic — Box 3 (connects up from Box 2)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "scale": "A minor pentatonic",
+    "tempoBpm": 72
+  },
+  "fretboard": {
+    "startFret": 9,
+    "fretSpan": 5,
+    "dots": [
+      { "string": 6, "fret": 10, "finger": 1, "label": "4", "role": "scale" },
+      { "string": 6, "fret": 12, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 5, "fret": 10, "finger": 1, "label": "b7", "role": "scale" },
+      { "string": 5, "fret": 12, "finger": 3, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 10, "finger": 1, "label": "b3", "role": "target", "highlight": true },
+      { "string": 4, "fret": 12, "finger": 3, "label": "4", "role": "scale" },
+      { "string": 3, "fret": 9, "finger": 1, "label": "5", "role": "chord_tone" },
+      { "string": 3, "fret": 12, "finger": 4, "label": "b7", "role": "scale" },
+      { "string": 2, "fret": 10, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 2, "fret": 13, "finger": 4, "label": "b3", "role": "target", "highlight": true },
+      { "string": 1, "fret": 10, "finger": 1, "label": "4", "role": "scale" },
+      { "string": 1, "fret": 12, "finger": 3, "label": "5", "role": "chord_tone" }
+    ]
+  }
+}
+```
+
 그리고 오늘의 다리. 어제는 4번 줄에서 A→C로 슬라이드했죠? 오늘 2번↔3번 연결은 **2번 줄(B현)**을 씁니다. 2번 블록의 A(2번 줄 10프렛)를 짚고 **13프렛까지 슬라이드**하면, 도착음이 바로 C(♭3)예요. 또 타겟 착지죠. 재밌는 게, 블록이 바뀌어도 우리가 노리는 음은 언제나 똑같은 C라는 거예요. 넥 위 위치만 바뀔 뿐, **"코드의 3도에 착지한다"는 원칙은 3개월 내내 단 한 번도 안 바뀌어요.** 오늘은 그 원칙을 3번 블록에서 다시 한번 확인하는 날이에요.
 
 ## ② 시각 자료
@@ -102,6 +135,44 @@ i18nKey: "lesson.m1.w2.d2"
 
 **20~40분 · 실전 즉흥 (Am 원코드 백킹 / 70~72 BPM)**
 백킹을 틀고 규칙: **2번 블록에서 놀다가, 2번 줄 슬라이드로 3번 블록에 올라가 C(♭3)에 착지.** 어제 놓은 1번↔2번 다리와 오늘의 2번↔3번 다리를 이어서, 여유가 되면 **1번 블록 → 2번 블록 → 3번 블록**까지 한 번에 쭉 올라가 보세요. 넥을 절반이나 여행한 거예요. 끝은 언제나 C 착지.
+
+```json
+{
+  "id": "m1.w2.d2.box2_to_box3_slide",
+  "type": "tab",
+  "meta": {
+    "title": "Box 2 -> Box 3 sliding connection (land on b3)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "tempoBpm": 72
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "block_connection",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 4, "fret": 7, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 4, "fret": 10, "duration": "eighth", "label": "b3", "highlight": true, "role": "target" },
+        { "string": 3, "fret": 7, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 3, "fret": 9, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 2, "fret": 8, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 2, "fret": 10, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 2, "fret": 10, "duration": "quarter", "technique": "slide", "slideToFret": 13, "label": "b3", "target": true, "highlight": true, "role": "target" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 1, "fret": 10, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 1, "fret": 12, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 2, "fret": 13, "duration": "eighth", "label": "b3", "highlight": true, "role": "target" },
+        { "string": 2, "fret": 10, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 3, "fret": 12, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 3, "fret": 9, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 2, "fret": 13, "duration": "quarter", "technique": "vibrato", "label": "b3", "target": true, "highlight": true, "role": "target" }
+      ]}
+    ]
+  }
+}
+```
 
 **40~50분 · 녹음/피드백 (권장)**
 30초 녹음 후 재생. 체크: 2번 줄 슬라이드 도착음이 13프렛에서 정확히 잡혔는지, 아니면 12나 14로 미끄러졌는지. 얇은 줄 슬라이드는 음정이 흔들리기 쉬우니, 도착음이 백킹의 Am과 "맞물려" 울리는지 귀로 확인하세요.

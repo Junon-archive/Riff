@@ -16,6 +16,43 @@ lang: ja
 
 もちろんFも昨日のBと同じく**経過音**です。Amのコードトーン（A・C・E）ではないので、居座ってはいけません。解決先は2つ。いちばん強いのは**F → E（5度）**、少し遠回りすると**F → E → D → C（♭3）**と流れて、最終的に私たちのホームベースCに到着する道です。今日のFの座標は第1ボックス基準で**5弦8フレット**と**2弦6フレット**、2か所。それぞれすぐ下のE（5弦7フレット、2弦5フレット）へ半音滑り込む絵を目に焼き付けてください。
 
+```json
+{
+  "id": "m2.w5.d3.pentatonic_add_6th",
+  "type": "scale_shape",
+  "meta": {
+    "title": "A minor pentatonic + added 6th (F) resolving to 5th (E)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "scale": "A natural minor (partial)",
+    "tempoBpm": 85
+  },
+  "fretboard": {
+    "startFret": 5,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 6, "fret": 5, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 6, "fret": 7, "finger": 3, "label": "2", "role": "passing", "highlight": true },
+      { "string": 6, "fret": 8, "finger": 4, "label": "b3", "role": "target", "highlight": true },
+      { "string": 5, "fret": 5, "finger": 1, "label": "4", "role": "scale" },
+      { "string": 5, "fret": 7, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 5, "fret": 8, "finger": 4, "label": "6", "role": "passing", "highlight": true },
+      { "string": 4, "fret": 5, "finger": 1, "label": "b7", "role": "scale" },
+      { "string": 4, "fret": 7, "finger": 3, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 5, "finger": 1, "label": "b3", "role": "target", "highlight": true },
+      { "string": 3, "fret": 7, "finger": 3, "label": "4", "role": "scale" },
+      { "string": 2, "fret": 5, "finger": 1, "label": "5", "role": "chord_tone" },
+      { "string": 2, "fret": 6, "finger": 2, "label": "6", "role": "passing", "highlight": true },
+      { "string": 2, "fret": 8, "finger": 4, "label": "b7", "role": "scale" },
+      { "string": 1, "fret": 5, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 1, "fret": 7, "finger": 3, "label": "2", "role": "passing", "highlight": true },
+      { "string": 1, "fret": 8, "finger": 4, "label": "b3", "role": "target", "highlight": true }
+    ]
+  }
+}
+```
+
 ## ② 視覚資料
 
 ペンタトニックに昨日のB（緑）に加えて、今日の**F（6度、緑ハイライト）**が2か所加わりました——5弦8フレット、2弦6フレット。それぞれすぐ下のE（5度）へ半音流れ落ちる橋です。
@@ -101,6 +138,44 @@ lang: ja
 
 **0〜10分・ウォームアップ（BPM 85）**
 メトロノーム85に合わせて、まずここまでの手をほぐします——3度インターバルシーケンス3分、A-B-C 4連音2分。次の5分は今日の**F → E**半音解決（1小節目）をゆっくりと。FからEに下りるとき、指が「滑るように」つながるように。団子になったらBPM 75に落としましょう。
+
+```json
+{
+  "id": "m2.w5.d3.f_passing_resolve",
+  "type": "tab",
+  "meta": {
+    "title": "6th(F) passing tone resolving to 5th(E) and to b3(C)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "tempoBpm": 85
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "3rd_interval",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 5, "fret": 5, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 5, "fret": 7, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 5, "fret": 8, "duration": "eighth", "label": "6", "highlight": true, "role": "passing" },
+        { "string": 5, "fret": 7, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 5, "fret": 5, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 5, "fret": 8, "duration": "eighth", "label": "6", "highlight": true, "role": "passing" },
+        { "string": 5, "fret": 7, "duration": "quarter", "label": "5", "role": "chord_tone" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 2, "fret": 8, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 2, "fret": 6, "duration": "eighth", "label": "6", "highlight": true, "role": "passing" },
+        { "string": 2, "fret": 5, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 3, "fret": 7, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 2, "fret": 5, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 3, "fret": 7, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 3, "fret": 5, "duration": "quarter", "label": "b3", "target": true, "highlight": true, "role": "target" }
+      ]}
+    ]
+  }
+}
+```
 
 **10〜20分・頭のトレーニング（今日のターゲット＝Fの2か所）**
 メトロノームを止めて、第1ボックスの中で**Fだけ**を探して押さえます。5弦8フレット、2弦6フレット、2か所だけ。押さえるたびに「半音下のEに引っ張られる」と声に出しながら、**すぐ下のEへ滑り込む**動作までつなげます。目を閉じて2つのFを押さえ、それぞれEで解決できたら合格です。

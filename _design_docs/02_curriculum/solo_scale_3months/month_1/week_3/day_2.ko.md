@@ -13,6 +13,39 @@ i18nKey: "lesson.m1.w3.d2"
 
 5번 블록은 14~17프렛에 살아요. 근음 A가 **6번 줄 17프렛**, 그리고 **1번 줄 17프렛**에 있어요. 자, 여기서 마법. 6번 줄 17프렛의 A는... **6번 줄 5프렛(1번 블록 근음)에서 정확히 12프렛 위**예요. 12프렛 = 한 옥타브. 즉 **5번 블록의 꼭대기는 1번 블록과 똑같은 모양**이에요. 넥을 쭉 올라가다 보면 5번 블록 다음엔 다시 1번 블록이 (한 옥타브 위에서) 나오는 거예요. **지도가 한 바퀴 돌아 제자리로 오는 거죠.** 펜타토닉이 "5개 블록의 무한 반복 고리"라는 걸, 오늘 이 옥타브 지점에서 눈으로 확인하게 됩니다.
 
+```json
+{
+  "id": "m1.w3.d2.pentatonic_box5",
+  "type": "scale_shape",
+  "meta": {
+    "title": "A minor pentatonic — Box 5 (wraps to Box 1 an octave up)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "scale": "A minor pentatonic",
+    "tempoBpm": 80
+  },
+  "fretboard": {
+    "startFret": 13,
+    "fretSpan": 5,
+    "dots": [
+      { "string": 6, "fret": 15, "finger": 1, "label": "b7", "role": "scale" },
+      { "string": 6, "fret": 17, "finger": 3, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 15, "finger": 1, "label": "b3", "role": "target", "highlight": true },
+      { "string": 5, "fret": 17, "finger": 3, "label": "4", "role": "scale" },
+      { "string": 4, "fret": 14, "finger": 1, "label": "5", "role": "chord_tone" },
+      { "string": 4, "fret": 17, "finger": 4, "label": "b7", "role": "scale" },
+      { "string": 3, "fret": 14, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 17, "finger": 4, "label": "b3", "role": "target", "highlight": true },
+      { "string": 2, "fret": 15, "finger": 1, "label": "4", "role": "scale" },
+      { "string": 2, "fret": 17, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 1, "fret": 15, "finger": 1, "label": "b7", "role": "scale" },
+      { "string": 1, "fret": 17, "finger": 3, "label": "R", "isRoot": true, "role": "root" }
+    ]
+  }
+}
+```
+
 그래서 오늘은 두 가지를 잇습니다. 첫째 **4번↔5번 연결**(어제 배운 이사 감각의 연장), 둘째 **5번→옥타브 위 1번**의 연결. 특히 두 번째가 중요해요. 5번 블록 맨 위(1번 줄 17프렛 A)에 도달하면, 여러분은 사실 "1번 블록의 근음"에 다시 서 있는 거예요. 그러니까 넥의 끝은 벽이 아니라 **다시 시작점**이에요. 이걸 알면 즉흥할 때 "위로 도망갈 곳이 없다"는 공포가 사라져요. 위로 가도 결국 아는 패턴이 반복될 뿐이니까요.
 
 오늘의 타겟 C(♭3)는 5번 블록에서 **5번 줄 15프렛**과 **3번 줄 17프렛**에 있어요. 넥의 거의 끝자락이죠. 여기 있는 C도, 아래 블록의 C와 완전히 똑같은 "애절한 마이너 3도"예요. 위치만 높을 뿐 역할은 하나도 안 변해요.
@@ -103,6 +136,43 @@ i18nKey: "lesson.m1.w3.d2"
 
 **20~40분 · 실전 즉흥 (Am 원코드 백킹 / 78~85 BPM)**
 백킹 틀고 규칙: **4번 블록(12프렛)에서 시작 → 5번 블록(14프렛)으로 이사 → 넥 꼭대기 A(1번 줄 17프렛 또는 6번 줄 17프렛)까지 올라갔다가**, 다시 착지음(C 또는 A)으로 프레이즈를 닫기. 위로 끝까지 밀어붙이는 감각을 즐기세요. 넥 끝에 도달하면 "여기가 다시 1번 블록"이라는 걸 상기하며, 거기서 한 옥타브 위 리크를 툭 던져봐도 좋아요.
+
+```json
+{
+  "id": "m1.w3.d2.box4_to_box5_octave",
+  "type": "tab",
+  "meta": {
+    "title": "Box 4 -> Box 5 -> octave root (wrap point)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "tempoBpm": 80
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "block_connection",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 6, "fret": 12, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 6, "fret": 15, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 5, "fret": 12, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 5, "fret": 15, "duration": "eighth", "label": "b3", "highlight": true, "role": "target" },
+        { "string": 4, "fret": 12, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 4, "fret": 14, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 3, "fret": 12, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 3, "fret": 14, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 2, "fret": 13, "duration": "eighth", "label": "b3", "highlight": true, "role": "target" },
+        { "string": 2, "fret": 15, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 1, "fret": 12, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 1, "fret": 15, "duration": "eighth", "technique": "slide", "slideToFret": 17, "label": "b7", "role": "scale" },
+        { "string": 1, "fret": 17, "duration": "half", "technique": "vibrato", "label": "R", "isRoot": true, "target": true, "highlight": true, "role": "root" }
+      ]}
+    ]
+  }
+}
+```
 
 **40~50분 · 녹음/피드백 (권장)**
 30초 녹음. 체크: ① 5번 블록의 좁은 프렛에서 음이 뭉개지거나 뮤트되지 않았나. ② 넥 꼭대기까지 올라간 프레이즈가 "길을 잃지" 않고 착지로 잘 닫혔나. 고프렛은 소리가 얇고 날카로워서 뮤트가 잘 나요. 재생하며 삑사리 난 현이 있으면 그 자리 운지를 점검.

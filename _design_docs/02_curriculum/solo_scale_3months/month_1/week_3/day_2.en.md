@@ -14,6 +14,39 @@ Here's why we're doing this today. Yesterday you moved into Box 4, right? Today,
 
 Box 5 lives in frets 14–17. The root A sits on the 6th string 17th fret, and also on the 1st string 17th fret. Now, here's the magic: the A at the 6th string 17th fret is exactly 12 frets above the 6th string 5th fret (the root of Box 1). 12 frets = one octave. Which means the top of Box 5 has the exact same shape as Box 1. Keep climbing the neck past Box 5, and Box 1 shows up again (one octave higher). The map comes full circle and lands right back where it started. Today, at this octave point, you'll see with your own eyes that the pentatonic scale is really "five boxes looping infinitely."
 
+```json
+{
+  "id": "m1.w3.d2.pentatonic_box5",
+  "type": "scale_shape",
+  "meta": {
+    "title": "A minor pentatonic — Box 5 (wraps to Box 1 an octave up)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "scale": "A minor pentatonic",
+    "tempoBpm": 80
+  },
+  "fretboard": {
+    "startFret": 13,
+    "fretSpan": 5,
+    "dots": [
+      { "string": 6, "fret": 15, "finger": 1, "label": "b7", "role": "scale" },
+      { "string": 6, "fret": 17, "finger": 3, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 15, "finger": 1, "label": "b3", "role": "target", "highlight": true },
+      { "string": 5, "fret": 17, "finger": 3, "label": "4", "role": "scale" },
+      { "string": 4, "fret": 14, "finger": 1, "label": "5", "role": "chord_tone" },
+      { "string": 4, "fret": 17, "finger": 4, "label": "b7", "role": "scale" },
+      { "string": 3, "fret": 14, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 17, "finger": 4, "label": "b3", "role": "target", "highlight": true },
+      { "string": 2, "fret": 15, "finger": 1, "label": "4", "role": "scale" },
+      { "string": 2, "fret": 17, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 1, "fret": 15, "finger": 1, "label": "b7", "role": "scale" },
+      { "string": 1, "fret": 17, "finger": 3, "label": "R", "isRoot": true, "role": "root" }
+    ]
+  }
+}
+```
+
 So today we connect two things. First, the Box 4↔5 connection (an extension of the moving sense you learned yesterday). Second, the connection from Box 5 up to Box 1 an octave higher. That second one really matters. When you reach the top of Box 5 (the A on the 1st string, 17th fret), you're actually standing on "the root of Box 1" again. So the end of the neck isn't a wall — it's a starting point in disguise. Once you know that, the fear of "there's nowhere left to run" during improv just disappears. No matter how high you go, it's the same pattern repeating, and you already know it.
 
 Today's target, C (♭3), sits at the 5th string 15th fret and the 3rd string 17th fret in Box 5 — right near the very end of the neck. But this C is exactly the same "aching minor 3rd" as the C down in the lower boxes. Only the location is higher — the role never changes.
@@ -104,6 +137,43 @@ Metronome off, two challenges. ① Fret the two C (♭3) spots in Box 5 (5th str
 
 **20–40 min · Real-world improv (Am one-chord backing, 78–85 BPM)**
 Play the backing track, rule: start in Box 4 (fret 12) → move into Box 5 (fret 14) → climb all the way to the A at the top of the neck (1st string 17th fret, or 6th string 17th fret), then close the phrase by landing back on a chord tone (C or A). Enjoy the feeling of pushing all the way up. Once you reach the top of the neck, remind yourself "this is Box 1 again" — feel free to toss in a lick up here, one octave higher.
+
+```json
+{
+  "id": "m1.w3.d2.box4_to_box5_octave",
+  "type": "tab",
+  "meta": {
+    "title": "Box 4 -> Box 5 -> octave root (wrap point)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "tempoBpm": 80
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "block_connection",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 6, "fret": 12, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 6, "fret": 15, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 5, "fret": 12, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 5, "fret": 15, "duration": "eighth", "label": "b3", "highlight": true, "role": "target" },
+        { "string": 4, "fret": 12, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 4, "fret": 14, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 3, "fret": 12, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 3, "fret": 14, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 2, "fret": 13, "duration": "eighth", "label": "b3", "highlight": true, "role": "target" },
+        { "string": 2, "fret": 15, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 1, "fret": 12, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 1, "fret": 15, "duration": "eighth", "technique": "slide", "slideToFret": 17, "label": "b7", "role": "scale" },
+        { "string": 1, "fret": 17, "duration": "half", "technique": "vibrato", "label": "R", "isRoot": true, "target": true, "highlight": true, "role": "root" }
+      ]}
+    ]
+  }
+}
+```
 
 **40–50 min · Record & reflect (recommended)**
 Record 30 seconds. Check: ① Did notes get muted or muffled in the tight frets of Box 5? ② Did the phrase that climbed to the top of the neck close cleanly with a landing, without "getting lost"? High frets produce a thin, sharp tone that mutes easily. Play it back, and if any string buzzed or died, check your fingering at that exact spot.

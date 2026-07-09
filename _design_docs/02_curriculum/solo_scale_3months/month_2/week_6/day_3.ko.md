@@ -13,6 +13,43 @@ i18nKey: "lesson.m2.w6.d3"
 
 그래서 오늘은 왕복 드릴을 해요. 무기는 **4연음 시퀀스**(16분음표 4개 묶음). 4연음으로 쉬지 않고 지판을 굴리다가, 코드가 Am이면 어두운 **b3(C)** 로 뚝 떨어지고, 코드가 C면 밝은 **3도(E)** 로 사뿐히 내려앉아요. 손가락 운지는 **1도 안 바꿔요.** 오직 "지금 어디로 퇴근할지"만 순간 판단하는 거예요.
 
+```json
+{
+  "id": "m2.w6.d3.two_landing_map",
+  "type": "scale_shape",
+  "meta": {
+    "title": "Two landing notes — C (Am b3 / C R) and E (C 3 / Am 5)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "C major / A minor (relative)",
+    "scale": "C major (relative to A natural minor)",
+    "tempoBpm": 88
+  },
+  "fretboard": {
+    "startFret": 5,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 6, "fret": 5, "finger": 1, "label": "A (6/R)", "isRoot": true, "role": "root" },
+      { "string": 6, "fret": 7, "finger": 3, "label": "B (7/2)", "role": "scale" },
+      { "string": 6, "fret": 8, "finger": 4, "label": "C = b3(Am)/R(C)", "role": "target", "highlight": true },
+      { "string": 5, "fret": 5, "finger": 1, "label": "D (2/4)", "role": "scale" },
+      { "string": 5, "fret": 7, "finger": 3, "label": "E = 3(C)/5(Am)", "role": "target", "highlight": true },
+      { "string": 5, "fret": 8, "finger": 4, "label": "F (4/b6)", "role": "scale" },
+      { "string": 4, "fret": 5, "finger": 1, "label": "G (5/b7)", "role": "scale" },
+      { "string": 4, "fret": 7, "finger": 3, "label": "A (6/R)", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 5, "finger": 1, "label": "C = b3(Am)/R(C)", "role": "target", "highlight": true },
+      { "string": 3, "fret": 7, "finger": 3, "label": "D (2/4)", "role": "scale" },
+      { "string": 2, "fret": 5, "finger": 1, "label": "E = 3(C)/5(Am)", "role": "target", "highlight": true },
+      { "string": 2, "fret": 6, "finger": 2, "label": "F (4/b6)", "role": "scale" },
+      { "string": 2, "fret": 8, "finger": 4, "label": "G (5/b7)", "role": "scale" },
+      { "string": 1, "fret": 5, "finger": 1, "label": "A (6/R)", "isRoot": true, "role": "root" },
+      { "string": 1, "fret": 7, "finger": 3, "label": "B (7/2)", "role": "scale" },
+      { "string": 1, "fret": 8, "finger": 4, "label": "C = b3(Am)/R(C)", "role": "target", "highlight": true }
+    ]
+  }
+}
+```
+
 여기 진짜 중요한 포인트가 있어요. 아래 두 마디를 보면 **음표 위치가 거의 똑같아요.** 손은 완전히 같은 궤도를 돌아요. 그런데 1번 마디는 C에서 멈추고(Am의 어둠), 2번 마디는 E에서 멈춰요(C의 밝음). 이 "같은 손 · 다른 착지"를 반복하다 보면, 나중에 백킹에서 코드가 휙 바뀌어도 손이 알아서 착지점을 갈아타게 돼요. 오늘은 그 회로를 뚫는 날이에요.
 
 ## ② 시각 자료
@@ -115,6 +152,56 @@ i18nKey: "lesson.m2.w6.d3"
 
 **10~20분 · 두뇌 훈련 (착지 전환 = C↔E)**
 메트로놈은 켜두고, 위 두 마디를 **번갈아** 쳐요. 1마디(C 착지) → 2마디(E 착지) → 다시 1마디… 이렇게 무한 반복. 착지 직전에 머릿속으로 "어둠(C)" / "밝음(E)"을 미리 외치고 손이 그쪽으로 가게. 손 궤도는 똑같은데 마지막 한 음만 갈아타는 감각을 3분 안에 자동화시키면 통과.
+
+```json
+{
+  "id": "m2.w6.d3.center_shift_4note",
+  "type": "tab",
+  "meta": {
+    "title": "4-note sequence drill — resolve to C (Am b3) then E (C bright 3rd)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "C major / A minor (relative)",
+    "tempoBpm": 88
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "4note_sequence",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 6, "fret": 5, "duration": "sixteenth", "label": "A (R in Am)", "role": "root" },
+        { "string": 6, "fret": 7, "duration": "sixteenth", "label": "B (2)", "role": "scale" },
+        { "string": 6, "fret": 8, "duration": "sixteenth", "label": "C (b3)", "highlight": true, "role": "scale" },
+        { "string": 5, "fret": 5, "duration": "sixteenth", "label": "D (4)", "role": "scale" },
+        { "string": 6, "fret": 7, "duration": "sixteenth", "label": "B (2)", "role": "scale" },
+        { "string": 6, "fret": 8, "duration": "sixteenth", "label": "C (b3)", "highlight": true, "role": "scale" },
+        { "string": 5, "fret": 5, "duration": "sixteenth", "label": "D (4)", "role": "scale" },
+        { "string": 5, "fret": 7, "duration": "sixteenth", "label": "E (5)", "role": "chord_tone" },
+        { "string": 6, "fret": 8, "duration": "sixteenth", "label": "C (b3)", "highlight": true, "role": "scale" },
+        { "string": 5, "fret": 5, "duration": "sixteenth", "label": "D (4)", "role": "scale" },
+        { "string": 5, "fret": 7, "duration": "sixteenth", "label": "E (5)", "role": "chord_tone" },
+        { "string": 5, "fret": 8, "duration": "sixteenth", "label": "F (b6)", "role": "scale" },
+        { "string": 3, "fret": 5, "duration": "quarter", "label": "C = b3(Am)", "target": true, "highlight": true, "role": "target" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 6, "fret": 5, "duration": "sixteenth", "label": "A (6 in C)", "role": "scale" },
+        { "string": 6, "fret": 7, "duration": "sixteenth", "label": "B (7)", "role": "scale" },
+        { "string": 6, "fret": 8, "duration": "sixteenth", "label": "C (R)", "role": "root" },
+        { "string": 5, "fret": 5, "duration": "sixteenth", "label": "D (2)", "role": "scale" },
+        { "string": 6, "fret": 7, "duration": "sixteenth", "label": "B (7)", "role": "scale" },
+        { "string": 6, "fret": 8, "duration": "sixteenth", "label": "C (R)", "role": "root" },
+        { "string": 5, "fret": 5, "duration": "sixteenth", "label": "D (2)", "role": "scale" },
+        { "string": 5, "fret": 7, "duration": "sixteenth", "label": "E (3)", "highlight": true, "role": "scale" },
+        { "string": 6, "fret": 8, "duration": "sixteenth", "label": "C (R)", "role": "root" },
+        { "string": 5, "fret": 5, "duration": "sixteenth", "label": "D (2)", "role": "scale" },
+        { "string": 5, "fret": 7, "duration": "sixteenth", "label": "E (3)", "highlight": true, "role": "scale" },
+        { "string": 5, "fret": 8, "duration": "sixteenth", "label": "F (4)", "role": "scale" },
+        { "string": 5, "fret": 7, "duration": "quarter", "label": "E = 3(C)", "target": true, "highlight": true, "role": "target" }
+      ]}
+    ]
+  }
+}
+```
 
 **20~40분 · 실전 즉흥 (Am ↔ C 전환 백킹 / 84~88 BPM)**
 "Am C vamp backing track" 하나 틀어요. 규칙: 4연음으로 쉬지 않고 굴리다가, **코드 소리를 귀로 듣고** Am이면 C에, C면 E에 착지. 코드가 바뀌는 그 순간을 놓치지 않는 게 핵심이에요. 처음엔 늦게 반응해도 괜찮아요. 반응 속도가 오늘 하루 만에 확 빨라져요.

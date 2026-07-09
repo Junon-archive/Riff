@@ -12,6 +12,39 @@ lang: ja
 
 今日なぜこれをやるかというと、これから3か月ずっと住み続ける**本拠地**を、今日整え直したいからです。それが**Aマイナーペンタトニック第1ボックス（5フレット）。**すでに知っている形かもしれませんが、今日は「手が覚えている上下行」を超えて、その中の**それぞれの音がどんな役割を持っているか**まで目に焼き付けていきます。
 
+```json
+{
+  "id": "m1.w0.d3.am_pentatonic_box1",
+  "type": "scale_shape",
+  "meta": {
+    "title": "A minor pentatonic — Box 1 refresh (with roles)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "scale": "A minor pentatonic",
+    "tempoBpm": 70
+  },
+  "fretboard": {
+    "startFret": 5,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 6, "fret": 5, "finger": 1, "isRoot": true, "label": "R", "role": "root" },
+      { "string": 6, "fret": 8, "finger": 4, "label": "b3", "role": "target", "highlight": true },
+      { "string": 5, "fret": 5, "finger": 1, "label": "4", "role": "scale" },
+      { "string": 5, "fret": 7, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 4, "fret": 5, "finger": 1, "label": "b7", "role": "scale" },
+      { "string": 4, "fret": 7, "finger": 3, "isRoot": true, "label": "R", "role": "root" },
+      { "string": 3, "fret": 5, "finger": 1, "label": "b3", "role": "target", "highlight": true },
+      { "string": 3, "fret": 7, "finger": 3, "label": "4", "role": "scale" },
+      { "string": 2, "fret": 5, "finger": 1, "label": "5", "role": "chord_tone" },
+      { "string": 2, "fret": 8, "finger": 4, "label": "b7", "role": "scale" },
+      { "string": 1, "fret": 5, "finger": 1, "isRoot": true, "label": "R", "role": "root" },
+      { "string": 1, "fret": 8, "finger": 4, "label": "b3", "role": "target", "highlight": true }
+    ]
+  }
+}
+```
+
 ### 上下行は「予熱」であって、目標ではない
 
 実はここがポイントで、ペンタボックスを下から上へ、上から下へ往復する練習は、即興の実力にはあまり役立ちません。なぜなら**音楽には「6弦から順番に上がっていく」なんてルールがない**からです。上下行ばかり延々とやると、手は「とにかく隣の音へ」という慣性だけを覚えてしまいます。だから即興のときも、それしか出てこなくなるんです。
@@ -28,6 +61,46 @@ lang: ja
 - Eから一つ飛ばして → **A**
 
 こんなふうに**「ペアを組んで飛び越える」**弾き方です。（補足：ペンタトニックでこうやって一音飛ばすと、実際の音程は短3度・長3度・4度が混ざって出てきます。なので、あくまで「3度シーケンス」と便宜的に呼んでいるだけです——音程の計算に頭を悩ませず、「一つ飛ばし」として理解すれば大丈夫です。）
+
+```json
+{
+  "id": "m1.w0.d3.third_interval_taste",
+  "type": "tab",
+  "meta": {
+    "title": "3rd-interval taste in Am pentatonic (skip-one pairs, ascending)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "scale": "A minor pentatonic",
+    "tempoBpm": 70
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "3rd_interval",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 6, "fret": 5, "duration": "eighth", "finger": 1, "isRoot": true, "label": "R", "role": "root" },
+        { "string": 5, "fret": 5, "duration": "eighth", "finger": 1, "label": "4", "role": "scale" },
+        { "string": 6, "fret": 8, "duration": "eighth", "finger": 4, "label": "b3", "role": "target", "highlight": true },
+        { "string": 5, "fret": 7, "duration": "eighth", "finger": 3, "label": "5", "role": "chord_tone" },
+        { "string": 5, "fret": 5, "duration": "eighth", "finger": 1, "label": "4", "role": "scale" },
+        { "string": 4, "fret": 5, "duration": "eighth", "finger": 1, "label": "b7", "role": "scale" },
+        { "string": 5, "fret": 7, "duration": "eighth", "finger": 3, "label": "5", "role": "chord_tone" },
+        { "string": 4, "fret": 7, "duration": "eighth", "finger": 3, "isRoot": true, "label": "R", "role": "root" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 4, "fret": 5, "duration": "eighth", "finger": 1, "label": "b7", "role": "scale" },
+        { "string": 3, "fret": 5, "duration": "eighth", "finger": 1, "label": "b3", "role": "target", "highlight": true },
+        { "string": 4, "fret": 7, "duration": "eighth", "finger": 3, "isRoot": true, "label": "R", "role": "root" },
+        { "string": 3, "fret": 7, "duration": "eighth", "finger": 3, "label": "4", "role": "scale" },
+        { "string": 3, "fret": 5, "duration": "eighth", "finger": 1, "label": "b3", "role": "target", "highlight": true },
+        { "string": 2, "fret": 5, "duration": "eighth", "finger": 1, "label": "5", "role": "chord_tone" },
+        { "string": 1, "fret": 5, "duration": "quarter", "finger": 1, "isRoot": true, "label": "R", "role": "root" }
+      ]}
+    ]
+  }
+}
+```
 
 このちょっとした違いがなぜ重要かというと、飛ばした瞬間、音が急に**「メロディらしく」**聞こえ始めるからです。順次進行（上下行）が階段だとすると、3度はちょっとしたジャンプ。だから耳が「あ、何か歌っている」と反応するんです。これが即興の最初の材料になります。
 

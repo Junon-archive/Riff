@@ -104,8 +104,75 @@ lang: ja
 **0〜10分・ウォームアップ（BPM 92）— 4連符シーケンスで手を温める**
 メトロノーム92（この曲のテンポ）に合わせて、『ひとつの家』ポジションの中で4連符シーケンスを回します。6弦から1弦ずつ4音ずつ（例：5・7・8・…次の弦へ）16分音符で上がって下がります。上行下行を丸暗記するのではなく、「4つずつまとめて回す」感覚だけ意識して。指が5〜9フレットの位置に自然に収まるように。
 
+```json
+{
+  "id": "m3.w12.d1.composite_position",
+  "type": "scale_shape",
+  "meta": {
+    "title": "A composite position (Dorian + Mixolydian merged, frets 5-9)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A (Dorian/Mixolydian composite)",
+    "scale": "A Dorian + A Mixolydian",
+    "tempoBpm": 92
+  },
+  "fretboard": {
+    "startFret": 5,
+    "fretSpan": 5,
+    "dots": [
+      { "string": 6, "fret": 5, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 6, "fret": 7, "finger": 3, "label": "2", "role": "scale" },
+      { "string": 6, "fret": 8, "finger": 4, "label": "b3", "role": "target", "highlight": true },
+      { "string": 5, "fret": 5, "finger": 1, "label": "4", "role": "scale" },
+      { "string": 5, "fret": 7, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 5, "fret": 9, "finger": 4, "label": "6", "role": "color", "highlight": true },
+      { "string": 4, "fret": 5, "finger": 1, "label": "b7", "role": "color", "highlight": true },
+      { "string": 4, "fret": 7, "finger": 3, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 5, "finger": 1, "label": "b3", "role": "target", "highlight": true },
+      { "string": 3, "fret": 6, "finger": 2, "label": "3", "role": "target", "highlight": true },
+      { "string": 3, "fret": 7, "finger": 3, "label": "4", "role": "scale" },
+      { "string": 2, "fret": 5, "finger": 1, "label": "5", "role": "chord_tone" },
+      { "string": 2, "fret": 7, "finger": 3, "label": "6", "role": "color", "highlight": true },
+      { "string": 2, "fret": 8, "finger": 4, "label": "b7", "role": "color", "highlight": true },
+      { "string": 1, "fret": 5, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 1, "fret": 8, "finger": 4, "label": "b3", "role": "target", "highlight": true },
+      { "string": 1, "fret": 9, "finger": 4, "label": "3", "role": "target", "highlight": true }
+    ]
+  }
+}
+```
+
 **10〜20分・頭のトレーニング（着地地図を刻み込む）— 楽器を置いてスタート**
 最初の地図を見ながら声に出して覚えます。「Am7ならC、D7ならF#、A7ならC#」。それからギターを持って、バッキングなしでコード名だけを自分で言いながら押さえます。「Am7！」でC（3弦5フレット）、「D7！」でF#（2弦7フレット）、「A7！」でC#（3弦6フレット）。**CとC#が1フレット差**だと指先で確認するのが今日のハイライトです。
+
+```json
+{
+  "id": "m3.w12.d1.original_solo_target_tones",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "Original solo - key target tones (Dorian + Mixolydian composite)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "scale": "Composite (Dorian + Mixolydian)",
+    "tempoBpm": 92
+  },
+  "fretboard": {
+    "startFret": 5,
+    "fretSpan": 8,
+    "dots": [
+      { "string": 4, "fret": 7, "finger": 3, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 1, "fret": 5, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 5, "finger": 1, "label": "b3", "role": "target", "highlight": true },
+      { "string": 1, "fret": 8, "finger": 4, "label": "b3", "role": "target", "highlight": true },
+      { "string": 3, "fret": 6, "finger": 2, "label": "3", "role": "target", "highlight": true },
+      { "string": 1, "fret": 9, "finger": 4, "label": "3", "role": "target", "highlight": true },
+      { "string": 2, "fret": 7, "finger": 3, "label": "6", "role": "color", "highlight": true },
+      { "string": 2, "fret": 8, "finger": 4, "label": "b7", "role": "color", "highlight": true },
+      { "string": 2, "fret": 5, "finger": 1, "label": "5", "role": "chord_tone" }
+    ]
+  }
+}
+```
 
 **20〜40分・実戦即興（Am7-D7-A7バッキング／92 BPM）**
 YouTubeやアプリで「A minor Dorian jam」や「A7 groove backing track」のゆっくりめのものを検索して流します（正確にこの進行じゃなくてもOK。Am7・D7・A7系ならじゅうぶんです）。ルールはひとつだけ。**メロディを作ろうとせず、コードが変わるたびにそのコードの3度に長く着地する**こと。今日は作曲ではなく、「地図の上を歩く」日です。

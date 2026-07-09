@@ -102,6 +102,42 @@ i18nKey: "lesson.m2.w5.d4"
 **10~20분 · 두뇌 훈련 (오늘의 타겟 = 착지 C + 두 다리 B·F 위치)**
 메트로놈 끄고, 위 통합 릭을 손에 익혀요. 특히 마지막 **C(3번 줄 5프렛) 비브라토 착지**를 반복. 비브라토는 손목을 좌우로 살짝 흔들어 음을 "떨게" 하는 거예요. 크게 흔들 필요 없어요, 일정하게. 그리고 B(6/7, 1/7)와 F(5/8, 2/6) 네 자리를 눈 감고 짚어보며 각각의 해결 방향(B↑C, F↓E)을 한 번 더 확인.
 
+```json
+{
+  "id": "m2.w5.d4.natural_minor_jam_lick",
+  "type": "tab",
+  "meta": {
+    "title": "A natural minor jam lick — B & F as color, resolving to b3 (C) with vibrato",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "tempoBpm": 90
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "4note_sequence",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 6, "fret": 5, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 6, "fret": 7, "duration": "eighth", "label": "2", "highlight": true, "role": "passing" },
+        { "string": 6, "fret": 8, "duration": "quarter", "label": "b3", "target": true, "highlight": true, "role": "target" },
+        { "string": 5, "fret": 5, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 5, "fret": 7, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 5, "fret": 8, "duration": "eighth", "label": "6", "highlight": true, "role": "passing" },
+        { "string": 5, "fret": 7, "duration": "eighth", "label": "5", "role": "chord_tone" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 2, "fret": 5, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 2, "fret": 6, "duration": "eighth", "label": "6", "highlight": true, "role": "passing" },
+        { "string": 2, "fret": 5, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 3, "fret": 7, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 3, "fret": 5, "duration": "half", "technique": "vibrato", "label": "b3", "target": true, "highlight": true, "role": "target" }
+      ]}
+    ]
+  }
+}
+```
+
 **20~40분 · 실전 즉흥 (Am 원코드 백킹 / 85~90 BPM)**
 "Am backing track"을 틀고, 오늘은 **완성된 7음 전부**를 자유롭게 쓰세요. 규칙은 둘: ① B·F는 경과음으로만(눌러앉기 금지), ② **모든 프레이즈의 끝은 C에 비브라토로 착지.** 이번 주 배운 조각들(3도 짝, A-B-C, F-E)을 레고처럼 이어 붙여 4마디짜리 짧은 솔로를 즉흥으로 만들어 보세요. 같은 걸 반복해도 좋아요 — 오늘은 "완성된 스케일이 내 손에서 노래가 되는" 첫 경험이 목표예요.
 

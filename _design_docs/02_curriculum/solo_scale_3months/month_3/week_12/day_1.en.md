@@ -104,8 +104,75 @@ Second, the **"one home" position** where these landing points live. It's a comb
 **0–10 min · Warm-up (BPM 92) — warm up your hands with a four-note sequence**
 To the metronome at 92 (our song's tempo), run a four-note sequence within the "one home" position. Starting from the 6th string, four notes per string (e.g., 5·7·8·... then the next string) in sixteenth notes, going up and back down. Don't just memorize the up-and-down pattern — focus on the feel of "rolling it in groups of four." Let your fingers settle naturally into the 5-9 fret zone.
 
+```json
+{
+  "id": "m3.w12.d1.composite_position",
+  "type": "scale_shape",
+  "meta": {
+    "title": "A composite position (Dorian + Mixolydian merged, frets 5-9)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A (Dorian/Mixolydian composite)",
+    "scale": "A Dorian + A Mixolydian",
+    "tempoBpm": 92
+  },
+  "fretboard": {
+    "startFret": 5,
+    "fretSpan": 5,
+    "dots": [
+      { "string": 6, "fret": 5, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 6, "fret": 7, "finger": 3, "label": "2", "role": "scale" },
+      { "string": 6, "fret": 8, "finger": 4, "label": "b3", "role": "target", "highlight": true },
+      { "string": 5, "fret": 5, "finger": 1, "label": "4", "role": "scale" },
+      { "string": 5, "fret": 7, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 5, "fret": 9, "finger": 4, "label": "6", "role": "color", "highlight": true },
+      { "string": 4, "fret": 5, "finger": 1, "label": "b7", "role": "color", "highlight": true },
+      { "string": 4, "fret": 7, "finger": 3, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 5, "finger": 1, "label": "b3", "role": "target", "highlight": true },
+      { "string": 3, "fret": 6, "finger": 2, "label": "3", "role": "target", "highlight": true },
+      { "string": 3, "fret": 7, "finger": 3, "label": "4", "role": "scale" },
+      { "string": 2, "fret": 5, "finger": 1, "label": "5", "role": "chord_tone" },
+      { "string": 2, "fret": 7, "finger": 3, "label": "6", "role": "color", "highlight": true },
+      { "string": 2, "fret": 8, "finger": 4, "label": "b7", "role": "color", "highlight": true },
+      { "string": 1, "fret": 5, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 1, "fret": 8, "finger": 4, "label": "b3", "role": "target", "highlight": true },
+      { "string": 1, "fret": 9, "finger": 4, "label": "3", "role": "target", "highlight": true }
+    ]
+  }
+}
+```
+
 **10–20 min · Brain training (locking in the landing map) — instrument down to start**
 Look at the first map and memorize it out loud: "Am7 is C, D7 is F#, A7 is C#." Then pick up the guitar and call out chord names to yourself, no backing track. Say "Am7!" and fret C (3rd string, 5th fret), "D7!" and fret F# (2nd string, 7th fret), "A7!" and fret C# (3rd string, 6th fret). Confirming with your fingertips that **C and C# are just one fret apart** is today's highlight.
+
+```json
+{
+  "id": "m3.w12.d1.original_solo_target_tones",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "Original solo - key target tones (Dorian + Mixolydian composite)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "scale": "Composite (Dorian + Mixolydian)",
+    "tempoBpm": 92
+  },
+  "fretboard": {
+    "startFret": 5,
+    "fretSpan": 8,
+    "dots": [
+      { "string": 4, "fret": 7, "finger": 3, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 1, "fret": 5, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 5, "finger": 1, "label": "b3", "role": "target", "highlight": true },
+      { "string": 1, "fret": 8, "finger": 4, "label": "b3", "role": "target", "highlight": true },
+      { "string": 3, "fret": 6, "finger": 2, "label": "3", "role": "target", "highlight": true },
+      { "string": 1, "fret": 9, "finger": 4, "label": "3", "role": "target", "highlight": true },
+      { "string": 2, "fret": 7, "finger": 3, "label": "6", "role": "color", "highlight": true },
+      { "string": 2, "fret": 8, "finger": 4, "label": "b7", "role": "color", "highlight": true },
+      { "string": 2, "fret": 5, "finger": 1, "label": "5", "role": "chord_tone" }
+    ]
+  }
+}
+```
 
 **20–40 min · Real-world improv (Am7-D7-A7 backing / 92 BPM)**
 Find something like "A minor Dorian jam" or "A7 groove backing track" (slow tempo) on YouTube or an app — it doesn't have to match our exact progression, anything in the Am7/D7/A7 family works fine. Just one rule: **don't try to build a melody — just land long on that chord's 3rd every time the chord changes.** Today isn't about composing, it's about "walking the map."

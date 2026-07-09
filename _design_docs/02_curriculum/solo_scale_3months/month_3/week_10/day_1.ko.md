@@ -129,11 +129,105 @@ A 믹솔리디안 = **A B C# D E F# G**. 메이저 스케일에서 딱 한 음, 
 **0~10분 · 워밍업 (BPM 90) — 4연음 시퀀스로 폼 깨우기**
 메트로놈 90에 맞춰 Position 1을 4연음(16분)으로 상행 한 바퀴. 블록 위아래로 그냥 긁는 거 금지예요. "네 음씩 묶어서" A-B-C#-D / B-C#-D-E … 이렇게 밀고 올라가요. C#(장3도)을 지날 때마다 마음속으로 "여기가 밝은 음!" 하고 도장 찍기. 손이 뭉치면 BPM 80으로.
 
+```json
+{
+  "id": "m3.w10.d1.a_mixolydian_pos1",
+  "type": "scale_shape",
+  "meta": {
+    "title": "A Mixolydian - Position 1 (major 3rd C# & b7 G)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A Mixolydian",
+    "scale": "A Mixolydian",
+    "tempoBpm": 90
+  },
+  "fretboard": {
+    "startFret": 4,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 6, "fret": 5, "finger": 2, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 6, "fret": 7, "finger": 4, "label": "2", "role": "scale" },
+      { "string": 5, "fret": 4, "finger": 1, "label": "3", "role": "target", "highlight": true },
+      { "string": 5, "fret": 5, "finger": 2, "label": "4", "role": "scale" },
+      { "string": 5, "fret": 7, "finger": 4, "label": "5", "role": "chord_tone" },
+      { "string": 4, "fret": 4, "finger": 1, "label": "6", "role": "scale" },
+      { "string": 4, "fret": 5, "finger": 2, "label": "b7", "role": "color", "highlight": true },
+      { "string": 4, "fret": 7, "finger": 4, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 4, "finger": 1, "label": "2", "role": "scale" },
+      { "string": 3, "fret": 6, "finger": 3, "label": "3", "role": "target", "highlight": true },
+      { "string": 3, "fret": 7, "finger": 4, "label": "4", "role": "scale" },
+      { "string": 2, "fret": 5, "finger": 2, "label": "5", "role": "chord_tone" },
+      { "string": 2, "fret": 7, "finger": 4, "label": "6", "role": "scale" },
+      { "string": 2, "fret": 8, "finger": 4, "label": "b7", "role": "color", "highlight": true },
+      { "string": 1, "fret": 5, "finger": 2, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 1, "fret": 7, "finger": 4, "label": "2", "role": "scale" }
+    ]
+  }
+}
+```
+
 **10~20분 · 두뇌 훈련 (타겟 = G와 C#)**
 메트로놈 끄고, Position 1에서 **♭7 G만** 두 자리(4번 줄 5프렛, 2번 줄 8프렛) 찾아 짚기. 짚을 때마다 "이건 긴장" 하고 소리 내요. 다음엔 **장3도 C#만** 두 자리(5번 줄 4프렛, 3번 줄 6프렛) 짚으며 "이건 해결". 마지막엔 G 하나 짚고 → 가장 가까운 C#으로 손을 옮기는 동작을 5번. 눈 감고 G·C#을 3초 안에 짚으면 통과.
 
+```json
+{
+  "id": "m3.w10.d1.identity_tension_map",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "Identity notes: b7(G) tension -> major 3rd(C#) resolution, with b3(C) blue note",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A Mixolydian",
+    "tempoBpm": 90
+  },
+  "fretboard": {
+    "startFret": 4,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 4, "fret": 7, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 5, "label": "b7", "role": "color", "highlight": true },
+      { "string": 3, "fret": 5, "label": "b3", "role": "blue_note", "highlight": true },
+      { "string": 3, "fret": 6, "label": "3", "role": "target", "highlight": true }
+    ]
+  }
+}
+```
+
 **20~40분 · 실전 즉흥 (A7 원코드 백킹 / 80~90 BPM)**
 "A7 vamp backing track" 또는 "A7 groove jam" 하나 틀어요. 미션 딱 하나: **프레이즈를 끝낼 때 무조건 C#(장3도)에 착지하기.** 중간은 자유롭게 펜타처럼 놀아도 돼요. 대신 문장의 마침표는 항상 C#. 여유 있으면 오늘의 블루지 릭(C→C# 반음 벤딩)을 두세 번 섞어 넣으세요. C#에 도착하는 순간 백킹과 "찰칵" 맞물리는 느낌이 오면 성공.
+
+```json
+{
+  "id": "m3.w10.d1.bluesy_mixolydian_lick",
+  "type": "tab",
+  "meta": {
+    "title": "Bluesy Mixolydian lick (b3 blue note -> major 3rd, b7 tension -> 3rd)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A Mixolydian",
+    "tempoBpm": 90
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "blues_line",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 4, "fret": 7, "duration": "quarter", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 3, "fret": 5, "duration": "eighth", "technique": "bend", "bendTarget": "half", "label": "b3", "role": "blue_note", "highlight": true },
+        { "string": 3, "fret": 6, "duration": "quarter", "label": "3", "target": true, "role": "target", "highlight": true },
+        { "string": 3, "fret": 7, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 2, "fret": 5, "duration": "quarter", "label": "5", "role": "chord_tone" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 2, "fret": 8, "duration": "quarter", "label": "b7", "role": "color", "highlight": true },
+        { "string": 2, "fret": 7, "duration": "eighth", "label": "6", "role": "scale" },
+        { "string": 2, "fret": 5, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 3, "fret": 6, "duration": "half", "technique": "vibrato", "label": "3", "target": true, "role": "target", "highlight": true }
+      ]}
+    ]
+  }
+}
+```
 
 **40~50분 · 녹음/피드백 (권장)**
 아무 녹음 앱(폰 음성 메모도 OK)으로 마지막 잼 30초 녹음. 다시 들으며 딱 하나 체크: **내 프레이즈 끝이 정말 C#에서 멈췄는지, 아니면 습관적으로 근음 A나 ♭3 C로 흘러버렸는지.** C#에서 안 멈췄으면 내일 그 습관부터 잡아요.

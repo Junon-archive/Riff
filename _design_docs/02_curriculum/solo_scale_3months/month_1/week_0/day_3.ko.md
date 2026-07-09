@@ -11,6 +11,39 @@ i18nKey: lesson.m1.w0.d3
 
 오늘 왜 이걸 하냐면요, 우리가 앞으로 3개월 내내 살 **본진(本陣)**을 오늘 재정비하려고요. 바로 **A 마이너 펜타토닉 1박스(5프렛).** 이미 아는 폼이겠지만, 오늘은 "손이 기억하는 상하행"을 넘어서 그 안의 **각 음이 무슨 역할인지**까지 눈에 새길 거예요.
 
+```json
+{
+  "id": "m1.w0.d3.am_pentatonic_box1",
+  "type": "scale_shape",
+  "meta": {
+    "title": "A minor pentatonic — Box 1 refresh (with roles)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "scale": "A minor pentatonic",
+    "tempoBpm": 70
+  },
+  "fretboard": {
+    "startFret": 5,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 6, "fret": 5, "finger": 1, "isRoot": true, "label": "R", "role": "root" },
+      { "string": 6, "fret": 8, "finger": 4, "label": "b3", "role": "target", "highlight": true },
+      { "string": 5, "fret": 5, "finger": 1, "label": "4", "role": "scale" },
+      { "string": 5, "fret": 7, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 4, "fret": 5, "finger": 1, "label": "b7", "role": "scale" },
+      { "string": 4, "fret": 7, "finger": 3, "isRoot": true, "label": "R", "role": "root" },
+      { "string": 3, "fret": 5, "finger": 1, "label": "b3", "role": "target", "highlight": true },
+      { "string": 3, "fret": 7, "finger": 3, "label": "4", "role": "scale" },
+      { "string": 2, "fret": 5, "finger": 1, "label": "5", "role": "chord_tone" },
+      { "string": 2, "fret": 8, "finger": 4, "label": "b7", "role": "scale" },
+      { "string": 1, "fret": 5, "finger": 1, "isRoot": true, "label": "R", "role": "root" },
+      { "string": 1, "fret": 8, "finger": 4, "label": "b3", "role": "target", "highlight": true }
+    ]
+  }
+}
+```
+
 ### 상하행은 '예열'이지 목표가 아니다
 
 여기서 한 가지만 짚고 갈게요. 펜타 박스를 아래에서 위로, 위에서 아래로 왕복하는 상하행 연습, 사실 즉흥 실력에는 큰 도움이 안 돼요. 왜냐면 **음악에는 "6번줄부터 순서대로 올라가세요" 같은 규칙이 없거든요.** 상하행만 죽어라 하면 손은 "무조건 옆 음으로" 가는 관성만 익혀요. 그래서 즉흥 때 딱 그것밖에 안 나와요.
@@ -27,6 +60,46 @@ i18nKey: lesson.m1.w0.d3
 - E에서 한 칸 건너 → **A**
 
 이렇게 **"짝을 지어 건너뛰는"** 거예요. (참고: 펜타에서 이렇게 한 칸 건너뛰면 실제 음정은 단3도·장3도·4도가 섞여 나와요. 그래서 그냥 '3도 시퀀스'라고 통칭해요 — 음정 계산에 머리 아파하지 말고 "한 칸 건너뛰기"로 이해하면 됩니다.)
+
+```json
+{
+  "id": "m1.w0.d3.third_interval_taste",
+  "type": "tab",
+  "meta": {
+    "title": "3rd-interval taste in Am pentatonic (skip-one pairs, ascending)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "scale": "A minor pentatonic",
+    "tempoBpm": 70
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "3rd_interval",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 6, "fret": 5, "duration": "eighth", "finger": 1, "isRoot": true, "label": "R", "role": "root" },
+        { "string": 5, "fret": 5, "duration": "eighth", "finger": 1, "label": "4", "role": "scale" },
+        { "string": 6, "fret": 8, "duration": "eighth", "finger": 4, "label": "b3", "role": "target", "highlight": true },
+        { "string": 5, "fret": 7, "duration": "eighth", "finger": 3, "label": "5", "role": "chord_tone" },
+        { "string": 5, "fret": 5, "duration": "eighth", "finger": 1, "label": "4", "role": "scale" },
+        { "string": 4, "fret": 5, "duration": "eighth", "finger": 1, "label": "b7", "role": "scale" },
+        { "string": 5, "fret": 7, "duration": "eighth", "finger": 3, "label": "5", "role": "chord_tone" },
+        { "string": 4, "fret": 7, "duration": "eighth", "finger": 3, "isRoot": true, "label": "R", "role": "root" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 4, "fret": 5, "duration": "eighth", "finger": 1, "label": "b7", "role": "scale" },
+        { "string": 3, "fret": 5, "duration": "eighth", "finger": 1, "label": "b3", "role": "target", "highlight": true },
+        { "string": 4, "fret": 7, "duration": "eighth", "finger": 3, "isRoot": true, "label": "R", "role": "root" },
+        { "string": 3, "fret": 7, "duration": "eighth", "finger": 3, "label": "4", "role": "scale" },
+        { "string": 3, "fret": 5, "duration": "eighth", "finger": 1, "label": "b3", "role": "target", "highlight": true },
+        { "string": 2, "fret": 5, "duration": "eighth", "finger": 1, "label": "5", "role": "chord_tone" },
+        { "string": 1, "fret": 5, "duration": "quarter", "finger": 1, "isRoot": true, "label": "R", "role": "root" }
+      ]}
+    ]
+  }
+}
+```
 
 이 한 끗 차이가 왜 중요하냐면요, 건너뛰는 순간 소리가 갑자기 **"멜로디처럼"** 들려요. 순차진행(상하행)은 계단이고, 3도는 살짝 도약이라서 귀가 "어, 뭔가 노래한다" 하고 반응하거든요. 이게 즉흥의 첫 재료예요.
 

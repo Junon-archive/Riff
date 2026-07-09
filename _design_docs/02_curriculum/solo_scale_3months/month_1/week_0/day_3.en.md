@@ -12,6 +12,39 @@ lang: en
 
 Here's why we're doing this today: today we're refurbishing the **home base** we'll be living in for the next three months — **A minor pentatonic, Box 1 (5th fret).** You probably already know this shape, but today we're going beyond "hands that remember the up-and-down pattern" to actually engrave **what role each note plays** into your eyes.
 
+```json
+{
+  "id": "m1.w0.d3.am_pentatonic_box1",
+  "type": "scale_shape",
+  "meta": {
+    "title": "A minor pentatonic — Box 1 refresh (with roles)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "scale": "A minor pentatonic",
+    "tempoBpm": 70
+  },
+  "fretboard": {
+    "startFret": 5,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 6, "fret": 5, "finger": 1, "isRoot": true, "label": "R", "role": "root" },
+      { "string": 6, "fret": 8, "finger": 4, "label": "b3", "role": "target", "highlight": true },
+      { "string": 5, "fret": 5, "finger": 1, "label": "4", "role": "scale" },
+      { "string": 5, "fret": 7, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 4, "fret": 5, "finger": 1, "label": "b7", "role": "scale" },
+      { "string": 4, "fret": 7, "finger": 3, "isRoot": true, "label": "R", "role": "root" },
+      { "string": 3, "fret": 5, "finger": 1, "label": "b3", "role": "target", "highlight": true },
+      { "string": 3, "fret": 7, "finger": 3, "label": "4", "role": "scale" },
+      { "string": 2, "fret": 5, "finger": 1, "label": "5", "role": "chord_tone" },
+      { "string": 2, "fret": 8, "finger": 4, "label": "b7", "role": "scale" },
+      { "string": 1, "fret": 5, "finger": 1, "isRoot": true, "label": "R", "role": "root" },
+      { "string": 1, "fret": 8, "finger": 4, "label": "b3", "role": "target", "highlight": true }
+    ]
+  }
+}
+```
+
 ### Running up and down is a "warm-up," not the goal
 
 Here's the thing: running the pentatonic box up and down, back and forth, barely helps your improv skills. Why? Because **music has no rule that says "go up the strings in order."** If all you do is drill the up-and-down pattern, your hands only learn the reflex of "always move to the next-door note." So during improv, that's literally all that comes out.
@@ -28,6 +61,46 @@ Instead of playing the pentatonic scale "in order," we play it by **"skipping on
 - From E, skip one → **A**
 
 We're **pairing up notes and hopping over.** (Side note: skipping one note like this in a pentatonic scale actually mixes minor 3rds, major 3rds, and 4ths. That's why we just call it a "3rd sequence" as shorthand — don't stress about the exact interval math, just think of it as "skip-one-hopping.")
+
+```json
+{
+  "id": "m1.w0.d3.third_interval_taste",
+  "type": "tab",
+  "meta": {
+    "title": "3rd-interval taste in Am pentatonic (skip-one pairs, ascending)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "scale": "A minor pentatonic",
+    "tempoBpm": 70
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "3rd_interval",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 6, "fret": 5, "duration": "eighth", "finger": 1, "isRoot": true, "label": "R", "role": "root" },
+        { "string": 5, "fret": 5, "duration": "eighth", "finger": 1, "label": "4", "role": "scale" },
+        { "string": 6, "fret": 8, "duration": "eighth", "finger": 4, "label": "b3", "role": "target", "highlight": true },
+        { "string": 5, "fret": 7, "duration": "eighth", "finger": 3, "label": "5", "role": "chord_tone" },
+        { "string": 5, "fret": 5, "duration": "eighth", "finger": 1, "label": "4", "role": "scale" },
+        { "string": 4, "fret": 5, "duration": "eighth", "finger": 1, "label": "b7", "role": "scale" },
+        { "string": 5, "fret": 7, "duration": "eighth", "finger": 3, "label": "5", "role": "chord_tone" },
+        { "string": 4, "fret": 7, "duration": "eighth", "finger": 3, "isRoot": true, "label": "R", "role": "root" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 4, "fret": 5, "duration": "eighth", "finger": 1, "label": "b7", "role": "scale" },
+        { "string": 3, "fret": 5, "duration": "eighth", "finger": 1, "label": "b3", "role": "target", "highlight": true },
+        { "string": 4, "fret": 7, "duration": "eighth", "finger": 3, "isRoot": true, "label": "R", "role": "root" },
+        { "string": 3, "fret": 7, "duration": "eighth", "finger": 3, "label": "4", "role": "scale" },
+        { "string": 3, "fret": 5, "duration": "eighth", "finger": 1, "label": "b3", "role": "target", "highlight": true },
+        { "string": 2, "fret": 5, "duration": "eighth", "finger": 1, "label": "5", "role": "chord_tone" },
+        { "string": 1, "fret": 5, "duration": "quarter", "finger": 1, "isRoot": true, "label": "R", "role": "root" }
+      ]}
+    ]
+  }
+}
+```
 
 Why does this small shift matter so much? The instant you skip a note, the sound suddenly starts to feel **"like a melody."** Stepwise motion (up-and-down) is a staircase; a 3rd is a little leap, and your ear responds with "oh, this is actually singing something." That's your very first raw material for improv.
 

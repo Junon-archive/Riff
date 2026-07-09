@@ -113,8 +113,89 @@ lang: ja
 **10〜20分・頭のトレーニング（一番近いCの反射神経）**
 メトロノームなしで、羅針盤マップを見ながらチャレンジ。ネックの適当な地点（例：4弦12フレット）に手を置き、そこから一番近いC（♭3）がどこかを1秒以内に押さえる。5弦15フレット？2弦13フレット？手を大きく動かさず、届く範囲のCを瞬時に狙います。ネックの上のほうの3〜4か所でそれぞれ繰り返しましょう。毎回1秒以内に近いCを掴めれば合格。これが今日の核となる感覚です。
 
+```json
+{
+  "id": "m1.w3.d4.am_chord_tone_full_neck",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "Am chord tones (R / b3 / 5) across the full neck",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "tempoBpm": 85
+  },
+  "fretboard": {
+    "startFret": 0,
+    "fretSpan": 15,
+    "dots": [
+      { "string": 6, "fret": 0, "label": "5", "role": "chord_tone" },
+      { "string": 6, "fret": 5, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 6, "fret": 8, "label": "b3", "role": "target", "highlight": true },
+      { "string": 6, "fret": 12, "label": "5", "role": "chord_tone" },
+      { "string": 5, "fret": 0, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 3, "label": "b3", "role": "target", "highlight": true },
+      { "string": 5, "fret": 7, "label": "5", "role": "chord_tone" },
+      { "string": 5, "fret": 12, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 15, "label": "b3", "role": "target", "highlight": true },
+      { "string": 4, "fret": 2, "label": "5", "role": "chord_tone" },
+      { "string": 4, "fret": 7, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 10, "label": "b3", "role": "target", "highlight": true },
+      { "string": 4, "fret": 14, "label": "5", "role": "chord_tone" },
+      { "string": 3, "fret": 2, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 5, "label": "b3", "role": "target", "highlight": true },
+      { "string": 3, "fret": 9, "label": "5", "role": "chord_tone" },
+      { "string": 3, "fret": 14, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 2, "fret": 1, "label": "b3", "role": "target", "highlight": true },
+      { "string": 2, "fret": 5, "label": "5", "role": "chord_tone" },
+      { "string": 2, "fret": 10, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 2, "fret": 13, "label": "b3", "role": "target", "highlight": true },
+      { "string": 1, "fret": 0, "label": "5", "role": "chord_tone" },
+      { "string": 1, "fret": 5, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 1, "fret": 8, "label": "b3", "role": "target", "highlight": true },
+      { "string": 1, "fret": 12, "label": "5", "role": "chord_tone" }
+    ]
+  }
+}
+```
+
 **20〜40分・実戦即興（Amワンコードバッキング／80〜90 BPM）**
 今日のメイン、今週の卒業試験です。バッキングを流してルール：①ネックの上のほう（12〜17フレット）でフレーズを開き→その場所で一番近いCに着地・ビブラート。②次のフレーズはネックの中間（7〜12フレット）で開き→またその場所の近いCに着地。上の例リックを出発点にしつつ、コール＆レスポンスのように「上で問いかけ、下で答える」をやってみましょう。絶対に5フレットへ逃げず、今いる場所で着地する訓練です。最低6フレーズ、毎回近いCへ着地。
+
+```json
+{
+  "id": "m1.w3.d4.nearest_3rd_landing",
+  "type": "tab",
+  "meta": {
+    "title": "Nearest-3rd landing over Am (high box -> mid box)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "tempoBpm": 85
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "3rd_interval",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 3, "fret": 14, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 2, "fret": 15, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 2, "fret": 17, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 1, "fret": 15, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 2, "fret": 17, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 3, "fret": 14, "duration": "eighth", "technique": "slide", "slideToFret": 17, "label": "R", "isRoot": true, "role": "root" },
+        { "string": 3, "fret": 17, "duration": "quarter", "technique": "vibrato", "label": "b3", "target": true, "highlight": true, "role": "target" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 3, "fret": 12, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 4, "fret": 14, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 4, "fret": 12, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 5, "fret": 12, "duration": "eighth", "technique": "slide", "slideToFret": 15, "label": "R", "isRoot": true, "role": "root" },
+        { "string": 5, "fret": 15, "duration": "half", "technique": "vibrato", "label": "b3", "target": true, "highlight": true, "role": "target" }
+      ]}
+    ]
+  }
+}
+```
 
 **40〜50分・録音・フィードバック（推奨）**
 今日は必ず録音してください。今週の成果物であり、「ペンタトニックのネックを制覇する」チャプターの卒業証明だからです。聴き直してチェック：①フレーズの終わりが毎回コードトーン（CまたはA）に着地していたか。②着地しようとして手を遠くまで動かし、拍を逃したことはなかったか——あったなら、次はもっと近いCを狙いましょう。③ネックの上・中間・下をまんべんなく使えたか。再生速度を落として聴くと、着地のタイミングがずれていないかはっきりわかります。

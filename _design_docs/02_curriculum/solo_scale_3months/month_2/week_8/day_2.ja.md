@@ -112,11 +112,88 @@ lang: ja
 **0〜10分・ウォームアップ（BPM 76）——3度シーケンス**
 上の`3rd_interval`ウォームアップを、メトロノーム76で8分音符で弾きます。3度間隔の手の形（下の弦↔上の弦の行き来）を体に馴染ませながら、緑の音（B・E・F）が出てきたときだけ少し強調して押さえましょう。「3度で動いているのに、その中にガイドトーンが隠れている」ことを耳で確認する時間です。
 
+```json
+{
+  "id": "m2.w8.d2.third_interval_warmup",
+  "type": "tab",
+  "meta": {
+    "title": "Diatonic 3rds warmup surfacing guide tones (C major)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "C major (ii-V-I)",
+    "tempoBpm": 76
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "3rd_interval",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 3, "fret": 0, "duration": "eighth", "label": "G", "role": "scale" },
+        { "string": 2, "fret": 0, "duration": "eighth", "label": "G7-3(B)", "highlight": true, "role": "target" },
+        { "string": 3, "fret": 2, "duration": "eighth", "label": "A", "role": "scale" },
+        { "string": 2, "fret": 1, "duration": "eighth", "label": "C", "role": "scale" },
+        { "string": 3, "fret": 4, "duration": "eighth", "label": "G7-3(B)", "highlight": true, "role": "target" },
+        { "string": 2, "fret": 3, "duration": "eighth", "label": "D", "role": "scale" },
+        { "string": 3, "fret": 5, "duration": "eighth", "label": "C", "role": "scale" },
+        { "string": 2, "fret": 5, "duration": "eighth", "label": "Cmaj7-3(E)", "highlight": true, "role": "target" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 2, "fret": 1, "duration": "eighth", "label": "C", "role": "scale" },
+        { "string": 1, "fret": 0, "duration": "eighth", "label": "Cmaj7-3(E)", "highlight": true, "role": "target" },
+        { "string": 2, "fret": 3, "duration": "eighth", "label": "D", "role": "scale" },
+        { "string": 1, "fret": 1, "duration": "eighth", "label": "Dm7-3(F)", "highlight": true, "role": "target" },
+        { "string": 2, "fret": 5, "duration": "eighth", "label": "Cmaj7-3(E)", "highlight": true, "role": "target" },
+        { "string": 1, "fret": 3, "duration": "eighth", "label": "G", "role": "scale" },
+        { "string": 2, "fret": 6, "duration": "eighth", "label": "Dm7-3(F)", "highlight": true, "role": "target" },
+        { "string": 1, "fret": 5, "duration": "eighth", "label": "A", "role": "scale" }
+      ]}
+    ]
+  }
+}
+```
+
 **10〜20分・頭のトレーニング（F→B→Eの最短経路を見つける）**
 メトロノームを止めて、本題のラインの**着地音三つだけ**をつなげてみます。F（4弦3フレット）→B（3弦4フレット）→E（4弦2フレット）。手がほとんど動かないですよね？三つの音がひとつかみの範囲に収まっています。特に**F→Eは同じ弦で1フレット**だということを指先で確認しましょう。目を閉じてこの三音だけを順番にすっと押さえられたら合格です。
 
 **20〜40分・実戦即興（Dm7-G7-Cmaj7バッキング／BPM 72〜76）**
 バッキングを流し、本題のラインをそのまま何度か弾いて体に馴染ませます。慣れてきたら、**つなぎの音（間の音）だけを少しずつ変えて、着地音のF・B・Eは絶対に変えない**ようにします。たとえば1小節目の途中を別のDm7の音で埋めても、小節の終わり→次の小節の1拍目は必ず3度に着地させます。「骨組みはF・B・E、肉付けは自由」が今日の即興ルールです。
+
+```json
+{
+  "id": "m2.w8.d2.guide_tone_line",
+  "type": "tab",
+  "meta": {
+    "title": "ii-V-I guide tone line (Dm7 F -> G7 B -> Cmaj7 E)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "C major (ii-V-I)",
+    "tempoBpm": 76
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "guide_tone_3rds",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 4, "fret": 3, "duration": "quarter", "label": "Dm7-3(F)", "target": true, "highlight": true, "role": "target" },
+        { "string": 3, "fret": 2, "duration": "quarter", "label": "A", "role": "chord_tone" },
+        { "string": 2, "fret": 3, "duration": "quarter", "label": "D", "isRoot": true, "role": "root" },
+        { "string": 2, "fret": 1, "duration": "quarter", "label": "C", "role": "passing" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 3, "fret": 4, "duration": "quarter", "label": "G7-3(B)", "target": true, "highlight": true, "role": "target" },
+        { "string": 4, "fret": 5, "duration": "quarter", "label": "G", "isRoot": true, "role": "root" },
+        { "string": 3, "fret": 2, "duration": "quarter", "label": "A", "role": "scale" },
+        { "string": 4, "fret": 3, "duration": "quarter", "label": "F", "role": "chord_tone" }
+      ]},
+      { "measure": 3, "notes": [
+        { "string": 4, "fret": 2, "duration": "half", "technique": "vibrato", "label": "Cmaj7-3(E)", "target": true, "highlight": true, "role": "target" },
+        { "string": 2, "fret": 1, "duration": "quarter", "label": "C", "isRoot": true, "role": "root" },
+        { "string": 1, "fret": 0, "duration": "quarter", "label": "Cmaj7-3(E)", "target": true, "highlight": true, "role": "target" }
+      ]}
+    ]
+  }
+}
+```
 
 **40〜50分・録音・フィードバック（推奨）**
 30秒録音して再生します。チェックは二つ。①コードが変わる瞬間に3度が**きちんと鳴っていたか**、半拍遅れていなかったか。②2小節目のFが3小節目のEに移るとき、**半音がなめらかに滑ったか**、それともブツッと切れたか。必要なら再生速度を落として、そのつなぎ目を耳で拡大してみましょう。

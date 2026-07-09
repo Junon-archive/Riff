@@ -115,6 +115,55 @@ i18nKey: "lesson.m1.w4.d4"
 **10~20분 · 두뇌 훈련 (캡스톤 리크 + 콜/리스폰스 감 잡기)**
 캡스톤 리크를 손에 익히되, 구조를 의식하며. "1마디는 질문(열림), 3·4마디는 대답(닫힘)" 이 대화 구조를 입으로 "질문~ 대답!" 하고 세면서 쳐요. 특히 2마디 앞의 **쉼표(여백)** 를 진짜로 비우세요 — 초보는 이 침묵을 못 견디고 음을 채워 넣는데, 그 여백이 다음 프레이즈를 살려요.
 
+```json
+{
+  "id": "m1.w4.d4.capstone_call_response_lick",
+  "type": "tab",
+  "meta": {
+    "title": "1-month capstone — call & response over Am7 (all skills combined)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A blues",
+    "tempoBpm": 80
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "call_and_response",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 6, "fret": 5, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 5, "fret": 5, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 6, "fret": 8, "duration": "eighth", "label": "b3", "highlight": true, "role": "target" },
+        { "string": 5, "fret": 7, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 5, "fret": 6, "duration": "eighth", "label": "b5", "highlight": true, "role": "passing" },
+        { "string": 5, "fret": 5, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 6, "fret": 5, "duration": "quarter", "label": "R", "isRoot": true, "role": "root" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 1, "fret": 1, "duration": "quarter", "rest": true, "label": "rest" },
+        { "string": 3, "fret": 5, "duration": "eighth", "label": "b3", "highlight": true, "role": "target" },
+        { "string": 3, "fret": 7, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 3, "fret": 8, "duration": "quarter", "technique": "vibrato", "label": "b5", "highlight": true, "role": "blue_note" },
+        { "string": 3, "fret": 7, "duration": "quarter", "label": "4", "role": "scale" }
+      ]},
+      { "measure": 3, "notes": [
+        { "string": 2, "fret": 5, "duration": "eighth", "label": "5(ref E)", "role": "chord_tone" },
+        { "string": 3, "fret": 7, "duration": "half", "technique": "bend", "bendTarget": "full", "label": "4>5", "highlight": true, "role": "scale" },
+        { "string": 3, "fret": 5, "duration": "eighth", "label": "b3", "highlight": true, "role": "target" },
+        { "string": 4, "fret": 5, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 4, "fret": 7, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" }
+      ]},
+      { "measure": 4, "notes": [
+        { "string": 4, "fret": 7, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 3, "fret": 7, "duration": "eighth", "technique": "slide", "slideToFret": 5, "label": "4>b3", "highlight": true, "role": "target" },
+        { "string": 3, "fret": 5, "duration": "half", "technique": "vibrato", "label": "b3", "target": true, "highlight": true, "role": "target" },
+        { "string": 4, "fret": 7, "duration": "quarter", "technique": "vibrato", "label": "R", "isRoot": true, "role": "root" }
+      ]}
+    ]
+  }
+}
+```
+
 **20~40분 · 실전 즉흥 & 전체 녹음 (Am7 원코드 백킹 / 75~80 BPM)**
 오늘의 메인. 백킹을 틀고 **처음부터 끝까지 2~3분을 통째로 녹음**하세요(폰 음성 메모도 OK). 규칙: **콜 앤 리스폰스로 대화하듯.** 질문 프레이즈는 ♭5나 4도에서 열어두고, 대답은 반드시 ♭3·근음 착지 + 비브라토로 닫기. 캡스톤 리크를 씨앗 삼되 그대로 반복하지 말고 조금씩 변형. 실수해도 멈추지 말고 계속 — 실전은 원래 안 멈춰요.
 

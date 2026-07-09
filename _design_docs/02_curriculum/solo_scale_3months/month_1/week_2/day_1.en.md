@@ -12,6 +12,39 @@ lang: en
 
 Here's why we're doing this today. Last week, we didn't just memorize Box 1 (fret 5) with our hands — we burned it into our ears. Here's the thing: if you only ever dig into Box 1, you're likely to end up trapped in that narrow 5-to-8-fret cage. That's the real reason improv feels so stifling — having the freedom to *choose* your notes requires a wider fretboard. So this week, we're moving up the neck. Today's the first new home: **Box 2 (frets 7–10).**
 
+```json
+{
+  "id": "m1.w2.d1.pentatonic_box2",
+  "type": "scale_shape",
+  "meta": {
+    "title": "A minor pentatonic — Box 2 (connects up from Box 1)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "scale": "A minor pentatonic",
+    "tempoBpm": 70
+  },
+  "fretboard": {
+    "startFret": 7,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 6, "fret": 8, "finger": 2, "label": "b3", "role": "target", "highlight": true },
+      { "string": 6, "fret": 10, "finger": 4, "label": "4", "role": "scale" },
+      { "string": 5, "fret": 7, "finger": 1, "label": "5", "role": "chord_tone" },
+      { "string": 5, "fret": 10, "finger": 4, "label": "b7", "role": "scale" },
+      { "string": 4, "fret": 7, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 10, "finger": 4, "label": "b3", "role": "target", "highlight": true },
+      { "string": 3, "fret": 7, "finger": 1, "label": "4", "role": "scale" },
+      { "string": 3, "fret": 9, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 2, "fret": 8, "finger": 2, "label": "b7", "role": "scale" },
+      { "string": 2, "fret": 10, "finger": 4, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 1, "fret": 8, "finger": 2, "label": "b3", "role": "target", "highlight": true },
+      { "string": 1, "fret": 10, "finger": 4, "label": "4", "role": "scale" }
+    ]
+  }
+}
+```
+
 Here's where most people slip up, though: they try to memorize Box 2 the same way — running up and down, la-la-la-la. That just gives you two cages instead of one. What we actually want isn't a cage — it's a **highway**. A smooth lane change from Box 1 straight into Box 2. And the tool that builds that road is the **slide**.
 
 Here's the key idea: Box 1 and Box 2 sit right next to each other and **share notes**. Take the 4th string, for example — Box 1's A (fret 7, the root) and Box 2's C (fret 10, the ♭3) live on that same string. So if you just **slide** the finger that's fretting A all the way up to fret 10, you land in Box 2 automatically — and that landing note is our forever-target, **C (the ♭3)**. One slide does two jobs at once: moving boxes *and* landing on the target. Today, we're building that one bridge until it's rock solid.
@@ -100,6 +133,44 @@ With the metronome at 70, run through Box 2 in eighth notes, once up and once do
 
 **10–20 min · Brain training (today's target = C / ♭3, and the slide bridge)**
 Metronome off. Just repeat **the one key move** from the connecting line above: fret the A on the 4th string, fret 7, with your index finger → slide up to C at fret 10. Do this slide 20 times. Two things to watch: ① Stop **exactly** at fret 10 so the C rings out clean. ② Don't let up the pressure on the string while sliding (ease off and the sound cuts out). You pass once you can land dead-on at fret 10 with your eyes closed.
+
+```json
+{
+  "id": "m1.w2.d1.box1_to_box2_slide",
+  "type": "tab",
+  "meta": {
+    "title": "Box 1 -> Box 2 sliding connection (land on b3)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "tempoBpm": 70
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "block_connection",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 6, "fret": 5, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 6, "fret": 8, "duration": "eighth", "label": "b3", "highlight": true, "role": "target" },
+        { "string": 5, "fret": 5, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 5, "fret": 7, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 4, "fret": 5, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 4, "fret": 7, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 4, "fret": 7, "duration": "quarter", "technique": "slide", "slideToFret": 10, "label": "b3", "target": true, "highlight": true, "role": "target" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 3, "fret": 7, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 3, "fret": 9, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 2, "fret": 8, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 2, "fret": 10, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 1, "fret": 8, "duration": "eighth", "label": "b3", "highlight": true, "role": "target" },
+        { "string": 1, "fret": 10, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 1, "fret": 8, "duration": "quarter", "technique": "vibrato", "label": "b3", "target": true, "highlight": true, "role": "target" }
+      ]}
+    ]
+  }
+}
+```
 
 **20–40 min · Real-world feel (Am one-chord backing track, BPM 70)**
 Put on an "Am backing track slow." Only one rule: **start in Box 1, cross into Box 2 using today's 4th-string slide, then land and stop on C (the ♭3) inside Box 2.** Don't worry about fancy phrasing yet — if the single journey "Box 1 → bridge → Box 2 → land on C" flows without a hitch, today's a total win. Once that feels natural, try it in reverse: start in Box 2 and slide back down into Box 1 (C at fret 10 → A at fret 7).

@@ -11,6 +11,39 @@ i18nKey: "lesson.m1.w2.d1"
 
 오늘 왜 이걸 하냐면요. 지난주에 우리는 1번 블록(5프렛)을 손이 아니라 귀에 새겼잖아요. 그런데 여기서 한 가지만 짚고 갈게요. 1번 블록 하나만 파면 결국 5~8프렛 그 좁은 감옥에 갇히기 쉬워요. 즉흥이 답답한 진짜 이유가 이거예요. "음을 고를 자유"가 있으려면 지판이 넓어야 하거든요. 그래서 이번 주엔 넥 위쪽으로 이사를 갑니다. 오늘은 그 첫 집, **2번 블록(7~10프렛)**이에요.
 
+```json
+{
+  "id": "m1.w2.d1.pentatonic_box2",
+  "type": "scale_shape",
+  "meta": {
+    "title": "A minor pentatonic — Box 2 (connects up from Box 1)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "scale": "A minor pentatonic",
+    "tempoBpm": 70
+  },
+  "fretboard": {
+    "startFret": 7,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 6, "fret": 8, "finger": 2, "label": "b3", "role": "target", "highlight": true },
+      { "string": 6, "fret": 10, "finger": 4, "label": "4", "role": "scale" },
+      { "string": 5, "fret": 7, "finger": 1, "label": "5", "role": "chord_tone" },
+      { "string": 5, "fret": 10, "finger": 4, "label": "b7", "role": "scale" },
+      { "string": 4, "fret": 7, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 10, "finger": 4, "label": "b3", "role": "target", "highlight": true },
+      { "string": 3, "fret": 7, "finger": 1, "label": "4", "role": "scale" },
+      { "string": 3, "fret": 9, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 2, "fret": 8, "finger": 2, "label": "b7", "role": "scale" },
+      { "string": 2, "fret": 10, "finger": 4, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 1, "fret": 8, "finger": 2, "label": "b3", "role": "target", "highlight": true },
+      { "string": 1, "fret": 10, "finger": 4, "label": "4", "role": "scale" }
+    ]
+  }
+}
+```
+
 근데 여기서 대부분이 실수해요. 2번 블록을 또 "상행-하행으로 라라라라" 외우려고 들어요. 그럼 감옥이 두 개로 늘어날 뿐이에요. 우리가 원하는 건 감옥이 아니라 **고속도로**예요. 1번 블록에서 2번 블록으로 차선 변경하듯 스르륵 넘어가는 길. 그 길을 만드는 도구가 바로 **슬라이드**예요.
 
 핵심은 이거예요. 1번 블록과 2번 블록은 **딱 붙어서 음을 공유**해요. 예를 들어 4번 줄을 보면, 1번 블록의 A(7프렛, 근음)와 2번 블록의 C(10프렛, ♭3)가 같은 줄 위에 있어요. 그러면 A를 짚은 손가락을 **10프렛까지 미끄러뜨리기만** 하면, 나는 어느새 2번 블록에 착지해 있고 그 착지음이 바로 우리의 영원한 타겟, **C(♭3)**예요. 슬라이드 한 번이 "블록 이동 + 타겟 착지"를 동시에 해내는 거죠. 오늘은 이 다리 하나를 확실히 놓습니다.
@@ -99,6 +132,44 @@ i18nKey: "lesson.m1.w2.d1"
 
 **10~20분 · 두뇌 훈련 (오늘의 타겟 = C / ♭3, 그리고 슬라이드 다리)**
 메트로놈 끄고, 위 연결 라인의 **핵심 한 동작만** 반복해요. 4번 줄 7프렛(A)을 검지로 짚고 → 10프렛(C)까지 미끄러뜨리기. 이 슬라이드를 20번. 포인트는 두 가지예요. ① 도착 프렛(10)에서 **정확히 멈춰** C 음이 살아있을 것. ② 미끄러지는 동안 줄에서 손가락 압력을 놓지 말 것(놓으면 소리가 끊겨요). 눈 감고도 10프렛에 딱 멈추면 통과.
+
+```json
+{
+  "id": "m1.w2.d1.box1_to_box2_slide",
+  "type": "tab",
+  "meta": {
+    "title": "Box 1 -> Box 2 sliding connection (land on b3)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "tempoBpm": 70
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "block_connection",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 6, "fret": 5, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 6, "fret": 8, "duration": "eighth", "label": "b3", "highlight": true, "role": "target" },
+        { "string": 5, "fret": 5, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 5, "fret": 7, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 4, "fret": 5, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 4, "fret": 7, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 4, "fret": 7, "duration": "quarter", "technique": "slide", "slideToFret": 10, "label": "b3", "target": true, "highlight": true, "role": "target" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 3, "fret": 7, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 3, "fret": 9, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 2, "fret": 8, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 2, "fret": 10, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 1, "fret": 8, "duration": "eighth", "label": "b3", "highlight": true, "role": "target" },
+        { "string": 1, "fret": 10, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 1, "fret": 8, "duration": "quarter", "technique": "vibrato", "label": "b3", "target": true, "highlight": true, "role": "target" }
+      ]}
+    ]
+  }
+}
+```
 
 **20~40분 · 실전 즉흥 (Am 원코드 백킹 / 70 BPM)**
 "Am backing track slow"를 하나 틀어요. 규칙 하나: **1번 블록에서 시작해서, 오늘 배운 4번 줄 슬라이드로 2번 블록에 넘어간 뒤, 2번 블록 안에서 C(♭3)에 착지해 멈추기.** 아직 화려한 프레이즈는 신경 쓰지 마세요. "1번 블록 → 다리 → 2번 블록 → C 착지" 이 여정 하나가 끊김 없이 굴러가면 오늘은 대성공이에요. 익숙해지면 반대로 2번 블록에서 시작해 1번 블록으로 슬라이드해 내려와 보세요(10프렛 C → 7프렛 A로 역슬라이드).

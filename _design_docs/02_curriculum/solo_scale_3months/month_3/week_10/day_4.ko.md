@@ -137,11 +137,112 @@ i18nKey: "lesson.m3.w10.d4"
 **0~10분 · 워밍업 (BPM 90) — 3도 인터벌 런**
 위 3도 인터벌 런을 90에서 상행. 처음엔 80으로. 두 음씩 짝지어 "묶음"으로 들리게 하는 게 포인트예요. 익으면 Position 2(7~11프렛)에서도 같은 3도 패턴을 즉흥으로 만들어 보세요. C#·G 지날 때 색 의식은 계속.
 
+```json
+{
+  "id": "m3.w10.d4.thirds_interval_run",
+  "type": "tab",
+  "meta": {
+    "title": "A Mixolydian diatonic 3rds (ascending, land on major 3rd C#)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A Mixolydian",
+    "tempoBpm": 90
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "3rd_interval",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 6, "fret": 5, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 5, "fret": 4, "duration": "eighth", "label": "3", "role": "target", "highlight": true },
+        { "string": 6, "fret": 7, "duration": "eighth", "label": "2", "role": "scale" },
+        { "string": 5, "fret": 5, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 5, "fret": 4, "duration": "eighth", "label": "3", "role": "target", "highlight": true },
+        { "string": 5, "fret": 7, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 5, "fret": 5, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 4, "fret": 4, "duration": "eighth", "label": "6", "role": "scale" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 5, "fret": 7, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 4, "fret": 5, "duration": "eighth", "label": "b7", "role": "color", "highlight": true },
+        { "string": 4, "fret": 4, "duration": "eighth", "label": "6", "role": "scale" },
+        { "string": 4, "fret": 7, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 4, "fret": 5, "duration": "eighth", "label": "b7", "role": "color", "highlight": true },
+        { "string": 3, "fret": 4, "duration": "eighth", "label": "2", "role": "scale" },
+        { "string": 4, "fret": 7, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 3, "fret": 6, "duration": "eighth", "label": "3", "target": true, "role": "target", "highlight": true }
+      ]}
+    ]
+  }
+}
+```
+
 **10~20분 · 두뇌 훈련 (C#↔F# 스위칭)**
 메트로놈 끄고, 첫 번째 지도로 게임. "A7!" 하면 가장 가까운 **C#**(3번 6프렛 또는 1번 9프렛) 짚기, "D7!" 하면 가장 가까운 **F#**(4번 4프렛, 2번 7프렛, 3번 11프렛) 짚기. 스스로 "A7-D7-A7-D7" 외치며 손을 번갈아 옮겨요. 2초 안에 올바른 3도로 손이 가면 통과. 코드 전환 반사신경을 만드는 시간이에요.
 
+```json
+{
+  "id": "m3.w10.d4.dominant_thirds_map",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "Dominant 3rd targets: A7-3(C#) & D7-3(F#) across positions",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A Mixolydian (A7-D7)",
+    "tempoBpm": 90
+  },
+  "fretboard": {
+    "startFret": 4,
+    "fretSpan": 7,
+    "dots": [
+      { "string": 4, "fret": 7, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 6, "label": "A7-3(C#)", "role": "target", "highlight": true },
+      { "string": 1, "fret": 9, "label": "A7-3(C#)", "role": "target", "highlight": true },
+      { "string": 4, "fret": 4, "label": "D7-3(F#)", "role": "target", "highlight": true },
+      { "string": 2, "fret": 7, "label": "D7-3(F#)", "role": "target", "highlight": true },
+      { "string": 3, "fret": 11, "label": "D7-3(F#)", "role": "target", "highlight": true },
+      { "string": 4, "fret": 5, "label": "b7", "role": "color", "highlight": true }
+    ]
+  }
+}
+```
+
 **20~40분 · 실전 즉흥 (A7–D7 블루스 백킹 / 80~90 BPM)**
 "A7 D7 blues backing track slow" 하나 틀어요(느린 12마디 블루스도 좋아요). 미션: **코드가 바뀔 때마다 그 코드의 3도에 착지 — A7이면 C#, D7이면 F#.** 나머지는 A 믹솔리디안으로 자유롭게. 여유 있으면 오늘의 A7→D7 릭을 통째로 넣어 보고, 두 폼을 슬라이드로 오가며 위·아래를 다 쓰세요. 블루노트 C가 D7에서 ♭7로 변신하는 것도 귀로 즐겨요.
+
+```json
+{
+  "id": "m3.w10.d4.a7_d7_target_lick",
+  "type": "tab",
+  "meta": {
+    "title": "A7->D7 change: target A7-3(C#) then D7-3(F#), b7 & blue note",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A Mixolydian (A7-D7)",
+    "tempoBpm": 90
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "guide_tone_3rds",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 4, "fret": 7, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 2, "fret": 8, "duration": "eighth", "label": "b7", "role": "color", "highlight": true },
+        { "string": 2, "fret": 5, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 3, "fret": 5, "duration": "eighth", "technique": "bend", "bendTarget": "half", "label": "b3", "role": "blue_note", "highlight": true },
+        { "string": 3, "fret": 6, "duration": "half", "technique": "vibrato", "label": "A7-3(C#)", "target": true, "role": "target", "highlight": true }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 3, "fret": 7, "duration": "eighth", "label": "D7-R(D)", "role": "scale" },
+        { "string": 3, "fret": 5, "duration": "eighth", "label": "D7-b7(C)", "role": "color", "highlight": true },
+        { "string": 2, "fret": 5, "duration": "eighth", "label": "9(E)", "role": "scale" },
+        { "string": 2, "fret": 7, "duration": "eighth", "label": "D7-3(F#)", "target": true, "role": "target", "highlight": true },
+        { "string": 4, "fret": 4, "duration": "half", "technique": "vibrato", "label": "D7-3(F#)", "target": true, "role": "target", "highlight": true }
+      ]}
+    ]
+  }
+}
+```
 
 **40~50분 · 녹음/피드백 (권장·이번 주 총정리)**
 아무 녹음 앱으로 한 코러스(12마디 또는 30~40초) 녹음. 체크 세 가지: (1) 코드 바뀔 때 3도(C#→F#)를 제때 짚었는지, (2) 두 폼을 다 썼는지 아니면 한 상자에 갇혔는지, (3) 문장 끝이 어정쩡하게 붕 뜨지 않고 타겟음에 잘 앉았는지. 이번 주 첫날 녹음과 비교해 보면 성장이 들릴 거예요.

@@ -16,6 +16,41 @@ lang: ja
 
 練習方法は**4連音（16分音符4つのまとまり）**です。3度インターバルが「飛ばす」練習だったなら、4連音は「隙間を密に埋める」練習。Bが新しく入ってA-B-Cがつながったので、細かい16分で転がしても音が団子にならずに流れていきます。今日からBの指板上の座標をしっかり覚えておきましょう——第1ボックス基準で**6弦7フレット**と**1弦7フレット**、たった2か所です。それぞれのBが、すぐ隣（1フレット上）のCへ滑り込んでいく絵を目に焼き付けてください。
 
+```json
+{
+  "id": "m2.w5.d2.pentatonic_add_2nd",
+  "type": "scale_shape",
+  "meta": {
+    "title": "A minor pentatonic + added 2nd (B) as passing tone to b3 (C)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "scale": "A natural minor (partial)",
+    "tempoBpm": 80
+  },
+  "fretboard": {
+    "startFret": 5,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 6, "fret": 5, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 6, "fret": 7, "finger": 3, "label": "2", "role": "passing", "highlight": true },
+      { "string": 6, "fret": 8, "finger": 4, "label": "b3", "role": "target", "highlight": true },
+      { "string": 5, "fret": 5, "finger": 1, "label": "4", "role": "scale" },
+      { "string": 5, "fret": 7, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 4, "fret": 5, "finger": 1, "label": "b7", "role": "scale" },
+      { "string": 4, "fret": 7, "finger": 3, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 5, "finger": 1, "label": "b3", "role": "target", "highlight": true },
+      { "string": 3, "fret": 7, "finger": 3, "label": "4", "role": "scale" },
+      { "string": 2, "fret": 5, "finger": 1, "label": "5", "role": "chord_tone" },
+      { "string": 2, "fret": 8, "finger": 4, "label": "b7", "role": "scale" },
+      { "string": 1, "fret": 5, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 1, "fret": 7, "finger": 3, "label": "2", "role": "passing", "highlight": true },
+      { "string": 1, "fret": 8, "finger": 4, "label": "b3", "role": "target", "highlight": true }
+    ]
+  }
+}
+```
+
 ## ② 視覚資料
 
 ペンタトニック第1ボックスに**B（2度、緑ハイライト）**が2か所新しく加わりました——6弦7フレット、1弦7フレット。それぞれすぐ上のC（♭3、緑）へ流れ込む橋です。
@@ -96,6 +131,41 @@ lang: ja
 
 **0〜10分・ウォームアップ（BPM 80）**
 メトロノーム80に合わせて、まず**昨日の3度インターバルシーケンス**で手をほぐします。5分。次の5分は今日のA-B-C 4連音ドリルをゆっくりと。1拍に16分音符4つ（「タダダダ」）がクリック一つにぴったり収まるように。団子になったらBPM 70に落としましょう。
+
+```json
+{
+  "id": "m2.w5.d2.b_passing_to_third_4note",
+  "type": "tab",
+  "meta": {
+    "title": "4-note sequence: 2nd(B) passing tone resolving to Am 3rd (C)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "tempoBpm": 80
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "4note_sequence",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 6, "fret": 5, "duration": "sixteenth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 6, "fret": 7, "duration": "sixteenth", "label": "2", "highlight": true, "role": "passing" },
+        { "string": 6, "fret": 8, "duration": "sixteenth", "label": "b3", "target": true, "highlight": true, "role": "target" },
+        { "string": 5, "fret": 5, "duration": "sixteenth", "label": "4", "role": "scale" },
+        { "string": 5, "fret": 7, "duration": "sixteenth", "label": "5", "role": "chord_tone" },
+        { "string": 5, "fret": 5, "duration": "sixteenth", "label": "4", "role": "scale" },
+        { "string": 6, "fret": 8, "duration": "sixteenth", "label": "b3", "target": true, "highlight": true, "role": "target" },
+        { "string": 6, "fret": 7, "duration": "sixteenth", "label": "2", "highlight": true, "role": "passing" },
+        { "string": 6, "fret": 5, "duration": "sixteenth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 6, "fret": 7, "duration": "sixteenth", "label": "2", "highlight": true, "role": "passing" },
+        { "string": 6, "fret": 8, "duration": "sixteenth", "label": "b3", "target": true, "highlight": true, "role": "target" },
+        { "string": 5, "fret": 5, "duration": "sixteenth", "label": "4", "role": "scale" },
+        { "string": 6, "fret": 8, "duration": "quarter", "label": "b3", "target": true, "highlight": true, "role": "target" }
+      ]}
+    ]
+  }
+}
+```
 
 **10〜20分・頭のトレーニング（今日のターゲット＝Bの2か所）**
 メトロノームを止めて、第1ボックスの中で**Bだけ**を探して押さえます。6弦7フレット、1弦7フレット、2か所だけ。押さえるたびに「これは橋、留まれない」と声に出しながら、**すぐ1フレット上のCへ滑り込む**動作までつなげます。目を閉じて2つのBを押さえ、それぞれCで解決できたら合格です。

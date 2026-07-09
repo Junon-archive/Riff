@@ -105,8 +105,76 @@ i18nKey: "lesson.m1.w4.d2"
 **10~20분 · 두뇌 훈련 (넥 전체 ♭5 위치 매핑)**
 위 넥 지도를 보고, 6번 줄부터 1번 줄까지 **각 줄의 ♭5(보라 점) 하나씩만** 순서대로 짚어 올라가요. 각 ♭5를 짚을 때마다 "여기가 이 구역 블루노트" 하고 위치를 각인. 그다음 눈 감고 5번 줄 6프렛, 3번 줄 8프렛(1번 블록 두 자리)을 먼저, 여유 되면 다른 줄까지. 5자리 이상 눈 감고 짚으면 통과.
 
+```json
+{
+  "id": "m1.w4.d2.b5_neck_map_all_blocks",
+  "type": "scale_shape",
+  "meta": {
+    "title": "A blues b5 map across the whole neck (all 5 boxes)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A blues",
+    "scale": "A blues scale",
+    "tempoBpm": 70
+  },
+  "fretboard": {
+    "startFret": 5,
+    "fretSpan": 13,
+    "dots": [
+      { "string": 6, "fret": 5, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 6, "fret": 11, "label": "b5", "role": "blue_note", "highlight": true },
+      { "string": 6, "fret": 17, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 6, "label": "b5", "role": "blue_note", "highlight": true },
+      { "string": 5, "fret": 12, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 7, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 13, "label": "b5", "role": "blue_note", "highlight": true },
+      { "string": 3, "fret": 8, "label": "b5", "role": "blue_note", "highlight": true },
+      { "string": 3, "fret": 14, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 2, "fret": 10, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 2, "fret": 16, "label": "b5", "role": "blue_note", "highlight": true },
+      { "string": 1, "fret": 5, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 1, "fret": 11, "label": "b5", "role": "blue_note", "highlight": true },
+      { "string": 1, "fret": 17, "label": "R", "isRoot": true, "role": "root" }
+    ]
+  }
+}
+```
+
 **20~40분 · 실전 즉흥 (Am7 원코드 백킹 / 65~70 BPM) — 슬라이드/벤딩으로 ♭5 표현**
 백킹을 틀고 규칙: **♭5는 반드시 슬라이드나 벤딩으로 '들어가서' 표현하고, 착지음엔 무조건 느리고 넓은 비브라토.** 밋밋하게 뚝 끊는 음을 오늘은 하나도 만들지 마세요. 프레이즈 끝은 ♭3(C)이나 근음(A)에 착지 → 손목 비브라토로 노래. 위 프레이즈를 골격 삼아 조금씩 변형해 보세요.
+
+```json
+{
+  "id": "m1.w4.d2.vibrato_expression_phrase",
+  "type": "tab",
+  "meta": {
+    "title": "Vibrato expression — slide into b5 + wide slow vibrato on landings",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A blues",
+    "tempoBpm": 70
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "blues_phrasing",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 5, "fret": 5, "duration": "eighth", "technique": "slide", "slideToFret": 6, "label": "4>b5", "highlight": true, "role": "blue_note" },
+        { "string": 5, "fret": 6, "duration": "quarter", "technique": "vibrato", "label": "b5", "highlight": true, "role": "blue_note" },
+        { "string": 5, "fret": 7, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 3, "fret": 5, "duration": "half", "technique": "vibrato", "label": "b3", "target": true, "highlight": true, "role": "target" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 4, "fret": 7, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 3, "fret": 5, "duration": "eighth", "label": "b3", "highlight": true, "role": "target" },
+        { "string": 3, "fret": 7, "duration": "quarter", "technique": "bend", "bendTarget": "full", "label": "4>5", "highlight": true, "role": "scale" },
+        { "string": 3, "fret": 5, "duration": "quarter", "technique": "vibrato", "label": "b3", "target": true, "highlight": true, "role": "target" },
+        { "string": 4, "fret": 7, "duration": "quarter", "technique": "vibrato", "label": "R", "isRoot": true, "role": "root" }
+      ]}
+    ]
+  }
+}
+```
 
 **40~50분 · 녹음/피드백 (권장)**
 30초 녹음 후 재생. 체크: ① 비브라토 떨림이 **일정한 주기**로 예쁜가, 겁먹은 듯 들쭉날쭉한가. ② 착지음마다 비브라토가 걸렸나, 아니면 그냥 끊겼나. ③ ♭5가 슬라이드·벤딩으로 자연스럽게 들어갔나. 필요하면 재생 속도를 늦춰 비브라토 주기를 귀로 확대해 보세요.

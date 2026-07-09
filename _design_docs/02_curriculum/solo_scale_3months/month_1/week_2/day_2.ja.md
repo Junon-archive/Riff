@@ -14,6 +14,39 @@ lang: ja
 
 第3ボックスには、うれしい顔なじみが一人います。根音Aが**5弦12フレット**にちょこんと座っているんです。12フレットは指板のちょうど真ん中、ドット（インレイ）が二つ並んでいる場所。目で見つけるのがとても簡単です。だから第3ボックスは、位置を覚えるのが意外と楽なんです。「12フレット＝A」これさえ押さえれば、あとは自然についてきます。
 
+```json
+{
+  "id": "m1.w2.d2.pentatonic_box3",
+  "type": "scale_shape",
+  "meta": {
+    "title": "A minor pentatonic — Box 3 (connects up from Box 2)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "scale": "A minor pentatonic",
+    "tempoBpm": 72
+  },
+  "fretboard": {
+    "startFret": 9,
+    "fretSpan": 5,
+    "dots": [
+      { "string": 6, "fret": 10, "finger": 1, "label": "4", "role": "scale" },
+      { "string": 6, "fret": 12, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 5, "fret": 10, "finger": 1, "label": "b7", "role": "scale" },
+      { "string": 5, "fret": 12, "finger": 3, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 10, "finger": 1, "label": "b3", "role": "target", "highlight": true },
+      { "string": 4, "fret": 12, "finger": 3, "label": "4", "role": "scale" },
+      { "string": 3, "fret": 9, "finger": 1, "label": "5", "role": "chord_tone" },
+      { "string": 3, "fret": 12, "finger": 4, "label": "b7", "role": "scale" },
+      { "string": 2, "fret": 10, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 2, "fret": 13, "finger": 4, "label": "b3", "role": "target", "highlight": true },
+      { "string": 1, "fret": 10, "finger": 1, "label": "4", "role": "scale" },
+      { "string": 1, "fret": 12, "finger": 3, "label": "5", "role": "chord_tone" }
+    ]
+  }
+}
+```
+
 そして今日の橋。昨日は4弦でA→Cにスライドしましたよね？今日の第2↔第3接続は**2弦（B弦）**を使います。第2ボックスのA（2弦10フレット）を押さえて**13フレットまでスライド**すると、着地音がまさにC（♭3）になります。またターゲット着地です。面白いのは、ボックスが変わっても私たちが狙う音はいつも同じCだということ。ネック上の位置が変わるだけで、**「コードの3度に着地する」という原則は、3か月間ただの一度も変わりません。**今日はその原則を、第3ボックスでもう一度確かめる日です。
 
 ## ② 視覚資料
@@ -103,6 +136,44 @@ lang: ja
 
 **20〜40分・実戦即興（Amワンコードバッキング／BPM 70〜72）**
 バッキングを流して、ルール：**第2ボックスで遊びながら、2弦のスライドで第3ボックスに上がり、C（♭3）に着地する。**余裕があれば、昨日架けた第1↔第2の橋と今日の第2↔第3の橋をつなげて、**第1ボックス→第2ボックス→第3ボックス**まで一気に登ってみましょう。ネックの半分を旅したことになります。終わりはいつもC着地です。
+
+```json
+{
+  "id": "m1.w2.d2.box2_to_box3_slide",
+  "type": "tab",
+  "meta": {
+    "title": "Box 2 -> Box 3 sliding connection (land on b3)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "tempoBpm": 72
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "block_connection",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 4, "fret": 7, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 4, "fret": 10, "duration": "eighth", "label": "b3", "highlight": true, "role": "target" },
+        { "string": 3, "fret": 7, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 3, "fret": 9, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 2, "fret": 8, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 2, "fret": 10, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 2, "fret": 10, "duration": "quarter", "technique": "slide", "slideToFret": 13, "label": "b3", "target": true, "highlight": true, "role": "target" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 1, "fret": 10, "duration": "eighth", "label": "4", "role": "scale" },
+        { "string": 1, "fret": 12, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 2, "fret": 13, "duration": "eighth", "label": "b3", "highlight": true, "role": "target" },
+        { "string": 2, "fret": 10, "duration": "eighth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 3, "fret": 12, "duration": "eighth", "label": "b7", "role": "scale" },
+        { "string": 3, "fret": 9, "duration": "eighth", "label": "5", "role": "chord_tone" },
+        { "string": 2, "fret": 13, "duration": "quarter", "technique": "vibrato", "label": "b3", "target": true, "highlight": true, "role": "target" }
+      ]}
+    ]
+  }
+}
+```
 
 **40〜50分・録音・フィードバック（推奨）**
 30秒録音して再生。チェック：2弦スライドの着地音が13フレットで正確に決まっているか、それとも12や14にズレているか。細い弦のスライドは音程が揺れやすいので、着地音がバッキングのAmと「かみ合って」響いているかを耳で確認しましょう。

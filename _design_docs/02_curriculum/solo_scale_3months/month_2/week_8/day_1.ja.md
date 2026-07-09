@@ -90,8 +90,63 @@ lang: ja
 **0〜10分・ウォームアップ（BPM 76）——3度の感覚を温める**
 メトロノーム76に合わせて、上の「家」の位置で三つのガイドトーンだけを4分音符で交互に押さえます。F（4弦3フレット）→B（3弦4フレット）→E（4弦2フレット）、一音につきクリック一回。押さえるたびに声に出して「ファ！シ！ミ！」と呼びましょう。音名を口に乗せることが、今日のウォームアップの核心です。
 
+```json
+{
+  "id": "m2.w8.d1.guide_tone_map",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "ii-V-I guide tones home shape (Dm7 F / G7 B / Cmaj7 E)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "C major (ii-V-I)",
+    "tempoBpm": 76
+  },
+  "fretboard": {
+    "startFret": 0,
+    "fretSpan": 5,
+    "dots": [
+      { "string": 4, "fret": 0, "label": "Dm7 R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 3, "finger": 3, "label": "Dm7-3(F)", "highlight": true, "role": "target" },
+      { "string": 3, "fret": 0, "label": "G7 R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 4, "finger": 4, "label": "G7-3(B)", "highlight": true, "role": "target" },
+      { "string": 2, "fret": 1, "label": "Cmaj7 R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 2, "finger": 2, "label": "Cmaj7-3(E)", "highlight": true, "role": "target" }
+    ]
+  }
+}
+```
+
 **10〜20分・頭のトレーニング（F・B・Eを複数の場所ですぐ押さえる）**
 メトロノームを止めて、二つ目の地図を見ながら**Fだけ**を三か所（4弦3フレット、1弦1フレット、2弦6フレット）目で確認して手で押さえます。次に**Bだけ**、その次に**Eだけ**。それぞれの音で「一番近い場所→次の場所」という最短の移動経路を見つけるのがポイントです。最後は目を閉じて、「家」の位置のF・B・Eの三つを3秒以内に押さえられたら合格。
+
+```json
+{
+  "id": "m2.w8.d1.guide_tone_positions",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "Guide tones F/B/E across the neck (multiple positions)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "C major (ii-V-I)",
+    "tempoBpm": 76
+  },
+  "fretboard": {
+    "startFret": 0,
+    "fretSpan": 8,
+    "dots": [
+      { "string": 4, "fret": 3, "label": "Dm7-3(F)", "highlight": true, "role": "target" },
+      { "string": 1, "fret": 1, "label": "Dm7-3(F)", "highlight": true, "role": "target" },
+      { "string": 2, "fret": 6, "label": "Dm7-3(F)", "highlight": true, "role": "target" },
+      { "string": 3, "fret": 4, "label": "G7-3(B)", "highlight": true, "role": "target" },
+      { "string": 2, "fret": 0, "label": "G7-3(B)", "highlight": true, "role": "target" },
+      { "string": 5, "fret": 2, "label": "G7-3(B)", "highlight": true, "role": "target" },
+      { "string": 4, "fret": 2, "label": "Cmaj7-3(E)", "highlight": true, "role": "target" },
+      { "string": 1, "fret": 0, "label": "Cmaj7-3(E)", "highlight": true, "role": "target" },
+      { "string": 2, "fret": 5, "label": "Cmaj7-3(E)", "highlight": true, "role": "target" }
+    ]
+  }
+}
+```
 
 **20〜40分・実戦即興（Dm7-G7-Cmaj7バッキング／BPM 70〜76）**
 YouTubeやアプリで「ii V I backing track C major slow」を探して流します。ルールはたった一つ。**他は何もせず、コードが変わるたびにそのコードの3度（F/B/E）だけを「家」の位置で長く押さえること。**メロディもリズムも気にせず、「コードが変わる＝3度を押さえる」という反射神経だけを作ります。まだずれても大丈夫。今日の目標は位置を体に入れることです。

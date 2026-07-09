@@ -16,6 +16,39 @@ So starting today, we're setting one rule: **no more simple up-and-down runs.** 
 
 The coordinates you need to remember are just the 5 notes of A minor pentatonic: **A (root) · C (♭3) · D (4) · E (5) · G (♭7).** Of these, the one to really burn into your eyes today is **C (♭3).** That's the 3rd of the Am chord — the note that's going to be your "landing spot" for the next three months. For now, just let it sink in: "ah, C lights up green right here, here, and here."
 
+```json
+{
+  "id": "m1.w1.d1.pentatonic_box1",
+  "type": "scale_shape",
+  "meta": {
+    "title": "A minor pentatonic — Box 1",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "scale": "A minor pentatonic",
+    "tempoBpm": 60
+  },
+  "fretboard": {
+    "startFret": 5,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 6, "fret": 5, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 6, "fret": 8, "finger": 4, "label": "b3", "role": "target", "highlight": true },
+      { "string": 5, "fret": 5, "finger": 1, "label": "4", "role": "scale" },
+      { "string": 5, "fret": 7, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 4, "fret": 5, "finger": 1, "label": "b7", "role": "scale" },
+      { "string": 4, "fret": 7, "finger": 3, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 5, "finger": 1, "label": "b3", "role": "target", "highlight": true },
+      { "string": 3, "fret": 7, "finger": 3, "label": "4", "role": "scale" },
+      { "string": 2, "fret": 5, "finger": 1, "label": "5", "role": "chord_tone" },
+      { "string": 2, "fret": 8, "finger": 4, "label": "b7", "role": "scale" },
+      { "string": 1, "fret": 5, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 1, "fret": 8, "finger": 4, "label": "b3", "role": "target", "highlight": true }
+    ]
+  }
+}
+```
+
 ## ② Visual Reference
 
 Am pentatonic Box 1 (root on the 5th fret). The notes highlighted in green (♭3 = C) are your target notes going forward.
@@ -97,6 +130,44 @@ Here's today's core weapon — a 4-note (16th note) ascending sequence. 1-2-3-4 
 
 **0–10 min · Warm-up (BPM 60)**
 With the metronome at 60, run the 4-note sequence ascending only, from the 6th string up to the end of the 1st string. No descending yet. Each beat should land exactly one group of four 16th notes — "da-da-da-da" — right on the click. Lock in alternate picking (down-up-down-up).
+
+```json
+{
+  "id": "m1.w1.d1.four_note_sequence",
+  "type": "tab",
+  "meta": {
+    "title": "4-note (16th) ascending sequence — Am pentatonic Box 1",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "tempoBpm": 60
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "4note_sequence",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 6, "fret": 5, "duration": "sixteenth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 6, "fret": 8, "duration": "sixteenth", "label": "b3", "highlight": true, "role": "target" },
+        { "string": 5, "fret": 5, "duration": "sixteenth", "label": "4", "role": "scale" },
+        { "string": 5, "fret": 7, "duration": "sixteenth", "label": "5", "role": "chord_tone" },
+        { "string": 6, "fret": 8, "duration": "sixteenth", "label": "b3", "highlight": true, "role": "target" },
+        { "string": 5, "fret": 5, "duration": "sixteenth", "label": "4", "role": "scale" },
+        { "string": 5, "fret": 7, "duration": "sixteenth", "label": "5", "role": "chord_tone" },
+        { "string": 4, "fret": 5, "duration": "sixteenth", "label": "b7", "role": "scale" },
+        { "string": 5, "fret": 5, "duration": "sixteenth", "label": "4", "role": "scale" },
+        { "string": 5, "fret": 7, "duration": "sixteenth", "label": "5", "role": "chord_tone" },
+        { "string": 4, "fret": 5, "duration": "sixteenth", "label": "b7", "role": "scale" },
+        { "string": 4, "fret": 7, "duration": "sixteenth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 5, "fret": 7, "duration": "sixteenth", "label": "5", "role": "chord_tone" },
+        { "string": 4, "fret": 5, "duration": "sixteenth", "label": "b7", "role": "scale" },
+        { "string": 4, "fret": 7, "duration": "sixteenth", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 3, "fret": 5, "duration": "sixteenth", "label": "b3", "highlight": true, "role": "target" }
+      ]}
+    ]
+  }
+}
+```
 
 **10–20 min · Brain training (today's target = C / ♭3)**
 Turn off the metronome and hunt down **just C (♭3)** on the fretboard. 6th string 8th fret, 3rd string 5th fret, 1st string 8th fret — those three spots. Say it out loud every time you fret it: "C!" This trains your brain to remember the position by name, not just by feel. Pass condition: find all three spots with your eyes closed in under 3 minutes.
