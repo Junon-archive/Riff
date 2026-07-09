@@ -7,7 +7,8 @@ depends_on: []
 owner: null
 ---
 
-> 🟡 진행 중(2026-07-09). **트랙 A(PWA 토대)·B(iOS 홈)·C(Android 무스토어) 코드 구현 완료** — 매니페스트·아이콘 4종·hand-rolled 서비스워커·head 메타·SW 등록. build 361p 통과·dist 자산·head 배선 검증. **남음:** 배포 후 실기기 설치/오프라인 육안 검증(SW는 localhost 제외라 배포본에서 확인), 그리고 트랙 D(Play).
+> 🟡 진행 중(2026-07-09). **트랙 A·B 검증 완료 / C 코드 완료(안드로이드 기기 확인만 보류) / D 미착수.**
+> A·B·C 코드 구현(매니페스트·아이콘 4종·hand-rolled SW·head 메타·SW 등록) 후 배포본에서 **데스크톱 Chrome(설치·SW·오프라인) + iOS Safari(홈 추가·전체화면) 육안 검증 통과**. **남음:** 트랙 C의 안드로이드 실기기 WebAPK·maskable 확인(기기 확보 후), 트랙 D(Play 등재, $25).
 
 # 07 · PWA 앱화 (Android Play 등재 + iOS/Android 홈 설치)
 
@@ -33,6 +34,25 @@ owner: null
 | **오프라인 캐싱 범위** | **앱 셸 precache + 방문 레슨 런타임 캐싱**(App Shell 패턴). **전체 사전 다운로드 안 함** — 커리큘럼이 계속 늘어 precache가 무한히 불어나고 안 볼 커리큘럼·언어까지 강제 다운로드되므로 무의미. 앱 셸(HTML 골격·CSS·핵심 JS·아이콘·매니페스트)만 precache로 즉시 열림, 레슨 본문·이미지는 방문 시 StaleWhileRevalidate. (선택·나중) "커리큘럼 오프라인 저장" 명시 버튼은 후속. |
 | **릴리스 순서** | **트랙 A~C(설치형 PWA, $0) 먼저 한 푸시로 배포 → 트랙 D(Play) 후속.** A~C가 D의 선행 필수이고 파일·빌드가 공유되므로 나눠도 낭비 0. Play의 외부 마찰($25·14일 테스트·심사)에 무료·즉시 릴리스를 묶지 않는다. |
 
+## ▶ 이어서 하기 (다음 세션 재개 지침)
+
+**한 줄 현황:** 설치형 PWA(트랙 A·B·C 코드)는 **배포 완료·운영 중**(커밋 `6a07250`). A·B는 배포본에서 육안 검증 통과. 남은 건 **딱 두 개** — 트랙 C의 안드로이드 실기기 확인(코드 없음)과 트랙 D(Play 등재).
+
+**이미 저장소에 존재(재구현 금지, 재사용):**
+- `web_app/public/manifest.webmanifest` — name Riff·standalone·아이콘 3종
+- `web_app/public/icons/` — 192·512·maskable-512·apple-touch-180. 재생성: `cd web_app && node scripts/generate-pwa-icons.mjs`(픽 로고 파생, f값으로 크기 조정)
+- `web_app/public/sw.js` — hand-rolled SW. **배포 후 옛 캐시가 남으면 `CACHE_VERSION` 올리고 재배포**하면 다음 activate에 자가복구
+- `web_app/src/layouts/Base.astro` head — manifest·theme-color·애플 메타·apple-touch-icon + SW 등록(배포 도메인만, localhost 제외)
+
+**남은 작업 ① 트랙 C — 안드로이드 실기기 확인 (코드 0):**
+- 안드로이드 Chrome으로 `guitar-riff.pages.dev` → 설치 배너 → WebAPK 설치 → 홈 아이콘 **maskable 안 잘림**·전체화면·오프라인 확인. 이상 없으면 체크리스트 트랙 C 완료 처리.
+- 아이콘이 잘리면: `generate-pwa-icons.mjs`의 maskable `f`(현 0.5)를 더 낮춰 재생성 → 재배포.
+
+**남은 작업 ② 트랙 D — Google Play 등재:** ("수정 상세 트랙 D" + 확정값 사용)
+- **선행(코드):** 개인정보처리방침 라우트(`src/pages/`) 신설, `public/.well-known/assetlinks.json` 배치.
+- **외부:** Play Console 등록($25, 개발자 **Junon**) → PWABuilder/Bubblewrap로 `.aab`(패키지 **`dev.pages.guitar_riff.twa`**·앱 **Riff**·URL `guitar-riff.pages.dev`) → **최초 업로드 후** Google 서명키 SHA-256로 assetlinks 확정 → 스토어 자산 → (신규 개인계정이면) 14일 비공개 테스트 → 심사.
+- **착수 전 사람 결정:** 개인정보처리방침 3언어 여부 / 14일 테스트 수용 / Play 착수 시점 (아래 "미해결 질문").
+
 ## 현재 상태 (검증된 코드 위치)
 
 | 무엇 | 위치 | 현재 상태 | PWA 관점 |
@@ -42,12 +62,12 @@ owner: null
 | 클라이언트 상태 | `web_app/src/lib/storage.ts` (localStorage 단일 키 `gh_state` + 인메모리 폴백) | 진도=기기 저장 | ✅ 오프라인에서도 상태 유지 |
 | 콘텐츠 로딩 | `web_app/src/lib/content.ts:18` `import.meta.glob` | day JSON이 빌드 번들에 포함(런타임 fetch·API 없음) | ✅ 캐시하면 완전 오프라인 열람 |
 | 자산 캐시 규칙 | `web_app/public/_headers` (`/_astro/* immutable`, `*.html must-revalidate`) | 해시 불변 자산 | ✅ SW precache/버전관리에 최적 |
-| head 메타 | `web_app/src/layouts/Base.astro:51-53` (viewport `viewport-fit=cover` · color-scheme · svg 아이콘) | 일부만 존재 | ⚠️ `manifest`·`theme-color`·apple 메타 없음 |
-| 앱 아이콘 | `web_app/public/favicon.svg` (254B) 하나뿐 | 픽 로고 SVG는 `Base.astro:130-131`에 존재 | ❌ 192/512/maskable/180 PNG 없음 → 생성 필요 |
-| Web App Manifest | (없음) | — | ❌ 신규 |
-| 서비스워커 | (없음) | — | ❌ 신규(오프라인·설치가능성 핵심) |
-| `.well-known/assetlinks.json` | (없음, `public/` 하위 미존재) | — | ❌ Play TWA 소유권 검증에 필요 |
-| 개인정보처리방침 페이지 | (없음, `src/pages`에 privacy 라우트 없음) | — | ❌ **Play 필수** → 신규 라우트 필요 |
+| head 메타 | `web_app/src/layouts/Base.astro` head | ✅ **구현됨**(6a07250) — manifest·theme-color(라이트/다크)·애플 메타 3종·apple-touch-icon·SW 등록 스크립트 | 완료 |
+| 앱 아이콘 | `web_app/public/icons/` (192·512·maskable-512·apple-touch-180) | ✅ **구현됨** — 픽 로고 파생. 생성기 `web_app/scripts/generate-pwa-icons.mjs` | 완료 |
+| Web App Manifest | `web_app/public/manifest.webmanifest` | ✅ **구현됨** — name Riff·standalone·아이콘 3종(any·any·maskable) | 완료 |
+| 서비스워커 | `web_app/public/sw.js` | ✅ **구현됨**(hand-rolled) — 앱 셸 precache + 방문분 런타임. 무효화=`CACHE_VERSION` | 완료 |
+| `.well-known/assetlinks.json` | (없음, `public/` 하위 미존재) | ❌ 미구현 | 트랙 D — Play TWA 소유권 검증에 필요 |
+| 개인정보처리방침 페이지 | (없음, `src/pages`에 privacy 라우트 없음) | ❌ 미구현 | 트랙 D — **Play 필수** → 신규 라우트 필요 |
 
 ## 수정 상세 (실행 지침)
 
@@ -147,16 +167,16 @@ owner: null
 - [x] 서비스워커(`public/sw.js`, hand-rolled) + 캐싱(앱 셸 precache + 방문분 런타임)
 - [x] `Base.astro <head>` 메타(manifest·theme-color) + SW 등록 스크립트
 - [x] V1 build 361p 통과 + dist 자산·head 배선 검증
-- [ ] 배포본에서 Lighthouse installability 통과 확인(로컬 SW 미등록이라 배포 후)
+- [x] 배포본 데스크톱 Chrome 검증 완료(2026-07-09): Manifest·SW active·설치·오프라인 정상
 
 **트랙 B — iOS 홈 설치**
 - [x] apple-touch-icon 180 + 애플 메타 3종(capable·status-bar·title Riff)
+- [x] iOS 실기기 홈 화면 추가·전체화면 검증 완료(2026-07-09)
 - [ ] (선택) 스플래시
-- [ ] iOS 실기기 홈 화면 추가 검증(배포 후)
 
 **트랙 C — Android 무스토어 설치**
-- [x] 매니페스트+SW+HTTPS 충족(설치 조건) — 코드 완료
-- [ ] WebAPK 설치 배너 동작 확인(배포 후 실기기)
+- [x] 매니페스트+SW+HTTPS 충족(설치 조건) — 코드 완료(A와 동일 코드로 자동 충족)
+- [ ] **WebAPK 설치·maskable 아이콘 실기기 확인 — 안드로이드 기기 확보 후 (유일한 잔여 확인)**
 - [ ] (선택) `beforeinstallprompt` 커스텀 설치 버튼
 
 **트랙 D — Google Play 등재**
