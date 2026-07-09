@@ -41,6 +41,8 @@ import {
   Stroke,
   ChordSymbol,
   StaveModifierPosition,
+  StaveTie,
+  Tuplet,
 } from 'vexflow';
 import type { Score, TabNote as TabNoteData, Measure, NoteRole } from '../types/score';
 
@@ -316,6 +318,10 @@ interface BuiltMeasure {
   stave: StaveNote[];
   tab: (TabNote | GhostNote)[];
   beams: StaveNote[][];
+  /** stave[i] 가 다음 음과 붙임줄(tie)로 이어지는지(★02-B). stave 와 같은 길이. */
+  tieAfter: boolean[];
+  /** 잇단음 그룹(★02-C): 연속 num개 음 묶음. */
+  tuplets: { notes: StaveNote[]; num: number; inSpaceOf: number }[];
 }
 
 function buildMeasure(
@@ -328,6 +334,17 @@ function buildMeasure(
   const stave: StaveNote[] = [];
   const tab: (TabNote | GhostNote)[] = [];
   const beams: StaveNote[][] = [];
+  const tieAfter: boolean[] = [];
+  const tuplets: { notes: StaveNote[]; num: number; inSpaceOf: number }[] = [];
+  let curTup: StaveNote[] = [];
+  let curTupSpec: { num: number; inSpaceOf: number } | null = null;
+  const flushTup = () => {
+    if (curTup.length && curTupSpec) {
+      tuplets.push({ notes: curTup, num: curTupSpec.num, inSpaceOf: curTupSpec.inSpaceOf });
+    }
+    curTup = [];
+    curTupSpec = null;
+  };
   let curBeam: StaveNote[] = [];
   let pos = 0; // 마디 내 위치(16분 단위)
   const flush = () => {
@@ -347,8 +364,10 @@ function buildMeasure(
 
     if (n.rest) {
       flush();
+      flushTup();
       stave.push(new StaveNote({ keys: ['b/4'], duration: `${durCode}r` }));
       tab.push(new GhostNote(durCode));
+      tieAfter.push(false);
       pos += unit;
       if (pos % beatInt === 0) flush();
       continue;
@@ -451,6 +470,16 @@ function buildMeasure(
 
     stave.push(sNote);
     tab.push(tNote);
+    tieAfter.push(!!n.tiedToNext);
+
+    // ★02-C 잇단음: 연속된 tuplet 음을 num개씩 묶는다.
+    if (n.tuplet) {
+      curTup.push(sNote);
+      curTupSpec = n.tuplet;
+      if (curTup.length >= n.tuplet.num) flushTup();
+    } else {
+      flushTup();
+    }
 
     // 8·16분음표만 빔 대상. 박(beat) 경계에서 끊는다.
     if (n.duration === 'eighth' || n.duration === 'sixteenth') curBeam.push(sNote);
@@ -459,7 +488,8 @@ function buildMeasure(
     if (pos % beatInt === 0) flush();
   }
   flush();
-  return { stave, tab, beams };
+  flushTup();
+  return { stave, tab, beams, tieAfter, tuplets };
 }
 
 /* ---- 본체 ------------------------------------------------------------- */
@@ -590,6 +620,9 @@ export function renderStaff(score: Score, mode: StaffMode): string {
       const sTick: (StaveNote | BarNote)[] = [];
       const tTick: (TabNote | GhostNote | BarNote)[] = [];
       const beams: StaveNote[][] = [];
+      const flatStave: StaveNote[] = []; // BarNote 제외한 실제 음 순서(붙임줄 인접 판정용)
+      const flatTie: boolean[] = [];
+      const tupGroups: { notes: StaveNote[]; num: number; inSpaceOf: number }[] = [];
       rowMeasures.forEach((mb, mi) => {
         if (mi > 0) {
           sTick.push(new BarNote());
@@ -598,7 +631,14 @@ export function renderStaff(score: Score, mode: StaffMode): string {
         sTick.push(...mb.stave);
         tTick.push(...mb.tab);
         beams.push(...mb.beams);
+        flatStave.push(...mb.stave);
+        flatTie.push(...mb.tieAfter);
+        tupGroups.push(...mb.tuplets);
       });
+      // ★02-C 잇단음: Tuplet 은 format 전에 생성해야 tick 배분이 맞다(생성자가 note tick 을 조정).
+      const tupletObjs = tupGroups.map(
+        (g) => new Tuplet(g.notes, { num_notes: g.num, notes_occupied: g.inSpaceOf }),
+      );
 
       const vStaff = new Voice({ num_beats: (numBeats || 4) * mCount, beat_value: beatValue || 4 })
         .setStrict(false)
@@ -624,6 +664,19 @@ export function renderStaff(score: Score, mode: StaffMode): string {
       vStaff.draw(ctx, stave);
       if (vTab && tabstave) vTab.draw(ctx, tabstave);
       for (const b of beamObjs) b.setContext(ctx).draw();
+      for (const t of tupletObjs) t.setContext(ctx).draw(); // ★02-C 잇단음 괄호·숫자
+      // ★02-B 붙임줄(tie): 붙임 표시된 음과 다음 음 사이 StaveTie 곡선(오선보). 행 경계 넘는 tie 는 생략.
+      for (let i = 0; i < flatStave.length - 1; i++) {
+        if (!flatTie[i]) continue;
+        new StaveTie({
+          first_note: flatStave[i]!,
+          last_note: flatStave[i + 1]!,
+          first_indices: [0],
+          last_indices: [0],
+        })
+          .setContext(ctx)
+          .draw();
+      }
       if (withTab && tabstave) {
         new StaveConnector(stave, tabstave).setType('brace').setContext(ctx).draw();
         new StaveConnector(stave, tabstave).setType('singleLeft').setContext(ctx).draw();

@@ -230,9 +230,17 @@ function validateScore(score, ctx) {
         }
         let u = DUR_UNITS[n.duration] ?? 0;
         if (n.dotted) u *= 1.5;
+        // ★02-C 잇단음: num개를 inSpaceOf개 자리에 → 개별 길이에 inSpaceOf/num 배. (3연8분음 = 2/3배)
+        if (n.tuplet) {
+          const { num, inSpaceOf } = n.tuplet;
+          if (!(Number.isInteger(num) && num >= 2 && Number.isInteger(inSpaceOf) && inSpaceOf >= 1))
+            at(`note.tuplet 형식 오류(num≥2·inSpaceOf≥1): ${JSON.stringify(n.tuplet)}`);
+          else u *= inSpaceOf / num;
+        }
         units += u;
       }
-      if (units !== expectUnits)
+      // 잇단음(분수) 합산의 부동소수 오차 허용(예: 2·2/3·3 = 3.9999997).
+      if (Math.abs(units - expectUnits) > 1e-6)
         at(`마디 ${meas.measure ?? '?'} 박자합 ${units} ≠ ${expectUnits}(${tsNum}/${tsDen})`);
     }
   } else {

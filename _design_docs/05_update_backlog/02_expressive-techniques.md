@@ -1,6 +1,6 @@
 ---
 id: 02-expressive-techniques
-status: IN_PROGRESS (A 기법렌더·D 비4/4빔 완료 2026-07-09 — B 붙임줄·C 잇단음 대기)
+status: DONE (A 기법렌더·B 붙임줄·C 잇단음·D 비4/4빔 전부 완료 2026-07-09 — 기존 콘텐츠 dist 바이트 불변)
 priority: medium
 risk: medium
 depends_on: []
@@ -76,11 +76,11 @@ owner: null
 
 - [x] A: staff.ts에 bend/hammer_on/pull_off/slide/vibrato/harmonic 렌더 분기 — 2026-07-09. 오선보 위 텍스트 마커(Annotation, 기존 P.M. 관례) H·P·sl·bend·vib·harm. (슬러/벤딩화살표 글리프 고도화는 후속 여지)
 - [x] A: STAFF_TECHNIQUES 완화(구현된 6종 추가) — 2026-07-09
-- [ ] B: tie 필드 + StaveTie 렌더
-- [ ] C: tuplet 필드 + Tuplet 렌더 + validateScore 박자합 예외
+- [x] B: `tiedToNext` 필드(타입·스키마) + StaveTie 렌더(오선보 곡선, 행 경계 넘는 tie는 생략) — 2026-07-09
+- [x] C: `tuplet:{num,inSpaceOf}` 필드 + Tuplet 렌더 + validateScore 박자합 예외(inSpaceOf/num 환산 + fp 오차 1e-6 허용) — 2026-07-09
 - [x] D: BEAT_INT → timeSignature 유도(`beatUnit`) — 2026-07-09. 단순박자=16/분모, 복합(6/8·9/8·12/8)=점4분음 그룹. 4/4→4 불변
-- [ ] V1~V5 통과(비4/4·기존 4/4 픽셀 불변) + Roadmap·이 문서 갱신
-- [ ] playbook 8규칙에서 "오선보 밴딩 금지"류 문구 갱신(구현된 기법 반영)
+- [x] V1~V5 통과(비4/4·기존 4/4 픽셀 불변) — dist md5 `31d885e9…` before==after 전 단계, invariants 315블록 회귀 0, 격리 렌더로 6기법·tie·triplet·6/8 확인
+- [x] playbook "오선보 밴딩 금지"류 문구 — 해당 문구 없음(N/A). playbook은 dead_note/palm_mute 설명만 있어 갱신 대상 없음
 
 ## 미해결 질문 (사람 결정)
 

@@ -128,6 +128,8 @@
                     },
                     "slideToFret": { "type": "integer", "minimum": 0, "maximum": 24, "description": "슬라이드 도착 프렛(구 slide_to 통일). technique=slide일 때." },
                     "bendTarget": { "type": "string", "description": "벤딩 도착 목표(구 bend_target 통일). 예: 'half'(반음), 'full'(온음), 또는 도착 도수 '5'. technique=bend일 때." },
+                    "tiedToNext": { "type": "boolean", "description": "붙임줄(tie): 이 음을 다음 음과 이어 지속. 오선보에 StaveTie 곡선. 같은 음높이 연결에 사용." },
+                    "tuplet": { "type": "object", "description": "잇단음(예: 3연8분음 {num:3,inSpaceOf:2}). 연속 num개 음 각각에 동일 spec. 박자합도 inSpaceOf/num로 환산.", "required": ["num", "inSpaceOf"], "properties": { "num": { "type": "integer", "minimum": 2 }, "inSpaceOf": { "type": "integer", "minimum": 1 } } },
                     "label": { "type": "string", "description": "도수/음이름 표기(구 degree 통일). 예: R, b3, 3, 'G7-3(B)'. 오선보에서 단음 아래에 렌더(화음 chord[] 있는 음표에는 생략)." },
                     "target": { "type": "boolean", "default": false, "description": "코드톤 착지 목표음 여부(주로 3도). 구 target 통일." },
                     "highlight": { "type": "boolean", "default": false, "description": "시각 강조(색채음/블루노트/타겟)." },

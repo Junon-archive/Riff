@@ -135,6 +135,13 @@ export interface TabNote {
   slideToFret?: number;
   /** technique=bend 일 때 도착 목표. 예: 'half'(반음), 'full'(온음), 도착 도수 '5' */
   bendTarget?: string;
+  /** 붙임줄(tie): 이 음을 다음 음과 이어(합산) 지속. staff.ts가 오선보에 StaveTie 곡선을 그린다. 같은 음높이 연결에 사용. */
+  tiedToNext?: boolean;
+  /**
+   * 잇단음(tuplet). num개 음을 inSpaceOf개 자리(공간)에 채운다(예: 3연8분음 = {num:3,inSpaceOf:2}).
+   * 잇단음 그룹의 **연속된 num개 음 각각에 동일 spec**을 붙인다. 박자합 검증도 이 비율(inSpaceOf/num)로 환산.
+   */
+  tuplet?: { num: number; inSpaceOf: number };
   /** 도수/음이름 표기 (예: R, b3, 3, 'G7-3(B)') */
   label?: string;
   /** 코드톤 착지 목표음 여부(주로 3도) */
