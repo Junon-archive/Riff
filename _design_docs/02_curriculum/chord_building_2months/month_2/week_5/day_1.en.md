@@ -13,6 +13,22 @@ Over the past month the root came **down** — from the 6th string (Week 1) to t
 
 Our example is **G major (D-shape)** with the root on the 4th string, 5th fret. Broken down by interval:
 
+```json
+{
+  "id": "m2.w5.d1.g_major_dform",
+  "type": "fretboard_diagram",
+  "meta": { "title": "G major — 4th-string root (D-shape)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "G" },
+  "fretboard": { "startFret": 5, "fretSpan": 5, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 0, "muted": true },
+    { "string": 4, "fret": 5, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 3, "fret": 7, "finger": 2, "label": "5", "role": "chord_tone" },
+    { "string": 2, "fret": 8, "finger": 4, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 1, "fret": 7, "finger": 3, "label": "3", "role": "target", "highlight": true }
+  ]}
+}
+```
+
 - **R (root)** — 4th string, fret 5 (G). This week's new home.
 - **5 (5th)** — 3rd string, fret 7 (D).
 - **R (root)** — 2nd string, fret 8 (G). The octave root.

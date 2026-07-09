@@ -21,6 +21,38 @@ That's why pros boldly drop the 5th (and the doubled root) and keep **only root�
 
 Today, using last week's G7, we diet it from a **6-string full chord → a 3-string shell.** Throwing something away feels like a loss, right? Yet strangely, the more pro you are, the less you grab. Using only three fingers, your changes will actually get easier than before — let's feel "the less you hold, the more pro it sounds" with your own hands today.
 
+```json
+{
+  "id": "m1.w4.d1.g7_full",
+  "type": "fretboard_diagram",
+  "meta": { "title": "G7 — full voicing (6 strings)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "G" },
+  "fretboard": { "startFret": 3, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 5, "fret": 5, "finger": 3, "label": "5", "role": "chord_tone" },
+    { "string": 4, "fret": 3, "finger": 1, "label": "b7", "role": "target", "highlight": true },
+    { "string": 3, "fret": 4, "finger": 2, "label": "3", "role": "target", "highlight": true },
+    { "string": 2, "fret": 3, "finger": 1, "label": "5", "role": "chord_tone" },
+    { "string": 1, "fret": 3, "finger": 1, "label": "R", "role": "root" }
+  ]}
+}
+```
+
+```json
+{
+  "id": "m1.w4.d1.g7_shell",
+  "type": "fretboard_diagram",
+  "meta": { "title": "G7 — shell voicing (R·b7·3)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "G" },
+  "fretboard": { "startFret": 3, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 5, "fret": 0, "muted": true },
+    { "string": 4, "fret": 3, "finger": 2, "label": "b7", "role": "target", "highlight": true },
+    { "string": 3, "fret": 4, "finger": 3, "label": "3", "role": "target", "highlight": true },
+    { "string": 2, "fret": 0, "muted": true },
+    { "string": 1, "fret": 0, "muted": true }
+  ]}
+}
+```
+
 ## ② Visuals
 
 First, the familiar **G7 full voicing (6 strings).** Green is the 3rd & 7th (the color-holders), blue is the root & 5th.

@@ -15,6 +15,45 @@ i18nKey: "lesson.m2.w5.d3"
 - **トップ＝3（B）** — 明るく歌う感じ。（7フレット付近）
 - **トップ＝5（D）** — 開いて浮いた感じ。（10フレット付近）
 
+```json
+{
+  "id": "m2.w5.d3.g_top_root",
+  "type": "fretboard_diagram",
+  "meta": { "title": "G triad — top note R", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "G" },
+  "fretboard": { "startFret": 3, "fretSpan": 4, "dots": [
+    { "string": 3, "fret": 4, "finger": 3, "label": "3", "role": "chord_tone" },
+    { "string": 2, "fret": 3, "finger": 1, "label": "5", "role": "chord_tone" },
+    { "string": 1, "fret": 3, "finger": 2, "label": "R", "role": "target", "highlight": true }
+  ]}
+}
+```
+
+```json
+{
+  "id": "m2.w5.d3.g_top_third",
+  "type": "fretboard_diagram",
+  "meta": { "title": "G triad — top note 3", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "G" },
+  "fretboard": { "startFret": 6, "fretSpan": 4, "dots": [
+    { "string": 3, "fret": 7, "finger": 1, "label": "5", "role": "chord_tone" },
+    { "string": 2, "fret": 8, "finger": 2, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 1, "fret": 7, "finger": 1, "label": "3", "role": "target", "highlight": true }
+  ]}
+}
+```
+
+```json
+{
+  "id": "m2.w5.d3.g_top_fifth",
+  "type": "fretboard_diagram",
+  "meta": { "title": "G triad — top note 5", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "G" },
+  "fretboard": { "startFret": 9, "fretSpan": 5, "dots": [
+    { "string": 3, "fret": 12, "finger": 2, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 2, "fret": 12, "finger": 3, "label": "3", "role": "chord_tone" },
+    { "string": 1, "fret": 10, "finger": 1, "label": "5", "role": "target", "highlight": true }
+  ]}
+}
+```
+
 3つとも同じG（G-B-D）なのに、一番上の音1つで色が変わります。プロは進行の中で**トップノートを選んで**コードを配置します（7週目でこれをメロディにつなぎます）。今日は「トップノートを変えると色が変わる」感覚だけ確実に持ち帰りましょう。3つの位置を今すぐ全部覚える必要はまったくありません。同じコードが位置1つでこんなに違って聞こえるって、不思議じゃないですか？　この感覚が7週目でトップノートをつないだ瞬間、あなたのコンピングの上をメロディが流れはじめます。
 
 ## ② ビジュアル

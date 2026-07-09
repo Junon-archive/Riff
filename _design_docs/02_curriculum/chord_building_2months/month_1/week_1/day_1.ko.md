@@ -13,6 +13,31 @@ i18nKey: "lesson.m1.w1.d1"
 
 기준점은 딱 하나, **근음(R)**. 오늘은 근음이 **6번 줄**에 있는 코드(흔히 'E 폼'이라 부르는 그것)를 해부할 거예요. 예시는 3프렛의 **G 메이저**. 겁먹을 것 하나 없어요 — 이 커다란 코드 안에도 사실 세 종류의 음밖에 없거든요.
 
+```json
+{
+  "id": "m1.w1.d1.g_major_eform",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "G major — 6th-string root (E-form)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "G"
+  },
+  "fretboard": {
+    "startFret": 3,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 6, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 5, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 4, "fret": 5, "finger": 4, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 4, "finger": 2, "label": "3", "role": "target", "highlight": true },
+      { "string": 2, "fret": 3, "finger": 1, "label": "5", "role": "chord_tone" },
+      { "string": 1, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" }
+    ]
+  }
+}
+```
+
 - **R (근음)** — 6번·4번·1번 줄에 있는 G. 이 코드의 이름이자 집이에요.
 - **3 (3도)** — 3번 줄의 B. 코드의 **표정**을 결정하는 음. 밝은가 어두운가는 전부 이 3도가 정해요.
 - **5 (5도)** — 5번·2번 줄의 D. 코드를 두껍게 받쳐주는 기둥. 성격은 안 바꿔요.

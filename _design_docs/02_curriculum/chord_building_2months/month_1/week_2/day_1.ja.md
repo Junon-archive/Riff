@@ -13,6 +13,31 @@ i18nKey: "lesson.m1.w2.d1"
 
 例は5弦3フレットにルートを置いた**Cメジャー（Aフォーム）**。指が押さえる場所を度数で1つずつ分解すると：
 
+```json
+{
+  "id": "m1.w2.d1.c_major_aform",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "C major — 5th-string root (A-form)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "C"
+  },
+  "fretboard": {
+    "startFret": 3,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 6, "fret": 0, "muted": true },
+      { "string": 5, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 5, "finger": 2, "label": "5", "role": "chord_tone" },
+      { "string": 3, "fret": 5, "finger": 3, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 2, "fret": 5, "finger": 4, "label": "3", "role": "target", "highlight": true },
+      { "string": 1, "fret": 0, "muted": true }
+    ]
+  }
+}
+```
+
 - **R（ルート）** — 5弦3フレット（C）。今週の新しい家。
 - **5（5度）** — 4弦5フレット（G）。ルートのすぐ上の弦。
 - **R（ルート）** — 3弦5フレット（C）。オクターブ上のルート。

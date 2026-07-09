@@ -13,6 +13,31 @@ Here's why we're doing this today: it's not that we can't play chords because we
 
 There's exactly one reference point: the **root (R).** Today we dissect a chord whose root sits on the **6th string** (the one people call the "E-form"). Our example is **G major** at the 3rd fret. Don't be intimidated — even inside this big chord there are really only three kinds of notes.
 
+```json
+{
+  "id": "m1.w1.d1.g_major_eform",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "G major — 6th-string root (E-form)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "G"
+  },
+  "fretboard": {
+    "startFret": 3,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 6, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 5, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 4, "fret": 5, "finger": 4, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 4, "finger": 2, "label": "3", "role": "target", "highlight": true },
+      { "string": 2, "fret": 3, "finger": 1, "label": "5", "role": "chord_tone" },
+      { "string": 1, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" }
+    ]
+  }
+}
+```
+
 - **R (root)** — the G on the 6th, 4th, and 1st strings. The chord's name, and its home.
 - **3 (3rd)** — the B on the 3rd string. The note that sets the chord's **expression.** Bright or dark is entirely decided by this 3rd.
 - **5 (5th)** — the D on the 5th and 2nd strings. A pillar that thickens the chord. It doesn't change the character.

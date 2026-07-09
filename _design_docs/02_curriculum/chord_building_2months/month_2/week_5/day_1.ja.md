@@ -13,6 +13,22 @@ i18nKey: "lesson.m2.w5.d1"
 
 例は4弦5フレットにルートを置いた**Gメジャー（Dフォーム）**。度数で分解すると：
 
+```json
+{
+  "id": "m2.w5.d1.g_major_dform",
+  "type": "fretboard_diagram",
+  "meta": { "title": "G major — 4th-string root (D-shape)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "G" },
+  "fretboard": { "startFret": 5, "fretSpan": 5, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 0, "muted": true },
+    { "string": 4, "fret": 5, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 3, "fret": 7, "finger": 2, "label": "5", "role": "chord_tone" },
+    { "string": 2, "fret": 8, "finger": 4, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 1, "fret": 7, "finger": 3, "label": "3", "role": "target", "highlight": true }
+  ]}
+}
+```
+
 - **R（ルート）** — 4弦5フレット（G）。今週の新しい家。
 - **5（5度）** — 3弦7フレット（D）。
 - **R（ルート）** — 2弦8フレット（G）。オクターブ上のルート。

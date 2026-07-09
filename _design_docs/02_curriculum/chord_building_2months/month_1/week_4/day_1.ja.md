@@ -21,6 +21,38 @@ i18nKey: "lesson.m1.w4.d1"
 
 今日は先週のG7を例に、**6弦フルコード → 3弦シェル**へダイエットします。何かを捨てるなんて損な気がしますよね？　でも不思議なことに、プロほど少なく押さえるんです。指3本しか使わないので、切替はむしろ今までより楽になります — 「少なく押さえるほどプロっぽく聞こえる」を、今日は自分の手で感じてみましょう。
 
+```json
+{
+  "id": "m1.w4.d1.g7_full",
+  "type": "fretboard_diagram",
+  "meta": { "title": "G7 — full voicing (6 strings)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "G" },
+  "fretboard": { "startFret": 3, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 5, "fret": 5, "finger": 3, "label": "5", "role": "chord_tone" },
+    { "string": 4, "fret": 3, "finger": 1, "label": "b7", "role": "target", "highlight": true },
+    { "string": 3, "fret": 4, "finger": 2, "label": "3", "role": "target", "highlight": true },
+    { "string": 2, "fret": 3, "finger": 1, "label": "5", "role": "chord_tone" },
+    { "string": 1, "fret": 3, "finger": 1, "label": "R", "role": "root" }
+  ]}
+}
+```
+
+```json
+{
+  "id": "m1.w4.d1.g7_shell",
+  "type": "fretboard_diagram",
+  "meta": { "title": "G7 — shell voicing (R·b7·3)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "G" },
+  "fretboard": { "startFret": 3, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 5, "fret": 0, "muted": true },
+    { "string": 4, "fret": 3, "finger": 2, "label": "b7", "role": "target", "highlight": true },
+    { "string": 3, "fret": 4, "finger": 3, "label": "3", "role": "target", "highlight": true },
+    { "string": 2, "fret": 0, "muted": true },
+    { "string": 1, "fret": 0, "muted": true }
+  ]}
+}
+```
+
 ## ② ビジュアル
 
 まず馴染みの**G7フルコード（6弦）**。緑が3度・7度（色を握る音）、青がルート・5度。

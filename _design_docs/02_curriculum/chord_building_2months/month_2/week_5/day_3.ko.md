@@ -15,6 +15,45 @@ i18nKey: "lesson.m2.w5.d3"
 - **탑 = 3(B)** — 밝고 노래하는 느낌. (7프렛 근처)
 - **탑 = 5(D)** — 열려 있고 붕 뜬 느낌. (10프렛 근처)
 
+```json
+{
+  "id": "m2.w5.d3.g_top_root",
+  "type": "fretboard_diagram",
+  "meta": { "title": "G triad — top note R", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "G" },
+  "fretboard": { "startFret": 3, "fretSpan": 4, "dots": [
+    { "string": 3, "fret": 4, "finger": 3, "label": "3", "role": "chord_tone" },
+    { "string": 2, "fret": 3, "finger": 1, "label": "5", "role": "chord_tone" },
+    { "string": 1, "fret": 3, "finger": 2, "label": "R", "role": "target", "highlight": true }
+  ]}
+}
+```
+
+```json
+{
+  "id": "m2.w5.d3.g_top_third",
+  "type": "fretboard_diagram",
+  "meta": { "title": "G triad — top note 3", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "G" },
+  "fretboard": { "startFret": 6, "fretSpan": 4, "dots": [
+    { "string": 3, "fret": 7, "finger": 1, "label": "5", "role": "chord_tone" },
+    { "string": 2, "fret": 8, "finger": 2, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 1, "fret": 7, "finger": 1, "label": "3", "role": "target", "highlight": true }
+  ]}
+}
+```
+
+```json
+{
+  "id": "m2.w5.d3.g_top_fifth",
+  "type": "fretboard_diagram",
+  "meta": { "title": "G triad — top note 5", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "G" },
+  "fretboard": { "startFret": 9, "fretSpan": 5, "dots": [
+    { "string": 3, "fret": 12, "finger": 2, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 2, "fret": 12, "finger": 3, "label": "3", "role": "chord_tone" },
+    { "string": 1, "fret": 10, "finger": 1, "label": "5", "role": "target", "highlight": true }
+  ]}
+}
+```
+
 세 개 다 똑같은 G(도·미·솔)인데, 맨 위 음 하나로 색이 달라져요. 프로는 진행 속에서 **탑노트를 골라** 코드를 배치해요(7주차에서 이걸 멜로디로 잇습니다). 오늘은 "탑노트를 바꾸면 색이 바뀐다"는 감각만 확실히 챙기면 돼요. 세 자리를 지금 다 외울 필요는 전혀 없어요. 같은 코드가 자리 하나로 이렇게 달리 들린다는 게 신기하지 않아요? 이 감각이 7주차에서 탑노트를 이어 붙이는 순간, 여러분의 반주 위로 멜로디가 흐르기 시작해요.
 
 ## ② 시각 자료

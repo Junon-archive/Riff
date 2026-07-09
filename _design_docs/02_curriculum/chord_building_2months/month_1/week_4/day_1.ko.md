@@ -21,6 +21,38 @@ i18nKey: "lesson.m1.w4.d1"
 
 오늘은 지난주의 G7을 예로, **6줄 풀코드 → 3줄 쉘** 로 다이어트해봅니다. 뭔가를 버린다니 손해 같죠? 그런데 신기하게도, 프로일수록 덜 잡아요. 손가락 세 개만 쓰니 전환이 오히려 지금까지보다 편해질 거예요 — "적게 잡을수록 프로답게 들린다"를 오늘 손으로 느껴봅시다.
 
+```json
+{
+  "id": "m1.w4.d1.g7_full",
+  "type": "fretboard_diagram",
+  "meta": { "title": "G7 — full voicing (6 strings)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "G" },
+  "fretboard": { "startFret": 3, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 5, "fret": 5, "finger": 3, "label": "5", "role": "chord_tone" },
+    { "string": 4, "fret": 3, "finger": 1, "label": "b7", "role": "target", "highlight": true },
+    { "string": 3, "fret": 4, "finger": 2, "label": "3", "role": "target", "highlight": true },
+    { "string": 2, "fret": 3, "finger": 1, "label": "5", "role": "chord_tone" },
+    { "string": 1, "fret": 3, "finger": 1, "label": "R", "role": "root" }
+  ]}
+}
+```
+
+```json
+{
+  "id": "m1.w4.d1.g7_shell",
+  "type": "fretboard_diagram",
+  "meta": { "title": "G7 — shell voicing (R·b7·3)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "G" },
+  "fretboard": { "startFret": 3, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 5, "fret": 0, "muted": true },
+    { "string": 4, "fret": 3, "finger": 2, "label": "b7", "role": "target", "highlight": true },
+    { "string": 3, "fret": 4, "finger": 3, "label": "3", "role": "target", "highlight": true },
+    { "string": 2, "fret": 0, "muted": true },
+    { "string": 1, "fret": 0, "muted": true }
+  ]}
+}
+```
+
 ## ② 시각 자료
 
 먼저 익숙한 **G7 풀코드(6줄)**. 초록이 3도·7도(색을 쥔 음), 파랑이 근음·5도예요.

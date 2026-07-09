@@ -13,6 +13,31 @@ i18nKey: "lesson.m1.w1.d1"
 
 基準点はたった1つ、**ルート（R）**。今日はルートが**6弦**にあるコード（いわゆる「Eフォーム」）を解剖します。例は3フレットの**Gメジャー**。怖がらないで — この大きなコードの中にも、実は3種類の音しかありません。
 
+```json
+{
+  "id": "m1.w1.d1.g_major_eform",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "G major — 6th-string root (E-form)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "G"
+  },
+  "fretboard": {
+    "startFret": 3,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 6, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 5, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 4, "fret": 5, "finger": 4, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 4, "finger": 2, "label": "3", "role": "target", "highlight": true },
+      { "string": 2, "fret": 3, "finger": 1, "label": "5", "role": "chord_tone" },
+      { "string": 1, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" }
+    ]
+  }
+}
+```
+
 - **R（ルート）** — 6弦・4弦・1弦にあるG。コードの名前であり、家。
 - **3（3度）** — 3弦のB。コードの**表情**を決める音。明るいか暗いかは全部この3度が決めます。
 - **5（5度）** — 5弦・2弦のD。コードを厚く支える柱。性格は変えません。

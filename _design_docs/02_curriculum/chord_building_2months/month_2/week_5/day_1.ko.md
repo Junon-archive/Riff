@@ -13,6 +13,22 @@ i18nKey: "lesson.m2.w5.d1"
 
 예시는 4번 줄 5프렛에 근음을 둔 **G 메이저(D 폼)**. 도수로 뜯어보면:
 
+```json
+{
+  "id": "m2.w5.d1.g_major_dform",
+  "type": "fretboard_diagram",
+  "meta": { "title": "G major — 4th-string root (D-shape)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "G" },
+  "fretboard": { "startFret": 5, "fretSpan": 5, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 0, "muted": true },
+    { "string": 4, "fret": 5, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 3, "fret": 7, "finger": 2, "label": "5", "role": "chord_tone" },
+    { "string": 2, "fret": 8, "finger": 4, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 1, "fret": 7, "finger": 3, "label": "3", "role": "target", "highlight": true }
+  ]}
+}
+```
+
 - **R (근음)** — 4번 줄 5프렛(G). 이번 주의 새 집.
 - **5 (5도)** — 3번 줄 7프렛(D).
 - **R (근음)** — 2번 줄 8프렛(G). 옥타브 위 근음.

@@ -15,6 +15,45 @@ Even the same G chord sounds completely different depending on **which of R·3·
 - **Top = 3 (B)** — bright, singing. (around fret 7)
 - **Top = 5 (D)** — open, floating. (around fret 10)
 
+```json
+{
+  "id": "m2.w5.d3.g_top_root",
+  "type": "fretboard_diagram",
+  "meta": { "title": "G triad — top note R", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "G" },
+  "fretboard": { "startFret": 3, "fretSpan": 4, "dots": [
+    { "string": 3, "fret": 4, "finger": 3, "label": "3", "role": "chord_tone" },
+    { "string": 2, "fret": 3, "finger": 1, "label": "5", "role": "chord_tone" },
+    { "string": 1, "fret": 3, "finger": 2, "label": "R", "role": "target", "highlight": true }
+  ]}
+}
+```
+
+```json
+{
+  "id": "m2.w5.d3.g_top_third",
+  "type": "fretboard_diagram",
+  "meta": { "title": "G triad — top note 3", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "G" },
+  "fretboard": { "startFret": 6, "fretSpan": 4, "dots": [
+    { "string": 3, "fret": 7, "finger": 1, "label": "5", "role": "chord_tone" },
+    { "string": 2, "fret": 8, "finger": 2, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 1, "fret": 7, "finger": 1, "label": "3", "role": "target", "highlight": true }
+  ]}
+}
+```
+
+```json
+{
+  "id": "m2.w5.d3.g_top_fifth",
+  "type": "fretboard_diagram",
+  "meta": { "title": "G triad — top note 5", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "G" },
+  "fretboard": { "startFret": 9, "fretSpan": 5, "dots": [
+    { "string": 3, "fret": 12, "finger": 2, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 2, "fret": 12, "finger": 3, "label": "3", "role": "chord_tone" },
+    { "string": 1, "fret": 10, "finger": 1, "label": "5", "role": "target", "highlight": true }
+  ]}
+}
+```
+
 All three are the same G (G-B-D), yet one top note changes the color. Pros **choose the top note** to place chords within a progression (Week 7 connects these into a melody). Today, just lock in the feel that "changing the top note changes the color." No need to memorize all three positions right now. Isn't it something that the same chord sounds this different from one position alone? The moment this feel connects the top notes in Week 7, a melody starts flowing over your comping.
 
 ## ② Visuals

@@ -13,6 +13,31 @@ All last week the root sat on the **6th string.** This week, why move that home 
 
 Our example is **C major (A-form)** with the root on the 5th string, 3rd fret. Broken down by interval, one spot at a time:
 
+```json
+{
+  "id": "m1.w2.d1.c_major_aform",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "C major — 5th-string root (A-form)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "C"
+  },
+  "fretboard": {
+    "startFret": 3,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 6, "fret": 0, "muted": true },
+      { "string": 5, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 5, "finger": 2, "label": "5", "role": "chord_tone" },
+      { "string": 3, "fret": 5, "finger": 3, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 2, "fret": 5, "finger": 4, "label": "3", "role": "target", "highlight": true },
+      { "string": 1, "fret": 0, "muted": true }
+    ]
+  }
+}
+```
+
 - **R (root)** — 5th string, fret 3 (C). This week's new home.
 - **5 (5th)** — 4th string, fret 5 (G). The string just above the root.
 - **R (root)** — 3rd string, fret 5 (C). The octave root.

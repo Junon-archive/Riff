@@ -13,6 +13,31 @@ i18nKey: "lesson.m1.w2.d1"
 
 예시는 5번 줄 3프렛에 근음을 둔 **C 메이저(A 폼)**. 손가락이 잡는 자리를 도수로 하나씩 뜯어보면:
 
+```json
+{
+  "id": "m1.w2.d1.c_major_aform",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "C major — 5th-string root (A-form)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "C"
+  },
+  "fretboard": {
+    "startFret": 3,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 6, "fret": 0, "muted": true },
+      { "string": 5, "fret": 3, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 5, "finger": 2, "label": "5", "role": "chord_tone" },
+      { "string": 3, "fret": 5, "finger": 3, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 2, "fret": 5, "finger": 4, "label": "3", "role": "target", "highlight": true },
+      { "string": 1, "fret": 0, "muted": true }
+    ]
+  }
+}
+```
+
 - **R (근음)** — 5번 줄 3프렛(C). 이번 주의 새 집.
 - **5 (5도)** — 4번 줄 5프렛(G). 근음 바로 위 줄.
 - **R (근음)** — 3번 줄 5프렛(C). 옥타브 위 근음.
