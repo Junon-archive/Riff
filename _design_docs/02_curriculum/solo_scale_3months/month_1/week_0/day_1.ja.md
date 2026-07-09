@@ -28,6 +28,34 @@ lang: ja
 
 私たちが最初の1か月ずっと住む街が、**Aマイナーペンタトニック第1ボックス（5フレット）**です。Amコードの3度は**C（短3度、♭3）**。下の指板図で緑にハイライトされている音が、全部Cです。「いつかこの音たちに着地するんだな」という目印だけつけておきましょう。
 
+```json
+{
+  "id": "m1.w0.d1.am_chordtone_map",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "Am chord tones — where the 3rd (C) lives (concept preview)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "tempoBpm": 60
+  },
+  "fretboard": {
+    "startFret": 5,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 6, "fret": 5, "finger": 1, "isRoot": true, "label": "R", "role": "root" },
+      { "string": 6, "fret": 8, "finger": 4, "label": "b3", "role": "target", "highlight": true },
+      { "string": 5, "fret": 7, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 4, "fret": 7, "finger": 3, "isRoot": true, "label": "R", "role": "root" },
+      { "string": 3, "fret": 5, "finger": 1, "label": "b3", "role": "target", "highlight": true },
+      { "string": 2, "fret": 5, "finger": 1, "label": "5", "role": "chord_tone" },
+      { "string": 1, "fret": 5, "finger": 1, "isRoot": true, "label": "R", "role": "root" },
+      { "string": 1, "fret": 8, "finger": 4, "label": "b3", "role": "target", "highlight": true }
+    ]
+  }
+}
+```
+
 ## ② 視覚資料
 
 ```json

@@ -27,6 +27,34 @@ i18nKey: lesson.m1.w0.d1
 
 우리가 첫 달 내내 살게 될 동네가 **A 마이너 펜타토닉 1박스(5프렛)**예요. Am 코드의 3도는 **C(단3도, ♭3)**입니다. 아래 지판에서 초록색으로 강조된 음들이 전부 C예요. "언젠가 이 음들에 착지하게 되겠구나" 하는 눈도장만 찍고 갑시다.
 
+```json
+{
+  "id": "m1.w0.d1.am_chordtone_map",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "Am chord tones — where the 3rd (C) lives (concept preview)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "tempoBpm": 60
+  },
+  "fretboard": {
+    "startFret": 5,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 6, "fret": 5, "finger": 1, "isRoot": true, "label": "R", "role": "root" },
+      { "string": 6, "fret": 8, "finger": 4, "label": "b3", "role": "target", "highlight": true },
+      { "string": 5, "fret": 7, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 4, "fret": 7, "finger": 3, "isRoot": true, "label": "R", "role": "root" },
+      { "string": 3, "fret": 5, "finger": 1, "label": "b3", "role": "target", "highlight": true },
+      { "string": 2, "fret": 5, "finger": 1, "label": "5", "role": "chord_tone" },
+      { "string": 1, "fret": 5, "finger": 1, "isRoot": true, "label": "R", "role": "root" },
+      { "string": 1, "fret": 8, "finger": 4, "label": "b3", "role": "target", "highlight": true }
+    ]
+  }
+}
+```
+
 ## ② 시각 자료
 
 ```json

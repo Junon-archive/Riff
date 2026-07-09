@@ -143,6 +143,69 @@ Because of the slides, a full-neck run absolutely has to start slow. Play the ru
 **10–20 min · Brain training (find-C-across-the-neck challenge)**
 Metronome off. On the full-neck map, fret only the C (♭3) notes, moving up from the lowest fret to the highest, in order: 2nd string fret 1 → 5th string fret 3 → 3rd string fret 5 → 6th string fret 8 → 1st string fret 8 → 4th string fret 10 → 2nd string fret 13 → 5th string fret 15 → 3rd string fret 17. Say "C!" out loud every time you land on one. The goal is to burn into your eyes just how densely C is packed across the whole neck. Pass when you can go through the whole sequence without getting stuck.
 
+```json
+{
+  "id": "m1.w3.d3.pentatonic_full_neck",
+  "type": "scale_shape",
+  "meta": {
+    "title": "A minor pentatonic — full neck map (Box 1-5 connected)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "scale": "A minor pentatonic",
+    "tempoBpm": 80
+  },
+  "fretboard": {
+    "startFret": 0,
+    "fretSpan": 15,
+    "dots": [
+      { "string": 6, "fret": 0, "label": "5", "role": "chord_tone" },
+      { "string": 6, "fret": 3, "label": "b7", "role": "scale" },
+      { "string": 6, "fret": 5, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 6, "fret": 8, "label": "b3", "role": "target", "highlight": true },
+      { "string": 6, "fret": 10, "label": "4", "role": "scale" },
+      { "string": 6, "fret": 12, "label": "5", "role": "chord_tone" },
+      { "string": 6, "fret": 15, "label": "b7", "role": "scale" },
+      { "string": 5, "fret": 0, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 3, "label": "b3", "role": "target", "highlight": true },
+      { "string": 5, "fret": 5, "label": "4", "role": "scale" },
+      { "string": 5, "fret": 7, "label": "5", "role": "chord_tone" },
+      { "string": 5, "fret": 10, "label": "b7", "role": "scale" },
+      { "string": 5, "fret": 12, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 15, "label": "b3", "role": "target", "highlight": true },
+      { "string": 4, "fret": 0, "label": "4", "role": "scale" },
+      { "string": 4, "fret": 2, "label": "5", "role": "chord_tone" },
+      { "string": 4, "fret": 5, "label": "b7", "role": "scale" },
+      { "string": 4, "fret": 7, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 10, "label": "b3", "role": "target", "highlight": true },
+      { "string": 4, "fret": 12, "label": "4", "role": "scale" },
+      { "string": 4, "fret": 14, "label": "5", "role": "chord_tone" },
+      { "string": 3, "fret": 0, "label": "b7", "role": "scale" },
+      { "string": 3, "fret": 2, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 5, "label": "b3", "role": "target", "highlight": true },
+      { "string": 3, "fret": 7, "label": "4", "role": "scale" },
+      { "string": 3, "fret": 9, "label": "5", "role": "chord_tone" },
+      { "string": 3, "fret": 12, "label": "b7", "role": "scale" },
+      { "string": 3, "fret": 14, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 2, "fret": 1, "label": "b3", "role": "target", "highlight": true },
+      { "string": 2, "fret": 3, "label": "4", "role": "scale" },
+      { "string": 2, "fret": 5, "label": "5", "role": "chord_tone" },
+      { "string": 2, "fret": 8, "label": "b7", "role": "scale" },
+      { "string": 2, "fret": 10, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 2, "fret": 13, "label": "b3", "role": "target", "highlight": true },
+      { "string": 2, "fret": 15, "label": "4", "role": "scale" },
+      { "string": 1, "fret": 0, "label": "5", "role": "chord_tone" },
+      { "string": 1, "fret": 3, "label": "b7", "role": "scale" },
+      { "string": 1, "fret": 5, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 1, "fret": 8, "label": "b3", "role": "target", "highlight": true },
+      { "string": 1, "fret": 10, "label": "4", "role": "scale" },
+      { "string": 1, "fret": 12, "label": "5", "role": "chord_tone" },
+      { "string": 1, "fret": 15, "label": "b7", "role": "scale" }
+    ]
+  }
+}
+```
+
 **20–40 min · Real-world improv (Am one-chord backing, 75–85 BPM)**
 Play the backing track, rule: within a single phrase, you must touch both the low part of the neck (fret 5) and the high part (fret 15). Feel free to throw in the run above exactly, or just borrow the slide points and move up and down freely. The key is "don't get trapped at fret 5." When you go up, land on the nearby C (♭3); when you come back down, land on a nearby C again. Get the feeling of using the whole neck as your stage.
 

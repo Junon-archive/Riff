@@ -22,6 +22,38 @@ Now let's raise that 6th note by a half step. F becomes F#.
 
 That's it. Just one note in the scale changes: **b6 → ♮6**. But this single note transforms the entire sound. Aeolian's F sits dark and pressed-down over the root A, while Dorian's F# opens up much brighter and **more sophisticated**. That F# is exactly what Santana uses when he gets that "jazzy, Latin" feel out of a minor progression.
 
+```json
+{
+  "id": "m3.w9.d1.aeolian_vs_dorian_6th",
+  "type": "tab",
+  "meta": {
+    "title": "Aeolian b6(F) vs Dorian natural 6(F#) - hear the difference",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A Dorian",
+    "tempoBpm": 70
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "3rd_interval",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 5, "fret": 7, "duration": "quarter", "label": "5", "role": "chord_tone" },
+        { "string": 5, "fret": 8, "duration": "quarter", "label": "b6", "role": "passing" },
+        { "string": 5, "fret": 7, "duration": "quarter", "label": "5", "role": "chord_tone" },
+        { "string": 4, "fret": 7, "duration": "quarter", "label": "R", "isRoot": true, "role": "root" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 5, "fret": 7, "duration": "quarter", "label": "5", "role": "chord_tone" },
+        { "string": 5, "fret": 9, "duration": "quarter", "label": "6", "role": "color", "highlight": true },
+        { "string": 5, "fret": 7, "duration": "quarter", "label": "5", "role": "chord_tone" },
+        { "string": 4, "fret": 7, "duration": "quarter", "label": "R", "isRoot": true, "role": "root" }
+      ]}
+    ]
+  }
+}
+```
+
 Why is this particular note so special? F# is the **characteristic note** — it's what makes Dorian, Dorian. All the other notes (A B C D E G) are identical to Aeolian. So to get the Dorian color, you need to **actively spotlight** F#. Avoid it, and you're right back to plain dark minor. All week long, we'll use this F# like a paintbrush.
 
 Today's goal is just two things. First, get one A Dorian position under your fingers. Second, be able to find **where F# (the major 6th) lives** with your eyes closed. We'll use a backing track that's just one Am7 chord looping forever (a vamp). Today, hear it with your own ears — why laying F# over a minor chord makes it brighter.

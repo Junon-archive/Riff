@@ -142,6 +142,69 @@ i18nKey: "lesson.m1.w3.d3"
 **10~20분 · 두뇌 훈련 (넥 전체에서 C 찾기 챌린지)**
 메트로놈 끄고, **넥 전체 지도에서 C(♭3)만** 낮은 프렛부터 높은 프렛까지 순서대로 짚어 올라가기: 2번 줄 1프렛 → 5번 줄 3프렛 → 3번 줄 5프렛 → 6번 줄 8프렛 → 1번 줄 8프렛 → 4번 줄 10프렛 → 2번 줄 13프렛 → 5번 줄 15프렛 → 3번 줄 17프렛. 짚을 때마다 "씨!" 소리 내며. 넥에 C가 얼마나 촘촘히 깔려 있는지 눈에 새기는 게 목적이에요. 막힘없이 한 바퀴 돌면 통과.
 
+```json
+{
+  "id": "m1.w3.d3.pentatonic_full_neck",
+  "type": "scale_shape",
+  "meta": {
+    "title": "A minor pentatonic — full neck map (Box 1-5 connected)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "scale": "A minor pentatonic",
+    "tempoBpm": 80
+  },
+  "fretboard": {
+    "startFret": 0,
+    "fretSpan": 15,
+    "dots": [
+      { "string": 6, "fret": 0, "label": "5", "role": "chord_tone" },
+      { "string": 6, "fret": 3, "label": "b7", "role": "scale" },
+      { "string": 6, "fret": 5, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 6, "fret": 8, "label": "b3", "role": "target", "highlight": true },
+      { "string": 6, "fret": 10, "label": "4", "role": "scale" },
+      { "string": 6, "fret": 12, "label": "5", "role": "chord_tone" },
+      { "string": 6, "fret": 15, "label": "b7", "role": "scale" },
+      { "string": 5, "fret": 0, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 3, "label": "b3", "role": "target", "highlight": true },
+      { "string": 5, "fret": 5, "label": "4", "role": "scale" },
+      { "string": 5, "fret": 7, "label": "5", "role": "chord_tone" },
+      { "string": 5, "fret": 10, "label": "b7", "role": "scale" },
+      { "string": 5, "fret": 12, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 15, "label": "b3", "role": "target", "highlight": true },
+      { "string": 4, "fret": 0, "label": "4", "role": "scale" },
+      { "string": 4, "fret": 2, "label": "5", "role": "chord_tone" },
+      { "string": 4, "fret": 5, "label": "b7", "role": "scale" },
+      { "string": 4, "fret": 7, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 10, "label": "b3", "role": "target", "highlight": true },
+      { "string": 4, "fret": 12, "label": "4", "role": "scale" },
+      { "string": 4, "fret": 14, "label": "5", "role": "chord_tone" },
+      { "string": 3, "fret": 0, "label": "b7", "role": "scale" },
+      { "string": 3, "fret": 2, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 5, "label": "b3", "role": "target", "highlight": true },
+      { "string": 3, "fret": 7, "label": "4", "role": "scale" },
+      { "string": 3, "fret": 9, "label": "5", "role": "chord_tone" },
+      { "string": 3, "fret": 12, "label": "b7", "role": "scale" },
+      { "string": 3, "fret": 14, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 2, "fret": 1, "label": "b3", "role": "target", "highlight": true },
+      { "string": 2, "fret": 3, "label": "4", "role": "scale" },
+      { "string": 2, "fret": 5, "label": "5", "role": "chord_tone" },
+      { "string": 2, "fret": 8, "label": "b7", "role": "scale" },
+      { "string": 2, "fret": 10, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 2, "fret": 13, "label": "b3", "role": "target", "highlight": true },
+      { "string": 2, "fret": 15, "label": "4", "role": "scale" },
+      { "string": 1, "fret": 0, "label": "5", "role": "chord_tone" },
+      { "string": 1, "fret": 3, "label": "b7", "role": "scale" },
+      { "string": 1, "fret": 5, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 1, "fret": 8, "label": "b3", "role": "target", "highlight": true },
+      { "string": 1, "fret": 10, "label": "4", "role": "scale" },
+      { "string": 1, "fret": 12, "label": "5", "role": "chord_tone" },
+      { "string": 1, "fret": 15, "label": "b7", "role": "scale" }
+    ]
+  }
+}
+```
+
 **20~40분 · 실전 즉흥 (Am 원코드 백킹 / 75~85 BPM)**
 백킹 틀고 규칙: **한 프레이즈 안에서 넥의 아래(5프렛)와 위(15프렛)를 반드시 둘 다 밟기.** 위 런을 그대로 던져도 좋고, 슬라이드 지점만 빌려 자유롭게 오르내려도 좋아요. 핵심은 "5프렛에만 갇히지 않기." 올라갔으면 근처 C(♭3)에 착지, 내려왔으면 또 근처 C에 착지. 넥 전체를 한 무대로 쓰는 감각.
 

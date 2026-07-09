@@ -143,6 +143,69 @@ lang: ja
 **10〜20分・頭のトレーニング（ネック全体でC探しチャレンジ）**
 メトロノームを止めて、ネック全体の地図からC（♭3）だけを低いフレットから高いフレットへ順番に押さえていきます：2弦1フレット→5弦3フレット→3弦5フレット→6弦8フレット→1弦8フレット→4弦10フレット→2弦13フレット→5弦15フレット→3弦17フレット。押さえるたびに「シー！」と声に出しながら。ネックにCがどれだけびっしり散らばっているかを目に刻むのが目的です。詰まらずに一周できれば合格。
 
+```json
+{
+  "id": "m1.w3.d3.pentatonic_full_neck",
+  "type": "scale_shape",
+  "meta": {
+    "title": "A minor pentatonic — full neck map (Box 1-5 connected)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "scale": "A minor pentatonic",
+    "tempoBpm": 80
+  },
+  "fretboard": {
+    "startFret": 0,
+    "fretSpan": 15,
+    "dots": [
+      { "string": 6, "fret": 0, "label": "5", "role": "chord_tone" },
+      { "string": 6, "fret": 3, "label": "b7", "role": "scale" },
+      { "string": 6, "fret": 5, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 6, "fret": 8, "label": "b3", "role": "target", "highlight": true },
+      { "string": 6, "fret": 10, "label": "4", "role": "scale" },
+      { "string": 6, "fret": 12, "label": "5", "role": "chord_tone" },
+      { "string": 6, "fret": 15, "label": "b7", "role": "scale" },
+      { "string": 5, "fret": 0, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 3, "label": "b3", "role": "target", "highlight": true },
+      { "string": 5, "fret": 5, "label": "4", "role": "scale" },
+      { "string": 5, "fret": 7, "label": "5", "role": "chord_tone" },
+      { "string": 5, "fret": 10, "label": "b7", "role": "scale" },
+      { "string": 5, "fret": 12, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 5, "fret": 15, "label": "b3", "role": "target", "highlight": true },
+      { "string": 4, "fret": 0, "label": "4", "role": "scale" },
+      { "string": 4, "fret": 2, "label": "5", "role": "chord_tone" },
+      { "string": 4, "fret": 5, "label": "b7", "role": "scale" },
+      { "string": 4, "fret": 7, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 4, "fret": 10, "label": "b3", "role": "target", "highlight": true },
+      { "string": 4, "fret": 12, "label": "4", "role": "scale" },
+      { "string": 4, "fret": 14, "label": "5", "role": "chord_tone" },
+      { "string": 3, "fret": 0, "label": "b7", "role": "scale" },
+      { "string": 3, "fret": 2, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 3, "fret": 5, "label": "b3", "role": "target", "highlight": true },
+      { "string": 3, "fret": 7, "label": "4", "role": "scale" },
+      { "string": 3, "fret": 9, "label": "5", "role": "chord_tone" },
+      { "string": 3, "fret": 12, "label": "b7", "role": "scale" },
+      { "string": 3, "fret": 14, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 2, "fret": 1, "label": "b3", "role": "target", "highlight": true },
+      { "string": 2, "fret": 3, "label": "4", "role": "scale" },
+      { "string": 2, "fret": 5, "label": "5", "role": "chord_tone" },
+      { "string": 2, "fret": 8, "label": "b7", "role": "scale" },
+      { "string": 2, "fret": 10, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 2, "fret": 13, "label": "b3", "role": "target", "highlight": true },
+      { "string": 2, "fret": 15, "label": "4", "role": "scale" },
+      { "string": 1, "fret": 0, "label": "5", "role": "chord_tone" },
+      { "string": 1, "fret": 3, "label": "b7", "role": "scale" },
+      { "string": 1, "fret": 5, "label": "R", "isRoot": true, "role": "root" },
+      { "string": 1, "fret": 8, "label": "b3", "role": "target", "highlight": true },
+      { "string": 1, "fret": 10, "label": "4", "role": "scale" },
+      { "string": 1, "fret": 12, "label": "5", "role": "chord_tone" },
+      { "string": 1, "fret": 15, "label": "b7", "role": "scale" }
+    ]
+  }
+}
+```
+
 **20〜40分・実戦即興（Amワンコードバッキング／75〜85 BPM）**
 バッキングを流してルール：一つのフレーズの中で、ネックの下（5フレット）と上（15フレット）を必ず両方踏むこと。上のランをそのまま投げてもいいですし、スライド地点だけ借りて自由に上下してもOKです。大事なのは「5フレットだけに閉じ込められないこと」。上がったら近くのC（♭3）に着地、下がったらまた近くのCに着地。ネック全体を一つの舞台として使う感覚です。
 

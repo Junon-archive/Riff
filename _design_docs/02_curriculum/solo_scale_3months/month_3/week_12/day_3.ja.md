@@ -133,6 +133,80 @@ lang: ja
 **10〜20分・頭のトレーニング（小節ごとの組み立て）**
 完成タブを**2小節ずつ**区切って覚えます。1-2小節→3-4小節→5-6小節→7-8小節。各かたまりを滑らかにしてからつなぎます。特に4小節目の終わりのCから5小節目のC#へ移る継ぎ目（1フレットのスイッチ）を5回繰り返して手に刻んでください。
 
+```json
+{
+  "id": "m3.w12.d3.original_solo_full",
+  "type": "tab",
+  "meta": {
+    "title": "Original solo - full 8 bars (Am7 D7 Am7 D7 | A7 D7 Am7 Am7)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A (Dorian/Mixolydian composite)",
+    "tempoBpm": 92
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "composition",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 3, "fret": 7, "duration": "eighth", "technique": "none", "label": "4", "role": "scale" },
+        { "string": 3, "fret": 9, "duration": "eighth", "technique": "none", "label": "5", "role": "chord_tone" },
+        { "string": 3, "fret": 5, "duration": "quarter", "technique": "vibrato", "label": "b3", "role": "target", "highlight": true },
+        { "string": 1, "fret": 5, "duration": "half", "rest": true }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 2, "fret": 5, "duration": "eighth", "technique": "none", "label": "5", "role": "scale" },
+        { "string": 2, "fret": 7, "duration": "half", "technique": "vibrato", "label": "6", "role": "color", "highlight": true },
+        { "string": 1, "fret": 5, "duration": "quarter", "rest": true },
+        { "string": 2, "fret": 5, "duration": "eighth", "technique": "none", "label": "5", "role": "scale" }
+      ]},
+      { "measure": 3, "notes": [
+        { "string": 1, "fret": 8, "duration": "eighth", "technique": "none", "label": "b3", "role": "target", "highlight": true },
+        { "string": 1, "fret": 7, "duration": "eighth", "technique": "none", "label": "2", "role": "scale" },
+        { "string": 1, "fret": 5, "duration": "eighth", "technique": "none", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 2, "fret": 8, "duration": "eighth", "technique": "none", "label": "b7", "role": "scale" },
+        { "string": 2, "fret": 5, "duration": "quarter", "technique": "none", "label": "5", "role": "chord_tone" },
+        { "string": 3, "fret": 5, "duration": "quarter", "technique": "vibrato", "label": "b3", "role": "target", "highlight": true }
+      ]},
+      { "measure": 4, "notes": [
+        { "string": 3, "fret": 7, "duration": "eighth", "technique": "none", "label": "4", "role": "scale" },
+        { "string": 3, "fret": 9, "duration": "eighth", "technique": "none", "label": "5", "role": "chord_tone" },
+        { "string": 2, "fret": 7, "duration": "quarter", "technique": "vibrato", "label": "6", "role": "color", "highlight": true },
+        { "string": 1, "fret": 5, "duration": "quarter", "rest": true },
+        { "string": 3, "fret": 5, "duration": "quarter", "technique": "none", "label": "b3", "role": "passing" }
+      ]},
+      { "measure": 5, "notes": [
+        { "string": 3, "fret": 6, "duration": "quarter", "technique": "vibrato", "label": "3", "role": "target", "highlight": true },
+        { "string": 1, "fret": 5, "duration": "eighth", "rest": true },
+        { "string": 2, "fret": 8, "duration": "eighth", "technique": "none", "label": "b7", "role": "color", "highlight": true },
+        { "string": 1, "fret": 8, "duration": "eighth", "technique": "bend", "bendTarget": "half", "label": "b3", "role": "blue_note", "highlight": true },
+        { "string": 1, "fret": 9, "duration": "quarter", "technique": "none", "label": "3", "role": "target", "highlight": true },
+        { "string": 1, "fret": 5, "duration": "eighth", "rest": true }
+      ]},
+      { "measure": 6, "notes": [
+        { "string": 2, "fret": 7, "duration": "half", "technique": "vibrato", "label": "6", "role": "color", "highlight": true },
+        { "string": 1, "fret": 5, "duration": "quarter", "rest": true },
+        { "string": 2, "fret": 5, "duration": "eighth", "technique": "none", "label": "5", "role": "scale" },
+        { "string": 3, "fret": 7, "duration": "eighth", "technique": "none", "label": "4", "role": "scale" }
+      ]},
+      { "measure": 7, "notes": [
+        { "string": 3, "fret": 9, "duration": "eighth", "technique": "none", "label": "5", "role": "chord_tone" },
+        { "string": 3, "fret": 5, "duration": "eighth", "technique": "none", "label": "b3", "role": "target", "highlight": true },
+        { "string": 1, "fret": 5, "duration": "quarter", "technique": "none", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 1, "fret": 5, "duration": "quarter", "rest": true },
+        { "string": 3, "fret": 5, "duration": "quarter", "technique": "vibrato", "label": "b3", "role": "target", "highlight": true }
+      ]},
+      { "measure": 8, "notes": [
+        { "string": 3, "fret": 5, "duration": "eighth", "technique": "none", "label": "b3", "role": "target", "highlight": true },
+        { "string": 3, "fret": 7, "duration": "eighth", "technique": "none", "label": "4", "role": "scale" },
+        { "string": 4, "fret": 7, "duration": "half", "technique": "vibrato", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 1, "fret": 5, "duration": "quarter", "rest": true }
+      ]}
+    ]
+  }
+}
+```
+
 **20〜40分・実戦での完成（Am7-D7-A7バッキング／88〜92 BPM）**
 バッキングの上で8小節を**途切れなく**一周することを目標に。最初は88で、スムーズになったら92で。弧（アーク）を意識してください：前半は静かに・余白多めに、5小節目で一気に押し上げ、8小節目でルートに着地しながら息を落ち着ける。最低5周は回して、体に流れを刻みましょう。
 

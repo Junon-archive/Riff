@@ -21,6 +21,38 @@ i18nKey: "lesson.m3.w9.d1"
 
 이게 전부예요. 스케일에서 딱 한 음, **b6 → ♮6**. 근데 이 한 음이 소리를 통째로 바꿔요. 에올리안의 F는 루트 A 위에서 눌린 듯 어둡게 깔리는데, 도리안의 F#은 훨씬 위로 열려서 **밝고 세련되게** 들려요. 산타나, 카를로스가 마이너에서 뭔가 '재즈스럽고 라틴한' 그 느낌 낼 때 쓰는 게 바로 이 F#이에요.
 
+```json
+{
+  "id": "m3.w9.d1.aeolian_vs_dorian_6th",
+  "type": "tab",
+  "meta": {
+    "title": "Aeolian b6(F) vs Dorian natural 6(F#) - hear the difference",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A Dorian",
+    "tempoBpm": 70
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "3rd_interval",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 5, "fret": 7, "duration": "quarter", "label": "5", "role": "chord_tone" },
+        { "string": 5, "fret": 8, "duration": "quarter", "label": "b6", "role": "passing" },
+        { "string": 5, "fret": 7, "duration": "quarter", "label": "5", "role": "chord_tone" },
+        { "string": 4, "fret": 7, "duration": "quarter", "label": "R", "isRoot": true, "role": "root" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 5, "fret": 7, "duration": "quarter", "label": "5", "role": "chord_tone" },
+        { "string": 5, "fret": 9, "duration": "quarter", "label": "6", "role": "color", "highlight": true },
+        { "string": 5, "fret": 7, "duration": "quarter", "label": "5", "role": "chord_tone" },
+        { "string": 4, "fret": 7, "duration": "quarter", "label": "R", "isRoot": true, "role": "root" }
+      ]}
+    ]
+  }
+}
+```
+
 왜 하필 이 음이 특별하냐면요. F#은 도리안을 도리안이게 만드는 **정체성 음(characteristic note)** 이거든요. 나머지 음(A B C D E G)은 에올리안이랑 똑같아요. 그러니까 도리안 색을 내려면 F#을 **적극적으로 들려줘야** 해요. F#을 피해 다니면 그냥 어두운 마이너로 돌아가 버려요. 이번 주 내내 우리는 이 F#을 '색칠하는 붓'처럼 쓸 거예요.
 
 오늘 목표는 딱 두 개예요. 첫째, A 도리안 한 포지션을 손에 얹기. 둘째, 그 안에서 **F#(장6도)이 어디 있는지 눈 감고도 찾기.** 백킹은 Am7 하나만 무한 반복(vamp)하는 걸 쓸 거예요. 마이너 위에서 F#을 얹으면 왜 밝아지는지, 오늘 귀로 직접 확인해요.

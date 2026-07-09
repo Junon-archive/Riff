@@ -28,6 +28,34 @@ So if you slow down and watch what improv masters actually do, it's really not t
 
 The neighborhood we'll live in for the whole first month is **A minor pentatonic, Box 1 (5th fret).** The 3rd of an Am chord is **C (minor 3rd, ♭3).** In the fretboard diagram below, every note highlighted in green is a C. For today, just take a mental snapshot: "someday, I'll be landing on these notes."
 
+```json
+{
+  "id": "m1.w0.d1.am_chordtone_map",
+  "type": "fretboard_diagram",
+  "meta": {
+    "title": "Am chord tones — where the 3rd (C) lives (concept preview)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A minor",
+    "tempoBpm": 60
+  },
+  "fretboard": {
+    "startFret": 5,
+    "fretSpan": 4,
+    "dots": [
+      { "string": 6, "fret": 5, "finger": 1, "isRoot": true, "label": "R", "role": "root" },
+      { "string": 6, "fret": 8, "finger": 4, "label": "b3", "role": "target", "highlight": true },
+      { "string": 5, "fret": 7, "finger": 3, "label": "5", "role": "chord_tone" },
+      { "string": 4, "fret": 7, "finger": 3, "isRoot": true, "label": "R", "role": "root" },
+      { "string": 3, "fret": 5, "finger": 1, "label": "b3", "role": "target", "highlight": true },
+      { "string": 2, "fret": 5, "finger": 1, "label": "5", "role": "chord_tone" },
+      { "string": 1, "fret": 5, "finger": 1, "isRoot": true, "label": "R", "role": "root" },
+      { "string": 1, "fret": 8, "finger": 4, "label": "b3", "role": "target", "highlight": true }
+    ]
+  }
+}
+```
+
 ## ② Visual Reference
 
 ```json

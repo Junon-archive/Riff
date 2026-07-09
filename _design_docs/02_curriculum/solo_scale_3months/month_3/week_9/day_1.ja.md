@@ -22,6 +22,38 @@ lang: ja
 
 これだけです。スケールの中でたった1音、**b6 → ♮6**。でもこの1音が、サウンドをまるごと変えてしまいます。エオリアンのFは根音Aの上で押さえつけられたように暗く響きますが、ドリアンのF#はもっと開けて**明るく洗練された**響きになります。サンタナがマイナーの中で「ジャジーでラテンっぽい」あの雰囲気を出すとき使っているのが、まさにこのF#なんです。
 
+```json
+{
+  "id": "m3.w9.d1.aeolian_vs_dorian_6th",
+  "type": "tab",
+  "meta": {
+    "title": "Aeolian b6(F) vs Dorian natural 6(F#) - hear the difference",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A Dorian",
+    "tempoBpm": 70
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "3rd_interval",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 5, "fret": 7, "duration": "quarter", "label": "5", "role": "chord_tone" },
+        { "string": 5, "fret": 8, "duration": "quarter", "label": "b6", "role": "passing" },
+        { "string": 5, "fret": 7, "duration": "quarter", "label": "5", "role": "chord_tone" },
+        { "string": 4, "fret": 7, "duration": "quarter", "label": "R", "isRoot": true, "role": "root" }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 5, "fret": 7, "duration": "quarter", "label": "5", "role": "chord_tone" },
+        { "string": 5, "fret": 9, "duration": "quarter", "label": "6", "role": "color", "highlight": true },
+        { "string": 5, "fret": 7, "duration": "quarter", "label": "5", "role": "chord_tone" },
+        { "string": 4, "fret": 7, "duration": "quarter", "label": "R", "isRoot": true, "role": "root" }
+      ]}
+    ]
+  }
+}
+```
+
 なぜこの音がそんなに特別なのか。F#はドリアンをドリアンたらしめる**特性音（キャラクターノート）**だからです。残りの音（A B C D E G）はエオリアンとまったく同じ。だからドリアンの色を出すには、F#を**積極的に聞かせる**必要があります。F#を避けて通ると、ただの暗いマイナーに戻ってしまいます。今週はずっと、このF#を「色を塗る筆」として使っていきます。
 
 今日の目標は2つだけです。1つ、Aドリアンのポジションを1つ手に入れること。2つ、その中で**F#（長6度）がどこにあるか、目をつむっても見つけられる**こと。バッキングはAm7一発を無限ループさせるものを使います。マイナーの上にF#を乗せるとなぜ明るくなるのか、今日は耳で確かめましょう。

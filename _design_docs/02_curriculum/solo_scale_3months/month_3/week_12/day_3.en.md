@@ -133,6 +133,80 @@ Run one lap of the four-note sequence at metronome 92, then warm up the bar-5 be
 **10–20 min · Brain training (assembling bar by bar)**
 Learn the finished tab **two bars at a time.** Bars 1-2 → 3-4 → 5-6 → 7-8. Smooth out each chunk, then stitch them together. Especially drill the seam where bar 4's ending C crosses into bar 5's C# (the one-fret switch) 5 times to burn it into your hands.
 
+```json
+{
+  "id": "m3.w12.d3.original_solo_full",
+  "type": "tab",
+  "meta": {
+    "title": "Original solo - full 8 bars (Am7 D7 Am7 D7 | A7 D7 Am7 Am7)",
+    "stringCount": 6,
+    "tuning": ["E", "A", "D", "G", "B", "E"],
+    "key": "A (Dorian/Mixolydian composite)",
+    "tempoBpm": 92
+  },
+  "tab": {
+    "timeSignature": "4/4",
+    "pattern": "composition",
+    "measures": [
+      { "measure": 1, "notes": [
+        { "string": 3, "fret": 7, "duration": "eighth", "technique": "none", "label": "4", "role": "scale" },
+        { "string": 3, "fret": 9, "duration": "eighth", "technique": "none", "label": "5", "role": "chord_tone" },
+        { "string": 3, "fret": 5, "duration": "quarter", "technique": "vibrato", "label": "b3", "role": "target", "highlight": true },
+        { "string": 1, "fret": 5, "duration": "half", "rest": true }
+      ]},
+      { "measure": 2, "notes": [
+        { "string": 2, "fret": 5, "duration": "eighth", "technique": "none", "label": "5", "role": "scale" },
+        { "string": 2, "fret": 7, "duration": "half", "technique": "vibrato", "label": "6", "role": "color", "highlight": true },
+        { "string": 1, "fret": 5, "duration": "quarter", "rest": true },
+        { "string": 2, "fret": 5, "duration": "eighth", "technique": "none", "label": "5", "role": "scale" }
+      ]},
+      { "measure": 3, "notes": [
+        { "string": 1, "fret": 8, "duration": "eighth", "technique": "none", "label": "b3", "role": "target", "highlight": true },
+        { "string": 1, "fret": 7, "duration": "eighth", "technique": "none", "label": "2", "role": "scale" },
+        { "string": 1, "fret": 5, "duration": "eighth", "technique": "none", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 2, "fret": 8, "duration": "eighth", "technique": "none", "label": "b7", "role": "scale" },
+        { "string": 2, "fret": 5, "duration": "quarter", "technique": "none", "label": "5", "role": "chord_tone" },
+        { "string": 3, "fret": 5, "duration": "quarter", "technique": "vibrato", "label": "b3", "role": "target", "highlight": true }
+      ]},
+      { "measure": 4, "notes": [
+        { "string": 3, "fret": 7, "duration": "eighth", "technique": "none", "label": "4", "role": "scale" },
+        { "string": 3, "fret": 9, "duration": "eighth", "technique": "none", "label": "5", "role": "chord_tone" },
+        { "string": 2, "fret": 7, "duration": "quarter", "technique": "vibrato", "label": "6", "role": "color", "highlight": true },
+        { "string": 1, "fret": 5, "duration": "quarter", "rest": true },
+        { "string": 3, "fret": 5, "duration": "quarter", "technique": "none", "label": "b3", "role": "passing" }
+      ]},
+      { "measure": 5, "notes": [
+        { "string": 3, "fret": 6, "duration": "quarter", "technique": "vibrato", "label": "3", "role": "target", "highlight": true },
+        { "string": 1, "fret": 5, "duration": "eighth", "rest": true },
+        { "string": 2, "fret": 8, "duration": "eighth", "technique": "none", "label": "b7", "role": "color", "highlight": true },
+        { "string": 1, "fret": 8, "duration": "eighth", "technique": "bend", "bendTarget": "half", "label": "b3", "role": "blue_note", "highlight": true },
+        { "string": 1, "fret": 9, "duration": "quarter", "technique": "none", "label": "3", "role": "target", "highlight": true },
+        { "string": 1, "fret": 5, "duration": "eighth", "rest": true }
+      ]},
+      { "measure": 6, "notes": [
+        { "string": 2, "fret": 7, "duration": "half", "technique": "vibrato", "label": "6", "role": "color", "highlight": true },
+        { "string": 1, "fret": 5, "duration": "quarter", "rest": true },
+        { "string": 2, "fret": 5, "duration": "eighth", "technique": "none", "label": "5", "role": "scale" },
+        { "string": 3, "fret": 7, "duration": "eighth", "technique": "none", "label": "4", "role": "scale" }
+      ]},
+      { "measure": 7, "notes": [
+        { "string": 3, "fret": 9, "duration": "eighth", "technique": "none", "label": "5", "role": "chord_tone" },
+        { "string": 3, "fret": 5, "duration": "eighth", "technique": "none", "label": "b3", "role": "target", "highlight": true },
+        { "string": 1, "fret": 5, "duration": "quarter", "technique": "none", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 1, "fret": 5, "duration": "quarter", "rest": true },
+        { "string": 3, "fret": 5, "duration": "quarter", "technique": "vibrato", "label": "b3", "role": "target", "highlight": true }
+      ]},
+      { "measure": 8, "notes": [
+        { "string": 3, "fret": 5, "duration": "eighth", "technique": "none", "label": "b3", "role": "target", "highlight": true },
+        { "string": 3, "fret": 7, "duration": "eighth", "technique": "none", "label": "4", "role": "scale" },
+        { "string": 4, "fret": 7, "duration": "half", "technique": "vibrato", "label": "R", "isRoot": true, "role": "root" },
+        { "string": 1, "fret": 5, "duration": "quarter", "rest": true }
+      ]}
+    ]
+  }
+}
+```
+
 **20–40 min · Real finishing run (Am7-D7-A7 backing / 88–92 BPM)**
 Aim to run all 8 bars over the backing track **without stopping.** Start at 88, bump to 92 once it's smooth. Stay conscious of the arc: quiet with lots of space up front, push hard at bar 5, land on the root at bar 8 and let your breath settle down. Run it at least 5 times to burn the flow into your body.
 
