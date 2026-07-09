@@ -161,7 +161,7 @@ web_app/
 1. **프론트매터 파싱**(간단 YAML): `dayKey`, `estMinutes`, `i18nKey`, `title`(per-lang).
 2. **섹션 분할:** `## ①~④` 헤딩 기준으로 4구간 분리 → `theory` / `visual` / `practice` / `tips`.
 3. **악보 추출:** `visual` 구간의 fenced ```json 블록을 순서대로 파싱 → `Score[]`. **ko 파일에서만** 추출. 각 블록은 `fretboard_score_schema.json`으로 유효성 검사(실패 시 빌드 에러). en/ja의 블록은 ko와 바이트 일치 검증만(불일치 시 경고/에러).
-4. **산문 정제:** 각 섹션에서 ```json 블록을 제거한 나머지 마크다운 → 미니 마크다운→HTML 변환(문단 `<p>`, `**강조**`→`<b>`, 리스트 `<ul>`). `visual` 산문은 "악보 앞/뒤 설명"으로 유지(악보 자리는 `scores[]` 인덱스로 마운트).
+4. **산문 정제:** 각 섹션에서 ```json 블록을 `@@SCORE:N@@` 센티넬(전역 인덱스, 문서 순서)로 치환한 뒤 미니 마크다운→HTML 변환(문단 `<p>`, `**강조**`→`<b>`, 리스트 `<ul>`). 센티넬 문단은 `<div class="lesson-score-slot" data-score-slot="N">` 슬롯으로 후처리된다. 악보는 **네 섹션(theory/visual/practice/tips) 어디서든** 저작 위치에 인라인 렌더된다(백로그 01 Part A).
 5. **per-day 산출물 기록** + **매니페스트에 노드 추가.**
 
 ### 4.4 산출물 포맷
@@ -193,7 +193,7 @@ web_app/
 ```
 
 - `scores`는 언어 독립(1벌). `prose`만 언어별 3벌.
-- 렌더 시 `visual` 산문 다음에 `scores[]`를 순서대로 마운트하거나(단순), 산문 내 `{{score:0}}` 플레이스홀더로 정확 위치 삽입(고급). MVP는 전자.
+- 렌더 시 산문 내 `data-score-slot="N"` 슬롯을 `scores[N]` 렌더 SVG 로 그 위치에 하이드레이트한다(백로그 01 Part A 완료 — 저작 위치 인라인). 슬롯이 없으면 산문 그대로(하위호환).
 
 **매니페스트: `src/content/manifest.json`**
 
@@ -343,7 +343,7 @@ export function renderStaff(score: Score, mode: 'staff' | 'staff+tab' | 'rhythm'
 ### 5.5 디스패치 & 마운트 계약
 
 - `render/index.ts` 의 **`renderScore(score): string`** 가 단일 진입점: `type=fretboard_diagram|scale_shape`→`renderFretboard`, `type=tab`→ `meta.notation` 분기(`"staff"|"staff+tab"|"rhythm"`→`renderStaff`, 그 외/미지정→`renderTab`).
-- 레슨 뷰(`LessonView.astro`)는 `#scoresMount` 아래 `scores[]`를 순회하며 각 악보를 `renderScore(score)` 로 렌더해 `render-area` 카드를 반복 생성(빌드타임 SVG 주입).
+- 레슨 뷰(`LessonView.astro`)는 각 섹션 산문의 `data-score-slot="N"` 슬롯을 `renderScore(scores[N])` 로 치환해 `render-area` figure 를 그 위치에 인라인 생성(빌드타임 SVG 주입, `hydrateScoreSlots`).
 
 ---
 

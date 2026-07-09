@@ -1,11 +1,13 @@
 ---
 id: 01-visual-placement
-status: TODO            # TODO | IN_PROGRESS | DONE
+status: DONE            # TODO | IN_PROGRESS | DONE
 priority: high
 risk: low
 depends_on: []
 owner: null
 ---
+
+> ✅ 완료(2026-07-09). Part B(증발 경고→Part A로 대체) · Part C(커리큘럼 소개 intro) · Part A(전 섹션 슬롯 인라인 렌더) 모두 구현·커밋. 커밋: 1f38647(B) · 657c552(C) · Part A(본 커밋). 회귀 0(315블록).
 
 # 01 · 시각자료 배치 + 커리큘럼 소개
 
@@ -68,15 +70,21 @@ owner: null
 
 ## 체크리스트
 
-- [ ] Part B: theory/practice/tips 의 ```json 경고 추가 (독립·저비용, 먼저 해도 됨)
-- [ ] Part A-1: 전 섹션 추출 + (섹션,순서) 키 보존
-- [ ] Part A-2: mdToHtml 삭제→자리표시자 치환
-- [ ] Part A-3: scores 데이터 형태 확장 + content.ts 로더/타입
-- [ ] Part A-4: LessonView 자리표시자 하이드레이트
-- [ ] Part A-5: 섹션별 파리티 검사
-- [ ] Part A-6: 앵커 없으면 섹션 끝 append 하위호환
-- [ ] Part C: meta.json intro 3언어 필드 + CurriculumView 렌더 + playbook 문서화
-- [ ] V1~V4 통과 + Roadmap·이 문서 status 갱신
+- [x] Part B: theory/practice/tips 의 ```json 경고 추가 (커밋 1f38647 — Part A 도입으로 경고는 해제, 이제 정상 렌더)
+- [x] Part A-1: 전 섹션 문서순 추출 + 전역 인덱스 (injectScoreSlots)
+- [x] Part A-2: mdToHtml 삭제→센티넬 치환 + slotsToDivs 후처리
+- [x] Part A-3: scores 는 전역 배열 유지(형태 불변) — content.ts 타입 무변경(prose 문자열 내 슬롯 div)
+- [x] Part A-4: LessonView hydrateScoreSlots — 슬롯을 renderScore SVG 로 인라인 치환, #scoresMount 제거
+- [x] Part A-5: 섹션 합계 파리티 검사(en/ja 총 블록 수 = ko)
+- [x] Part A-6: 슬롯 없으면 산문 그대로(하위호환) — 기존 데이터는 visual 슬롯 위치에 인라인
+- [x] Part C: meta.json intro 3언어 필드 + CurriculumView 렌더 + app.css (커밋 657c552)
+- [x] V1(build 0)·V3(회귀 0)·typecheck 0err·기능(이론 섹션 지판 렌더)·technical_spec 갱신
+
+## 실제 구현 메모 (설계 대비 차이)
+
+- 자리표시자는 `{{score:N}}` 산문 토큰이 아니라 **```json 블록의 현재 위치 자체를 앵커로** 사용(`@@SCORE:N@@` 센티넬). 저자는 기존처럼 ```json 을 원하는 위치에 두면 그 자리에 렌더된다 — 새 문법 학습 불요.
+- scores 데이터 형태는 **전역 배열 그대로**(섹션별 배열로 안 쪼갬). 슬롯 div 가 어느 섹션 산문에 있든 전역 인덱스로 참조 → content.ts/manifest 스키마 무변경(저위험).
+- 기존 커리큘럼: visual 섹션 블록들이 이제 **캡션 옆 인라인**으로 렌더(과거 "섹션 끝 몰아서"보다 개선). 악보 데이터 불변(회귀 0), 레슨 페이지 DOM 배치만 개선.
 
 ## 미해결 질문 (사람 결정)
 

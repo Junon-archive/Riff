@@ -42,6 +42,21 @@ const title = content.titles[lang] ?? location.day.titles[lang];
 
 const crumb = `${cleanTitle(location.month.titles[lang])} · ${translate(lang, 'lesson.week_label', { week: location.week.week })}`;
 
+// 악보 슬롯 하이드레이트(백로그 01 Part A): 산문 HTML 안의 `data-score-slot="N"` 자리표시자를
+// scores[N] 의 렌더 SVG(figure) 로 그 위치에 치환한다. 슬롯이 없으면 산문 그대로(하위호환).
+const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+function hydrateScoreSlots(html: string): string {
+  if (!html) return html;
+  return html.replace(
+    /<div class="lesson-score-slot" data-score-slot="(\d+)"><\/div>/g,
+    (_m, n) => {
+      const score = content.scores[Number(n)];
+      if (!score) return '';
+      return `<figure class="render-area"><div class="render-mount">${renderScore(score)}</div><figcaption class="render-cap">${esc(score.meta.title)}</figcaption></figure>`;
+    },
+  );
+}
+
 const { prev, next } = getAdjacentDayKeys(curriculum, dayKey);
 const hrefFor = (key: string) => {
   const { month, week, day } = parseDayKey(key);
@@ -80,32 +95,23 @@ const monthDayKeys = location.month.weeks.flatMap((w) => w.days).map((d) => d.da
   </header>
 
   <article class="lesson-body">
-    {/* 이론 · 설명 */}
+    {/* 이론 · 설명 (악보 슬롯 있으면 글 흐름 속 렌더) */}
     <section>
       <h2>{translate(lang, 'lesson.theory')}</h2>
-      <div class="prose" id="lessonProse" set:html={prose.theory}></div>
+      <div class="prose" id="lessonProse" set:html={hydrateScoreSlots(prose.theory)}></div>
     </section>
 
-    {/* 눈으로 보기: 산문 + 지판/타브 SVG(JSON→SVG, scores[] 개수만큼) */}
+    {/* 눈으로 보기: 산문 + 지판/타브 SVG(JSON→SVG, 슬롯 위치에 인라인 렌더) */}
     <section>
       <h2>{translate(lang, 'lesson.visual')}</h2>
-      <div class="prose" id="lessonVisualProse" set:html={prose.visual}></div>
-
-      <div id="scoresMount">
-        {content.scores.map((score) => (
-          <figure class="render-area">
-            <div class="render-mount" set:html={renderScore(score)}></div>
-            <figcaption class="render-cap">{score.meta.title}</figcaption>
-          </figure>
-        ))}
-      </div>
+      <div class="prose" id="lessonVisualProse" set:html={hydrateScoreSlots(prose.visual)}></div>
     </section>
 
-    {/* 오늘의 연습: 연습 순서 + 팁/흔한 실수를 하나의 흐름으로 */}
+    {/* 오늘의 연습: 연습 순서 + 팁/흔한 실수를 하나의 흐름으로 (악보 슬롯 지원) */}
     <section>
       <h2>{translate(lang, 'lesson.action')}</h2>
-      <div class="prose" id="lessonPractice" set:html={prose.practice}></div>
-      <div class="prose" id="lessonTips" set:html={prose.tips}></div>
+      <div class="prose" id="lessonPractice" set:html={hydrateScoreSlots(prose.practice)}></div>
+      <div class="prose" id="lessonTips" set:html={hydrateScoreSlots(prose.tips)}></div>
     </section>
   </article>
 
@@ -287,10 +293,9 @@ const monthDayKeys = location.month.weeks.flatMap((w) => w.days).map((d) => d.da
   }
   .callout .emoji { font-size: 18px; line-height: 1.4; flex: none; }
 
-  /* ---- 지판/타브 SVG 렌더 영역: 카드감 제거 ---- */
-  #scoresMount { margin-top: 40px; }
+  /* ---- 지판/타브 SVG 렌더 영역: 카드감 제거. 산문 흐름 속 슬롯 위치에 인라인 렌더(01 Part A) ---- */
   .render-area {
-    margin: 0;
+    margin: 24px 0;
     padding: 24px 12px;
     background: var(--card-sub);
     border-radius: 16px;

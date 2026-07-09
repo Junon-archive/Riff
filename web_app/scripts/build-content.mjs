@@ -110,6 +110,28 @@ function extractJsonBlocks(md) {
   return blocks;
 }
 
+/* ```json 블록을 `@@SCORE:N@@` 센티넬(문단 단독)로 치환해 순서·위치를 보존한다(백로그 01 Part A).
+   반환: { md(센티넬 주입본), blocks(추출 JSON), next(다음 전역 인덱스) }.
+   mdToHtml 이 센티넬을 <p>@@SCORE:N@@</p> 문단으로 만들고, 이후 슬롯 div 로 후처리된다. */
+function injectScoreSlots(md, startIdx) {
+  const blocks = [];
+  let idx = startIdx;
+  const re = /```json\s*\n([\s\S]*?)\n```/g;
+  const out = md.replace(re, (_m, body) => {
+    blocks.push(body);
+    return `\n\n@@SCORE:${idx++}@@\n\n`;
+  });
+  return { md: out, blocks, next: idx };
+}
+
+/* mdToHtml 산출 HTML 안의 센티넬 문단을 악보 슬롯 div 로 바꾼다. LessonView 가 이 슬롯을 SVG 로 하이드레이트. */
+function slotsToDivs(html) {
+  return html.replace(
+    /<p>@@SCORE:(\d+)@@<\/p>/g,
+    (_m, n) => `<div class="lesson-score-slot" data-score-slot="${n}"></div>`,
+  );
+}
+
 /* ---------------------------------------------------------------
    악보 최소 스키마 검증 (fretboard_score_schema.json 핵심 계약)
    외부 검증기 없이 필수 필드/enum 만 확인.
@@ -619,9 +641,19 @@ function buildDay(weekPath, dayNum, loc, curriculumId) {
   if (!koFm.dayKey) fail(`dayKey 누락: ${files.ko}`);
   const estMinutes = Number(koFm.estMinutes || 0);
 
-  // 악보: ko 의 ② 섹션에서 추출 + 검증
-  const koVisual = sectionsByLang.ko.visual;
-  const koBlocks = extractJsonBlocks(koVisual);
+  // 악보: 네 섹션을 문서 순서(theory→visual→practice→tips)로 훑어 ```json 블록을 전역 인덱스로 추출하고,
+  // 각 섹션 md 에 `@@SCORE:N@@` 센티넬을 남긴다(백로그 01 Part A — 어느 섹션이든 글 흐름 속 제자리 렌더).
+  const koSlotMd = {};
+  const koBlocks = [];
+  {
+    let idx = 0;
+    for (const sec of SECTION_KEYS) {
+      const r = injectScoreSlots(sectionsByLang.ko[sec], idx);
+      koSlotMd[sec] = r.md;
+      koBlocks.push(...r.blocks);
+      idx = r.next;
+    }
+  }
   const scores = koBlocks.map((b, idx) => {
     let obj;
     try {
@@ -632,38 +664,26 @@ function buildDay(weekPath, dayNum, loc, curriculumId) {
     return validateScore(obj, `${koFm.dayKey} #${idx}`);
   });
 
-  // en/ja 파리티: 블록 개수만 소프트 검증(내용 동일은 이미 검증됨 — 불일치 시 경고)
+  // en/ja 파리티: 전 섹션 합계 블록 개수 소프트 검증(내용 동일은 이미 검증됨 — 불일치 시 경고)
   for (const lang of ['en', 'ja']) {
-    const n = extractJsonBlocks(sectionsByLang[lang].visual).length;
+    const n = SECTION_KEYS.reduce((s, sec) => s + extractJsonBlocks(sectionsByLang[lang][sec]).length, 0);
     if (n !== koBlocks.length) {
       warn(`악보 블록 개수 불일치(${lang}=${n}, ko=${koBlocks.length}): ${koFm.dayKey}`);
     }
   }
 
-  // 악보는 현재 ②시각 자료 섹션에서만 렌더된다. 다른 섹션(①이론/③연습/④팁)의 ```json 블록은
-  // 조용히 증발하므로 경고한다(저작 실수 방지 — 백로그 01 Part B). Part A 도입 시 이 경고는 해제.
-  for (const lang of LANGS) {
-    for (const sec of ['theory', 'practice', 'tips']) {
-      const stray = extractJsonBlocks(sectionsByLang[lang][sec]).length;
-      if (stray > 0) {
-        warn(
-          `[${koFm.dayKey}] ${lang} ${sec} 섹션에 악보 JSON ${stray}개 — 현재 ②시각 자료 섹션 밖 악보는 렌더되지 않고 사라집니다(visual 섹션으로 옮기세요).`,
-        );
-      }
-    }
-  }
-
-  // 산문(언어별) HTML
+  // 산문(언어별) HTML — 각 섹션에 센티넬 주입 후 mdToHtml → 센티넬을 악보 슬롯 div 로 후처리.
   const prose = {};
   const titles = {};
   for (const lang of LANGS) {
-    const s = sectionsByLang[lang];
-    prose[lang] = {
-      theory: mdToHtml(s.theory),
-      visual: mdToHtml(s.visual),
-      practice: mdToHtml(s.practice),
-      tips: mdToHtml(s.tips),
-    };
+    let idx = 0;
+    const secHtml = {};
+    for (const sec of SECTION_KEYS) {
+      const r = injectScoreSlots(sectionsByLang[lang][sec], idx);
+      idx = r.next;
+      secHtml[sec] = slotsToDivs(mdToHtml(r.md));
+    }
+    prose[lang] = secHtml;
     titles[lang] = fmByLang[lang].title || '';
   }
 
