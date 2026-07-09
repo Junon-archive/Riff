@@ -15,6 +15,22 @@ i18nKey: "lesson.m1.w4.d3"
 
 これに今日は**Em7**をひとさじ加えます。E9が明るく緊張感のあるドミナントなら、Em7は暗く柔らかいマイナー（下の図）。ワンコード・ジャムが少し退屈になったとき、時々E9の代わりにEm7へそっと変えると色ががらっと変わります。どちらも根音は5弦7フレットなので、手の位置はほぼそのまま — 内側の指を数本移すだけ。この小さな変化1つが、のっぺりした反復に息を通します。
 
+```json
+{
+  "id": "m1.w4.d3.em7_form",
+  "type": "fretboard_diagram",
+  "meta": { "title": "Em7 shell (root on 5th string)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E" },
+  "fretboard": { "startFret": 4, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 7, "finger": 2, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 4, "fret": 5, "finger": 1, "label": "b3", "role": "chord_tone" },
+    { "string": 3, "fret": 7, "finger": 3, "label": "b7", "role": "chord_tone" },
+    { "string": 2, "fret": 0, "muted": true },
+    { "string": 1, "fret": 0, "muted": true }
+  ]}
+}
+```
+
 2つのコードを行き来しながらアクセントまで気にすると手が忙しいでしょう。大丈夫。Em7は今日は「味見」です。完璧に行き来する必要はなく、E9のグルーヴが安定していればそれで十分。Em7は「こんな色もあるんだ」と感じるだけでいい。明日の最終ジャムで、好きなだけ引き出せばいいんですから。コード2つ、アクセント数個 — 素材はこれだけなのに、もう本物のファンク曲の伴奏のように聞こえ始めるはずです。
 
 ## ② ビジュアル資料

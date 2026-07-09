@@ -13,7 +13,39 @@ i18nKey: "lesson.m2.w5.d2"
 
 첫 번째 변화는 **마이너**예요. 2번 줄을 딱 한 칸 내리면(9→8프렛), 밝던 E 메이저가 어두운 E 마이너가 돼요. 3도가 반음 내려가 b3가 된 거예요(아래 다이어그램의 초록). 손가락 하나 차이로 밝음이 슬픔이 되는 이 순간, 지난달 코드 빌딩에서도 봤던 바로 그 원리죠. 좁은 3줄 안에서도 이 스위치는 똑같이 살아 있어요.
 
+```json
+{
+  "id": "m2.w5.d2.emin_triad",
+  "type": "fretboard_diagram",
+  "meta": { "title": "E minor triad (top 3 strings)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E" },
+  "fretboard": { "startFret": 6, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 0, "muted": true },
+    { "string": 4, "fret": 0, "muted": true },
+    { "string": 3, "fret": 9, "finger": 2, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 2, "fret": 8, "finger": 1, "label": "b3", "role": "target", "highlight": true },
+    { "string": 1, "fret": 7, "finger": 1, "label": "5", "role": "chord_tone" }
+  ]}
+}
+```
+
 두 번째는 **인버전(자리바꿈)**이에요. 같은 E 메이저라도 세 음의 순서를 바꾸면(어떤 음이 맨 위로 오느냐) 느낌이 달라져요. 오늘은 낮은 자리의 2nd 인버전 폼도 맛봐요 — 근음 대신 5도가 아래로 내려간 배치예요. 코드는 같은데 색이 살짝 다르게 반짝이죠. 좁은 3줄 안에서 이렇게 다양한 표정이 나온다는 게 트라이어드 커팅의 진짜 매력이에요.
+
+```json
+{
+  "id": "m2.w5.d2.emaj_inv",
+  "type": "fretboard_diagram",
+  "meta": { "title": "E major triad — 2nd inversion (5th in bass)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E" },
+  "fretboard": { "startFret": 3, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 0, "muted": true },
+    { "string": 4, "fret": 0, "muted": true },
+    { "string": 3, "fret": 4, "finger": 1, "label": "5", "role": "chord_tone" },
+    { "string": 2, "fret": 5, "finger": 3, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 1, "fret": 4, "finger": 2, "label": "3", "role": "chord_tone" }
+  ]}
+}
+```
 
 여러 폼을 오가려니 손이 헷갈릴 수 있어요. 당연해요. 오늘은 다 외우려 하지 말고, '2번 줄 한 칸으로 밝음↔어둠이 바뀐다'는 것 하나만 확실히 잡으세요. 커팅 중에 이 스위치를 슥 넣을 수 있으면, 여러분의 원코드 잼이 갑자기 훨씬 다채로워져요. 코드를 새로 외우는 게 아니라, 아는 폼에서 손가락 하나만 옮기는 거니까 부담도 없어요. 밝게 갈지 어둡게 갈지, 이제 여러분이 고르는 거예요.
 

@@ -15,6 +15,21 @@ i18nKey: "lesson.m2.w6.d1"
 
 오늘은 **5번 줄 하나**로 짧은 E 라인을 그려봐요. 근음 E는 5번 줄 7프렛 — 지난주 E9 코드의 근음과 같은 자리예요. 그 주변의 몇 음(아래 노트 맵)으로 짧은 리프를 만듭니다. 관건은 두 가지예요. 첫째, 안 쓰는 줄을 완벽히 뮤트해서 잡음 0. 둘째, 한 줄을 정확히 조준해 또렷이 울리기.
 
+```json
+{
+  "id": "m2.w6.d1.note_map",
+  "type": "fretboard_diagram",
+  "meta": { "title": "E funk note box (strings 5-4)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E" },
+  "fretboard": { "startFret": 4, "fretSpan": 8, "dots": [
+    { "string": 5, "fret": 5, "label": "b7", "role": "scale" },
+    { "string": 5, "fret": 7, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 5, "fret": 10, "label": "b3", "role": "scale" },
+    { "string": 4, "fret": 7, "label": "4", "role": "scale" },
+    { "string": 4, "fret": 9, "label": "5", "role": "chord_tone" }
+  ]}
+}
+```
+
 한 줄만 정확히 치는 게 의외로 어려워요. 옆줄이 자꾸 새거나, 반대로 힘이 들어가 음이 뭉개지죠. 정상이에요. 오늘은 라인이 화려하지 않아도 좋으니, '한 줄만 또렷이, 나머진 침묵'이라는 감각을 잡으세요. 이 라인이 베이스와 맞물리는 순간, 여러분의 펑크는 갑자기 두툼하고 단단해져요. 코드로만 반주하던 손이 이제 선을 그리기 시작하는 거예요. 처음엔 어색해도, 이 단음의 세계가 열리면 표현할 수 있는 게 두 배로 넓어져요.
 
 ## ② 시각 자료

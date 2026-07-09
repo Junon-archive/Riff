@@ -15,6 +15,21 @@ The principle: kill the other five strings completely (left- and right-hand mute
 
 Today you draw a short E line on **the 5th string alone.** The root E sits at the 5th string, 7th fret — the same spot as last week's E9 root. Make a short riff from a few notes around it (note map below). Two things are key. First, mute the unused strings perfectly for zero noise. Second, aim one string accurately and ring it clearly.
 
+```json
+{
+  "id": "m2.w6.d1.note_map",
+  "type": "fretboard_diagram",
+  "meta": { "title": "E funk note box (strings 5-4)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E" },
+  "fretboard": { "startFret": 4, "fretSpan": 8, "dots": [
+    { "string": 5, "fret": 5, "label": "b7", "role": "scale" },
+    { "string": 5, "fret": 7, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 5, "fret": 10, "label": "b3", "role": "scale" },
+    { "string": 4, "fret": 7, "label": "4", "role": "scale" },
+    { "string": 4, "fret": 9, "label": "5", "role": "chord_tone" }
+  ]}
+}
+```
+
 Hitting just one string accurately is surprisingly hard. Neighbors leak, or too much force smears the note. That's normal. Today, even if the line isn't flashy, grab the feel of "one string clear, the rest silent." The moment this line locks with the bass, your funk suddenly gets thick and solid. The hand that only comped with chords now starts to draw lines. Awkward at first, but once this single-note world opens, what you can express doubles.
 
 ## ② Visuals

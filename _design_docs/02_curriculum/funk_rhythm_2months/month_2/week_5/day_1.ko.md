@@ -15,6 +15,22 @@ i18nKey: "lesson.m2.w5.d1"
 
 오늘 잡을 첫 폼은 **E 메이저 트라이어드**(3줄)예요. 근음은 3번 줄에 있고, 그 위로 3도·5도가 얹혀요(아래 다이어그램). 딱 세 음, 세 줄이죠. 이번 주의 진짜 승부처는 이 **좁은 타깃(3줄)을 정확히 때리는 컨트롤**이에요. 넓게 6줄을 칠 때보다 훨씬 정교한 조준이 필요해요.
 
+```json
+{
+  "id": "m2.w5.d1.emaj_triad",
+  "type": "fretboard_diagram",
+  "meta": { "title": "E major triad (top 3 strings)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E" },
+  "fretboard": { "startFret": 6, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 0, "muted": true },
+    { "string": 4, "fret": 0, "muted": true },
+    { "string": 3, "fret": 9, "finger": 2, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 2, "fret": 9, "finger": 3, "label": "3", "role": "chord_tone" },
+    { "string": 1, "fret": 7, "finger": 1, "label": "5", "role": "chord_tone" }
+  ]}
+}
+```
+
 3줄만 정확히 때리고 아랫줄은 안 건드리는 게, 처음엔 당연히 어려워요. 옆줄이 자꾸 새어 울리죠. 정상이에요. 오늘은 소리가 좀 지저분해도 괜찮으니, 위 3줄에 오른손을 '착' 얹는 감각만 잡으세요. 이 소리가 바로 나일 로저스로 대표되는, 커팅 펑크의 그 전설적인 소리예요. 얇은 줄 세 개로 이렇게 세련된 소리가 난다는 게, 오늘 처음 쳐보면 신기할 거예요. 6줄을 꽉 잡던 습관에서 벗어나는 첫날이라고 생각하면 돼요.
 
 ## ② 시각 자료

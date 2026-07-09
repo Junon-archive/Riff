@@ -13,7 +13,39 @@ i18nKey: "lesson.m2.w5.d2"
 
 最初の変化は**マイナー**です。2弦をちょうど1フレット下げると（9→8）、明るいEメジャーが暗いEマイナーになります。3度が半音下がってb3になったんです（下の図の緑）。指1本の差で明るさが哀しみに変わるこの瞬間、先月のコードビルディングでも見た、まさにあの原理です。狭い3弦の中でも、このスイッチは同じように生きています。
 
+```json
+{
+  "id": "m2.w5.d2.emin_triad",
+  "type": "fretboard_diagram",
+  "meta": { "title": "E minor triad (top 3 strings)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E" },
+  "fretboard": { "startFret": 6, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 0, "muted": true },
+    { "string": 4, "fret": 0, "muted": true },
+    { "string": 3, "fret": 9, "finger": 2, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 2, "fret": 8, "finger": 1, "label": "b3", "role": "target", "highlight": true },
+    { "string": 1, "fret": 7, "finger": 1, "label": "5", "role": "chord_tone" }
+  ]}
+}
+```
+
 2つ目は**転回形（インバージョン）**です。同じEメジャーでも3音の順番を変えると（どの音が一番上に来るか）感じが変わります。今日は低い位置の第2転回形も味見します — 根音の代わりに5度が下に来た配置です。コードは同じなのに、少し違う色できらめきます。狭い3弦の中でこれだけ多彩な表情が出るのが、トライアド・カッティングの本当の魅力です。
+
+```json
+{
+  "id": "m2.w5.d2.emaj_inv",
+  "type": "fretboard_diagram",
+  "meta": { "title": "E major triad — 2nd inversion (5th in bass)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E" },
+  "fretboard": { "startFret": 3, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 0, "muted": true },
+    { "string": 4, "fret": 0, "muted": true },
+    { "string": 3, "fret": 4, "finger": 1, "label": "5", "role": "chord_tone" },
+    { "string": 2, "fret": 5, "finger": 3, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 1, "fret": 4, "finger": 2, "label": "3", "role": "chord_tone" }
+  ]}
+}
+```
 
 いくつものフォームを行き来すると手が混乱するかもしれません。当然です。今日は全部覚えようとせず、「2弦1フレットで明暗が変わる」その1つだけ確実につかんでください。カッティング中にこのスイッチをスッと入れられれば、あなたのワンコード・ジャムは急にずっと多彩になります。コードを新しく覚えるのではなく、知っているフォームから指1本を移すだけなので負担もありません。明るくいくか暗くいくか、もうあなたが選ぶんです。
 

@@ -13,7 +13,39 @@ The E major triad you grabbed yesterday — today you change its whole color by 
 
 The first change is **minor.** Drop the 2nd string by exactly one fret (9→8) and the bright E major becomes a dark E minor. The 3rd fell a half step to a b3 (green in the diagram). This moment where one finger turns bright into sad is the very principle you saw in last month's chord building. Within these narrow three strings, that switch is alive just the same.
 
+```json
+{
+  "id": "m2.w5.d2.emin_triad",
+  "type": "fretboard_diagram",
+  "meta": { "title": "E minor triad (top 3 strings)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E" },
+  "fretboard": { "startFret": 6, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 0, "muted": true },
+    { "string": 4, "fret": 0, "muted": true },
+    { "string": 3, "fret": 9, "finger": 2, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 2, "fret": 8, "finger": 1, "label": "b3", "role": "target", "highlight": true },
+    { "string": 1, "fret": 7, "finger": 1, "label": "5", "role": "chord_tone" }
+  ]}
+}
+```
+
 The second is **inversion.** The same E major, but reorder the three notes (which one sits on top) and the feel changes. Today you also taste a low 2nd-inversion shape — the 5th dropped to the bottom instead of the root. Same chord, yet it shimmers with a slightly different color. That such varied expressions come from three narrow strings is the true charm of triad cutting.
+
+```json
+{
+  "id": "m2.w5.d2.emaj_inv",
+  "type": "fretboard_diagram",
+  "meta": { "title": "E major triad — 2nd inversion (5th in bass)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E" },
+  "fretboard": { "startFret": 3, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 0, "muted": true },
+    { "string": 4, "fret": 0, "muted": true },
+    { "string": 3, "fret": 4, "finger": 1, "label": "5", "role": "chord_tone" },
+    { "string": 2, "fret": 5, "finger": 3, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 1, "fret": 4, "finger": 2, "label": "3", "role": "chord_tone" }
+  ]}
+}
+```
 
 Juggling several shapes can confuse the hand. Of course. Today, don't try to memorize them all; just firmly grab "one fret on the 2nd string flips bright and dark." If you can slip that switch in mid-cutting, your one-chord jam suddenly becomes far more colorful. You're not memorizing a new chord — just moving one finger from a shape you know, so there's no burden. Bright or dark: now it's your choice.
 

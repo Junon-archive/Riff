@@ -15,6 +15,22 @@ i18nKey: "lesson.m2.w5.d1"
 
 今日押さえる最初のフォームは**Eメジャー・トライアド**（3弦）です。根音は3弦にあり、その上に3度・5度が乗ります（下の図）。たった3音、3弦だけ。今週の本当の勝負どころは、この**狭いターゲット（3弦）を正確に叩くコントロール**です。6弦を広く弾くよりずっと精密な狙いが要ります。
 
+```json
+{
+  "id": "m2.w5.d1.emaj_triad",
+  "type": "fretboard_diagram",
+  "meta": { "title": "E major triad (top 3 strings)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E" },
+  "fretboard": { "startFret": 6, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 0, "muted": true },
+    { "string": 4, "fret": 0, "muted": true },
+    { "string": 3, "fret": 9, "finger": 2, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 2, "fret": 9, "finger": 3, "label": "3", "role": "chord_tone" },
+    { "string": 1, "fret": 7, "finger": 1, "label": "5", "role": "chord_tone" }
+  ]}
+}
+```
+
 3弦だけ正確に叩いて下の弦に触れないのは、最初はもちろん難しい。隣の弦がしょっちゅう漏れて鳴ります。正常です。今日は音が少し汚くても大丈夫、上の3弦に右手を「サッ」と乗せる感覚だけつかんでください。この音こそ、ナイル・ロジャースに代表される、カッティング・ファンクの伝説的な音です。細い弦3本でこんなに洗練された音が出るのは、今日はじめて弾くと不思議に感じるはず。6弦をぎゅっと押さえる習慣から抜け出す最初の日だと思ってください。
 
 ## ② ビジュアル資料

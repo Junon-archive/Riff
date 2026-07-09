@@ -15,6 +15,34 @@ i18nKey: "lesson.m1.w3.d1"
 
 오늘은 첫 단계로, **'한 박의 &'**(1-e-&-a에서 세 번째 조각)에 악센트를 넣어봐요. 아래 악보에서 초록으로 표시된 자리가 강세예요. 이 '&'에 무게를 실으면 박자가 살짝 앞으로 밀리는 듯한, 펑크 특유의 당기는 느낌이 나요.
 
+```json
+{
+  "id": "m1.w3.d1.accent_and",
+  "type": "tab",
+  "meta": { "title": "Accent on the '&' (1 bar)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E", "tempoBpm": 66, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "role": "target", "highlight": true, "label": "3" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "role": "target", "highlight": true, "label": "3" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "role": "target", "highlight": true, "label": "3" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "role": "target", "highlight": true, "label": "3" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" }
+    ]}
+  ]}
+}
+```
+
 처음엔 악센트를 주려다 다른 음까지 다 커지거나, 반대로 하나도 안 튀는 게 정상이에요. 한 음만 세게, 나머진 힘 빼는 컨트롤은 며칠 걸려요. 조급해 말고, 오늘은 '이 자리만 팍'이라는 감각 하나만 잡으면 돼요. 이 한 방이 나중에 백킹의 스네어와 겹치는 순간, 여러분의 그루브가 갑자기 살아 움직이기 시작할 거예요. 오늘은 그 '한 방'의 짜릿함을 처음 맛보는 날이에요. 딱 한 자리를 세게 쳤을 뿐인데 리듬이 확 살아나는 그 순간을 꼭 느껴보세요.
 
 ## ② 시각 자료

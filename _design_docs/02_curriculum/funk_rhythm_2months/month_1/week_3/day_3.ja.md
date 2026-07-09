@@ -13,6 +13,34 @@ i18nKey: "lesson.m1.w3.d3"
 
 今日から音は**3層**です。1つ、力を抜いたゴースト（チッ）— 音程のない死んだ音、背景。2つ、普通の実音（タ）— はっきり鳴る中間の音。3つ、強いアクセント（パッ）— ぱっと跳び出す主役。驚くのは、この3層を全部**同じ手の位置で**作ること。左手の圧力と右手の力を調節して、詰め（チッ）・鳴らし（タ）・叩く（パッ）んです。楽譜で色なし＝ゴースト、青＝普通の実音、緑＝アクセント。
 
+```json
+{
+  "id": "m1.w3.d3.ghost_accent",
+  "type": "tab",
+  "meta": { "title": "Ghosts with popping accents (1 bar)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E", "tempoBpm": 70, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 2, "fret": 9, "duration": "sixteenth", "role": "chord_tone", "label": "3" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "role": "target", "highlight": true, "label": "3" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "role": "chord_tone", "label": "3" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "role": "target", "highlight": true, "label": "3" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" }
+    ]}
+  ]}
+}
+```
+
 この3層の明暗が出ると、のっぺりしたリズムが急に立体的に聞こえます。ドラムでいえばハイハット（チッ）・キック（タ）・スネア（パッ）が1つの手から出るわけです。これがファンクギター1台がリズムセクションのように聞こえる秘密です。
 
 3段階を一度に調節するのは最初は大変かもしれません。当然です — 指1本でボリュームつまみを3コマ回すんですから。今日は完璧でなくていい。「チッ」と「パッ」の対比さえはっきりすれば半分成功、そこに「タ」がそっと混じれば大成功です。3層を自在に操るには時間がかかりますが、それだけ強力な武器です。焦らないで。

@@ -13,6 +13,34 @@ Now you merge Week 2's ghosts with Week 3's accents. Real funk texture is born h
 
 From today the sound has **three layers.** First, the relaxed ghost ("chick") — pitchless, dead, the background. Second, the normal real note ("ta") — a clear middle voice. Third, the hard accent ("pop") — the star that leaps out. The amazing part: you make all three **from the same hand position.** By managing left-hand pressure and right-hand force, you choke (chick), ring (ta), and strike (pop). In the notation, colorless = ghost, blue = normal real note, green = accent.
 
+```json
+{
+  "id": "m1.w3.d3.ghost_accent",
+  "type": "tab",
+  "meta": { "title": "Ghosts with popping accents (1 bar)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E", "tempoBpm": 70, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 2, "fret": 9, "duration": "sixteenth", "role": "chord_tone", "label": "3" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "role": "target", "highlight": true, "label": "3" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "role": "chord_tone", "label": "3" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "role": "target", "highlight": true, "label": "3" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" }
+    ]}
+  ]}
+}
+```
+
 Once this three-layer light-and-shadow appears, a flat rhythm suddenly sounds three-dimensional. In drum terms, the hi-hat (chick), kick (ta), and snare (pop) all come from one hand. This is the secret to a single funk guitar sounding like a rhythm section.
 
 Managing three levels at once can feel overwhelming at first. Of course — you're turning a volume knob three notches with one finger. Today doesn't need to be perfect. If just the "chick" vs "pop" contrast is clear, you're halfway there; with a "ta" quietly mixed in, it's a big success. Handling three layers freely takes time, but it's that powerful a weapon. Don't rush.

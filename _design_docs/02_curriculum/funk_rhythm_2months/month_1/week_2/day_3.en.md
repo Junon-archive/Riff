@@ -13,6 +13,22 @@ Now that the even ghost carpet is down, today you **drop real notes onto it** to
 
 There's one hand position. Today's sound is a small high-register stab on the 3rd and 2nd strings (diagram below). Here, **pressing the left hand gives a real note ("ta"); releasing gives a ghost ("chick").** Same spot, only the pressure differs. So without the hand traveling anywhere, the groove is built from pressure on/off alone.
 
+```json
+{
+  "id": "m1.w2.d3.e_stab",
+  "type": "fretboard_diagram",
+  "meta": { "title": "High-E funk stab (2-string)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E" },
+  "fretboard": { "startFret": 8, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 0, "muted": true },
+    { "string": 4, "fret": 0, "muted": true },
+    { "string": 3, "fret": 9, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 2, "fret": 9, "finger": 1, "label": "3", "role": "chord_tone" },
+    { "string": 1, "fret": 0, "muted": true }
+  ]}
+}
+```
+
 The key principle: **real notes get more sophisticated the more you ration them.** Beginners keep sprinkling "ta" everywhere and make noise. Pros stab "ta" in just a spot or two and let everything else flow as "chick." That restraint is the groove's negative space. And shifting that "ta" by a single slot makes it sound like a whole different tune — today you'll experiment with that magic yourself.
 
 At first, switching the pressure on and off won't sit in your hand. Of course. Slowly repeat pressing lightly only on the "ta" spot and releasing right after, and at some point your finger flips like a switch on its own. So it's fine if it doesn't click today. This on/off pressure feel becomes a lifelong weapon for funk guitar, so it's well worth the time you put in.

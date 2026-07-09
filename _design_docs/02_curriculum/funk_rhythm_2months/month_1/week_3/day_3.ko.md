@@ -13,6 +13,34 @@ i18nKey: "lesson.m1.w3.d3"
 
 오늘부터는 소리가 **세 층**이에요. 첫째, 힘 뺀 고스트('치') — 음정 없는 죽은 소리, 배경. 둘째, 보통 실제음('따') — 또렷이 울리는 중간 소리. 셋째, 강한 악센트('팍') — 확 튀는 주인공. 놀라운 건, 이 세 층을 전부 **같은 손 위치에서** 만든다는 거예요. 왼손 압력과 오른손 힘을 조절해 죽였다(치)·울렸다(따)·때렸다(팍) 하는 거죠. 악보에서 색 없음=고스트, 파랑=보통 실제음, 초록=악센트예요.
 
+```json
+{
+  "id": "m1.w3.d3.ghost_accent",
+  "type": "tab",
+  "meta": { "title": "Ghosts with popping accents (1 bar)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E", "tempoBpm": 70, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 2, "fret": 9, "duration": "sixteenth", "role": "chord_tone", "label": "3" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "role": "target", "highlight": true, "label": "3" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "role": "chord_tone", "label": "3" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "role": "target", "highlight": true, "label": "3" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" }
+    ]}
+  ]}
+}
+```
+
 이 세 층의 명암이 생기면, 밋밋하던 리듬이 갑자기 입체적으로 들려요. 드럼으로 치면 하이햇(치)·킥(따)·스네어(팍)가 한 손에서 나오는 셈이에요. 이게 펑크 기타 한 대가 리듬 세션처럼 들리는 비밀이에요.
 
 세 단계를 한 번에 조절하는 게 처음엔 벅찰 수 있어요. 당연해요 — 손가락 하나로 볼륨 노브를 세 칸 돌리는 거니까요. 오늘은 완벽하지 않아도 돼요. '치'와 '팍'의 대비만 또렷해도 절반은 성공, 거기에 '따'가 은근히 껴 있으면 대성공이에요. 세 층을 자유자재로 다루는 데는 시간이 걸리지만, 그만큼 강력한 무기예요. 서두르지 마세요.

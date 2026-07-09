@@ -13,6 +13,22 @@ i18nKey: "lesson.m1.w4.d1"
 
 E9는 E 도미넌트7(E·G#·D)에 **9도(F#)** 를 하나 더 얹은 코드예요. 그 9도가 바로 펑크 특유의 '찰랑하고 세련된' 색을 줘요 — 아래 다이어그램에서 노랑으로 표시된 음이 그 주인공이에요. 근음은 5번 줄 7프렛에 있고, 검지로 5·3번 줄을 살짝 눌러 잡으면 돼요. 6번과 1번 줄은 확실히 뮤트하고요.
 
+```json
+{
+  "id": "m1.w4.d1.e9_form",
+  "type": "fretboard_diagram",
+  "meta": { "title": "E9 — the funk chord (root on 5th string)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E" },
+  "fretboard": { "startFret": 5, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 7, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 4, "fret": 6, "finger": 1, "label": "3", "role": "chord_tone" },
+    { "string": 3, "fret": 7, "finger": 3, "label": "b7", "role": "chord_tone" },
+    { "string": 2, "fret": 7, "finger": 2, "label": "9", "role": "color" },
+    { "string": 1, "fret": 0, "muted": true }
+  ]}
+}
+```
+
 오늘의 미션은 이 E9로 **1주차의 16비트 모터를 다시 얹는 것**이에요. 지난 3주간 만든 리듬 엔진에, 드디어 '진짜 소리'라는 연료를 붓는 셈이죠. 이제 오른손이 흔들 때마다 죽은 스크래치가 아니라 E9의 그 세련된 화음이 울려요. 벌써 '펑크답다'는 느낌이 확 올 거예요.
 
 네 줄을 한 번에 누르는 게 처음엔 뻑뻑하고, 어떤 줄은 소리가 안 날 수도 있어요. 당연해요. 손가락에 힘이 자리 잡는 데 며칠 걸려요. 오늘은 완벽한 코드음보다, E9를 잡은 채로 오른손 모터가 안 멈추는 것에 집중하세요. 코드 하나로 몇 분을 끌 수 있다는 펑크의 마법이 여기서 시작돼요. 지난 3주가 '리듬 연습'이었다면, 오늘부터는 '음악'이에요. E9 하나 잡았을 뿐인데 방 안 공기가 달라지는 걸 느껴보세요.

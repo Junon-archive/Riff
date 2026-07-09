@@ -15,6 +15,22 @@ The reason is simple. The high strings are light and bright, so cutting them giv
 
 Today's first shape is the **E major triad** (three strings). The root is on the 3rd string, with the 3rd and 5th stacked above (diagram below). Just three notes, three strings. This week's real battleground is the **control to hit that narrow target (three strings) accurately.** It takes far more precise aim than sweeping all six.
 
+```json
+{
+  "id": "m2.w5.d1.emaj_triad",
+  "type": "fretboard_diagram",
+  "meta": { "title": "E major triad (top 3 strings)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E" },
+  "fretboard": { "startFret": 6, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 0, "muted": true },
+    { "string": 4, "fret": 0, "muted": true },
+    { "string": 3, "fret": 9, "finger": 2, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 2, "fret": 9, "finger": 3, "label": "3", "role": "chord_tone" },
+    { "string": 1, "fret": 7, "finger": 1, "label": "5", "role": "chord_tone" }
+  ]}
+}
+```
+
 Hitting only the three strings while not touching the lower ones is, of course, hard at first — the neighbors keep leaking. That's normal. Today it's fine if the sound is a little messy; just grab the feel of landing the right hand cleanly on the top three. This sound is the legendary cutting-funk tone typified by Nile Rodgers. It's surprising, the first time you play it today, that three thin strings make a sound this sophisticated. Think of it as the first day of breaking the habit of gripping all six strings.
 
 ## ② Visuals

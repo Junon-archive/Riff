@@ -13,6 +13,22 @@ For three weeks we dug only into the "rhythm" of the right and left hands. The s
 
 E9 is an E dominant 7 (E·G#·D) with a **9th (F#)** added on top. That 9th is exactly what gives funk its signature "shimmering, sophisticated" color — the note marked yellow in the diagram below is the star. The root sits at the 5th string, 7th fret; press the 5th and 3rd strings lightly with your index. Mute the 6th and 1st strings firmly.
 
+```json
+{
+  "id": "m1.w4.d1.e9_form",
+  "type": "fretboard_diagram",
+  "meta": { "title": "E9 — the funk chord (root on 5th string)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E" },
+  "fretboard": { "startFret": 5, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 7, "finger": 1, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 4, "fret": 6, "finger": 1, "label": "3", "role": "chord_tone" },
+    { "string": 3, "fret": 7, "finger": 3, "label": "b7", "role": "chord_tone" },
+    { "string": 2, "fret": 7, "finger": 2, "label": "9", "role": "color" },
+    { "string": 1, "fret": 0, "muted": true }
+  ]}
+}
+```
+
 Today's mission is to **re-lay Week 1's 16th motor onto this E9.** You're finally pouring the fuel of "real sound" into the rhythm engine you built over three weeks. Now, every time the right hand swings, it's not a dead scratch but E9's sophisticated chord that rings. You'll already feel a strong "this is funky."
 
 Pressing four strings at once will feel stiff at first, and some strings may not sound. Of course — it takes a few days for the fingers to settle. Today, focus less on a perfect chord and more on keeping the right-hand motor from stopping while holding E9. The magic of funk — carrying minutes on one chord — begins here. If the last three weeks were "rhythm practice," from today it's "music." You only grabbed one E9, yet feel how the air in the room changes.

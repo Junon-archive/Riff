@@ -15,6 +15,21 @@ i18nKey: "lesson.m2.w6.d1"
 
 今日は**5弦1本**で短いEラインを描きます。根音Eは5弦7フレット — 先週のE9コードの根音と同じ場所です。その周りの数音（下のノートマップ）で短いリフを作ります。肝は2つ。1つ、使わない弦を完璧にミュートして雑音ゼロ。2つ、1弦を正確に狙ってはっきり鳴らす。
 
+```json
+{
+  "id": "m2.w6.d1.note_map",
+  "type": "fretboard_diagram",
+  "meta": { "title": "E funk note box (strings 5-4)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E" },
+  "fretboard": { "startFret": 4, "fretSpan": 8, "dots": [
+    { "string": 5, "fret": 5, "label": "b7", "role": "scale" },
+    { "string": 5, "fret": 7, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 5, "fret": 10, "label": "b3", "role": "scale" },
+    { "string": 4, "fret": 7, "label": "4", "role": "scale" },
+    { "string": 4, "fret": 9, "label": "5", "role": "chord_tone" }
+  ]}
+}
+```
+
 1弦だけ正確に弾くのは意外と難しい。隣の弦が漏れたり、逆に力が入って音がつぶれたり。正常です。今日はラインが派手でなくてもいいので、「1弦だけはっきり、残りは沈黙」という感覚をつかんでください。このラインがベースと噛み合った瞬間、あなたのファンクは急に厚く硬くなります。コードだけで伴奏していた手が、今度は線を描き始めるんです。最初はぎこちなくても、この単音の世界が開けば、表現できることが2倍に広がります。
 
 ## ② ビジュアル資料

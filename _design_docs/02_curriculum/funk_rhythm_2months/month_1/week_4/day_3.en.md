@@ -15,6 +15,22 @@ Lay ghosts for the background (hi-hat), ring the real E9 here and there (kick), 
 
 To this, today you add a spoonful of **Em7.** If E9 is a bright, tense dominant, Em7 is a dark, soft minor (diagram below). When a one-chord jam gets a little dull, slipping from E9 to Em7 now and then changes the color dramatically. Both have their root at the 5th string, 7th fret, so the hand position barely moves — just shift a couple of inner fingers. This one small change gives a flat repetition room to breathe.
 
+```json
+{
+  "id": "m1.w4.d3.em7_form",
+  "type": "fretboard_diagram",
+  "meta": { "title": "Em7 shell (root on 5th string)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E" },
+  "fretboard": { "startFret": 4, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 7, "finger": 2, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 4, "fret": 5, "finger": 1, "label": "b3", "role": "chord_tone" },
+    { "string": 3, "fret": 7, "finger": 3, "label": "b7", "role": "chord_tone" },
+    { "string": 2, "fret": 0, "muted": true },
+    { "string": 1, "fret": 0, "muted": true }
+  ]}
+}
+```
+
 Juggling two chords plus accents will keep your hands busy. That's fine. Em7 is a "taste" today. You don't need to switch perfectly; if your E9 groove is solid, that's enough. Just feel "oh, there's this color too" with Em7. Tomorrow's final jam, you'll draw on it only as much as you like. Two chords and a few accents — that's all the material, yet it will already start to sound like the accompaniment of a real funk tune.
 
 ## ② Visuals

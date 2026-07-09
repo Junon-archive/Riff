@@ -15,6 +15,34 @@ i18nKey: "lesson.m1.w3.d1"
 
 今日は最初の一歩として、**「拍のアンド（&）」**（1-e-&-aの3つ目）にアクセントを入れます。下の楽譜で緑の場所がアクセント。この「&」に重みを乗せると、拍が少し前へ押されるような、ファンク特有の引っかかりが出ます。
 
+```json
+{
+  "id": "m1.w3.d1.accent_and",
+  "type": "tab",
+  "meta": { "title": "Accent on the '&' (1 bar)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E", "tempoBpm": 66, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "role": "target", "highlight": true, "label": "3" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "role": "target", "highlight": true, "label": "3" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "role": "target", "highlight": true, "label": "3" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "role": "target", "highlight": true, "label": "3" },
+      { "string": 2, "fret": 9, "duration": "sixteenth", "technique": "dead_note", "role": "scale" }
+    ]}
+  ]}
+}
+```
+
 最初はアクセントを入れようとして隣の音まで大きくなったり、逆に何も跳ねなかったりが普通です。1音だけ強く、残りは力を抜くコントロールは数日かかります。焦らず、今日は「ここだけパッ」という感覚を1つつかめばいい。この一発が後でバッキングのスネアと重なった瞬間、あなたのグルーヴは急に生き生きと動きだします。今日はその「一発」の爽快さを初めて味わう日です。たった1か所を強く弾いただけでリズムがぐっと生きるその瞬間を、ぜひ感じてみてください。
 
 ## ② ビジュアル資料

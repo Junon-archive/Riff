@@ -15,6 +15,22 @@ i18nKey: "lesson.m1.w4.d3"
 
 여기에 오늘은 **Em7**을 한 스푼 더해요. E9가 밝고 긴장감 있는 도미넌트라면, Em7은 어둡고 부드러운 마이너예요(아래 다이어그램). 원코드 잼이 조금 심심해질 때, 가끔 E9 대신 Em7으로 슬쩍 바꿔주면 색이 확 달라져요. 둘 다 근음이 5번 줄 7프렛이라 손 위치는 거의 그대로예요 — 안쪽 손가락 몇 개만 옮기면 되죠. 이 작은 변화 하나가 밋밋한 반복에 숨통을 틔워줘요.
 
+```json
+{
+  "id": "m1.w4.d3.em7_form",
+  "type": "fretboard_diagram",
+  "meta": { "title": "Em7 shell (root on 5th string)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E" },
+  "fretboard": { "startFret": 4, "fretSpan": 4, "dots": [
+    { "string": 6, "fret": 0, "muted": true },
+    { "string": 5, "fret": 7, "finger": 2, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 4, "fret": 5, "finger": 1, "label": "b3", "role": "chord_tone" },
+    { "string": 3, "fret": 7, "finger": 3, "label": "b7", "role": "chord_tone" },
+    { "string": 2, "fret": 0, "muted": true },
+    { "string": 1, "fret": 0, "muted": true }
+  ]}
+}
+```
+
 두 코드를 오가면서 강세까지 챙기려니 손이 바쁠 거예요. 괜찮아요. Em7은 오늘 '맛보기'예요. 완벽하게 오갈 필요 없이, E9 그루브가 탄탄하다면 그걸로 충분해요. Em7은 '이런 색도 있구나' 정도만 느끼면 돼요. 내일 최종 잼에서 여러분이 원하는 만큼만 꺼내 쓰면 되니까요. 코드 두 개, 강세 몇 개 — 재료는 이게 전부인데도 벌써 진짜 펑크곡의 반주처럼 들리기 시작할 거예요.
 
 ## ② 시각 자료
