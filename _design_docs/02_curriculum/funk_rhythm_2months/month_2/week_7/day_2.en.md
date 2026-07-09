@@ -9,17 +9,17 @@ i18nKey: "lesson.m2.w7.d2"
 
 ## ① Theory
 
-Yesterday you saw staccato and legato separately. Today you **mix them within one bar** — cutting some notes short, sustaining others long, to give the rhythm dynamics and breath.
+Yesterday you saw staccato and legato separately. Today you **<mark>mix them within one bar</mark>** — cutting some notes short, sustaining others long, to give the rhythm dynamics and breath.
 
-This is really the start of "expression." Even the same notes lined up begin to speak the moment you design where to cut and where to sustain. A short staccato is a tightening "tuck"; a long legato is a breathing "space." Alternate them and a stiff rhythm gains a natural, speech-like inflection. When people talk, some words are clipped short, others drawn out — music is the same.
+This is really the start of "expression." Even the same notes lined up begin to speak the moment you design where to cut and where to sustain. A short staccato is <mark>a tightening "tuck"</mark>; a long legato is <mark>a breathing "space"</mark>. Alternate them and a stiff rhythm gains a natural, speech-like inflection. When people talk, some words are clipped short, others drawn out — music is the same.
 
-Today's examples mix staccato and legato. But there's no right answer. Even for the same rhythm, "which notes to cut and which to sustain" is yours to design. Take the examples as a skeleton, vary the lengths, and pick by ear which combination sounds the most "funky."
+Today's examples mix staccato and legato. But there's no right answer. Even for the same rhythm, "which notes to cut and which to sustain" is <mark>yours to design</mark>. Take the examples as a skeleton, vary the lengths, and pick by ear which combination sounds the most "funky."
 
-Changing lengths within one bar can confuse the hand. Especially the switch from sustaining legato to suddenly cutting staccato is hard. Of course. Today, even if imperfect, just grabbing the feel of "I choose the length" is big progress. Experiencing for the first time that the notes stay the same yet the tune's expression changes with length alone makes rhythm far more fun. From today, you're not just a player but an arranger designing the rhythm yourself.
+Changing lengths within one bar can confuse the hand. Especially the switch from sustaining legato to suddenly cutting staccato is hard. Of course. Today, even if imperfect, just grabbing <mark>the feel of "I choose the length"</mark> is big progress. Experiencing for the first time that the notes stay the same yet the tune's expression changes with length alone makes rhythm far more fun. From today, you're not just a player but <mark>an arranger designing the rhythm yourself</mark>.
 
 ## ② Visuals
 
-Mix staccato (short) and legato (long) within one bar. Not an answer but an example of design — vary it into your own lengths.
+Mix staccato (short) and legato (long) within one bar. Not an answer but an example of design — <mark>vary it into your own lengths</mark>.
 
 **Example 1 — cut and sustain (1 bar).** Long notes (legato) and short notes (staccato) alternate. The rhythm gains inflection.
 
@@ -78,16 +78,16 @@ Mix staccato (short) and legato (long) within one bar. Not an answer but an exam
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-BPM 60–70. Alternate short and long notes to warm up the switch. Focus on legato→staccato.
+BPM 60–70. Alternate short and long notes to warm up the switch. Focus on <mark>legato→staccato</mark>.
 
 **10–20 min · Brain training (today's target = designing length)**
-Sing mixed lengths: "daaa dat! daaa dat!" Design in advance where to cut and sustain.
+Sing mixed lengths: "daaa dat! daaa dat!" <mark>Design in advance where to cut and sustain</mark>.
 
 **20–40 min · Real groove (Examples 1·2 / BPM 72)**
-Repeat **Example 1** (cut and sustain) 4× at BPM 72 → then **Example 2** (designing length). Once easy, change lengths into your own inflection.
+Repeat **Example 1** (cut and sustain) 4× at BPM 72 → then **Example 2** (designing length). Once easy, change lengths into <mark>your own inflection</mark>.
 
 **40–50 min · Record & reflect (recommended)**
-Record and check: are short and long clearly distinct / is the inflection natural / is the switch smooth?
+Record and check: <mark>are short and long clearly distinct</mark> / is the inflection natural / <mark>is the switch smooth</mark>?
 
 **Done when:** you can mix staccato and legato within one bar to give the rhythm inflection through note length.
 

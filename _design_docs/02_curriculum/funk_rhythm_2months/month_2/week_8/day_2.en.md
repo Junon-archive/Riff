@@ -9,17 +9,17 @@ i18nKey: "lesson.m2.w8.d2"
 
 ## ① Theory
 
-From today you build parts in earnest. The first is a **chord-based cutting part.** Onto Week 5's three-string triad cutting, lay Weeks 2–3's ghosts and accents to complete a block that fits the challenge track.
+From today you build parts in earnest. The first is a **<mark>chord-based cutting part</mark>.** Onto Week 5's three-string triad cutting, lay Weeks 2–3's ghosts and accents to complete a block that fits the challenge track.
 
-The goal is a **repeatable four-bar block** — like a 'verse,' a solid cutting groove you can loop without getting bored. You've learned all the material: cut only the top three crisply (killing the lower strings with the left mute), fill the gaps with ghosts, and stab accents on the beat 2/4 snare spots. When these three layers roll over three strings, one guitar alone becomes a full rhythm part.
+The goal is a **<mark>repeatable four-bar block</mark>** — like a 'verse,' a solid cutting groove you can loop without getting bored. You've learned all the material: cut only the top three crisply (killing the lower strings with the left mute), fill the gaps with ghosts, and stab accents on the beat 2/4 snare spots. When these three layers roll over three strings, <mark>one guitar alone becomes a full rhythm part</mark>.
 
-What matters here is completeness. This isn't experiment but making **one finished block**, so polish four bars unbroken, with no lower-string noise, and the accent locked tight to the snare. The more solid this block, the more the contrast with tomorrow's riff part comes alive.
+What matters here is completeness. This isn't experiment but making **<mark>one finished block</mark>**, so polish four bars unbroken, with no lower-string noise, and the accent locked tight to the snare. The more solid this block, the more the contrast with tomorrow's riff part comes alive.
 
-Of course it won't be perfect from the start. Lower strings leak while cutting, accents drag, the fourth bar wobbles. Of course. Today, using the example as a skeleton, polish it bit by bit to complete one cutting block "you can keep looping." Once one finished part is in your hands, you'll feel that making a tune is closer than you thought.
+Of course it won't be perfect from the start. Lower strings leak while cutting, accents drag, the fourth bar wobbles. Of course. Today, using the example as a skeleton, polish it bit by bit to complete <mark>one cutting block "you can keep looping"</mark>. Once one finished part is in your hands, you'll feel that <mark>making a tune is closer than you thought</mark>.
 
 ## ② Visuals
 
-The cutting part that becomes the verse. Lay ghosts and accents on the three-string triad to build a repeatable block.
+The cutting part that becomes the verse. Lay ghosts and accents on the three-string triad to <mark>build a repeatable block</mark>.
 
 **E major triad (cutting).** Cut only these three strings, mute the lower ones. Root/chord tones = blue; accents green on the snare.
 
@@ -124,16 +124,16 @@ The cutting part that becomes the verse. Lay ghosts and accents on the three-str
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-BPM 60–70. Drop ghosts and accents onto three-string cutting to warm up. Check the lower-string mute.
+BPM 60–70. Drop ghosts and accents onto three-string cutting to warm up. <mark>Check the lower-string mute</mark>.
 
 **10–20 min · Brain training (today's target = designing the cutting block)**
-Listening to the track, design the cutting part's accent spots and ghost density. Sketch a four-bar structure.
+Listening to the track, <mark>design the cutting part's accent spots and ghost density</mark>. Sketch a four-bar structure.
 
 **20–40 min · Real groove (Examples 1·2 / BPM 78)**
-Set the skeleton with **Example 1** (cutting build 1) → extend **Example 2** (build 2) to four bars and complete it over the track. Polish it to loop.
+Set the skeleton with **Example 1** (cutting build 1) → extend **Example 2** (build 2) to four bars and complete it over the track. <mark>Polish it to loop</mark>.
 
 **40–50 min · Record & reflect (recommended)**
-Record the cutting block and check: only three ring crisply / does the accent lock with the snare / are four bars unbroken / does it not get boring?
+Record the cutting block and check: only three ring crisply / <mark>does the accent lock with the snare</mark> / <mark>are four bars unbroken</mark> / does it not get boring?
 
 **Done when:** with ghosts and accents on three-string cutting, you can complete a repeatable four-bar cutting part (verse) over the track.
 

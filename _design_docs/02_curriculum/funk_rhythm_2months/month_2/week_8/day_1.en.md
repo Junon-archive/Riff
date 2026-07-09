@@ -9,17 +9,17 @@ i18nKey: "lesson.m2.w8.d1"
 
 ## ① Theory
 
-Welcome to the final week! This week isn't for learning something new — it's a **stage** to pour eight weeks' arsenal onto one track.
+Welcome to the final week! This week isn't for learning something new — it's a <mark>stage to pour eight weeks' arsenal onto one track</mark>.
 
-Let's take stock of the arsenal. **Month 1** — the right-hand 16th motor (W1), left-hand ghost notes (W2), accents (W3), the E9 one-chord jam (W4). **Month 2** — three-string triad cutting (W5), single-note lines (W6), staccato and shuffle (W7). Each is a tool for making rhythm. This week you pull them out and assemble your own groove.
+Let's take stock of the arsenal. **Month 1** — the right-hand 16th motor (W1), left-hand ghost notes (W2), accents (W3), the E9 one-chord jam (W4). **Month 2** — three-string triad cutting (W5), single-note lines (W6), staccato and shuffle (W7). Each is a tool for making rhythm. This week you pull them out and <mark>assemble your own groove</mark>.
 
-The challenge's backing track is an empty track of just **E funk, BPM 78, bass and drums.** Filling that empty space with your guitar is this week's mission. Today, pick from the **"option cards"** you can lay on top. Go with chord cutting? Or a single-note line? Play both cards below and feel by ear which fits the track better.
+The challenge's backing track is an empty track of just **E funk, BPM 78, bass and drums.** Filling that empty space with your guitar is <mark>this week's mission</mark>. Today, pick from the **<mark>"option cards"</mark>** you can lay on top. Go with chord cutting? Or a single-note line? Play both cards below and feel by ear which fits the track better.
 
-There's no right answer. You "choosing" all week is the point. Which card to use, where to cut and where to add a line — all your choice. Today, experiment freely with both cards over the track and just grab the sense of "ah, this suits this track." The finish line of two months is in sight. Just getting here is remarkable — now it's time to weave what you learned into a tune of your own.
+There's no right answer. <mark>You "choosing" all week is the point</mark>. Which card to use, where to cut and where to add a line — all your choice. Today, experiment freely with both cards over the track and just grab the sense of "ah, this suits this track." The finish line of two months is in sight. Just getting here is remarkable — now it's time to <mark>weave what you learned into a tune of your own</mark>.
 
 ## ② Visuals
 
-Two 'option cards' to lay over the challenge track (E funk, BPM 78). Play both and pick which fits.
+Two 'option cards' to lay over the challenge track (E funk, BPM 78). Play both and <mark>pick which fits</mark>.
 
 **Card A — cutting groove (2 bars).** A chord-based groove of a three-string triad with ghosts and accents. A 'verse'-like part.
 
@@ -124,16 +124,16 @@ Two 'option cards' to lay over the challenge track (E funk, BPM 78). Play both a
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-BPM 60–70. Lightly run through the eight weeks' tools (cutting, single notes, staccato, etc.) to loosen up.
+BPM 60–70. <mark>Lightly run through the eight weeks' tools</mark> (cutting, single notes, staccato, etc.) to loosen up.
 
 **10–20 min · Brain training (today's target = choosing a card)**
-Listening to the challenge track (E, 78), imagine which fits — Card A (cutting) or Card B (line). Sketch the song structure.
+Listening to the challenge track (E, 78), <mark>imagine which fits</mark> — Card A (cutting) or Card B (line). Sketch the song structure.
 
 **20–40 min · Real groove (Cards A·B / BPM 78)**
-Alternate **Card A** (cutting) and **Card B** (single-note) over the track 4× each. Pick by ear which fits the track.
+Alternate **Card A** (cutting) and **Card B** (single-note) over the track 4× each. <mark>Pick by ear which fits the track</mark>.
 
 **40–50 min · Record & reflect (recommended)**
-Record each card and check: which suits the track / does the beat lock / note what to develop over the next three days.
+Record each card and check: <mark>which suits the track</mark> / <mark>does the beat lock</mark> / note what to develop over the next three days.
 
 **Done when:** you've taken stock of the arsenal and, playing both the cutting and single-note cards over the track, can set a direction.
 

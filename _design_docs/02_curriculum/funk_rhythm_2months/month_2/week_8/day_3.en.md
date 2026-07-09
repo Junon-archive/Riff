@@ -9,17 +9,17 @@ i18nKey: "lesson.m2.w8.d3"
 
 ## ① Theory
 
-Yesterday you completed the cutting part (verse). Today you complete the second part — a **single-note riff** — and **join it** to yesterday's cutting part.
+Yesterday you completed the cutting part (verse). Today you complete the second part — a **<mark>single-note riff</mark>** — and **<mark>join it</mark>** to yesterday's cutting part.
 
-Onto Week 6's single-note line, lay Week 7's staccato to make a clear riff that converses with the bass. The key here is 'contrast.' Where yesterday's cutting was a broad, shimmering chord block, today's riff is a pointed single-note line. If cutting is the 'verse,' this riff is the 'hook' or 'bridge' — a part giving the tune a different color and tension. Cutting notes short with staccato makes the line crisper and tighter.
+Onto Week 6's single-note line, lay Week 7's staccato to make a clear riff that converses with the bass. The key here is 'contrast.' Where yesterday's cutting was <mark>a broad, shimmering chord block</mark>, today's riff is <mark>a pointed single-note line</mark>. If cutting is the 'verse,' this riff is the 'hook' or 'bridge' — a part giving the tune a different color and tension. Cutting notes short with staccato makes the line crisper and tighter.
 
-And today's real mission is **joining the two parts.** Cutting 4 bars → riff 4 bars → cutting again, and alternating the two blocks already creates a 'song structure.' Join them so the beat doesn't wobble at the switch and the cutting/riff contrast rings clearly. This is the moment you step past accompaniment into 'composing.'
+And today's real mission is **<mark>joining the two parts</mark>.** Cutting 4 bars → riff 4 bars → cutting again, and alternating the two blocks already creates a 'song structure.' Join them so the beat doesn't wobble at the switch and the cutting/riff contrast rings clearly. This is the moment you <mark>step past accompaniment into 'composing'</mark>.
 
-Joining the two smoothly is hard at first — especially moving from chords (cutting) to single notes (riff), the hand shape and mute change sharply. Of course. Today, rather than a perfect transition, the goal is to set the tune's skeleton: "two parts that contrast and connect." Once this skeleton stands, tomorrow's final recording is just capturing this flow in one take.
+Joining the two smoothly is hard at first — especially moving from chords (cutting) to single notes (riff), the hand shape and mute change sharply. Of course. Today, rather than a perfect transition, the goal is to <mark>set the tune's skeleton</mark>: "two parts that contrast and connect." Once this skeleton stands, tomorrow's final recording is just capturing this flow in one take.
 
 ## ② Visuals
 
-A single-note riff contrasting the cutting. Cut clearly with staccato and join it to yesterday's cutting part.
+A single-note riff contrasting the cutting. Cut clearly with staccato and <mark>join it to yesterday's cutting part</mark>.
 
 **E note box (single-note).** A single-note line on the 5th/4th strings. Blue = root/5th. Cut short with staccato to keep the riff clear.
 
@@ -97,16 +97,16 @@ A single-note riff contrasting the cutting. Cut clearly with staccato and join i
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-BPM 60–70. Lay staccato onto the single-note line to warm up. Lightly practice the cutting↔single-note hand change.
+BPM 60–70. Lay staccato onto the single-note line to warm up. Lightly practice the <mark>cutting↔single-note hand change</mark>.
 
 **10–20 min · Brain training (today's target = riff + joining)**
-Design the riff part and sketch how to join it with yesterday's cutting (cutting→riff→cutting).
+Design the riff part and sketch <mark>how to join it</mark> with yesterday's cutting (cutting→riff→cutting).
 
 **20–40 min · Real groove (Examples 1·2 / BPM 78)**
-Complete **Examples 1·2** (riff) over the track, then **alternate and join with yesterday's cutting part** into an eight-bar structure. Keeping the beat across the switch is the key.
+Complete **Examples 1·2** (riff) over the track, then **<mark>alternate and join with yesterday's cutting part</mark>** into an eight-bar structure. Keeping the beat across the switch is the key.
 
 **40–50 min · Record & reflect (recommended)**
-Record the joined cutting+riff and check: is the riff clear / is the two-part contrast audible / does the beat hold at the switch?
+Record the joined cutting+riff and check: is the riff clear / <mark>is the two-part contrast audible</mark> / <mark>does the beat hold at the switch</mark>?
 
 **Done when:** you can complete a single-note riff with staccato and join it to yesterday's cutting part to make a song structure (verse + hook).
 

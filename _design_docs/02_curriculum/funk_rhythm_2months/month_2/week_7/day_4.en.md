@@ -9,17 +9,17 @@ i18nKey: "lesson.m2.w7.d4"
 
 ## ① Theory
 
-The week's finish line. Today you mix this week's **staccato control and shuffle feel** to complete a four-bar groove over a backing track.
+The week's finish line. Today you mix this week's **<mark>staccato control and shuffle feel</mark>** to complete a four-bar groove over a backing track.
 
-To recap the week's two weapons: staccato is the tool that sculpts note **length** — cut short to tighten, sustain long for space. Shuffle is the tool that sways note **timing** — tilt the grid slightly to make it bounce. Even the same notes and rhythm come alive with expression once you add these two. If up to last week was "what you play," this week is "how you play it."
+To recap the week's two weapons: staccato is <mark>the tool that sculpts note length</mark> — cut short to tighten, sustain long for space. Shuffle is <mark>the tool that sways note timing</mark> — tilt the grid slightly to make it bounce. Even the same notes and rhythm come alive with expression once you add these two. If up to last week was "what you play," this week is "how you play it."
 
-Today's groove is the sum of the two. Cut some notes staccato, sway the whole thing slightly with shuffle, and roll it over the backing. When staccato tightens the rhythm and shuffle sways it, a stiff groove starts to breathe and dance.
+Today's groove is the sum of the two. Cut some notes staccato, sway the whole thing slightly with shuffle, and roll it over the backing. When staccato tightens the rhythm and shuffle sways it, a stiff groove starts to <mark>breathe and dance</mark>.
 
-Looking back on two months, you now hold nearly every tool of rhythm. Motor, ghosts, accents (Month 1); three-string cutting, single notes, staccato, shuffle (Month 2). Next week isn't a week of learning but a week of **pouring it out** — over an empty track of just bass and drums, you mix all of it to record your own groove. If staccato and shuffle have settled into your hands today, the prep for the final week is done. What's left isn't a test of what you learned but a stage to pour it out and enjoy. Two months' journey soon completes into one piece.
+Looking back on two months, you now hold <mark>nearly every tool of rhythm</mark>. Motor, ghosts, accents (Month 1); three-string cutting, single notes, staccato, shuffle (Month 2). Next week isn't a week of learning but a week of **<mark>pouring it out</mark>** — over an empty track of just bass and drums, you mix all of it to record your own groove. If staccato and shuffle have settled into your hands today, the prep for the final week is done. What's left isn't a test of what you learned but a stage to pour it out and enjoy. Two months' journey soon completes into one piece.
 
 ## ② Visuals
 
-A finished groove mixing staccato (length) and shuffle (sway). Tighten and sway it over the backing.
+A finished groove mixing staccato (length) and shuffle (sway). <mark>Tighten and sway it</mark> over the backing.
 
 **Example 1 — staccato groove (2 bars).** A tightening groove mixing cut and sustained notes. Straight and clear.
 
@@ -90,16 +90,16 @@ A finished groove mixing staccato (length) and shuffle (sway). Tighten and sway 
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-BPM 60–70. Lightly review staccato (cutting) and shuffle (swaying). Check both sit in your hands.
+BPM 60–70. Lightly review staccato (cutting) and shuffle (swaying). <mark>Check both sit in your hands</mark>.
 
 **10–20 min · Brain training (today's target = length + sway)**
-Sing length ("daaa dat!") and sway ("daa-dm") mixed. Design how to tighten and sway.
+Sing length ("daaa dat!") and sway ("daa-dm") mixed. <mark>Design how to tighten and sway</mark>.
 
 **20–40 min · Real groove (Examples 1·2 / BPM 76)**
-Play **Example 1** (staccato groove) straight and **Example 2** (shuffle feel) swung over a backing. Once easy, mix the two into your own groove.
+Play **Example 1** (staccato groove) straight and **Example 2** (shuffle feel) swung over a backing. Once easy, <mark>mix the two into your own groove</mark>.
 
 **40–50 min · Record & reflect (recommended)**
-Record and check: does the staccato tighten / does the shuffle sway / does it lock with the backing / is the expression alive?
+Record and check: <mark>does the staccato tighten</mark> / <mark>does the shuffle sway</mark> / does it lock with the backing / is the expression alive?
 
 **Done when:** you can hold a four-bar groove mixing staccato and shuffle over a backing, alive with expression through length and sway. (Week 7 complete!)
 

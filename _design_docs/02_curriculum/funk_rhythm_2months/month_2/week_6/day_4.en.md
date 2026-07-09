@@ -9,17 +9,17 @@ i18nKey: "lesson.m2.w6.d4"
 
 ## ① Theory
 
-The week's finish line. Today you complete a one- or two-string single-note riff over a backing track to make a **line that locks with the bass.**
+The week's finish line. Today you complete a one- or two-string single-note riff over a backing track to make a **<mark>line that locks with the bass</mark>.**
 
-The real power of single-note funk comes from its relationship with the bass. There are two main ways. One is **unison** — playing the same line as the bass on top to make it twice as thick and solid. The other is **call and response** — the bass plays a bar, and your guitar fills the gaps or the tail, trading like a conversation. Today, listen well to the backing bass and find where your line sits right on top.
+The real power of single-note funk comes from its relationship with the bass. There are two main ways. One is **<mark>unison</mark>** — playing the same line as the bass on top to make it twice as thick and solid. The other is **<mark>call and response</mark>** — the bass plays a bar, and your guitar fills the gaps or the tail, trading like a conversation. Today, listen well to the backing bass and find where your line sits right on top.
 
-Mix in yesterday's ghosts and a few notes become a full riff. The line's clear notes + ghosts filling the gaps + the lock with the bass — when these three overlap, one guitar proudly takes a pillar of the rhythm section.
+Mix in yesterday's ghosts and a few notes become a full riff. The line's clear notes + ghosts filling the gaps + the lock with the bass — when these three overlap, one guitar proudly takes <mark>a pillar of the rhythm section</mark>.
 
-Looking back on the week, you've learned to make a groove without chords. If a chord is color, a single note is a line. Now you can use both color and line. Next week you add **note length (staccato) and shuffle** to widen expression further. If today's riff locks tightly with the backing bass, this week is a big success. Be sure to record that line. Able now to carry a tune on one line without chords, you've come a long way. All that's left is to give that line expression.
+Looking back on the week, you've learned <mark>to make a groove without chords</mark>. If a chord is color, a single note is a line. Now you can use both color and line. Next week you add **<mark>note length (staccato) and shuffle</mark>** to widen expression further. If today's riff locks tightly with the backing bass, this week is a big success. Be sure to record that line. Able now to carry a tune on one line without chords, you've come a long way. All that's left is to give that line expression.
 
 ## ② Visuals
 
-A finished one- or two-string single-note riff with ghosts mixed in. Find where it locks with the backing bass.
+A finished one- or two-string single-note riff with ghosts mixed in. Find <mark>where it locks with the backing bass</mark>.
 
 **E note box (review).** Build the riff from these notes. Unison with the bass, or fill the gaps for call and response.
 
@@ -141,16 +141,16 @@ A finished one- or two-string single-note riff with ghosts mixed in. Find where 
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-BPM 60–70. Lightly review this week's lines (5th/4th strings) and ghosts. Check the mute holds.
+BPM 60–70. Lightly review this week's lines (5th/4th strings) and ghosts. <mark>Check the mute holds</mark>.
 
 **10–20 min · Brain training (today's target = locking with the bass)**
-Listen well to the backing bass line first. Decide whether to overlap it (unison) or fill the gaps (call and response).
+Listen well to the backing bass line first. Decide whether to <mark>overlap it (unison)</mark> or <mark>fill the gaps (call and response)</mark>.
 
 **20–40 min · Real groove (Examples 1·2 / BPM 76)**
-Play **Examples 1·2** over a backing, then change notes into your own riff. Finding where it locks with the bass is the key.
+Play **Examples 1·2** over a backing, then change notes into your own riff. Finding <mark>where it locks with the bass</mark> is the key.
 
 **40–50 min · Record & reflect (recommended)**
-Record your own riff and check: is only one string clear / do ghosts fill the gaps / does it lock with the bass / is there no noise?
+Record your own riff and check: is only one string clear / <mark>do ghosts fill the gaps</mark> / <mark>does it lock with the bass</mark> / is there no noise?
 
 **Done when:** you can complete and record your own line — a one/two-string single-note riff with ghosts — that locks with the backing bass. (Week 6 complete!)
 

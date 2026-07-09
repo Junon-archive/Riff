@@ -9,11 +9,11 @@ i18nKey: "lesson.m2.w7.d1"
 
 ## ① Theory
 
-Even the same rhythm and the same note become a completely different groove depending on whether you **cut it short or let it ring.** That tight, gripping funk taste comes precisely from **staccato.**
+Even the same rhythm and the same note become a completely different groove depending on whether you **<mark>cut it short or let it ring</mark>.** That tight, gripping funk taste comes precisely from **<mark>staccato</mark>.**
 
-Staccato is the technique of laying your hand lightly on the string right after playing to **cut the ring clean** — a short note immediately followed by silence. **Legato**, by contrast, lets the note ring out to the end, leaving resonance. Think of staccato as dotting points and legato as drawing a line. Play the same note staccato and the rhythm tightens taut; play it legato and it opens loose.
+Staccato is the technique of laying your hand lightly on the string right after playing to **<mark>cut the ring clean</mark>** — a short note immediately followed by silence. **<mark>Legato</mark>**, by contrast, lets the note ring out to the end, leaving resonance. Think of staccato as dotting points and legato as drawing a line. Play the same note staccato and the rhythm tightens taut; play it legato and it opens loose.
 
-Today you compare **the same pattern two ways** — one legato, ringing to the end, one staccato, cut short with silence. The same four strokes, yet feel by ear how different the impression is with and without the cut. Funk is mostly staccato — short and firm cuts are what tighten the groove.
+Today you compare **<mark>the same pattern two ways</mark>** — one legato, ringing to the end, one staccato, cut short with silence. The same four strokes, yet feel by ear how different the impression is with and without the cut. <mark>Funk is mostly staccato</mark> — short and firm cuts are what tighten the groove.
 
 ```json
 {
@@ -51,11 +51,11 @@ Today you compare **the same pattern two ways** — one legato, ringing to the e
 }
 ```
 
-The cut timing is hard at first. Cut too early and no note sounds; too late and it doesn't cut. You cut by easing the left-hand force or laying the side of the right hand on the strings, and that timing takes a few days to settle. That's normal. Today, just knowing in your body what "cutting" feels like is enough. This one small technique is a magic tool that makes every groove you've learned so far far tighter.
+The cut timing is hard at first. Cut too early and no note sounds; too late and it doesn't cut. You cut by easing the left-hand force or laying the side of the right hand on the strings, and that timing takes a few days to settle. That's normal. Today, just knowing in your body <mark>what "cutting" feels like</mark> is enough. This one small technique is a magic tool that makes every groove you've learned so far far tighter.
 
 ## ② Visuals
 
-Compare the same four strokes as legato (long) and staccato (short + silence). Note length changes the impression.
+Compare the same four strokes as legato (long) and staccato (short + silence). <mark>Note length changes the impression</mark>.
 
 **Example 1 — legato (1 bar).** Quarter notes ringing to the end. A loose, open feel.
 
@@ -104,16 +104,16 @@ Compare the same four strokes as legato (long) and staccato (short + silence). N
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-BPM 60–70. Alternate one note long (legato) and short (staccato) to warm up the cut timing.
+BPM 60–70. Alternate one note long (legato) and short (staccato) to warm up the <mark>cut timing</mark>.
 
 **10–20 min · Brain training (today's target = cutting)**
-Voice legato as "daaa" and staccato as "dat!" to distinguish length. Picture when to cut in advance.
+Voice legato as "daaa" and staccato as "dat!" to <mark>distinguish length</mark>. Picture when to cut in advance.
 
 **20–40 min · Real groove (Examples 1·2 / BPM 70)**
-Alternate **Example 1** (legato) and **Example 2** (staccato) 4× each at BPM 70. The key is how different the same pattern sounds.
+Alternate **Example 1** (legato) and **Example 2** (staccato) 4× each at BPM 70. The key is <mark>how different the same pattern sounds</mark>.
 
 **40–50 min · Record & reflect (recommended)**
-Record and check: does the staccato cut short / does the legato ring to the end / is the difference clear?
+Record and check: <mark>does the staccato cut short</mark> / <mark>does the legato ring to the end</mark> / is the difference clear?
 
 **Done when:** you can play the same note distinctly as staccato (short cut) and legato (long ring).
 
