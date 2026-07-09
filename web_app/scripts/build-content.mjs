@@ -155,7 +155,12 @@ const KEY_SIGNATURES = new Set([
 // bend/hammer_on/pull_off/slide/vibrato/harmonic 은 staff.ts 미구현 → 오선보 경로에서 쓰면 화면에
 // 조용히 사라진다. 이 기법이 필요하면 tab.ts 경로(notation 미지정/"tab")로 내야 한다(tab.ts는 전부 그림).
 // ★staff.ts 에 새 기법 렌더를 추가하면 이 Set 한 줄만 넓히면 된다(락이 아니라 능력 계약).
-const STAFF_TECHNIQUES = new Set(['none', 'palm_mute', 'dead_note']);
+// 오선보(staff.ts) 경로가 렌더 가능한 technique. ★02-A: 밴딩·해머온·풀오프·슬라이드·비브라토·하모닉
+// 을 오선보 위 텍스트 마커(Annotation)로 렌더 구현 후 완화. (구현 안 된 기법은 계속 막아 조용한 증발 방지.)
+const STAFF_TECHNIQUES = new Set([
+  'none', 'palm_mute', 'dead_note',
+  'hammer_on', 'pull_off', 'slide', 'bend', 'vibrato', 'harmonic',
+]);
 const STAFF_NOTATIONS = new Set(['staff', 'staff+tab', 'rhythm']);
 // duration → 16분음표 단위(마디 박자합 검산용). dotted 는 1.5배.
 const DUR_UNITS = { whole: 16, half: 8, quarter: 4, eighth: 2, sixteenth: 1 };

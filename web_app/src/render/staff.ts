@@ -110,7 +110,16 @@ const DUR: Record<string, string> = {
 };
 /** duration → 16분음표 단위(정수). 박(beat, 4분음표)=4 → 빔을 박 단위로 끊는 데 사용. */
 const DUR_INT: Record<string, number> = { whole: 16, half: 8, quarter: 4, eighth: 2, sixteenth: 1 };
-const BEAT_INT = 4; // 4분음표 = 1박(분모 4 가정)
+/**
+ * 빔 그룹 경계(16분음 단위). ★02-D — timeSignature 에서 유도(구 BEAT_INT=4 4/4 하드코딩 대체).
+ * 단순박자(분모 4 등): 한 박=16/분모 단위(4/4·3/4·2/4 → 4). 복합박자(6/8·9/8·12/8): 점4분음(3박)=6 단위.
+ * 4/4 는 4 로 환원 → 기존 빔 불변.
+ */
+function beatUnit(numBeats: number, beatValue: number): number {
+  const base = 16 / (beatValue || 4);
+  if (beatValue === 8 && numBeats % 3 === 0) return base * 3; // 복합박자: 점4분음 그룹
+  return base;
+}
 
 /* ---- 레이아웃 상수 ---------------------------------------------------- */
 const MEASURES_PER_ROW = 2; // 한 줄에 2마디
@@ -188,6 +197,30 @@ function pitchOf(
   const writtenOctave = concertOctave + WRITTEN_OCTAVE_SHIFT;
   const acc = name.includes('#') ? '#' : name.includes('b') ? 'b' : null;
   return { key: `${name}/${writtenOctave}`, acc };
+}
+
+/**
+ * ★02-A: 표현 기법 → 오선보 위 텍스트 마커(기존 palm_mute='P.M.' Annotation 관례와 동일).
+ * 밴딩·해머온·풀오프·슬라이드·비브라토·하모닉을 담백한 기보 관례 약어로 표기(양 모드 공통·jsdom 안전).
+ * dead_note(X 노트헤드)·palm_mute(P.M.)는 별도 경로라 여기서 제외.
+ */
+function techniqueMark(n: TabNoteData): string | null {
+  switch (n.technique) {
+    case 'hammer_on':
+      return 'H';
+    case 'pull_off':
+      return 'P';
+    case 'slide':
+      return n.slideToFret != null ? `sl.${n.slideToFret}` : 'sl.';
+    case 'bend':
+      return `bend ${n.bendTarget ?? 'full'}`;
+    case 'vibrato':
+      return 'vib.';
+    case 'harmonic':
+      return 'harm.';
+    default:
+      return null;
+  }
 }
 
 /** role/isRoot → 강조색(tab.ts accentColor·color_legend.md 와 동일 팔레트). 없으면 null(=currentColor). */
@@ -290,6 +323,7 @@ function buildMeasure(
   flats: boolean,
   openOf: (str: number) => number,
   nStr: number,
+  beatInt: number,
 ): BuiltMeasure {
   const stave: StaveNote[] = [];
   const tab: (TabNote | GhostNote)[] = [];
@@ -316,7 +350,7 @@ function buildMeasure(
       stave.push(new StaveNote({ keys: ['b/4'], duration: `${durCode}r` }));
       tab.push(new GhostNote(durCode));
       pos += unit;
-      if (pos % BEAT_INT === 0) flush();
+      if (pos % beatInt === 0) flush();
       continue;
     }
 
@@ -375,6 +409,13 @@ function buildMeasure(
       pm.setVerticalJustification(Annotation.VerticalJustify.TOP);
       sNote.addModifier(pm, 0);
     }
+    // ★02-A: 밴딩·해머온·풀오프·슬라이드·비브라토·하모닉 → 오선보 위 텍스트 마커.
+    const tMark = techniqueMark(n);
+    if (tMark && !dead) {
+      const tm = new Annotation(tMark);
+      tm.setVerticalJustification(Annotation.VerticalJustify.TOP);
+      sNote.addModifier(tm, 0);
+    }
     // 코드 심볼(Cmaj7 등): 음표 위에 표기(주로 리듬 슬래시 악보).
     if (n.chordSymbol) {
       const cs = new ChordSymbol();
@@ -415,7 +456,7 @@ function buildMeasure(
     if (n.duration === 'eighth' || n.duration === 'sixteenth') curBeam.push(sNote);
     else flush();
     pos += unit;
-    if (pos % BEAT_INT === 0) flush();
+    if (pos % beatInt === 0) flush();
   }
   flush();
   return { stave, tab, beams };
@@ -444,13 +485,16 @@ export function renderStaff(score: Score, mode: StaffMode): string {
   const [numBeats, beatValue] = (tabData.timeSignature ?? '4/4')
     .split('/')
     .map((x) => parseInt(x, 10));
+  const beatInt = beatUnit(numBeats || 4, beatValue || 4); // ★02-D 빔 그룹 경계(4/4→4 불변)
 
   const doc = getDoc();
   const prevDoc = (globalThis as { document?: Document }).document;
   (globalThis as { document?: Document }).document = doc;
   try {
     // 마디별 tickable 생성 → 전부 비면 빈 SVG
-    const built = (tabData.measures as Measure[]).map((m) => buildMeasure(m, flats, openOf, nStr));
+    const built = (tabData.measures as Measure[]).map((m) =>
+      buildMeasure(m, flats, openOf, nStr, beatInt),
+    );
     if (built.every((b) => b.stave.length === 0)) return emptySvg();
 
     // 2마디씩 줄(row)로 묶기

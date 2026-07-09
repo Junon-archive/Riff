@@ -1,6 +1,6 @@
 ---
 id: 02-expressive-techniques
-status: TODO
+status: IN_PROGRESS (A 기법렌더·D 비4/4빔 완료 2026-07-09 — B 붙임줄·C 잇단음 대기)
 priority: medium
 risk: medium
 depends_on: []
@@ -74,11 +74,11 @@ owner: null
 
 ## 체크리스트
 
-- [ ] A: staff.ts에 bend/hammer_on/pull_off/slide/vibrato/harmonic 렌더 분기 (tab.ts 참고)
-- [ ] A: STAFF_TECHNIQUES 완화(구현된 것만)
+- [x] A: staff.ts에 bend/hammer_on/pull_off/slide/vibrato/harmonic 렌더 분기 — 2026-07-09. 오선보 위 텍스트 마커(Annotation, 기존 P.M. 관례) H·P·sl·bend·vib·harm. (슬러/벤딩화살표 글리프 고도화는 후속 여지)
+- [x] A: STAFF_TECHNIQUES 완화(구현된 6종 추가) — 2026-07-09
 - [ ] B: tie 필드 + StaveTie 렌더
 - [ ] C: tuplet 필드 + Tuplet 렌더 + validateScore 박자합 예외
-- [ ] D: BEAT_INT → timeSignature 유도 함수
+- [x] D: BEAT_INT → timeSignature 유도(`beatUnit`) — 2026-07-09. 단순박자=16/분모, 복합(6/8·9/8·12/8)=점4분음 그룹. 4/4→4 불변
 - [ ] V1~V5 통과(비4/4·기존 4/4 픽셀 불변) + Roadmap·이 문서 갱신
 - [ ] playbook 8규칙에서 "오선보 밴딩 금지"류 문구 갱신(구현된 기법 반영)
 
