@@ -31,6 +31,15 @@ const CARET_ICON = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none">
 
 // SSR 기본 펼침: soon 이 아닌 첫 Month, 그 Month 의 첫 Week만 open. 나머지는 전부 접힘.
 const firstOpenMonthIndex = curriculum.months.findIndex((m) => !isMonthSoon(m));
+
+// 커리큘럼 소개(백로그 01 Part C): meta.json intro[lang] 이 있으면 헤더에 문단으로 노출.
+// 문자열 또는 문단 배열 둘 다 지원. 없으면(대다수 기존 커리큘럼) 미표시 → 기존 렌더 불변.
+const introRaw = (curriculum as { intro?: Record<string, string | string[]> }).intro?.[lang];
+const introParagraphs: string[] = Array.isArray(introRaw)
+  ? introRaw.filter((p) => p && p.trim())
+  : typeof introRaw === 'string' && introRaw.trim()
+    ? introRaw.split(/\n{2,}/).map((p) => p.trim()).filter(Boolean)
+    : [];
 ---
 
 <main class="view" id="view-curriculum" data-curriculum={curriculumId} data-total-days={curriculum.totalDays}>
@@ -38,6 +47,11 @@ const firstOpenMonthIndex = curriculum.months.findIndex((m) => !isMonthSoon(m));
     <span class="eyebrow">{translate(lang, 'curr.eyebrow')}</span>
     <h1 class="display" id="currTitle">{cleanTitle(curriculum.titles[lang])}</h1>
     {curriculum.forWho && <p class="curr-for-who curr-head-for-who">{curriculum.forWho[lang]}</p>}
+    {introParagraphs.length > 0 && (
+      <div class="curr-intro">
+        {introParagraphs.map((p) => <p>{p}</p>)}
+      </div>
+    )}
   </section>
 
   <div class="card prog-summary">

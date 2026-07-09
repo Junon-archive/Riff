@@ -14,11 +14,33 @@
   "image": "/curriculum/solo-scale.webp",
   "topic": "solo-scale",
   "level": 2,
-  "tags": ["solo", "scale", "improv", "intermediate"],
+  "tags": [
+    "solo",
+    "scale",
+    "improv",
+    "intermediate"
+  ],
   "durationMonths": 3,
   "forWho": {
     "ko": "곡은 쳐봤지만, 즉흥 솔로는 처음인 분께",
     "en": "For players who can play songs but have never improvised",
     "ja": "曲は弾けるけど、即興ソロは初めての人へ"
+  },
+  "intro": {
+    "ko": [
+      "이 과정은 곡은 칠 줄 알지만 즉흥 솔로는 한 번도 시도해본 적 없는 분을 위한 12주 로드맵이에요. 스케일을 상하행으로 외우는 대신, 코드가 바뀔 때마다 그 코드의 3도에 착지하는 감각부터 길러서 지판 위에서 스스로 음을 고르는 경험을 쌓아갑니다.",
+      "1개월엔 펜타토닉 다섯 박스를 넥 전체에서 연결하고 블루스와 벤딩·비브라토를 익히고, 2개월엔 다이어토닉 스케일과 코드톤 매핑으로 ii-V-I을 자연스럽게 잇고, 3개월엔 도리안·믹솔리디안 색채와 여백·프레이징을 더해 나만의 오리지널 솔로를 녹음하는 순서로 나아가요.",
+      "손은 어느 정도 풀렸지만 \"이제 뭘 쳐야 하지\"라는 막막함을 느껴본 분이라면, 이 여정 끝에서 백킹 트랙 위에서 자유롭게 노래하듯 솔로를 만드는 자신을 만나게 될 거예요."
+    ],
+    "en": [
+      "This course is a 12-week roadmap for players who can already play songs but have never tried improvising a solo. Instead of memorizing scales up and down, you'll start by training your ear and fingers to land on the chord's 3rd every time the chord changes — building a real sense of choosing your own notes on the fretboard.",
+      "Month 1 connects all five pentatonic boxes across the neck and adds blues phrasing with bending and vibrato. Month 2 brings in diatonic scales and chord-tone mapping to smoothly outline a ii-V-I. Month 3 layers in Dorian and Mixolydian color along with space and phrasing, building up to recording your own original solo.",
+      "If your hands are warmed up but you freeze wondering \"what do I even play now,\" this journey ends with you singing freely over a backing track — in your own voice."
+    ],
+    "ja": [
+      "この講座は、曲は弾けるけど即興ソロは一度も挑戦したことがない人のための12週間ロードマップです。スケールをただ上下に暗記するのではなく、コードが変わるたびにその3度に着地する感覚から鍛えて、指板の上で自分で音を選ぶ経験を積んでいきます。",
+      "1か月目は5つのペンタトニックボックスをネック全体でつなげ、ブルースとベンディング・ビブラートを身につけます。2か月目はダイアトニックスケールとコードトーンのマッピングでii-V-Iを自然につなぎ、3か月目はドリアン・ミクソリディアンの色彩と間・フレージングを加えて、最後は自分だけのオリジナルソロを録音するところまで進みます。",
+      "指はある程度動くのに「次に何を弾けばいいか分からない」ともどかしさを感じたことがある人なら、この旅の終わりにはバッキングの上で自由に歌うようにソロを組み立てる自分に出会えるはずです。"
+    ]
   }
 }

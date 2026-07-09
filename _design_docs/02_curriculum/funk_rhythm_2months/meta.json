@@ -14,11 +14,35 @@
   "image": "/curriculum/funk-rhythm.webp",
   "topic": "funk-rhythm",
   "level": 2,
-  "tags": ["funk", "rhythm", "groove", "right-hand", "muting", "comping"],
+  "tags": [
+    "funk",
+    "rhythm",
+    "groove",
+    "right-hand",
+    "muting",
+    "comping"
+  ],
   "durationMonths": 2,
   "forWho": {
     "ko": "코드는 치는데 왜 내 펑크는 '꿀렁'거리지 않는지 답답한 분께",
     "en": "For players who can strum chords but wonder why their funk doesn't groove",
     "ja": "コードは弾けるのに、なぜ自分のファンクはグルーヴしないのか悩む人へ"
+  },
+  "intro": {
+    "ko": [
+      "이 과정은 코드는 치는데 왜 그루브가 나지 않는지 답답한 분을 위한 8주 오른손 훈련 프로그램이에요. 펑크는 화려한 코드 진행이 아니라 멈추지 않는 오른손 리듬으로 완성된다는 걸, 16비트 모터부터 차근차근 몸에 새깁니다.",
+      "1개월차엔 손목 스냅으로 쉬지 않는 16비트 모터를 만들고 고스트 노트와 악센트로 그루브를 살린 뒤 E9 코드 하나 위에서 원코드 잼까지 가고, 2개월차엔 같은 리듬 위에 미니멀 3줄 보이싱·싱글노트 베이스라인·스타카토와 셔플로 색과 표현을 더해요.",
+      "마지막 주는 시험이 아니라 무대예요. 베이스와 드럼만 깔린 트랙 위에서 두 달간 익힌 모든 걸 쏟아 나만의 그루브를 녹음하며 마무리합니다."
+    ],
+    "en": [
+      "This course is an 8-week right-hand training program for players who can strum chords but can't figure out why their funk doesn't groove. Funk isn't built from fancy chord progressions — it's built from a right hand that never stops. You'll start with a nonstop 16th-note motor and build from there.",
+      "Month 1 locks in that motor with wrist snaps, adds ghost notes and accents for groove, and takes it all the way to a one-chord funk jam over E9. Month 2 layers color and expression onto the same rhythm — minimal 3-string voicings, single-note basslines, and staccato and shuffle feels.",
+      "The final week isn't a test — it's a stage. Over a bass-and-drums-only backing track, you'll pour in everything from both months and record your own groove."
+    ],
+    "ja": [
+      "この講座は、コードは弾けるのになぜグルーヴが出ないのか悩んでいる人のための8週間右手トレーニングプログラムです。ファンクは派手なコード進行ではなく、止まらない右手のリズムで完成するもの。16ビートモーターから、じっくり体に染み込ませていきます。",
+      "1か月目は手首のスナップで止まらない16ビートモーターを作り、ゴーストノートとアクセントでグルーヴを生かし、最後はE9コード一つの上でワンコード・ジャムまで進みます。2か月目は同じリズムの上に、ミニマルな3弦ボイシング・シングルノートのベースライン・スタッカートとシャッフルで色と表現を加えていきます。",
+      "最終週はテストではなく舞台です。ベースとドラムだけのバッキングの上で、2か月分すべてを注ぎ込んで自分だけのグルーヴを録音します。"
+    ]
   }
 }
