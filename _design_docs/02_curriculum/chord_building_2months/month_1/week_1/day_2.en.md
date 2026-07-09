@@ -9,13 +9,13 @@ i18nKey: "lesson.m1.w1.d2"
 
 ## ① Theory
 
-Here's why we're doing this today — nail one chord properly and <mark>dozens of minor chords come free</mark>. Yesterday you fixed the **3rd (B)** in G major into your eye, right? Today you touch only that 3rd. One finger, one fret. The rule is a single line:
+Here's why we're doing this today — nail one chord properly and dozens of minor chords come free. Yesterday you fixed the **3rd (B)** in G major into your eye, right? Today you touch only that 3rd. <mark>One finger, one fret</mark>. The rule is a single line:
 
-> **Lower the 3rd a half step (3 → b3) and Major becomes minor.**
+> **<mark>Lower the 3rd a half step</mark> (3 → b3) and Major becomes minor.**
 
-On the fretboard, drop the **4th fret (B, the 3rd) on the 3rd string** one fret down to the **3rd fret (B♭, b3).** One finger, one fret, and <mark>the chord's expression flips from bright to sad</mark>. R and 5 — you don't touch them at all.
+On the fretboard, drop the **4th fret (B, the 3rd) on the 3rd string** one fret down to the **3rd fret (B♭, b3).** One finger, one fret, and the chord's expression flips <mark>from bright to sad</mark>. R and 5 — you don't touch them at all.
 
-At first it might feel almost anticlimactic — "wait, that's really it?" — and **that emptiness is normal.** Good principles are simple like that. <mark>Bright vs. sad is always decided by one note, the 3rd</mark>; today you just feel that once, in your hands.
+At first it might feel almost anticlimactic — "wait, that's really it?" — and **<mark>that emptiness is normal</mark>.** Good principles are simple like that. Bright vs. sad is always decided by one note, the 3rd; today you just feel that once, in your hands.
 
 ```json
 {
@@ -42,11 +42,11 @@ At first it might feel almost anticlimactic — "wait, that's really it?" — an
 }
 ```
 
-Why it matters: from now on, for any chord you meet, just ask "where's the 3rd, and is it major or minor?" and you instantly know whether it's a bright or dark chord. Instead of memorizing 60 shapes, you track **one spot: the 3rd.** Am, Cm, Fm — <mark>you'll make them yourself</mark>, thinking "ah, just drop the 3rd a half step."
+Why it matters: from now on, for any chord you meet, just ask "where's the 3rd, and is it major or minor?" and you instantly know whether it's a bright or dark chord. Instead of memorizing 60 shapes, you track **<mark>one spot: the 3rd</mark>.** Am, Cm, Fm — you'll make them yourself, thinking "ah, just drop the 3rd a half step."
 
 ## ② Visuals
 
-First, **G minor (E-form)** — yesterday's G major with only the 3rd lowered a half step. See the 3rd string <mark>move from fret 4 to fret 3</mark>. The green is that **b3 (B♭)**, today's star.
+First, **G minor (E-form)** — yesterday's G major with only the 3rd lowered a half step. See the 3rd string move from fret 4 to fret 3. The green is that **b3 (B♭)**, <mark>today's star</mark>.
 
 ```json
 {
@@ -101,7 +101,7 @@ First, **G minor (E-form)** — yesterday's G major with only the 3rd lowered a 
 }
 ```
 
-▶ **BPM 70.** "Root → major third → minor third → root." <mark>Feel the expression darken the instant the 3rd drops to b3</mark>. Repeat 4×.
+▶ **BPM 70.** "Root → major third → minor third → root." Feel the expression darken the instant the 3rd drops to b3. Repeat 4×.
 
 **Example 2 — Major ↔ minor switch comp.** Same rhythm, bar 1 is G, bar 2 is Gm. On each marked note **strum the whole chord,** but notice that the only thing that actually moves is **one finger on the 3rd string (fret 4 ↔ 3).**
 
@@ -139,7 +139,7 @@ First, **G minor (E-form)** — yesterday's G major with only the 3rd lowered a 
 }
 ```
 
-▶ **BPM 75, repeat 4×.** Bar 1 is bright G, bar 2 is dark Gm. The rhythm is identical; only the 3rd-string finger drops one fret. Let your hand remember that <mark>one fret changes the whole mood</mark>.
+▶ **BPM 75, repeat 4×.** Bar 1 is bright G, bar 2 is dark Gm. The rhythm is identical; only the 3rd-string finger drops one fret. Let your hand remember that one fret changes the whole mood.
 
 ## ③ Today's practice (50-minute routine)
 
@@ -147,13 +147,13 @@ First, **G minor (E-form)** — yesterday's G major with only the 3rd lowered a 
 Alternate G ↔ Gm every four beats. Move only the 3rd-string finger between fret 4 and 3, keeping the other fingers planted as much as possible. <mark>Don't let the switch stutter</mark>.
 
 **10–20 min · Brain training (today's target = b3)**
-Fret **Example 1** while saying "third / flat third" aloud. <mark>You pass once you can alternate fret 4 and fret 3 on the 3rd string accurately with your eyes closed</mark>. This one fret is your "minor switch" for the whole week.
+Fret **Example 1** while saying "third / flat third" aloud. You pass once you can alternate fret 4 and fret 3 on the 3rd string accurately with your eyes closed. This one fret is your <mark>"minor switch"</mark> for the whole week.
 
 **20–40 min · Real comping (Example 2 / 70–80 BPM)**
-No backing track needed. **Repeat Example 2 at BPM 75 4×** — bar 1 G, bar 2 Gm. Once comfortable, move just the root to the 5th string (e.g., C ↔ Cm) and apply the same switch. The key is to <mark>switch by thinking "I lowered the 3rd," not by re-grabbing a shape</mark>.
+No backing track needed. **Repeat Example 2 at BPM 75 4×** — bar 1 G, bar 2 Gm. Once comfortable, move just the root to the 5th string (e.g., C ↔ Cm) and apply the same switch. The key is to switch by thinking "<mark>I lowered the 3rd</mark>," not by re-grabbing a shape.
 
 **40–50 min · Record & reflect (recommended)**
-Record 30 seconds of G ↔ Gm. Check: does another string die during the switch, and <mark>does the b3 ring clearly</mark>? If it mushes, stand the 3rd-string fingertip up more.
+Record 30 seconds of G ↔ Gm. Check: <mark>does another string die during the switch</mark>, and does the b3 ring clearly? If it mushes, stand the 3rd-string fingertip up more.
 
 **Done when:** you can <mark>switch G ↔ Gm smoothly</mark> using only fret 4↔3 on the 3rd string, and fret the b3 with your eyes closed.
 
@@ -161,5 +161,5 @@ Record 30 seconds of G ↔ Gm. Check: does another string die during the switch,
 
 - **Re-grabbing the whole hand.** Trying to reshape the entire hand for minor is slow. <mark>Only one 3rd-string finger, one fret</mark>. Leave the rest planted.
 - **The b3 won't ring.** If the 3rd string's fret 3 dies, a neighboring finger is leaning on it. <mark>Stand your fingertip up so only the 3rd string sounds</mark>.
-- **Memorizing "the sad chord shape."** Don't memorize Gm as a shape. <mark>Remember it as "G with the 3rd lowered a half step,"</mark> so it works identically at A, C, D — anywhere.
-- **Touching the 5th too.** The 5th (D) doesn't move today. If a finger drifts to the 5th, <mark>the chord wobbles</mark>.
+- **Memorizing "the sad chord shape."** Don't memorize Gm as a shape. Remember it as "<mark>G with the 3rd lowered a half step</mark>," so it works identically at A, C, D — anywhere.
+- **Touching the 5th too.** <mark>The 5th (D) doesn't move today</mark>. If a finger drifts to the 5th, the chord wobbles.

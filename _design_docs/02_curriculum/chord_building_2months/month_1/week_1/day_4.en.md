@@ -9,12 +9,12 @@ i18nKey: "lesson.m1.w1.d4"
 
 ## ① Theory
 
-At last, the week's finish line. Today you're not learning something new — you're **combining** the two switches you already have. Just getting here means you've already crossed a whole mountain.
+At last, the week's finish line. Today you're not learning something new — you're **<mark>combining</mark>** the two switches you already have. Just getting here means you've already crossed a whole mountain.
 
 - **3rd string = the 3rd switch.** Fret 4 (3, bright) ↔ fret 3 (b3, dark).
 - **4th string = the 7th switch.** Fret 5 (R) ↔ fret 3 (b7, tension).
 
-Today's new chord, **m7,** is simply both switches **lowered.** That is, minor (b3) with a dominant b7 added. On G, 3rd string fret 3 (b3) + 4th string fret 3 (b7) = **Gm7** — <mark>dark but with its tension softly released</mark>, that sophisticated jazz/soul/city-pop color.
+Today's new chord, **m7,** is simply both switches **<mark>lowered</mark>.** That is, minor (b3) with a dominant b7 added. On G, 3rd string fret 3 (b3) + 4th string fret 3 (b7) = **Gm7** — dark but with its tension softly released, that <mark>sophisticated jazz/soul/city-pop color</mark>.
 
 Draw the two switches as a table and you get exactly four cells:
 
@@ -48,7 +48,7 @@ Draw the two switches as a table and you get exactly four cells:
 - **7** = 3rd as-is · 7th lowered (3rd string 4, 4th string 3)
 - **m7** = 3rd lowered · 7th lowered (3rd string 3, 4th string 3)
 
-Isn't that something? Four chords are, in the end, just the **up/down combination of two fingers.** Not four shapes to memorize — just two switches. Today you cycle them freely over one root, cementing this week's conclusion into your hands: <mark>a chord isn't memorized, it's assembled</mark>.
+Isn't that something? Four chords are, in the end, just the **<mark>up/down combination of two fingers</mark>.** Not four shapes to memorize — just two switches. Today you cycle them freely over one root, cementing this week's conclusion into your hands: <mark>a chord isn't memorized, it's assembled</mark>.
 
 ## ② Visuals
 
@@ -107,7 +107,7 @@ Isn't that something? Four chords are, in the end, just the **up/down combinatio
 }
 ```
 
-▶ **BPM 72.** "Root → major 3rd → minor 3rd → minor 7th." The first two handle bright↔dark, <mark>the final b7 handles tension</mark>. Repeat 4×.
+▶ **BPM 72.** "Root → major 3rd → minor 3rd → minor 7th." The first two handle bright↔dark, the final b7 handles tension. Repeat 4×.
 
 **Example 2 — Gm7 comp groove + integration cycle.** Root → b7 ghost → b3 puts the m7 color into a rhythm.
 
@@ -164,22 +164,22 @@ Isn't that something? Four chords are, in the end, just the **up/down combinatio
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-Play G → Gm → G7 → Gm7 in order, four beats each. Move only the 3rd- and 4th-string fingers up and down, never lifting the root (6th string, fret 3). Check <mark>all four chords ring cleanly on six strings</mark>.
+Play G → Gm → G7 → Gm7 in order, four beats each. Move only the 3rd- and 4th-string fingers up and down, never lifting the root (6th string, fret 3). <mark>Check all four chords ring cleanly on six strings</mark>.
 
 **10–20 min · Brain training (today's target = the two switches)**
-Distinguish all four chords with just two questions: "Is the 3rd down? Is the 7th down?" When someone says "Gm7!", <mark>grab the both-lowered spot with your eyes closed</mark>. Use **Example 1** to name the three character tones aloud.
+Distinguish all four chords with just two questions: <mark>"Is the 3rd down? Is the 7th down?"</mark> When someone says "Gm7!", grab the both-lowered spot with your eyes closed. Use **Example 1** to name the three character tones aloud.
 
 **20–40 min · Real comping (Example 2 + integration cycle / 75–85 BPM)**
-**Repeat Example 2's Gm7 groove at BPM 80 4×,** then expand into the **integration cycle** (G→Gm→G7→Gm7, one bar each). Then move just the root to the 5th string (C family) and cycle the same way. Today completes the feel that <mark>"four characters are the combination of two fingers."</mark>
+**Repeat Example 2's Gm7 groove at BPM 80 4×,** then expand into the **integration cycle** (G→Gm→G7→Gm7, one bar each). Then move just the root to the 5th string (C family) and cycle the same way. Today completes the feel that "<mark>four characters are the combination of two fingers</mark>."
 
 **40–50 min · Record & reflect (recommended)**
-Record 30 seconds of one lap of the integration cycle. Check: does a stray string die when chords change, and <mark>are all four characters clearly distinct</mark>?
+Record 30 seconds of one lap of the integration cycle. Check: <mark>does a stray string die when chords change</mark>, and are all four characters clearly distinct?
 
 **Done when:** over one root, you can <mark>cycle G → Gm → G7 → Gm7 smoothly</mark> using only the 3rd- and 4th-string fingers. (Week 1 complete!)
 
 ## ④ Tips / common mistakes
 
-- **Memorizing the four as "different shapes."** Do that and you'll collapse again at 8 or 16 chords. Always remember them as <mark>"the combination of two switches, the 3rd and the 7th."</mark>
+- **Memorizing the four as "different shapes."** Do that and you'll collapse again at 8 or 16 chords. Always remember them as "<mark>the combination of two switches, the 3rd and the 7th</mark>."
 - **Dropping the root while cycling.** <mark>The 6th-string root is your anchor</mark>. If it wobbles, everything wobbles. Keep it fretted through the whole cycle.
 - **Hearing m7 as just "minor."** m7 is softer and more open than minor, because the b7 releases the tension a bit. Enjoy that <mark>"sophisticated relaxation."</mark>
-- **Speed greed.** If the cycle mushes, drop to BPM 70. This week, <mark>the correct combination matters 100× more than speed</mark>.
+- **Speed greed.** If the cycle mushes, drop to BPM 70. This week, <mark>the correct combination</mark> matters 100× more than speed.

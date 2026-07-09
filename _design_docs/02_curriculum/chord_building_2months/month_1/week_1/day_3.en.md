@@ -9,11 +9,11 @@ i18nKey: "lesson.m1.w1.d3"
 
 ## ① Theory
 
-Through yesterday, the 3rd split bright (major) from dark (minor). Today we handle a new axis, the **7th** — specifically the **b7 (minor 7th).** Add one b7 to a major chord and you get a **dominant 7 (e.g., G7).** The name sounds grand, but the job is the same as yesterday: just laying one note on.
+Through yesterday, the 3rd split bright (major) from dark (minor). Today we handle a new axis, the **7th** — specifically the **b7 (minor 7th).** Add one b7 to a major chord and you get a **dominant 7 (e.g., G7).** The name sounds grand, but the job is the same as yesterday: just <mark>laying one note on</mark>.
 
-The essence of a dominant 7 is, in a word, **tension.** Unlike a major chord that sits there comfortably, once the b7 comes in there's a pull — "I want to go somewhere, I want to resolve fast." That wriggling blues-guitar feel, the stickiness of funk, the thrill of jazz — it all comes from this one b7. Isn't that wild? <mark>One note plants a "want to go" into the chord</mark>.
+The essence of a dominant 7 is, in a word, **<mark>tension</mark>.** Unlike a major chord that sits there comfortably, once the b7 comes in there's a pull — "I want to go somewhere, I want to resolve fast." That wriggling blues-guitar feel, the stickiness of funk, the thrill of jazz — it all comes from this one b7. Isn't that wild? One note plants <mark>a "want to go"</mark> into the chord.
 
-On the fretboard, lower yesterday's G major **4th string, fret 5 (R=G)** to **fret 3 (b7=F)** and you have G7 — leaving the 3rd (3rd string, fret 4, B) alone, moving only the 4th string two frets down. Now this week's picture snaps into focus — **3rd string = the 3rd (bright/dark) switch, 4th string = the 7th (tension) switch.** Just two strings, two switches. Tomorrow you'll combine them to make four chords at will. <mark>Today, just lock in this one 4th-string switch</mark>.
+On the fretboard, lower yesterday's G major **4th string, fret 5 (R=G)** to **fret 3 (b7=F)** and you have G7 — leaving the 3rd (3rd string, fret 4, B) alone, moving only the 4th string two frets down. Now this week's picture snaps into focus — **3rd string = <mark>the 3rd (bright/dark) switch</mark>, 4th string = <mark>the 7th (tension) switch</mark>.** Just two strings, two switches. Tomorrow you'll combine them to make four chords at will. Today, just lock in this one 4th-string switch.
 
 ```json
 {
@@ -42,7 +42,7 @@ On the fretboard, lower yesterday's G major **4th string, fret 5 (R=G)** to **fr
 
 ## ② Visuals
 
-**G7 (E-form)** — only the 4th string <mark>dropped from fret 5 to 3</mark>. The green is the freshly added **b7 (F)**, the source of the tension.
+**G7 (E-form)** — only the 4th string dropped from fret 5 to 3. The green is the freshly added **b7 (F)**, <mark>the source of the tension</mark>.
 
 ```json
 {
@@ -97,7 +97,7 @@ On the fretboard, lower yesterday's G major **4th string, fret 5 (R=G)** to **fr
 }
 ```
 
-▶ **BPM 72.** Stable through "root-3rd-5th," then <mark>catch the slight "tilt"</mark> at the final **b7 (F).** Repeat 4×.
+▶ **BPM 72.** Stable through "root-3rd-5th," then catch the slight "tilt" at the final **b7 (F).** Repeat 4×.
 
 **Example 2 — Major → 7 switch comp.** Bar 1 G, bar 2 G7. On each marked note **strum the whole chord,** but the only thing that moves is **one finger on the 4th string (fret 5 → 3).** That one fret turns stability into tension.
 
@@ -135,27 +135,27 @@ On the fretboard, lower yesterday's G major **4th string, fret 5 (R=G)** to **fr
 }
 ```
 
-▶ **BPM 78, repeat 4×.** Bar 1 stable G → bar 2 itchy G7. Only the 4th-string finger drops from fret 5 to 3. Enjoy that <mark>"want to go somewhere fast"</mark> feeling on G7.
+▶ **BPM 78, repeat 4×.** Bar 1 stable G → bar 2 itchy G7. Only the 4th-string finger drops from fret 5 to 3. Enjoy that "want to go somewhere fast" feeling on G7.
 
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-Alternate G ↔ G7 every four beats. Move only the 4th-string finger between fret 5 and 3, keeping the 3rd (3rd string, fret 4) fixed. Check that <mark>both chords ring cleanly on all six strings</mark>.
+Alternate G ↔ G7 every four beats. Move only the 4th-string finger between fret 5 and 3, keeping the 3rd (3rd string, fret 4) fixed. <mark>Check that both chords ring cleanly on all six strings</mark>.
 
 **10–20 min · Brain training (today's target = b7)**
-Fret **Example 1** and name R·3·5·b7 aloud, then isolate just the **b7 (F)** at the 4th string, fret 3, over and over. <mark>You pass once you can land the b7 with eyes closed</mark>. This is your "tension switch" for the week.
+Fret **Example 1** and name R·3·5·b7 aloud, then isolate just the **b7 (F)** at the 4th string, fret 3, over and over. You pass once you can land the b7 with eyes closed. This is your <mark>"tension switch"</mark> for the week.
 
 **20–40 min · Real comping (Example 2 / 75–85 BPM)**
 **Repeat Example 2 at BPM 78 4×** — bar 1 G, bar 2 G7. Once comfortable, move just the root to the 5th string (e.g., C ↔ C7) and apply the same switch. If you have a blues backing track, lay it on top. The goal is to <mark>feel the b7's push-and-pull in your hands</mark>.
 
 **40–50 min · Record & reflect (recommended)**
-Record 30 seconds of G ↔ G7. Check: does the **b7 ring clearly** (not dead) on G7, and <mark>does the switch stay clean</mark>?
+Record 30 seconds of G ↔ G7. Check: does the **<mark>b7 ring clearly</mark>** (not dead) on G7, and does the switch stay clean?
 
 **Done when:** you can switch G ↔ G7 using only fret 5↔3 on the 4th string, and <mark>fret the b7 with your eyes closed</mark>.
 
 ## ④ Tips / common mistakes
 
-- **Confusing b7 and R.** On the 4th string, fret 5 is R (G), fret 3 is b7 (F). If you mix them up, remember <mark>"need tension → drop it (5→3)."</mark>
-- **Lowering the 3rd too.** Today, only the 4th string. <mark>Leave the 3rd string (the 3rd) alone</mark> so it stays a "major-family 7." Lower the 3rd as well and that's the m7 you'll learn tomorrow.
-- **Mistaking tension for a "wrong sound."** G7's "unfinished" feeling <mark>isn't a bug, it's a feature</mark> — that lack of resolution is what pulls you to the next chord.
-- **Flat, no palm mute.** Honor Example 2's ghost hit to <mark>keep the groove alive</mark>.
+- **Confusing b7 and R.** On the 4th string, fret 5 is R (G), fret 3 is b7 (F). If you mix them up, remember "<mark>need tension → drop it</mark> (5→3)."
+- **Lowering the 3rd too.** Today, only the 4th string. Leave the 3rd string (the 3rd) alone so it stays <mark>a "major-family 7"</mark>. Lower the 3rd as well and that's the m7 you'll learn tomorrow.
+- **Mistaking tension for a "wrong sound."** G7's "unfinished" feeling isn't a bug, it's a feature — <mark>that lack of resolution is what pulls you to the next chord</mark>.
+- **Flat, no palm mute.** <mark>Honor Example 2's ghost hit</mark> to keep the groove alive.
