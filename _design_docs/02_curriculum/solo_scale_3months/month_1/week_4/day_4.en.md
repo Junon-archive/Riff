@@ -10,17 +10,17 @@ lang: en
 
 ## ① Theory / Explanation
 
-Here's why we're doing this today. Today isn't about learning a new skill. It's the day we pull together everything we've built over the past four weeks into a single performance, **record it, and become our own coach** to give ourselves feedback. The truth is, skill grows the most not while you're practicing, but while you're **taking a step back and listening to your own playing with a calm, honest ear.** Pros don't obsess over recording for nothing.
+Here's why we're doing this today. Today isn't about learning a new skill. It's the day we pull together everything we've built over the past four weeks into a single performance, **record it, and become our own coach** to give ourselves feedback. The truth is, skill grows the most not while you're practicing, but while you're **<mark>taking a step back and listening to your own playing with a calm, honest ear</mark>.** Pros don't obsess over recording for nothing.
 
-Let's look back at the past month. In Week 1, we chewed through Box 1 of the pentatonic scale with sequences and learned to land on the chord tone (♭3). In Weeks 2 and 3, we connected the rest of the boxes across the whole neck. And this Week 4, we learned ♭5 blue notes + bending + vibrato + phrasing. Today we melt **all of it** into one one-chord jam.
+Let's look back at the past month. In Week 1, we chewed through Box 1 of the pentatonic scale with sequences and learned to <mark>land on the chord tone (♭3)</mark>. In Weeks 2 and 3, we connected the rest of the boxes across the whole neck. And this Week 4, we learned ♭5 blue notes + bending + vibrato + phrasing. Today we melt **all of it** into one one-chord jam.
 
-Today's jam is built around **call and response** — asking and answering. Throw out a question with one phrase (leave it open), then answer it with the next phrase (close it). It's fine for the question to stay a little vague — in fact, cutting it off slightly uneasily on ♭5 or the 4th creates that "what's next?" tension. The answer, though, must always close firmly by **landing on ♭3 or the root + vibrato.** With this conversational structure, even improvising over a single chord never gets boring. And today's real goal isn't a flashy performance — it's building the **record → self-feedback loop** into your habits. That's something you'll use for all three months, and honestly, for the rest of your playing life.
+Today's jam is built around **<mark>call and response</mark>** — asking and answering. Throw out a question with one phrase (leave it open), then answer it with the next phrase (close it). It's fine for the question to stay a little vague — in fact, cutting it off slightly uneasily on ♭5 or the 4th creates that "what's next?" tension. The answer, though, must always close firmly by **<mark>landing on ♭3 or the root + vibrato</mark>.** With this conversational structure, even improvising over a single chord never gets boring. And today's real goal isn't a flashy performance — it's building the **<mark>record → self-feedback loop</mark>** into your habits. That's something you'll use for all three months, and honestly, for the rest of your playing life.
 
 So today, you graduate Month 1. Don't put pressure on yourself — go into it light, just checking in on how much of the past four weeks has actually settled into your hands.
 
 ## ② Visual Reference
 
-Here's today's jam "cheat sheet" — the whole A blues Box 1, with landing points (♭3, green) and passing tones (♭5, purple) at a glance. If you get lost mid-jam, just look at this.
+Here's today's jam "cheat sheet" — the whole A blues Box 1, with <mark>landing points (♭3, green) and passing tones (♭5, purple)</mark> at a glance. If you get lost mid-jam, just look at this.
 
 ```json
 {
@@ -57,7 +57,7 @@ Here's today's jam "cheat sheet" — the whole A blues Box 1, with landing point
 }
 ```
 
-This is the capstone lick that wraps up the whole month — a 4-measure call and response. **Measure 1 is the question** (descending through the ♭5 passing tone, leaving it open on the root). **Measure 2 is a short motif after a gap** (♭5 with vibrato). **Measure 3 is the answer's development** (a full-step bend exclamation point). **Measure 4 is the landing** (slide → ♭3 with a wide vibrato period). Everything you learned this month is packed in here.
+This is the capstone lick that wraps up the whole month — a <mark>4-measure call and response</mark>. **Measure 1 is the question** (descending through the ♭5 passing tone, leaving it open on the root). **Measure 2 is a short motif after a gap** (♭5 with vibrato). **Measure 3 is the answer's development** (a full-step bend exclamation point). **Measure 4 is the landing** (slide → ♭3 with a wide vibrato period). Everything you learned this month is packed in here.
 
 ```json
 {
@@ -114,7 +114,7 @@ This is the capstone lick that wraps up the whole month — a 4-measure call and
 Light warm-up. Run A blues Box 1 in 3rds, ascending and descending, once each, then run yesterday's 3-measure phrase once. Then play through today's capstone lick slowly, once, start to finish. It's fine for warm-up to be short today — the main event is the recording.
 
 **10–20 min · Brain training (getting a feel for the capstone lick + call/response)**
-Get the capstone lick into your hands while staying aware of its structure. Play through it while saying out loud, **"question~ answer!"** to mark the "measure 1 is the question (open), measures 3–4 are the answer (closed)" conversation structure. Pay special attention to the **rest (the gap) before measure 2** — actually leave it empty. Beginners can't stand this silence and rush to fill it with notes, but that empty space is exactly what brings the next phrase to life.
+Get the capstone lick into your hands while staying aware of its structure. Play through it while saying out loud, **"question~ answer!"** to mark the "measure 1 is the question (open), measures 3–4 are the answer (closed)" conversation structure. Pay special attention to the **<mark>rest (the gap) before measure 2</mark>** — actually leave it empty. Beginners can't stand this silence and rush to fill it with notes, but <mark>that empty space is exactly what brings the next phrase to life</mark>.
 
 ```json
 {
@@ -166,7 +166,7 @@ Get the capstone lick into your hands while staying aware of its structure. Play
 ```
 
 **20–40 min · Real-world improv & full recording (Am7 one-chord backing, 75–80 BPM)**
-Today's main event. Play the backing track and record **the whole 2–3 minutes, start to finish** (a phone voice memo is fine). Rule: **converse via call and response.** Leave question phrases open on ♭5 or the 4th, and always close answers by landing on ♭3 or the root + vibrato. Use the capstone lick as a seed, but don't just repeat it — vary it gradually. If you slip up, don't stop, keep going — real playing never stops.
+Today's main event. Play the backing track and record **<mark>the whole 2–3 minutes, start to finish</mark>** (a phone voice memo is fine). Rule: **<mark>converse via call and response</mark>.** Leave question phrases open on ♭5 or the 4th, and always close answers by landing on ♭3 or the root + vibrato. Use the capstone lick as a seed, but don't just repeat it — vary it gradually. <mark>If you slip up, don't stop, keep going</mark> — real playing never stops.
 
 **40–50 min · Self-feedback (mandatory today)**
 Listen to your recording start to finish, and coach yourself using the checklist below. Slow down playback if you need to, so you can zoom in on bending and vibrato moments.

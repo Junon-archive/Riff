@@ -10,15 +10,15 @@ lang: en
 
 ## ① Theory / Explanation
 
-Here's why we're doing this today. Over the past three weeks, we've chewed through A minor pentatonic pretty thoroughly — and honestly, it's a very "safe" scale. Land anywhere in it and you can't really go wrong. But that's exactly the problem. Since nothing's wrong, it can feel **flat.** That gritty, "this sounds like real blues" color just isn't there yet. And one single note creates that color: **♭5 (E♭, relative to A)** — the blue note.
+Here's why we're doing this today. Over the past three weeks, we've chewed through A minor pentatonic pretty thoroughly — and honestly, it's a very "safe" scale. Land anywhere in it and you can't really go wrong. But that's exactly the problem. Since nothing's wrong, it can feel **flat.** That gritty, "this sounds like real blues" color just isn't there yet. And one single note creates that color: **<mark>♭5 (E♭, relative to A)</mark>** — the blue note.
 
-♭5 isn't officially part of the scale. It's a **deliberately dissonant half-step wedged between the 4th (D) and the 5th (E).** But when you brush past this crooked little note, your ear goes "wait, that's tense... ah, resolved" — and that tension-to-release is the heartbeat of the blues. So starting today, we're adding one rule: **♭5 is a passing tone, not a destination.** Sit on it, and it just sounds wrong. It only comes alive when you **glide through it** — 4 → ♭5 → 5 — or slide into it and immediately exit to ♭3 (C) or the root (A).
+♭5 isn't officially part of the scale. It's a **deliberately dissonant half-step wedged between the 4th (D) and the 5th (E).** But when you brush past this crooked little note, your ear goes "wait, that's tense... ah, resolved" — and that tension-to-release is the heartbeat of the blues. So starting today, we're adding one rule: **<mark>♭5 is a passing tone, not a destination</mark>.** Sit on it, and it just sounds wrong. It only comes alive when you **glide through it** — 4 → ♭5 → 5 — or slide into it and immediately exit to ♭3 (C) or the root (A).
 
-And now for today's real main event. We've been quietly *using* bends all along without ever formally teaching them, right? Today we fix that. A bend isn't just "pushing a string." It's **pushing it up to an exact target pitch.** Just remember these three keys:
+And now for today's real main event. We've been quietly *using* bends all along without ever formally teaching them, right? Today we fix that. A bend isn't just "pushing a string." It's **<mark>pushing it up to an exact target pitch</mark>.** Just remember these three keys:
 
-1. **Reference first, then match by ear.** Before you bend, play the target note (say, the 5th, E) somewhere else on the neck first — **ping it and plant that pitch in your ear.** Then bend up until it matches that exact height. Your ear is the judge, not your eyes. If the target note and the bent note sound like they're sitting at the "same pitch," that's a success.
+1. **<mark>Reference first, then match by ear</mark>.** Before you bend, play the target note (say, the 5th, E) somewhere else on the neck first — **ping it and plant that pitch in your ear.** Then bend up until it matches that exact height. Your ear is the judge, not your eyes. If the target note and the bent note sound like they're sitting at the "same pitch," that's a success.
 2. **Push with backup fingers behind you.** When you bend with your ring finger, line your middle and index fingers up right behind it on the same string, and **push together as a trio.** Struggling with just one finger makes the pitch inaccurate and tires your hand fast. Sharing the load is the real secret to accuracy.
-3. **Know half-step vs. whole-step.** A half-step bend is a small push; a whole-step (full) bend goes further — about one extra fret's worth. Today's favorite combo: **push the 4th (D) up just a half step → you get ♭5 (E♭).** In other words, you can *create* the blue note purely through bending. Push it a full step and you land on the 5th (E).
+3. **Know half-step vs. whole-step.** A half-step bend is a small push; a whole-step (full) bend goes further — about one extra fret's worth. Today's favorite combo: **<mark>push the 4th (D) up just a half step → you get ♭5 (E♭)</mark>.** In other words, you can *create* the blue note purely through bending. Push it a full step and you land on the 5th (E).
 
 To sum up: today we're finding where ♭5 lives in Box 1, and learning to **sound it out through accurate bending.**
 
@@ -59,7 +59,7 @@ To sum up: today we're finding where ♭5 lives in Box 1, and learning to **soun
 
 ## ② Visual Reference
 
-Here's A blues scale Box 1. Two new ♭5 spots (highlighted in purple) have joined the five pentatonic notes — 5th string 6th fret, and 3rd string 8th fret. Those two are today's stars.
+Here's A blues scale Box 1. <mark>Two new ♭5 spots (highlighted in purple)</mark> have joined the five pentatonic notes — 5th string 6th fret, and 3rd string 8th fret. Those two are today's stars.
 
 ```json
 {
@@ -96,7 +96,7 @@ Here's A blues scale Box 1. Two new ♭5 spots (highlighted in purple) have join
 }
 ```
 
-Here's today's mini bending lesson phrase. Measure 1 trains you to **play the reference (5th, E) first → then bend the 4th (D) a full step to match that pitch.** Measure 2 has you **bend the 4th just a half step to create the ♭5 blue note**, release it to land on ♭3, then finish with vibrato on the root.
+Here's today's mini bending lesson phrase. Measure 1 trains you to **play the reference (5th, E) first → then bend the 4th (D) a full step to match that pitch.** Measure 2 has you **<mark>bend the 4th just a half step to create the ♭5 blue note</mark>**, release it to land on ♭3, then finish with vibrato on the root.
 
 ```json
 {
@@ -133,13 +133,13 @@ Here's today's mini bending lesson phrase. Measure 1 trains you to **play the re
 ## ③ Today's Practice (50-minute routine)
 
 **0–10 min · Warm-up (BPM 70)**
-With the metronome at 70, run A blues scale Box 1 ascending in sixteenth notes, once through. One thing's different from last week — **every time you pass through ♭5 (5th string 6th fret, 3rd string 8th fret), never sit on it — just brush past it.** Let "4 – ♭5 – 5" flow out in one breath. If it gets muddy, drop to 65.
+With the metronome at 70, run A blues scale Box 1 ascending in sixteenth notes, once through. One thing's different from last week — **<mark>every time you pass through ♭5 (5th string 6th fret, 3rd string 8th fret), never sit on it — just brush past it</mark>.** Let "4 – ♭5 – 5" flow out in one breath. If it gets muddy, drop to 65.
 
 **10–20 min · Brain training (today's target: the two ♭5 spots)**
-Turn off the metronome. In Box 1, find and fret **only the ♭5 notes** — just two spots: 5th string 6th fret, 3rd string 8th fret. Every time you fret one, say out loud, "this is a passing tone, it can't stay long," and immediately move to the neighboring 5th or ♭3 as part of the motion. Pass when you can find both spots with your eyes closed.
+Turn off the metronome. In Box 1, find and fret **<mark>only the ♭5 notes</mark>** — just two spots: 5th string 6th fret, 3rd string 8th fret. Every time you fret one, say out loud, "this is a passing tone, it can't stay long," and immediately move to the neighboring 5th or ♭3 as part of the motion. Pass when you can find both spots with your eyes closed.
 
 **20–40 min · Real-world feel — improv (Am7 one-chord backing, 65–70 BPM) + bending accuracy focus**
-Pull up an "Am7 blues backing track slow" on YouTube or an app. Today's mission is one thing only: **bending accuracy.** Repeat the phrase above over the backing track, and every time you do the full bend (4→5), **first ping the 2nd string 5th fret (E) to plant the target pitch in your ear**, then match your bend precisely to that height. When pushing with your ring finger, line up your middle and index behind it and push as a trio. Mix in the half-step bend (4→♭5) too, and try "making" the blue note yourself.
+Pull up an "Am7 blues backing track slow" on YouTube or an app. Today's mission is one thing only: **<mark>bending accuracy</mark>.** Repeat the phrase above over the backing track, and every time you do the full bend (4→5), **<mark>first ping the 2nd string 5th fret (E) to plant the target pitch in your ear</mark>**, then match your bend precisely to that height. When pushing with your ring finger, line up your middle and index behind it and push as a trio. Mix in the half-step bend (4→♭5) too, and try "making" the blue note yourself.
 
 ```json
 {
@@ -174,7 +174,7 @@ Pull up an "Am7 blues backing track slow" on YouTube or an app. Today's mission 
 ```
 
 **40–50 min · Record & reflect (recommended)**
-Record just 30 seconds of the bending phrase with any recorder you've got (a phone voice memo is fine). Listen back and check one thing: **did the bent note land exactly on the target pitch?** If it fell short (pitch too low), your finger strength wasn't enough; if it overshot, you pushed too far. Slow down the playback if you need to, so you can zoom in with your ear on the exact moment the bend arrives.
+Record just 30 seconds of the bending phrase with any recorder you've got (a phone voice memo is fine). Listen back and check one thing: **<mark>did the bent note land exactly on the target pitch</mark>?** If it fell short (pitch too low), your finger strength wasn't enough; if it overshot, you pushed too far. Slow down the playback if you need to, so you can zoom in with your ear on the exact moment the bend arrives.
 
 **Today's finish line:** find both ♭5 spots in Box 1 with your eyes closed. Match the full bend (4→5) precisely to the reference E, 5+ times. Successfully create ♭5 with a half-step bend.
 

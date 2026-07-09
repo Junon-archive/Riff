@@ -10,23 +10,23 @@ lang: en
 
 ## ① Theory / Explanation
 
-Here's why we're doing this today. Yesterday you learned how to "create" ♭5 with a bend, right? But no matter how good the note you land on is, if it just cuts off flat and dead, it still sounds like a practice exercise. The last 1% that separates pros from amateurs is vibrato — the technique of subtly shaking a landing note to make it "sing." Today we're learning it properly.
+Here's why we're doing this today. Yesterday you learned how to "create" ♭5 with a bend, right? But no matter how good the note you land on is, if it just cuts off flat and dead, it still sounds like a practice exercise. The last 1% that separates pros from amateurs is <mark>vibrato</mark> — the technique of subtly shaking a landing note to make it "sing." Today we're learning it properly.
 
 There are two kinds of vibrato.
 
-- **Finger vibrato (classical/narrow):** With the fretting fingertip, you shake very slightly **parallel to the string (along the neck), not sideways across it.** It's narrow and delicate. Used a lot in classical and jazz. But in electric blues, the width is often too small to really hear.
-- **Wrist vibrato (blues/wide):** This is today's main event. Instead of shaking with your finger, you keep the fret held down and **rotate your wrist slightly, like turning a doorknob**, nudging the pitch up and back down repeatedly. It's essentially "repeating a tiny bend" — that's exactly why it comes right after yesterday's bending lesson. It's wide and full of presence — B.B. King, Slash, they all use this.
+- **Finger vibrato (classical/narrow):** With the fretting fingertip, you shake very slightly **<mark>parallel to the string (along the neck), not sideways across it</mark>.** It's narrow and delicate. Used a lot in classical and jazz. But in electric blues, the width is often too small to really hear.
+- **Wrist vibrato (blues/wide):** This is today's main event. Instead of shaking with your finger, you keep the fret held down and **<mark>rotate your wrist slightly, like turning a doorknob</mark>**, nudging the pitch up and back down repeatedly. It's essentially "repeating a tiny bend" — that's exactly why it comes right after yesterday's bending lesson. It's wide and full of presence — B.B. King, Slash, they all use this.
 
 There are two control knobs: **speed** (fast/slow) and **width** (narrow/wide). The key is adjusting both to fit the moment.
-- **Slow and wide** = aching, singing feel (ballads, long landing notes). Our default this week.
+- **<mark>Slow and wide</mark>** = aching, singing feel (ballads, long landing notes). Our default this week.
 - **Fast and narrow** = tense, intense feel (up-tempo songs, high-gain tones).
 - **Banned:** a "scared vibrato" where the speed wobbles unevenly. Like a steady heartbeat, the shake needs a **consistent rhythm.** At first, practice locked to the metronome, counting "up–down–up–down" in time.
 
-And today's second mission. Yesterday we only looked at ♭5 in Box 1, but ♭5 is actually **hiding in every box across the whole neck.** No matter where you're improvising, you need to be able to instantly answer "where's the nearest blue note?" So today, we'll learn the ♭5 map for the whole neck, then practice **sliding or bending into those ♭5s** the way we learned yesterday, and topping it off with vibrato to fully 'express' each one.
+And today's second mission. Yesterday we only looked at ♭5 in Box 1, but ♭5 is actually **<mark>hiding in every box across the whole neck</mark>.** No matter where you're improvising, you need to be able to instantly answer "where's the nearest blue note?" So today, we'll learn the ♭5 map for the whole neck, then practice **sliding or bending into those ♭5s** the way we learned yesterday, and topping it off with vibrato to fully 'express' each one.
 
 ## ② Visual Reference
 
-Here's the ♭5 map for the whole neck. Between the root A notes, ♭5 = E♭ (highlighted in purple) sits once on each string. No matter which box you're in, the nearest purple dot is your local blue note.
+Here's the ♭5 map for the whole neck. Between the root A notes, <mark>♭5 = E♭ (highlighted in purple)</mark> sits once on each string. No matter which box you're in, the nearest purple dot is your local blue note.
 
 ```json
 {
@@ -63,7 +63,7 @@ Here's the ♭5 map for the whole neck. Between the root A notes, ♭5 = E♭ (h
 }
 ```
 
-Here's a vibrato expression phrase. Measure 1 slides from the 4th into ♭5 and sings that blue note with vibrato, then lands on ♭3 for another round of vibrato. Measure 2 layers vibrato onto the landing note after a full-step bend. All vibrato here is "slow and wide."
+Here's a vibrato expression phrase. Measure 1 <mark>slides from the 4th into ♭5 and sings that blue note with vibrato</mark>, then lands on ♭3 for another round of vibrato. Measure 2 layers vibrato onto the landing note after a full-step bend. All vibrato here is "slow and wide."
 
 ```json
 {
@@ -101,10 +101,10 @@ Here's a vibrato expression phrase. Measure 1 slides from the 4th into ♭5 and 
 ## ③ Today's Practice (50-minute routine)
 
 **0–10 min · Warm-up (BPM 70) — vibrato isolation drill**
-Set the scale aside for a moment and focus on vibrato alone. Fret the 3rd string 5th fret (♭3 = C) with your ring finger, and at 70 BPM, rotate your wrist like turning a doorknob — **"up (click) – down (click)"** — on a quarter-note cycle. Once it feels natural, double the speed to eighth notes. Also shift the width from narrow to wide. Keep checking that it's your **wrist** rotating, not your finger.
+Set the scale aside for a moment and focus on vibrato alone. Fret the 3rd string 5th fret (♭3 = C) with your ring finger, and at 70 BPM, rotate your wrist like turning a doorknob — **"up (click) – down (click)"** — on a quarter-note cycle. Once it feels natural, double the speed to eighth notes. Also shift the width from narrow to wide. Keep checking that it's your **<mark>wrist</mark>** rotating, not your finger.
 
 **10–20 min · Brain training (mapping ♭5 across the whole neck)**
-Looking at the map above, work through strings 6 to 1, fretting each string's one ♭5 (purple dot) in order. Every time you fret one, lock in the location by saying "this is the blue note in this zone." Then close your eyes and find them: start with 5th string 6th fret and 3rd string 8th fret (the two Box 1 spots), and if you've got room, keep going through the other strings. Pass when you can fret 5 or more spots with your eyes closed.
+Looking at the map above, work through strings 6 to 1, fretting <mark>each string's one ♭5 (purple dot)</mark> in order. Every time you fret one, lock in the location by saying "this is the blue note in this zone." Then close your eyes and find them: start with 5th string 6th fret and 3rd string 8th fret (the two Box 1 spots), and if you've got room, keep going through the other strings. Pass when you can fret 5 or more spots with your eyes closed.
 
 ```json
 {
@@ -142,7 +142,7 @@ Looking at the map above, work through strings 6 to 1, fretting each string's on
 ```
 
 **20–40 min · Real-world improv (Am7 one-chord backing, 65–70 BPM) — expressing ♭5 through slide/bend**
-Play the backing track and follow this rule: **always "enter" ♭5 via a slide or bend, and always finish landing notes with slow, wide vibrato.** Don't let a single note today cut off flat and dead. End each phrase landing on ♭3 (C) or the root (A) → sing it with wrist vibrato. Use the phrase above as your skeleton and vary it little by little.
+Play the backing track and follow this rule: **<mark>always "enter" ♭5 via a slide or bend</mark>, and <mark>always finish landing notes with slow, wide vibrato</mark>.** Don't let a single note today cut off flat and dead. End each phrase landing on ♭3 (C) or the root (A) → sing it with wrist vibrato. Use the phrase above as your skeleton and vary it little by little.
 
 ```json
 {
@@ -178,7 +178,7 @@ Play the backing track and follow this rule: **always "enter" ♭5 via a slide o
 ```
 
 **40–50 min · Record & reflect (recommended)**
-Record 30 seconds, then listen back. Check: ① Is the vibrato shaking a nice, **consistent rhythm**, or is it uneven and scared-sounding? ② Did every landing note get vibrato, or did some just cut off? ③ Did ♭5 enter naturally via slide or bend? Slow down playback if you need to, so you can zoom in with your ear on the vibrato cycle.
+Record 30 seconds, then listen back. Check: ① <mark>Is the vibrato shaking a nice, **consistent rhythm**</mark>, or is it uneven and scared-sounding? ② Did every landing note get vibrato, or did some just cut off? ③ Did ♭5 enter naturally via slide or bend? Slow down playback if you need to, so you can zoom in with your ear on the vibrato cycle.
 
 **Today's finish line:** wrist vibrato at a consistent rhythm on the metronome at 70, both quarter-note and eighth-note speeds. Fret 5+ ♭5 spots across the whole neck with your eyes closed. Land the "slide/bend → ♭5 → landing vibrato" combo 4+ times over the backing track.
 

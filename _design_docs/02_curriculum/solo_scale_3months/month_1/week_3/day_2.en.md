@@ -10,9 +10,9 @@ lang: en
 
 ## ① Theory / Explanation
 
-Here's why we're doing this today. Yesterday you moved into Box 4, right? Today, once you plant Box 5, you'll finally have all five pentatonic boxes in your hands — the last piece of a five-piece puzzle. But Box 5 has one goosebump-inducing secret, and today you're going to feel it for yourself.
+Here's why we're doing this today. Yesterday you moved into Box 4, right? Today, once you <mark>plant Box 5</mark>, you'll finally have all five pentatonic boxes in your hands — the last piece of a five-piece puzzle. But Box 5 has one goosebump-inducing secret, and today you're going to feel it for yourself.
 
-Box 5 lives in frets 14–17. The root A sits on the 6th string 17th fret, and also on the 1st string 17th fret. Now, here's the magic: the A at the 6th string 17th fret is exactly 12 frets above the 6th string 5th fret (the root of Box 1). 12 frets = one octave. Which means the top of Box 5 has the exact same shape as Box 1. Keep climbing the neck past Box 5, and Box 1 shows up again (one octave higher). The map comes full circle and lands right back where it started. Today, at this octave point, you'll see with your own eyes that the pentatonic scale is really "five boxes looping infinitely."
+Box 5 lives in frets 14–17. The root A sits on the 6th string 17th fret, and also on the 1st string 17th fret. Now, here's the magic: the A at the 6th string 17th fret is exactly 12 frets above the 6th string 5th fret (the root of Box 1). 12 frets = one octave. Which means <mark>the top of Box 5 has the exact same shape as Box 1</mark>. Keep climbing the neck past Box 5, and Box 1 shows up again (one octave higher). <mark>The map comes full circle and lands right back where it started</mark>. Today, at this octave point, you'll see with your own eyes that the pentatonic scale is really "five boxes looping infinitely."
 
 ```json
 {
@@ -47,13 +47,13 @@ Box 5 lives in frets 14–17. The root A sits on the 6th string 17th fret, and a
 }
 ```
 
-So today we connect two things. First, the Box 4↔5 connection (an extension of the moving sense you learned yesterday). Second, the connection from Box 5 up to Box 1 an octave higher. That second one really matters. When you reach the top of Box 5 (the A on the 1st string, 17th fret), you're actually standing on "the root of Box 1" again. So the end of the neck isn't a wall — it's a starting point in disguise. Once you know that, the fear of "there's nowhere left to run" during improv just disappears. No matter how high you go, it's the same pattern repeating, and you already know it.
+So today we connect two things. First, the Box 4↔5 connection (an extension of the moving sense you learned yesterday). Second, <mark>the connection from Box 5 up to Box 1 an octave higher</mark>. That second one really matters. When you reach the top of Box 5 (the A on the 1st string, 17th fret), you're actually standing on "the root of Box 1" again. So the end of the neck isn't a wall — it's <mark>a starting point in disguise</mark>. Once you know that, the fear of "there's nowhere left to run" during improv just disappears. No matter how high you go, it's the same pattern repeating, and you already know it.
 
 Today's target, C (♭3), sits at the 5th string 15th fret and the 3rd string 17th fret in Box 5 — right near the very end of the neck. But this C is exactly the same "aching minor 3rd" as the C down in the lower boxes. Only the location is higher — the role never changes.
 
 ## ② Visual Reference
 
-Today's final puzzle piece: Box 5. Centered on the root A (6th string 17th fret, 3rd string 14th fret, 1st string 17th fret), the notes highlighted in green are the target C (♭3). The A at the 6th string 17th fret is the doorway into "Box 1, one octave up."
+Today's final puzzle piece: Box 5. Centered on the root A (6th string 17th fret, 3rd string 14th fret, 1st string 17th fret), the notes highlighted in green are the target C (♭3). The A at the 6th string 17th fret is <mark>the doorway into "Box 1, one octave up"</mark>.
 
 ```json
 {
@@ -88,7 +88,7 @@ Today's final puzzle piece: Box 5. Centered on the root A (6th string 17th fret,
 }
 ```
 
-Here's a line that connects Box 4 to Box 5 and keeps climbing all the way to the octave-up root. Measure 1 sweeps through Box 4 (frets 12–15), and in measure 2, a slide on the 1st string from the 15th fret (G) to the 17th fret (A) lands you at the top of Box 5 — that is, "the root of Box 1, one octave up."
+Here's a line that connects Box 4 to Box 5 and keeps climbing all the way to the octave-up root. Measure 1 sweeps through Box 4 (frets 12–15), and in measure 2, <mark>a slide on the 1st string from the 15th fret (G) to the 17th fret (A)</mark> lands you at the top of Box 5 — that is, "the root of Box 1, one octave up."
 
 ```json
 {
@@ -130,13 +130,13 @@ Here's a line that connects Box 4 to Box 5 and keeps climbing all the way to the
 ## ③ Today's Practice (50-minute routine)
 
 **0–10 min · Warm-up (BPM 80)**
-Metronome at 80, run the four-note sequence through Box 5 only — one ascending pass, one descending. You're near the very end of the neck now (frets 14–17), so the fret spacing is at its tightest. Your fingers will feel almost cramped together, and that's completely normal. Then alternate once each between yesterday's Box 4 and today's Box 5, so your body registers the distance between the two homes.
+Metronome at 80, run the four-note sequence <mark>through Box 5 only</mark> — one ascending pass, one descending. You're near the very end of the neck now (frets 14–17), so the fret spacing is at its tightest. Your fingers will feel almost cramped together, and that's completely normal. Then alternate once each between yesterday's Box 4 and today's Box 5, so your body registers the distance between the two homes.
 
 **10–20 min · Brain training (today's target = C · A, octave-check challenge)**
-Metronome off, two challenges. ① Fret the two C (♭3) spots in Box 5 (5th string 15th fret, 3rd string 17th fret) with your eyes closed. ② Prove the octave: fret the A on the 6th string 5th fret and listen, then immediately fret the A on the 6th string 17th fret and listen. Success is when your ears confirm "same note, one octave up." Make the visual connection that these two A's are the roots of Box 1 and Box 5, respectively.
+Metronome off, two challenges. ① Fret the two C (♭3) spots in Box 5 (5th string 15th fret, 3rd string 17th fret) with your eyes closed. ② <mark>Prove the octave</mark>: fret the A on the 6th string 5th fret and listen, then immediately fret the A on the 6th string 17th fret and listen. Success is when your ears confirm <mark>"same note, one octave up"</mark>. Make the visual connection that these two A's are the roots of Box 1 and Box 5, respectively.
 
 **20–40 min · Real-world improv (Am one-chord backing, 78–85 BPM)**
-Play the backing track, rule: start in Box 4 (fret 12) → move into Box 5 (fret 14) → climb all the way to the A at the top of the neck (1st string 17th fret, or 6th string 17th fret), then close the phrase by landing back on a chord tone (C or A). Enjoy the feeling of pushing all the way up. Once you reach the top of the neck, remind yourself "this is Box 1 again" — feel free to toss in a lick up here, one octave higher.
+Play the backing track, rule: start in Box 4 (fret 12) → move into Box 5 (fret 14) → <mark>climb all the way to the A at the top of the neck (1st string 17th fret, or 6th string 17th fret)</mark>, then close the phrase by landing back on a chord tone (C or A). Enjoy the feeling of pushing all the way up. Once you reach the top of the neck, remind yourself "this is Box 1 again" — feel free to toss in a lick up here, one octave higher.
 
 ```json
 {
@@ -176,7 +176,7 @@ Play the backing track, rule: start in Box 4 (fret 12) → move into Box 5 (fret
 ```
 
 **40–50 min · Record & reflect (recommended)**
-Record 30 seconds. Check: ① Did notes get muted or muffled in the tight frets of Box 5? ② Did the phrase that climbed to the top of the neck close cleanly with a landing, without "getting lost"? High frets produce a thin, sharp tone that mutes easily. Play it back, and if any string buzzed or died, check your fingering at that exact spot.
+Record 30 seconds. Check: ① Did notes get muted or muffled in the tight frets of Box 5? ② Did the phrase that climbed to the top of the neck <mark>close cleanly with a landing</mark>, without "getting lost"? High frets produce a thin, sharp tone that mutes easily. Play it back, and if any string buzzed or died, check your fingering at that exact spot.
 
 **Done when:** you can clear the Box 5 sequence up and down, reach the top-of-neck A via the Box 4 → 5 connection, and confirm the octave (5th-fret A ↔ 17th-fret A) by ear.
 

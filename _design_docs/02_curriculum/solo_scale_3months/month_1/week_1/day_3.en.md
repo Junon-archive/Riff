@@ -10,17 +10,17 @@ lang: en
 
 ## ① Theory / Explanation
 
-Here's why we're doing this today. You've spent two days chewing through the box with 4-note sequences and 3rd intervals, so now it's time to gradually **build speed into your hands.** But here's where a lot of people pause for a moment. Push the tempo up, and the notes tend to blur together — and it's easy to mistake that blur for "getting faster." That's not faster. That's just **losing clarity.**
+Here's why we're doing this today. You've spent two days chewing through the box with 4-note sequences and 3rd intervals, so now it's time to gradually **<mark>build speed into your hands</mark>.** But here's where a lot of people pause for a moment. Push the tempo up, and the notes tend to blur together — and it's easy to mistake that blur for "getting faster." That's not faster. That's just **losing clarity.**
 
-So today's rule is just one thing: **the moment your clarity breaks down is your true top speed.** Start at BPM 65, climb by 5 at a time, and the tempo right before your 16th notes start sticking together — that's your real level today. Respect it. Being perfect at 78 is far stronger than forcing your way to a messy 90.
+So today's rule is just one thing: **<mark>the moment your clarity breaks down is your true top speed</mark>.** Start at BPM 65, climb by 5 at a time, and the tempo right before your 16th notes start sticking together — that's your real level today. Respect it. Being perfect at 78 is far stronger than forcing your way to a messy 90.
 
-And today we bring in **descending** for real. You've only gone up so far, right? For some reason, most people's hands hold together going up but fall apart going down. Rolling a 4-note sequence from the top string to the bottom especially messes with your picking direction. Conquering this descending motion is what lets you use the box with "freedom in both directions" — so when you improvise, you'll have somewhere to escape both up and down.
+And today we bring in **<mark>descending</mark>** for real. You've only gone up so far, right? For some reason, most people's hands hold together going up but fall apart going down. Rolling a 4-note sequence from the top string to the bottom especially messes with your picking direction. Conquering this descending motion is what lets you use the box with <mark>"freedom in both directions"</mark> — so when you improvise, you'll have somewhere to escape both up and down.
 
-The goal of speed training isn't showing off your fingers. It's building the control to **precisely target C (♭3) and A (root) even inside a fast passage.** Speed is the means, landing on the target is the goal. Don't forget that.
+The goal of speed training isn't showing off your fingers. It's building the control to **<mark>precisely target C (♭3) and A (root) even inside a fast passage</mark>.** Speed is the means, landing on the target is the goal. Don't forget that.
 
 ## ② Visual Reference
 
-Same box as before. Today, you'll roll freely up and down within it.
+Same box as before. Today, you'll <mark>roll freely up and down within it</mark>.
 
 ```json
 {
@@ -55,7 +55,7 @@ Same box as before. Today, you'll roll freely up and down within it.
 }
 ```
 
-Today's star is the 4-note **descending** sequence. You'll roll down from the top of the 1st string toward the 6th string. Pay especially close attention to your picking direction.
+Today's star is the <mark>4-note **descending** sequence</mark>. You'll roll down from the top of the 1st string toward the 6th string. Pay especially close attention to your picking direction.
 
 ```json
 {
@@ -98,16 +98,16 @@ Today's star is the 4-note **descending** sequence. You'll roll down from the to
 ## ③ Today's Practice (50-minute routine)
 
 **0–10 min · Warm-up (BPM 65 → step it up)**
-Loosen up with the 4-note ascending/descending sequence once each at BPM 65. Then climb by 5 in this order: **70 → 75 → 80 → 85 → 90.** At each tempo, you have to cleanly pass one ascending and one descending run before moving up. If you can't pass, that tempo becomes today's ceiling. Don't force it higher.
+Loosen up with the 4-note ascending/descending sequence once each at BPM 65. Then climb by 5 in this order: **<mark>70 → 75 → 80 → 85 → 90</mark>.** At each tempo, you have to cleanly pass one ascending and one descending run before moving up. If you can't pass, that tempo becomes today's ceiling. Don't force it higher.
 
 **10–20 min · Brain training (today's target = C·A, quick targeting)**
-Metronome at 80. Roll through the descending 4-note sequence, and whenever you mentally shout "now!", **stop exactly on the next C or A.** This trains you to target notes on the fly, mid-flow. Pass if you succeed 8 out of 10 times.
+Metronome at 80. Roll through the descending 4-note sequence, and whenever you mentally shout "now!", **<mark>stop exactly on the next C or A</mark>.** This trains you to target notes on the fly, mid-flow. Pass if you succeed 8 out of 10 times.
 
 **20–40 min · Real-world feel — one-chord improv (Am backing track, BPM 80–90)**
-A faster backing track than yesterday. Rule: **climb with the ascending sequence, come back down with the descending sequence over 4 bars, and land on C (♭3) at the end.** Feel free to mix in the sequences with free improvising, but always close a phrase on a chord tone (C or A). If you're playing fast and it starts blurring, drop the tempo by 5 right away. The worst outcome here is spending 20 minutes playing sloppy.
+A faster backing track than yesterday. Rule: **<mark>climb with the ascending sequence, come back down with the descending sequence</mark> over 4 bars, and <mark>land on C (♭3) at the end</mark>.** Feel free to mix in the sequences with free improvising, but always close a phrase on a chord tone (C or A). If you're playing fast and it starts blurring, drop the tempo by 5 right away. The worst outcome here is spending 20 minutes playing sloppy.
 
 **40–50 min · Record & reflect (recommended)**
-Listen to yesterday's recording next to today's. You'll feel just how much clearer your notes have gotten in two days. Check: is your picking dragging on the descending run, or is there a "clunk" spot crossing a particular string pair? If so, isolate that string transition and repeat it 10 times on its own.
+Listen to yesterday's recording next to today's. You'll feel just how much clearer your notes have gotten in two days. Check: is <mark>your picking dragging on the descending run</mark>, or is there a "clunk" spot crossing a particular string pair? If so, isolate that string transition and repeat it 10 times on its own.
 
 **Today's finish line:** clear both the ascending and descending sequence with no blur at your own top BPM (aim for at least 78). Score 8/10 on landing targets on the fly during the fast passage.
 

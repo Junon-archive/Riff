@@ -10,9 +10,9 @@ lang: en
 
 ## ① Theory / Explanation
 
-Here's why we're doing this today. Over the past two days, we've gathered all the ingredients: where ♭5 lives (Day 1), bending (Day 1), vibrato (Day 2). But no matter how good the ingredients are, they're just sitting in the fridge until you actually cook something. Today, we cook these ingredients into a single **phrase** — a musical sentence. This is where real improvisation actually begins.
+Here's why we're doing this today. Over the past two days, we've gathered all the ingredients: where ♭5 lives (Day 1), bending (Day 1), vibrato (Day 2). But no matter how good the ingredients are, they're just sitting in the fridge until you actually cook something. Today, we cook these ingredients into a single **<mark>phrase</mark>** — a musical sentence. This is where real improvisation actually begins.
 
-The backbone of blues phrasing is the **3rd interval** we've been drilling for the past three weeks straight. Remember — don't crawl along to the next-door note, hop around instead. Today, we thread ♭5 into that as a passing tone. There's a classic formula: descending, you slide down chromatically — **5th (E) → ♭5 (E♭) → 4th (D).** The instant these three notes fall together, the sound turns thick and gritty. About 80% of blues licks come out of this one fragment. The key, again, is **not lingering on ♭5.** It's only a passing tone if you brush right through it.
+The backbone of blues phrasing is the **3rd interval** we've been drilling for the past three weeks straight. Remember — don't crawl along to the next-door note, hop around instead. Today, we thread ♭5 into that as a passing tone. There's a classic formula: descending, you slide down chromatically — **<mark>5th (E) → ♭5 (E♭) → 4th (D)</mark>.** The instant these three notes fall together, the sound turns thick and gritty. About 80% of blues licks come out of this one fragment. The key, again, is **<mark>not lingering on ♭5</mark>.** It's only a passing tone if you brush right through it.
 
 ```json
 {
@@ -47,13 +47,13 @@ The backbone of blues phrasing is the **3rd interval** we've been drilling for t
 }
 ```
 
-And a phrase needs **punctuation.** Think of a bend as the **exclamation point (!)** in the middle of a sentence, and vibrato as the **period (.)** at the end. You develop the story with 3rds, then punch a bend in the middle to push the emotion up once (!), then land on ♭3 or the root and close the sentence with vibrato (.). With this flow — "develop → exclamation point → period" — even the same 5–6 notes become **music.**
+And a phrase needs **<mark>punctuation</mark>.** Think of a bend as the **exclamation point (!)** in the middle of a sentence, and vibrato as the **period (.)** at the end. You develop the story with 3rds, then punch a bend in the middle to push the emotion up once (!), then land on ♭3 or the root and close the sentence with vibrato (.). With this flow — "develop → exclamation point → period" — even the same 5–6 notes become **music.**
 
-Today's goal is one single thing: engrave the 3-measure phrase below into your body so deeply that you can **hum it with your voice.** The key is memorizing it as a "song," not as finger exercise. What your hands memorize doesn't come out in improv — only what your ears memorize does.
+Today's goal is one single thing: engrave the 3-measure phrase below into your body so deeply that you can **<mark>hum it with your voice</mark>.** The key is memorizing it as a "song," not as finger exercise. What your hands memorize doesn't come out in improv — only what your ears memorize does.
 
 ## ② Visual Reference
 
-Here's the ingredient map for the phrase — 3rd-interval stepping stones (scale notes), the ♭5 passing tone (purple), and the ♭3 landing point (green), all on one board.
+Here's the ingredient map for the phrase — 3rd-interval stepping stones (scale notes), <mark>the ♭5 passing tone (purple)</mark>, and the ♭3 landing point (green), all on one board.
 
 ```json
 {
@@ -88,7 +88,7 @@ Here's the ingredient map for the phrase — 3rd-interval stepping stones (scale
 }
 ```
 
-Here's today's centerpiece — a 3-measure blues phrase. Measure 1 = **5 → ♭5 → 4 chromatic descending passing tones** + landing on ♭3. Measure 2 = **development via ascending 3rd intervals.** Measure 3 = punching the **♭5 exclamation point with a half-step bend**, landing on ♭3, and closing with a vibrato period.
+Here's today's centerpiece — a 3-measure blues phrase. Measure 1 = **<mark>5 → ♭5 → 4 chromatic descending passing tones</mark>** + landing on ♭3. Measure 2 = **development via ascending 3rd intervals.** Measure 3 = punching the **♭5 exclamation point with a half-step bend**, landing on ♭3, and closing with a vibrato period.
 
 ```json
 {
@@ -138,10 +138,10 @@ Here's today's centerpiece — a 3-measure blues phrase. Measure 1 = **5 → ♭
 ## ③ Today's Practice (50-minute routine)
 
 **0–10 min · Warm-up (BPM 80)**
-Run A blues scale Box 1 in 3rd intervals, once ascending and once descending. That's one notch faster than last week, at 80. Touch ♭5 only lightly, as a passing tone between the 3rd-interval jumps. If it gets muddy, drop to 75.
+Run A blues scale Box 1 in 3rd intervals, once ascending and once descending. That's one notch faster than last week, at 80. <mark>Touch ♭5 only lightly, as a passing tone</mark> between the 3rd-interval jumps. If it gets muddy, drop to 75.
 
 **10–20 min · Brain training (memorizing the phrase as a "song")**
-Turn off the metronome and get the 3-measure phrase above into your hands, very slowly. Focus especially on whether the "5-♭5-4" chromatic descent in measure 1 flows smoothly, and whether the half-step bend (4→♭5) in measure 3 hits the exact pitch. Now here's the part that really matters — **put the guitar down and hum the phrase out loud with your voice.** If you can hum it, your ears have memorized it. That's today's pass bar.
+Turn off the metronome and get the 3-measure phrase above into your hands, very slowly. Focus especially on whether the "5-♭5-4" chromatic descent in measure 1 flows smoothly, and whether the half-step bend (4→♭5) in measure 3 hits the exact pitch. Now here's the part that really matters — **<mark>put the guitar down and hum the phrase out loud with your voice</mark>.** If you can hum it, your ears have memorized it. That's today's pass bar.
 
 ```json
 {
@@ -189,10 +189,10 @@ Turn off the metronome and get the 3-measure phrase above into your hands, very 
 ```
 
 **20–40 min · Real-world improv (Am7 one-chord backing, 75–80 BPM)**
-Play the backing track and start by repeating the phrase above exactly. Once it feels comfortable, try changing **just one measure out of the three at a time.** Keep the descending passing tone in measure 1, but move the 3rd-interval development in measure 2 to a different string, or swap the measure 3 landing from ♭3 to the root. Only two rules: **① ♭5 stays a passing tone (brush past it) ② always close the phrase with either a bend exclamation point or a vibrato period.**
+Play the backing track and start by repeating the phrase above exactly. Once it feels comfortable, try changing **<mark>just one measure out of the three at a time</mark>.** Keep the descending passing tone in measure 1, but move the 3rd-interval development in measure 2 to a different string, or swap the measure 3 landing from ♭3 to the root. Only two rules: **① ♭5 stays a passing tone (brush past it) ② <mark>always close the phrase with either a bend exclamation point or a vibrato period</mark>.**
 
 **40–50 min · Record & reflect (recommended)**
-Record the phrase over the backing track for 30 seconds. Check: ① Does the "5-♭5-4" descent come through as three separate grains, not a blur? ② Does the half-step bend land exactly on the ♭5 pitch (ear-matching, like yesterday)? ③ Does the phrase feel like a "sentence" — beginning, development, ending — or just a string of notes? If anything snags, isolate that part and run it 10 times on its own.
+Record the phrase over the backing track for 30 seconds. Check: ① Does the "5-♭5-4" descent come through as three separate grains, not a blur? ② Does the half-step bend land exactly on the ♭5 pitch (ear-matching, like yesterday)? ③ <mark>Does the phrase feel like a "sentence" — beginning, development, ending</mark> — or just a string of notes? If anything snags, isolate that part and run it 10 times on its own.
 
 **Today's finish line:** play the 3-measure phrase at BPM 80 without a hitch. Hum the phrase with your voice. Build a new phrase over the backing track by varying at least one measure.
 

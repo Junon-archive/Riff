@@ -10,15 +10,15 @@ lang: en
 
 ## ① Theory / Explanation
 
-Here's why we're doing this today: your hands already know the answer — it's just your head that hasn't caught up yet. Last week you really dug into A natural minor, right? That same fretboard shape, that same fingering — you can use it for C major starting today, without moving a single finger. Why? Because A minor and C major share the exact same seven notes (A B C D E F G). They're called "relative keys" for a reason. The notes are 100% identical. The only thing that changes is which note you feel as "home" (the tonal center).
+Here's why we're doing this today: your hands already know the answer — it's just your head that hasn't caught up yet. Last week you really dug into A natural minor, right? That same fretboard shape, that same fingering — you can use it for C major starting today, without moving a single finger. Why? Because A minor and C major share <mark>the exact same seven notes (A B C D E F G)</mark>. They're called "relative keys" for a reason. The notes are 100% identical. The only thing that changes is <mark>which note you feel as "home" (the tonal center)</mark>.
 
-Think of it like an apartment complex. Same building, same everything — if you call Building A "home," that's A minor; if you call Building C "home," that's C major. The building itself (the fretboard shape) never changes — only which door you walk through when you head home. In Am, you land at the dark b3, C. In C major, you land at the bright 3rd, E. Today's the day we memorize both of these addresses in our fingers.
+Think of it like an apartment complex. Same building, same everything — if you call Building A "home," that's A minor; if you call Building C "home," that's C major. The building itself (the fretboard shape) never changes — only which door you walk through when you head home. In Am, you land at <mark>the dark b3, C</mark>. In C major, you land at <mark>the bright 3rd, E</mark>. Today's the day we memorize both of these addresses in our fingers.
 
-So from today on, we're going to read every label in both keys at once. Take the note C: in C major, it's the R (home); in A minor, it's the b3. That's why the labels are marked as (C degree / Am degree). Get used to seeing how the exact same dot on the fretboard plays a completely different role depending on your perspective. Nail this, and next week's chord-tone targeting becomes almost effortless.
+So from today on, we're going to <mark>read every label in both keys at once</mark>. Take the note C: in C major, it's the R (home); in A minor, it's the b3. That's why the labels are marked as (C degree / Am degree). Get used to seeing how the exact same dot on the fretboard plays a completely different role depending on your perspective. Nail this, and next week's chord-tone targeting becomes almost effortless.
 
 ## ② Visual Reference
 
-Same fretboard (5th-fret position), one single shape. Labels are marked as (C major degree / A minor degree). See the two tonal centers? We've highlighted C (bright view = R, dark view = b3) and C major's bright 3rd, E.
+Same fretboard (5th-fret position), one single shape. Labels are marked as (C major degree / A minor degree). See <mark>the two tonal centers</mark>? We've highlighted C (bright view = R, dark view = b3) and C major's bright 3rd, E.
 
 ```json
 {
@@ -57,7 +57,7 @@ Same fretboard (5th-fret position), one single shape. Labels are marked as (C ma
 }
 ```
 
-And here's a short example to hear "same shape, different landing" with your own ears. Measure 1 plays around with the same notes and then resolves home to A (Am center); measure 2 uses the exact same fingers and resolves to C instead (C major center). Listen for how the mood of the sound shifts.
+And here's a short example to hear "same shape, different landing" with your own ears. Measure 1 plays around with the same notes and then resolves home to A (Am center); measure 2 <mark>uses the exact same fingers and resolves to C instead (C major center)</mark>. Listen for how the mood of the sound shifts.
 
 ```json
 {
@@ -100,16 +100,16 @@ And here's a short example to hear "same shape, different landing" with your own
 ## ③ Today's Practice (50-minute routine)
 
 **0–10 min · Warm-up (BPM 76)**
-With the metronome at 76, run through the whole fretboard shape above using 3rd intervals. No simple up-and-down runs allowed — always skip one note and jump a 3rd instead. It's the exact same hand shape you built last week. Don't chase speed today; this is just time to confirm "this shape already lives in my hands."
+With the metronome at 76, run through the whole fretboard shape above using 3rd intervals. No simple up-and-down runs allowed — always skip one note and jump a 3rd instead. It's the exact same hand shape you built last week. Don't chase speed today; this is just time to confirm <mark>"this shape already lives in my hands"</mark>.
 
 **10–20 min · Brain training (same fretboard, switch center A↔C)**
-Turn off the metronome, keep the shape exactly as-is, and switch only what's happening in your head. First, for 30 seconds, think of A as home — fret whatever notes you like, then resolve to A (6th string 5th fret, 4th string 7th fret). Then for 30 seconds, think of C as home — play around the same way, then resolve to C (6th string 8th fret, 3rd string 5th fret, 1st string 8th fret). Every time you land, say it out loud: "this is Building A, this is Building C." You pass once you can feel the mood of the sound shift even though your hands never change.
+Turn off the metronome, keep the shape exactly as-is, and switch only what's happening in your head. First, for 30 seconds, <mark>think of A as home</mark> — fret whatever notes you like, then resolve to A (6th string 5th fret, 4th string 7th fret). Then for 30 seconds, <mark>think of C as home</mark> — play around the same way, then resolve to C (6th string 8th fret, 3rd string 5th fret, 1st string 8th fret). Every time you land, say it out loud: "this is Building A, this is Building C." You pass once you can feel the mood of the sound shift even though your hands never change.
 
 **20–40 min · Real-world improv (Am ↔ C switching backing track / BPM 70–76)**
-Search "Am to C backing track" or "relative major minor jam" and put one on. The rule: when the chord is Am, land on C (b3); when it's C, land on E (the bright 3rd). Never change your hand shape — the only thing that changes is where you stop. That back-and-forth feeling between the two landing notes is everything today.
+Search "Am to C backing track" or "relative major minor jam" and put one on. The rule: when the chord is Am, land on C (b3); when it's C, <mark>land on E (the bright 3rd)</mark>. Never change your hand shape — the only thing that changes is where you stop. That back-and-forth feeling between the two landing notes is everything today.
 
 **40–50 min · Record & reflect (recommended)**
-Record 30 seconds of that last jam with any recording app (a phone voice memo works fine). Listen back and check just one thing: when you land on E in the C section, does it actually sound "bright"? Does it feel like a different color than landing on C in the Am section? If you're not sure, slow down playback a little and loop just the landing moments.
+Record 30 seconds of that last jam with any recording app (a phone voice memo works fine). Listen back and check just one thing: <mark>when you land on E in the C section, does it actually sound "bright"</mark>? Does it feel like a different color than landing on C in the Am section? If you're not sure, slow down playback a little and loop just the landing moments.
 
 **Today's finish line:** With your eyes closed, switch between the A-center and C-center on the same fretboard shape and land accurately on the target notes (C, E, A). Over the backing track, switch landing notes with the chord changes for 8 bars.
 

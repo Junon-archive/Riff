@@ -10,15 +10,15 @@ lang: en
 
 ## ① Theory / Explanation
 
-Here's why we're doing this today: yesterday you confirmed that "C is already in our hands too." But if we stop at just confirming it, muscle memory quietly drags us right back to old A minor habits. So today we're going to plant a real, unmistakable identity for C major. And that identity is the bright 3rd — E.
+Here's why we're doing this today: yesterday you confirmed that "C is already in our hands too." But if we stop at just confirming it, muscle memory quietly drags us right back to old A minor habits. So today we're going to plant <mark>a real, unmistakable identity for C major</mark>. And that identity is <mark>the bright 3rd — E</mark>.
 
-99% of why a major sound feels "bright" comes down to this one 3rd (E). Minor lands on the dark b3 (C) and feels wistful; major lands on the bright 3rd (E) and feels radiant. But if we just run notes up and down like yesterday, E gets buried as "just one of seven passing notes." So today's weapon is once again the 3rd interval — skip the very next scale note and hop straight to the one after it.
+99% of why a major sound feels "bright" comes down to this one 3rd (E). Minor lands on the dark b3 (C) and feels wistful; major lands on the bright 3rd (E) and feels radiant. But if we just run notes up and down like yesterday, E gets buried as "just one of seven passing notes." So today's weapon is once again <mark>the 3rd interval</mark> — skip the very next scale note and hop straight to the one after it.
 
-Jumping in 3rds creates a little magic. Jump from C, you land on E; from D, you land on F; from E, you land on G — and every landing spot keeps landing right on a chord tone (C, E, G). The C→E jump in particular IS the core move of C major: going from root to bright 3rd. Today we're going to make your hands remember that C→E jump like a melody, and finish by attaching the feeling of stretching E out long on the landing.
+Jumping in 3rds creates a little magic. Jump from C, you land on E; from D, you land on F; from E, you land on G — and <mark>every landing spot keeps landing right on a chord tone (C, E, G)</mark>. <mark>The C→E jump in particular IS the core move of C major</mark>: going from root to bright 3rd. Today we're going to make your hands remember that C→E jump like a melody, and finish by attaching the feeling of stretching E out long on the landing.
 
 ## ② Visual Reference
 
-This is the C major position. Same fretboard as yesterday, but today the labels are purely from C major's point of view. We've highlighted root C and today's star, the bright 3rd, E.
+This is the C major position. Same fretboard as yesterday, but today <mark>the labels are purely from C major's point of view</mark>. We've highlighted root C and today's star, the bright 3rd, E.
 
 ```json
 {
@@ -57,7 +57,7 @@ This is the C major position. Same fretboard as yesterday, but today the labels 
 }
 ```
 
-Here's today's main event — a C major 3rd-interval sequence climbing upward. C→E, D→F, E→G… hop, hop, hop, and finally stretch out and land on the bright 3rd, E.
+Here's today's main event — a <mark>C major 3rd-interval sequence climbing upward</mark>. C→E, D→F, E→G… hop, hop, hop, and finally stretch out and land on the bright 3rd, E.
 
 ```json
 {
@@ -99,16 +99,16 @@ Here's today's main event — a C major 3rd-interval sequence climbing upward. C
 ## ③ Today's Practice (50-minute routine)
 
 **0–10 min · Warm-up (BPM 84)**
-With the metronome at 84, run the ascending 3rd-interval sequence from the 6th string up to the 1st. Two eighth notes make one "hop-skip" set. Play every C→E jump just a touch more clearly. If your fingers tangle, it's fine to drop to 80 for a bit and build back up.
+With the metronome at 84, run the ascending 3rd-interval sequence from the 6th string up to the 1st. Two eighth notes make one "hop-skip" set. <mark>Play every C→E jump just a touch more clearly</mark>. If your fingers tangle, it's fine to drop to 80 for a bit and build back up.
 
 **10–20 min · Brain training (today's target = E / bright 3rd)**
-Turn off the metronome and hunt down only the E notes on the fretboard — 5th string 7th fret, and 2nd string 5th fret, just these two spots. Every time you fret one, call it out loud: "E!" and make sure you can clearly tell it apart from the neighboring 4th, F (2nd string 6th fret). Then spend 3 minutes fretting whatever notes you like and always resolving home to E. Every time you arrive at E, consciously stamp in the feeling of "bright."
+Turn off the metronome and hunt down <mark>only the E notes on the fretboard</mark> — 5th string 7th fret, and 2nd string 5th fret, just these two spots. Every time you fret one, call it out loud: "E!" and make sure you can clearly tell it apart from the neighboring 4th, F (2nd string 6th fret). Then spend 3 minutes fretting whatever notes you like and always <mark>resolving home to E</mark>. Every time you arrive at E, consciously stamp in the feeling of "bright."
 
 **20–40 min · Real-world improv (C major one-chord backing / BPM 80–84)**
-Put on a "C major backing track." One rule: only jump in 3rds, and always land on E to end a phrase. No adjacent stepping allowed — always skip one. Try adding a light vibrato when you land on E, and that radiant feeling really comes alive. This is your first taste of "landing on the bright 3rd."
+Put on a "C major backing track." One rule: <mark>only jump in 3rds, and always land on E to end a phrase</mark>. No adjacent stepping allowed — always skip one. Try adding a light vibrato when you land on E, and that radiant feeling really comes alive. This is your first taste of "landing on the bright 3rd."
 
 **40–50 min · Record & reflect (recommended)**
-Record 30 seconds, then play it back. Check: did the E you landed on stay steady and in tune, with no wobble? And did you accidentally scrape the middle note while jumping a 3rd? If you hear extra noise sneaking in, build the habit of lightly muting the strings you're not picking with the heel of your picking hand.
+Record 30 seconds, then play it back. Check: <mark>did the E you landed on stay steady and in tune</mark>, with no wobble? And did you accidentally scrape the middle note while jumping a 3rd? If you hear extra noise sneaking in, build the habit of lightly muting the strings you're not picking with the heel of your picking hand.
 
 **Today's finish line:** Play the C major ascending 3rd sequence at BPM 84 all the way to the 1st string without breaking. Over the backing track, fill 8 bars using only 3rd jumps and finish with vibrato on E.
 

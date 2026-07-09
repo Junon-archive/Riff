@@ -10,9 +10,9 @@ lang: en
 
 ## ① Theory / Explanation
 
-Here's why we're doing this today. The real reason we've spent three days training your hands with sequences finally reveals itself today. Sequences were never the goal — they were the **runway.** No matter how fast you sprint down a runway, if you never land, it isn't really flying. Today, you finally learn to **land.** This is the heart of the entire three-month curriculum.
+Here's why we're doing this today. The real reason we've spent three days training your hands with sequences finally reveals itself today. Sequences were never the goal — they were the **<mark>runway</mark>.** No matter how fast you sprint down a runway, if you never land, it isn't really flying. Today, you finally learn to **<mark>land</mark>.** This is the heart of the entire three-month curriculum.
 
-Just one core concept to nail down. When the Am chord rings out over the backing track, the notes that make up that chord are **A (root) · C (♭3) · E (5).** We call these three notes "chord tones." Whether a solo sounds amateur or professional comes down to exactly one thing: **do you land on a chord tone when you end a phrase, or just stop anywhere?** Pour out scale notes and let the ending trail off — that's amateur. Hook the ending firmly on C or A and sing it with vibrato — that's professional. It really comes down to this one difference.
+Just one core concept to nail down. When the Am chord rings out over the backing track, the notes that make up that chord are **<mark>A (root) · C (♭3) · E (5)</mark>.** We call these three notes "chord tones." Whether a solo sounds amateur or professional comes down to exactly one thing: **<mark>do you land on a chord tone when you end a phrase</mark>, or just stop anywhere?** Pour out scale notes and let the ending trail off — that's amateur. Hook the ending firmly on C or A and sing it with vibrato — that's professional. It really comes down to this one difference.
 
 ```json
 {
@@ -42,11 +42,11 @@ Just one core concept to nail down. When the Am chord rings out over the backing
 }
 ```
 
-And of all the chord tones, **landing on C (♭3) is your best weapon.** Landing on the root A feels stable but a little predictable; landing on C, the ♭3, brings out that aching, minor-key color — "ah, this is minor" — instantly. The whole reason we've kept a green light on C for the past three days comes down to today. Now you're going to reach right into the flow of your solo, grab that C, and land on it.
+And of all the chord tones, **<mark>landing on C (♭3) is your best weapon</mark>.** Landing on the root A feels stable but a little predictable; landing on C, the ♭3, brings out that aching, minor-key color — "ah, this is minor" — instantly. The whole reason we've kept a green light on C for the past three days comes down to today. Now you're going to reach right into the flow of your solo, grab that C, and land on it.
 
 ## ② Visual Reference
 
-This is the Am chord-tone map. Out of the five scale notes, only the **three chord tones (R · ♭3 · 5)** are marked. These three spots are your "landing zones." Aim especially for the green C (♭3).
+This is the Am chord-tone map. Out of the five scale notes, only the **<mark>three chord tones (R · ♭3 · 5)</mark>** are marked. These three spots are your "landing zones." Aim especially for the green C (♭3).
 
 ```json
 {
@@ -76,7 +76,7 @@ This is the Am chord-tone map. Out of the five scale notes, only the **three cho
 }
 ```
 
-Here's an example landing lick. Bar 1 lands on the root A, bar 2 lands on the ♭3, C. The final landing note gets vibrato, and in bar 2 you slide into the target.
+Here's an example landing lick. Bar 1 lands on the root A, bar 2 lands on the ♭3, C. The final landing note gets vibrato, and in bar 2 you <mark>slide into the target</mark>.
 
 ```json
 {
@@ -120,7 +120,7 @@ Here's an example landing lick. Bar 1 lands on the root A, bar 2 lands on the �
 Run through this week's sequences (4-note, 3rd-interval) ascending and descending, once each, at a good clip. Your hands should already remember them. It's fine for warm-up to be short today — the real practice is ahead.
 
 **10–20 min · Brain training (today's target = C·A, landing precision)**
-No metronome — slowly get the landing lick above into your hands. Especially the end of bar 2: sliding from the 3rd string 7th fret (D) into the 5th fret (C) and singing it with vibrato. This "slide → land → vibrato" three-step combo is today's real gem. Repeat it 20 times to burn it into your body.
+No metronome — slowly get the landing lick above into your hands. Especially the end of bar 2: sliding from the 3rd string 7th fret (D) into the 5th fret (C) and singing it with vibrato. This <mark>"slide → land → vibrato" three-step combo</mark> is today's real gem. Repeat it 20 times to burn it into your body.
 
 ```json
 {
@@ -159,10 +159,10 @@ No metronome — slowly get the landing lick above into your hands. Especially t
 ```
 
 **20–40 min · Real-world feel — one-chord improv (Am backing track, BPM 70–80)**
-Today's main event. Put on the backing track, and the rule is: **every 4 bars, you must land on a chord tone (C or A) and finish with vibrato.** In between, do whatever you want — sequences, free improv — but the ending must always land. Landing on the root A will feel easiest at first. Once you're comfortable, try landing on C (♭3) more than half the time — if you feel that moment where the sound suddenly turns aching and emotional, that's success. Like a call-and-response, try leaving one phrase open and closing the next one on C.
+Today's main event. Put on the backing track, and the rule is: **every 4 bars, you must <mark>land on a chord tone (C or A) and finish with vibrato</mark>.** In between, do whatever you want — sequences, free improv — but the ending must always land. Landing on the root A will feel easiest at first. Once you're comfortable, try <mark>landing on C (♭3) more than half the time</mark> — if you feel that moment where the sound suddenly turns aching and emotional, that's success. Like a call-and-response, try leaving one phrase open and closing the next one on C.
 
 **40–50 min · Record & reflect (recommended)**
-Definitely record today — this is the outcome of your whole week. Listen back and check: ① Did each phrase's ending catch on a chord tone, or did it just trail off? ② Is the vibrato on your landing notes even and pretty, or does it wobble awkwardly? ③ Was there a moment where the backing track's chord and your landing note "clicked" perfectly together? If there was — congratulations. You just opened the door to improvising for the first time.
+Definitely record today — this is the outcome of your whole week. Listen back and check: ① Did each phrase's ending catch on a chord tone, or did it just trail off? ② Is the vibrato on your landing notes even and pretty, or does it wobble awkwardly? ③ Was there a moment where <mark>the backing track's chord and your landing note "clicked" perfectly together</mark>? If there was — congratulations. You just opened the door to improvising for the first time.
 
 **Today's finish line (= Week 1 graduation standard):** over the Am backing track, deliberately land a phrase on C (♭3) or A (root) at least 4 successful times, finishing each landing note with vibrato.
 

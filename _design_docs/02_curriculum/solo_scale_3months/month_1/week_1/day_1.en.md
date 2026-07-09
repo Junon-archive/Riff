@@ -10,11 +10,11 @@ lang: en
 
 ## ① Theory / Explanation
 
-Here's why we're doing this today. You've probably played the pentatonic Box 1 a hundred times by now — but there's a difference between hands that feel comfortable and a fretboard that's actually memorized. Running up and down, la-la-la-la, back and forth? That's not memorizing the fretboard — that's your **finger muscles cruising on autopilot**. And that's exactly why improvising feels impossible. The moment someone says "go ahead, play whatever you want" over a track, your hands just shuttle back and forth on that same autopilot track.
+Here's why we're doing this today. You've probably played the pentatonic Box 1 a hundred times by now — but there's a difference between hands that feel comfortable and a fretboard that's actually memorized. Running up and down, la-la-la-la, back and forth? That's not memorizing the fretboard — that's your **<mark>finger muscles cruising on autopilot</mark>**. And that's exactly why improvising feels impossible. The moment someone says "go ahead, play whatever you want" over a track, your hands just shuttle back and forth on that same autopilot track.
 
-So starting today, we're setting one rule: **no more simple up-and-down runs.** Instead, we're going to chew through the box using 4-note sequences (groups of four 16th notes). Why 4-note groups? Because instead of moving through the box in one straight direction, you'll go "four notes forward, one note back, forward again" — and that forces your brain to start memorizing each note's position as an **individual coordinate**, not a habit. That's how we break the autopilot.
+So starting today, we're setting one rule: **<mark>no more simple up-and-down runs</mark>.** Instead, we're going to chew through the box using 4-note sequences (groups of four 16th notes). Why 4-note groups? Because instead of moving through the box in one straight direction, you'll go "four notes forward, one note back, forward again" — and that forces your brain to start memorizing each note's position as an **<mark>individual coordinate</mark>**, not a habit. That's how we break the autopilot.
 
-The coordinates you need to remember are just the 5 notes of A minor pentatonic: **A (root) · C (♭3) · D (4) · E (5) · G (♭7).** Of these, the one to really burn into your eyes today is **C (♭3).** That's the 3rd of the Am chord — the note that's going to be your "landing spot" for the next three months. For now, just let it sink in: "ah, C lights up green right here, here, and here."
+The coordinates you need to remember are just the 5 notes of A minor pentatonic: **<mark>A (root) · C (♭3) · D (4) · E (5) · G (♭7)</mark>.** Of these, the one to really burn into your eyes today is **<mark>C (♭3)</mark>.** That's the 3rd of the Am chord — the note that's going to be your "landing spot" for the next three months. For now, just let it sink in: "ah, C lights up green right here, here, and here."
 
 ```json
 {
@@ -51,7 +51,7 @@ The coordinates you need to remember are just the 5 notes of A minor pentatonic:
 
 ## ② Visual Reference
 
-Am pentatonic Box 1 (root on the 5th fret). The notes highlighted in green (♭3 = C) are your target notes going forward.
+Am pentatonic Box 1 (root on the 5th fret). The notes highlighted in green (♭3 = C) are <mark>your target notes going forward</mark>.
 
 ```json
 {
@@ -86,7 +86,7 @@ Am pentatonic Box 1 (root on the 5th fret). The notes highlighted in green (♭3
 }
 ```
 
-Here's today's core weapon — a 4-note (16th note) ascending sequence. 1-2-3-4 / 2-3-4-5 / 3-4-5-6 … you shift forward by one note each time as you climb.
+Here's today's core weapon — a <mark>4-note (16th note) ascending sequence</mark>. 1-2-3-4 / 2-3-4-5 / 3-4-5-6 … you shift forward by one note each time as you climb.
 
 ```json
 {
@@ -129,7 +129,7 @@ Here's today's core weapon — a 4-note (16th note) ascending sequence. 1-2-3-4 
 ## ③ Today's Practice (50-minute routine)
 
 **0–10 min · Warm-up (BPM 60)**
-With the metronome at 60, run the 4-note sequence ascending only, from the 6th string up to the end of the 1st string. No descending yet. Each beat should land exactly one group of four 16th notes — "da-da-da-da" — right on the click. Lock in alternate picking (down-up-down-up).
+With the metronome at 60, run the 4-note sequence ascending only, from the 6th string up to the end of the 1st string. No descending yet. Each beat should <mark>land exactly one group of four 16th notes</mark> — "da-da-da-da" — right on the click. Lock in alternate picking (down-up-down-up).
 
 ```json
 {
@@ -170,13 +170,13 @@ With the metronome at 60, run the 4-note sequence ascending only, from the 6th s
 ```
 
 **10–20 min · Brain training (today's target = C / ♭3)**
-Turn off the metronome and hunt down **just C (♭3)** on the fretboard. 6th string 8th fret, 3rd string 5th fret, 1st string 8th fret — those three spots. Say it out loud every time you fret it: "C!" This trains your brain to remember the position by name, not just by feel. Pass condition: find all three spots with your eyes closed in under 3 minutes.
+Turn off the metronome and hunt down **<mark>just C (♭3)</mark>** on the fretboard. 6th string 8th fret, 3rd string 5th fret, 1st string 8th fret — those three spots. Say it out loud every time you fret it: "C!" This trains your brain to remember the position by name, not just by feel. Pass condition: find all three spots with your eyes closed in under 3 minutes.
 
 **20–40 min · Real-world feel — one-chord improv (Am backing track, BPM 60–65)**
-Search "Am backing track slow" and put one on. Only one rule: **climb using the 4-note sequence, and whenever you want to stop, stop only on C or A.** Don't worry about playing a "cool phrase" yet — just focus on the feeling of moving through the sequence instead of the old autopilot track.
+Search "Am backing track slow" and put one on. Only one rule: **<mark>climb using the 4-note sequence</mark>, and whenever you want to stop, <mark>stop only on C or A</mark>.** Don't worry about playing a "cool phrase" yet — just focus on the feeling of moving through the sequence instead of the old autopilot track.
 
 **40–50 min · Record & reflect (recommended)**
-Record 30 seconds of that last jam with whatever you've got — voice memo app, any recorder. Listen back and check just one thing: **do the four 16th notes stay crisp and separate, or do they blur together?** If they're blurring, it's totally fine to drop the BPM to 55 tomorrow.
+Record 30 seconds of that last jam with whatever you've got — voice memo app, any recorder. Listen back and check just one thing: **<mark>do the four 16th notes stay crisp and separate</mark>, or do they blur together?** If they're blurring, it's totally fine to drop the BPM to 55 tomorrow.
 
 **Today's finish line:** run the 4-note ascending sequence at BPM 60 without a break all the way to the 1st string, and find all three C spots with your eyes closed.
 

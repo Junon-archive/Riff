@@ -10,11 +10,11 @@ lang: en
 
 ## ① Theory / Explanation
 
-Here's why we're doing this today. Yesterday's 4-note sequences broke up some of that autopilot habit, right? But 4-note sequences still move "next note, next note, next note" — step by step — so the sound still comes out flat, like walking up stairs. That real solo feeling, the one that actually "sings," comes from **hopping** between notes. That's exactly what a 3rd interval is.
+Here's why we're doing this today. Yesterday's 4-note sequences broke up some of that autopilot habit, right? But 4-note sequences still move "next note, next note, next note" — step by step — so the sound still comes out flat, like walking up stairs. That real solo feeling, the one that actually "sings," comes from **<mark>hopping</mark>** between notes. That's exactly what a 3rd interval is.
 
-A 3rd interval isn't complicated at all. It's just **skipping the very next note in the scale and jumping to the one after that.** Not A to C, but A to D. Not C to D, but C to E. Think of it as a "skip one" game. Do this, and even the same five-note pentatonic scale suddenly sounds a lot slicker. Whether it's B.B. King or Slash, most of those licks that grab your ear start from exactly this kind of 3rd jump.
+A 3rd interval isn't complicated at all. It's just **<mark>skipping the very next note in the scale and jumping to the one after that</mark>.** Not A to C, but A to D. Not C to D, but C to E. Think of it as a <mark>"skip one" game</mark>. Do this, and even the same five-note pentatonic scale suddenly sounds a lot slicker. Whether it's B.B. King or Slash, most of those licks that grab your ear start from exactly this kind of 3rd jump.
 
-And there's a hidden bonus here. As you jump by 3rds through our scale — A lands you on D, C lands you on E — you'll notice **C (♭3) and A (root)** keep showing up as landing points. In other words, 3rd-interval training secretly plants the sense of "landing on a target note" all by itself. Yesterday you burned C into your eyes — today, we're going to make your fingers remember it in your body.
+And there's a hidden bonus here. As you jump by 3rds through our scale — A lands you on D, C lands you on E — you'll notice **<mark>C (♭3) and A (root)</mark>** keep showing up as landing points. In other words, 3rd-interval training secretly plants <mark>the sense of "landing on a target note"</mark> all by itself. Yesterday you burned C into your eyes — today, we're going to make your fingers remember it in your body.
 
 ## ② Visual Reference
 
@@ -53,7 +53,7 @@ First, the same box from yesterday — same shape, same positions. One more look
 }
 ```
 
-Here's today's main event — a 3rd-interval ascending sequence. You'll hop up two notes at a time (eighth notes). Notice how the landing points C and A are highlighted?
+Here's today's main event — a <mark>3rd-interval ascending sequence</mark>. You'll hop up two notes at a time (eighth notes). Notice how the landing points C and A are highlighted?
 
 ```json
 {
@@ -104,16 +104,16 @@ Here's today's main event — a 3rd-interval ascending sequence. You'll hop up t
 ## ③ Today's Practice (50-minute routine)
 
 **0–10 min · Warm-up (BPM 65)**
-Spend 2 minutes loosening up with yesterday's 4-note sequence, then move straight into the 3rd-interval ascending pattern. Two eighth notes make one "hop-skip" set. Your fingers will probably tangle up at first — that's normal. Focus first on **keeping the jump itself unbroken**, before worrying about landing exactly on the click.
+Spend 2 minutes loosening up with yesterday's 4-note sequence, then move straight into the 3rd-interval ascending pattern. Two eighth notes make one "hop-skip" set. Your fingers will probably tangle up at first — that's normal. Focus first on **<mark>keeping the jump itself unbroken</mark>**, before worrying about landing exactly on the click.
 
 **10–20 min · Brain training (today's target = C·A / ♭3·root)**
-Every time you jump a 3rd, say the landing note's name out loud: "A-D, C-E, D-G…" like that. When you land specifically on C or A, raise your voice a notch to emphasize it. Syncing your hands, your mouth, and your ears is the real point of today's session.
+Every time you jump a 3rd, say the landing note's name out loud: "A-D, C-E, D-G…" like that. When you land specifically on C or A, raise your voice a notch to emphasize it. <mark>Syncing your hands, your mouth, and your ears</mark> is the real point of today's session.
 
 **20–40 min · Real-world feel — one-chord improv (Am backing track, BPM 65–70)**
-Put on a backing track and follow this rule: **today, never play two adjacent scale notes in a row — jump only by 3rds.** Feels restrictive, right? That constraint is exactly what pushes your hands onto a new path. And whenever you end a phrase, make sure to land on C (♭3) and stop there. Remember that "click into place" feeling — that's your first taste of landing on a chord tone.
+Put on a backing track and follow this rule: **today, never play two adjacent scale notes in a row — <mark>jump only by 3rds</mark>.** Feels restrictive, right? That constraint is exactly what pushes your hands onto a new path. And whenever you end a phrase, make sure to <mark>land on C (♭3) and stop there</mark>. Remember that "click into place" feeling — that's your first taste of landing on a chord tone.
 
 **40–50 min · Record & reflect (recommended)**
-Record 30 seconds and play it back. Check one thing: **does each landing note come out clean and in tune, with no wobble?** If you catch a little "shhk" noise from brushing a string mid-skip, build the habit of lightly muting the strings you're not picking with the side of your picking-hand palm.
+Record 30 seconds and play it back. Check one thing: **<mark>does each landing note come out clean and in tune</mark>, with no wobble?** If you catch a little "shhk" noise from brushing a string mid-skip, build the habit of lightly muting the strings you're not picking with the side of your picking-hand palm.
 
 **Today's finish line:** run the 3rd-interval ascending sequence at BPM 65 unbroken all the way to the 1st string, and over the backing track, fill 8 bars using nothing but 3rd jumps, finishing on C.
 

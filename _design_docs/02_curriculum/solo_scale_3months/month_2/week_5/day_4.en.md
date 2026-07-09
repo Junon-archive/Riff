@@ -10,15 +10,15 @@ lang: en
 
 ## ① Theory / Explanation
 
-Here's why we're doing this today. If we sum up everything we've done this week in one line: **we built two bridges — B (2nd) and F (6th) — into the pentatonic (5 notes), completing all 7 notes of A natural minor (A·B·C·D·E·F·G).** Today, instead of treating those 7 notes separately, we're merging them into **one singing scale** and running it over an Am backing track like a real solo.
+Here's why we're doing this today. If we sum up everything we've done this week in one line: **we built two bridges — B (2nd) and F (6th) — into the pentatonic (5 notes), <mark>completing all 7 notes of A natural minor (A·B·C·D·E·F·G)</mark>.** Today, instead of treating those 7 notes separately, we're merging them into **<mark>one singing scale</mark>** and running it over an Am backing track like a real solo.
 
-The core idea is still **division of roles.** The skeleton is the pentatonic's 5 notes (A·C·D·E·G), and B and F are the color — the connective passing tones between them. B flows up (A→B→C), F flows down (F→E), each smoothly linking the skeleton together. And every one of these flows eventually converges on one spot — **C (♭3), Am's 3rd landing point**, the same home base we've talked about for three months straight. Today there's just one thing to confirm for yourself: the feeling that **"the two added notes didn't make the scale more complicated — they actually made the landing smoother and more song-like."**
+The core idea is still **<mark>division of roles</mark>.** The skeleton is the pentatonic's 5 notes (A·C·D·E·G), and B and F are the color — the connective passing tones between them. B flows up (A→B→C), F flows down (F→E), each smoothly linking the skeleton together. And every one of these flows eventually converges on one spot — **<mark>C (♭3), Am's 3rd landing point</mark>**, the same home base we've talked about for three months straight. Today there's just one thing to confirm for yourself: the feeling that **"the two added notes didn't make the scale more complicated — they actually made the landing smoother and more song-like."**
 
-So today isn't about drills — it's about making **music.** Running straight up and down is still banned. Instead, mix the 3rd intervals, the four-note runs, and the B/F passing tones freely — but **every phrase must end by landing on C, wrapped up with vibrato.** Shaking the landing note with vibrato is what turns a scale exercise into "a song," right in that moment. This is the first checkpoint of the month, right before we move into the relative major/minor relationship (Am↔C) next week.
+So today isn't about drills — it's about making **music.** Running straight up and down is still banned. Instead, mix the 3rd intervals, the four-note runs, and the B/F passing tones freely — but **<mark>every phrase must end by landing on C, wrapped up with vibrato</mark>.** Shaking the landing note with vibrato is what turns a scale exercise into "a song," right in that moment. This is the first checkpoint of the month, right before we move into the relative major/minor relationship (Am↔C) next week.
 
 ## ② Visual Reference
 
-This week's result: the **complete A natural minor Box 1.** The pentatonic skeleton (white) + passing tones B and F (green) + the landing note C (green). All 7 notes gathered into one shape.
+This week's result: the **<mark>complete A natural minor Box 1</mark>.** The pentatonic skeleton (white) + passing tones B and F (green) + the landing note C (green). All 7 notes gathered into one shape.
 
 ```json
 {
@@ -57,7 +57,7 @@ This week's result: the **complete A natural minor Box 1.** The pentatonic skele
 }
 ```
 
-Today's integration lick. Measure 1 uses both **A-B-C** (the bridge going up) and **F-E** (the bridge coming down); measure 2 lets F flow through one more time, then **lands on C (♭3) with vibrato.**
+Today's integration lick. Measure 1 uses both **A-B-C** (the bridge going up) and **F-E** (the bridge coming down); measure 2 lets F flow through one more time, then **<mark>lands on C (♭3) with vibrato</mark>.**
 
 ```json
 {
@@ -98,10 +98,10 @@ Today's integration lick. Measure 1 uses both **A-B-C** (the bridge going up) an
 ## ③ Today's Practice (50-minute routine)
 
 **0–10 min · Warm-up (BPM 90)**
-Set the metronome to 90 and run through the **complete A natural minor Box 1** once in 3rd intervals. Just don't settle on B or F as you pass them — let them flow: B up to C, F down to E. This is a warm-up that confirms this week's two directions in your body. Drop to BPM 80 if it clumps.
+Set the metronome to 90 and run through the **<mark>complete A natural minor Box 1</mark>** once in 3rd intervals. Just don't settle on B or F as you pass them — let them flow: B up to C, F down to E. This is a warm-up that confirms this week's two directions in your body. Drop to BPM 80 if it clumps.
 
 **10–20 min · Brain training (today's target = landing on C + the four B/F positions)**
-Metronome off. Get the integration lick above into your hands, especially the final **C (3rd string, 5th fret) vibrato landing.** Vibrato is a gentle side-to-side shake of the wrist that makes the note "tremble." No need for a big shake — keep it even. Then fret all four B and F spots (B: 6/7, 1/7; F: 5/8, 2/6) with your eyes closed, confirming each one's resolution direction (B up to C, F down to E) once more.
+Metronome off. Get the integration lick above into your hands, especially the final **<mark>C (3rd string, 5th fret) vibrato landing</mark>.** Vibrato is a gentle side-to-side shake of the wrist that makes the note "tremble." No need for a big shake — keep it even. Then fret all four B and F spots (B: 6/7, 1/7; F: 5/8, 2/6) with your eyes closed, confirming each one's resolution direction (B up to C, F down to E) once more.
 
 ```json
 {
@@ -140,10 +140,10 @@ Metronome off. Get the integration lick above into your hands, especially the fi
 ```
 
 **20–40 min · Real-world improv (Am one-chord backing, 85–90 BPM)**
-Put on an "Am backing track" and today, use the **complete 7 notes freely.** Two rules: ① B and F are passing tones only (no settling on them), ② **every phrase ends with a vibrato landing on C.** Snap together this week's building blocks (3rd-interval pairs, A-B-C, F-E) like Lego pieces and improvise a short 4-bar solo. It's fine to repeat the same thing — today's goal is simply the **first experience of a complete scale turning into a song in your hands.**
+Put on an "Am backing track" and today, use the **<mark>complete 7 notes freely</mark>.** Two rules: ① B and F are passing tones only (no settling on them), ② **<mark>every phrase ends with a vibrato landing on C</mark>.** Snap together this week's building blocks (3rd-interval pairs, A-B-C, F-E) like Lego pieces and improvise a short 4-bar solo. It's fine to repeat the same thing — today's goal is simply the **first experience of a complete scale turning into a song in your hands.**
 
 **40–50 min · Record & reflect (recommended)**
-Record your 4-bar solo with any recorder. Listen back and check two things: ① **were there any spots where B or F was left floating, unresolved?** ② **was the final C vibrato even and steady (not shaky and uneven)?** If the vibrato wobbles, you're likely pressing with finger strength instead of your wrist. Slow down playback if you need to zoom in on the landing moment by ear.
+Record your 4-bar solo with any recorder. Listen back and check two things: ① **<mark>were there any spots where B or F was left floating, unresolved</mark>?** ② **was the final C vibrato even and steady (not shaky and uneven)?** If the vibrato wobbles, you're likely pressing with finger strength instead of your wrist. Slow down playback if you need to zoom in on the landing moment by ear.
 
 **Today's done-when:** you can complete the integration lick at BPM 90 through the C vibrato landing, improvise a 4-bar solo in the jam with every phrase landing on C, and never leave B or F floating unresolved.
 

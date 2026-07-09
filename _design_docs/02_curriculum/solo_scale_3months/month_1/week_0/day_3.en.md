@@ -10,7 +10,7 @@ lang: en
 
 ## ① Theory / Explanation
 
-Here's why we're doing this today: today we're refurbishing the **home base** we'll be living in for the next three months — **A minor pentatonic, Box 1 (5th fret).** You probably already know this shape, but today we're going beyond "hands that remember the up-and-down pattern" to actually engrave **what role each note plays** into your eyes.
+Here's why we're doing this today: today we're refurbishing the **home base** we'll be living in for the next three months — **<mark>A minor pentatonic, Box 1</mark> (5th fret).** You probably already know this shape, but today we're going beyond "hands that remember the up-and-down pattern" to actually engrave **<mark>what role each note plays</mark>** into your eyes.
 
 ```json
 {
@@ -47,20 +47,20 @@ Here's why we're doing this today: today we're refurbishing the **home base** we
 
 ### Running up and down is a "warm-up," not the goal
 
-Here's the thing: running the pentatonic box up and down, back and forth, barely helps your improv skills. Why? Because **music has no rule that says "go up the strings in order."** If all you do is drill the up-and-down pattern, your hands only learn the reflex of "always move to the next-door note." So during improv, that's literally all that comes out.
+Here's the thing: running the pentatonic box up and down, back and forth, barely helps your improv skills. Why? Because **<mark>music has no rule</mark> that says "go up the strings in order."** If all you do is drill the up-and-down pattern, your hands only learn the reflex of "always move to the next-door note." So during improv, that's literally all that comes out.
 
-That's why we're only allowing it briefly in Week 0, purely as a **hand-loosening** device, and today we open our very first exit route: the **3rd-interval sequence.**
+That's why we're only allowing it briefly in Week 0, purely as a **hand-loosening** device, and today we open our very first exit route: the **<mark>3rd-interval sequence</mark>.**
 
 ### 3rd intervals = skipping over one
 
-Instead of playing the pentatonic scale "in order," we play it by **"skipping one note."** Going up from the low end, the Am pentatonic notes go **A – C – D – E – G – A…** and playing "in 3rds" means:
+Instead of playing the pentatonic scale "in order," we play it by **<mark>"skipping one note."</mark>** Going up from the low end, the Am pentatonic notes go **A – C – D – E – G – A…** and playing "in 3rds" means:
 
 - From A, instead of the next note, **skip one → D**
 - From C, skip one → **E**
 - From D, skip one → **G**
 - From E, skip one → **A**
 
-We're **pairing up notes and hopping over.** (Side note: skipping one note like this in a pentatonic scale actually mixes minor 3rds, major 3rds, and 4ths. That's why we just call it a "3rd sequence" as shorthand — don't stress about the exact interval math, just think of it as "skip-one-hopping.")
+We're **<mark>pairing up notes and hopping over</mark>.** (Side note: skipping one note like this in a pentatonic scale actually mixes minor 3rds, major 3rds, and 4ths. That's why we just call it a "3rd sequence" as shorthand — don't stress about the exact interval math, just think of it as "skip-one-hopping.")
 
 ```json
 {
@@ -102,7 +102,7 @@ We're **pairing up notes and hopping over.** (Side note: skipping one note like 
 }
 ```
 
-Why does this small shift matter so much? The instant you skip a note, the sound suddenly starts to feel **"like a melody."** Stepwise motion (up-and-down) is a staircase; a 3rd is a little leap, and your ear responds with "oh, this is actually singing something." That's your very first raw material for improv.
+Why does this small shift matter so much? The instant you skip a note, the sound suddenly starts to feel **<mark>"like a melody."</mark>** Stepwise motion (up-and-down) is a staircase; a 3rd is a little leap, and your ear responds with "oh, this is actually singing something." That's your very first raw material for improv.
 
 ## ② Visual Reference
 
@@ -186,17 +186,17 @@ Why does this small shift matter so much? The instant you skip a note, the sound
 ## ③ Today's Practice (50-minute routine)
 
 **0–10 min · Warm-up (BPM 60–72)**
-- One set of Day 2's spider walk 1-2-3-4 to wake up the hands. Start at whatever BPM you reached yesterday.
+- One set of Day 2's <mark>spider walk 1-2-3-4</mark> to wake up the hands. Start at whatever BPM you reached yesterday.
 - Done when: two clean round trips, no buzz.
 
 **10–20 min · Brain training (BPM 70) — box refresh + role check**
 - Run the box in (a) up and down just **four times** (keep it short — this is a warm-up!). Maintain alternate picking.
-- Then, the important part: pinpoint just the **3 R (A) positions** and **3 ♭3 (C) positions** on the fretboard, saying "root, third, root, third" out loud as you fret them.
+- Then, the important part: pinpoint just the **<mark>3 R (A) positions</mark>** and **<mark>3 ♭3 (C) positions</mark>** on the fretboard, saying "root, third, root, third" out loud as you fret them.
 - Done when: your hand can find all 3 R spots and all 3 ♭3 spots instantly, without looking.
 
 **20–40 min · Real-world feel (BPM 70, Am backing track) — 3rd sequence → connecting to improv**
 - First, play through the (b) 3rd-interval tab at BPM 70, deliberately, one note at a time. Choppy at first is fine — just open your ears to the sound of the hop.
-- Once it feels familiar, put on the backing track and improvise, mixing **"half up-and-down, half 3rd-hopping."** Rule: end phrases whenever possible by **landing on ♭3 (C) or R (A).**
+- Once it feels familiar, put on the backing track and improvise, mixing **<mark>"half up-and-down, half 3rd-hopping."</mark>** Rule: end phrases whenever possible by **<mark>landing on ♭3 (C) or R (A)</mark>.**
 - Done when: even one moment of your 3rd-leap sounds "like a melody" — that's a win.
 
 **40–50 min · Record & reflect (recommended)**

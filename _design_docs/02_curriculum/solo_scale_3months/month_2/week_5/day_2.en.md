@@ -10,11 +10,11 @@ lang: en
 
 ## ① Theory / Explanation
 
-Here's why we're doing this today. In the pentatonic scale we've been using through yesterday, there's a **gaping hole** between A and C. To get from the root A (6th string, 5th fret) to the next note C (6th string, 8th fret), you had to leap across three whole frets. That gap is part of what gives pentatonic its signature open, spacious flavor — but if you're always leaping like that, your solos can start to sound a little **stiff and staircase-like.** So today we're building a bridge across that gap: **B, the 2nd**, sitting right between A and C.
+Here's why we're doing this today. In the pentatonic scale we've been using through yesterday, there's a **gaping hole** between A and C. To get from the root A (6th string, 5th fret) to the next note C (6th string, 8th fret), you had to leap across three whole frets. That gap is part of what gives pentatonic its signature open, spacious flavor — but if you're always leaping like that, your solos can start to sound a little **<mark>stiff and staircase-like</mark>.** So today we're building a bridge across that gap: **<mark>B, the 2nd</mark>**, sitting right between A and C.
 
-Here's an important principle: B is **a bridge, not the star of the show** (a passing tone). If you settle on B, it sounds like it's floating over the Am chord — because B isn't one of Am's chord tones (A·C·E). So B only ever gets used as a **note you pass through.** Start on A, brush past B → land immediately on C (♭3, the 3rd chord tone). This "A-B-C" motion is today's whole story. The moment B delivers you to C, it's done its job. This is exactly why we drilled C as home base yesterday.
+Here's an important principle: B is **<mark>a bridge, not the star of the show</mark>** (a passing tone). If you settle on B, it sounds like it's floating over the Am chord — because B isn't one of Am's chord tones (A·C·E). So B only ever gets used as a **<mark>note you pass through</mark>.** Start on A, brush past B → land immediately on C (♭3, the 3rd chord tone). This "A-B-C" motion is today's whole story. The moment B delivers you to C, it's done its job. This is exactly why we drilled C as home base yesterday.
 
-Our practice pattern is **four-note groups (16th notes in fours).** If the 3rd interval was "skipping," the four-note group is "filling in the gaps densely." Now that B connects A and C, you can run it in tight 16th notes and the notes flow instead of clumping together. Starting today, memorize B's location on the fretboard for good — in Box 1 that's just two spots: **6th string 7th fret** and **1st string 7th fret.** Picture each of those B's sliding one fret up into the neighboring C, and you're set.
+Our practice pattern is **<mark>four-note groups (16th notes in fours)</mark>.** If the 3rd interval was "skipping," the four-note group is "filling in the gaps densely." Now that B connects A and C, you can run it in tight 16th notes and the notes flow instead of clumping together. Starting today, memorize B's location on the fretboard for good — in Box 1 that's just two spots: **6th string 7th fret** and **1st string 7th fret.** Picture each of those B's sliding one fret up into the neighboring C, and you're set.
 
 ```json
 {
@@ -53,7 +53,7 @@ Our practice pattern is **four-note groups (16th notes in fours).** If the 3rd i
 
 ## ② Visual Reference
 
-Pentatonic Box 1, now with two new **B (2nd, highlighted in green)** spots — 6th string 7th fret, 1st string 7th fret. Each is a bridge flowing straight into the C (♭3, green) right above it.
+Pentatonic Box 1, now with two new **<mark>B (2nd, highlighted in green)</mark>** spots — 6th string 7th fret, 1st string 7th fret. Each is a bridge flowing straight into the C (♭3, green) right above it.
 
 ```json
 {
@@ -90,7 +90,7 @@ Pentatonic Box 1, now with two new **B (2nd, highlighted in green)** spots — 6
 }
 ```
 
-Today's four-note drill. Loop **A-B-C** to build the feel of passing through B and arriving at C, then land long on C at the end.
+Today's four-note drill. Loop **A-B-C** to build <mark>the feel of passing through B and arriving at C</mark>, then land long on C at the end.
 
 ```json
 {
@@ -130,7 +130,7 @@ Today's four-note drill. Loop **A-B-C** to build the feel of passing through B a
 ## ③ Today's Practice (50-minute routine)
 
 **0–10 min · Warm-up (BPM 80)**
-Set the metronome to 80 and loosen up your hand with **yesterday's 3rd-interval sequence** first — 5 minutes. Then spend 5 minutes on today's A-B-C four-note drill, slow. Each beat gets four 16th notes ("dud-a-da-da") locking exactly onto one click. If it clumps together, drop to BPM 70.
+Set the metronome to 80 and loosen up your hand with **<mark>yesterday's 3rd-interval sequence</mark>** first — 5 minutes. Then spend 5 minutes on today's A-B-C four-note drill, slow. Each beat gets four 16th notes ("dud-a-da-da") locking exactly onto one click. If it clumps together, drop to BPM 70.
 
 ```json
 {
@@ -168,13 +168,13 @@ Set the metronome to 80 and loosen up your hand with **yesterday's 3rd-interval 
 ```
 
 **10–20 min · Brain training (today's target = the two B spots)**
-Metronome off. In Box 1, find and fret **only B (2nd).** 6th string 7th fret, 1st string 7th fret — just two spots. Every time you fret it, say out loud "this is a bridge, I can't stay here," and add the motion of **immediately sliding one fret up to C.** Pass when you can find both B's with your eyes closed and resolve each one to C.
+Metronome off. In Box 1, find and fret **<mark>only B (2nd)</mark>.** 6th string 7th fret, 1st string 7th fret — just two spots. Every time you fret it, say out loud "this is a bridge, I can't stay here," and add the motion of **<mark>immediately sliding one fret up to C</mark>.** Pass when you can find both B's with your eyes closed and resolve each one to C.
 
 **20–40 min · Real-world improv (Am one-chord backing, 75–80 BPM)**
-Put on an "Am backing track." One rule only: **every time you use B, resolve it to C.** Ending a phrase on B is off-limits. Use A-B-C as a seed motif and vary it by shifting positions. It's also great to slip A-B-C in between yesterday's 3rd-interval pairs here and there.
+Put on an "Am backing track." One rule only: **<mark>every time you use B, resolve it to C</mark>.** Ending a phrase on B is off-limits. Use A-B-C as a seed motif and vary it by shifting positions. It's also great to slip A-B-C in between yesterday's 3rd-interval pairs here and there.
 
 **40–50 min · Record & reflect (recommended)**
-Record 30 seconds of jamming with any recorder. Listen back and check one thing only: **were there any moments where B was left hanging, unresolved?** If you find a spot where it ended on B and it feels like "wait, that didn't resolve," mark it, and next time wrap it up on C. Slow down playback if you need to zoom in on the B→C timing by ear.
+Record 30 seconds of jamming with any recorder. Listen back and check one thing only: **<mark>were there any moments where B was left hanging, unresolved</mark>?** If you find a spot where it ended on B and it feels like "wait, that didn't resolve," mark it, and next time wrap it up on C. Slow down playback if you need to zoom in on the B→C timing by ear.
 
 **Today's done-when:** you can find the two B spots with your eyes closed, run the A-B-C four-note drill without breaking at BPM 80, and resolve every B to C during the jam.
 

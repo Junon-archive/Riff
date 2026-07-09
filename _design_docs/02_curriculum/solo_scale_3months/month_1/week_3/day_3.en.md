@@ -10,17 +10,17 @@ lang: en
 
 ## ① Theory / Explanation
 
-Here's why we're doing this today. Right now, the fretboard in your head probably looks like this: "Room 1, Room 2, Room 3, Room 4, Room 5" — five separate boxes that never talk to each other. You play fine inside each room, but the moment you cross the threshold between rooms, you trip up. That's exactly why improv gets stuck at the 5th fret — because you're only ever using one room at a time.
+Here's why we're doing this today. Right now, the fretboard in your head probably looks like this: "Room 1, Room 2, Room 3, Room 4, Room 5" — <mark>five separate boxes that never talk to each other</mark>. You play fine inside each room, but the moment you cross the threshold between rooms, you trip up. That's exactly why improv gets stuck at the 5th fret — because you're only ever using one room at a time.
 
-Today, we're turning these five rooms into one long hallway. The tool that breaks down the walls is a 3rd-interval run that crosses the entire neck. Why 3rds specifically? Like we've said all through the past two weeks, simple up-and-down runs (la-la-la-la) let your hand roll on autopilot, so you never feel where a room's boundary actually is. But when you move in 3rds (skipping a note), the notes hop around and naturally push your hand toward the neighboring string and the neighboring room. A 3rd interval is basically the key that unlocks the wall.
+Today, we're turning these five rooms into <mark>one long hallway</mark>. The tool that breaks down the walls is <mark>a 3rd-interval run that crosses the entire neck</mark>. Why 3rds specifically? Like we've said all through the past two weeks, simple up-and-down runs (la-la-la-la) let your hand roll on autopilot, so you never feel where a room's boundary actually is. But when you move in 3rds (skipping a note), the notes hop around and naturally push your hand toward the neighboring string and the neighboring room. A 3rd interval is basically the key that unlocks the wall.
 
-The core technique is the position shift (slide). Play a few notes in 3rds inside one room, slide up a string into the next room, then play in 3rds there too. Today's run starts at the 6th string 5th fret (Box 1's root) and travels all the way to the 3rd string 17th fret (Box 5's C), crossing the entire neck in one breath with three slides. Once you get through it, you'll feel in your hands that "oh, the neck really is one connected thing."
+The core technique is <mark>the position shift (slide)</mark>. Play a few notes in 3rds inside one room, slide up a string into the next room, then play in 3rds there too. Today's run starts at the 6th string 5th fret (Box 1's root) and travels all the way to the 3rd string 17th fret (Box 5's C), crossing the entire neck in one breath with three slides. Once you get through it, you'll feel in your hands that "oh, the neck really is one connected thing."
 
-And don't forget — the point of this run isn't showing off your fingers. It's burning into your body exactly where the C (♭3) target sits, no matter what part of the neck you're passing through. Every time you fret one of those green C's during the run, take a mental snapshot: "C here, C there too." Tomorrow, in improv, this map becomes your weapon.
+And don't forget — the point of this run isn't showing off your fingers. It's <mark>burning into your body exactly where the C (♭3) target sits</mark>, no matter what part of the neck you're passing through. Every time you fret one of those green C's during the run, take a mental snapshot: "C here, C there too." Tomorrow, in improv, this map becomes your weapon.
 
 ## ② Visual Reference
 
-First, today's map: the full-neck A minor pentatonic (from the open strings to fret 15). It shows that the five boxes are actually one seamless net, connected without a single break. Everything highlighted in green is a C (♭3) target — see how evenly C is scattered across the whole neck. (The notes at frets 16–17 at the top of Box 5 are just the fret-5 pattern repeated one octave up, so you've already seen that same shape lower down on this map.)
+First, today's map: <mark>the full-neck A minor pentatonic</mark> (from the open strings to fret 15). It shows that the five boxes are actually one seamless net, connected without a single break. Everything highlighted in green is a C (♭3) target — see how evenly C is scattered across the whole neck. (The notes at frets 16–17 at the top of Box 5 are just the fret-5 pattern repeated one octave up, so you've already seen that same shape lower down on this map.)
 
 ```json
 {
@@ -85,7 +85,7 @@ First, today's map: the full-neck A minor pentatonic (from the open strings to f
 }
 ```
 
-Now here's today's star: the full-neck 3rd-interval run. Measure 1 plays in 3rds inside Box 1 (fret 5), measure 2 slides up into Box 3 (fret 10), and measure 3 slides all the way up to Box 5 (frets 14–17), landing on the C (♭3) at the top of the neck. Pay especially close attention to the slide (position shift) markings.
+Now here's today's star: <mark>the full-neck 3rd-interval run</mark>. Measure 1 plays in 3rds inside Box 1 (fret 5), measure 2 slides up into Box 3 (fret 10), and measure 3 slides all the way up to Box 5 (frets 14–17), landing on the C (♭3) at the top of the neck. Pay especially close attention to the slide (position shift) markings.
 
 ```json
 {
@@ -138,10 +138,10 @@ Now here's today's star: the full-neck 3rd-interval run. Measure 1 plays in 3rds
 ## ③ Today's Practice (50-minute routine)
 
 **0–10 min · Warm-up (BPM 70 → climbing in steps)**
-Because of the slides, a full-neck run absolutely has to start slow. Play the run above once, very slowly, at BPM 70. Let your body learn the sliding distance at each of the three slide points (4th string 7→10, 1st string 12→15, 3rd string 14→17). Once it flows smoothly, step up to 75, then 80, in increments of 5. The moment your slide landings start getting fuzzy is today's speed ceiling.
+Because of the slides, a full-neck run absolutely has to start slow. Play the run above once, very slowly, at BPM 70. Let your body learn the sliding distance at each of the three slide points (4th string 7→10, 1st string 12→15, 3rd string 14→17). Once it flows smoothly, step up to <mark>75, then 80</mark>, in increments of 5. The moment your slide landings start getting fuzzy is today's speed ceiling.
 
 **10–20 min · Brain training (find-C-across-the-neck challenge)**
-Metronome off. On the full-neck map, fret only the C (♭3) notes, moving up from the lowest fret to the highest, in order: 2nd string fret 1 → 5th string fret 3 → 3rd string fret 5 → 6th string fret 8 → 1st string fret 8 → 4th string fret 10 → 2nd string fret 13 → 5th string fret 15 → 3rd string fret 17. Say "C!" out loud every time you land on one. The goal is to burn into your eyes just how densely C is packed across the whole neck. Pass when you can go through the whole sequence without getting stuck.
+Metronome off. On the full-neck map, <mark>fret only the C (♭3) notes</mark>, moving up from the lowest fret to the highest, in order: 2nd string fret 1 → 5th string fret 3 → 3rd string fret 5 → 6th string fret 8 → 1st string fret 8 → 4th string fret 10 → 2nd string fret 13 → 5th string fret 15 → 3rd string fret 17. Say "C!" out loud every time you land on one. The goal is to burn into your eyes just how densely C is packed across the whole neck. Pass when you can go through the whole sequence without getting stuck.
 
 ```json
 {
@@ -207,10 +207,10 @@ Metronome off. On the full-neck map, fret only the C (♭3) notes, moving up fro
 ```
 
 **20–40 min · Real-world improv (Am one-chord backing, 75–85 BPM)**
-Play the backing track, rule: within a single phrase, you must touch both the low part of the neck (fret 5) and the high part (fret 15). Feel free to throw in the run above exactly, or just borrow the slide points and move up and down freely. The key is "don't get trapped at fret 5." When you go up, land on the nearby C (♭3); when you come back down, land on a nearby C again. Get the feeling of using the whole neck as your stage.
+Play the backing track, rule: within a single phrase, <mark>you must touch both the low part of the neck (fret 5) and the high part (fret 15)</mark>. Feel free to throw in the run above exactly, or just borrow the slide points and move up and down freely. The key is "don't get trapped at fret 5." <mark>When you go up, land on the nearby C (♭3)</mark>; when you come back down, land on a nearby C again. Get the feeling of using the whole neck as your stage.
 
 **40–50 min · Record & reflect (recommended)**
-Record 30 seconds. Check: ① Did the rhythm hiccup or stall when you crossed rooms via a slide? ② Did you actually use both the top and bottom of the neck, or did you drift back to just playing around fret 5? Slow down playback and you'll clearly hear both slide-landing pitch accuracy and any rhythm stalls. If a slide broke the flow, isolate that shift and repeat it 10 times on its own.
+Record 30 seconds. Check: ① Did the rhythm hiccup or stall when you crossed rooms via a slide? ② <mark>Did you actually use both the top and bottom of the neck</mark>, or did you drift back to just playing around fret 5? Slow down playback and you'll clearly hear both slide-landing pitch accuracy and any rhythm stalls. If a slide broke the flow, isolate that shift and repeat it 10 times on its own.
 
 **Done when:** you can play the full-neck 3rd-interval run without a broken slide at your own top BPM (75 or higher recommended), and can fret all nine C spots across the neck in order.
 

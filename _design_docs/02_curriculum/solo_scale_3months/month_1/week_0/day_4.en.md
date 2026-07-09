@@ -10,23 +10,23 @@ lang: en
 
 ## ① Theory / Explanation
 
-Here's why we're doing this today: today we're finishing off the **working environment and habits** that'll roll with us through the next 12 weeks. No matter how great a phrase is, if it's **not sitting on the beat**, it's an accident, not improvisation. And if you **can't hear** your own playing, you simply cannot improve. Today, instead of hand technique, we're setting up these two systems.
+Here's why we're doing this today: today we're finishing off the **<mark>working environment and habits</mark>** that'll roll with us through the next 12 weeks. No matter how great a phrase is, if it's **<mark>not sitting on the beat</mark>**, it's an accident, not improvisation. And if you **can't hear** your own playing, you simply cannot improve. Today, instead of hand technique, we're setting up these two systems.
 
 ### 1) The metronome isn't a "prison" — it's a "drummer"
 
-A lot of people, the moment they turn on a metronome, feel chased by that click. Let's flip the perspective. The metronome isn't a warden watching your every move — it's **a drummer who holds the exact same tempo forever, without a single complaint.** The freedom of improv isn't "the freedom to ignore the beat" — it's "the freedom to master the beat completely, and play on top of it."
+A lot of people, the moment they turn on a metronome, feel chased by that click. Let's flip the perspective. The metronome isn't a warden watching your every move — it's **<mark>a drummer who holds the exact same tempo forever</mark>, without a single complaint.** The freedom of improv isn't "the freedom to ignore the beat" — it's "the freedom to master the beat completely, and play on top of it."
 
-One discipline: **never practice at a speed you can't play cleanly.** If you're fumbling notes, you're already too fast. Start at the slowest tempo where you can play it exactly right, and once you nail it clean twice, bump it up 4 BPM. This is our speed rule for all three months.
+One discipline: **<mark>never practice at a speed you can't play cleanly</mark>.** If you're fumbling notes, you're already too fast. Start at the slowest tempo where you can play it exactly right, and once you nail it clean twice, bump it up 4 BPM. This is our speed rule for all three months.
 
 ### 2) Backing tracks = your band
 
-Playing scales alone is exercise. **The moment you add a backing track, it becomes "playing."** With harmony underneath, your ear can actually tell whether the note you chose "fits" or "clashes." You don't need any specific app. Just search **"Am backing track"** on YouTube and you'll get hundreds of results. Pick a few slower ones (70–80 BPM), some bluesy, some groove-oriented, and **bookmark them.** That's our band.
+Playing scales alone is exercise. **<mark>The moment you add a backing track</mark>, it becomes "playing."** With harmony underneath, your ear can actually tell whether the note you chose "fits" or "clashes." You don't need any specific app. Just search **"Am backing track"** on YouTube and you'll get hundreds of results. Pick a few slower ones (70–80 BPM), some bluesy, some groove-oriented, and **bookmark them.** That's our band.
 
 ### 3) Recording = a mirror that doesn't lie
 
-This is today's real core lesson. **It's physically impossible to objectively hear your own playing while you're playing in real time.** Your brain is entirely occupied by your hands. That's why you have to record it and listen back with "an audience's ears" — that's the only way the real problems become visible.
+This is today's real core lesson. **<mark>It's physically impossible to objectively hear your own playing</mark> while you're playing in real time.** Your brain is entirely occupied by your hands. That's why you have to record it and listen back with "an audience's ears" — that's the only way the real problems become visible.
 
-Any tool works, genuinely. **A phone voice memo, any recording app** — all fine. You don't need any particular app. Don't worry about video or audio quality — the only thing that matters is **building the habit of capturing it.** It's not required daily, but at least 2–3 times a week is recommended.
+Any tool works, genuinely. **A phone voice memo, any recording app** — all fine. You don't need any particular app. Don't worry about video or audio quality — the only thing that matters is **<mark>building the habit of capturing it</mark>.** It's not required daily, but at least 2–3 times a week is recommended.
 
 **Just 3 things to check when you listen back** (this becomes our standard self-feedback checklist going forward):
 1. **Timing** — Locked to the beat, or rushing/dragging?
@@ -35,7 +35,7 @@ Any tool works, genuinely. **A phone voice memo, any recording app** — all fin
 
 ## ② Visual Reference
 
-Below is a tab for **"riding a rhythm on one note + leaving space."** There's only one note — A (1st string, 5th fret) — but half of it is **rests (space).** Reproducing this rhythm exactly to the metronome is today's discipline drill. (`rest: true` marks a rest.)
+Below is a tab for **<mark>"riding a rhythm on one note + leaving space."</mark>** There's only one note — A (1st string, 5th fret) — but half of it is **rests (space).** Reproducing this rhythm exactly to the metronome is today's discipline drill. (`rest: true` marks a rest.)
 
 ```json
 {
@@ -74,17 +74,17 @@ Below is a tab for **"riding a rhythm on one note + leaving space."** There's on
 ## ③ Today's Practice (50-minute routine)
 
 **0–10 min · Warm-up (BPM 60–72)**
-- One set of Day 2's spider walk. Today, **tap your foot to the metronome click** while you play. The goal is feeling the beat in your body.
+- One set of Day 2's spider walk. Today, **<mark>tap your foot to the metronome click</mark>** while you play. The goal is feeling the beat in your body.
 - Done when: your foot tap and the click never drift apart.
 
 **10–20 min · Brain training (BPM 75) — rhythm dictation**
-- Reproduce the rhythm from the tab above exactly, to a metronome at 75. There's only one note (A), so focus purely on **timing and rests.**
+- Reproduce the rhythm from the tab above exactly, to a metronome at 75. There's only one note (A), so focus purely on **<mark>timing and rests</mark>.**
 - Done when: your hand stops exactly on every rest, and the next note lands right on the beat. (If you can't stand the silence and fill in a note during a rest, that's a fail.)
 
 **20–40 min · Real-world feel (BPM 75, Am backing track) — Week 0 wrap-up improv**
 - Put on the backing track and **call in everything you've learned so far:** one note, two notes, 3rd sequences — freely. Just follow two disciplines:
-  1. End every phrase landing on **R (A) or ♭3 (C).**
-  2. Take **at least one full rest every two bars** (forced space).
+  1. End every phrase landing on **<mark>R (A) or ♭3 (C)</mark>.**
+  2. Take **<mark>at least one full rest every two bars</mark>** (forced space).
 - Done when: you complete a full loop, weaving in space deliberately, without freezing.
 
 **40–50 min · Record & reflect (strongly recommended today)**

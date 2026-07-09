@@ -10,17 +10,17 @@ lang: en
 
 ## ① Theory / Explanation
 
-Here's why we're doing this today. Over the past three days this week, you expanded the neck up and down — you planted Box 4 and Box 5, and connected the five rooms into one hallway. But if you stop at just "expanding," you've only done half the job. Today you need to learn how not to get lost on this newly widened neck, and that's what completes the week. The compass for that is the same thing we've been saying since Week 1 — landing on the 3rd (C, ♭3).
+Here's why we're doing this today. Over the past three days this week, you expanded the neck up and down — you planted Box 4 and Box 5, and connected the five rooms into one hallway. But if you stop at just "expanding," you've only done half the job. Today you need to learn <mark>how not to get lost on this newly widened neck</mark>, and that's what completes the week. The compass for that is the same thing we've been saying since Week 1 — <mark>landing on the 3rd (C, ♭3)</mark>.
 
-Just make sure one core idea is crystal clear. Right now, you can start improvising from anywhere on the neck — fret 5, fret 15, doesn't matter. The problem shows up when you have to close the phrase. There's exactly one thing that separates an awkward solo from a professional one: "Do you land on the nearest chord tone (especially C, ♭3) to wherever your hand already is?" Someone who's happily playing at fret 15 and then insists on crawling all the way down to fret 5 to land, missing the beat in the process — that's an amateur. Someone who just grabs the C right next to them and lands — that's a pro.
+Just make sure one core idea is crystal clear. Right now, you can start improvising from anywhere on the neck — fret 5, fret 15, doesn't matter. The problem shows up when you have to close the phrase. There's exactly one thing that separates an awkward solo from a professional one: "Do you <mark>land on the nearest chord tone (especially C, ♭3)</mark> to wherever your hand already is?" Someone who's happily playing at fret 15 and then insists on crawling all the way down to fret 5 to land, missing the beat in the process — that's an amateur. Someone who <mark>just grabs the C right next to them and lands</mark> — that's a pro.
 
-So today's training is your "nearest-3rd reflex." Remember how yesterday you saw that C is packed densely across the whole neck? That map pays off today. Playing up high (Box 5)? Drop onto the C at the 3rd string 17th fret or the 5th string 15th fret. Playing in the middle (Box 4)? Drop onto the C at the 2nd string 13th fret or the 5th string 15th fret — without moving your body much, just landing right on the nearby C. Once you've got this down, you'll never get lost no matter how wide the neck gets, because a landing pad is always within reach, wherever you are.
+So today's training is your "nearest-3rd reflex." Remember how yesterday you saw that C is packed densely across the whole neck? That map pays off today. Playing up high (Box 5)? Drop onto the C at the 3rd string 17th fret or the 5th string 15th fret. Playing in the middle (Box 4)? Drop onto the C at the 2nd string 13th fret or the 5th string 15th fret — <mark>without moving your body much, just landing right on the nearby C</mark>. Once you've got this down, you'll never get lost no matter how wide the neck gets, because a landing pad is always within reach, wherever you are.
 
 This week's graduation test is this: over an Am backing track, open phrases in different sections of the neck (high/middle), and at each spot, land on the nearest C (♭3) and sing it with vibrato. Your hand uses the whole neck as its stage, but the landing is always the nearest 3rd. This is the period at the end of this week's chapter in the 3-month curriculum — "Owning the Pentatonic Neck."
 
 ## ② Visual Reference
 
-First, today's compass: the full-neck Am chord tone map (from the open strings to fret 15). Out of the scale's five notes, this pulls out just the three chord tones (R · ♭3 · 5). C (♭3), highlighted in green, is your "landing pad." Wherever you are on the neck, practice hunting for the nearest green dot with your eyes.
+First, today's compass: <mark>the full-neck Am chord tone map</mark> (from the open strings to fret 15). Out of the scale's five notes, this pulls out just the three chord tones (R · ♭3 · 5). C (♭3), highlighted in green, is your "landing pad." Wherever you are on the neck, practice hunting for the nearest green dot with your eyes.
 
 ```json
 {
@@ -67,7 +67,7 @@ First, today's compass: the full-neck Am chord tone map (from the open strings t
 }
 ```
 
-Here's an example lick for "nearest-3rd landing." Measure 1 plays at the top of the neck (Box 5) and lands on the nearby C (3rd string, 17th fret). Measure 2 moves down and plays in Box 4, landing on that spot's nearby C (5th string, 15th fret). Neither landing requires much movement at all.
+Here's an example lick for <mark>"nearest-3rd landing"</mark>. Measure 1 plays at the top of the neck (Box 5) and lands on the nearby C (3rd string, 17th fret). Measure 2 moves down and plays in Box 4, landing on that spot's nearby C (5th string, 15th fret). Neither landing requires much movement at all.
 
 ```json
 {
@@ -111,7 +111,7 @@ Here's an example lick for "nearest-3rd landing." Measure 1 plays at the top of 
 Run through this week's weapons — the Box 4 and 5 sequences, and the full-neck 3rd-interval run — once each, quickly, at BPM 85. Your hands should already remember all of this. Today's warm-up can be short — the real test is coming up.
 
 **10–20 min · Brain training (nearest-C reflex)**
-No metronome. Looking at the compass map, run this challenge: place your hand at any random spot on the neck (say, the 4th string 12th fret), and within one second, fret the nearest C (♭3). Is it the 5th string 15th fret? The 2nd string 13th fret? Instantly aim for a C you can reach without moving much. Repeat this at 3–4 different spots up the neck. Pass when you can snag the nearest C within one second, every time. This is today's core skill.
+No metronome. Looking at the compass map, run this challenge: place your hand at any random spot on the neck (say, the 4th string 12th fret), and <mark>within one second, fret the nearest C (♭3)</mark>. Is it the 5th string 15th fret? The 2nd string 13th fret? Instantly aim for a C you can reach without moving much. Repeat this at 3–4 different spots up the neck. Pass when you can snag the nearest C within one second, every time. This is today's core skill.
 
 ```json
 {
@@ -159,7 +159,7 @@ No metronome. Looking at the compass map, run this challenge: place your hand at
 ```
 
 **20–40 min · Real-world improv (Am one-chord backing, 80–90 BPM)**
-Today's main event — this week's graduation test. Play the backing track, rule: ① Open a phrase up high on the neck (frets 12–17) → land right there on the nearest C, with vibrato. ② Open the next phrase in the middle of the neck (frets 7–12) → land there on that spot's nearby C. Use the example lick above as a starting point, but try it like a call-and-response — "ask up high, answer down below." Never run away to fret 5 — this is training you to land right where you already are. At least 6 phrases, landing on a nearby C every time.
+Today's main event — this week's graduation test. Play the backing track, rule: ① <mark>Open a phrase up high on the neck (frets 12–17) → land right there on the nearest C</mark>, with vibrato. ② <mark>Open the next phrase in the middle of the neck (frets 7–12) → land there on that spot's nearby C</mark>. Use the example lick above as a starting point, but try it like a call-and-response — "ask up high, answer down below." Never run away to fret 5 — this is training you to land right where you already are. At least 6 phrases, landing on a nearby C every time.
 
 ```json
 {
@@ -198,7 +198,7 @@ Today's main event — this week's graduation test. Play the backing track, rule
 ```
 
 **40–50 min · Record & reflect (recommended)**
-Make sure to record today. This is your proof of graduation for this week's "Owning the Pentatonic Neck" chapter. Listen back and check: ① Did every phrase end on a chord tone (C or A)? ② Did you ever miss the beat while dragging your hand far away just to land — if so, aim for a closer C next time. ③ Did you use the top, middle, and bottom of the neck fairly evenly? Slow down playback and any lag in your landing timing will jump right out at you.
+Make sure to record today. This is your proof of graduation for this week's "Owning the Pentatonic Neck" chapter. Listen back and check: ① <mark>Did every phrase end on a chord tone (C or A)</mark>? ② Did you ever miss the beat while dragging your hand far away just to land — if so, aim for a closer C next time. ③ <mark>Did you use the top, middle, and bottom of the neck fairly evenly</mark>? Slow down playback and any lag in your landing timing will jump right out at you.
 
 **Done when (= Week 3 graduation criteria):** over an Am backing track, you open phrases in at least two different sections of the neck (high and middle), and land deliberately on the nearest C (♭3) with vibrato at least 6 times — without ever retreating to fret 5.
 
