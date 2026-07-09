@@ -1,6 +1,6 @@
 ---
 id: 09-beginner-electric-curriculum
-status: TODO (구상 완료 — 저작 미착수)
+status: IN_PROGRESS (주차 프롬프트 4개·meta.json·month/week overview 완료 — day 문서 저작 미착수)
 priority: high
 risk: low
 depends_on: []
@@ -135,8 +135,8 @@ A|-7-7-7-7---3-5-7-|   ← 같은 파워코드 폼을 3→5→7 슬라이드
 ```
 
 ## §10. 트랙 메타 초안 (⚠️ 문구 최종·en/ja 미확정)
-- **id:** `electric_foundation_1month`
-- **level:** `1` · **durationMonths:** `1` · **topic:** `electric-foundation`(가칭)
+- **id:** `beginner_electric_1month` (확정 — 디렉터리·meta.json 반영 완료. §10 초안의 `electric_foundation_1month`는 폐기)
+- **level:** `1` · **durationMonths:** `1` · **topic:** `electric-foundation`
 - **title(ko):** "일렉 첫 30일 — 손 만들기"
 - **tagline(ko):** "속도 말고 깨끗함부터. 크로매틱에서 파워코드까지 4주"
 - **forWho(ko):** "일렉기타는 샀는데 뭐부터 쳐야 할지 막막한, 진짜 처음인 분께"
@@ -146,11 +146,13 @@ A|-7-7-7-7---3-5-7-|   ← 같은 파워코드 폼을 3→5→7 슬라이드
 ## §11. 남은 결정 (다음 세션에서 확정)
 - [x] **하루 분량 → 30분 확정** (§5, `estMinutes: 30`)
 - [x] **완성물 리프 규격 → 4/4 · 4마디 확정** (§9). 정확한 음(string/fret/duration)은 JSON 승격 시 확정.
-- [ ] 완성물 리프 **변형안 후보 중 택1** (현재 각 1개 스케치만 — §9)
-- [ ] **16일 Day별 상세** 저작 (각 날 설명 흐름 4단 + 렌더할 악보 JSON 목록)
-- [ ] 완성물 리프 스케치를 **4마디 완성 JSON으로 승격** (프롬프트 핀 고정용 — §6)
-- [ ] 트랙 **id/title/tagline** 최종 확정 + **en/ja** 번역
-- [ ] 커리큘럼 대표 **이미지** 제작
+- [x] **주차 프롬프트 4개(week_1~4_prompt.md) 작성 완료** — §13 청사진대로. 각 프롬프트에 완성물 리프 핀 고정.
+- [x] **완성물 리프 4마디 JSON 승격 완료** — 스파이더·Em 리프·파워코드 리프·코러스 루프 모두 박자합 4.0 검증(펜타 박스1 scale_shape 포함). 프롬프트에 임베드.
+- [x] **트랙 id/title/tagline + forWho + intro 3개국어 확정** — meta.json 작성 완료.
+- [x] **month_1·week_1~4 overview 3개국어 작성 완료.**
+- [ ] **16일 Day별 상세 저작** (각 프롬프트를 실행해 day_N.{ko,en,ja}.md 생성 → 빌드 검증) ← 다음 세션 핵심 작업
+- [ ] 완성물 리프 **변형안 후보 중 택1** (원하면 — 현재 각 1개 확정)
+- [ ] 커리큘럼 대표 **이미지**(`/curriculum/beginner-electric.webp`) 제작
 
 ## §12. 준수할 공통 규약 (기존 자산 재사용 — 새로 정의 안 함)
 - Day 4단 구조(① 이론 토스체 "왜" → ② 시각자료 JSON 렌더 → ③ 연습 루틴 → ④ 팁/실수).
