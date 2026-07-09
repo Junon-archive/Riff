@@ -179,7 +179,7 @@ Record 30 seconds of one lap of the integration cycle. Check: <mark>does a stray
 
 ## ④ Tips / common mistakes
 
-- **Memorizing the four as "different shapes."** Do that and you'll collapse again at 8 or 16 chords. Always remember them as "<mark>the combination of two switches, the 3rd and the 7th</mark>."
-- **Dropping the root while cycling.** <mark>The 6th-string root is your anchor</mark>. If it wobbles, everything wobbles. Keep it fretted through the whole cycle.
-- **Hearing m7 as just "minor."** m7 is softer and more open than minor, because the b7 releases the tension a bit. Enjoy that <mark>"sophisticated relaxation."</mark>
-- **Speed greed.** If the cycle mushes, drop to BPM 70. This week, <mark>the correct combination</mark> matters 100× more than speed.
+- **Memorizing the four as "different shapes."** Do that and you'll collapse again at 8 or 16 chords. Always remember them as "the combination of two switches, the 3rd and the 7th."
+- **Dropping the root while cycling.** The 6th-string root is your anchor. If it wobbles, everything wobbles. Keep it fretted through the whole cycle.
+- **Hearing m7 as just "minor."** m7 is softer and more open than minor, because the b7 releases the tension a bit. Enjoy that "sophisticated relaxation."
+- **Speed greed.** If the cycle mushes, drop to BPM 70. This week, the correct combination matters 100× more than speed.

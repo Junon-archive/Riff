@@ -155,7 +155,7 @@ Record 30 seconds of G ↔ G7. Check: does the **<mark>b7 ring clearly</mark>** 
 
 ## ④ Tips / common mistakes
 
-- **Confusing b7 and R.** On the 4th string, fret 5 is R (G), fret 3 is b7 (F). If you mix them up, remember "<mark>need tension → drop it</mark> (5→3)."
-- **Lowering the 3rd too.** Today, only the 4th string. Leave the 3rd string (the 3rd) alone so it stays <mark>a "major-family 7"</mark>. Lower the 3rd as well and that's the m7 you'll learn tomorrow.
-- **Mistaking tension for a "wrong sound."** G7's "unfinished" feeling isn't a bug, it's a feature — <mark>that lack of resolution is what pulls you to the next chord</mark>.
-- **Flat, no palm mute.** <mark>Honor Example 2's ghost hit</mark> to keep the groove alive.
+- **Confusing b7 and R.** On the 4th string, fret 5 is R (G), fret 3 is b7 (F). If you mix them up, remember "need tension → drop it (5→3)."
+- **Lowering the 3rd too.** Today, only the 4th string. Leave the 3rd string (the 3rd) alone so it stays a "major-family 7". Lower the 3rd as well and that's the m7 you'll learn tomorrow.
+- **Mistaking tension for a "wrong sound."** G7's "unfinished" feeling isn't a bug, it's a feature — that lack of resolution is what pulls you to the next chord.
+- **Flat, no palm mute.** Honor Example 2's ghost hit to keep the groove alive.

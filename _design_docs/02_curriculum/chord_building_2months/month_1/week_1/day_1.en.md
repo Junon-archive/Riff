@@ -152,7 +152,7 @@ Record 30 seconds of your last comp and play it back. Check just one thing: **<m
 
 ## ④ Tips / common mistakes
 
-- **Sliding back into "shape."** When the urge to memorize "just the G shape" creeps up, deliberately fret R·3·5 while naming them aloud. Adaptation begins <mark>the moment you attach names</mark>.
-- **Letting the 3rd slip by.** The 3rd (B) is <mark>this week's lead</mark>. Give it a touch more attention each time you fret it, and tomorrow's "3 → b3" minor comes for free.
-- **A weak index barre.** The E-form presses several strings with one index finger. If the 1st/2nd strings die, roll the index <mark>onto its side rather than its tip</mark>.
-- **A flat comp.** In Example 2, if you don't honor the palm-muted ghost and the rests, it mushes into "chunk-chunk-chunk-chunk." Remember a rest isn't empty — it's <mark>the groove's breath</mark>.
+- **Sliding back into "shape."** When the urge to memorize "just the G shape" creeps up, deliberately fret R·3·5 while naming them aloud. Adaptation begins the moment you attach names.
+- **Letting the 3rd slip by.** The 3rd (B) is this week's lead. Give it a touch more attention each time you fret it, and tomorrow's "3 → b3" minor comes for free.
+- **A weak index barre.** The E-form presses several strings with one index finger. If the 1st/2nd strings die, roll the index onto its side rather than its tip.
+- **A flat comp.** In Example 2, if you don't honor the palm-muted ghost and the rests, it mushes into "chunk-chunk-chunk-chunk." Remember a rest isn't empty — it's the groove's breath.

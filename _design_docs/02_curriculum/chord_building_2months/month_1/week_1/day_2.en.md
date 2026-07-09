@@ -159,7 +159,7 @@ Record 30 seconds of G ↔ Gm. Check: <mark>does another string die during the s
 
 ## ④ Tips / common mistakes
 
-- **Re-grabbing the whole hand.** Trying to reshape the entire hand for minor is slow. <mark>Only one 3rd-string finger, one fret</mark>. Leave the rest planted.
-- **The b3 won't ring.** If the 3rd string's fret 3 dies, a neighboring finger is leaning on it. <mark>Stand your fingertip up so only the 3rd string sounds</mark>.
-- **Memorizing "the sad chord shape."** Don't memorize Gm as a shape. Remember it as "<mark>G with the 3rd lowered a half step</mark>," so it works identically at A, C, D — anywhere.
-- **Touching the 5th too.** <mark>The 5th (D) doesn't move today</mark>. If a finger drifts to the 5th, the chord wobbles.
+- **Re-grabbing the whole hand.** Trying to reshape the entire hand for minor is slow. Only one 3rd-string finger, one fret. Leave the rest planted.
+- **The b3 won't ring.** If the 3rd string's fret 3 dies, a neighboring finger is leaning on it. Stand your fingertip up so only the 3rd string sounds.
+- **Memorizing "the sad chord shape."** Don't memorize Gm as a shape. Remember it as "G with the 3rd lowered a half step," so it works identically at A, C, D — anywhere.
+- **Touching the 5th too.** The 5th (D) doesn't move today. If a finger drifts to the 5th, the chord wobbles.
