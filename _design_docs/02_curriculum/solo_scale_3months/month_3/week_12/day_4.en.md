@@ -10,14 +10,14 @@ lang: en
 
 ## ① Theory / Explanation
 
-Here's why we're doing this today. Yesterday you finished your solo and recorded it whole for the first time. But this is where most people stop — because **they can't really listen to their own recording.** While you're playing, your brain is busy tracking your hands, the next chord, the beat — it can't actually hear "how do I sound right now." In your head it felt great, but hit play and it's "wait... is that me?" Today is about closing that gap, and **re-recording one better take (a retake).** This is the real period at the end of your three-month curriculum.
+Here's why we're doing this today. Yesterday you finished your solo and recorded it whole for the first time. But this is where most people stop — because **<mark>they can't really listen to their own recording.</mark>** While you're playing, your brain is busy tracking your hands, the next chord, the beat — it can't actually hear "how do I sound right now." In your head it felt great, but hit play and it's "wait... is that me?" Today is about closing that gap, and **<mark>re-recording one better take (a retake).</mark>** This is the real period at the end of your three-month curriculum.
 
-There's no new technique. Today's weapons are your **ears** and **any recording tool.** You don't need a specific app. A phone voice memo or a laptop recorder — either works, using just two features found in most players.
+There's no new technique. Today's weapons are your **ears** and **<mark>any recording tool.</mark>** You don't need a specific app. A phone voice memo or a laptop recorder — either works, using just two features found in most players.
 
-- **Playback speed control (0.75x, 0.5x):** Things you couldn't catch in real time — a landing that's half a beat late, an uneven vibrato — get magnified and become obvious when you slow it down. It's a microscope.
-- **Loop a section:** Pick just the one or two bars you're not happy with and loop them over and over. Narrow down the problem spot so you can fix it precisely.
+- **<mark>Playback speed control (0.75x, 0.5x):</mark>** Things you couldn't catch in real time — a landing that's half a beat late, an uneven vibrato — get magnified and become obvious when you slow it down. It's a microscope.
+- **<mark>Loop a section:</mark>** Pick just the one or two bars you're not happy with and loop them over and over. Narrow down the problem spot so you can fix it precisely.
 
-And from today, lock in the **four scoring criteria** you'll use. These are the same four you've been watching bit by bit all week.
+And from today, lock in the **<mark>four scoring criteria</mark>** you'll use. These are the same four you've been watching bit by bit all week.
 
 - **① 3rd-landing accuracy** — Did you arrive on the 3rd (C·F#·C#) right on the beat when the chord changed?
 - **② Color tone use** — Did F# (major 6th), G (♭7), and the blue note come through as color, or did they just pass by?
@@ -26,7 +26,7 @@ And from today, lock in the **four scoring criteria** you'll use. These are the 
 
 ## ② Visual Reference
 
-A retake **doesn't mean re-recording the whole song every time.** It means re-recording, with focus, just the weakest section. And in this song, the hardest and most important section is already decided — **the seam where bar 4 crosses into bar 5.** That's where you switch from C (♭3, Dorian) to C# (major 3rd, Mixolydian) and immediately push into the climax with a blue-note bend. These two bars are today's "retake excerpt." Get just this part perfect, and the whole song comes alive.
+A retake **<mark>doesn't mean re-recording the whole song every time.</mark>** It means re-recording, with focus, just the weakest section. And in this song, the hardest and most important section is already decided — **<mark>the seam where bar 4 crosses into bar 5.</mark>** That's where you switch from C (♭3, Dorian) to C# (major 3rd, Mixolydian) and immediately push into the climax with a blue-note bend. These two bars are today's "retake excerpt." Get just this part perfect, and the whole song comes alive.
 
 ```json
 {
@@ -66,7 +66,7 @@ A retake **doesn't mean re-recording the whole song every time.** It means re-re
 ## ③ Today's Practice (50-minute routine)
 
 **0–10 min · Warm-up (BPM 92) — warming up just the seam**
-Loop just the excerpt above (the two-bar seam) at metronome 92. Especially smooth out the finger move from bar 4's ending C (3rd string, 5th fret) to bar 5's C# (3rd string, 6th fret), and the blue-note bend right after (1st string, 8th fret → C# pitch). Today's warm-up is time spent loosening the song's weakest joint.
+Loop just the excerpt above (the two-bar seam) at metronome 92. Especially smooth out the finger move from bar 4's ending C (3rd string, 5th fret) to bar 5's C# (3rd string, 6th fret), and the blue-note bend right after (1st string, 8th fret → C# pitch). Today's warm-up is time spent <mark>loosening the song's weakest joint</mark>.
 
 ```json
 {
@@ -104,16 +104,16 @@ Loop just the excerpt above (the two-bar seam) at metronome 92. Especially smoot
 ```
 
 **10–20 min · Brain training (scoring yesterday's recording on the four criteria)**
-Pull up yesterday's full recording and slow the playback down — once at **0.75x**, once at **0.5x**. Draw four columns on paper (landing / color / vibrato / timing) and mark each one with just a △ or ○. Then pinpoint **the one section** with the most △'s. Nine times out of ten, it'll be the seam (bars 4-5).
+Pull up yesterday's full recording and slow the playback down — once at **0.75x**, once at **0.5x**. Draw four columns on paper (landing / color / vibrato / timing) and mark each one with just a △ or ○. Then pinpoint **<mark>the one section</mark>** with the most △'s. Nine times out of ten, it'll be the seam (bars 4-5).
 
 **20–40 min · Real retakes (Am7-D7-A7 backing / 88–92 BPM)**
-Now, record again. The trick is **one criterion per take.**
+Now, record again. The trick is **<mark>one criterion per take.</mark>**
 1) First, record **just the weak section** over the backing track 3-4 times → play it back → pick out the one criterion that's most off (e.g., timing) → fix only that and re-record.
 2) Once the section is improved, do **one full take of all 8 bars.** Listen to it side by side with yesterday's.
 3) Cycle through 3-4 takes, changing the criterion each time — "this time just vibrato," "this time just the space." Success is improving exactly one thing each time.
 
 **40–50 min · Locking in your final best take (recommended)**
-Choose the take you like best and save it as **today's finished version** (put the date in the file name if you can). Give it one more listen at 0.75x and note just one remaining thing to improve. That's your homework for the journey ahead, past these three months. And — compare yourself to who you were three months ago. Someone who couldn't improvise a single note is now recording their own solo and fixing it with their own ears. That's today's real finish line.
+Choose the take you like best and save it as **<mark>today's finished version</mark>** (put the date in the file name if you can). Give it one more listen at 0.75x and note just one remaining thing to improve. That's your homework for the journey ahead, past these three months. And — compare yourself to who you were three months ago. Someone who couldn't improvise a single note is now recording their own solo and fixing it with their own ears. That's <mark>today's real finish line</mark>.
 
 **Today's finish line:** Score yesterday's recording on the four criteria → pinpoint the weak section → lock in one "best take" that shows a noticeable improvement in at least one criterion through retakes.
 

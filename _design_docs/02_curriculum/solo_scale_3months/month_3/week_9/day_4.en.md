@@ -10,24 +10,24 @@ lang: en
 
 ## ① Theory / Explanation
 
-Here's why we're doing this today. Over the past three days, you've built every piece of the puzzle: F# (major 6th) color (Day 1), 3rd intervals and the color line (Day 2), 4-note sequences and per-chord 3rd landings (Day 3). Today, we assemble all these pieces into **one solo**. This is this week's graduation piece.
+Here's why we're doing this today. Over the past three days, you've built every piece of the puzzle: F# (major 6th) color (Day 1), 3rd intervals and the color line (Day 2), 4-note sequences and per-chord 3rd landings (Day 3). Today, we assemble all these pieces into **<mark>one solo</mark>**. This is this week's graduation piece.
 
-The stage is an **Am7–D7 vamp**, two bars each, eight bars total.
+The stage is an **<mark>Am7–D7 vamp</mark>**, two bars each, eight bars total.
 
 - Bars 1–2: Am7 → Bars 3–4: D7 → Bars 5–6: Am7 → Bars 7–8: D7
 
 Today's solo only needs to follow two lines of grammar:
 
-- **Land on C (the b3) during Am7 sections.** It's minor's 3rd, the "home" of this progression.
-- **Land on F# (the 6th) during D7 sections.** It's D7's 3rd and Dorian's color note at the same time — this is where the sound bursts open bright.
+- **<mark>Land on C (the b3) during Am7 sections.</mark>** It's minor's 3rd, the "home" of this progression.
+- **<mark>Land on F# (the 6th) during D7 sections.</mark>** It's D7's 3rd and Dorian's color note at the same time — this is where the sound bursts open bright.
 
-And there's one new feeling we're adding today: **space and vibrato.** Don't try to cram all eight bars full of notes. When you arrive at a landing note, **rest for a moment**, and let the landing note **sing with vibrato**. Lining up scale notes nonstop is "practicing," not "soloing." Landing → space → next phrase — you need that breathing pattern for it to become music. (We'll dig into space and phrasing properly starting Week 11, but today, take an early taste.)
+And there's one new feeling we're adding today: **<mark>space and vibrato.</mark>** Don't try to cram all eight bars full of notes. When you arrive at a landing note, **rest for a moment**, and let the landing note **sing with vibrato**. Lining up scale notes nonstop is "practicing," not "soloing." Landing → space → next phrase — you need that breathing pattern for it to become music. (We'll dig into space and phrasing properly starting Week 11, but today, take an early taste.)
 
-The 8 bars below aren't "the answer" — they're a **model**. Play through it as-is first, and really feel in your body: "oh, that's how bright an F# landing sounds," "that's how space opens up room to breathe." Then start reshaping it into your own line. That's the real goal this week.
+The 8 bars below aren't "the answer" — they're a **<mark>model</mark>**. Play through it as-is first, and really feel in your body: "oh, that's how bright an F# landing sounds," "that's how space opens up room to breathe." Then start reshaping it into your own line. That's the real goal this week.
 
 ## ② Visual Reference
 
-First, here's the **landing map**. It only highlights the two targets you'll aim for across these 8 bars: **C (Am7's 3rd)** and **F# (D7's 3rd = the Dorian color)**. The root A is marked as an orientation point. Just get these two colors into your head before you start.
+First, here's the **<mark>landing map</mark>**. It only highlights the two targets you'll aim for across these 8 bars: **C (Am7's 3rd)** and **F# (D7's 3rd = the Dorian color)**. The root A is marked as an orientation point. Just get these two colors into your head before you start.
 
 ```json
 {
@@ -56,7 +56,7 @@ First, here's the **landing map**. It only highlights the two targets you'll aim
 }
 ```
 
-Second, here's the **8-bar improv model**. The Am7 sections land on C, the D7 sections land on F#, each landing note gets vibrato, and there's space (a rest) at the top of bars 3 and 7. The 8 bars wrap up by settling long onto **F#**, Dorian's identity note.
+Second, here's the **<mark>8-bar improv model</mark>**. The Am7 sections land on C, the D7 sections land on F#, each landing note gets vibrato, and there's space (a rest) at the top of bars 3 and 7. The 8 bars wrap up by settling long onto **F#**, Dorian's identity note.
 
 ```json
 {
@@ -137,7 +137,7 @@ Second, here's the **8-bar improv model**. The Am7 sections land on C, the D7 se
 ## ③ Today's Practice (50-minute routine)
 
 **0–10 min · Warm-up (BPM 85) — warming up the two landing notes**
-With the metronome at 85, alternate between just the two targets on the landing map. C (string 3 fret 5) ↔ F# (string 2 fret 7), each with vibrato, in quarter notes. Say it out loud as you go: "Am7, C — D7, F-sharp." At the end of the day, these two notes are what your hand needs to remember.
+With the metronome at 85, alternate between just the two targets on the landing map. C (string 3 fret 5) ↔ F# (string 2 fret 7), each with vibrato, in quarter notes. Say it out loud as you go: "Am7, C — D7, F-sharp." At the end of the day, these two notes are <mark>what your hand needs to remember</mark>.
 
 ```json
 {
@@ -167,7 +167,7 @@ With the metronome at 85, alternate between just the two targets on the landing 
 ```
 
 **10–20 min · Brain training (getting the 8-bar model under your fingers)**
-Without the backing track yet, go through the 8-bar model slowly, bar by bar. Repeat any bar you get stuck on five times. Pay special attention to getting the **landing notes (with vibrato)** in bars 2, 4, 6, and 8, and the **space (rest)** at the top of bars 3 and 7, exactly right. That space shouldn't feel awkward, like an accidental stop — leave it empty confidently, like an **intentional breath**.
+Without the backing track yet, go through the 8-bar model slowly, bar by bar. Repeat any bar you get stuck on five times. Pay special attention to getting the **landing notes (with vibrato)** in bars 2, 4, 6, and 8, and the **space (rest)** at the top of bars 3 and 7, exactly right. That space shouldn't feel awkward, like an accidental stop — leave it empty confidently, like an **<mark>intentional breath</mark>**.
 
 ```json
 {
@@ -246,10 +246,10 @@ Without the backing track yet, go through the 8-bar model slowly, bar by bar. Re
 ```
 
 **20–40 min · Real-world improv (Am7-D7 vamp / 80–85 BPM)**
-Put on an "Am7 D7 vamp backing track." First, play through the 8-bar model exactly as-is, **twice**, over the backing track. Then comes the real thing: drop the model and **improvise your own 8 bars**, following just two rules — **① land on C at the end of Am7, F# at the end of D7. ② leave at least one beat of space at the end of every phrase.** Fill the rest however you like, with 3rds or 4-note groups or anything else. Try something a little different each time through.
+Put on an "Am7 D7 vamp backing track." First, play through the 8-bar model exactly as-is, **twice**, over the backing track. Then comes the real thing: drop the model and **improvise your own 8 bars**, following just two rules — **<mark>① land on C at the end of Am7, F# at the end of D7.</mark> ② leave at least one beat of space at the end of every phrase.** Fill the rest however you like, with 3rds or 4-note groups or anything else. Try something a little different each time through.
 
 **40–50 min · Record & reflect (recommended)**
-Record whichever of your improvised 8-bar takes came out best. Listen back and check three things: **① did you land on the right chord tone (C/F#) each time? ② did the sound burst brighter on F# during D7? ③ did the space give you room to breathe (or was it packed tight with no rest at all)?** Slow playback to 0.75x to check whether your landing timing and vibrato cycle line up. Whatever one improvement you find here is your homework before heading into next week (W10, Mixolydian).
+Record whichever of your improvised 8-bar takes came out best. Listen back and check three things: **① did you land on the right chord tone (C/F#) each time? <mark>② did the sound burst brighter on F# during D7</mark>? ③ did the space give you room to breathe (or was it packed tight with no rest at all)?** Slow playback to 0.75x to check whether your landing timing and vibrato cycle line up. Whatever one improvement you find here is your homework before heading into next week (W10, Mixolydian).
 
 **Today's finish line:** Play through the 8-bar model start to finish over the backing track. Then, in your own **improvised 8 bars**, keep landing on each chord's 3rd (C/F#), add at least one space per phrase, and finish with a recording.
 

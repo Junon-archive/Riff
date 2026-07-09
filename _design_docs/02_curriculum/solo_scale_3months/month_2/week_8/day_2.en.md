@@ -10,7 +10,7 @@ lang: en
 
 ## ① Theory / Explanation
 
-Here's why we're doing this today. Yesterday, the locations of F, B, and E got into your hands. But if you keep fretting these three notes as separate, isolated "dots," over a backing track it sounds less like music and more like a "fretting test." Plunk... plunk... plunk. Today we connect these three dots into a single **line**. This is the real guide tone line.
+Here's why we're doing this today. Yesterday, the locations of F, B, and E got into your hands. But if you keep fretting these three notes as separate, isolated "dots," over a backing track it sounds less like music and more like a "fretting test." Plunk... plunk... plunk. Today we connect these three dots into a single **<mark>line</mark>**. This is the real guide tone line.
 
 The secret lies in why yesterday's "home" position was set up the way it was. Let's look again.
 
@@ -18,15 +18,15 @@ The secret lies in why yesterday's "home" position was set up the way it was. Le
 - B = string 3, fret 4
 - E = string 4, fret 2
 
-See the magic here? **F (string 4, fret 3) → E (string 4, fret 2)** is just **one fret** apart on the same string. That's a half step! So when moving from G7 to Cmaj7, all you have to do is slide F down to E. This is the famous **F→E resolution** — G7's 7th (F) dropping a half step down to Cmaj7's 3rd (E), one of the prettiest voice leadings in jazz.
+See the magic here? **<mark>F (string 4, fret 3) → E (string 4, fret 2)</mark>** is just **one fret** apart on the same string. That's a half step! So when moving from G7 to Cmaj7, all you have to do is slide F down to E. This is the famous **<mark>F→E resolution</mark>** — G7's 7th (F) dropping a half step down to Cmaj7's 3rd (E), one of the prettiest voice leadings in jazz.
 
-And the heart of it all, which we mentioned yesterday: the **B→E lead**. When you fret the 3rd, B, on G7, the ear already expects "next comes E, right?" Fill that expectation exactly with E, and it'll give the listener chills. Today's line is designed to etch both of these flows — the F→E half-step resolution and the B→E lead — into your hands and ears at the same time.
+And the heart of it all, which we mentioned yesterday: the **<mark>B→E lead</mark>**. When you fret the 3rd, B, on G7, the ear already expects "next comes E, right?" Fill that expectation exactly with E, and it'll give the listener chills. Today's line is designed to etch both of these flows — the F→E half-step resolution and the B→E lead — into your hands and ears at the same time.
 
-The approach follows our curriculum's philosophy exactly: **no simple up-and-down scale memorization.** Instead, we build the line with 3rd intervals and short connecting notes, but **each chord's measure always lands on that chord's 3rd.** We've specifically designed the timing so the 3rd rings out right at the moment the measure changes — the chord change itself.
+The approach follows our curriculum's philosophy exactly: **<mark>no simple up-and-down scale memorization.</mark>** Instead, we build the line with 3rd intervals and short connecting notes, but **each chord's measure always <mark>lands on that chord's 3rd</mark>.** We've specifically designed the timing so the 3rd rings out right at the moment the measure changes — the chord change itself.
 
 ## ② Visual Reference
 
-First, here's a warm-up **diatonic 3rds sequence**. It climbs up C major grouped in 3rds, and the guide tones B, E, and F naturally pop out along the way. The highlighted notes are our targets.
+First, here's a warm-up **<mark>diatonic 3rds sequence</mark>**. It climbs up C major grouped in 3rds, and the guide tones B, E, and F naturally pop out along the way. The highlighted notes are our targets.
 
 ```json
 {
@@ -68,7 +68,7 @@ First, here's a warm-up **diatonic 3rds sequence**. It climbs up C major grouped
 }
 ```
 
-Now for today's main event: the **guide tone line**. Three measures = three chords. On the **first beat of each measure (the moment of the chord change), that chord's 3rd lands**, then a short connecting note carries you to the next 3rd. Pay special attention to how the F (string 4, fret 3) at the end of measure 2 **resolves by a half step** into the E (string 4, fret 2) on the first beat of measure 3.
+Now for today's main event: the **<mark>guide tone line</mark>**. Three measures = three chords. On the **first beat of each measure (the moment of the chord change), that chord's 3rd lands**, then a short connecting note carries you to the next 3rd. Pay special attention to how the F (string 4, fret 3) at the end of measure 2 **resolves by a half step** into the E (string 4, fret 2) on the first beat of measure 3.
 
 ```json
 {
@@ -110,7 +110,7 @@ Now for today's main event: the **guide tone line**. Three measures = three chor
 ## ③ Today's Practice (50-minute routine)
 
 **0–10 min · Warm-up (BPM 76) — 3rds sequence**
-Play the `3rd_interval` warm-up above at metronome 76, in eighth notes. Get used to the hand shape of moving in 3rds (back and forth between the lower and higher string), and give a slight extra emphasis whenever a highlighted note (B, E, F) comes up. This is your time to hear, with your own ears, that "moving in 3rds hides the guide tones inside."
+Play the `3rd_interval` warm-up above at metronome 76, in eighth notes. Get used to the hand shape of moving in 3rds (back and forth between the lower and higher string), and give a slight extra emphasis whenever a highlighted note (B, E, F) comes up. This is your time to hear, with your own ears, that "<mark>moving in 3rds hides the guide tones inside</mark>."
 
 ```json
 {
@@ -153,10 +153,10 @@ Play the `3rd_interval` warm-up above at metronome 76, in eighth notes. Get used
 ```
 
 **10–20 min · Brain training (finding the shortest F→B→E path)**
-Turn off the metronome and connect just the **three landing notes** of the main line: F (string 4, fret 3) → B (string 3, fret 4) → E (string 4, fret 2). Your hand barely moves, right? All three notes fit within a handful of frets. Feel with your fingertips, especially, that **F→E is just one fret on the same string.** Close your eyes and fret these three notes in order without hesitation — that's a pass.
+Turn off the metronome and connect just the **three landing notes** of the main line: F (string 4, fret 3) → B (string 3, fret 4) → E (string 4, fret 2). Your hand barely moves, right? All three notes fit within a handful of frets. Feel with your fingertips, especially, that **<mark>F→E is just one fret on the same string.</mark>** Close your eyes and fret these three notes in order without hesitation — that's a pass.
 
 **20–40 min · Real-world feel — improv (Dm7-G7-Cmaj7 backing track / BPM 72–76)**
-Play the backing track and run through the main line as-is a few times to get it into your body. Once it feels comfortable, start **changing just the connecting notes (the notes in between), while never touching the landing notes F, B, E.** For example, you can fill the middle of measure 1 with a different Dm7 note, but the end of the measure → first beat of the next measure must always land on the 3rd. "Bones are F·B·E, flesh is free" is today's improv rule.
+Play the backing track and run through the main line as-is a few times to get it into your body. Once it feels comfortable, start **changing just the connecting notes (the notes in between), while <mark>never touching the landing notes F, B, E</mark>.** For example, you can fill the middle of measure 1 with a different Dm7 note, but the end of the measure → first beat of the next measure must always land on the 3rd. "Bones are F·B·E, flesh is free" is today's improv rule.
 
 ```json
 {
@@ -196,7 +196,7 @@ Play the backing track and run through the main line as-is a few times to get it
 ```
 
 **40–50 min · Record & reflect (recommended)**
-Record 30 seconds, then play it back. Check two things: ① When the chord changed, did the 3rd **ring out exactly right**, or was it half a beat late? ② When measure 2's F moved into measure 3's E, did the half step **slide smoothly**, or did it cut off abruptly? If needed, slow down playback to zoom in on that seam with your ears.
+Record 30 seconds, then play it back. Check two things: ① When the chord changed, did the 3rd **<mark>ring out exactly right</mark>**, or was it half a beat late? ② When measure 2's F moved into measure 3's E, did the half step **<mark>slide smoothly</mark>**, or did it cut off abruptly? If needed, slow down playback to zoom in on that seam with your ears.
 
 **Today's completion criteria:** Play through all 3 measures of the main guide tone line at BPM 76 without breaking. Connect the three landing notes F→B→E with your eyes closed. Improvise over the backing track at least 4 times using "change the connecting notes, keep the landing 3rd fixed."
 

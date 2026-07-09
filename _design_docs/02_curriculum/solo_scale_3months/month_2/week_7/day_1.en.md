@@ -10,17 +10,17 @@ lang: en
 
 ## ① Theory / Explanation
 
-Here's why we're doing this today — time for a little confession. You've had the pentatonic box in your hands for six weeks now, right? But if your improv still feels like it's "only playing inside the box," there's one reason: **you don't yet know where the chord's actual skeleton notes live across the whole neck.**
+Here's why we're doing this today — time for a little confession. You've had the pentatonic box in your hands for six weeks now, right? But if your improv still feels like it's "only playing inside the box," there's one reason: **you don't yet know where <mark>the chord's actual skeleton notes</mark> live across the whole neck.**
 
-Every chord boils down to three notes as its skeleton. For Am, that's **A (root) · C (♭3) · E (5th)**. We call these three notes "chord tones." The instant Am rings out in a backing track, these three notes land beautifully no matter where you play them. The problem is, you only know them in one spot — Box 1. So today, we're scattering A·C·E **across the whole neck, from the 6th string to the 1st,** and drawing the full map.
+Every chord boils down to three notes as its skeleton. For Am, that's **<mark>A (root) · C (♭3) · E (5th)</mark>**. We call these three notes "chord tones." The instant Am rings out in a backing track, these three notes land beautifully no matter where you play them. The problem is, you only know them in one spot — Box 1. So today, we're scattering A·C·E **<mark>across the whole neck</mark>, from the 6th string to the 1st,** and drawing the full map.
 
-Let's clear up one misunderstanding first. This is **not** sweep-picking speed practice. The goal isn't to rip through it fast — it's **brain training to recognize positions**: "oh, that's a C here, and that's a C there too." That's why the BPM stays very slow all day today. Speed has never once been the star of this curriculum.
+Let's clear up one misunderstanding first. This is **not** sweep-picking speed practice. The goal isn't to rip through it fast — it's **<mark>brain training to recognize positions</mark>**: "oh, that's a C here, and that's a C there too." That's why the BPM stays very slow all day today. Speed has never once been the star of this curriculum.
 
-And today's real star is **C (♭3)**. The 3rd is the note that decides a chord's expression. A and E stay the same whether the chord is major or minor, but it's C that makes this chord "minor." So we're marking C in green as your **landing candidate (target)** going forward. If you can put your finger on all three C spots with your eyes closed, today's a total win.
+And today's real star is **<mark>C (♭3)</mark>**. The 3rd is <mark>the note that decides a chord's expression</mark>. A and E stay the same whether the chord is major or minor, but it's C that makes this chord "minor." So we're marking C in green as your **landing candidate (target)** going forward. If you can put your finger on all three C spots with your eyes closed, today's a total win.
 
 ## ② Visual Reference
 
-This is a map of Am's chord tones (A·C·E) across the whole neck (frets 0–12). The green highlight is **C**, the 3rd — that's today's landing target.
+This is a map of Am's chord tones (A·C·E) across the whole neck (frets 0–12). The green highlight is **C**, the 3rd — that's <mark>today's landing target</mark>.
 
 ```json
 {
@@ -60,7 +60,7 @@ This is a map of Am's chord tones (A·C·E) across the whole neck (frets 0–12)
 }
 ```
 
-Now, at the 5th-fret position (Box 1's home), pick out just A·C·E and run them up and down as a **1-3-5 arpeggio**. The 3rd (C) is highlighted as the target. Get a feel for the skip as you jump between 3rds.
+Now, at the 5th-fret position (Box 1's home), pick out just A·C·E and run them up and down as a **<mark>1-3-5 arpeggio</mark>**. The 3rd (C) is highlighted as the target. Get a feel for the skip as you jump between 3rds.
 
 ```json
 {
@@ -104,10 +104,10 @@ Now, at the 5th-fret position (Box 1's home), pick out just A·C·E and run them
 ## ③ Today's Practice (50-minute routine)
 
 **0–10 min · Warm-up (BPM 66)**
-With the metronome at 66, repeat the 1-3-5 arpeggio above in eighth notes, up then down. Make sure two eighth notes ("da-da") land crisply on each click. The goal isn't speed — it's **saying the scale degree (R-3-5) in your head as you fret each note.** Mouthing it silently is totally fine.
+With the metronome at 66, repeat the 1-3-5 arpeggio above in eighth notes, up then down. Make sure two eighth notes ("da-da") land crisply on each click. The goal isn't speed — it's **<mark>saying the scale degree (R-3-5)</mark> in your head as you fret each note.** Mouthing it silently is totally fine.
 
 **10–20 min · Brain training (today's target = C / ♭3)**
-Turn off the metronome and find just the **C (♭3)** spots on the map. At least three: string 5 fret 3, string 3 fret 5, string 1 fret 8. Call out "C!" out loud every time you fret one. Once you're comfortable, close your eyes and go random: "C, next C, next C" — you pass if your hand reaches a different C position within 3 seconds. If you've got extra time, do the same with the three E (5th) spots.
+Turn off the metronome and find just the **<mark>C (♭3)</mark>** spots on the map. At least three: string 5 fret 3, string 3 fret 5, string 1 fret 8. Call out "C!" out loud every time you fret one. Once you're comfortable, close your eyes and go random: "C, next C, next C" — you pass if your hand reaches a different C position within 3 seconds. If you've got extra time, do the same with the three E (5th) spots.
 
 ```json
 {
@@ -148,10 +148,10 @@ Turn off the metronome and find just the **C (♭3)** spots on the map. At least
 ```
 
 **20–40 min · Real-world feel — Am one-chord backing (BPM 66–70)**
-Put on any "Am backing track slow" you find. Just one rule: **use only the three notes A·C·E.** Passing tones (the pentatonic's D and G) are off-limits today. Instead of just noodling around with three notes, whenever you feel like stopping, **land on C** — and try picking a different position each time.
+Put on any "Am backing track slow" you find. Just one rule: **<mark>use only the three notes A·C·E.</mark>** Passing tones (the pentatonic's D and G) are off-limits today. Instead of just noodling around with three notes, whenever you feel like stopping, **<mark>land on C</mark>** — and try picking a different position each time.
 
 **40–50 min · Record & reflect (recommended)**
-Record 30 seconds of your jam with any recorder you've got (a voice memo app is fine). Listen back and check just one thing: **was the note I landed on really C?** If it's unclear, slow down playback and re-locate the last note on the fretboard. If the ending note trailed off vague and mushy, hold it a little longer next time so it rings out.
+Record 30 seconds of your jam with any recorder you've got (a voice memo app is fine). Listen back and check just one thing: **<mark>was the note I landed on really C?</mark>** If it's unclear, slow down playback and re-locate the last note on the fretboard. If the ending note trailed off vague and mushy, hold it a little longer next time so it rings out.
 
 **Today's goal:** Play the 1-3-5 arpeggio up and down at BPM 66 without stumbling, and fret all three C (♭3) positions with your eyes closed.
 

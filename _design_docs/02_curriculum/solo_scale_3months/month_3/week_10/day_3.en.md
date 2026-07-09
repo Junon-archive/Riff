@@ -10,19 +10,19 @@ lang: en
 
 ## ① Theory / Explanation
 
-Here's why we're doing this today: for two days you've handled C# and G nicely inside Position 1 (around the 5th fret). But if you solo only inside that one box, no matter how pretty it sounds, it still ends up reading as "wandering around in a small space." Real soloists treat the whole neck like their own home. So today, we open up the **second form (Position 2)**, and learn how to **connect the two forms with a slide.**
+Here's why we're doing this today: for two days you've handled C# and G nicely inside Position 1 (around the 5th fret). But if you solo only inside that one box, no matter how pretty it sounds, it still ends up reading as "wandering around in a small space." Real soloists treat the whole neck like their own home. So today, we open up the **<mark>second form (Position 2)</mark>**, and learn how to **connect the two forms with a slide.**
 
-Position 2 places the root A on the **4th string, 7th fret.** It covers roughly frets 7-11. The note names of the scale are still identical here — **A B C# D E F# G.** But because the hand shape is different, the same C# (major 3rd) and G (♭7) show up in different spots. Sounds confusing, right? But there's a trick. **If you remember them by note name, the form can change and you won't get lost.** Instead of memorizing "5th string, 4th fret," memorize "this is C# (major 3rd)" — and then you'll be able to find C# by feel even in Position 2. Yesterday's brain training was built exactly for this.
+Position 2 places the root A on the **4th string, 7th fret.** It covers roughly frets 7-11. The note names of the scale are still identical here — **<mark>A B C# D E F# G.</mark>** But because the hand shape is different, the same C# (major 3rd) and G (♭7) show up in different spots. Sounds confusing, right? But there's a trick. **<mark>If you remember them by note name, the form can change and you won't get lost.</mark>** Instead of memorizing "5th string, 4th fret," memorize "this is C# (major 3rd)" — and then you'll be able to find C# by feel even in Position 2. Yesterday's brain training was built exactly for this.
 
-And today's key technique: **the position shift (slide).** The best way to smoothly connect two forms is to **slide your finger straight along one string.** Cut abruptly and teleport, and it shows; connect with a slide, and it feels natural — "oh, we're up there now." Today's connection lands beautifully. **A slide on the 1st string from the 5th fret (root A) to the 9th fret (C#)** — in other words, sliding up from Position 1's root lands you exactly on Position 2's **major 3rd C#.** You arrive at your target note the very moment you shift positions. Two birds, one stone.
+And today's key technique: **<mark>the position shift (slide).</mark>** The best way to smoothly connect two forms is to **slide your finger straight along one string.** Cut abruptly and teleport, and it shows; connect with a slide, and it feels natural — "oh, we're up there now." Today's connection lands beautifully. **<mark>A slide on the 1st string from the 5th fret (root A) to the 9th fret (C#)</mark>** — in other words, sliding up from Position 1's root lands you exactly on Position 2's **major 3rd C#.** You arrive at your target note the very moment you shift positions. Two birds, one stone.
 
-Don't forget the blue note either. Position 2 also has the blue note C (♭3). For example, bend **the 4th string, 10th fret (C)** up a half step, and you get **C# (major 3rd) at the 4th string, 11th fret.** Even as the form moves up the neck, the formula "blue note → half-step resolution to major 3rd" carries right along with it.
+Don't forget the blue note either. Position 2 also has the blue note C (♭3). For example, bend **the 4th string, 10th fret (C)** up a half step, and you get **<mark>C# (major 3rd) at the 4th string, 11th fret.</mark>** Even as the form moves up the neck, the formula "blue note → half-step resolution to major 3rd" carries right along with it.
 
 Today's goal: get Position 2 into your hands, go back and forth between the two forms with a slide on the 1st string, and land on C# at the end of the shift.
 
 ## ② Visual Reference
 
-First, **A Mixolydian Position 2.** The root A is at the 4th string, 7th fret. Get the locations of the major 3rd C# (green) and ♭7 G (yellow) into your eyes here too. Same note names as Position 1, just a different shape.
+First, **<mark>A Mixolydian Position 2.</mark>** The root A is at the 4th string, 7th fret. Get the locations of the major 3rd C# (green) and ♭7 G (yellow) into your eyes here too. Same note names as Position 1, just a different shape.
 
 ```json
 {
@@ -62,7 +62,7 @@ First, **A Mixolydian Position 2.** The root A is at the 4th string, 7th fret. G
 }
 ```
 
-Second, a **connection map** linking the two forms. The roots (A), major 3rd C# (green), and ♭7 G (yellow) of Position 1 and Position 2 are scattered together across the neck. The root at the 4th string, 7th fret is the "shared link" between the two forms. And the 1st string slide from the 5th fret (A) to the 9th fret (C#) is today's travel route.
+Second, a **<mark>connection map</mark>** linking the two forms. The roots (A), major 3rd C# (green), and ♭7 G (yellow) of Position 1 and Position 2 are scattered together across the neck. The root at the 4th string, 7th fret is the "shared link" between the two forms. And the 1st string slide from the 5th fret (A) to the 9th fret (C#) is today's travel route.
 
 ```json
 {
@@ -93,7 +93,7 @@ Second, a **connection map** linking the two forms. The roots (A), major 3rd C# 
 }
 ```
 
-Third, today's **position shift lick.** Bar 1 plays around in Position 1 and hangs tension with ♭7 G; bar 2 rides **a slide on the 1st string from the 5th fret (A) to the 9th fret (C#)** up into Position 2. It finishes by half-step bending Position 2's blue note C (4th string, 10th fret) to resolve on C# (11th fret), capped with vibrato.
+Third, today's **<mark>position shift lick.</mark>** Bar 1 plays around in Position 1 and hangs tension with ♭7 G; bar 2 rides **a slide on the 1st string from the 5th fret (A) to the 9th fret (C#)** up into Position 2. It finishes by half-step bending Position 2's blue note C (4th string, 10th fret) to resolve on C# (11th fret), capped with vibrato.
 
 ```json
 {
@@ -134,7 +134,7 @@ Third, today's **position shift lick.** Bar 1 plays around in Position 1 and han
 ## ③ Today's Practice (50-minute routine)
 
 **0–10 min · Warm-up (BPM 90) — Position 2 4-note sequence**
-Take the 4-note sequence you ran in Position 1 yesterday and run it in **Position 2** today. Ascend in groups of four within the 7-11 fret zone. Your hand will still feel unfamiliar, so it's fine to start at 80. Stay color-aware every time you pass C# (6th string 9th fret, 4th string 11th fret, 1st string 9th fret).
+Take the 4-note sequence you ran in Position 1 yesterday and run it in **<mark>Position 2</mark>** today. Ascend in groups of four within the 7-11 fret zone. Your hand will still feel unfamiliar, so it's fine to start at 80. Stay color-aware every time you pass C# (6th string 9th fret, 4th string 11th fret, 1st string 9th fret).
 
 ```json
 {
@@ -175,7 +175,7 @@ Take the 4-note sequence you ran in Position 1 yesterday and run it in **Positio
 ```
 
 **10–20 min · Brain training (linking C# across forms)**
-Looking at the connection map, practice fretting **Position 1's C# (3rd string, 6th fret)** → then moving your hand to **Position 2's C# (1st string, 9th fret).** Go back and forth between two C#s that share a name but sit in different spots. Then do the same with G (4th string 5th fret ↔ 5th string 10th fret). Finally, repeat the 1st string 5→9 slide 10 times on its own, making sure the slide lands precisely on the 9th fret (C#) every time.
+Looking at the connection map, practice fretting **Position 1's C# (3rd string, 6th fret)** → then moving your hand to **<mark>Position 2's C# (1st string, 9th fret).</mark>** Go back and forth between two C#s that share a name but sit in different spots. Then do the same with G (4th string 5th fret ↔ 5th string 10th fret). Finally, repeat the 1st string 5→9 slide 10 times on its own, making sure the slide lands precisely on the 9th fret (C#) every time.
 
 ```json
 {
@@ -207,7 +207,7 @@ Looking at the connection map, practice fretting **Position 1's C# (3rd string, 
 ```
 
 **20–40 min · Real-world feel (A7 vamp / 80–90 BPM) — form-shifting mission**
-Put on an "A7 vamp backing track," with today's mission: **move from Position 1 → (slide) → Position 2 at least once within a single phrase.** Play around down below, slide up, land on C# up top, then slide back down again. It's fine if the movement feels choppy at first. Pick a set slide point and repeat it, and it'll get smoother and smoother.
+Put on an "A7 vamp backing track," with today's mission: **<mark>move from Position 1 → (slide) → Position 2 at least once within a single phrase.</mark>** Play around down below, slide up, land on C# up top, then slide back down again. It's fine if the movement feels choppy at first. Pick a set slide point and repeat it, and it'll get smoother and smoother.
 
 ```json
 {
@@ -246,7 +246,7 @@ Put on an "A7 vamp backing track," with today's mission: **move from Position 1 
 ```
 
 **40–50 min · Record & reflect (recommended)**
-Record 30 seconds with any recorder. Check: (1) did the slide stop exactly on the target fret (9) — not falling short or overshooting, and (2) after switching forms, did you land well on C#? Slow down playback and zoom in with your ear on the moment the slide arrives.
+Record 30 seconds with any recorder. Check: (1) <mark>did the slide stop exactly on the target fret (9)</mark> — not falling short or overshooting, and (2) after switching forms, did you land well on C#? Slow down playback and zoom in with your ear on the moment the slide arrives.
 
 **Today's completion criteria:** Pass the Position 2 4-note sequence. Go back and forth fretting C# and G in both forms. Land on C# at least 5 times after shifting with the 1st string 5→9 slide.
 

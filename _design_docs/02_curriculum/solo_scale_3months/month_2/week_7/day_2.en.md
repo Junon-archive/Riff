@@ -10,17 +10,17 @@ lang: en
 
 ## ① Theory / Explanation
 
-Here's why we're doing this today — you mapped Am yesterday, so now it's time to map its partner chord, **C major**. Why C, specifically? Because Am and C are actually **relative keys that share the same notes.** You already got a taste of this back in Week 6, remember? Today we're revisiting it through the lens of "chord tones."
+Here's why we're doing this today — you mapped Am yesterday, so now it's time to map its partner chord, **C major**. Why C, specifically? Because Am and C are actually **<mark>relative keys that share the same notes.</mark>** You already got a taste of this back in Week 6, remember? Today we're revisiting it through the lens of "chord tones."
 
-C major's skeleton notes are **C (root) · E (3rd) · G (5th)**. Yesterday, Am was A·C·E. If you're quick, you'll already see it: **C shows up in both chords.** In Am, C was the 3rd (♭3); in the C chord, it's the root (R). Same note, different job. This turns out to be the secret passage for gliding freely between Am and C — we'll dig into that properly tomorrow (Day 3). For today, just focus on drawing the C chord-tone map.
+C major's skeleton notes are **<mark>C (root) · E (3rd) · G (5th)</mark>**. Yesterday, Am was A·C·E. If you're quick, you'll already see it: **<mark>C shows up in both chords.</mark>** In Am, C was the 3rd (♭3); in the C chord, it's the root (R). Same note, different job. This turns out to be the secret passage for gliding freely between Am and C — we'll dig into that properly tomorrow (Day 3). For today, just focus on drawing the C chord-tone map.
 
-Today's real star is the 3rd, **E**. Just like C made Am sound "minor" yesterday, E is what brightens up C into sounding "major." So we're marking E in green as today's landing target. Fun fact: this E is the exact same note that was the 5th of Am yesterday. Same fret, different role once the chord changes — get a feel for that in your body today.
+Today's real star is the 3rd, **E**. Just like C made Am sound "minor" yesterday, E is <mark>what brightens up C into sounding "major"</mark>. So we're marking E in green as today's landing target. Fun fact: this E is the exact same note that was the 5th of Am yesterday. Same fret, different role once the chord changes — get a feel for that in your body today.
 
-Once more for emphasis: this isn't speed practice. It's **brain training for recognizing positions.** At a slow BPM, all you're doing is drawing a clear map: "there's an E here, and there's one there too."
+Once more for emphasis: this isn't speed practice. It's **<mark>brain training for recognizing positions.</mark>** At a slow BPM, all you're doing is drawing a clear map: "there's an E here, and there's one there too."
 
 ## ② Visual Reference
 
-This maps C's chord tones (C·E·G) across the whole neck (frets 0–12). The green highlight is **E**, the 3rd — today's landing target.
+This maps C's chord tones (C·E·G) across the whole neck (frets 0–12). The green highlight is **E**, the 3rd — <mark>today's landing target</mark>.
 
 ```json
 {
@@ -60,7 +60,7 @@ This maps C's chord tones (C·E·G) across the whole neck (frets 0–12). The gr
 }
 ```
 
-In open position, pick out just C·E·G and run them up and down as a **1-3-5 arpeggio**. With open strings mixed in, it rings out beautifully. The 3rd (E) is highlighted as the target.
+In open position, pick out just C·E·G and run them up and down as a **<mark>1-3-5 arpeggio</mark>**. With open strings mixed in, it rings out beautifully. The 3rd (E) is highlighted as the target.
 
 ```json
 {
@@ -100,10 +100,10 @@ In open position, pick out just C·E·G and run them up and down as a **1-3-5 ar
 ## ③ Today's Practice (50-minute routine)
 
 **0–10 min · Warm-up (BPM 66)**
-With the metronome at 66, run the open C arpeggio above in eighth notes, up then down. Call out the scale degree (R-3-5) in your head with every note. Since open strings are mixed in, notice the flow of your picking hand moving ahead to the next string while your left hand gets a breather.
+With the metronome at 66, run the open C arpeggio above in eighth notes, up then down. <mark>Call out the scale degree (R-3-5)</mark> in your head with every note. Since open strings are mixed in, notice the flow of your picking hand moving ahead to the next string while your left hand gets a breather.
 
 **10–20 min · Brain training (today's target = E / 3rd)**
-Turn off the metronome and find just the **E (3rd)** spots on the map. At least three: string 4 fret 2, string 2 fret 5, string 1 fret 0 (open). Call out "E!" out loud every time you fret one. Once comfortable, close your eyes and go random: E → E → E. You pass if your hand reaches a different E position within 3 seconds. Repeating to yourself that **the E that was Am's 5th yesterday is today's 3rd of C** makes the map in your head stick harder.
+Turn off the metronome and find just the **<mark>E (3rd)</mark>** spots on the map. At least three: string 4 fret 2, string 2 fret 5, string 1 fret 0 (open). Call out "E!" out loud every time you fret one. Once comfortable, close your eyes and go random: E → E → E. You pass if your hand reaches a different E position within 3 seconds. Repeating to yourself that **<mark>the E that was Am's 5th yesterday is today's 3rd of C</mark>** makes the map in your head stick harder.
 
 ```json
 {
@@ -144,10 +144,10 @@ Turn off the metronome and find just the **E (3rd)** spots on the map. At least 
 ```
 
 **20–40 min · Real-world feel — C one-chord backing (BPM 66–70)**
-Put on any "C major backing track slow" you find. Rule: **only C·E·G.** Whenever you stop, **land on E.** Don't just stay in open position — reach for the E's around frets 5–9 too (string 2 fret 5, string 3 fret 9).
+Put on any "C major backing track slow" you find. Rule: **<mark>only C·E·G.</mark>** Whenever you stop, **<mark>land on E.</mark>** Don't just stay in open position — reach for the E's around frets 5–9 too (string 2 fret 5, string 3 fret 9).
 
 **40–50 min · Record & reflect (recommended)**
-Record 30 seconds with any recorder. Check point: **was the note you landed on really E?** Ending on E over a C chord should feel bright and settled, like it clicks into place. If that feeling's missing, you probably landed back on the root, C. Slow down playback to double-check the last note on the fretboard.
+Record 30 seconds with any recorder. Check point: **<mark>was the note you landed on really E?</mark>** Ending on E over a C chord should feel bright and settled, like it clicks into place. If that feeling's missing, you probably landed back on the root, C. Slow down playback to double-check the last note on the fretboard.
 
 **Today's goal:** Play the open C arpeggio up and down at BPM 66 without stumbling, and fret all three E (3rd) positions with your eyes closed.
 

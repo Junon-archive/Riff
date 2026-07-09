@@ -10,13 +10,13 @@ lang: en
 
 ## ① Theory / Explanation
 
-Here's why we're doing this today: blues dragged, funk chopped. Today's rock is different again. Rock's weapon is **directness** — powerful long tones, bold bends, big fat vibrato. Rock's charm isn't fancy technique — it's the guts to **bend one note way up and milk it long.** New backing, so today we swap the entire phrasing mood again.
+Here's why we're doing this today: blues dragged, funk chopped. Today's rock is different again. Rock's weapon is **<mark>directness</mark>** — powerful long tones, bold bends, big fat vibrato. Rock's charm isn't fancy technique — it's the guts to **<mark>bend one note way up and milk it long.</mark>** New backing, so today we swap the entire phrasing mood again.
 
-Today's rock backing is a power-chord riff: **A5 → G5 → D5** (I-♭VII-IV) — the classic rock skeleton. Power chords have no 3rd, so major/minor stays ambiguous, but this ♭VII (G) move calls for a Mixolydian color, hands down. So base camp is **A Mixolydian (A B C# D E F# G)**. The ♭7 (G) inside it gives you that unmistakable rock brightness.
+Today's rock backing is a power-chord riff: **<mark>A5 → G5 → D5</mark>** (I-♭VII-IV) — the classic rock skeleton. Power chords have no 3rd, so major/minor stays ambiguous, but this ♭VII (G) move calls for a Mixolydian color, hands down. So base camp is **<mark>A Mixolydian (A B C# D E F# G)</mark>**. The ♭7 (G) inside it gives you that unmistakable rock brightness.
 
 Switching by chord, here's how it breaks down:
 
-- **On A5 (A) → aim for C# (major 3rd).** Bend B (3rd string, 4th fret) up a whole step boldly into C#, and you get that classic thrilling rock-solo entrance.
+- **On A5 (A) → aim for C# (major 3rd).** <mark>Bend B (3rd string, 4th fret) up a whole step boldly into C#</mark>, and you get that classic thrilling rock-solo entrance.
 - **Once it shifts to G5 (G) → land on B (major 3rd).** (B already lives right inside A Mixolydian.)
 - **On D5 (D) → land on F# (major 3rd).**
 - The color tone is **♭7 (G, 2nd string, 8th fret)** — lay it down as a long tone and A Mixolydian's identity really pops.
@@ -25,16 +25,16 @@ Switching by chord, here's how it breaks down:
 
 Rock has space too — but that space is **"the silence right before you fire the next cannon shot."** Here are the four things to grab today.
 
-- **Dramatic rest:** Leave an entire beat of empty silence right before you fire off a big bend. That silence turns the long tone that follows into the star of the show. Not choppy little rests like yesterday — one big, wide-open gap.
+- **<mark>Dramatic rest:</mark>** Leave an entire beat of empty silence right before you fire off a big bend. That silence turns the long tone that follows into the star of the show. Not choppy little rests like yesterday — one big, wide-open gap.
 - **Powerful long tones:** Once you land on the 3rd, push it out long as a whole note or half note. Don't cut it short — milk it until the amp itself is ringing.
-- **Bold bends:** Don't push timidly. Bend B a full whole step, all the way up to C# (the 3rd), and once you arrive, lay on a big vibrato. Land the pitch exactly (check it against the target note by ear) — but make the expression fearless.
+- **<mark>Bold bends:</mark>** Don't push timidly. Bend B a full whole step, all the way up to C# (the 3rd), and once you arrive, lay on a big vibrato. Land the pitch exactly (check it against the target note by ear) — but make the expression fearless.
 - **Motif & dynamics:** Fire off one big bent long tone, then answer it softly right after — that contrast makes even the same line sound way more dramatic.
 
-So today's the day you land on the 3rds of A5, G5, and D5 (C#, B, F#) — but sing them powerfully, with bold bends, long tones, and big vibrato.
+So today's the day you land on the 3rds of A5, G5, and D5 (C#, B, F#) — but <mark>sing them powerfully, with bold bends, long tones, and big vibrato</mark>.
 
 ## ② Visual Reference
 
-First up, a **target note map** for the rock riff. The 3rds of A5, G5, and D5 all cluster near the 5th fret, and the ♭7 (G) color tone is marked too. **3rd string 4th fret B → whole-step bend → 6th fret C# (A5's 3rd)** is today's signature move.
+First up, a **<mark>target note map</mark>** for the rock riff. The 3rds of A5, G5, and D5 all cluster near the 5th fret, and the ♭7 (G) color tone is marked too. **3rd string 4th fret B → whole-step bend → 6th fret C# (A5's 3rd)** is today's signature move.
 
 ```json
 {
@@ -64,7 +64,7 @@ First up, a **target note map** for the rock riff. The 3rds of A5, G5, and D5 al
 }
 ```
 
-Second, today's **rock long-tone bend phrase.** In measure 1, over A5, you leave a beat of empty space → bend B up a whole step into a big, held C# for a half note → then finish C# off with vibrato. Measure 2 switches to D5 — you land long on F# with a vibrato long tone. There aren't many rests, but each one is wide open, like the stage going dark for a moment.
+Second, today's **<mark>rock long-tone bend phrase.</mark>** In measure 1, over A5, you leave a beat of empty space → bend B up a whole step into a big, held C# for a half note → then finish C# off with vibrato. Measure 2 switches to D5 — you land long on F# with a vibrato long tone. There aren't many rests, but each one is wide open, like the stage going dark for a moment.
 
 ```json
 {
@@ -100,7 +100,7 @@ Second, today's **rock long-tone bend phrase.** In measure 1, over A5, you leave
 ## ③ Today's Practice (50-minute routine)
 
 **0–10 min · Warm-up (BPM 120) — 4-note sequence + bend tuning**
-At the rock tempo of 120, run through A Mixolydian in a 4-note sequence once, then do 10 reps of **bending 3rd string 4th fret B a full step to match the actual pitch of 6th fret C#.** First, pluck C# (3rd string, 6th fret) to plant the target in your ear, then bend up to match that exact pitch. Bold expression, dead-on pitch.
+At the rock tempo of 120, run through A Mixolydian in a 4-note sequence once, then do 10 reps of **<mark>bending 3rd string 4th fret B a full step to match the actual pitch of 6th fret C#.</mark>** First, pluck C# (3rd string, 6th fret) to plant the target in your ear, then bend up to match that exact pitch. Bold expression, dead-on pitch.
 
 **10–20 min · Brain training — mapping the A5/G5/D5 3rds**
 Metronome off. On the target map, spot and fret **A5→C# (3rd string, 6th fret), G5→B (3rd string, 4th fret), D5→F# (2nd string, 7th fret).** Play ♭7 (G, 2nd string, 8th fret) once too, to hear the color. Say "this chord, this note" out loud as you go.
@@ -134,10 +134,10 @@ Metronome off. On the target map, spot and fret **A5→C# (3rd string, 6th fret)
 ```
 
 **20–40 min · Real-world improv (A5–G5–D5 rock backing / 116–120 BPM) — long-tone & bend mission**
-Put on "rock backing track A5 G5 D5" or "A Mixolydian rock jam." Two missions. ① Switch 3rds C#→B→F# whenever the chord changes. ② **Don't play a lot of notes — boldly bend one note and milk it long as a sustained tone.** Before every big bend, leave a full beat empty to build the drama.
+Put on "rock backing track A5 G5 D5" or "A Mixolydian rock jam." Two missions. ① Switch 3rds C#→B→F# whenever the chord changes. ② **Don't play a lot of notes — <mark>boldly bend one note and milk it long as a sustained tone</mark>.** Before every big bend, leave a full beat empty to build the drama.
 
 **40–50 min · Record & reflect (recommended)**
-Record 30 seconds of your jam. Listen back for just two things — ① Did your bend land exactly on the target pitch (C#)? (Falling short means not enough push; overshooting means too much.) ② **Did the long tone stay alive with big vibrato all the way through, without going flat?** Slow down playback if needed to zoom in on the moment your bend lands and how you finish the long tone.
+Record 30 seconds of your jam. Listen back for just two things — ① Did your bend land exactly on the target pitch (C#)? (Falling short means not enough push; overshooting means too much.) ② **<mark>Did the long tone stay alive with big vibrato all the way through</mark>, without going flat?** Slow down playback if needed to zoom in on the moment your bend lands and how you finish the long tone.
 
 **Today's finish line:** Fret the 3rds of A5, G5, and D5 with your eyes closed. Match the B→C# whole-step bend exactly to the real pitch at least 5 times, plus land on a long tone at least 4 times over the backing track (no cutting them short).
 

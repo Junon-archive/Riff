@@ -12,7 +12,7 @@ lang: en
 
 Here's why we're doing this today. So far, we've only been playing over a single Am7 chord. But the moment Dorian really shines is when the chord moves **Am7 → D7 → Am7**. Today we're introducing that progression, and along with it, I'm going to show you something that'll give you chills.
 
-First, the 4-note sequence. Yesterday we swept through 3rds, so today it's **4-note groups**. You take the scale in groups of four and shift up one step at a time.
+First, the 4-note sequence. Yesterday we swept through 3rds, so today it's **<mark>4-note groups</mark>**. You take the scale in groups of four and shift up one step at a time.
 
 - A-B-C-D / B-C-D-E / **C-D-E-F#** / **D-E-F#-G** …
 
@@ -20,16 +20,16 @@ If 3rds are a "swinging leap," 4-note groups are a "rolling wave." Your fingers 
 
 Now, the real heart of today. When the backing shifts from **Am7 → D7**, let's look at the 3rd of each chord:
 
-- **Am7's 3rd = C** (out of A-C-E-G, C is the b3, the minor 3rd)
-- **D7's 3rd = F#** (out of D-F#-A-C, it's F#)
+- **<mark>Am7's 3rd = C</mark>** (out of A-C-E-G, C is the b3, the minor 3rd)
+- **<mark>D7's 3rd = F#</mark>** (out of D-F#-A-C, it's F#)
 
-See it? **D7's 3rd is exactly F#.** And F# is the very note we've been treasuring all week — **A Dorian's major 6th (the color note)**. In other words, the moment the chord changes to D7, if you simply **land on F#** — that's targeting D7's 3rd, and **at the same time** it's the moment Dorian's color explodes. Two birds meet in one note. That's the secret behind why Dorian sounds so "sophisticated" over a minor progression.
+See it? **<mark>D7's 3rd is exactly F#.</mark>** And F# is the very note we've been treasuring all week — **A Dorian's major 6th (the color note)**. In other words, the moment the chord changes to D7, if you simply **<mark>land on F#</mark>** — that's targeting D7's 3rd, and **at the same time** it's the moment Dorian's color explodes. Two birds meet in one note. That's the secret behind why Dorian sounds so "sophisticated" over a minor progression.
 
-So here's today's grammar in a nutshell: **land on C (the b3) during the Am7 section, land on F# (the 6th = D7's 3rd) during the D7 section.** The chord changes, so the landing note changes — that same sense you learned with guide tones last week, now combined with modal color.
+So here's today's grammar in a nutshell: **land on C (the b3) during the Am7 section, <mark>land on F# (the 6th = D7's 3rd) during the D7 section</mark>.** The chord changes, so the landing note changes — that same sense you learned with guide tones last week, now combined with modal color.
 
 ## ② Visual Reference
 
-First, here's the **A Dorian 4-note sequence** (2 bars, eighth notes). It rolls up starting from the 6th string. In the third and fourth groups, **F# (the 6th, the color note)** rises up onto the wave (highlighted).
+First, here's the **<mark>A Dorian 4-note sequence</mark>** (2 bars, eighth notes). It rolls up starting from the 6th string. In the third and fourth groups, **F# (the 6th, the color note)** rises up onto the wave (highlighted).
 
 ```json
 {
@@ -71,7 +71,7 @@ First, here's the **A Dorian 4-note sequence** (2 bars, eighth notes). It rolls 
 }
 ```
 
-Second, here's the **Am7 vs. D7 target-3rds map**. Two kinds of highlights: **C (Am7's 3rd)** in green and **F# (D7's 3rd = the Dorian color)** in yellow. See with your own eyes how F# plays double duty. The roots A and D are marked too, for reference.
+Second, here's the **<mark>Am7 vs. D7 target-3rds map</mark>**. Two kinds of highlights: **C (Am7's 3rd)** in green and **F# (D7's 3rd = the Dorian color)** in yellow. See with your own eyes how F# plays double duty. The roots A and D are marked too, for reference.
 
 ```json
 {
@@ -101,7 +101,7 @@ Second, here's the **Am7 vs. D7 target-3rds map**. Two kinds of highlights: **C 
 }
 ```
 
-Third, here's a 4-bar line that burns "chord change = landing change" into your body. The two Am7 bars land on **C (the b3)**, the two D7 bars land on **F# (the 6th)**. Sing each landing note with vibrato.
+Third, here's a 4-bar line that burns <mark>"chord change = landing change"</mark> into your body. The two Am7 bars land on **C (the b3)**, the two D7 bars land on **F# (the 6th)**. Sing each landing note with vibrato.
 
 ```json
 {
@@ -153,7 +153,7 @@ Third, here's a 4-bar line that burns "chord change = landing change" into your 
 ## ③ Today's Practice (50-minute routine)
 
 **0–10 min · Warm-up (BPM 80) — 4-note sequence**
-With the metronome at 80, roll through the first 4-note sequence. Keep that tight, rolling feel in your fingers, and add just a touch of clarity when F# (string 5 fret 9) rises up onto the wave. Doing it both up and back (climb, then come back down the same pattern) really loosens your hand up.
+With the metronome at 80, roll through the first 4-note sequence. Keep that tight, rolling feel in your fingers, and add just a touch of clarity when <mark>F# (string 5 fret 9) rises up onto the wave</mark>. Doing it both up and back (climb, then come back down the same pattern) really loosens your hand up.
 
 ```json
 {
@@ -196,7 +196,7 @@ With the metronome at 80, roll through the first 4-note sequence. Keep that tigh
 ```
 
 **10–20 min · Brain training (mapping landing 3rds)**
-Looking at the second map, alternate between fretting **Am7's C** (three spots) and **D7's F#** (two spots). Say it out loud as you go: "Am7 means C, D7 means F#." Finally, close your eyes: "D7 now! → the nearest F#" — if you can find it within 3 seconds, you pass. The goal is making "chord name → landing note" into a reflex.
+Looking at the second map, alternate between fretting **Am7's C** (three spots) and **D7's F#** (two spots). Say it out loud as you go: "Am7 means C, D7 means F#." Finally, close your eyes: "D7 now! → the nearest F#" — if you can find it within 3 seconds, you pass. The goal is making <mark>"chord name → landing note"</mark> into a reflex.
 
 ```json
 {
@@ -227,7 +227,7 @@ Looking at the second map, alternate between fretting **Am7's C** (three spots) 
 ```
 
 **20–40 min · Real-world improv (Am7-D7 vamp / 76–80 BPM)**
-Put on an "Am7 D7 vamp backing track" (alternating every two bars). One mission: **land on that chord's 3rd every time the chord changes.** C at the end of the Am7 section, F# at the end of the D7 section. Feel free to start by dropping the third 4-bar line straight on top. Fill the space in between freely — just make sure the **landing note** always matches the chord.
+Put on an "Am7 D7 vamp backing track" (alternating every two bars). One mission: **<mark>land on that chord's 3rd every time the chord changes.</mark>** C at the end of the Am7 section, F# at the end of the D7 section. Feel free to start by dropping the third 4-bar line straight on top. Fill the space in between freely — just make sure the **landing note** always matches the chord.
 
 ```json
 {
@@ -277,7 +277,7 @@ Put on an "Am7 D7 vamp backing track" (alternating every two bars). One mission:
 ```
 
 **40–50 min · Record & reflect (recommended)**
-Record the last 30 seconds of your jam. Listen back and check two things: **① did you land on F# the moment it switched to D7? ② did the sound "sparkle" brighter right then?** Slow playback to 0.75x to check whether the chord change and your landing line up.
+Record the last 30 seconds of your jam. Listen back and check two things: **<mark>① did you land on F# the moment it switched to D7</mark>? ② did the sound "sparkle" brighter right then?** Slow playback to 0.75x to check whether the chord change and your landing line up.
 
 **Today's finish line:** Run the 4-note sequence up and back at 80. Point to "chord name → landing note (C/F#)" within 3 seconds. Successfully land on the right 3rd at least 6 times per chord over the Am7-D7 backing track.
 

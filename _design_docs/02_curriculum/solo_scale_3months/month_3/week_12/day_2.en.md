@@ -10,18 +10,18 @@ lang: en
 
 ## ① Theory / Explanation
 
-Here's why we're doing this today. Yesterday you drew the landing map. But a map alone is still just "picking notes" — not yet "music." 90% of beginner improv falls apart right here — because **you never stop playing.** Pour out nonstop notes and the listener runs out of breath. Remember the space and phrasing we learned back in Week 11? Today we plant that inside your composition.
+Here's why we're doing this today. Yesterday you drew the landing map. But a map alone is still just "picking notes" — not yet "music." 90% of beginner improv falls apart right here — because **<mark>you never stop playing.</mark>** Pour out nonstop notes and the listener runs out of breath. Remember the space and phrasing we learned back in Week 11? Today we plant that inside your composition.
 
-Today you've got two weapons: **motif** and **call and response.**
+Today you've got two weapons: **<mark>motif</mark>** and **<mark>call and response.</mark>**
 
-- A **motif** is a short idea — a single fragment of 2-4 notes. The whole song grows from this one seed. Our motif stays dead simple: **D → E → C (landing on ♭3) → (silence).** Toss three notes, then rest. That "silence" is the key. The rest is what gives the C you just played its weight.
-- **Call and response** is a conversation. You take the motif you just tossed out (the call) and **answer it back with a slight variation (the response).** Repeat it exactly and it's boring; change it completely and they're strangers. "Same words, different inflection" — that's variation.
+- A **motif** is a short idea — a single fragment of 2-4 notes. The whole song grows from this one seed. Our motif stays dead simple: **<mark>D → E → C (landing on ♭3) → (silence).</mark>** Toss three notes, then rest. That "silence" is the key. The rest is what gives the C you just played its weight.
+- **Call and response** is a conversation. You take the motif you just tossed out (the call) and **<mark>answer it back with a slight variation (the response).</mark>** Repeat it exactly and it's boring; change it completely and they're strangers. "Same words, different inflection" — that's variation.
 
-And there's one more thing you'll sneak in today. Carry the response **all the way into the A7 section and swap C (♭3) for C# (major 3rd)** as you answer. That's the one-fret switch from yesterday! The moment the same motif gets tossed in Dorian and answered in Mixolydian, the song gains a "story." This becomes the backbone of your solo.
+And there's one more thing you'll sneak in today. Carry the response **all the way into the A7 section and <mark>swap C (♭3) for C# (major 3rd)</mark>** as you answer. That's the one-fret switch from yesterday! The moment the same motif gets tossed in Dorian and answered in Mixolydian, the song gains a "story." This becomes the backbone of your solo.
 
 ## ② Visual Reference
 
-First, the **call (the motif in its original form).** Over Am7, toss out D-E-C, then rest for a full half bar. A light vibrato on that final C. See that big rest (`rest`) baked right into the data? That's today's main character.
+First, the **<mark>call (the motif in its original form).</mark>** Over Am7, toss out D-E-C, then rest for a full half bar. A light vibrato on that final C. See that big rest (`rest`) baked right into the data? That's today's main character.
 
 ```json
 {
@@ -49,7 +49,7 @@ First, the **call (the motif in its original form).** Over Am7, toss out D-E-C, 
 }
 ```
 
-Second, the **response (answering with variation).** Stretched out to two bars. Bar 1 answers over D7 with F# (the major 6th color), and bar 2 crosses into A7, **switching to C# (major 3rd)** as it answers. A ♭7 (G) color tone gets tacked on at the very end. Same "shape" as the call, but you can feel the landing has changed, right?
+Second, the **<mark>response (answering with variation).</mark>** Stretched out to two bars. Bar 1 answers over D7 with F# (the major 6th color), and bar 2 crosses into A7, **<mark>switching to C# (major 3rd)</mark>** as it answers. A ♭7 (G) color tone gets tacked on at the very end. Same "shape" as the call, but you can feel the landing has changed, right?
 
 ```json
 {
@@ -89,10 +89,10 @@ Second, the **response (answering with variation).** Stretched out to two bars. 
 ## ③ Today's Practice (50-minute routine)
 
 **0–10 min · Warm-up (BPM 92) — warm up your hands with 3rd intervals**
-To the metronome at 92, run a pattern of interval-of-a-3rd jumps inside the "one home" position. Fret a note, fret the note a 3rd above it, move up one spot, repeat. Yesterday it was four-note sequences — today it's 3rd jumps. This keeps loading phrase material into your hands.
+To the metronome at 92, run a pattern of interval-of-a-3rd jumps inside the "one home" position. Fret a note, fret the note a 3rd above it, move up one spot, repeat. Yesterday it was four-note sequences — <mark>today it's 3rd jumps</mark>. This keeps loading phrase material into your hands.
 
 **10–20 min · Brain training (getting the motif into your hands)**
-No backing track — just repeat the call motif (D-E-C + rest) 10 times. **Sing it along with your voice too** — "da-da-daaah... (rest)." Then layer in the response. Alternate between the call and response, and train yourself to resist the urge to fill that awkward "silence" between them. That restraint is today's real skill.
+No backing track — just repeat the call motif (D-E-C + rest) 10 times. **<mark>Sing it along with your voice too</mark>** — "da-da-daaah... (rest)." Then layer in the response. Alternate between the call and response, and train yourself to resist the urge to fill that awkward "silence" between them. That restraint is today's real skill.
 
 ```json
 {
@@ -156,10 +156,10 @@ No backing track — just repeat the call motif (D-E-C + rest) 10 times. **Sing 
 ```
 
 **20–40 min · Real composing (Am7-D7-A7 backing / 88–92 BPM)**
-Start the backing track and layer call → response over the actual chords. Then comes the real composing part: **answer the response slightly differently every time.** Sometimes hold F# longer, sometimes switch to C#, sometimes leave a bigger gap. Pick 2-3 variations you like and remember them. That's the raw material for tomorrow's finished solo.
+Start the backing track and layer call → response over the actual chords. Then comes the real composing part: **<mark>answer the response slightly differently every time.</mark>** Sometimes hold F# longer, sometimes switch to C#, sometimes leave a bigger gap. Pick 2-3 variations you like and remember them. That's the raw material for tomorrow's finished solo.
 
 **40–50 min · Record & reflect (recommended)**
-Record one round of call-and-response with any recording tool you've got. Listen back and check just one thing: **does the silence actually sound like silence, or did I unconsciously fill it in?** If you filled it, try stretching the rest by half a beat more tomorrow.
+Record one round of call-and-response with any recording tool you've got. Listen back and check just one thing: **<mark>does the silence actually sound like silence</mark>, or did I unconsciously fill it in?** If you filled it, try stretching the rest by half a beat more tomorrow.
 
 **Today's finish line:** Play the call motif from memory. Build at least 2 variations for the response, and successfully land the version that switches to C# over A7, over the backing track.
 

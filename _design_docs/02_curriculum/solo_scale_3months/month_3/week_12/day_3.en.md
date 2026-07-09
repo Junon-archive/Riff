@@ -10,19 +10,19 @@ lang: en
 
 ## ① Theory / Explanation
 
-Here's why we're doing this today. All the ingredients are gathered now — the landing map (Day 1), the motif and space (Day 2). Today, you stitch them together to finish **one 8-bar solo that flows from start to finish.** And for the first time, you'll **record it whole.**
+Here's why we're doing this today. All the ingredients are gathered now — the landing map (Day 1), the motif and space (Day 2). Today, you stitch them together to finish **<mark>one 8-bar solo that flows from start to finish.</mark>** And for the first time, you'll **<mark>record it whole.</mark>**
 
 There are exactly three principles to remember when stitching a song together.
 
-1. **Draw an arc.** Don't run flat through all 8 bars. Start quiet (motif + big rest), hit a **peak (climax)** at the bar-5 A7 switch, then come back down, landing on the root at the end. Think of it as drawing a mountain.
-2. **Bar 5 is the twist point.** Bars 1-4 are Dorian (C, F#). At bar 5's A7, switch to C#, and layer in a blue-note bend (C→C#) to push the song upward. This one bar is the "chorus" of your solo.
-3. **Always end with a landing.** End the 8th bar by singing a long, vibrato-filled root A. End without landing, and it sounds like "wait, is that it?" Put a clear period at the end.
+1. **<mark>Draw an arc.</mark>** Don't run flat through all 8 bars. Start quiet (motif + big rest), hit a **peak (climax)** at the bar-5 A7 switch, then come back down, landing on the root at the end. Think of it as drawing a mountain.
+2. **<mark>Bar 5 is the twist point.</mark>** Bars 1-4 are Dorian (C, F#). At bar 5's A7, switch to C#, and layer in a blue-note bend (C→C#) to push the song upward. This one bar is the "chorus" of your solo.
+3. **<mark>Always end with a landing.</mark>** End the 8th bar by singing a long, vibrato-filled root A. End without landing, and it sounds like "wait, is that it?" Put a clear period at the end.
 
-The tab below is the **finished version.** Memorize it as-is, or swap in your own Day 2 variations — either works. What matters is the structure: **motif → Dorian response → development → A7 climax (bend) → resolution → root landing.** This is the crystallization of your three months.
+The tab below is the **finished version.** Memorize it as-is, or swap in your own Day 2 variations — either works. What matters is the structure: **<mark>motif → Dorian response → development → A7 climax (bend) → resolution → root landing.</mark>** This is the crystallization of your three months.
 
 ## ② Visual Reference
 
-First, the **completed 8-bar original solo.** At the end of each bar, that chord's 3rd lands, there's a blue-note bend climax in bar 5, and a root vibrato finish in bar 8. Notice how the rests (`rest`) breathe throughout, too.
+First, the **<mark>completed 8-bar original solo.</mark>** At the end of each bar, that chord's 3rd lands, there's a blue-note bend climax in bar 5, and a root vibrato finish in bar 8. Notice how the rests (`rest`) breathe throughout, too.
 
 ```json
 {
@@ -98,7 +98,7 @@ First, the **completed 8-bar original solo.** At the end of each bar, that chord
 }
 ```
 
-Second, the **landing pillar roadmap.** Just the four landing pillars that run through the 8 bars, pulled out. C (Dorian ♭3) → F# (major 6th color) → C# (Mixolydian major 3rd, the climax) → A (root, the finish). Think of your solo as moving between these four pillars and you'll never lose your way.
+Second, the **<mark>landing pillar roadmap.</mark>** Just the four landing pillars that run through the 8 bars, pulled out. C (Dorian ♭3) → F# (major 6th color) → C# (Mixolydian major 3rd, the climax) → A (root, the finish). Think of your solo as moving between these four pillars and you'll never lose your way.
 
 ```json
 {
@@ -128,10 +128,10 @@ Second, the **landing pillar roadmap.** Just the four landing pillars that run t
 ## ③ Today's Practice (50-minute routine)
 
 **0–10 min · Warm-up (BPM 92) — four-note sequence + bend warm-up**
-Run one lap of the four-note sequence at metronome 92, then warm up the bar-5 bend (pushing C at 1st string 8th fret up a half step to the C# pitch) 5 times. Bend while checking by ear that the pitch rises exactly to C#. If the climax wobbles, the whole song wobbles.
+Run one lap of the four-note sequence at metronome 92, then warm up the bar-5 bend (pushing C at 1st string 8th fret up a half step to the C# pitch) 5 times. Bend while <mark>checking by ear that the pitch rises exactly to C#</mark>. If the climax wobbles, the whole song wobbles.
 
 **10–20 min · Brain training (assembling bar by bar)**
-Learn the finished tab **two bars at a time.** Bars 1-2 → 3-4 → 5-6 → 7-8. Smooth out each chunk, then stitch them together. Especially drill the seam where bar 4's ending C crosses into bar 5's C# (the one-fret switch) 5 times to burn it into your hands.
+Learn the finished tab **<mark>two bars at a time.</mark>** Bars 1-2 → 3-4 → 5-6 → 7-8. Smooth out each chunk, then stitch them together. Especially drill the seam where bar 4's ending C crosses into bar 5's C# (the one-fret switch) 5 times to burn it into your hands.
 
 ```json
 {
@@ -208,10 +208,10 @@ Learn the finished tab **two bars at a time.** Bars 1-2 → 3-4 → 5-6 → 7-8.
 ```
 
 **20–40 min · Real finishing run (Am7-D7-A7 backing / 88–92 BPM)**
-Aim to run all 8 bars over the backing track **without stopping.** Start at 88, bump to 92 once it's smooth. Stay conscious of the arc: quiet with lots of space up front, push hard at bar 5, land on the root at bar 8 and let your breath settle down. Run it at least 5 times to burn the flow into your body.
+Aim to run all 8 bars over the backing track **<mark>without stopping.</mark>** Start at 88, bump to 92 once it's smooth. Stay conscious of the arc: quiet with lots of space up front, push hard at bar 5, land on the root at bar 8 and let your breath settle down. Run it at least 5 times to burn the flow into your body.
 
 **40–50 min · First recording (recommended → today it's strongly recommended)**
-With whatever recording tool you've got (voice memo, laptop recorder, anything), record the finished solo over the backing track **as one complete take.** Today's goal isn't perfection — it's "making it to the end." This first recording becomes tomorrow's raw material for self-feedback. Listen back and just note your first impression: "which part did I like best, and where did I wobble?"
+With whatever recording tool you've got (voice memo, laptop recorder, anything), record the finished solo over the backing track **<mark>as one complete take.</mark>** Today's goal isn't perfection — <mark>it's "making it to the end"</mark>. This first recording becomes tomorrow's raw material for self-feedback. Listen back and just note your first impression: "which part did I like best, and where did I wobble?"
 
 **Today's finish line:** Run the 8-bar solo over the backing track without stopping, once, and record that take whole, one time.
 

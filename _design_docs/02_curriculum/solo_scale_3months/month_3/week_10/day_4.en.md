@@ -10,15 +10,15 @@ lang: en
 
 ## ① Theory / Explanation
 
-Here's why we're doing this today: all week, you've practiced landing on C# (major 3rd) over a single A7 chord. But real blues actually **moves.** The most basic move is the **A7 → D7** back-and-forth. This is exactly where plateaued players get stuck — the chord changes to D7, but they keep chasing C# out of A Mixolydian habit. The problem is, C# is the **major 7th** over D7, and it floats. Remember that principle from Month 2? **When the chord changes, the target (3rd) changes too.**
+Here's why we're doing this today: all week, you've practiced landing on C# (major 3rd) over a single A7 chord. But real blues actually **moves.** The most basic move is the **<mark>A7 → D7</mark>** back-and-forth. This is exactly where plateaued players get stuck — the chord changes to D7, but they keep chasing C# out of A Mixolydian habit. The problem is, C# is the **major 7th** over D7, and it floats. Remember that principle from Month 2? **<mark>When the chord changes, the target (3rd) changes too.</mark>**
 
 Let's do the math.
-- **A7's major 3rd = C#** (A·**C#**·E·G)
-- **D7's major 3rd = F#** (D·**F#**·A·C)
+- **<mark>A7's major 3rd = C#</mark>** (A·**C#**·E·G)
+- **<mark>D7's major 3rd = F#</mark>** (D·**F#**·A·C)
 
-So during the A7 section, you land on C#, and the instant you shift into the D7 section, you switch your landing spot to **F#.** Get just this one thing right, and your solo starts "singing along with the chords." Good news: **A Mixolydian already contains both C# and F#** (A B C# D E F# G). You don't need to change scales at all — just move **the landing note** along with the chord. A7 means C#, D7 means F#. Your hand shape stays the same; only your aim shifts.
+So during the A7 section, you land on C#, and the instant you shift into the D7 section, you switch your landing spot to **F#.** Get just this one thing right, and your solo starts "singing along with the chords." Good news: **A Mixolydian already contains both C# and F#** (A B C# D E F# G). You don't need to change scales at all — just move **<mark>the landing note</mark>** along with the chord. A7 means C#, D7 means F#. Your hand shape stays the same; only your aim shifts.
 
-There's a hidden bonus here too. Our blue note **C (♭3)** is a crooked blue note over A7, but over **D7, it becomes D7's ♭7 (C).** In other words, that same C you were casually brushing past as a blue note during the A7 section suddenly changes status into a **legitimate color tone (♭7)** once you're over D7. Same note, different role. Knowing this makes your solo sound a lot smarter.
+There's a hidden bonus here too. Our blue note **C (♭3)** is a crooked blue note over A7, but over **<mark>D7, it becomes D7's ♭7 (C).</mark>** In other words, that same C you were casually brushing past as a blue note during the A7 section suddenly changes status into a **legitimate color tone (♭7)** once you're over D7. Same note, different role. Knowing this makes your solo sound a lot smarter.
 
 Finally, let's add **3rd interval** training too. If the 4-note sequence was "clumps of four notes," the 3rd interval is a pattern that "skips one note and climbs up in pairs" (A-C#, B-D, C#-E ...). Once this gets into your hands, the scale stops sounding like a flat staircase and starts sounding like **harmony,** instantly making your improv sound more sophisticated. Today, we'll sweep across the neck using this 3rd interval to connect both forms.
 
@@ -26,7 +26,7 @@ Today's goal: over the A7↔D7 backing, land on the 3rd (C#/F#) for each chord, 
 
 ## ② Visual Reference
 
-First, a **dominant 3rd target map.** A7's 3rd, C# (green), and D7's 3rd, F# (green), are scattered across both forms. Scope out ahead of time where the "nearest C# or F#" is whenever the chord changes.
+First, a **<mark>dominant 3rd target map.</mark>** A7's 3rd, C# (green), and D7's 3rd, F# (green), are scattered across both forms. Scope out ahead of time where the "nearest C# or F#" is whenever the chord changes.
 
 ```json
 {
@@ -55,7 +55,7 @@ First, a **dominant 3rd target map.** A7's 3rd, C# (green), and D7's 3rd, F# (gr
 }
 ```
 
-Second, today's main event, the **A7 → D7 target lick.** Bar 1: over A7, hang tension with ♭7 G → half-step bend the blue note C → land on **C# (A7's 3rd).** Bar 2 moves into D7, where that same **C now becomes D7's ♭7**, coloring the sound before landing on **F# (D7's 3rd).** Same scale — the only thing that changes is your landing spot, from C# to F#. That's the whole point.
+Second, today's main event, the **<mark>A7 → D7 target lick.</mark>** Bar 1: over A7, hang tension with ♭7 G → half-step bend the blue note C → land on **C# (A7's 3rd).** Bar 2 moves into D7, where that same **C now becomes D7's ♭7**, coloring the sound before landing on **F# (D7's 3rd).** Same scale — the only thing that changes is your landing spot, from C# to F#. That's the whole point.
 
 ```json
 {
@@ -91,7 +91,7 @@ Second, today's main event, the **A7 → D7 target lick.** Bar 1: over A7, hang 
 }
 ```
 
-Third, the **3rd interval run.** Climb through Position 1 pairing up notes of A Mixolydian in 3rds, and finish landing on the major 3rd C#. Hearing the scale sound like harmony is the flavor of a 3rd interval. Two bars, all eighth notes.
+Third, the **<mark>3rd interval run.</mark>** Climb through Position 1 pairing up notes of A Mixolydian in 3rds, and finish landing on the major 3rd C#. Hearing the scale sound like harmony is the flavor of a 3rd interval. Two bars, all eighth notes.
 
 ```json
 {
@@ -136,7 +136,7 @@ Third, the **3rd interval run.** Climb through Position 1 pairing up notes of A 
 ## ③ Today's Practice (50-minute routine)
 
 **0–10 min · Warm-up (BPM 90) — 3rd interval run**
-Ascend through the 3rd interval run above at 90. Start at 80 if you need to. The point is to make each pair of two notes sound like a "unit." Once it's ingrained, try improvising the same 3rd pattern in Position 2 (frets 7-11) as well. Keep staying color-aware as you pass C# and G.
+Ascend through the 3rd interval run above at 90. Start at 80 if you need to. The point is to <mark>make each pair of two notes sound like a "unit"</mark>. Once it's ingrained, try improvising the same 3rd pattern in Position 2 (frets 7-11) as well. Keep staying color-aware as you pass C# and G.
 
 ```json
 {
@@ -179,7 +179,7 @@ Ascend through the 3rd interval run above at 90. Start at 80 if you need to. The
 ```
 
 **10–20 min · Brain training (C#↔F# switching)**
-Metronome off. Play a game with the first map: say "A7!" and fret the nearest **C#** (3rd string 6th fret or 1st string 9th fret); say "D7!" and fret the nearest **F#** (4th string 4th fret, 2nd string 7th fret, 3rd string 11th fret). Call out "A7-D7-A7-D7" to yourself and alternate your hand. Pass once your hand goes to the right 3rd within 2 seconds. This is the time to build a chord-change reflex.
+Metronome off. Play a game with the first map: say "A7!" and fret the nearest **C#** (3rd string 6th fret or 1st string 9th fret); say "D7!" and fret the nearest **F#** (4th string 4th fret, 2nd string 7th fret, 3rd string 11th fret). Call out "A7-D7-A7-D7" to yourself and alternate your hand. Pass once <mark>your hand goes to the right 3rd within 2 seconds</mark>. This is the time to build a chord-change reflex.
 
 ```json
 {
@@ -209,7 +209,7 @@ Metronome off. Play a game with the first map: say "A7!" and fret the nearest **
 ```
 
 **20–40 min · Real-world feel (A7-D7 blues backing / 80–90 BPM)**
-Put on an "A7 D7 blues backing track slow" (a slow 12-bar blues works great too). Mission: **land on that chord's 3rd every time the chord changes — C# for A7, F# for D7.** Play freely in A Mixolydian for the rest. If you've got room, try dropping in today's full A7→D7 lick, and cross between both forms with slides to use both the low and high registers. Enjoy hearing the blue note C transform into D7's ♭7 with your own ears too.
+Put on an "A7 D7 blues backing track slow" (a slow 12-bar blues works great too). Mission: **<mark>land on that chord's 3rd every time the chord changes</mark> — C# for A7, F# for D7.** Play freely in A Mixolydian for the rest. If you've got room, try dropping in today's full A7→D7 lick, and cross between both forms with slides to use both the low and high registers. Enjoy hearing the blue note C transform into D7's ♭7 with your own ears too.
 
 ```json
 {
@@ -246,7 +246,7 @@ Put on an "A7 D7 blues backing track slow" (a slow 12-bar blues works great too)
 ```
 
 **40–50 min · Record & reflect (recommended, week wrap-up)**
-Record one chorus (12 bars, or 30-40 seconds) with any recorder. Three checks: (1) did you catch the 3rd (C#→F#) in time when the chord changed, (2) did you use both forms, or get stuck in one box, and (3) did your phrase endings land firmly on the target note instead of floating awkwardly? Compare it with the recording from the first day of this week and you'll be able to hear your growth.
+Record one chorus (12 bars, or 30-40 seconds) with any recorder. Three checks: (1) <mark>did you catch the 3rd (C#→F#) in time when the chord changed</mark>, (2) did you use both forms, or get stuck in one box, and (3) did your phrase endings land firmly on the target note instead of floating awkwardly? Compare it with the recording from the first day of this week and you'll be able to hear your growth.
 
 **Today's completion criteria:** Pass the 3rd interval run at 90 BPM. React within 2 seconds when switching C#↔F#. Land on the 3rd for each chord at least 8 times over the A7-D7 backing, using both forms.
 

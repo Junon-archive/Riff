@@ -10,24 +10,24 @@ lang: en
 
 ## ① Theory / Explanation
 
-Here's why we're doing this today: over the past two weeks (W9 Dorian, W10 Mixolydian), you learned how to "paint with modes." But here's the real-world catch — backing tracks roll differently depending on the genre. This week, we swap in a new genre's backing track every day, building the muscle to switch scales in real time (mode switching) the instant the chord changes. Day one is our home turf: blues.
+Here's why we're doing this today: over the past two weeks (W9 Dorian, W10 Mixolydian), you learned how to "paint with modes." But here's the real-world catch — backing tracks roll differently depending on the genre. This week, we swap in a new genre's backing track every day, building the muscle to <mark>switch scales in real time (mode switching)</mark> the instant the chord changes. Day one is our home turf: blues.
 
-The blues progression here is dominant-flavored in A: **A7 → D7 → E7** (I-IV-V). Whenever you run into a dominant/blues backing track, the call is almost automatic — **Mixolydian + blue note.** So today's base camp is **A Mixolydian (A B C# D E F# G)**, with a dash of the blue note C (♭3) sprinkled on top.
+The blues progression here is dominant-flavored in A: **<mark>A7 → D7 → E7</mark>** (I-IV-V). Whenever you run into a dominant/blues backing track, the call is almost automatic — **<mark>Mixolydian + blue note.</mark>** So today's base camp is **A Mixolydian (A B C# D E F# G)**, with a dash of the blue note C (♭3) sprinkled on top.
 
-The core move is still the same: land on that chord's 3rd the moment it changes. In blues, here's how you switch:
+The core move is still the same: <mark>land on that chord's 3rd</mark> the moment it changes. In blues, here's how you switch:
 
 - **On A7 → aim for C# (major 3rd).** Slide up into it from the blue note C (♭3) a half step below, and you get that famous "greasy" blues color.
-- **Once it shifts to D7 → land on F# (major 3rd).** The move from A7's C# to D7's F# is today's switching point.
+- **<mark>Once it shifts to D7 → land on F# (major 3rd).</mark>** The move from A7's C# to D7's F# is today's switching point.
 - **On E7 → G# (major 3rd).**
 
-But today's real topic isn't "the right note" — it's **"how you sing that note."** Blues's whole identity is **stickiness (layback)**.
+But today's real topic isn't "the right note" — it's **"how you sing that note."** Blues's whole identity is **<mark>stickiness (layback)</mark>**.
 
 ### 🎙️ Space & Phrasing Mini-Lesson — Blues Edition: Layback & Long Sustain
 
 If mode switching is "picking the right note," this week we're layering something on top — the expressive layer that turns a string of notes into music. Here are the four things to grab today in blues.
 
-- **Rests (space):** Play blues without pauses and it dies. Toss out one 3rd, then **rest for a full beat.** That silence is what gives the next note its weight. Today's tab is loaded with `rest` on purpose.
-- **Layback (coming in late):** Don't lock in razor-sharp on the downbeat — ease in a touch **behind it.** Land half a beat behind the click, and suddenly you sound like a bluesman.
+- **<mark>Rests (space):</mark>** Play blues without pauses and it dies. Toss out one 3rd, then **rest for a full beat.** That silence is what gives the next note its weight. Today's tab is loaded with `rest` on purpose.
+- **<mark>Layback (coming in late):</mark>** Don't lock in razor-sharp on the downbeat — ease in a touch **behind it.** Land half a beat behind the click, and suddenly you sound like a bluesman.
 - **Long sustain:** Once you land on the 3rd, don't cut it short — let it ring with a **long, wide vibrato.** Keep a single note alive all the way through, like a vocal line.
 - **Motif & call-and-response:** Toss out the short two-note motif "C→C# (♭3→3)," rest a beat, then answer it back with a slight twist. You're having a one-person conversation — asking and answering.
 
@@ -35,7 +35,7 @@ So today's the day you land on the 3rds of A7 and D7 (C# and F#) — but sing th
 
 ## ② Visual Reference
 
-First up, a **target note map** for the blues backing. From one spot near the 5th fret, you can reach the 3rds of A7, D7, and E7 all at once. The green-highlighted notes are the 3rds you're landing on; the C right next to them is the blue note (♭3). **3rd string, frets 5–6 (C→C#)** are today's two key notes.
+First up, a **<mark>target note map</mark>** for the blues backing. From one spot near the 5th fret, you can reach the 3rds of A7, D7, and E7 all at once. The green-highlighted notes are the 3rds you're landing on; the C right next to them is the blue note (♭3). **3rd string, frets 5–6 (C→C#)** are today's two key notes.
 
 ```json
 {
@@ -66,7 +66,7 @@ First up, a **target note map** for the blues backing. From one spot near the 5t
 }
 ```
 
-Second, today's **layback blues phrase.** Notice how loaded it is with rests? In measure 1, over A7, you rest a beat → slide the blue note C up a half step into C# → then let C# ring out with a long vibrato. Measure 2 switches to D7 — you land on F# as a long half note, leave a full beat of silence, then wrap up on the root D. The data itself shows you that rests are half the music.
+Second, today's **<mark>layback blues phrase.</mark>** Notice how loaded it is with rests? In measure 1, over A7, you rest a beat → slide the blue note C up a half step into C# → then let C# ring out with a long vibrato. Measure 2 switches to D7 — you land on F# as a long half note, leave a full beat of silence, then wrap up on the root D. The data itself shows you that rests are half the music.
 
 ```json
 {
@@ -103,7 +103,7 @@ Second, today's **layback blues phrase.** Notice how loaded it is with rests? In
 ## ③ Today's Practice (50-minute routine)
 
 **0–10 min · Warm-up (BPM 63) — loosen up with a 4-note sequence**
-At the slow blues tempo of 63, run through A Mixolydian in **4-note groups** (A-B-C#-D / B-C#-D-E …) once. Don't just memorize it up and down — roll it in chunks of four. One rule for today's warm-up though: **leave a half-beat rest at the end of each group** to plant that layback feel early. Your ears need to relax before your hands can play blues.
+At the slow blues tempo of 63, run through A Mixolydian in **4-note groups** (A-B-C#-D / B-C#-D-E …) once. Don't just memorize it up and down — roll it in chunks of four. One rule for today's warm-up though: **<mark>leave a half-beat rest at the end of each group</mark>** to plant that layback feel early. Your ears need to relax before your hands can play blues.
 
 **10–20 min · Brain training — mapping each chord's 3rd and blue note**
 Metronome off. On the target map, spot and fret just three notes: **A7→C# (3rd string, 6th fret), D7→F# (2nd string, 7th fret), E7→G# (4th string, 6th fret).** Then do 10 reps of sliding the blue note C (3rd string, 5th fret) up a half step into C#. Say "this chord, this note" out loud as you go — it doubles how fast it sticks.
@@ -138,10 +138,10 @@ Metronome off. On the target map, spot and fret just three notes: **A7→C# (3rd
 ```
 
 **20–40 min · Real-world improv (A blues backing / 60–63 BPM) — layback mission**
-Put on any "slow blues in A backing track" you can find. Two missions only. ① Every time the chord shifts A7→D7→E7, land on its 3rd (C#→F#→G#). ② **Come in slightly behind the click on every landing note (layback), then let it ring with a long vibrato.** Don't try to play a lot of notes. Always leave a full beat of rest after each phrase.
+Put on any "slow blues in A backing track" you can find. Two missions only. ① Every time the chord shifts A7→D7→E7, land on its 3rd (C#→F#→G#). ② **<mark>Come in slightly behind the click on every landing note (layback)</mark>, then let it ring with a long vibrato.** Don't try to play a lot of notes. Always leave a full beat of rest after each phrase.
 
 **40–50 min · Record & reflect (recommended)**
-Record 30 seconds of your jam with whatever's on hand. Listen back for just two things — ① Did you actually land on the 3rd every time the chord changed? ② **Can you hear the rests?** If it's packed wall-to-wall with no breathing room, that's today's fix. Slow down playback if you need to, to zoom in on your layback timing and where you placed your rests.
+Record 30 seconds of your jam with whatever's on hand. Listen back for just two things — ① Did you actually land on the 3rd every time the chord changed? ② **<mark>Can you hear the rests?</mark>** If it's packed wall-to-wall with no breathing room, that's today's fix. Slow down playback if you need to, to zoom in on your layback timing and where you placed your rests.
 
 **Today's finish line:** Fret the 3rds of A7, D7, and E7 with your eyes closed. Land on a 3rd at least 6 times over the backing track, plus at least 4 deliberate rests between phrases.
 

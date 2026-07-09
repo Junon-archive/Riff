@@ -10,9 +10,9 @@ lang: en
 
 ## ① Theory / Explanation
 
-Here's why we're doing this today — up until yesterday, you drew the Am map and the C map **separately**. But real songs keep changing chords. You play Am, move to C, come back to Am. **How you handle that exact moment of change** is what real improv skill is made of. Beginners leave their hand where it was when the chord changes, so a wrong note slips out; the pros slide their hand onto the **3rd of the new chord** right at that instant.
+Here's why we're doing this today — up until yesterday, you drew the Am map and the C map **separately**. But real songs keep changing chords. You play Am, move to C, come back to Am. **How you handle that exact moment of change** is what real improv skill is made of. Beginners leave their hand where it was when the chord changes, so a wrong note slips out; the pros slide their hand onto the **<mark>3rd of the new chord</mark>** right at that instant.
 
-Here's the key idea. Am's 3rd is **C**; C's 3rd is **E**. So when moving from Am to C, there's exactly one move we're aiming for: **C → E**. This is called a "guide tone" — like a thread guiding you through the chord progression. It's also a preview of the ii-V-I guide-tone lines coming next week (W8).
+Here's the key idea. Am's 3rd is **C**; C's 3rd is **E**. So when moving from Am to C, there's exactly one move we're aiming for: **<mark>C → E</mark>**. This is called a "<mark>guide tone</mark>" — like a thread guiding you through the chord progression. It's also a preview of the ii-V-I guide-tone lines coming next week (W8).
 
 ```json
 {
@@ -46,13 +46,13 @@ Here's the key idea. Am's 3rd is **C**; C's 3rd is **E**. So when moving from Am
 }
 ```
 
-And here's the magic part: on the fretboard, this **C → E move is absurdly close.** The classic example: **string 3 fret 5 (C) → string 2 fret 5 (E).** Same fret, just shift one finger to the neighboring string. The chord changes, but your hand barely moves at all. We're going to burn that "minimal movement" thrill into your body today.
+And here's the magic part: on the fretboard, this **C → E move is absurdly close.** The classic example: **<mark>string 3 fret 5 (C) → string 2 fret 5 (E).</mark>** Same fret, just shift one finger to the neighboring string. The chord changes, but your hand barely moves at all. We're going to burn that "minimal movement" thrill into your body today.
 
-One more time: this isn't speed practice. It's timing training for **landing exactly on the 3rd** the instant the chord changes — so if anything, we go even slower. If the landing's off, it doesn't matter how fast you play, it's a bust.
+One more time: this isn't speed practice. It's timing training for **<mark>landing exactly on the 3rd</mark>** the instant the chord changes — so if anything, we go even slower. If the landing's off, it doesn't matter how fast you play, it's a bust.
 
 ## ② Visual Reference
 
-This is a "guide-tone map" plotting Am's 3rd (**C**) and C's 3rd (**E**) together across the whole neck. Both are landing targets (in green), and A marks the anchor point (root) that orients you. Pair up the C-E's that sit close together with your eyes.
+This is a "guide-tone map" plotting Am's 3rd (**C**) and C's 3rd (**E**) together across the whole neck. Both are landing targets (in green), and A marks the anchor point (root) that orients you. Pair up <mark>the C-E's that sit close together</mark> with your eyes.
 
 ```json
 {
@@ -86,7 +86,7 @@ This is a "guide-tone map" plotting Am's 3rd (**C**) and C's 3rd (**E**) togethe
 }
 ```
 
-Now the real connection. Measure 1: Am (land on the 3rd, C) → Measure 2: C (a small shift to the neighboring string, land on the 3rd, E). Moving from measure 1's last note, **string 3 fret 5 (C)**, to measure 2's first note, **string 2 fret 5 (E)**, is today's key hand move.
+Now the real connection. Measure 1: Am (land on the 3rd, C) → Measure 2: C (a small shift to the neighboring string, land on the 3rd, E). Moving from measure 1's last note, **string 3 fret 5 (C)**, to measure 2's first note, **string 2 fret 5 (E)**, is <mark>today's key hand move</mark>.
 
 ```json
 {
@@ -126,7 +126,7 @@ Now the real connection. Measure 1: Am (land on the 3rd, C) → Measure 2: C (a 
 ## ③ Today's Practice (50-minute routine)
 
 **0–10 min · Warm-up (BPM 68)**
-With the metronome at 68, repeat the connecting phrase above in eighth notes. Focus on just one spot: the move from measure 1 to 2, **string 3 fret 5 (C) → string 2 fret 5 (E).** Same fret, neighboring string. Just slide one finger over. Keep going until this move is smooth, with no gap in the sound.
+With the metronome at 68, repeat the connecting phrase above in eighth notes. Focus on just one spot: the move from measure 1 to 2, **<mark>string 3 fret 5 (C) → string 2 fret 5 (E).</mark>** Same fret, neighboring string. Just slide one finger over. Keep going until this move is smooth, with no gap in the sound.
 
 ```json
 {
@@ -164,13 +164,13 @@ With the metronome at 68, repeat the connecting phrase above in eighth notes. Fo
 ```
 
 **10–20 min · Brain training (finding minimal C→E moves)**
-Turn off the metronome and find three nearby **C-E pairs** on the map. For example: (string 3 fret 5 · string 2 fret 5), (string 5 fret 3 · string 5 fret 7), (string 2 fret 1 · string 2 fret 5), (string 1 fret 8 · string 1 fret 12). For each pair, go back and forth saying "C for Am, E when the chord changes." You pass if you can go back and forth within a pair in 3 seconds, even with your eyes closed.
+Turn off the metronome and find three nearby **<mark>C-E pairs</mark>** on the map. For example: (string 3 fret 5 · string 2 fret 5), (string 5 fret 3 · string 5 fret 7), (string 2 fret 1 · string 2 fret 5), (string 1 fret 8 · string 1 fret 12). For each pair, go back and forth saying "C for Am, E when the chord changes." You pass if you can go back and forth within a pair in 3 seconds, even with your eyes closed.
 
 **20–40 min · Real-world feel — Am–C two-chord backing (BPM 68–72)**
-Put on an "Am C backing track" or "Am to C vamp" (one that alternates each measure). Rule: **land on C during Am, land on E during C.** All you're doing is sliding onto the 3rd right as the chord changes. No need for flashy phrases — two or three notes per chord, ending on that chord's 3rd.
+Put on an "Am C backing track" or "Am to C vamp" (one that alternates each measure). Rule: **<mark>land on C during Am, land on E during C.</mark>** All you're doing is sliding onto the 3rd right as the chord changes. No need for flashy phrases — two or three notes per chord, ending on that chord's 3rd.
 
 **40–50 min · Record & reflect (recommended)**
-Record 30–60 seconds of your jam with any recorder. Check: **did I land on the 3rd right on time at each chord change?** If you switch late, the old chord's note bleeds over into the new chord and sounds "off." Slow down playback and loop just that spot. Jot down a note to practice shifting your timing half a beat earlier tomorrow.
+Record 30–60 seconds of your jam with any recorder. Check: **<mark>did I land on the 3rd right on time at each chord change?</mark>** If you switch late, the old chord's note bleeds over into the new chord and sounds "off." Slow down playback and loop just that spot. Jot down a note to practice shifting your timing half a beat earlier tomorrow.
 
 **Today's goal:** In the Am–C backing track, land cleanly on the 3rd (C↔E) at every chord change with no slip, and move back and forth between three minimal C-E pairs with your eyes closed.
 

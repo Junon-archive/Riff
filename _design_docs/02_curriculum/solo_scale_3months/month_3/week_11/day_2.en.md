@@ -10,32 +10,32 @@ lang: en
 
 ## ① Theory / Explanation
 
-Here's why we're doing this today: if yesterday's blues was all about "dragging," funk is the exact opposite. It's **razor-tight, and rests are the star of the rhythm.** Even though you're still landing on the 3rd, you have to sing it completely differently in funk. New backing track, new phrasing — that's the whole point of this week.
+Here's why we're doing this today: if yesterday's blues was all about "dragging," funk is the exact opposite. It's **<mark>razor-tight, and rests are the star of the rhythm.</mark>** Even though you're still landing on the 3rd, you have to sing it completely differently in funk. New backing track, new phrasing — that's the whole point of this week.
 
-Today's funk backing is a classic **Am7 → D9 vamp** — think Cissy Strut, Chameleon territory. When you hit a minor/modal vamp like this, what's the call? **Dorian.** So today's base camp is **A Dorian (A B C D E F# G)**, and it covers both chords by itself.
+Today's funk backing is a classic **<mark>Am7 → D9 vamp</mark>** — think Cissy Strut, Chameleon territory. When you hit a minor/modal vamp like this, what's the call? **Dorian.** So today's base camp is **<mark>A Dorian (A B C D E F# G)</mark>**, and it covers both chords by itself.
 
-Here's today's "aha" moment. Dorian's signature note — the major 6th, **F# (♮6)** — happens to be the exact same note as **D9's 3rd.** So while you're playing around in Dorian, the moment the chord flips to D9, that color note F# automatically becomes your landing target. It's a bit of magic: one mode smoothly bridging two chords.
+Here's today's "aha" moment. Dorian's signature note — the major 6th, **F# (♮6)** — happens to be the exact same note as **<mark>D9's 3rd.</mark>** So while you're playing around in Dorian, the moment the chord flips to D9, that color note F# automatically becomes your landing target. It's a bit of magic: one mode smoothly bridging two chords.
 
 Switching by chord, here's how it breaks down:
 
 - **On Am7 → aim for C (minor 3rd, ♭3).** This is the note that shapes Am7's whole expression.
-- **Once it shifts to D9 → land on F# (major 3rd).** This F# is the very same note as A Dorian's ♮6 color tone.
+- **<mark>Once it shifts to D9 → land on F# (major 3rd).</mark>** This F# is the very same note as A Dorian's ♮6 color tone.
 - So switching = the call between **3rd string 5th fret (C) ↔ 2nd string 7th fret (F#).**
 
 ### 🎙️ Space & Phrasing Mini-Lesson — Funk Edition: Tight Rests & Staccato
 
 In funk, space isn't "a pause" — **it IS the rhythm.** Here are the four things to grab today.
 
-- **Precise rests (space):** On the 16th-note grid, funk needs "hit-rest-hit-rest" razor sharp. Yesterday's blues space was a "loose, drawn-out gap" — today's space is **silence cut exactly on the grid.** Keep every `rest` in the tab locked to its exact spot.
-- **Short staccato:** Don't let notes ring — **snap them out and release your hand instantly.** Use your picking-hand palm mute (`palm_mute`) to choke off the tail. No exceptions for the 3rd either — keep it short.
+- **<mark>Precise rests (space):</mark>** On the 16th-note grid, funk needs "hit-rest-hit-rest" razor sharp. Yesterday's blues space was a "loose, drawn-out gap" — today's space is **silence cut exactly on the grid.** Keep every `rest` in the tab locked to its exact spot.
+- **<mark>Short staccato:</mark>** Don't let notes ring — **snap them out and release your hand instantly.** Use your picking-hand palm mute (`palm_mute`) to choke off the tail. No exceptions for the 3rd either — keep it short.
 - **16th-note subdivision:** Split even the same note, C, into two quick 16th-note "da-dat" hits — that's what turns it into a funk groove.
 - **Dynamics & call-and-response:** A hard hit followed by a soft answer, or tossing out a short motif and leaving the "answer" as an empty rest — that contrast is funk's breathing room.
 
-So today's the day you land on the 3rds of Am7 and D9 (C and F#) — but sing them tight, chopped up with palm-muted staccato and razor-clean rests.
+So today's the day you land on the 3rds of Am7 and D9 (C and F#) — but <mark>sing them tight, chopped up with palm-muted staccato and razor-clean rests</mark>.
 
 ## ② Visual Reference
 
-First up, a **target note map** for the funk vamp. Inside one A Dorian shape, you can reach both Am7's ♭3 (C) and D9's 3rd (F#). Notice that **5th string, 9th fret F#** is labeled "6 (color)" — that's the double-agent note that's both Dorian's ♮6 and D9's 3rd at the same time.
+First up, a **<mark>target note map</mark>** for the funk vamp. Inside one A Dorian shape, you can reach both Am7's ♭3 (C) and D9's 3rd (F#). Notice that **5th string, 9th fret F#** is labeled "6 (color)" — that's the double-agent note that's both Dorian's ♮6 and D9's 3rd at the same time.
 
 ```json
 {
@@ -64,7 +64,7 @@ First up, a **target note map** for the funk vamp. Inside one A Dorian shape, yo
 }
 ```
 
-Second, today's **funk staccato phrase.** Notice how tightly the 16th notes and rests are woven together. In measure 1, over Am7, you **chop up C (♭3) with palm-muted hits, cutting to silence sharply in between.** Measure 2 switches to D9 — **snap out F# short**, then leave it empty with rests again. Having as many `rest`s as notes is exactly funk's identity.
+Second, today's **<mark>funk staccato phrase.</mark>** Notice how tightly the 16th notes and rests are woven together. In measure 1, over Am7, you **chop up C (♭3) with palm-muted hits, cutting to silence sharply in between.** Measure 2 switches to D9 — **snap out F# short**, then leave it empty with rests again. Having as many `rest`s as notes is exactly funk's identity.
 
 ```json
 {
@@ -113,7 +113,7 @@ Second, today's **funk staccato phrase.** Notice how tightly the 16th notes and 
 ## ③ Today's Practice (50-minute routine)
 
 **0–10 min · Warm-up (BPM 100) — 16th-note 4-note sequence**
-At the funk tempo of 100, roll through A Dorian as a **16th-note 4-note sequence.** Today's rule though: **mute the 4th 16th note of every beat short with your palm** to plant that "cutting" feel in your wrist. This isn't about sustaining sound — it's about **cutting it off precisely.**
+At the funk tempo of 100, roll through A Dorian as a **16th-note 4-note sequence.** Today's rule though: **<mark>mute the 4th 16th note of every beat short with your palm</mark>** to plant that "cutting" feel in your wrist. This isn't about sustaining sound — it's about **cutting it off precisely.**
 
 **10–20 min · Brain training — mapping the Am7↔D9 3rd switch**
 Keep the metronome at 100. On the target map, alternate between just two notes: **Am7→C (3rd string, 5th fret) ↔ D9→F# (2nd string, 7th fret).** One hit per click, short and palm-muted. When you fret F#, say out loud "this is D9's 3rd and also Dorian's ♮6." Pass the test once you can switch between the two notes with your eyes closed.
@@ -146,10 +146,10 @@ Keep the metronome at 100. On the target map, alternate between just two notes: 
 ```
 
 **20–40 min · Real-world improv (Am7–D9 funk vamp / 96–100 BPM) — tightness mission**
-Put on "funk backing track Am7 D9" or "A Dorian funk vamp." Two missions. ① Switch 3rds between C↔F# whenever the chord changes. ② **Keep every note short with palm-muted staccato, cutting the rests exactly on the beat in between.** It's the exact opposite of yesterday — dragging is a fail, **snapping out short and resting clean** is a win.
+Put on "funk backing track Am7 D9" or "A Dorian funk vamp." Two missions. ① Switch 3rds between C↔F# whenever the chord changes. ② **<mark>Keep every note short with palm-muted staccato</mark>, cutting the rests exactly on the beat in between.** It's the exact opposite of yesterday — dragging is a fail, **snapping out short and resting clean** is a win.
 
 **40–50 min · Record & reflect (recommended)**
-Record 30 seconds of your jam. Listen back for just two things — ① Did your 3rd switches match the chords? ② **Were the rests cut exactly on the beat grid (not dragging)?** Slow down playback if needed to zoom in on the placement of your 16th-note rests and the length of your staccato.
+Record 30 seconds of your jam. Listen back for just two things — ① Did your 3rd switches match the chords? ② **<mark>Were the rests cut exactly on the beat grid</mark> (not dragging)?** Slow down playback if needed to zoom in on the placement of your 16th-note rests and the length of your staccato.
 
 **Today's finish line:** Fret Am7's C and D9's F# palm-muted, eyes closed. Switch 3rds at least 6 times over the backing track, and keep the groove alive with precisely placed rests (palm-mute stops).
 

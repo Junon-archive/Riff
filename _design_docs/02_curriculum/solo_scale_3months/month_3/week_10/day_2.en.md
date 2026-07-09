@@ -10,19 +10,19 @@ lang: en
 
 ## ① Theory / Explanation
 
-Here's why we're doing this today: yesterday you got A Mixolydian Position 1 into your hands and found where C# (major 3rd) and G (♭7) live. But knowing the location and having **your hand automatically go to C# while you're playing** are two completely different things. Today is about closing that gap.
+Here's why we're doing this today: yesterday you got A Mixolydian Position 1 into your hands and found where C# (major 3rd) and G (♭7) live. But knowing the location and having **<mark>your hand automatically go to C# while you're playing</mark>** are two completely different things. Today is about closing that gap.
 
-There are two approaches. First, **the 4-note sequence**. Instead of just running the scale up and down, it's a pattern that pushes upward "in groups of four, sliding over by one note each time": A-B-C#-D → B-C#-D-E → C#-D-E-F# … like that. Why does this matter? If you memorize the whole block at once, when you improvise it comes out as a "chunk" instead of "individual notes," and it feels stiff. Break it into 4-note groups, and the scale comes alive in your fingers as **small phrase-sized units**. And as you cycle through this sequence, C# (major 3rd) keeps brushing under your fingers over and over, so "C# always lives here" gets burned into your body naturally.
+There are two approaches. First, **<mark>the 4-note sequence</mark>**. Instead of just running the scale up and down, it's a pattern that pushes upward "in groups of four, sliding over by one note each time": A-B-C#-D → B-C#-D-E → C#-D-E-F# … like that. Why does this matter? If you memorize the whole block at once, when you improvise it comes out as a "chunk" instead of "individual notes," and it feels stiff. Break it into 4-note groups, and the scale comes alive in your fingers as **<mark>small phrase-sized units</mark>**. And as you cycle through this sequence, C# (major 3rd) keeps brushing under your fingers over and over, so "C# always lives here" gets burned into your body naturally.
 
-Second, **turning major 3rd targeting into muscle memory**. Yesterday you consciously thought "C# at the end of the phrase" — today, we lock that in as a reflex. You need to be able to fret C# (3rd) and G (♭7) on the fretboard "without thinking," and that's what makes improv feel easy. So today's brain training is a targeting game that only pinpoints C# and G.
+Second, **<mark>turning major 3rd targeting into muscle memory</mark>**. Yesterday you consciously thought "C# at the end of the phrase" — today, we lock that in as a reflex. You need to be able to fret C# (3rd) and G (♭7) on the fretboard "without thinking," and that's what makes improv feel easy. So today's brain training is a targeting game that only pinpoints C# and G.
 
-A little blue note review too. Yesterday you attached C (♭3) to C# with a **bend** — today, let's also try a **hammer-on**. Pick C (3rd string, 5th fret), then hammer immediately up to C# (3rd string, 6th fret) — a quick "tap" with your finger to slide up a half step. Bends are sticky and expressive; hammer-ons are smooth and clean. Having both textures gives the same blue note two different expressions.
+A little blue note review too. Yesterday you attached C (♭3) to C# with a **<mark>bend</mark>** — today, let's also try a **<mark>hammer-on</mark>**. Pick C (3rd string, 5th fret), then hammer immediately up to C# (3rd string, 6th fret) — a quick "tap" with your finger to slide up a half step. Bends are sticky and expressive; hammer-ons are smooth and clean. Having both textures gives the same blue note two different expressions.
 
 Today's goal: run the 4-note sequence smoothly at 90 BPM, fret C# and G instantly with your eyes closed, and attach the blue note to the major 3rd both by bending and by hammering on.
 
 ## ② Visual Reference
 
-First, today's warm-up, the **A Mixolydian 4-note sequence**. Within Position 1, ascend by grouping four notes and sliding up one note at a time. C# (major 3rd) and G (♭7) are highlighted, so stay aware of the colors every time you pass through. One bar = sixteen sixteenth notes.
+First, today's warm-up, the **<mark>A Mixolydian 4-note sequence</mark>**. Within Position 1, ascend by grouping four notes and sliding up one note at a time. C# (major 3rd) and G (♭7) are highlighted, so stay aware of the colors every time you pass through. One bar = sixteen sixteenth notes.
 
 ```json
 {
@@ -62,7 +62,7 @@ First, today's warm-up, the **A Mixolydian 4-note sequence**. Within Position 1,
 }
 ```
 
-Second, the **C# & G target map**. Within Position 1, the major 3rd C# (green, resolution) and ♭7 G (yellow, tension) each appear in two spots. The root A and the blue note C are layered in lightly, too. Today's brain training is done when this picture pops into your head with your eyes closed.
+Second, the **<mark>C# & G target map</mark>**. Within Position 1, the major 3rd C# (green, resolution) and ♭7 G (yellow, tension) each appear in two spots. The root A and the blue note C are layered in lightly, too. Today's brain training is done when this picture pops into your head with your eyes closed.
 
 ```json
 {
@@ -130,16 +130,16 @@ Third, today's bluesy lick. Attach C→C# with a **hammer-on** (bar 1), then att
 ## ③ Today's Practice (50-minute routine)
 
 **0–10 min · Warm-up (BPM 90) — 4-note sequence**
-Ascend through the 4-note sequence above at 90. It's fine to start at 80. The point is **precise timing and even volume.** Every single sixteenth note should come out clear and the same size. Slightly emphasize C# and G as you pass through, staying color-aware — "here!" Once it's smooth, try improvising a descending version too.
+Ascend through the 4-note sequence above at 90. It's fine to start at 80. The point is **<mark>precise timing and even volume.</mark>** Every single sixteenth note should come out clear and the same size. Slightly emphasize C# and G as you pass through, staying color-aware — "here!" Once it's smooth, try improvising a descending version too.
 
 **10–20 min · Brain training (C# & G map game)**
-Look at the second map, and with the metronome off, fret **just C#** in its two spots (5th string 4th fret, 3rd string 6th fret), then **just G** in its two spots (4th string 5th fret, 2nd string 8th fret), alternating. Say each note name out loud. Then close your eyes: when you say "C#!" fret one spot within 3 seconds, when you say "G!" fret one within 3 seconds. Pass with 5 successes in a row.
+Look at the second map, and with the metronome off, fret **<mark>just C#</mark>** in its two spots (5th string 4th fret, 3rd string 6th fret), then **just G** in its two spots (4th string 5th fret, 2nd string 8th fret), alternating. Say each note name out loud. Then close your eyes: when you say "C#!" fret one spot within 3 seconds, when you say "G!" fret one within 3 seconds. Pass with 5 successes in a row.
 
 **20–40 min · Real-world feel (A7 vamp / 85–90 BPM) — ♭7 emphasis mission**
-Put on an "A7 vamp backing track," with two missions today: (1) still land phrases on C#, and (2) work in **at least one emphasized ♭7 G in the middle of a phrase.** Keep building that back-and-forth of hanging tension with G → releasing it into C#. Freely mix in the blue note licks (hammer and bend) too. Success is when you can hear "tension (G) → resolution (C#)" clearly.
+Put on an "A7 vamp backing track," with two missions today: (1) still land phrases on C#, and (2) work in **<mark>at least one emphasized ♭7 G in the middle of a phrase.</mark>** Keep building that back-and-forth of hanging tension with G → releasing it into C#. Freely mix in the blue note licks (hammer and bend) too. Success is when you can hear "tension (G) → resolution (C#)" clearly.
 
 **40–50 min · Record & reflect (recommended)**
-Record 30 seconds of a jam with any recorder. Two checkpoints: (1) was the timing even in the 4-note warm-up, and (2) after playing G, did you really resolve to C#, or did it end up floating on G with no resolution? If needed, slow down playback and zoom in on the moment of the G→C# transition.
+Record 30 seconds of a jam with any recorder. Two checkpoints: (1) was the timing even in the 4-note warm-up, and (2) <mark>after playing G, did you really resolve to C#</mark>, or did it end up floating on G with no resolution? If needed, slow down playback and zoom in on the moment of the G→C# transition.
 
 **Today's completion criteria:** Pass the 4-note sequence at 90 BPM without stopping. Fret C# and G instantly with eyes closed, 5 times in a row. Attach the blue note to the major 3rd using both hammer-on and bend.
 

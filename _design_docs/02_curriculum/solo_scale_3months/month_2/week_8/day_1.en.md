@@ -10,23 +10,23 @@ lang: en
 
 ## ① Theory / Explanation
 
-Here's why we're doing this today. Over the past seven weeks, you've mapped chord tones (1, 3, 5) across the fretboard. But the moment a backing track starts flipping through chords, your hands freeze, right? You're thinking "wait, what chord is this, where do I put my finger" — and by the time you figure it out, the beat's already gone. The reason is that when the chord changes, **you're trying to track all five notes at once**. Your brain just can't keep up with that.
+Here's why we're doing this today. Over the past seven weeks, you've mapped chord tones (1, 3, 5) across the fretboard. But the moment a backing track starts flipping through chords, your hands freeze, right? You're thinking "wait, what chord is this, where do I put my finger" — and by the time you figure it out, the beat's already gone. The reason is that when the chord changes, **you're trying to <mark>track all five notes at once</mark>**. Your brain just can't keep up with that.
 
-So here's a cheat code jazz players have been using for a hundred years: **guide tones**. You grab just one note per chord — the **3rd**. Why the 3rd, of all things? Because the 3rd is the note that decides whether a chord is major or minor — its whole character. The root is in every chord, so it's kind of flat and generic. The 5th overlaps most of the time too. But the 3rd is the chord's "facial expression." Nail just the 3rd, and your ear immediately goes "ah, that's this chord."
+So here's a cheat code jazz players have been using for a hundred years: **<mark>guide tones</mark>**. You grab just one note per chord — the **3rd**. Why the 3rd, of all things? Because the 3rd is <mark>the note that decides whether a chord is major or minor</mark> — its whole character. The root is in every chord, so it's kind of flat and generic. The 5th overlaps most of the time too. But the 3rd is the chord's "facial expression." Nail just the 3rd, and your ear immediately goes "ah, that's this chord."
 
-This week we're conquering a progression that shows up everywhere — jazz, pop, ballads, you name it: the famous **ii-V-I**. In C major, that's **Dm7 → G7 → Cmaj7**. Here's the 3rd — the guide tone — of each chord:
+This week we're conquering a progression that shows up everywhere — jazz, pop, ballads, you name it: the famous **<mark>ii-V-I</mark>**. In C major, that's **Dm7 → G7 → Cmaj7**. Here's the 3rd — the guide tone — of each chord:
 
 - Dm7's 3rd = F (out of D–F–A–C, that's the "F")
 - G7's 3rd = B (out of G–B–D–F, that's the "B")
 - Cmaj7's 3rd = E (out of C–E–G–B, that's the "E")
 
-So this week, you're not memorizing an entire scale — just these three notes: **F → B → E**. Dm7 means F, the instant it's G7 means B, the instant it's Cmaj7 means E. Land just these three notes right on the beat, and people will hear "this player actually knows the chords."
+So this week, you're not memorizing an entire scale — just these three notes: **<mark>F → B → E</mark>**. Dm7 means F, the instant it's G7 means B, the instant it's Cmaj7 means E. Land just these three notes right on the beat, and people will hear "this player actually knows the chords."
 
-And here's a little spoonful of magic to plant today: **G7's B wants to flow into Cmaj7's E.** That's the heart of ii-V-I. That feeling of tension (G7) resolving into release (Cmaj7) — we'll be etching this B→E pull into your ear all week long. For today, though, let's just get the **locations** of these three notes into your hands.
+And here's a little spoonful of magic to plant today: **G7's <mark>B wants to flow into Cmaj7's E</mark>.** That's the heart of ii-V-I. That feeling of tension (G7) resolving into release (Cmaj7) — we'll be etching this B→E pull into your ear all week long. For today, though, let's just get the **locations** of these three notes into your hands.
 
 ## ② Visual Reference
 
-First up, today's main map. All three chords' roots and 3rds are gathered within a single hand position (frets 2–4). The highlighted notes are the guide tones. **F is on string 4, fret 3. B is on string 3, fret 4. E is on string 4, fret 2.** These three spots are our "home base" for the week.
+First up, today's main map. All three chords' roots and 3rds are gathered within a single hand position (frets 2–4). The highlighted notes are the guide tones. **F is on string 4, fret 3. B is on string 3, fret 4. E is on string 4, fret 2.** These three spots are <mark>our "home base" for the week</mark>.
 
 ```json
 {
@@ -54,7 +54,7 @@ First up, today's main map. All three chords' roots and 3rds are gathered within
 }
 ```
 
-Second, those same F, B, and E notes show up all over the neck. We've scattered several positions here so that no matter where you're improvising, you can instantly find "where's the nearest F (or B, or E) to my hand right now?" Today, don't try to memorize all of them — just get a feel for "ah, there's another one over there."
+Second, those same F, B, and E notes show up all over the neck. We've scattered several positions here so that no matter where you're improvising, you can instantly find "<mark>where's the nearest F (or B, or E)</mark> to my hand right now?" Today, don't try to memorize all of them — just get a feel for "ah, there's another one over there."
 
 ```json
 {
@@ -88,7 +88,7 @@ Second, those same F, B, and E notes show up all over the neck. We've scattered 
 ## ③ Today's Practice (50-minute routine)
 
 **0–10 min · Warm-up (BPM 76) — Warming up your sense of the 3rd**
-With the metronome at 76, fret just the three guide tones in the "home" position, alternating in quarter notes: F (string 4, fret 3) → B (string 3, fret 4) → E (string 4, fret 2), one note per click. Every time you fret one, say it out loud: "F! B! E!" Attaching the note names to your voice is the whole point of today's warm-up.
+With the metronome at 76, fret just the three guide tones in the "home" position, alternating in quarter notes: F (string 4, fret 3) → B (string 3, fret 4) → E (string 4, fret 2), one note per click. Every time you fret one, say it out loud: "F! B! E!" <mark>Attaching the note names to your voice</mark> is the whole point of today's warm-up.
 
 ```json
 {
@@ -117,7 +117,7 @@ With the metronome at 76, fret just the three guide tones in the "home" position
 ```
 
 **10–20 min · Brain training (instantly finding F, B, E across multiple positions)**
-Turn off the metronome. Looking at the second map, spot **just the F's** with your eyes — three positions (string 4 fret 3, string 1 fret 1, string 2 fret 6) — and fret each one. Then do the same for **just B**, then **just E**. The point is finding the shortest path from "nearest spot → next spot" for each note. Finish by closing your eyes and fretting the three "home" spots — F, B, E — within 3 seconds. That's a pass.
+Turn off the metronome. Looking at the second map, spot **just the F's** with your eyes — three positions (string 4 fret 3, string 1 fret 1, string 2 fret 6) — and fret each one. Then do the same for **just B**, then **just E**. The point is <mark>finding the shortest path</mark> from "nearest spot → next spot" for each note. Finish by closing your eyes and fretting the three "home" spots — F, B, E — within 3 seconds. That's a pass.
 
 ```json
 {
@@ -149,10 +149,10 @@ Turn off the metronome. Looking at the second map, spot **just the F's** with yo
 ```
 
 **20–40 min · Real-world feel — improv (Dm7-G7-Cmaj7 backing track / BPM 70–76)**
-Find and play a "ii V I backing track C major slow" video or app. Just one rule: **don't do anything else — every time the chord changes, hold the 3rd (F/B/E) of that chord, played from the "home" position, for a long note.** Forget about melody, forget about rhythm — you're only building one reflex: "chord change = fret the 3rd." It's totally fine if you're off. Today's goal is locking in the locations.
+Find and play a "ii V I backing track C major slow" video or app. Just one rule: **don't do anything else — <mark>every time the chord changes, hold the 3rd (F/B/E)</mark> of that chord, played from the "home" position, for a long note.** Forget about melody, forget about rhythm — you're only building one reflex: "chord change = fret the 3rd." It's totally fine if you're off. Today's goal is locking in the locations.
 
 **40–50 min · Record & reflect (recommended)**
-Record just 30 seconds of your last jam with any recording app (a voice memo app works fine). Listen back and check just one thing: **did the moment the chord changed roughly line up with the moment you fretted the 3rd?** If you were late, feel free to drop the BPM to 65 tomorrow. We'll nail the exact timing on Day 3.
+Record just 30 seconds of your last jam with any recording app (a voice memo app works fine). Listen back and check just one thing: **did the moment the chord changed <mark>roughly line up with the moment you fretted the 3rd</mark>?** If you were late, feel free to drop the BPM to 65 tomorrow. We'll nail the exact timing on Day 3.
 
 **Today's completion criteria:** Fret the "home" F, B, E with your eyes closed within 3 seconds. Successfully land the 3rd on chord changes at least 8 times over the backing track.
 
