@@ -29,6 +29,10 @@ tools: Read, Write, Edit, Bash, Glob, Grep
 - **악보/지판 렌더는 직접 만들지 말고 `src/render/`(notation-renderer 산출물, `renderScore(score)` → SVG 문자열)를 사용**한다. 입력은 `src/types/score.ts` 타입의 Score JSON.
 - 새 커리큘럼이 데이터(+manifest) 추가만으로 붙도록 하드코딩된 커리큘럼 분기를 만들지 않는다.
 
+## 업데이트 백로그 + 회귀 규율
+- 계획된 개선 작업은 `_design_docs/05_update_backlog/` 에 묶음별 상세 설계·체크리스트로 있다(예: 01 시각자료 배치 = LessonView/content.ts/파이프라인, 05 태그필터 = HomeView). 착수 전 해당 md 를 읽고, 끝나면 그 문서의 status·체크리스트를 갱신한다. `README.md` 가 인덱스.
+- **콘텐츠 파이프라인(`content.ts`·manifest 소비)이나 LessonView/HomeView 렌더 흐름을 바꾸면**, 기존 3커리큘럼 산출이 안 바뀌는지 `node web_app/scripts/check-invariants.mjs` 로 확인하고 보고한다(가법적 변경 원칙 — 기존 데이터는 새 경로를 안 타야 함).
+
 ## 품질 기준
 - TypeScript 타입 안전(악보 JSON = `score.ts` 타입). 모바일 우선 반응형. 접근성(시맨틱·키보드). 라이트/다크 대응(currentColor/토큰).
 - 변경 후 `npm run build`(= build:content + astro build) 및 타입체크가 통과하는지 확인하고 보고한다.

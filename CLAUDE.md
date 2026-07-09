@@ -15,6 +15,7 @@
 - `_design_docs/01_architecture/` — tech_stack / state_storage
 - `_design_docs/03_data_schema/fretboard_score_schema.json` — 악보 표준 스키마
 - `_design_docs/04_localization/` — translation_map / curriculum_i18n / i18n_key_map
+- `_design_docs/05_update_backlog/` — **업데이트 백로그**(미래 개선 작업 묶음별 상세 설계·상태·체크리스트). 착수 안 한 개선은 여기 md로 문서화 → 나중에 이 문서만 보고 재개. `README.md`가 인덱스.
 - `web_app/docs/technical_spec.md` · `design_spec.md` — 기술·디자인 명세(구현 SSOT)
 
 ## 스택 (현재)

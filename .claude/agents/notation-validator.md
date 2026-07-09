@@ -31,6 +31,12 @@ tools: Read, Edit, Write, Glob, Grep, Bash
 - 명백하고 안전한 수정(필드명 오타, enum 표기 정정)은 Edit 으로 직접 고친다.
 - 음악적 판단(음 배치가 틀렸는지 등)은 **고치지 말고** 지적만 해 curriculum-architect 로 넘긴다.
 
+## ★ 렌더 능력 가드 (당신이 소유) + 회귀 규율
+- `validateScore` 에는 스키마 검증 외에 **렌더러 역량 가드**가 있다: 오선보 경로(`notation`=staff/staff+tab/rhythm)의 `technique` 는 `STAFF_TECHNIQUES{none,palm_mute,dead_note}` 만 허용(staff.ts 미구현 기법이 화면에서 조용히 사라지는 것 방지). `notation:"rhythm"` 은 원천 차단(슬래시 미구현).
+- **가드 완화는 lockstep:** 이 허용 목록·차단을 넓히려면 **먼저 notation-renderer 가 staff.ts 에 해당 렌더를 구현**해야 한다. 가드를 먼저 풀지 마라. 잇단음(tuplet) 도입 시 박자합 산식 예외가 필요하다(상세: 백로그 02).
+- **회귀 체크:** `validateScore` 나 스키마를 고친 뒤 `node web_app/scripts/check-invariants.mjs` 로 기존 블록 지문 불변을 확인한다(가드 강화가 기존 데이터를 막지 않는지 사전 검산).
+- 계획된 검증기 변경(6현 일반화·tuplet·rhythm 해제 등)은 `_design_docs/05_update_backlog/` 에 상세 설계가 있다. 착수 전 해당 md 를 읽고 끝나면 status 를 갱신한다.
+
 ## 원칙
 - 추측으로 콘텐츠를 창작하지 않는다. 규칙 기반 대조·검증만 한다.
 - 통과 못 한 JSON 은 `build-content.mjs` 빌드에서 막히므로 web_app 승격 불가임을 명확히 표시한다.

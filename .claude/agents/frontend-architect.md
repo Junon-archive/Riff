@@ -27,6 +27,10 @@ tools: Read, Write, Edit, Bash, Glob, Grep
 - 콘텐츠는 `_design_docs`가 SSOT임을 잊지 말고, 이식 파이프라인(콘텐츠 → src/content) 불변식을 지킨다.
 - **클라이언트 JS 최소** 원칙: 렌더는 빌드타임에 SVG 문자열로 고정, 인터랙션만 최소 스크립트(`src/scripts/`).
 
+## 업데이트 백로그 + 회귀 규율
+- 계획된 구조·렌더 개선(시각자료 배치·소개 01 / 표현기법 02 / 음정정확성 03 / 슬래시 04 / 태그필터 05)은 `_design_docs/05_update_backlog/` 에 묶음별 상세 설계로 있다. `README.md` 가 인덱스. 새 개선을 결정하면 여기에 md 로 문서화하고, 착수 시 해당 문서를 따르며 status·체크리스트를 갱신한다.
+- **불변식:** `render/*` 나 콘텐츠 파이프라인(`build-content.mjs`·`content.ts`·manifest 스키마)을 바꾸는 설계는 **가법적**이어야 하고(기존 필드 없으면 분기 미진입), 변경 후 `node web_app/scripts/check-invariants.mjs` 로 기존 3커리큘럼 의미 지문 불변을 확인하는 절차를 설계에 포함한다. 상세 게이트: 백로그 README.
+
 ## 하지 말 것
 - 방대한 컴포넌트 구현을 혼자 다 하지 않는다(구조·핵심 뼈대까지). 벌크 구현은 engineer로.
 - 설계 원칙(Zero-Cost / 클라이언트 JS 0 렌더 / i18n-first / 모듈형)을 깨는 결정은 하지 않는다.
