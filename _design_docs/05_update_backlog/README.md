@@ -26,6 +26,7 @@
 | 06 | [기존 커리큘럼 악보 인라인 재배치](06_visual-relocation.md) | 🟢 DONE (77 day, 1 선별제외) | 중간 | 낮음 | 01(완료) |
 | 07 | [PWA 앱화 (Android Play 등재 + iOS/Android 홈 설치)](07_pwa.md) | 🟡 IN_PROGRESS (A·B 검증완료·C 코드완료/안드검증보류·D 미착수) | 중간 | 낮음 | 없음 |
 | 08 | [산문 하이라이트 + 커리큘럼 볼드 (레시피 동결)](08_Highlight.md) | 🔴 TODO | 중간 | 낮음 | 없음 |
+| 09 | [왕초보 일렉 커리큘럼 신설 (1개월·손 만들기)](09_beginner-electric-curriculum.md) | 🔴 TODO (구상 완료·저작 미착수) | 높음 | 낮음 | 없음 |
 
 ## 공통 원칙 — "추가는 되고, 기존은 안 깨진다" (모든 묶음이 준수)
 
