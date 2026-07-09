@@ -78,6 +78,13 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-09 (백로그 10 신설 — 베이스 지원 설계: 클레프·slap·튜닝·다현·지판 + 베이스 커리큘럼)
+- **배경:** 베이스 커리큘럼 신설 준비. `_design_docs/05_update_backlog`에 베이스 전용 문서 부재(03·09에서 스치듯 언급만) → 착수 전 설계 동결.
+- **조사 결과:** 렌더/스키마의 기타 전제를 실측 확인 — `staff.ts:456` `addClef('treble',…,'8vb')` 하드코딩, `instrument?:'guitar'`·`stringCount:6` 리터럴, `technique` enum에 **slap(T/P) 전무**, `fretboard.ts`·`tab.ts` `N_STR=6`. 반면 **03(튜닝계산·다현·조표)·02(오선보 표현기법)가 인프라 절반을 이미 예고**하고 tab 경로는 벤딩/해머/풀을 이미 그림.
+- **신규 문서 `10_bass-support.md`:** 베이스 고유 공백 5대(①bass clef+옥타브 ②slap 썸T/팝P ③instrument enum ④베이스 튜닝 4 EADG/5 BEADG/6 BEADGC ⑤베이스 지판)를 소유. **03②③를 하드 선행, 02를 소프트 선행**으로 참조(중복 금지). Phase B0(선행)~B5(콘텐츠 저작) + 불변보장·V1~V5·정지조건·미해결질문 8건. `fretboard.ts`는 변경금지 대상이라 별도 승인 전까지 초기 트랙 지판 최소화로 우회 명시.
+- **상호참조 반영:** 03에 "베이스 확장=10 소관·stringCount 5 포함·튜닝기본값 10에서 확정", 02에 "slap·베이스클레프=10 소관" 주석. README 인덱스에 10행 추가(선행 03·02).
+- **다음:** 03②③ 착수 여부·베이스 현 수 범위(4 vs 4·5·6)·fretboard.ts 다현화 승인·왕초보 vs 슬랩중급 페르소나 결정(문서 미해결질문) 후 엔진→콘텐츠 순 진행.
+
 ### 2026-07-09 (백로그 08 완료 — 하이라이트 A방식, funk·solo 전체로 확대 → 3커리큘럼 116일 전량)
 - **범위:** `funk_rhythm_2months`(intro+week_1~8 전 32일) + `solo_scale_3months`(intro+week_0~12 전 52일) × 3언어. chord_building(앞 항목)까지 합쳐 **day 116개 + intro 3종 × 3언어에 산문 하늘색 하이라이트 전량 적용 완료**. 08 백로그 status→DONE.
 - **진행 경위:** 나머지 배치를 서브에이전트에 위임했으나 **세션 토큰 한도로 funk·solo 에이전트가 각각 중간 중단**(funk week_6/day_3 ja 8/13, solo week_6/day_2 ja 0/12에서 끊김). 한도 리셋 후 이어받아 (1) 끊긴 2파일 ja를 ko/en 위치에 맞춰 패리티 복구, (2) 완료분(funk 23일+intro, solo 26일+intro) 검증·커밋, (3) 잔여(funk 9일·solo 26일)를 재위임해 완성.

@@ -56,6 +56,7 @@ owner: null
 2. string 범위 검사(1~6)를 stringCount 기반으로.
 3. 타브 줄 수(`tab.ts`), 지판 좌표(`fretboard.ts`는 변경제안 제외 대상 — 별도 승인 필요), 오선보 음정(②의 tuning 기반)을 stringCount/tuning 로 구동.
 4. **선행:** ② 튜닝 읽기가 먼저. 4현 베이스는 표준 BEADGBE가 아니라 BEAD(4현) 등이라 tuning 계산이 전제.
+5. **★베이스 확장은 `10_bass-support.md` 소관:** 이 문서(③)는 stringCount 집합화·타브 줄 수·string 범위까지만 다룬다. **베이스 클레프(bass clef 8vb)·slap(T/P)·instrument enum·베이스 튜닝 기본값(EADG/BEADG/BEADGC)·베이스 지판**은 10이 소유하며 이 문서 ②③를 선행 의존한다. ③에서 stringCount 허용 집합에 **5현도 포함**(4·5·6)하도록 10과 정합.
 
 ## 기존 커리큘럼 불변 보장
 
@@ -89,4 +90,4 @@ owner: null
 
 - 정말 베이스/우쿨렐레 커리큘럼을 할 것인가? (③ 착수 규모의 전제 — 안 할 거면 ①②만)
 - keySignature 표현: 조 이름("G") vs 샾/플랫 개수 — VexFlow 입력 형식과 저작 편의 절충.
-- 4현 튜닝 기본값(베이스 BEAD/EADG?) 정의 위치.
+- 4현 튜닝 기본값(베이스 BEAD/EADG?) 정의 위치. → **10_bass-support.md Phase B3에서 4 EADG / 5 BEADG / 6 BEADGC 로 확정**(렌더 계산 함수 + 스키마 description SSOT).
