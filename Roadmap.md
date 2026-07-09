@@ -78,6 +78,13 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-09 (백로그 01 — 시각자료 배치 + 커리큘럼 소개 완료)
+- **배경:** 악보가 ②시각 자료 섹션에만·산문 뒤에 몰려 렌더돼, 이론/연습 설명 옆에 지판을 못 넣던 제약(사용자 직접 겪은 문제). 커리큘럼 소개 페이지도 부재.
+- **Part A(인라인 배치):** build-content가 네 섹션의 ```json 블록을 문서순 전역 인덱스 `@@SCORE:N@@` 센티넬로 치환 → `data-score-slot` div 후처리, LessonView `hydrateScoreSlots`가 슬롯을 `renderScore` SVG로 그 위치에 인라인 치환(`#scoresMount` 제거). 저자는 ```json을 원하는 위치에 두면 그 자리에 렌더(새 문법 불요). 기존 데이터는 캡션 옆 인라인으로 개선, 악보 데이터 불변.
+- **Part C(커리큘럼 소개):** meta.json 3언어 `intro` 필드 → CurriculumView 헤더 문단 렌더(`.curr-intro`). solo/chord/funk 3커리큘럼에 각 3문단 토스톤 소개(localization-writer). 없으면 미표시(하위호환).
+- **Part B(증발 경고):** visual 밖 악보 경고를 먼저 넣었다가 Part A로 정상 렌더되며 대체.
+- **검증:** 각 커밋 V1 build 0 · V3 check-invariants 회귀 0(315블록 데이터 지문 불변) · typecheck 0err · 이론 섹션 지판 렌더 기능 테스트. 커밋 1f38647·657c552·b433187. 백로그 01 status→DONE.
+
 ### 2026-07-09 (검증 — 렌더러 역량 가드 + 의미 불변식 회귀 체크로 기존 커리큘럼 보호)
 - **배경:** 미래에 밴딩·해머링을 쓰는 커리큘럼 추가 시 기존 3개 커리큘럼 렌더가 안 바뀌게 보호하되, "픽셀 락"의 뻣뻣함 없이 미래 개선은 자유롭게 두고 싶음.
 - **가드(build-content.mjs):** 렌더러 역량 계약 — notation이 staff/staff+tab/rhythm(→staff.ts)이면 technique는 `STAFF_TECHNIQUES{none,palm_mute,dead_note}`만 허용. staff.ts 미구현 기법(bend·hammer_on·pull_off·slide·vibrato·harmonic)을 오선보 경로에서 쓰면 빌드 차단 → tab.ts 경로(notation 미지정/"tab")로 내거나 staff.ts 렌더 추가 후 Set 확장. 락이 아니라 능력 계약(한 곳 수정으로 확장).
