@@ -53,7 +53,8 @@
 - **📁 업데이트 백로그 — `_design_docs/05_update_backlog/`** — 미래 렌더러/구조 개선을 작업 묶음별 상세 설계로 문서화. 각 md에 관련 코드 위치·수정 상세·기존 불변 보장·검증 게이트·체크리스트·status. 착수 시 해당 문서 따라 진행하고 status 갱신. **README.md가 인덱스.** 현재 상태:
   - 🟢 **완료:** 01 시각자료 배치+소개 · 06 악보 인라인 재배치(77 day) · 08 산문 하이라이트(116 day+intro 3, `<mark>` 4182개) · 03 악보 음정 정확성(①조표+②튜닝+③다현/지판) · **02 표현기법(A 기법마커·B tie·C tuplet·D 비4/4빔)**. (2·3 모두 기존 116일 바이트 불변)
   - 🟡 **진행 중:** 07 PWA 앱화(A·B 검증완료·C 안드검증보류·D 미착수) · 09 왕초보 일렉 커리큘럼(프롬프트·meta·overview 완료·day 미착수).
-  - 🔴 **대기:** 04 슬래시 리듬 · 05 태그 필터 · 10 베이스 지원(클레프·slap·튜닝 기본값·엔진, 선행 02·03 완료).
+  - 🔴 **대기:** 04 슬래시 리듬 · 05 태그 필터.
+  - 🟡 **10 베이스**: 엔진(B0~B4: 클레프·slap·튜닝·다현·지판·옥타브앵커) 완료 · 커리큘럼 저작(B5)만 대기.
 - **신규 커리큘럼 — 『코드 빌딩 시스템』(2개월/8주)** — 생성용 주차별 프롬프트 준비 완료(`_design_docs/02_curriculum/Chord Building System_2months/`, 표준 스키마로 정합화). 다음: 프롬프트로 콘텐츠 생성 → `meta.json`+day md → 빌드(악기/토픽 2종+ 되면 필터 칩 자동 노출).
 - **타브 재생 기능** — 향후 자체 Web Audio로 릭 재생·속도조절(AlphaTab 미채택 결정, 필요 시 자체 구현).
 - **오선보 v2(선택)** — 산문 label·technique(H/P/sl/P.M.) 오버레이, 리듬 전용 슬래시 표기. (v1 오선보+타브 결합은 구현 완료 — 위 ✅ 참조.)
@@ -80,6 +81,14 @@
 ---
 
 ## 4. 변경 로그 (Changelog)
+
+### 2026-07-09 (백로그 10 베이스 엔진 — instrument·bass clef·옥타브 앵커·slap T/P)
+- **B1 instrument+클레프:** `instrument:'bass'`(타입·스키마·검증기). staff.ts가 `addClef('bass',…,'8vb')` + bass 오선 라인 앵커(G2/43·A3/57)로 분기. guitar(기본)는 기존 treble 그대로.
+- **B1 옥타브 앵커 수정(핵심):** `resolveOpenMidi`가 기타 옥타브(OPEN_MIDI)를 앵커로 써 베이스가 2옥타브 틀리던 것을 `standardOpen`/`BASS_OPEN_LOW_TO_HIGH`로 수정 — 4 EADG=28·33·38·43, 5 BEADG=+B0(23), 6 BEADGC=+C3(48). tuning 기반 정확 계산.
+- **B2 슬랩:** technique `slap_thumb`·`slap_pop`(타입·스키마·검증기). tab.ts=노트 위 T/P 글자, staff.ts=T/P Annotation. (범례 i18n은 H·P·sl과 동일하게 SVG 리터럴 — 범례 UI 도입 시 일괄.)
+- **B3·B4:** stringCount 4·5·6·다현 지판은 03③에서 선반영. 베이스 튜닝 기본값 = `BASS_OPEN_LOW_TO_HIGH`.
+- **기존 무영향:** 기타(instrument 미지정/guitar·6현)는 전 분기 기존 환원 → **dist 전체 md5 `31d885e9…` 바이트 동일**. invariants 315블록 회귀 0, astro check 0err, build 361p. 격리 렌더로 베이스 클레프 분기·타브 4줄·슬랩 T/P 확인.
+- **→ 백로그 10 엔진(B0~B4) 완료.** 남은 것은 베이스 커리큘럼 저작(B5) — 이제 엔진 위에서 4·5현 병행 제시로 저작 가능.
 
 ### 2026-07-09 (백로그 02-A 고도화 — 표현기법 텍스트 마커 → 정식 글리프)
 - **업그레이드:** bend=타브 `Bend`(벤딩 화살표+목표 라벨), vibrato=`Vibrato`(물결선), hammer_on/pull_off=`Curve`(이음줄 슬러)+H·P 라벨, slide=`TabSlide`(사선)+sl 라벨. harmonic는 'harm.' 텍스트 유지(VexFlow 하모닉 글리프 부재). staff-only 모드는 밴딩·비브라토 텍스트 폴백.

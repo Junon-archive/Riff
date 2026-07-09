@@ -142,7 +142,9 @@ const NOTATIONS = new Set(['tab', 'staff', 'staff+tab', 'rhythm']);
 // technique enum(오타 조용히 통과 방지). dead_note=음정 없는 뮤트 타격음(타브 X), palm_mute=음정 있는 P.M.
 const TECHNIQUES = new Set([
   'none', 'hammer_on', 'pull_off', 'slide', 'bend', 'vibrato', 'palm_mute', 'dead_note', 'harmonic',
+  'slap_thumb', 'slap_pop', // ★10-B2 슬랩(썸/팝)
 ]);
+const INSTRUMENTS = new Set(['guitar', 'bass']); // ★10-B1
 const ROLES = new Set(['root', 'chord_tone', 'target', 'color', 'blue_note', 'scale', 'passing']);
 const STROKES = new Set(['down', 'up', 'arpeggio']); // 스트럼/아르페지오
 const FEELS = new Set(['straight', 'swing8', 'swing16']);
@@ -160,6 +162,7 @@ const KEY_SIGNATURES = new Set([
 const STAFF_TECHNIQUES = new Set([
   'none', 'palm_mute', 'dead_note',
   'hammer_on', 'pull_off', 'slide', 'bend', 'vibrato', 'harmonic',
+  'slap_thumb', 'slap_pop', // ★10-B2 슬랩(오선보 위 T/P 마커)
 ]);
 const STAFF_NOTATIONS = new Set(['staff', 'staff+tab', 'rhythm']);
 // duration → 16분음표 단위(마디 박자합 검산용). dotted 는 1.5배.
@@ -172,6 +175,8 @@ function validateScore(score, ctx) {
   if (!SCORE_TYPES.has(score.type)) at(`type 부정확: ${score.type}`);
   if (!score.meta || typeof score.meta !== 'object') at('meta 누락');
   if (typeof score.meta.title !== 'string') at('meta.title 누락');
+  if (score.meta.instrument !== undefined && !INSTRUMENTS.has(score.meta.instrument))
+    at(`meta.instrument 부정확(guitar|bass): ${score.meta.instrument}`);
   if (![4, 5, 6].includes(score.meta.stringCount)) at(`meta.stringCount 는 4·5·6 만 허용: ${score.meta.stringCount}`);
   // 유효 현 수(범위검사 상한). 잘못된 값이면 6으로 폴백해 후속 검사 진행.
   const nStr = [4, 5, 6].includes(score.meta.stringCount) ? score.meta.stringCount : 6;

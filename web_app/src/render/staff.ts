@@ -60,6 +60,20 @@ const NOTE_PC: Record<string, number> = {
   C: 0, 'C#': 1, Db: 1, D: 2, 'D#': 3, Eb: 3, E: 4, F: 5,
   'F#': 6, Gb: 6, G: 7, 'G#': 8, Ab: 8, A: 9, 'A#': 10, Bb: 10, B: 11,
 };
+/** 베이스 표준 개방현 실제음(concert MIDI), 최저현→최고현. 4=EADG·5=BEADG·6=BEADGC. ★10-B1 */
+const BASS_OPEN_LOW_TO_HIGH: Record<number, number[]> = {
+  4: [28, 33, 38, 43], // E1 A1 D2 G2
+  5: [23, 28, 33, 38, 43], // B0 E1 A1 D2 G2
+  6: [23, 28, 33, 38, 43, 48], // B0 E1 A1 D2 G2 C3
+};
+/** 표준 개방현 실제음(concert) 앵커. 기타=EADGBE(OPEN_MIDI), 베이스=위 표. 현번호 str: 1=최고음. */
+function standardOpen(instrument: string | undefined, stringCount: number, str: number): number {
+  if (instrument === 'bass') {
+    const lh = BASS_OPEN_LOW_TO_HIGH[stringCount];
+    return (lh && lh[stringCount - str]) ?? 43;
+  }
+  return OPEN_MIDI[str] ?? 40;
+}
 /**
  * meta.tuning(현 이름 배열, index0=최저현 … 표준 EADGBE)을 읽어 "현 번호 → 개방현 실제음 MIDI"
  * 함수를 만든다. tuning 이 없거나 stringCount 와 길이가 안 맞으면 표준(OPEN_MIDI)으로 폴백
@@ -67,10 +81,15 @@ const NOTE_PC: Record<string, number> = {
  * 음이름만 있고 옥타브가 없으므로 각 현의 표준 개방음(anchor)에 **±6반음 이내 최근접 옥타브**로
  * 해석한다(Drop-D=D2, DADGAD 등 비표준도 자연스럽게 맞음). ★03② 튜닝 무시 잠재 버그 수정.
  */
-function resolveOpenMidi(meta?: { tuning?: unknown; stringCount?: number }): (str: number) => number {
-  const std = (str: number): number => OPEN_MIDI[str] ?? 40;
-  const tuning = meta?.tuning;
+function resolveOpenMidi(meta?: {
+  tuning?: unknown;
+  stringCount?: number;
+  instrument?: string;
+}): (str: number) => number {
   const n = meta?.stringCount ?? 6;
+  const inst = meta?.instrument;
+  const std = (str: number): number => standardOpen(inst, n, str);
+  const tuning = meta?.tuning;
   if (!Array.isArray(tuning) || tuning.length !== n) return std;
   return (str: number): number => {
     const raw = tuning[n - str]; // 현 번호 str(1=최고음) → tuning index (n-str)
@@ -143,6 +162,8 @@ const MAX_MW = 480; // 마디 최대 폭(16분음표 16개 등 최대 밀도)
 const PX_PER_SEMI = 2.9; // 반음당 세로 픽셀(오선 간격 근사)
 const TREBLE_TOP_LINE = 64; // 오선보 맨 아래 선 = 표기 E4(MIDI 64)
 const TREBLE_HI_LINE = 77; // 오선보 맨 위 선 = 표기 F5(MIDI 77)
+const BASS_BOTTOM_LINE = 43; // ★10-B1 bass clef 맨 아래 선 = 표기 G2(MIDI 43)
+const BASS_TOP_LINE = 57; // bass clef 맨 위 선 = 표기 A3(MIDI 57)
 
 /* ---- jsdom 싱글턴(+getBBox 텍스트측정 스텁) -------------------------- */
 let _doc: Document | null = null;
@@ -227,6 +248,10 @@ function techniqueLetter(n: TabNoteData, withTab: boolean): string | null {
       return n.slideToFret != null ? `sl.${n.slideToFret}` : 'sl.';
     case 'harmonic':
       return 'harm.';
+    case 'slap_thumb':
+      return 'T'; // ★10-B2 슬랩 썸
+    case 'slap_pop':
+      return 'P'; // ★10-B2 슬랩 팝
     case 'bend':
       return withTab ? null : `bend ${bendLabel(n.bendTarget)}`;
     case 'vibrato':
@@ -535,6 +560,10 @@ export function renderStaff(score: Score, mode: StaffMode): string {
   // 개방현 실제음 = meta.tuning 계산(없으면 표준 EADGBE 폴백). ★03② — OPEN_MIDI 하드코딩 대체.
   const openOf = resolveOpenMidi(score.meta);
   const nStr = score.meta?.stringCount ?? 6; // ★03③ — string 범위 상한(6=기존 불변)
+  // ★10-B1 베이스: bass clef + 오선 라인 앵커 분기. guitar(기본)는 기존 treble 상수 → 불변.
+  const isBass = score.meta?.instrument === 'bass';
+  const bottomLine = isBass ? BASS_BOTTOM_LINE : TREBLE_TOP_LINE;
+  const topLine = isBass ? BASS_TOP_LINE : TREBLE_HI_LINE;
   // ★03① 조표: meta.keySignature 있으면 clef 뒤에 조표. 없으면 null → ksW=0 → 폭·레이아웃 불변.
   const keySig = validKeySignature(score.meta?.keySignature);
   const ksW = keySig ? 10 + 6 * (KEY_ACCIDENTALS[keySig] ?? 0) : 0; // 조표 폭 예약(임시표 수 비례)
@@ -577,14 +606,14 @@ export function renderStaff(score: Score, mode: StaffMode): string {
       }
     }
     if (minMidi === 999) {
-      minMidi = TREBLE_TOP_LINE;
-      maxMidi = TREBLE_TOP_LINE;
+      minMidi = bottomLine;
+      maxMidi = bottomLine;
     }
     // concert MIDI → 표기(written) MIDI: pitchOf 와 동일하게 옥타브를 올려(반음 12×SHIFT) 비교.
     const writtenMin = minMidi + 12 * WRITTEN_OCTAVE_SHIFT;
     const writtenMax = maxMidi + 12 * WRITTEN_OCTAVE_SHIFT;
-    const belowPx = Math.max(0, TREBLE_TOP_LINE - writtenMin) * PX_PER_SEMI; // 저음 렛저라인 여유
-    const abovePx = Math.max(0, writtenMax - TREBLE_HI_LINE) * PX_PER_SEMI; // 고음 렛저라인 여유
+    const belowPx = Math.max(0, bottomLine - writtenMin) * PX_PER_SEMI; // 저음 렛저라인 여유
+    const abovePx = Math.max(0, writtenMax - topLine) * PX_PER_SEMI; // 고음 렛저라인 여유
     const trebleDy = Math.round(16 + abovePx);
     const tabDy = Math.round(trebleDy + 80 + belowPx + 16);
     const sysH = withTab ? tabDy + 150 : Math.round(trebleDy + 80 + belowPx + 22);
@@ -612,7 +641,7 @@ export function renderStaff(score: Score, mode: StaffMode): string {
       const stave = new Stave(x, sysTop + trebleDy, thisStaveW);
       // 기타 표기: treble-8vb(클레프 아래 작은 "8"). 음표는 pitchOf 에서 +1 옥타브로 표기 →
       // 8vb 주석과 합쳐져 "다른 기타 악보와 위치 정렬 + 실제음 정확"이 성립한다.
-      stave.addClef('treble', 'default', '8vb');
+      stave.addClef(isBass ? 'bass' : 'treble', 'default', '8vb');
       if (keySig) stave.addKeySignature(keySig); // ★03① 조표(clef 뒤·박자표 앞)
       if (tabData.timeSignature) stave.addTimeSignature(tabData.timeSignature);
       // 각 줄 첫 마디에 마디 번호.

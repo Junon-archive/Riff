@@ -236,6 +236,14 @@ export function renderTab(score: Score): string {
         );
         break;
       }
+      case 'slap_thumb':
+      case 'slap_pop': {
+        // ★10-B2 슬랩: 썸(T)·팝(P) 글자 표기. 노트 위에.
+        parts.push(
+          `<text x="${p.x}" y="${p.y - NOTE_R - 4}" text-anchor="middle" font-size="10" font-weight="800" fill="${col}">${t === 'slap_thumb' ? 'T' : 'P'}</text>`,
+        );
+        break;
+      }
       case 'harmonic':
         // 프렛 숫자를 ⟨⟩ 로 감싼다 — 노트 렌더 단계에서 처리(marker 로 표시).
         break;

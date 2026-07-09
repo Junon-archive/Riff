@@ -1,6 +1,6 @@
 ---
 id: 10-bass-support
-status: TODO
+status: IN_PROGRESS (엔진 B0~B4 완료 2026-07-09 — 클레프·slap·튜닝·다현·지판·옥타브앵커. 콘텐츠 저작 B5만 대기)
 priority: medium
 risk: high
 depends_on: [03, 02]     # 03② 튜닝읽기·03③ 다현 = 하드 선행. 02 = staff 경로 표현기법(소프트, staff+tab 사용 시).
@@ -134,23 +134,22 @@ owner: null
 - [x] 03② 튜닝 계산(OPEN_MIDI 대체) 완료 + 골든 스냅샷 6현 불변
 - [x] 03③ stringCount 집합화(4·5·6) + 타브 줄 수·현이름·string 범위 + **fretboard.ts 다현화** stringCount/tuning 구동 (6현 픽셀 불변, 4·5현 렌더 확인)
 
-**Phase B1 — instrument + 베이스 클레프**
-- [ ] instrument enum `["guitar","bass"]`(스키마·타입), 기본 guitar
-- [ ] staff.ts 클레프 분기(bass 8vb) + bass 오선 라인 상수
-- [ ] 베이스 tuning 기반 음정 계산 정확(4현 EADG 실제음/표기 확인)
-- [ ] V4 골든 스냅샷 기존 6현 오선보 픽셀 불변
+**Phase B1 — instrument + 베이스 클레프 ✅ 완료(2026-07-09)**
+- [x] instrument enum `["guitar","bass"]`(스키마·타입·검증기), 기본 guitar
+- [x] staff.ts 클레프 분기(`addClef('bass',…,'8vb')`) + bass 오선 라인 상수(BASS_BOTTOM=G2/43·BASS_TOP=A3/57)
+- [x] **베이스 개방현 옥타브 앵커 수정**(`standardOpen`/`BASS_OPEN_LOW_TO_HIGH`): 기타 앵커로 계산하면 2옥타브 틀림 → 4 EADG=28·33·38·43, 5 BEADG=23·…, 6 BEADGC=…·48. tuning 기반 정확 계산
+- [x] V4 골든 스냅샷 기존 6현(기타) 오선보 픽셀 불변 — dist md5 `31d885e9…` before==after
 
-**Phase B2 — slap T/P**
-- [ ] technique enum `slap_thumb`·`slap_pop` 추가(스키마·타입)
-- [ ] tab.ts T/P 글자 렌더
-- [ ] (선택) staff.ts T/P + STAFF_TECHNIQUES 완화(렌더 후)
-- [ ] i18n T=Thumb/P=Pop 3언어 범례 키
+**Phase B2 — slap T/P ✅ 완료(2026-07-09)**
+- [x] technique enum `slap_thumb`·`slap_pop` 추가(타입·스키마·검증기 TECHNIQUES/STAFF_TECHNIQUES)
+- [x] tab.ts T/P 글자 렌더(노트 위) + staff.ts T/P Annotation
+- [~] i18n T=Thumb/P=Pop 범례 키 — **N/A(현행 일관):** H·P·sl·P.M. 등 모든 기법 약어가 SVG 리터럴이고 별도 범례 UI 없음. 슬랩 T/P도 동일 관례(리터럴). 범례 UI 도입 시 일괄 처리.
 
 **Phase B3 — 베이스 튜닝·다현 완성 (4·5현 둘 다 필수)**
-- [ ] 기본 튜닝 정의(4 EADG / 5 BEADG / 6 BEADGC) + 순서 규약(5현=string 1~5, 5=최저 B) 문서화
-- [ ] stringCount 4·5·6 포함, string 범위 stringCount 구동
-- [ ] **4현 픽스처** 타브 4줄·지판 4현·음정 검증
-- [ ] **5현 픽스처** 타브 5줄·지판 5현·저음 B(표기 B1) 렛저라인·음정 검증
+- [x] 기본 튜닝 정의(4 EADG / 5 BEADG / 6 BEADGC) — `BASS_OPEN_LOW_TO_HIGH`(staff.ts) 실제음 앵커 + 03 스키마 규약(index0=최저현). 5현=string 1~5, 5=최저 B
+- [x] stringCount 4·5·6 포함, string 범위 stringCount 구동 — 03③에서 완료
+- [x] **4현 픽스처** 타브 4줄·지판 4현·음정(E1~G2) 검증 — 2026-07-09
+- [x] **5현 픽스처** 타브 5줄·지판 5현·저음 B(B0→표기 B1) 음정 검증 — 앵커 23 확인
 
 **Phase B4 — 베이스 지판 (범용 다현화는 03③에서 완료)**
 - [x] 03③ fretboard.ts 범용 다현화(N_STR→stringCount, 현이름=tuning, 좌표·굵기·범위) — 2026-07-09

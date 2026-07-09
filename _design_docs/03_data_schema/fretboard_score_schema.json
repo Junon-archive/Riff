@@ -18,7 +18,7 @@
       "properties": {
         "title": { "type": "string" },
         "titleI18nKey": { "type": "string", "description": "제목 다국어 키(선택)" },
-        "instrument": { "type": "string", "enum": ["guitar"], "default": "guitar" },
+        "instrument": { "type": "string", "enum": ["guitar", "bass"], "default": "guitar", "description": "기타=6현 treble-8vb, 베이스=4·5(6)현 bass clef-8vb. 클레프·개방현 옥타브 앵커를 결정." },
         "stringCount": { "type": "integer", "enum": [4, 5, 6], "default": 6, "description": "현 수. 기타=6, 베이스=4·5(6). tuning 길이와 일치해야 함(검증기 강제)." },
         "tuning": {
           "type": "array",
@@ -122,7 +122,7 @@
                     "rest": { "type": "boolean", "default": false, "description": "쉼표(여백/프레이징 표현에 사용). 렌더러 계약: rest=true이면 string/fret은 자리채움용으로 무시하고 duration만큼 공백으로 렌더한다." },
                     "technique": {
                       "type": "string",
-                      "enum": ["none", "hammer_on", "pull_off", "slide", "bend", "vibrato", "palm_mute", "dead_note", "harmonic"],
+                      "enum": ["none", "hammer_on", "pull_off", "slide", "bend", "vibrato", "palm_mute", "dead_note", "harmonic", "slap_thumb", "slap_pop"],
                       "default": "none",
                       "description": "구 hammer→hammer_on, pull→pull_off 정규화. fade_out은 렌더 대상 아님(제거). dead_note=음정 없는 뮤트 타격음(고스트/뮤트 스크래치/커팅)→타브 X·오선보 X 노트헤드. palm_mute=음정 있으나 오른손 손날로 눌러 답답하게(P.M.). 둘은 별개."
                     },
