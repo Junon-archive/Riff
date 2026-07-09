@@ -51,10 +51,10 @@ owner: null
 
 ### 트랙 A — 설치형 PWA 토대 (세 목표의 전제, 비용 $0)
 
-1. **매니페스트:** `public/manifest.webmanifest`(또는 `@vite-pwa/astro` 자동 생성) — `name`·`short_name`·`icons`·`display:"standalone"`·`theme_color`·`background_color`·`start_url:"/"`·`scope:"/"`·`lang`·`categories`. i18n는 매니페스트가 단일 언어라 대표값(ko 또는 영문) 하나로.
-2. **아이콘 세트:** `Base.astro:130-131` 픽 로고 SVG에서 파생 — 192×192·512×512·**maskable 512**(안전영역 패딩)·`apple-touch-icon` 180×180(투명배경 지양). 원본(SSOT)은 `assets/`, 산출은 `public/`(듀오톤 썸네일과 동일 패턴, playbook §8 참조). 일회성 sharp 스크립트 권장(빌드 파이프라인 미연결).
-3. **서비스워커:** `@vite-pwa/astro`(워크박스) devDependency 추가 → 빌드 시 SW 자동 생성. **런타임 추가는 SW 하나뿐**(무런타임 프레임워크 원칙 유지).
-4. **캐싱 전략(결정 필요):** 빌드 산출물이 **361페이지**(116일×3언어+홈·커리큘럼)라 전량 precache는 무겁다 → **런타임 캐싱** 권장: HTML=StaleWhileRevalidate, `/_astro/*`=CacheFirst(immutable), 이미지=CacheFirst. "방문한 레슨만 오프라인" vs "전체 사전 다운로드" 선택.
+1. **매니페스트:** `public/manifest.webmanifest`(또는 `@vite-pwa/astro` 자동 생성) — `name:"Riff"`·`short_name:"Riff"`·`icons`·`display:"standalone"`·`theme_color`·`background_color`·`start_url:"/"`·`scope:"/"`·`lang:"ko"`·`categories:["education"]`. 매니페스트는 단일 언어라 대표값(ko) 하나로.
+2. **아이콘 세트:** **현 픽 로고 SVG**(`Base.astro:130-131`)에서 파생(확정) — 192×192·512×512·**maskable 512**(안전영역 패딩)·`apple-touch-icon` 180×180(투명배경 지양). 원본(SSOT)은 `assets/`, 산출은 `public/`(듀오톤 썸네일과 동일 패턴, playbook §8 참조). 일회성 sharp 스크립트 권장(빌드 파이프라인 미연결).
+3. **서비스워커:** `@vite-pwa/astro`(워크박스) devDependency 추가 → 빌드 시 SW 자동 생성, `registerType:'autoUpdate'`. **런타임 추가는 SW 하나뿐**(무런타임 프레임워크 원칙 유지).
+4. **캐싱 전략(확정: App Shell + 방문분 런타임):** 전량 precache 안 함(성장하는 콘텐츠에 확장 불가). **precache = 앱 셸만**(해시 자산 `/_astro/*`·매니페스트·아이콘·핵심 HTML) → 오프라인에서도 즉시 열림. **레슨 본문·이미지 = 방문 시 런타임 캐싱**(HTML=StaleWhileRevalidate/NetworkFirst, `/_astro/*`=CacheFirst, 이미지=CacheFirst). 새 커리큘럼이 늘어도 precache 목록·용량 불변.
 5. **head 메타:** `Base.astro <head>`에 `<link rel="manifest">`·`theme-color`·apple 메타(아래 트랙 B) 추가. viewport는 이미 `viewport-fit=cover`라 standalone 적합.
 
 ### 트랙 B — iOS 홈 화면 추가 (비용 $0, 대부분 A로 충족)
@@ -71,10 +71,10 @@ owner: null
 
 ### 트랙 D — Google Play 등재 (TWA 래핑, 비용 $25 1회)
 
-1. **Play Console 개발자 등록** — $25(1회) + 신원 확인.
-2. **TWA 패키지:** **PWABuilder**(웹 UI, 가장 쉬움) 또는 **Bubblewrap**(CLI)로 서명된 `.aab` 생성. Mac 불필요(JDK/Android SDK는 Bubblewrap이 처리).
+1. **Play Console 개발자 등록** — $25(1회) + 신원 확인. 개발자명 **Junon**(확정).
+2. **TWA 패키지:** **PWABuilder**(웹 UI, 가장 쉬움) 또는 **Bubblewrap**(CLI)로 서명된 `.aab` 생성. Mac 불필요(JDK/Android SDK는 Bubblewrap이 처리). **패키지명 `dev.pages.guitar_riff.twa`**, 앱 표시명 **Riff**, 대상 URL `https://guitar-riff.pages.dev`(도메인 유지 확정).
 3. **Digital Asset Links:** `public/.well-known/assetlinks.json`에 앱 서명키 SHA-256 등록 → 주소창 제거·소유권 검증. **Play 최초 업로드 후** Google 제공 앱 서명키 지문으로 확정(선후관계 주의 — 아래 정지조건).
-4. **개인정보처리방침 라우트 신설** — Play 필수. localStorage만 쓰므로 "회원가입·서버·수집 없음, 진도는 기기 저장" 내용. i18n 3언어 여부 결정.
+4. **개인정보처리방침 라우트 신설** — Play 필수. localStorage만 쓰므로 "회원가입·서버·수집 없음, 진도는 기기 저장" 내용. i18n 3언어 여부는 남은 결정(미해결 질문).
 5. **스토어 자산:** 아이콘 512·피처그래픽 1024×500·폰 스크린샷 2장+·짧은/긴 설명·콘텐츠 등급 설문·데이터 안전(Data Safety) 양식.
 6. **라우팅:** TWA는 웹을 그대로 표시 → **웹 업데이트 시 앱 자동 반영**(재심사 불필요). 래퍼 자체 버전업/타깃 API 상향 시만 재빌드.
 
@@ -87,6 +87,27 @@ owner: null
 | iOS App Store | **$0** | 안 함 |
 | (선택) 커스텀 도메인 | ~$10–15/년 | 필수 아님(`pages.dev`로 TWA 가능) |
 | **합계(필수)** | **$25 1회** | 이후 유지비 0 |
+
+## 지금 착수 가능 범위 (08 하이라이트 작업과 독립, 2026-07-09 검증)
+
+**근거(git):** 08은 Phase 0 코드(토큰·intro 렌더·build-content)를 이미 커밋(`3e790e1`)했고, 잔여 작업은 **`_design_docs/02_curriculum/**/day_*.md` 콘텐츠 배치뿐**이다. 07이 손댈 파일(`Base.astro`·`astro.config.mjs`·`package.json`·`public/`·`src/pages/`·`src/scripts/`)은 **08이 하나도 건드리지 않는다**(전부 다른 커밋이 마지막 수정자). → **파일 충돌 0.**
+
+**지금 바로 착수 가능(08과 무충돌):**
+- **트랙 A 전체** — 아이콘 생성(`assets/`→`public/`), 매니페스트(`public/`), SW(`@vite-pwa/astro`→`package.json`·`astro.config.mjs`), head 메타(`Base.astro`), 캐싱 설정. 모두 08 미접촉 파일.
+- **트랙 B 전체** — apple-touch-icon(`public/`), apple 메타(`Base.astro`), 스플래시(`public/`).
+- **트랙 C** — A의 SW+매니페스트 완성 시 자동 충족. 선택 설치 버튼(`src/scripts/`).
+- **트랙 D 코드부** — 개인정보처리방침 라우트(`src/pages/` 신규)·`assetlinks.json`(`public/.well-known/`).
+- **외부·비코드(성질상 독립)** — Play 계정 등록($25), 스토어 자산(스크린샷·피처그래픽·설명), 개인정보처리방침 문안 초안, 아이콘/매니페스트 값 확정.
+
+**07 내부 의존(08과는 무관):**
+- 트랙 D의 TWA 패키징·assetlinks 지문 확정은 **트랙 A~C가 실제 배포되어 설치 가능**해야 진행(assetlinks SHA-256은 Play 최초 업로드 후 부여).
+
+**조율 포인트(충돌 아님, 위생 수칙):**
+1. **커밋 위생:** PWA 커밋 시 08의 `day_*.md`·`08_Highlight.md`를 절대 스테이징하지 않는다(파일 지정 add).
+2. **build-content.mjs 재접촉 금지:** 08 Phase 0에서 이미 커밋됨. PWA는 이 파일을 건드릴 필요가 없다.
+3. **공용 빌드 검증:** `npm run build`가 08의 in-flight day md도 함께 빌드하지만 순수 콘텐츠라 무해(PWA 검증에 영향 없음).
+
+**권장:** 트랙 A→B→C를 한 스트림으로 지금 구현 → **설치형 PWA 완성($0, 08과 무충돌)**. 트랙 D는 A~C 배포 후.
 
 ## 기존 사이트/배포 불변 보장
 
