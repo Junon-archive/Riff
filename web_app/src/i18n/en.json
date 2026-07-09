@@ -134,6 +134,7 @@
     "empty": "Nothing here yet. Let's ease into your first lesson"
   },
   "nudge": {
+    "default_name": "friend",
     "enter_week_2": "8 in 10 people put the guitar down in week 1. But you made it here, {nickname} — you're already in the top 20%. Let's keep going 👀",
     "finish_week_1": "About 35% put the guitar down by week {week}. But you've made it this far, {nickname} — you're already in the top 20%.",
     "finish_week_2": "Nice work — you're doing great. Keep this pace going!",

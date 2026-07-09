@@ -28,6 +28,17 @@ export function weekScopeKey(month: number, week: number): string {
 }
 
 /**
+ * 넛지 호칭 — 닉네임 미설정(빈/공백) 시 i18n 기본 호칭으로 폴백.
+ * 존칭 접미사(ko "님"·ja "さん")는 템플릿에 있으므로 값은 명사만: `nudge.default_name`
+ * (ko "사용자"→"사용자님", en "friend", ja "ユーザー"→"ユーザーさん"). 빈 값이 들어가
+ * "님이/님은"처럼 어색하게 남던 문제를 막는다.
+ */
+function nickOrDefault(nickname: string | null): string {
+  const n = nickname?.trim();
+  return n ? n : t('nudge.default_name');
+}
+
+/**
  * `finish_week` 문구 로테이션 — i18n `nudge.finish_week_1..N`(토스체 격려/통계/연습 리마인더 등
  * 다양한 결). 매번 같은 문장이 반복되지 않도록 **전역 주차 인덱스(week)** 로 결정적 로테이션한다
  * (완료 시점의 랜덤이 아니라 주차 번호 기반이라 같은 주는 항상 같은 문구 — 재현 가능·테스트 가능).
@@ -47,7 +58,7 @@ export function evalEnterWeek2(currentWeek: number, nickname: string | null): Nu
   return {
     id: 'enter_week_2',
     emoji: NUDGE_EMOJI.enter_week_2,
-    text: t('nudge.enter_week_2', { nickname: nickname ?? '' }),
+    text: t('nudge.enter_week_2', { nickname: nickOrDefault(nickname) }),
   };
 }
 
@@ -85,7 +96,7 @@ export function evalFinishWeek(
   return {
     id: dedupKey,
     emoji: NUDGE_EMOJI.finish_week,
-    text: t(finishWeekKey(week), { week, nickname: nickname ?? '' }),
+    text: t(finishWeekKey(week), { week, nickname: nickOrDefault(nickname) }),
   };
 }
 
@@ -114,6 +125,6 @@ export function evalWelcomeBack(
   return {
     id: dedupKey,
     emoji: NUDGE_EMOJI.welcome_back,
-    text: t('nudge.welcome_back', { nickname: nickname ?? '' }),
+    text: t('nudge.welcome_back', { nickname: nickOrDefault(nickname) }),
   };
 }
