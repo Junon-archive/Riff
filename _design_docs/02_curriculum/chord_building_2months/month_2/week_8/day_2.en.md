@@ -9,14 +9,14 @@ i18nKey: "lesson.m2.w8.d2"
 
 ## ① Theory
 
-So far you learned "which notes to grab" (voicing). Today it's "**which rhythm to play.**" Even the same chord, when you change **where you hit and where you leave space (rests)** and the **muted cut (palm mute),** gives a completely different groove. The life of R&B, funk, and soul is actually the **rhythm** more than the voicing.
+So far you learned "which notes to grab" (voicing). Today it's <mark>"which rhythm to play."</mark> Even the same chord, when you change **where you hit and where you leave space (rests)** and the **muted cut (palm mute),** gives a completely different groove. The life of R&B, funk, and soul is actually the **<mark>rhythm</mark>** more than the voicing.
 
 Three keys:
-- **Rests are rhythm.** The spaces where you leave silence are the groove's breath.
-- **Palm-mute cutting (P.M.).** Choke it short for a "chk" attack.
-- **Syncopation.** Push slightly ahead of or behind the beat to make the body move.
+- **<mark>Rests are rhythm</mark>.** The spaces where you leave silence are the groove's breath.
+- **<mark>Palm-mute cutting (P.M.)</mark>.** Choke it short for a "chk" attack.
+- **<mark>Syncopation</mark>.** Push slightly ahead of or behind the beat to make the body move.
 
-Today you play one Cmaj7 shell with two grooves and feel that just changing the rhythm changes the song. This is where the real fun begins — one and the same chord turns into a ballad or into funk depending only on the rhythm. It's fine if it's rough. Today isn't about playing it "wrong"; it's about enjoying playing it "differently."
+Today you play one Cmaj7 shell with two grooves and <mark>feel that just changing the rhythm changes the song</mark>. This is where the real fun begins — <mark>one and the same chord turns into a ballad or into funk depending only on the rhythm</mark>. It's fine if it's rough. Today isn't about playing it "wrong"; it's about enjoying playing it "differently."
 
 ## ② Visuals
 
@@ -84,16 +84,16 @@ Today you play one Cmaj7 shell with two grooves and feel that just changing the 
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-Fret the Cmaj7 shell and learn Groove A's rhythm by hand. Empty the rests clearly, and check the P.M. cut is short.
+Fret the Cmaj7 shell and learn Groove A's rhythm by hand. <mark>Empty the rests clearly, and check the P.M. cut is short</mark>.
 
 **10–20 min · Brain training (today's target = rests & cuts)**
-To a metronome, alternate Grooves A and B. Count "hit / rest / choke" spots out loud to burn them in.
+To a metronome, alternate Grooves A and B. Count <mark>"hit / rest / choke"</mark> spots out loud to burn them in.
 
 **20–40 min · Real comping (Examples 1 & 2 grooves / 80–90 BPM)**
-Lay **Examples 1 & 2 at BPM 84** over a backing. Apply Groove A (or B) to yesterday's whole ii–V–I and spin the four-bar loop. Feel how much the same progression changes with rhythm.
+Lay **Examples 1 & 2 at BPM 84** over a backing. Apply Groove A (or B) to yesterday's whole ii–V–I and spin the four-bar loop. <mark>Feel how much the same progression changes with rhythm</mark>.
 
 **40–50 min · Record & reflect (recommended)**
-Record 15 seconds each of Grooves A & B and compare. Check: do the rests make the groove / is the P.M. cut clear / does the body sway?
+Record 15 seconds each of Grooves A & B and compare. Check: <mark>do the rests make the groove</mark> / is the P.M. cut clear / does the body sway?
 
 **Done when:** you can play the same Cmaj7 shell with two grooves (staccato+rests / syncopation) and understand that rhythm changes the song's feel.
 

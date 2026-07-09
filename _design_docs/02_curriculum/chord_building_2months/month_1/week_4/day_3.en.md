@@ -9,10 +9,10 @@ i18nKey: "lesson.m1.w4.d3"
 
 ## ① Theory
 
-Yesterday you learned the 6th-string-root shells. Today the root drops to the **5th string.** The principle is identical — keep only R·3·7, drop the 5th. But since the root string changed, the 3rd and 7th move to different strings:
+Yesterday you learned the 6th-string-root shells. Today the root drops to the **5th string.** The principle is identical — keep only R·3·7, drop the 5th. But since the root string changed, <mark>the 3rd and 7th move to different strings</mark>:
 
-- **3rd string = the 7th switch.** Fret 4 (7, Maj7) ↔ fret 3 (b7).
-- **2nd string = the 3rd switch.** Fret 5 (3) ↔ fret 4 (b3).
+- **<mark>3rd string = the 7th switch</mark>.** Fret 4 (7, Maj7) ↔ fret 3 (b7).
+- **<mark>2nd string = the 3rd switch</mark>.** Fret 5 (3) ↔ fret 4 (b3).
 
 So the three characters are:
 
@@ -68,11 +68,11 @@ So the three characters are:
 - **C7 shell** = 3rd string 3 (b7) · 2nd string 5 (3)
 - **Cm7 shell** = 3rd string 3 (b7) · 2nd string 4 (b3)
 
-If the 6th-string shell (yesterday) used the 4th & 3rd strings, the 5th-string shell uses the **3rd & 2nd.** When the root string changes, the color notes shift up one set. The principle is exactly the same as yesterday, so there's almost nothing new to memorize. **When the root drops a string, the color notes follow one string down** — that one rule is all you need. Once you have both sets (6th & 5th), tomorrow you can connect a whole ii–V–I as shells. From today, whether a chord's root sits on the 5th or 6th string, you can grab it as a shell.
+If the 6th-string shell (yesterday) used the 4th & 3rd strings, the 5th-string shell uses the **3rd & 2nd.** When the root string changes, the color notes shift up one set. The principle is exactly the same as yesterday, so there's almost nothing new to memorize. **<mark>When the root drops a string, the color notes follow one string down</mark>** — that one rule is all you need. Once you have both sets (6th & 5th), tomorrow you can connect a whole ii–V–I as shells. From today, <mark>whether a chord's root sits on the 5th or 6th string, you can grab it as a shell</mark>.
 
 ## ② Visuals
 
-Three 5th-string-root shells. Green is the 3rd & 7th; this time the 3rd & 2nd strings are the switches. The 6·4·1 are muted.
+Three 5th-string-root shells. Green is the 3rd & 7th; <mark>this time the 3rd & 2nd strings are the switches</mark>. The 6·4·1 are muted.
 
 ```json
 {
@@ -177,16 +177,16 @@ Three 5th-string-root shells. Green is the 3rd & 7th; this time the 3rd & 2nd st
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-Play the Cmaj7 → C7 → Cm7 shells, four beats each. Root (5th) fixed, 6·4·1 muted, only 3·2 moving.
+Play the Cmaj7 → C7 → Cm7 shells, four beats each. <mark>Root (5th) fixed, 6·4·1 muted, only 3·2 moving</mark>.
 
 **10–20 min · Brain training (today's target = the 3rd/2nd color notes)**
-With **Example 1,** confirm the 3rd-string (7/b7) and 2nd-string (3/b3) spots. Sort out by eye the difference between yesterday's 6th shell (4·3) and today's 5th shell (3·2).
+With **Example 1,** confirm the 3rd-string (7/b7) and 2nd-string (3/b3) spots. <mark>Sort out by eye the difference between yesterday's 6th shell (4·3) and today's 5th shell (3·2)</mark>.
 
 **20–40 min · Real comping (Example 2 cycle / 74–84 BPM)**
-**Repeat Example 2 at BPM 78 4×.** Then move the root to another 5th-string fret (e.g., D = fret 5). Alternate 6th- and 5th-string shells to learn both in your hands.
+**Repeat Example 2 at BPM 78 4×.** Then move the root to another 5th-string fret (e.g., D = fret 5). <mark>Alternate 6th- and 5th-string shells to learn both in your hands</mark>.
 
 **40–50 min · Record & reflect (recommended)**
-Record 30 seconds of the 5th-string shell cycle. Check: do the 6·4·1 stay silent, are the three characters distinct?
+Record 30 seconds of the 5th-string shell cycle. Check: do the 6·4·1 stay silent, <mark>are the three characters distinct</mark>?
 
 **Done when:** with a 5th-string-root shell, you can cycle Cmaj7·C7·Cm7 using only the 3rd & 2nd strings, and move freely between the 6th- and 5th-string shells.
 

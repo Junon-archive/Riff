@@ -9,11 +9,11 @@ i18nKey: "lesson.m1.w3.d2"
 
 ## ① Theory
 
-Yesterday you saw the ii–V–I concept. Today you actually connect **Dm7 (5th) → G7 (6th) → Cmaj7 (5th)** in one fret region (frets 3–7) with minimal hand movement. Focus on two things.
+Yesterday you saw the ii–V–I concept. Today you actually connect **Dm7 (5th) → G7 (6th) → Cmaj7 (5th)** in one fret region (frets 3–7) with <mark>minimal hand movement</mark>. Focus on two things.
 
-**① Root-string crossing.** Dm7's root is on the 5th string, G7's on the 6th, Cmaj7's back on the 5th. Alternating 6th/5th-string chords like this keeps your hand off the neck-running.
+**① Root-string crossing.** Dm7's root is on the 5th string, G7's on the 6th, Cmaj7's back on the 5th. Alternating 6th/5th-string chords like this <mark>keeps your hand off the neck-running</mark>.
 
-**② Guide tones move a half step.** Yesterday on the 3rd string, 7th→3rd→7th barely moved (5→4→4). Today, see **another guide-tone line.** On the 2nd string, Dm7's 3rd (F) → G7's 7th (F) → Cmaj7's 3rd (E): **frets 6→6→5.** F stays, then drops a half step to E. Two guide-tone lines (3rd & 2nd strings) sliding almost in place at once — that's the reality of voice leading. Isn't that something? Three whole chords change, yet the notes singing on top stay nearly glued in place. Get this feel into your hands and any progression turns smooth.
+**② Guide tones move a half step.** Yesterday on the 3rd string, 7th→3rd→7th barely moved (5→4→4). Today, see **<mark>another guide-tone line</mark>.** On the 2nd string, Dm7's 3rd (F) → G7's 7th (F) → Cmaj7's 3rd (E): **frets 6→6→5.** F stays, then drops a half step to E. Two guide-tone lines (3rd & 2nd strings) sliding almost in place at once — that's the reality of voice leading. Isn't that something? Three whole chords change, yet <mark>the notes singing on top stay nearly glued in place</mark>. Get this feel into your hands and any progression turns smooth.
 
 ```json
 {
@@ -30,7 +30,7 @@ Yesterday you saw the ii–V–I concept. Today you actually connect **Dm7 (5th)
 
 ## ② Visuals
 
-The middle chord, **G7 (V, 6th-string root)** — the bridge connecting the ii and the I. Green = guide tones (3rd & 7th).
+The middle chord, **G7 (V, 6th-string root)** — <mark>the bridge connecting the ii and the I</mark>. Green = guide tones (3rd & 7th).
 
 ```json
 {
@@ -126,16 +126,16 @@ The middle chord, **G7 (V, 6th-string root)** — the bridge connecting the ii a
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-Play Dm7 → G7 → Cmaj7 in order in one region. Say the root string (5·6·5) aloud each time.
+Play Dm7 → G7 → Cmaj7 in order in one region. <mark>Say the root string (5·6·5) aloud each time</mark>.
 
 **10–20 min · Brain training (today's target = the two guide-tone lines)**
-Fret both **Example 1** (2nd string 6→6→5) and yesterday's 3rd string (5→4→4). Watch both lines slide almost in place at once.
+Fret both **Example 1** (2nd string 6→6→5) and yesterday's 3rd string (5→4→4). <mark>Watch both lines slide almost in place at once</mark>.
 
 **20–40 min · Real comping (Example 2 / 70–80 BPM)**
-**Repeat Example 2 at BPM 74 4×.** Feel with your hand that the root travels but the guide tone stays close. Then comp the three whole chords smoothly connected (Example 3). If your hand leaves the region, it's a fail.
+**Repeat Example 2 at BPM 74 4×.** <mark>Feel with your hand that the root travels but the guide tone stays close</mark>. Then comp the three whole chords smoothly connected (Example 3). If your hand leaves the region, it's a fail.
 
 **40–50 min · Record & reflect (recommended)**
-Record 30 seconds of ii–V–I. Check: is hand jump minimal at the changes, and do the guide tones connect smoothly?
+Record 30 seconds of ii–V–I. Check: <mark>is hand jump minimal at the changes</mark>, and do the guide tones connect smoothly?
 
 **Done when:** you can connect Dm7-G7-Cmaj7 in one fret 3–7 region with no hand jump, and fret both guide-tone lines.
 

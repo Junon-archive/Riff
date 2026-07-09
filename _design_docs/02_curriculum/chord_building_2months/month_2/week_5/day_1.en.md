@@ -9,7 +9,7 @@ i18nKey: "lesson.m2.w5.d1"
 
 ## ① Theory
 
-Over the past month the root came **down** — from the 6th string (Week 1) to the 5th (Week 2). This week is the opposite. You move the root **up to the 4th string.** Now chords ring in the **high register,** on the thin strings (1·2·3·4), bright and shimmering.
+Over the past month the root came **down** — from the 6th string (Week 1) to the 5th (Week 2). This week is the opposite. You move the root **<mark>up to the 4th string</mark>.** Now chords ring in the **<mark>high register</mark>,** on the thin strings (1·2·3·4), bright and shimmering.
 
 Our example is **G major (D-shape)** with the root on the 4th string, 5th fret. Broken down by interval:
 
@@ -32,13 +32,13 @@ Our example is **G major (D-shape)** with the root on the 4th string, 5th fret. 
 - **R (root)** — 4th string, fret 5 (G). This week's new home.
 - **5 (5th)** — 3rd string, fret 7 (D).
 - **R (root)** — 2nd string, fret 8 (G). The octave root.
-- **3 (3rd)** — 1st string, fret 7 (B). **The highest-ringing note = the top note** (green).
+- **3 (3rd)** — 1st string, fret 7 (B). **<mark>The highest-ringing note = the top note</mark>** (green).
 
-Here's the new idea — the **top note.** When several strings ring, the highest one (usually the 1st string) drives the chord's impression. In this D-shape **the 3rd (B) is the top note,** so the chord sounds bright precisely because of that top 3rd. And **you don't use the 6th & 5th strings** — a string lower than the root would spoil the high-register crispness, so kill them firmly. Up in the high register the same chord rings far more sparkling. The first time you sound a chord up here today, you might think "wait, my guitar could make a sound this clear?" You spent a month down low, so think of today as opening the opposite side of the world.
+Here's the new idea — the **<mark>top note</mark>.** <mark>When several strings ring, the highest one (usually the 1st string) drives the chord's impression</mark>. In this D-shape **the 3rd (B) is the top note,** so the chord sounds bright precisely because of that top 3rd. And **<mark>you don't use the 6th & 5th strings</mark>** — a string lower than the root would spoil the high-register crispness, so kill them firmly. Up in the high register the same chord rings far more sparkling. The first time you sound a chord up here today, you might think "wait, my guitar could make a sound this clear?" You spent a month down low, so think of today as opening the opposite side of the world.
 
 ## ② Visuals
 
-**G major (D-shape)** with the root on the 4th string. The 6th & 5th are ✕ (muted); the green is the **3rd (top note)** on the 1st string.
+**G major (D-shape)** with the root on the 4th string. The 6th & 5th are ✕ (muted); the green is the **<mark>3rd (top note)</mark>** on the 1st string.
 
 ```json
 {
@@ -99,16 +99,16 @@ Here's the new idea — the **top note.** When several strings ring, the highest
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-Fret G (D-shape) and ring the 4·3·2·1 strings one at a time. Top priority: **are the 6th & 5th firmly dead** and only the four used strings clean?
+Fret G (D-shape) and ring the 4·3·2·1 strings one at a time. Top priority: **<mark>are the 6th & 5th firmly dead</mark>** and only the four used strings clean?
 
 **10–20 min · Brain training (today's target = the top note)**
-Fret **Example 1** naming R·5·3, and especially confirm **which note is the top note (the 3rd)** right now. You pass when you can find the 1st string fret 7 (top = 3rd) with eyes closed.
+Fret **Example 1** naming R·5·3, and especially confirm **<mark>which note is the top note (the 3rd)</mark>** right now. You pass when you can find the 1st string fret 7 (top = 3rd) with eyes closed.
 
 **20–40 min · Real comping (Example 2 / 76–86 BPM)**
-**Repeat Example 2's high-register G comp at BPM 80 4×.** Once comfortable, slide the same shape to another root fret (e.g., A = fret 7). Lay it over a bright backing and enjoy the high-register crispness.
+**Repeat Example 2's high-register G comp at BPM 80 4×.** Once comfortable, slide the same shape to another root fret (e.g., A = fret 7). Lay it over a bright backing and <mark>enjoy the high-register crispness</mark>.
 
 **40–50 min · Record & reflect (recommended)**
-Record 30 seconds of the high comp. Check: did the low strings (6th & 5th) leak, and does the top note (3rd) ring clearly?
+Record 30 seconds of the high comp. Check: did the low strings (6th & 5th) leak, and <mark>does the top note (3rd) ring clearly</mark>?
 
 **Done when:** you can ring G (D-shape) on only the four thin strings with the 6th & 5th muted, and name that the top note is the 3rd.
 

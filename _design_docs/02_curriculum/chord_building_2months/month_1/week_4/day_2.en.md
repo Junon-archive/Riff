@@ -9,10 +9,10 @@ i18nKey: "lesson.m1.w4.d2"
 
 ## ① Theory
 
-Yesterday you dieted G7 into a shell (R·b7·3). Today you build a **set** of 6th-string-root shells. The root stays on the 6th string, and the two inner strings are each a switch:
+Yesterday you dieted G7 into a shell (R·b7·3). Today you build a **set** of 6th-string-root shells. <mark>The root stays on the 6th string, and the two inner strings are each a switch</mark>:
 
-- **4th string = the 7th switch.** Fret 4 (7, Maj7) ↔ fret 3 (b7, dominant/minor 7).
-- **3rd string = the 3rd switch.** Fret 4 (3, major) ↔ fret 3 (b3, minor).
+- **<mark>4th string = the 7th switch</mark>.** Fret 4 (7, Maj7) ↔ fret 3 (b7, dominant/minor 7).
+- **<mark>3rd string = the 3rd switch</mark>.** Fret 4 (3, major) ↔ fret 3 (b3, minor).
 
 The combination of these two strings gives all three characters:
 
@@ -68,11 +68,11 @@ The combination of these two strings gives all three characters:
 - **G7 shell** = 4th string 3 (b7) · 3rd string 4 (3)
 - **Gm7 shell** = 4th string 3 (b7) · 3rd string 3 (b3)
 
-The two switches (3rd & 7th) you've used for three weeks are alive in the shell too. It's just that with no 5th or doubled note, you now operate only the **two remaining color notes** clearly. Looks complicated? But there are only two things to remember — the "7th string" and the "3rd string." Get these two switches into your hands and you can flip between major, dominant, and minor with a single finger. You're not memorizing three chords; you're learning two switches.
+The two switches (3rd & 7th) you've used for three weeks are alive in the shell too. It's just that with no 5th or doubled note, you now operate only the **<mark>two remaining color notes</mark>** clearly. Looks complicated? But there are only two things to remember — the "7th string" and the "3rd string." Get these two switches into your hands and you can flip between major, dominant, and minor with a single finger. <mark>You're not memorizing three chords; you're learning two switches</mark>.
 
 ## ② Visuals
 
-Three 6th-string-root shells. Green is the 3rd & 7th; move just two strings and the character changes.
+Three 6th-string-root shells. Green is the 3rd & 7th; <mark>move just two strings and the character changes</mark>.
 
 ```json
 {
@@ -177,16 +177,16 @@ Three 6th-string-root shells. Green is the 3rd & 7th; move just two strings and 
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-Play the Gmaj7 → G7 → Gm7 shells in order, four beats each. Root (6th) fixed, 5·2·1 muted, only 4·3 moving.
+Play the Gmaj7 → G7 → Gm7 shells in order, four beats each. <mark>Root (6th) fixed, 5·2·1 muted, only 4·3 moving</mark>.
 
 **10–20 min · Brain training (today's target = the two color notes)**
-With **Example 1,** confirm the 4th-string (7/b7) and 3rd-string (3/b3) positions. Eyes closed, on "Gm7!" both strings jump straight to fret 3.
+With **Example 1,** confirm the 4th-string (7/b7) and 3rd-string (3/b3) positions. Eyes closed, on <mark>"Gm7!" both strings jump straight to fret 3</mark>.
 
 **20–40 min · Real comping (Example 2 cycle / 74–84 BPM)**
-**Repeat Example 2 at BPM 78 4×.** Then move just the root to another fret (e.g., A = fret 5) and apply the same set. Get used to the thin, fast shell comp.
+**Repeat Example 2 at BPM 78 4×.** Then move just the root to another fret (e.g., A = fret 5) and apply the same set. <mark>Get used to the thin, fast shell comp</mark>.
 
 **40–50 min · Record & reflect (recommended)**
-Record 30 seconds of the three-shell cycle. Check: do dropped strings stay silent, are the three characters distinct, are the changes fast?
+Record 30 seconds of the three-shell cycle. Check: do dropped strings stay silent, <mark>are the three characters distinct</mark>, are the changes fast?
 
 **Done when:** with a 6th-string-root shell, you can cycle Gmaj7·G7·Gm7 using only the 4th and 3rd strings while the root stays fixed.
 

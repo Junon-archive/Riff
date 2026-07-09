@@ -9,10 +9,10 @@ i18nKey: "lesson.m1.w2.d4"
 
 ## ① Theory
 
-The week's finish line. Today isn't new memorizing either — over the 5th-string root, combine the two switches into **five characters** cycled in one spot. Get here and the 5th-string root is fully yours.
+The week's finish line. Today isn't new memorizing either — over the 5th-string root, combine the two switches into **<mark>five characters</mark>** cycled in one spot. Get here and the 5th-string root is fully yours.
 
-- **2nd string = the 3rd switch.** Fret 5 (3) ↔ fret 4 (b3).
-- **3rd string = the 7th three-way.** Fret 5 (R) · fret 4 (7) · fret 3 (b7).
+- **<mark>2nd string = the 3rd switch</mark>.** Fret 5 (3) ↔ fret 4 (b3).
+- **<mark>3rd string = the 7th three-way</mark>.** Fret 5 (R) · fret 4 (7) · fret 3 (b7).
 
 The combination of these two strings alone gives all five chords:
 
@@ -42,11 +42,11 @@ The combination of these two strings alone gives all five chords:
 - **Cm7** = 2nd string 4 (b3) · 3rd string 3 (b7)
 - **Cmaj7** = 2nd string 5 (3) · 3rd string 4 (7)
 
-See — the five chords are, in the end, just the **position combination of two fingers (2nd & 3rd strings).** Not five shapes to memorize, but a question of where to put two strings. Today you spin them freely over one root, confirming by hand that the feel you gained on the 6th string last week works exactly the same on the 5th.
+See — the five chords are, in the end, just the **<mark>position combination of two fingers (2nd & 3rd strings)</mark>.** Not five shapes to memorize, but a question of where to put two strings. Today you spin them freely over one root, confirming by hand that <mark>the feel you gained on the 6th string last week works exactly the same on the 5th</mark>.
 
 ## ② Visuals
 
-Today's reference chord, **Cmaj7 (A-form)** — the 3rd-string 7 (fret 4, green) clashes wistfully just below the root.
+Today's reference chord, **Cmaj7 (A-form)** — the 3rd-string 7 (fret 4, green) <mark>clashes wistfully just below the root</mark>.
 
 ```json
 {
@@ -145,16 +145,16 @@ Today's reference chord, **Cmaj7 (A-form)** — the 3rd-string 7 (fret 4, green)
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-Play C → Cm → C7 → Cm7 → Cmaj7 in order, four beats each. Keep the root (5th string) and the 6th-string mute fixed; move only the 2nd and 3rd strings.
+Play C → Cm → C7 → Cm7 → Cmaj7 in order, four beats each. Keep the root (5th string) and the 6th-string mute fixed; <mark>move only the 2nd and 3rd strings</mark>.
 
 **10–20 min · Brain training (today's target = the two-switch combination)**
-Distinguish the five with two questions: "Is the 3rd down? Is the 7th R, 7, or b7?" Use **Example 1** to name each string's job aloud.
+<mark>Distinguish the five with two questions</mark>: "Is the 3rd down? Is the 7th R, 7, or b7?" Use **Example 1** to name each string's job aloud.
 
 **20–40 min · Real comping (Example 2 + integration cycle / 75–85 BPM)**
-**Repeat Example 2's Cmaj7 groove at BPM 80 4×,** then expand to the **integration cycle** (five chords, one bar each). Then move the root along the 5th string and cycle in other keys.
+**Repeat Example 2's Cmaj7 groove at BPM 80 4×,** then expand to the **<mark>integration cycle</mark>** (five chords, one bar each). Then move the root along the 5th string and cycle in other keys.
 
 **40–50 min · Record & reflect (recommended)**
-Record 30 seconds of the five-chord cycle. Check: are all five characters clearly distinct, and does the 6th string stay silent?
+Record 30 seconds of the five-chord cycle. Check: <mark>are all five characters clearly distinct</mark>, and does the 6th string stay silent?
 
 **Done when:** in one 5th-string-root spot, you can cycle C → Cm → C7 → Cm7 → Cmaj7 using only the 2nd- and 3rd-string fingers. (Week 2 complete!)
 

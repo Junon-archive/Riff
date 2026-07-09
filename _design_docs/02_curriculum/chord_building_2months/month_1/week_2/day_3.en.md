@@ -9,13 +9,13 @@ i18nKey: "lesson.m1.w2.d3"
 
 ## ① Theory
 
-Yesterday you learned the two switches (2nd-string 3rd, 3rd-string 7th). Today, first lower both to complete **Cm7** (b3 + b7), then invite this week's new guest, **Maj7.** The names look confusingly alike, right? Amazingly, the spots are just one fret apart.
+Yesterday you learned the two switches (2nd-string 3rd, 3rd-string 7th). Today, first lower both to complete **Cm7** (b3 + b7), then invite this week's new guest, **<mark>Maj7</mark>.** The names look confusingly alike, right? Amazingly, the spots are just one fret apart.
 
-It's all on the **3rd string** — this string is the 7th's "three-way":
+It's all on the **<mark>3rd string</mark>** — this string is the 7th's "three-way":
 
-- **3rd string, fret 5 = R** (octave root) → plain major/minor
-- **3rd string, fret 4 = 7** (major 7th) → **Maj7**
-- **3rd string, fret 3 = b7** (minor 7th) → **dominant 7**
+- **<mark>3rd string, fret 5 = R</mark>** (octave root) → plain major/minor
+- **<mark>3rd string, fret 4 = 7</mark>** (major 7th) → **Maj7**
+- **<mark>3rd string, fret 3 = b7</mark>** (minor 7th) → **dominant 7**
 
 ```json
 {
@@ -37,11 +37,11 @@ It's all on the **3rd string** — this string is the 7th's "three-way":
 }
 ```
 
-So **the b7 (fret 3) and the Maj7's 7 (fret 4) are exactly one fret — a half step — apart.** Yet that half step makes completely different emotions. The b7 (dominant) is an antsy tension that "wants to resolve fast"; the Maj7's 7 is a "floating, dreamy, sophisticated" unfinished. City-pop's wistfulness, that hazy color of a jazz ballad — it all comes from this one Maj7. If the half-step difference sounds subtle at first, that's fine. Today you place the two side by side on the 3rd string and lock in, by ear, the emotional difference that one half step makes.
+So **the b7 (fret 3) and the Maj7's 7 (fret 4) are exactly one fret — a half step — apart.** Yet that half step makes completely different emotions. The b7 (dominant) is an <mark>antsy tension</mark> that "wants to resolve fast"; the Maj7's 7 is a "floating, <mark>dreamy, sophisticated</mark>" unfinished. City-pop's wistfulness, that hazy color of a jazz ballad — it all comes from this one Maj7. If the half-step difference sounds subtle at first, that's fine. Today you place the two side by side on the 3rd string and lock in, by ear, the emotional difference that one half step makes.
 
 ## ② Visuals
 
-First, **Cm7 (A-form)** with both switches lowered — the greens are b3 and b7.
+First, **Cm7 (A-form)** with both switches lowered — <mark>the greens are b3 and b7</mark>.
 
 ```json
 {
@@ -63,7 +63,7 @@ First, **Cm7 (A-form)** with both switches lowered — the greens are b3 and b7.
 }
 ```
 
-Today's new chord, **Cmaj7 (A-form)** — the 3rd string is the **7 (fret 4),** not the b7 (fret 3). Just one fret higher (green = 7).
+Today's new chord, **Cmaj7 (A-form)** — the 3rd string is the **<mark>7 (fret 4)</mark>,** not the b7 (fret 3). Just one fret higher (green = 7).
 
 ```json
 {
@@ -142,16 +142,16 @@ Today's new chord, **Cmaj7 (A-form)** — the 3rd string is the **7 (fret 4),** 
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-On the 3rd string only, move 5 (R) → 4 (Maj7) → 3 (b7) up and down to learn the three branches. Keep the other fingers fixed.
+On the 3rd string only, move 5 (R) → 4 (Maj7) → 3 (b7) up and down to <mark>learn the three branches</mark>. Keep the other fingers fixed.
 
 **10–20 min · Brain training (today's target = b7 vs 7)**
-With **Example 1,** alternate b7 (fret 3) and 7 (fret 4) and compare the sounds. You pass when, on call ("7! b7!"), you land instantly on the 3rd string with eyes closed.
+With **Example 1,** alternate b7 (fret 3) and 7 (fret 4) and compare the sounds. You pass when, on call ("7! b7!"), <mark>you land instantly on the 3rd string</mark> with eyes closed.
 
 **20–40 min · Real comping (Example 2 / 75–85 BPM)**
-**Repeat Example 2 at BPM 80 4×** (C7↔Cmaj7). Then add Cm7 and cycle Cm7 → C7 → Cmaj7. Move the root along the 5th string for other keys too.
+**Repeat Example 2 at BPM 80 4×** (C7↔Cmaj7). Then <mark>add Cm7 and cycle Cm7 → C7 → Cmaj7</mark>. Move the root along the 5th string for other keys too.
 
 **40–50 min · Record & reflect (recommended)**
-Record 30 seconds of b7 ↔ 7. Check: do the two chords sound **emotionally different,** and does the 3rd-string note ring clearly?
+Record 30 seconds of b7 ↔ 7. Check: do the two chords sound **<mark>emotionally different</mark>,** and does the 3rd-string note ring clearly?
 
 **Done when:** you can fret R·7·b7 on the 3rd string with eyes closed and tell the color of 7 from Maj7 by ear.
 

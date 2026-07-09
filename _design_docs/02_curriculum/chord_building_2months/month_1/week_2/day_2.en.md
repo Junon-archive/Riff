@@ -9,10 +9,10 @@ i18nKey: "lesson.m1.w2.d2"
 
 ## ① Theory
 
-Good news today — there's **no new principle to learn.** We reuse last week's two switches on the 5th-string root. Only one thing is new to memorize: the new "address" of **which string you switch on.**
+Good news today — there's **no new principle to learn.** We reuse last week's two switches on the 5th-string root. Only one thing is new to memorize: the new "address" of **<mark>which string you switch on</mark>.**
 
-- **Minor switch = 2nd string.** Lower the 3rd (2nd string, fret 5, E) a half step to b3 (fret 4, E♭). → **Cm**
-- **Dominant-7 switch = 3rd string.** Lower the octave root (3rd string, fret 5, C) two frets to b7 (fret 3, B♭). → **C7**
+- **<mark>Minor switch = 2nd string</mark>.** Lower the 3rd (2nd string, fret 5, E) a half step to b3 (fret 4, E♭). → **Cm**
+- **<mark>Dominant-7 switch = 3rd string</mark>.** Lower the octave root (3rd string, fret 5, C) two frets to b7 (fret 3, B♭). → **C7**
 
 ```json
 {
@@ -54,11 +54,11 @@ Good news today — there's **no new principle to learn.** We reuse last week's 
 }
 ```
 
-In the 6th-string form the 3rd was on the 3rd string and the 7th on the 4th. In the 5th-string form (A-form), the **3rd simply moved to the 2nd string and the 7th to the 3rd string.** When the root changes, the switches' home addresses change too — feeling that in your hands is all today asks. The principle (lower the 3rd for minor, add the b7 for 7) is 100% identical to last week, so you just get comfortable with the new spots. Once it's in your hands, 6th-string or 5th-string, you're free either way.
+In the 6th-string form the 3rd was on the 3rd string and the 7th on the 4th. In the 5th-string form (A-form), the **<mark>3rd simply moved to the 2nd string and the 7th to the 3rd string</mark>.** <mark>When the root changes, the switches' home addresses change too</mark> — feeling that in your hands is all today asks. The principle (lower the 3rd for minor, add the b7 for 7) is 100% identical to last week, so you just get comfortable with the new spots. Once it's in your hands, 6th-string or 5th-string, you're free either way.
 
 ## ② Visuals
 
-First, **C minor (A-form)** — only the 2nd-string 3rd dropped from fret 5 to 4 (green = b3).
+First, **C minor (A-form)** — <mark>only the 2nd-string 3rd dropped from fret 5 to 4</mark> (green = b3).
 
 ```json
 {
@@ -80,7 +80,7 @@ First, **C minor (A-form)** — only the 2nd-string 3rd dropped from fret 5 to 4
 }
 ```
 
-Now **C7 (A-form)** — the 3rd-string octave root dropped from fret 5 to 3 to get the b7 (green = b7).
+Now **C7 (A-form)** — <mark>the 3rd-string octave root dropped from fret 5 to 3 to get the b7</mark> (green = b7).
 
 ```json
 {
@@ -159,16 +159,16 @@ Now **C7 (A-form)** — the 3rd-string octave root dropped from fret 5 to 3 to g
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-Alternate C → Cm (2nd string 5↔4) and C → C7 (3rd string 5↔3), four beats each. Keep the 6th string muted.
+Alternate C → Cm (2nd string 5↔4) and C → C7 (3rd string 5↔3), four beats each. <mark>Keep the 6th string muted</mark>.
 
 **10–20 min · Brain training (today's target = 2nd-string b3 · 3rd-string b7)**
-Use **Examples 1 & 2** to fix the two switch spots. "Minor is the 2nd string, 7 is the 3rd string." You pass when you can fret each with eyes closed.
+Use **Examples 1 & 2** to fix the two switch spots. "<mark>Minor is the 2nd string, 7 is the 3rd string</mark>." You pass when you can fret each with eyes closed.
 
 **20–40 min · Real comping (Example 2 / 75–85 BPM)**
-**Repeat Example 2 at BPM 78 4×** (C↔C7). Then add the Cm switch (Example 1) over a backing track and move freely between C↔Cm↔C7. Move the root along the 5th string for other keys too.
+**Repeat Example 2 at BPM 78 4×** (C↔C7). Then add the Cm switch (Example 1) over a backing track and <mark>move freely between C↔Cm↔C7</mark>. Move the root along the 5th string for other keys too.
 
 **40–50 min · Record & reflect (recommended)**
-Record 30 seconds of C↔Cm↔C7. Check: does a string die at the switch, and does the 6th leak?
+Record 30 seconds of C↔Cm↔C7. Check: <mark>does a string die at the switch</mark>, and does the 6th leak?
 
 **Done when:** over the 5th-string root, you can switch minor on the 2nd string and 7 on the 3rd string with eyes closed.
 

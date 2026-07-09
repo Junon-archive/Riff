@@ -9,17 +9,17 @@ i18nKey: "lesson.m1.w3.d4"
 
 ## ① Theory
 
-The week's finish line. Today isn't new learning — it's tying together everything you've learned. Get here and the ii–V–I is nearly yours. You gather three things at once.
+The week's finish line. Today isn't new learning — it's <mark>tying together everything you've learned</mark>. Get here and the ii–V–I is nearly yours. You gather three things at once.
 
-- Use **root-string crossing (5·6·5)** to bind your hand to one region,
-- feel the **guide tones (3rd & 7th)** move only a half step,
-- and cycle the three chords **without jumping.**
+- Use **<mark>root-string crossing (5·6·5)</mark>** to bind your hand to one region,
+- feel the **<mark>guide tones (3rd & 7th)</mark>** move only a half step,
+- and cycle the three chords **<mark>without jumping</mark>.**
 
-Today you spin the ii–V–I as a 4-bar loop (Dm7 → G7 → Cmaj7 → back to Dm7). Most songs repeat this cluster, so burning it into your hands is where real accompaniment begins. The goal isn't speed — it's **smoothness of connection**: the sound doesn't cut off at the change, and the guide tones sing from one chord to the next.
+Today you spin the ii–V–I as a 4-bar loop (Dm7 → G7 → Cmaj7 → back to Dm7). Most songs repeat this cluster, so burning it into your hands is where real accompaniment begins. The goal isn't speed — it's **<mark>smoothness of connection</mark>**: the sound doesn't cut off at the change, and the guide tones sing from one chord to the next.
 
 ## ② Visuals
 
-This week's home, **Cmaj7 (I).** The tension built by ii–V resolves here. Green = guide tones (7th & 3rd).
+This week's home, **Cmaj7 (I).** <mark>The tension built by ii–V resolves here</mark>. Green = guide tones (7th & 3rd).
 
 ```json
 {
@@ -122,16 +122,16 @@ This week's home, **Cmaj7 (I).** The tension built by ii–V resolves here. Gree
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-Spin the Dm7-G7-Cmaj7 loop very slowly (BPM 64), one lap at a time. Check only that your hand doesn't leave the region.
+Spin the Dm7-G7-Cmaj7 loop very slowly (BPM 64), one lap at a time. <mark>Check only that your hand doesn't leave the region</mark>.
 
 **10–20 min · Brain training (today's target = smooth connection)**
-Play **Example 1's** guide-tone loop eyes-closed on the 3rd string, 5→4→4→5. Know in advance where this note goes at each change and fret it.
+Play **Example 1's** guide-tone loop eyes-closed on the 3rd string, 5→4→4→5. <mark>Know in advance where this note goes at each change and fret it</mark>.
 
 **20–40 min · Real comping (Example 2 loop / 72–82 BPM)**
-Over a backing track (if you have one), spin **Example 2's loop at BPM 76** several times. Keep the sound unbroken at the change, fingers minimal. Once comfortable, spin the loop in D key too (last session).
+Over a backing track (if you have one), spin **Example 2's loop at BPM 76** several times. <mark>Keep the sound unbroken at the change, fingers minimal</mark>. Once comfortable, spin the loop in D key too (last session).
 
 **40–50 min · Record & reflect (recommended)**
-Record two laps of the ii–V–I loop. Check: did the hand jump big at changes / did change timing blur / did the guide tone sing from chord to chord?
+Record two laps of the ii–V–I loop. Check: did the hand jump big at changes / did change timing blur / <mark>did the guide tone sing from chord to chord</mark>?
 
 **Done when:** you can cycle ii–V–I smoothly in one region with no jumps, comping while aware of the guide tone's flow. (Week 3 complete!)
 

@@ -9,9 +9,9 @@ i18nKey: "lesson.m2.w5.d4"
 
 ## ① Theory
 
-The week's finish line. The 4th-string-root D-shape is **one shape,** so sliding it sideways makes any chord (the same "movable pattern" idea as Week 3). Today you comp a bright high-register progression with it.
+The week's finish line. The 4th-string-root D-shape is **<mark>one shape</mark>,** so sliding it sideways makes any chord (the same "movable pattern" idea as Week 3). Today you comp a bright high-register progression with it.
 
-The simplest example: a **G → A** vibe. Slide the same D-shape **up two frets** and G (root at fret 5) becomes A (root at fret 7). Same hand shape, moved whole. Both chords have the 3rd (the bright note) on top, so going back and forth feels crisp and pop. When one hand shape pops out a mood like a pop-song intro, you're reaching the moment where "comping turns into music." Last week's shells were clean inside a band; this week's D-shape sparkles even played alone — a different stage entirely.
+The simplest example: a **G → A** vibe. Slide the same D-shape **up two frets** and G (root at fret 5) becomes A (root at fret 7). Same hand shape, moved whole. <mark>Both chords have the 3rd (the bright note) on top, so going back and forth feels crisp and pop</mark>. When one hand shape pops out a mood like a pop-song intro, you're reaching the moment where <mark>"comping turns into music."</mark> Last week's shells were clean inside a band; this week's D-shape sparkles even played alone — a different stage entirely.
 
 ```json
 {
@@ -45,11 +45,11 @@ The simplest example: a **G → A** vibe. Slide the same D-shape **up two frets*
 }
 ```
 
-Week recap: the root went up to the 4th string, opening the high register, and you gained the new R·3·5 layout plus the idea of the **top note.** Next week (6), you lay a **9th tension** onto this high register to make the color shimmer.
+Week recap: the root went up to the 4th string, opening the high register, and you gained the new R·3·5 layout plus the idea of the **<mark>top note</mark>.** Next week (6), you lay a **<mark>9th tension</mark>** onto this high register to make the color shimmer.
 
 ## ② Visuals
 
-**G (D-shape, root at fret 5).** Top note = 3rd (B, green).
+**G (D-shape, root at fret 5).** <mark>Top note = 3rd (B, green)</mark>.
 
 ```json
 {
@@ -67,7 +67,7 @@ Week recap: the root went up to the 4th string, opening the high register, and y
 }
 ```
 
-**A (D-shape, root at fret 7).** The same shape two frets up. Top note = 3rd (C#, green).
+**A (D-shape, root at fret 7).** <mark>The same shape two frets up</mark>. Top note = 3rd (C#, green).
 
 ```json
 {
@@ -132,16 +132,16 @@ Week recap: the root went up to the 4th string, opening the high register, and y
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-Play G (D-shape) → A (D-shape) two frets up and down. Feel it's one hand shape; only 4·3·2·1 clean, 6th & 5th muted.
+Play G (D-shape) → A (D-shape) two frets up and down. <mark>Feel it's one hand shape; only 4·3·2·1 clean</mark>, 6th & 5th muted.
 
 **10–20 min · Brain training (today's target = top-note move)**
-With **Example 1,** confirm the top note climbs 7→9 from G to A. You pass when you can fret both chords' top notes with eyes closed.
+With **Example 1,** <mark>confirm the top note climbs 7→9 from G to A</mark>. You pass when you can fret both chords' top notes with eyes closed.
 
 **20–40 min · Real comping (Example 2 vibe / 78–88 BPM)**
-**Repeat Example 2's G-A vibe at BPM 82 4×.** Once comfortable, add D (fret 12) to extend like G-A-D, or lay it over another bright backing freely. Enjoy the high-register crispness.
+**Repeat Example 2's G-A vibe at BPM 82 4×.** Once comfortable, add D (fret 12) to extend like G-A-D, or lay it over another bright backing freely. <mark>Enjoy the high-register crispness</mark>.
 
 **40–50 min · Record & reflect + week recap (recommended)**
-Record two laps of the vibe. Check: do low strings stay silent / are changes smooth / is the top note clear? Then sum up for yourself: "What changed once the root went up to the 4th string?"
+Record two laps of the vibe. Check: do low strings stay silent / are changes smooth / is the top note clear? Then sum up for yourself: <mark>"What changed once the root went up to the 4th string?"</mark>
 
 **Done when:** you can slide the D-shape sideways to comp the G-A high-register vibe smoothly. (Week 5 complete!)
 

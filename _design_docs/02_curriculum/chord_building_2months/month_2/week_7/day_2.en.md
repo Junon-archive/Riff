@@ -9,9 +9,9 @@ i18nKey: "lesson.m2.w7.d2"
 
 ## ① Theory
 
-Today you thread a real progression — **C - Am - F - G** (one of pop's most common) — with voice leading. The goal is a top note that moves **smoothly, like steps.**
+Today you thread a real progression — **C - Am - F - G** (one of pop's most common) — with voice leading. The goal is a top note that moves **<mark>smoothly, like steps</mark>.**
 
-Choose the top-note melody like this: **G → A → A → G.** (1st string fret 3 → 5 → 5 → 3.) Up one note (a major 2nd), stay, back down. No big jumps.
+Choose the top-note melody like this: **G → A → A → G.** (1st string fret 3 → 5 → 5 → 3.) Up one note (a major 2nd), stay, back down. <mark>No big jumps</mark>.
 
 ```json
 {
@@ -29,11 +29,11 @@ Choose the top-note melody like this: **G → A → A → G.** (1st string fret 
 }
 ```
 
-The secret is **common tones.** Grab C and Am in these spots and the two lower notes (C·E) are **identical.** So C→Am moves only the 1st string, G→A — leave the rest planted. Am→F keeps the top A the same. Pros find this "least-movement path" to connect chords, and as a result the top note sings. Isn't it something? The chords change, your hand barely moves, and yet a melody flows up top. That's the true identity of the polished comping you always liked — not magic, just the result of keeping the common tones planted.
+The secret is **<mark>common tones</mark>.** Grab C and Am in these spots and the two lower notes (C·E) are **identical.** So C→Am moves only the 1st string, G→A — leave the rest planted. Am→F keeps the top A the same. Pros find this <mark>"least-movement path"</mark> to connect chords, and as a result the top note sings. Isn't it something? <mark>The chords change, your hand barely moves, and yet a melody flows up top</mark>. That's the true identity of the polished comping you always liked — not magic, just the result of keeping the common tones planted.
 
 ## ② Visuals
 
-**C — top = 5 (G).** The two lower notes are C (R) · E (3). Green is the top note.
+**C — top = 5 (G).** <mark>The two lower notes are C (R) · E (3)</mark>. Green is the top note.
 
 ```json
 {
@@ -48,7 +48,7 @@ The secret is **common tones.** Grab C and Am in these spots and the two lower n
 }
 ```
 
-**Am — top = R (A).** The lower two notes C·E are **identical** to the C chord (common tones). Only the top moves G→A.
+**Am — top = R (A).** The lower two notes C·E are **<mark>identical</mark>** to the C chord (common tones). Only the top moves G→A.
 
 ```json
 {
@@ -154,16 +154,16 @@ The secret is **common tones.** Grab C and Am in these spots and the two lower n
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-Play the four spots C-Am-F-G in order. Especially at C↔Am, confirm the two lower notes (C·E) stay planted and only the top moves G↔A.
+Play the four spots C-Am-F-G in order. Especially at C↔Am, <mark>confirm the two lower notes (C·E) stay planted and only the top moves G↔A</mark>.
 
 **10–20 min · Brain training (today's target = connecting top notes)**
-Play **Example 1's** top melody (G-A-A-G) on the 1st string eyes-closed. Also confirm whether the top is R, 3, or 5 in each chord.
+Play **Example 1's** top melody (G-A-A-G) on the 1st string eyes-closed. <mark>Also confirm whether the top is R, 3, or 5 in each chord</mark>.
 
 **20–40 min · Real comping (Example 2 / 74–84 BPM)**
-**Repeat Example 2's C-Am-F-G at BPM 78 4×.** Focus on the top note singing G-A-A-G. Once comfortable, lay it over a backing like a real song.
+**Repeat Example 2's C-Am-F-G at BPM 78 4×.** <mark>Focus on the top note singing G-A-A-G</mark>. Once comfortable, lay it over a backing like a real song.
 
 **40–50 min · Record & reflect (recommended)**
-Record two laps of the progression. Check: did the top-note melody connect smoothly, and did the hand avoid big jumps at the changes?
+Record two laps of the progression. Check: <mark>did the top-note melody connect smoothly</mark>, and did the hand avoid big jumps at the changes?
 
 **Done when:** you can cycle C-Am-F-G with the top note G-A-A-G singing, keeping common tones planted and moving minimally.
 

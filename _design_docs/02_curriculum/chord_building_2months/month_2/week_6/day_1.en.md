@@ -9,12 +9,12 @@ i18nKey: "lesson.m2.w6.d1"
 
 ## ① Theory
 
-Does "the 9th" sound hard? It's actually very simple. **The 9th = the root's major 2nd, raised one octave.** C's 9th is D (C to D, an octave up). That's all.
+Does "the 9th" sound hard? It's actually very simple. **<mark>The 9th = the root's major 2nd, raised one octave</mark>.** C's 9th is D (C to D, an octave up). That's all.
 
 Lay this one note onto a chord you already hold and the color turns bright. Today you do **Maj7 → Maj9.**
 
-- **The Maj7 skeleton** = R (C) · 3 (E) · 7 (B). (These are the chord tones from last month.)
-- **Add the 9th (D)** = **Maj9.** One D sprinkled bright over R·3·7.
+- **<mark>The Maj7 skeleton</mark>** = R (C) · 3 (E) · 7 (B). (These are the chord tones from last month.)
+- **<mark>Add the 9th (D)</mark>** = **Maj9.** One D sprinkled bright over R·3·7.
 
 ```json
 {
@@ -48,11 +48,11 @@ Lay this one note onto a chord you already hold and the color turns bright. Toda
 }
 ```
 
-The key: if R·3·7 are the chord's **skeleton (blue),** the 9th is the **color (yellow)** sprinkled on top. Leave the skeleton and just add color. That sophisticated ring of city-pop, jazz, and R&B comes precisely from this 9th. Don't be scared off — you're not memorizing a whole new chord. You add just one finger onto a chord you already hold. It's only sprinkling one sparkle over a chord you know, so today it's enough to feel with your hands that "the 9th isn't hard."
+The key: if R·3·7 are the chord's **<mark>skeleton (blue)</mark>,** the 9th is the **<mark>color (yellow)</mark>** sprinkled on top. Leave the skeleton and just add color. That sophisticated ring of city-pop, jazz, and R&B comes precisely from this 9th. Don't be scared off — you're not memorizing a whole new chord. <mark>You add just one finger onto a chord you already hold</mark>. It's only sprinkling one sparkle over a chord you know, so today it's enough to feel with your hands that "the 9th isn't hard."
 
 ## ② Visuals
 
-First, the **Cmaj7 skeleton** (R·3·7). Blue is the chord's frame.
+First, the **Cmaj7 skeleton** (R·3·7). <mark>Blue is the chord's frame</mark>.
 
 ```json
 {
@@ -70,7 +70,7 @@ First, the **Cmaj7 skeleton** (R·3·7). Blue is the chord's frame.
 }
 ```
 
-Now **Cmaj9** — the 9th (D) laid on the 2nd string. Yellow is the freshly sprinkled **9th tension,** today's color.
+Now **Cmaj9** — the 9th (D) laid on the 2nd string. Yellow is the freshly sprinkled **<mark>9th tension</mark>,** today's color.
 
 ```json
 {
@@ -137,16 +137,16 @@ Now **Cmaj9** — the 9th (D) laid on the 2nd string. Yellow is the freshly spri
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-Alternate the Cmaj7 skeleton and Cmaj9 (add 9). The key check: does the **9th laid on the 2nd string ring cleanly,** not muted?
+Alternate the Cmaj7 skeleton and Cmaj9 (add 9). The key check: does the **<mark>9th laid on the 2nd string ring cleanly</mark>,** not muted?
 
 **10–20 min · Brain training (today's target = the 9th)**
-Fret **where the 9th (D) is** relative to the root C (2nd string, fret 3). Name aloud where the 3rd, 7th, and 9th each are in this chord. You pass when you can lay the 9th on with eyes closed.
+Fret **<mark>where the 9th (D) is</mark>** relative to the root C (2nd string, fret 3). Name aloud where the 3rd, 7th, and 9th each are in this chord. You pass when you can lay the 9th on with eyes closed.
 
 **20–40 min · Real comping (Example 2 / 74–84 BPM)**
-**Repeat Example 2's Maj7↔Maj9 at BPM 78 4×,** feeling the color difference. Once comfortable, move the root to another fret (e.g., a 5th-string position) and apply the same formula. Over a bright backing it's pure city-pop.
+**Repeat Example 2's Maj7↔Maj9 at BPM 78 4×,** feeling the color difference. Once comfortable, move the root to another fret (e.g., a 5th-string position) and apply the same formula. <mark>Over a bright backing it's pure city-pop</mark>.
 
 **40–50 min · Record & reflect (recommended)**
-Record 30 seconds of Maj7↔Maj9. Check: does the 9th ring (not die), and did adding the tension collapse the hand so another string got muted?
+Record 30 seconds of Maj7↔Maj9. Check: <mark>does the 9th ring (not die)</mark>, and did adding the tension collapse the hand so another string got muted?
 
 **Done when:** you can lay the 9th onto the Cmaj7 skeleton to make Cmaj9, and name that the 9th is the root + major 2nd (an octave up).
 

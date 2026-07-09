@@ -9,18 +9,18 @@ i18nKey: "lesson.m1.w4.d4"
 
 ## ① Theory
 
-The month's last day. The **Dm7 → G7 → Cmaj7** ii–V–I from Week 3 — you now play it **entirely as shell voicings.** There's nothing new to learn today. It's the day the pieces you've stacked up all month click together into "ah, this all connected into one thing." Two things merge naturally:
+The month's last day. The **Dm7 → G7 → Cmaj7** ii–V–I from Week 3 — you now play it **<mark>entirely as shell voicings</mark>.** There's nothing new to learn today. It's the day the pieces you've stacked up all month click together into <mark>"ah, this all connected into one thing."</mark> Two things merge naturally:
 
-- **Root-string crossing (5·6·5)** — Dm7 and Cmaj7 are 5th-string-root shells, G7 is a 6th-string-root shell.
-- **Guide tones = the shell's color notes** — since a shell keeps only the 3rd and 7th to begin with, Week 3's guide-tone line is literally the shell's two notes. That line on the 3rd string moving 5→4→4 — remember it?
+- **<mark>Root-string crossing (5·6·5)</mark>** — Dm7 and Cmaj7 are 5th-string-root shells, G7 is a 6th-string-root shell.
+- **<mark>Guide tones = the shell's color notes</mark>** — since a shell keeps only the 3rd and 7th to begin with, Week 3's guide-tone line is literally the shell's two notes. That line on the 3rd string moving 5→4→4 — remember it?
 
-So the shell ii–V–I is the most pro-like comping there is: **three-finger chords that sing, connected with minimal movement.** Everything you learned this month (assembly over a root, the 3rd/7th switches, 5th/6th-string roots, voice leading, the diet) all lives in one progression.
+So the shell ii–V–I is the most pro-like comping there is: **<mark>three-finger chords that sing, connected with minimal movement</mark>.** Everything you learned this month (assembly over a root, the 3rd/7th switches, 5th/6th-string roots, voice leading, the diet) all lives in one progression.
 
-**Month recap:** you now see chords not as shapes but as "assembly — stacking the 3rd and 7th over a root and switching with fingers." For any chord, just find the root string and the 3rd/7th. Next month you'll paint color on top of this with **tensions (the 9th) and top-note melody.**
+**Month recap:** you now see chords not as shapes but as <mark>"assembly — stacking the 3rd and 7th over a root and switching with fingers."</mark> For any chord, just find the root string and the 3rd/7th. Next month you'll paint color on top of this with **<mark>tensions (the 9th) and top-note melody</mark>.**
 
 ## ② Visuals
 
-The three ii–V–I shells. Only the root (blue) and guide tones (green 3rd & 7th) remain.
+The three ii–V–I shells. <mark>Only the root (blue) and guide tones (green 3rd & 7th) remain</mark>.
 
 ```json
 {
@@ -154,16 +154,16 @@ The three ii–V–I shells. Only the root (blue) and guide tones (green 3rd & 7
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-Fret the Dm7·G7·Cmaj7 shells and check only three strings ring and the dropped strings are dead.
+Fret the Dm7·G7·Cmaj7 shells and check <mark>only three strings ring and the dropped strings are dead</mark>.
 
 **10–20 min · Brain training (today's target = shell guide tones)**
-With **Example 1,** fret the 3rd string 5→4→4 and confirm where the 3rd and 7th are in each shell. Even as the root string shifts 5·6·5, the color notes stay nearly in place.
+With **Example 1,** fret the 3rd string 5→4→4 and confirm where the 3rd and 7th are in each shell. <mark>Even as the root string shifts 5·6·5, the color notes stay nearly in place</mark>.
 
 **20–40 min · Real comping (Example 2 / 74–84 BPM)**
-Over a backing track, cycle **Example 2's shell ii–V–I at BPM 78** several times. Is your hand tied to one region (frets 3–6), and do only three strings ring thin and clean? Try D key too if you have room.
+Over a backing track, cycle **Example 2's shell ii–V–I at BPM 78** several times. <mark>Is your hand tied to one region (frets 3–6), and do only three strings ring thin and clean</mark>? Try D key too if you have room.
 
 **40–50 min · Record & reflect + month recap (recommended)**
-Record two laps of the shell ii–V–I. Check: do dropped strings stay silent / are changes fast and smooth / do the guide tones connect? Then ask yourself — "How did I see chords a month ago, and how do I see them now?"
+Record two laps of the shell ii–V–I. Check: do dropped strings stay silent / are changes fast and smooth / do the guide tones connect? Then ask yourself — <mark>"How did I see chords a month ago, and how do I see them now?"</mark>
 
 **Done when:** you can cycle ii–V–I entirely as shells, crossing root strings with minimal movement. (Month 1 complete! 🎉)
 

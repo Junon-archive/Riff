@@ -9,18 +9,18 @@ i18nKey: "lesson.m2.w8.d4"
 
 ## ① Theory
 
-The last day at last. Today you combine everything to **finish your own comp over the ii–V–I and record it,** then analyze it yourself.
+The last day at last. Today you combine everything to **<mark>finish your own comp over the ii–V–I and record it</mark>,** then analyze it yourself.
 
 Looking back over two months:
-- **Month 1** — a chord isn't a memorized shape but an **assembly of the 3rd and 7th over a root.** 6th/5th-string roots, voice leading, shell voicings.
-- **Month 2** — you moved the root up to the 4th string to open the **high register,** added color with the **9th,** and connected the **top note** into a melody.
+- **Month 1** — a chord isn't a memorized shape but an **<mark>assembly of the 3rd and 7th over a root</mark>.** 6th/5th-string roots, voice leading, shell voicings.
+- **Month 2** — you moved the root up to the 4th string to open the **<mark>high register</mark>,** added color with the **<mark>9th</mark>,** and connected the **<mark>top note</mark>** into a melody.
 
-Today's finished comp is the sum of all these tools — shimmering with 9ths (color), singing with the top note (melody), grooving with rhythm (life). Not a memorized answer, but **your sound, made by your own choices.**
-You made it here — that's genuinely remarkable. The person whose hand froze just changing one chord two months ago now designs and records comping all their own. This curriculum ends today, but your music truly starts from here. Be sure to keep that recording you made today — play it back in six months and you'll realize just how far you've come.
+Today's finished comp is the sum of all these tools — shimmering with 9ths (color), singing with the top note (melody), grooving with rhythm (life). Not a memorized answer, but **<mark>your sound, made by your own choices</mark>.**
+You made it here — that's genuinely remarkable. The person whose hand froze just changing one chord two months ago now designs and records comping all their own. <mark>This curriculum ends today, but your music truly starts from here</mark>. Be sure to keep that recording you made today — play it back in six months and you'll realize just how far you've come.
 
 ## ② Visuals
 
-**Dm9 (ii).** Today's opening chord. Yellow = 9th.
+**Dm9 (ii).** <mark>Today's opening chord</mark>. Yellow = 9th.
 
 ```json
 {
@@ -38,7 +38,7 @@ You made it here — that's genuinely remarkable. The person whose hand froze ju
 }
 ```
 
-**Cmaj9 (I).** The progression's home. Land shimmering with the 9th.
+**Cmaj9 (I).** The progression's home. <mark>Land shimmering with the 9th</mark>.
 
 ```json
 {
@@ -110,16 +110,16 @@ You made it here — that's genuinely remarkable. The person whose hand froze ju
 ## ③ Today's practice (50-minute routine — recording challenge)
 
 **0–10 min · Warm-up + setup**
-Spin Example 1's final comp a few times to warm up, and prep a recording app (a phone voice memo is fine). Set up an R&B ii–V–I backing track.
+Spin Example 1's final comp a few times to warm up, and <mark>prep a recording app (a phone voice memo is fine)</mark>. Set up an R&B ii–V–I backing track.
 
 **10–20 min · Brain training (today's target = lock in your choices)**
-Decide the version to record: which chord gets a 9th? Groove A or B? What's on top? Choose which of the 8-week tools you'll use.
+Decide the version to record: which chord gets a 9th? Groove A or B? What's on top? <mark>Choose which of the 8-week tools you'll use</mark>.
 
 **20–40 min · Real recording**
-Over the backing, **record your whole finished comp** (Example 1 + Example 2's top note if you like). Not perfect in one go — keep your favorite of several takes.
+Over the backing, **<mark>record your whole finished comp</mark>** (Example 1 + Example 2's top note if you like). Not perfect in one go — keep your favorite of several takes.
 
 **40–50 min · Self-analysis (deep checklist)**
-Play it back and diagnose: (1) did chord-change timing stay steady over the groove (2) any dead strings / mute mistakes (3) did the top-note melody connect (4) did the 9th (tension) shimmer as intended (5) one thing you'd change next time?
+Play it back and diagnose: (1) <mark>did chord-change timing stay steady over the groove</mark> (2) any dead strings / mute mistakes (3) <mark>did the top-note melody connect</mark> (4) <mark>did the 9th (tension) shimmer as intended</mark> (5) one thing you'd change next time?
 
 **Done when:** you record your own comp mixing 9ths, top notes, and groove over the ii–V–I, and analyze it with the checklist. (Week 8 · **2-month curriculum complete!** 🎉🎸)
 

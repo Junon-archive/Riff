@@ -9,13 +9,13 @@ i18nKey: "lesson.m2.w8.d3"
 
 ## ① Theory
 
-Through yesterday you chose voicings and rhythms. Today it's **arranging.** Onto the plain skeleton of a basic ii–V–I (Dm7-G7-Cmaj7), lay Week 6's **9th tensions** and Week 7's **top-note melody** to make your own refined version.
+Through yesterday you chose voicings and rhythms. Today it's **<mark>arranging</mark>.** Onto the plain skeleton of a basic ii–V–I (Dm7-G7-Cmaj7), lay Week 6's **<mark>9th tensions</mark>** and Week 7's **<mark>top-note melody</mark>** to make your own refined version.
 
 Two tools:
-- **Color with 9ths.** Dm7 → **Dm9,** Cmaj7 → **Cmaj9.** The progression shimmers like R&B/city-pop.
-- **Sing with the top note.** Carry the topmost note as a melody across the progression (e.g., the guide tones C-B-B singing on top).
+- **<mark>Color with 9ths</mark>.** Dm7 → **Dm9,** Cmaj7 → **Cmaj9.** The progression shimmers like R&B/city-pop.
+- **<mark>Sing with the top note</mark>.** Carry the topmost note as a melody across the progression (e.g., the guide tones C-B-B singing on top).
 
-There's no right answer. Today's challenge is designing it yourself: "to make this progression cooler, where do I add a 9th, and what do I put on top?" You're no longer someone who plays a song "as handed to you" — you redraw it "your way." At first, changing just one spot is plenty. Those small choices pile up and eventually become "your sound."
+There's no right answer. Today's challenge is designing it yourself: <mark>"to make this progression cooler, where do I add a 9th, and what do I put on top?"</mark> You're no longer someone who plays a song "as handed to you" — you redraw it "your way." At first, changing just one spot is plenty. <mark>Those small choices pile up and eventually become "your sound."</mark>
 
 ## ② Visuals
 
@@ -37,7 +37,7 @@ There's no right answer. Today's challenge is designing it yourself: "to make th
 }
 ```
 
-**Cmaj9 (9th on the I).** Yellow is the 9th (D). A plain Cmaj7 turns shimmering.
+**Cmaj9 (9th on the I).** Yellow is the 9th (D). <mark>A plain Cmaj7 turns shimmering</mark>.
 
 ```json
 {
@@ -107,16 +107,16 @@ There's no right answer. Today's challenge is designing it yourself: "to make th
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-Fret Dm9·Cmaj9 and check the 9th rings cleanly. Then learn Example 2's top-note line (C-B-B) on the 1st string.
+Fret Dm9·Cmaj9 and check the 9th rings cleanly. Then <mark>learn Example 2's top-note line (C-B-B) on the 1st string</mark>.
 
 **10–20 min · Brain training (today's target = your own color)**
-Ask yourself, "where do I add a 9th? What goes on top?" Write out the basic ii–V–I and design how to lay 9ths / top notes on each chord.
+Ask yourself, <mark>"where do I add a 9th? What goes on top?"</mark> Write out the basic ii–V–I and design how to lay 9ths / top notes on each chord.
 
 **20–40 min · Real comping (Examples 1 & 2 / 74–84 BPM)**
-**Spin Example 1's 9th reharmonization at BPM 78** to add color, and **lay Example 2's top-note line on top** to sing. Combine both tools into your own four-bar arrangement.
+**Spin Example 1's 9th reharmonization at BPM 78** to add color, and **lay Example 2's top-note line on top** to sing. <mark>Combine both tools into your own four-bar arrangement</mark>.
 
 **40–50 min · Record & reflect (recommended)**
-Record 30 seconds of your arrangement. Check: do the 9ths shimmer / does the top-note melody connect / is it more refined than the plain original?
+Record 30 seconds of your arrangement. Check: do the 9ths shimmer / does the top-note melody connect / <mark>is it more refined than the plain original</mark>?
 
 **Done when:** you can lay 9ths and a top-note melody onto a basic ii–V–I to design and comp your own reharmonized version.
 

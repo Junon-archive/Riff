@@ -9,11 +9,11 @@ i18nKey: "lesson.m2.w5.d3"
 
 ## ① Theory
 
-Even the same G chord sounds completely different depending on **which of R·3·5 you put on the highest note (the top note).** This is called an inversion. Today you view a G triad on the thin strings (1·2·3) in three places, climbing the neck:
+Even the same G chord sounds completely different depending on **<mark>which of R·3·5 you put on the highest note (the top note)</mark>.** This is called <mark>an inversion</mark>. Today you view a G triad on the thin strings (1·2·3) in three places, climbing the neck:
 
-- **Top = R (G)** — stable, a "finished" feel. (around fret 3)
-- **Top = 3 (B)** — bright, singing. (around fret 7)
-- **Top = 5 (D)** — open, floating. (around fret 10)
+- **<mark>Top = R (G)</mark>** — stable, a "finished" feel. (around fret 3)
+- **<mark>Top = 3 (B)</mark>** — bright, singing. (around fret 7)
+- **<mark>Top = 5 (D)</mark>** — open, floating. (around fret 10)
 
 ```json
 {
@@ -54,11 +54,11 @@ Even the same G chord sounds completely different depending on **which of R·3·
 }
 ```
 
-All three are the same G (G-B-D), yet one top note changes the color. Pros **choose the top note** to place chords within a progression (Week 7 connects these into a melody). Today, just lock in the feel that "changing the top note changes the color." No need to memorize all three positions right now. Isn't it something that the same chord sounds this different from one position alone? The moment this feel connects the top notes in Week 7, a melody starts flowing over your comping.
+All three are the same G (G-B-D), yet one top note changes the color. Pros **<mark>choose the top note</mark>** to place chords within a progression (Week 7 connects these into a melody). Today, just lock in the feel that <mark>"changing the top note changes the color."</mark> No need to memorize all three positions right now. Isn't it something that the same chord sounds this different from one position alone? The moment this feel connects the top notes in Week 7, a melody starts flowing over your comping.
 
 ## ② Visuals
 
-**Voicing ① top = R (G).** Green is the top note (root).
+**Voicing ① top = R (G).** <mark>Green is the top note (root)</mark>.
 
 ```json
 {
@@ -73,7 +73,7 @@ All three are the same G (G-B-D), yet one top note changes the color. Pros **cho
 }
 ```
 
-**Voicing ② top = 3 (B).** Bright, singing.
+**Voicing ② top = 3 (B).** <mark>Bright, singing</mark>.
 
 ```json
 {
@@ -88,7 +88,7 @@ All three are the same G (G-B-D), yet one top note changes the color. Pros **cho
 }
 ```
 
-**Voicing ③ top = 5 (D).** Open, floating.
+**Voicing ③ top = 5 (D).** <mark>Open, floating</mark>.
 
 ```json
 {
@@ -183,16 +183,16 @@ All three are the same G (G-B-D), yet one top note changes the color. Pros **cho
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-Fret each voicing (top R·3·5) and check only the 1·2·3 strings ring clean. Adjust to the hand travel up and down the neck.
+Fret each voicing (top R·3·5) and check only the 1·2·3 strings ring clean. <mark>Adjust to the hand travel up and down the neck</mark>.
 
 **10–20 min · Brain training (today's target = the top note's identity)**
-In each voicing, name aloud **whether the top note is R, 3, or 5** as you fret it. You pass when, on "top = 3!", you grab the fret-7 voicing instantly with eyes closed.
+In each voicing, name aloud **<mark>whether the top note is R, 3, or 5</mark>** as you fret it. You pass when, on "top = 3!", you grab the fret-7 voicing instantly with eyes closed.
 
 **20–40 min · Real comping (Examples 1 & 2 / 70–80 BPM)**
-Repeat **Example 2's three-voicing comp at BPM 76,** comparing colors. Then play **Example 1's top-note melody** connecting the three notes. Once comfortable, find the three voicings for other chords (C, D) too.
+Repeat **Example 2's three-voicing comp at BPM 76,** comparing colors. Then play **Example 1's top-note melody** connecting the three notes. Once comfortable, <mark>find the three voicings for other chords (C, D) too</mark>.
 
 **40–50 min · Record & reflect (recommended)**
-Record 30 seconds of the three voicings. Check: is the top note clearly different in each, and does the hand travel stay clean?
+Record 30 seconds of the three voicings. Check: <mark>is the top note clearly different in each</mark>, and does the hand travel stay clean?
 
 **Done when:** you can grab the same G with three top notes (R·3·5) and tell the color difference of each by ear.
 

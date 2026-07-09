@@ -9,16 +9,16 @@ i18nKey: "lesson.m1.w3.d1"
 
 ## ① Theory
 
-Half the songs in the world stand on one chord progression: **ii–V–I.** In C that's **Dm7 → G7 → Cmaj7.** Pop, jazz, ballads, city-pop… this three-chord cluster repeats everywhere. So if your hands can connect it smoothly, you can accompany half the songs out there.
+Half the songs in the world stand on one chord progression: **<mark>ii–V–I</mark>.** In C that's **Dm7 → G7 → Cmaj7.** Pop, jazz, ballads, city-pop… this three-chord cluster repeats everywhere. So if your hands can connect it smoothly, you can accompany half the songs out there.
 
-The problem is that beginners **jump** their hand across the neck to play it — over there for Dm7, here for G7, over there again for Cmaj7. The changes stutter. Pros don't. Their secret is twofold:
+The problem is that beginners **<mark>jump</mark>** their hand across the neck to play it — over there for Dm7, here for G7, over there again for Cmaj7. The changes stutter. Pros don't. Their secret is twofold:
 
-1. **They choose the root string.** By **crossing** the 6th-string-root and 5th-string-root chords from the last two weeks, they tie the hand to one fret region. E.g., Dm7 (5th) → G7 (6th) → Cmaj7 (5th). The root travels across the 5th, 6th, and 5th strings, but the hand stays nearly in place.
-2. **The guide tones (3rd & 7th) move only a half step.** When chords change, only the 3rd and 7th slide the shortest distance. Today we plant these two feelings as seeds. We'll polish the smooth connecting all week, so today it's enough just to feel "ah, that's how a pro keeps the hand from jumping."
+1. **<mark>They choose the root string</mark>.** By **crossing** the 6th-string-root and 5th-string-root chords from the last two weeks, they tie the hand to one fret region. E.g., Dm7 (5th) → G7 (6th) → Cmaj7 (5th). The root travels across the 5th, 6th, and 5th strings, but the hand stays nearly in place.
+2. **<mark>The guide tones (3rd & 7th) move only a half step</mark>.** When chords change, only the 3rd and 7th slide the shortest distance. Today we plant these two feelings as seeds. We'll polish the smooth connecting all week, so today it's enough just to feel "ah, that's how a pro keeps the hand from jumping."
 
 ## ② Visuals
 
-The three ii–V–I chords. The green marks each chord's **guide tones (3rd & 7th)** — the notes that hold the character and move a half step into the next chord.
+The three ii–V–I chords. The green marks each chord's **<mark>guide tones (3rd & 7th)</mark>** — the notes that hold the character and move a half step into the next chord.
 
 ```json
 {
@@ -117,16 +117,16 @@ The three ii–V–I chords. The green marks each chord's **guide tones (3rd & 7
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-Fret each of Dm7 · G7 · Cmaj7 and check the sound — especially the muted 6th on Dm7/Cmaj7 and all six strings on G7.
+Fret each of Dm7 · G7 · Cmaj7 and check the sound — especially <mark>the muted 6th on Dm7/Cmaj7 and all six strings on G7</mark>.
 
 **10–20 min · Brain training (today's target = guide tones)**
-Fret **Example 1** and follow the 3rd string 5→4→4 by eye. In each chord, fret the 3rd and 7th (green) to confirm where they are. "The chords change, but the guide tones stay close."
+Fret **Example 1** and follow the 3rd string 5→4→4 by eye. In each chord, fret the 3rd and 7th (green) to confirm where they are. "<mark>The chords change, but the guide tones stay close</mark>."
 
 **20–40 min · Real comping (Example 2 / 66–76 BPM)**
-**Repeat Example 2 at BPM 72 4×.** Stay aware the root string shifts 5·6·5, but keep your hand tied to one region. Once comfortable, strum the whole chords smoothly connected.
+**Repeat Example 2 at BPM 72 4×.** Stay aware the root string shifts 5·6·5, but <mark>keep your hand tied to one region</mark>. Once comfortable, strum the whole chords smoothly connected.
 
 **40–50 min · Record & reflect (recommended)**
-Record 30 seconds of the ii–V–I cycle. Check: did your hand **jump unnecessarily** at the changes, and did the change timing stay clean?
+Record 30 seconds of the ii–V–I cycle. Check: did your hand **<mark>jump unnecessarily</mark>** at the changes, and did the change timing stay clean?
 
 **Done when:** you can hold Dm7·G7·Cmaj7 in one region and cycle ii–V–I slowly while fretting where the guide tones (3rd & 7th) are.
 

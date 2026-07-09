@@ -9,17 +9,17 @@ i18nKey: "lesson.m2.w7.d4"
 
 ## ① Theory
 
-The week's finish line. Comp the C-Am-F-G progression **holding the top-note melody (G-A-A-G)** with three-note voicings, like a pro — adding the feel of Week 5 (top note) + Week 6 (tensions).
+The week's finish line. Comp the C-Am-F-G progression **<mark>holding the top-note melody (G-A-A-G)</mark>** with three-note voicings, like a pro — adding the feel of Week 5 (top note) + Week 6 (tensions).
 
-- **The top is the song.** Across the progression, the topmost note flows G-A-A-G.
-- **Below is support.** Keep common tones planted, move minimally.
-- **Color if you want (the 9th).** For example, add a 9th (D) to C for a shimmer. Skeleton (melody + chord) stays; only color is added — exactly Week 6.
+- **<mark>The top is the song</mark>.** Across the progression, the topmost note flows G-A-A-G.
+- **<mark>Below is support</mark>.** Keep common tones planted, move minimally.
+- **<mark>Color if you want (the 9th)</mark>.** For example, add a 9th (D) to C for a shimmer. Skeleton (melody + chord) stays; only color is added — exactly Week 6.
 
-Month recap: you moved the root up to the 4th string to open the high register (Week 5), added color with the 9th (Week 6), and now connected the top note into a melody (Week 7). Next week (8), you mix it all to **record your own comping.** Getting here means you now use chords not as "memorized shapes" but as "tools that support a melody." Compared to two months ago — when your hand ran up and down the neck just to change one chord — you've become an entirely different player.
+Month recap: you moved the root up to the 4th string to open the high register (Week 5), added color with the 9th (Week 6), and now connected the top note into a melody (Week 7). Next week (8), you mix it all to **<mark>record your own comping</mark>.** Getting here means you now use chords not as <mark>"memorized shapes" but as "tools that support a melody."</mark> Compared to two months ago — when your hand ran up and down the neck just to change one chord — <mark>you've become an entirely different player</mark>.
 
 ## ② Visuals
 
-**F — top = 3 (A).** Its top (A) matches Am, so they connect easily. Green is the top.
+**F — top = 3 (A).** <mark>Its top (A) matches Am, so they connect easily</mark>. Green is the top.
 
 ```json
 {
@@ -34,7 +34,7 @@ Month recap: you moved the root up to the 4th string to open the high register (
 }
 ```
 
-**G — top = R (G).** The top steps down one note from A to G, closing the progression.
+**G — top = R (G).** <mark>The top steps down one note from A to G, closing the progression</mark>.
 
 ```json
 {
@@ -148,16 +148,16 @@ Month recap: you moved the root up to the 4th string to open the high register (
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-Play **Example 1's** top melody (G-A-A-G) on the 1st string. Then the four spots C-Am-F-G in order, confirming the top connects into that melody.
+Play **Example 1's** top melody (G-A-A-G) on the 1st string. Then the four spots C-Am-F-G in order, <mark>confirming the top connects into that melody</mark>.
 
 **10–20 min · Brain training (today's target = holding the melody)**
-Confirm the top is G·A·A·G per chord, and map where the common tones stay. Cycle the progression eyes-closed, making the top sing.
+Confirm the top is G·A·A·G per chord, and <mark>map where the common tones stay</mark>. Cycle the progression eyes-closed, making the top sing.
 
 **20–40 min · Real comping (Example 2 / 76–86 BPM)**
-**Repeat Example 2 at BPM 80 4×.** Lay it over a backing like a real song. Focus on the top-note melody singing clearly. If you have room, add a 9th to a chord for color.
+**Repeat Example 2 at BPM 80 4×.** Lay it over a backing like a real song. <mark>Focus on the top-note melody singing clearly</mark>. If you have room, add a 9th to a chord for color.
 
 **40–50 min · Record & reflect + week recap (recommended)**
-Record two laps. Check: did the top melody connect smoothly / did the top not cut off at changes / did the hand stay in one region.
+Record two laps. Check: <mark>did the top melody connect smoothly</mark> / did the top not cut off at changes / did the hand stay in one region.
 
 **Done when:** you can comp C-Am-F-G like a pro with three-note voicings, holding the top-note melody (G-A-A-G). (Week 7 complete!)
 

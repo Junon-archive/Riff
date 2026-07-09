@@ -9,7 +9,7 @@ i18nKey: "lesson.m2.w7.d3"
 
 ## ① Theory
 
-Yesterday the progression was given and you connected the top notes minimally. Today you go the **other way.** **Set a top-note melody first,** then put chords under it to support that melody. This is the real order of songwriting and arranging — the song (melody) first, chords are the clothing.
+Yesterday the progression was given and you connected the top notes minimally. Today you go the **other way.** **<mark>Set a top-note melody first</mark>,** then put chords under it to support that melody. This is the real order of songwriting and arranging — <mark>the song (melody) first, chords are the clothing</mark>.
 
 Today's melody descends: **C → B → A → G** (1st string frets 8 → 7 → 5 → 3). A very natural, step-down tune. Keep these four notes on top and harmonize below:
 
@@ -44,11 +44,11 @@ Today's melody descends: **C → B → A → G** (1st string frets 8 → 7 → 5
 }
 ```
 
-So the progression is **C - G - F - C.** The same melody changes color depending on which chord you lay beneath. Today you learn the feel that "the melody comes first; chords support it." It's only yesterday reversed in direction — the materials are the same, so don't feel pressured. Try this once and your ear starts noticing, before your head does, why the chords in a song you love sit so close together. It's the first step to hearing music from a songwriter's point of view.
+So the progression is **C - G - F - C.** <mark>The same melody changes color depending on which chord you lay beneath</mark>. Today you learn the feel that <mark>"the melody comes first; chords support it."</mark> It's only yesterday reversed in direction — the materials are the same, so don't feel pressured. Try this once and your ear starts noticing, before your head does, why the chords in a song you love sit so close together. <mark>It's the first step to hearing music from a songwriter's point of view</mark>.
 
 ## ② Visuals
 
-**C — top = R (C).** The melody's first note C sits on top, with 3 (E) · 5 (G) below. Green is the top (melody).
+**C — top = R (C).** <mark>The melody's first note C sits on top, with 3 (E) · 5 (G) below</mark>. Green is the top (melody).
 
 ```json
 {
@@ -63,7 +63,7 @@ So the progression is **C - G - F - C.** The same melody changes color depending
 }
 ```
 
-**G — top = 3 (B).** Put the melody's second note B on top and a G chord sits naturally below.
+**G — top = 3 (B).** <mark>Put the melody's second note B on top and a G chord sits naturally below</mark>.
 
 ```json
 {
@@ -169,16 +169,16 @@ So the progression is **C - G - F - C.** The same melody changes color depending
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-Play **Example 1's** melody (C-B-A-G) on the 1st string several times. Burn the descending tune into hand and ear.
+Play **Example 1's** melody (C-B-A-G) on the 1st string several times. <mark>Burn the descending tune into hand and ear</mark>.
 
 **10–20 min · Brain training (today's target = melody → chord)**
-Confirm each top note's degree in its chord (C = C's R, B = G's 3, A = F's 3, G = C's 5). Ask yourself, "to put this note on top, which chord fits?"
+Confirm each top note's degree in its chord (C = C's R, B = G's 3, A = F's 3, G = C's 5). Ask yourself, <mark>"to put this note on top, which chord fits?"</mark>
 
 **20–40 min · Real comping (Example 2 / 72–82 BPM)**
-**Repeat Example 2 at BPM 76 4×.** Keep the top melody, support below with chords. Once comfortable, tweak the melody slightly (e.g., C-B-A-A) and choose fitting chords yourself.
+**Repeat Example 2 at BPM 76 4×.** Keep the top melody, support below with chords. Once comfortable, tweak the melody slightly (e.g., C-B-A-A) and <mark>choose fitting chords yourself</mark>.
 
 **40–50 min · Record & reflect (recommended)**
-Record 30 seconds of melody+chords. Check: does the top melody sing clearly, and do the chords below support it well?
+Record 30 seconds of melody+chords. Check: <mark>does the top melody sing clearly</mark>, and do the chords below support it well?
 
 **Done when:** you can set a top-note melody (C-B-A-G) first, then comp chords (C-G-F-C) underneath it.
 

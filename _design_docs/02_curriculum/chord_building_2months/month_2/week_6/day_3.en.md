@@ -9,12 +9,12 @@ i18nKey: "lesson.m2.w6.d3"
 
 ## ① Theory
 
-Now you lay the 9th onto a dominant 7 (C7) to make **C9.** Add the 9th's (D) color over the dominant's tension (b7) and you get that sparkling comp sound of funk, soul, and Motown.
+Now you lay the 9th onto a dominant 7 (C7) to make **C9.** Add the 9th's (D) color over the dominant's tension (b7) and you get <mark>that sparkling comp sound of funk, soul, and Motown</mark>.
 
-- **The C7 skeleton** = R (C) · 3 (E) · b7 (B♭). (A dominant holding tension.)
-- **Add the 9th (D)** = **C9.** The tension stays; only the color turns bright.
+- **<mark>The C7 skeleton</mark>** = R (C) · 3 (E) · b7 (B♭). (A dominant holding tension.)
+- **<mark>Add the 9th (D)</mark>** = **C9.** The tension stays; only the color turns bright.
 
-Today's point: the **9th comes on top (the top note).** In plain C7 the top was the b7, but in C9 the 9th (D) sits above it, brightening the chord's impression sharply. A tension on top sounds especially shimmering — this is the seed of next week's (7) top-note leading. It's fine if you can't fully digest it right now. Just confirm by ear that "putting the 9th on top brightens it," and connecting these notes into a melody next week gets much easier. Think of today as the day all three siblings — maj9, m9, 9 — are gathered.
+Today's point: the **<mark>9th comes on top (the top note)</mark>.** In plain C7 the top was the b7, but in C9 the 9th (D) sits above it, brightening the chord's impression sharply. A tension on top sounds especially shimmering — this is the seed of next week's (7) top-note leading. It's fine if you can't fully digest it right now. Just confirm by ear that <mark>"putting the 9th on top brightens it,"</mark> and connecting these notes into a melody next week gets much easier. Think of today as the day all three siblings — maj9, m9, 9 — are gathered.
 
 ```json
 {
@@ -34,7 +34,7 @@ Today's point: the **9th comes on top (the top note).** In plain C7 the top was 
 
 ## ② Visuals
 
-First, the **C7 skeleton** (R·3·b7). Blue frame, top is the b7.
+First, the **C7 skeleton** (R·3·b7). Blue frame, <mark>top is the b7</mark>.
 
 ```json
 {
@@ -52,7 +52,7 @@ First, the **C7 skeleton** (R·3·b7). Blue frame, top is the b7.
 }
 ```
 
-Now **C9** — the 9th (D) laid on top on the 2nd string. Yellow is that shimmering 9th.
+Now **C9** — the 9th (D) laid on top on the 2nd string. <mark>Yellow is that shimmering 9th</mark>.
 
 ```json
 {
@@ -119,16 +119,16 @@ Now **C9** — the 9th (D) laid on top on the 2nd string. Yellow is that shimmer
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-Alternate C7 → C9 (add 9 on top). Check the 2nd-string 9th rings clearly on top and the skeleton doesn't collapse.
+Alternate C7 → C9 (add 9 on top). <mark>Check the 2nd-string 9th rings clearly on top and the skeleton doesn't collapse</mark>.
 
 **10–20 min · Brain training (today's target = the 9th on top)**
-In C9, fret where 3·b7·9 are, and especially confirm **the topmost note is the 9th (the top note).** Alternate the top of plain C7 (b7) and C9 (9) to hear the brightness difference.
+In C9, fret where 3·b7·9 are, and especially confirm **<mark>the topmost note is the 9th (the top note)</mark>.** Alternate the top of plain C7 (b7) and C9 (9) to hear the brightness difference.
 
 **20–40 min · Real comping (Example 2 / 78–88 BPM)**
-**Repeat Example 2's C7↔C9 at BPM 82 4×.** Once comfortable, move the root (e.g., G, F) for other 9-chords. Over a funk/Motown backing, the shimmer comes alive.
+**Repeat Example 2's C7↔C9 at BPM 82 4×.** Once comfortable, move the root (e.g., G, F) for other 9-chords. <mark>Over a funk/Motown backing, the shimmer comes alive</mark>.
 
 **40–50 min · Record & reflect (recommended)**
-Record 30 seconds of C7↔C9. Check: does the top 9th die, and did the change timing blur?
+Record 30 seconds of C7↔C9. Check: <mark>does the top 9th die</mark>, and did the change timing blur?
 
 **Done when:** you can lay the 9th on top of C7 to make C9, and hear the brightness when the tension is on top.
 

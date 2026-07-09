@@ -9,11 +9,11 @@ i18nKey: "lesson.m2.w7.d1"
 
 ## ① Theory
 
-In Week 5 you saw that even one chord has several positions depending on what you put on top (the topmost note). This week's core is **choosing that deliberately** — because **lining up the top notes makes a melody.**
+In Week 5 you saw that even one chord has several positions depending on what you put on top (the topmost note). This week's core is **<mark>choosing that deliberately</mark>** — because **<mark>lining up the top notes makes a melody</mark>.**
 
-Amateurs just change chords in "blocks," wherever the hand goes. Pros first decide "how should the highest note sing across this progression?" and then pick the voicings that produce those top notes. Then chord comping becomes a "song" with a melody.
+Amateurs just change chords in "blocks," wherever the hand goes. Pros first decide <mark>"how should the highest note sing across this progression?"</mark> and then pick the voicings that produce those top notes. Then chord comping becomes a "song" with a melody.
 
-Today is a warm-up. Grab the same **G chord** in two positions by changing only the top note (R or 3), and get the feel that the top note is melody material. Today you only shuttle between two positions — no need to strain to compose a melody yet. Burn in just one sentence — "the top note becomes the melody" — and from tomorrow a real song starts singing over your comping.
+Today is a warm-up. Grab the same **G chord** in two positions by changing only the top note (R or 3), and get the feel that the top note is melody material. Today you only shuttle between two positions — no need to strain to compose a melody yet. Burn in just one sentence — <mark>"the top note becomes the melody"</mark> — and from tomorrow a real song starts singing over your comping.
 
 ## ② Visuals
 
@@ -32,7 +32,7 @@ Today is a warm-up. Grab the same **G chord** in two positions by changing only 
 }
 ```
 
-**G — top note = 3 (B).** The same G, but now the top is the 3rd.
+**G — top note = 3 (B).** <mark>The same G, but now the top is the 3rd</mark>.
 
 ```json
 {
@@ -118,16 +118,16 @@ Today is a warm-up. Grab the same **G chord** in two positions by changing only 
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-Grab G's two positions (top = R, top = 3), only the 1·2·3 strings clean. Adjust to the hand travel between the two spots.
+Grab G's two positions (top = R, top = 3), only the 1·2·3 strings clean. <mark>Adjust to the hand travel between the two spots</mark>.
 
 **10–20 min · Brain training (today's target = choosing the top note)**
-In each position, name aloud **what the topmost note is.** On "top = 3!", grab the fret-7 spot instantly. Confirm with **Example 1** that top notes make a melody.
+In each position, name aloud **<mark>what the topmost note is</mark>.** On "top = 3!", grab the fret-7 spot instantly. Confirm with **Example 1** that top notes make a melody.
 
 **20–40 min · Real comping (Example 2 / 72–82 BPM)**
-**Repeat Example 2 at BPM 76 4×.** Compare color by changing the top R↔3 on the same G. Once comfortable, add top = 5 (1:10) and travel the three spots to make a top-note melody.
+**Repeat Example 2 at BPM 76 4×.** Compare color by changing the top R↔3 on the same G. Once comfortable, add top = 5 (1:10) and <mark>travel the three spots to make a top-note melody</mark>.
 
 **40–50 min · Record & reflect (recommended)**
-Record 30 seconds of changing top notes. Check: is the top note clear, and is the position travel smooth?
+Record 30 seconds of changing top notes. Check: <mark>is the top note clear</mark>, and is the position travel smooth?
 
 **Done when:** you can grab the same G in several top-note positions (R·3·(5)) and make a short melody by choosing the top note.
 

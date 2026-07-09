@@ -9,12 +9,12 @@ i18nKey: "lesson.m2.w6.d2"
 
 ## ① Theory
 
-Yesterday you laid the 9th on Maj7 to make Maj9. Today you lay the same 9th (D) onto a **minor chord (m7).** The result is **m9** — that soft, sophisticated color of R&B, neo-soul, and city-pop.
+Yesterday you laid the 9th on Maj7 to make Maj9. Today you lay the same 9th (D) onto a **minor chord (m7).** The result is **m9** — that <mark>soft, sophisticated color</mark> of R&B, neo-soul, and city-pop.
 
-- **The Cm7 skeleton** = R (C) · b3 (E♭) · b7 (B♭). (The dark color of minor.)
-- **Add the 9th (D)** = **Cm9.** Dark yet shimmering, curiously open.
+- **<mark>The Cm7 skeleton</mark>** = R (C) · b3 (E♭) · b7 (B♭). (The dark color of minor.)
+- **<mark>Add the 9th (D)</mark>** = **Cm9.** Dark yet shimmering, curiously open.
 
-The point: the 9th lands on the **same spot (2nd string).** Yesterday's Maj9 9th was D, today's m9 9th is D too — with the root at C, the 9th is always D. Only the skeleton (3rd & 7th) turns minor; the **color (9th) stays on top.** Once the formula is in your hand, the motion to add the 9th is identical for maj9 or m9. So today you're not learning a new chord — you're moving yesterday's motion straight over to minor. On a spot your hand already remembers, you just darken the skeleton and leave the color on top. If you got Maj9 yesterday, you'll get m9 today for sure.
+The point: the 9th lands on the **<mark>same spot (2nd string)</mark>.** Yesterday's Maj9 9th was D, today's m9 9th is D too — with the root at C, the 9th is always D. Only the skeleton (3rd & 7th) turns minor; the **<mark>color (9th) stays on top</mark>.** Once the formula is in your hand, the motion to add the 9th is identical for maj9 or m9. So today you're not learning a new chord — you're moving yesterday's motion straight over to minor. On a spot your hand already remembers, you just darken the skeleton and leave the color on top. If you got Maj9 yesterday, you'll get m9 today for sure.
 
 ```json
 {
@@ -34,7 +34,7 @@ The point: the 9th lands on the **same spot (2nd string).** Yesterday's Maj9 9th
 
 ## ② Visuals
 
-First, the **Cm7 skeleton** (R·b3·b7). Blue is the minor frame.
+First, the **Cm7 skeleton** (R·b3·b7). <mark>Blue is the minor frame</mark>.
 
 ```json
 {
@@ -52,7 +52,7 @@ First, the **Cm7 skeleton** (R·b3·b7). Blue is the minor frame.
 }
 ```
 
-Now **Cm9** — the 9th (D) laid on the 2nd string. Yellow is the 9th tension, a color sprinkled over the dark.
+Now **Cm9** — the 9th (D) laid on the 2nd string. Yellow is the 9th tension, <mark>a color sprinkled over the dark</mark>.
 
 ```json
 {
@@ -119,16 +119,16 @@ Now **Cm9** — the 9th (D) laid on the 2nd string. Yellow is the 9th tension, a
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-Alternate Cm7 → Cm9 (add 9). Check the 2nd-string 9th rings cleanly and the b3 (4th string) doesn't choke.
+Alternate Cm7 → Cm9 (add 9). <mark>Check the 2nd-string 9th rings cleanly and the b3 (4th string) doesn't choke</mark>.
 
 **10–20 min · Brain training (today's target = m9's 9th)**
-In Cm9, fret and name where b3·b7·9 each are. Confirm the **9th (2nd string, fret 3) is the same spot** as yesterday's Maj9. You pass when you can add the 9th eyes-closed.
+In Cm9, fret and name where b3·b7·9 each are. Confirm the **<mark>9th (2nd string, fret 3) is the same spot</mark>** as yesterday's Maj9. You pass when you can add the 9th eyes-closed.
 
 **20–40 min · Real comping (Example 2 / 74–84 BPM)**
-**Repeat Example 2's Cm7↔Cm9 at BPM 78 4×.** Once comfortable, move the root to another fret. Over a slow soul/city-pop backing, its value shows.
+**Repeat Example 2's Cm7↔Cm9 at BPM 78 4×.** Once comfortable, move the root to another fret. <mark>Over a slow soul/city-pop backing, its value shows</mark>.
 
 **40–50 min · Record & reflect (recommended)**
-Record 30 seconds of Cm7↔Cm9. Check: does the 9th die, and did adding the tension mute the b3 or b7?
+Record 30 seconds of Cm7↔Cm9. Check: <mark>does the 9th die</mark>, and did adding the tension mute the b3 or b7?
 
 **Done when:** you can lay the 9th onto Cm7 to make Cm9, and understand m9's 9th is the same note (D) as Maj9's.
 

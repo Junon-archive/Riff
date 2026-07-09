@@ -9,10 +9,10 @@ i18nKey: "lesson.m2.w6.d4"
 
 ## ① Theory
 
-The week's finish line. Cycle Maj9·9·m9 over one root. The amazing part: the **9th (D) stays on the 2nd string, on top, the whole time.** Only the skeleton below changes:
+The week's finish line. Cycle Maj9·9·m9 over one root. The amazing part: the **<mark>9th (D) stays on the 2nd string, on top, the whole time</mark>.** Only the skeleton below changes:
 
-- **3rd string = the 7th switch.** Fret 4 (7, Maj9) ↔ fret 3 (b7, 9·m9).
-- **4th string = the 3rd switch.** Fret 2 (3, Maj9·9) ↔ fret 1 (b3, m9).
+- **<mark>3rd string = the 7th switch</mark>.** Fret 4 (7, Maj9) ↔ fret 3 (b7, 9·m9).
+- **<mark>4th string = the 3rd switch</mark>.** Fret 2 (3, Maj9·9) ↔ fret 1 (b3, m9).
 
 So:
 - **Cmaj9** = 3rd string 4 (7) · 4th string 2 (3)
@@ -67,11 +67,11 @@ So:
 }
 ```
 
-The color (9th) stays on top; only the skeleton (3rd & 7th) switches with your fingers — the two switches from month 1 are alive in the 9-chords too. Add Week 5's top-note feel, and next week (7) you'll connect these upper notes into a **melody.** In a single week you've come to flip between maj9, 9, and m9 with a two-finger switch. Why city-pop comping always sounded so polished — that secret now sits in your hands.
+<mark>The color (9th) stays on top; only the skeleton (3rd & 7th) switches with your fingers</mark> — the two switches from month 1 are alive in the 9-chords too. Add Week 5's top-note feel, and next week (7) you'll connect these upper notes into a **melody.** In a single week you've come to flip between maj9, 9, and m9 with a two-finger switch. <mark>Why city-pop comping always sounded so polished — that secret now sits in your hands</mark>.
 
 ## ② Visuals
 
-**Cmaj9** — 3rd string 7 (fret 4), 4th string 3 (fret 2), 2nd string 9 (yellow).
+**Cmaj9** — <mark>3rd string 7 (fret 4), 4th string 3 (fret 2), 2nd string 9 (yellow)</mark>.
 
 ```json
 {
@@ -89,7 +89,7 @@ The color (9th) stays on top; only the skeleton (3rd & 7th) switches with your f
 }
 ```
 
-**C9** — only the 3rd string to b7 (fret 3). The 9th stays on top.
+**C9** — <mark>only the 3rd string to b7 (fret 3)</mark>. The 9th stays on top.
 
 ```json
 {
@@ -107,7 +107,7 @@ The color (9th) stays on top; only the skeleton (3rd & 7th) switches with your f
 }
 ```
 
-**Cm9** — the 4th string also to b3 (fret 1). The 9th still on top.
+**Cm9** — <mark>the 4th string also to b3 (fret 1)</mark>. The 9th still on top.
 
 ```json
 {
@@ -180,16 +180,16 @@ The color (9th) stays on top; only the skeleton (3rd & 7th) switches with your f
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-Play Cmaj9 → C9 → Cm9 in order, four beats each. Root and 9th (2nd string) fixed, only the 3rd & 4th strings moving. Check the 9th keeps ringing cleanly.
+Play Cmaj9 → C9 → Cm9 in order, four beats each. <mark>Root and 9th (2nd string) fixed, only the 3rd & 4th strings moving</mark>. Check the 9th keeps ringing cleanly.
 
 **10–20 min · Brain training (today's target = constant 9th + skeleton switch)**
-"The 9th stays, the 7th 4↔3, the 3rd 2↔1." On "m9!", grab the 3rd & 4th strings instantly while holding the 9th. Confirm with **Example 1.**
+<mark>"The 9th stays, the 7th 4↔3, the 3rd 2↔1."</mark> On "m9!", grab the 3rd & 4th strings instantly while holding the 9th. Confirm with **Example 1.**
 
 **20–40 min · Real comping (Example 2 cycle / 76–86 BPM)**
-**Repeat Example 2's three-9-chord cycle at BPM 80 4×.** Then move the root for other keys. Over a soul/city-pop backing, enjoy the shimmering progression.
+**Repeat Example 2's three-9-chord cycle at BPM 80 4×.** Then move the root for other keys. <mark>Over a soul/city-pop backing, enjoy the shimmering progression</mark>.
 
 **40–50 min · Record & reflect + week recap (recommended)**
-Record 30 seconds of the three-9-chord cycle. Check: does the 9th stay alive, and does another string die during the skeleton switch? Then sum up: "How much did one 9th change the sound?"
+Record 30 seconds of the three-9-chord cycle. Check: does the 9th stay alive, and does another string die during the skeleton switch? Then sum up: <mark>"How much did one 9th change the sound?"</mark>
 
 **Done when:** over one root, you can cycle Maj9 → 9 → m9 using only the 3rd & 4th strings while holding the 9th. (Week 6 complete!)
 

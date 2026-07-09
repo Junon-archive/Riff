@@ -9,7 +9,7 @@ i18nKey: "lesson.m1.w3.d3"
 
 ## ① Theory
 
-Through yesterday you connected the C-key ii–V–I (Dm7-G7-Cmaj7) in one region. Today's point is thrilling: **slide that hand shape whole, a few frets, and it becomes another key's ii–V–I.**
+Through yesterday you connected the C-key ii–V–I (Dm7-G7-Cmaj7) in one region. Today's point is thrilling: **slide that hand shape whole, <mark>a few frets, and it becomes another key's ii–V–I</mark>.**
 
 Push C up a whole step (two frets) and you get **D key:**
 
@@ -65,11 +65,11 @@ Push C up a whole step (two frets) and you get **D key:**
 }
 ```
 
-Not one finger shape changes. The root-string crossing (5·6·5) and the half-step guide-tone motion are identical. **Because you learned a "pattern," not a memorized shape,** you can slide it to any of the 12 keys. That's the privilege of learning chords by interval. In other words, no need to memorize 12 keys separately — nail this one pattern today and the rest of the keys come nearly free.
+Not one finger shape changes. The root-string crossing (5·6·5) and the half-step guide-tone motion are identical. **<mark>Because you learned a "pattern," not a memorized shape</mark>,** you can slide it to any of the 12 keys. That's the privilege of learning chords by interval. In other words, <mark>no need to memorize 12 keys separately</mark> — nail this one pattern today and the rest of the keys come nearly free.
 
 ## ② Visuals
 
-The three D-key ii–V–I chords. Only shifted two frets up from C — the layout and the green (guide-tone) positions are exactly the same relationship.
+The three D-key ii–V–I chords. Only shifted two frets up from C — <mark>the layout and the green (guide-tone) positions are exactly the same relationship</mark>.
 
 ```json
 {
@@ -168,16 +168,16 @@ The three D-key ii–V–I chords. Only shifted two frets up from C — the layo
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-Play Em7 → A7 → Dmaj7 in order. Check the sound while feeling the hand shape is identical to C.
+Play Em7 → A7 → Dmaj7 in order. Check the sound while <mark>feeling the hand shape is identical to C</mark>.
 
 **10–20 min · Brain training (today's target = pattern shifting)**
-Alternate grabbing the C-key ii–V–I (fret-3 region) and the D-key (fret-5 region). **One hand shape, position two frets apart.** You pass when you can switch between the two keys with eyes closed.
+Alternate grabbing the C-key ii–V–I (fret-3 region) and the D-key (fret-5 region). **<mark>One hand shape, position two frets apart</mark>.** You pass when you can switch between the two keys with eyes closed.
 
 **20–40 min · Real comping (Example 2 / 70–80 BPM)**
-**Repeat Example 2 (D key) at BPM 74 4×.** Then cycle back and forth between C and D to burn in "same pattern, different spot." Push to F (fret 1) or G (three frets up) if you like.
+**Repeat Example 2 (D key) at BPM 74 4×.** Then cycle back and forth between C and D to <mark>burn in "same pattern, different spot"</mark>. Push to F (fret 1) or G (three frets up) if you like.
 
 **40–50 min · Record & reflect (recommended)**
-Record 15 seconds each of the C and D ii–V–I. Check: is the hand-movement feel identical in both keys, and are the changes smooth?
+Record 15 seconds each of the C and D ii–V–I. Check: <mark>is the hand-movement feel identical in both keys</mark>, and are the changes smooth?
 
 **Done when:** you can slide the C-key hand shape two frets up to cycle the D-key ii–V–I, and you understand "the pattern is movable."
 

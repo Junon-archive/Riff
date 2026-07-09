@@ -11,13 +11,13 @@ i18nKey: "lesson.m1.w4.d1"
 
 Until now you've fretted chords filling all six strings. Today, flip the idea: **what can you throw away from a chord?**
 
-What decides a chord's color (bright, dark, tense) is the **3rd and 7th.** The root is the chord's name and pillar. So what about the **5th**? The 5th actually contributes almost nothing to the chord's character. In a band the bass covers the root and another instrument fills the 5th, so if the guitar also grabs the 5th, the sound just clutters.
+What decides a chord's color (bright, dark, tense) is the **<mark>3rd and 7th</mark>.** The root is the chord's name and pillar. So what about the **5th**? <mark>The 5th actually contributes almost nothing to the chord's character</mark>. In a band the bass covers the root and another instrument fills the 5th, so if the guitar also grabs the 5th, the sound just clutters.
 
-That's why pros boldly drop the 5th (and the doubled root) and keep **only root·3rd·7th.** This 3-string chord is called a **shell voicing.** The benefits are clear:
+That's why pros boldly drop the 5th (and the doubled root) and keep **only root·3rd·7th.** This 3-string chord is called a **<mark>shell voicing</mark>.** The benefits are clear:
 
-- **Faster changes** — only three fingers move.
-- **Cleaner sound** — no clash with other instruments in a band.
-- **Clear identity** — with only the 3rd and 7th left, the chord's character rings distinctly.
+- **<mark>Faster changes</mark>** — only three fingers move.
+- **<mark>Cleaner sound</mark>** — no clash with other instruments in a band.
+- **<mark>Clear identity</mark>** — with only the 3rd and 7th left, the chord's character rings distinctly.
 
 Today, using last week's G7, we diet it from a **6-string full chord → a 3-string shell.** Throwing something away feels like a loss, right? Yet strangely, the more pro you are, the less you grab. Using only three fingers, your changes will actually get easier than before — let's feel "the less you hold, the more pro it sounds" with your own hands today.
 
@@ -55,7 +55,7 @@ Today, using last week's G7, we diet it from a **6-string full chord → a 3-str
 
 ## ② Visuals
 
-First, the familiar **G7 full voicing (6 strings).** Green is the 3rd & 7th (the color-holders), blue is the root & 5th.
+First, the familiar **G7 full voicing (6 strings).** Green is the 3rd & 7th (<mark>the color-holders</mark>), blue is the root & 5th.
 
 ```json
 {
@@ -73,7 +73,7 @@ First, the familiar **G7 full voicing (6 strings).** Green is the 3rd & 7th (the
 }
 ```
 
-Now the **G7 shell (3 strings)** with the 5th and doubled root dropped. What remains is exactly R·b7·3. The ✕ marks the dropped strings. The sound is thin, but the "G7-ness" is intact.
+Now the **G7 shell (3 strings)** with the 5th and doubled root dropped. What remains is exactly R·b7·3. The ✕ marks the dropped strings. The sound is thin, but <mark>the "G7-ness" is intact</mark>.
 
 ```json
 {
@@ -135,16 +135,16 @@ Now the **G7 shell (3 strings)** with the 5th and doubled root dropped. What rem
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-Alternate G7 full and G7 shell. Going to the shell, check the 5th/2nd/1st strings are firmly dead and only the three strings (6·4·3) ring.
+Alternate G7 full and G7 shell. <mark>Going to the shell, check the 5th/2nd/1st strings are firmly dead and only the three strings (6·4·3) ring</mark>.
 
 **10–20 min · Brain training (today's target = the identity of the kept notes)**
-Fret **Example 1** naming "root · minor 7th · 3rd." You pass when you can point out, eyes closed, which is the 3rd and which the 7th in the shell. Also recall where the 5th used to be.
+Fret **Example 1** naming "root · minor 7th · 3rd." <mark>You pass when you can point out, eyes closed, which is the 3rd and which the 7th in the shell</mark>. Also recall where the 5th used to be.
 
 **20–40 min · Real comping (Example 2 / 74–84 BPM)**
-**Repeat Example 2's G7 shell comp at BPM 78 4×.** Get used to the thin, three-string sound. If you have a blues backing track, lay it on and alternate with the full chord to feel the difference.
+**Repeat Example 2's G7 shell comp at BPM 78 4×.** <mark>Get used to the thin, three-string sound</mark>. If you have a blues backing track, lay it on and alternate with the full chord to feel the difference.
 
 **40–50 min · Record & reflect (recommended)**
-Record 15 seconds each of full vs shell and compare. Check: did the dropped strings leak in the shell, and does the "G7-ness" still come through?
+Record 15 seconds each of full vs shell and compare. Check: did the dropped strings leak in the shell, and does <mark>the "G7-ness" still come through</mark>?
 
 **Done when:** you can grab G7 as a shell (R·b7·3) with only three strings ringing, and name the identity (3rd & 7th) of the kept notes.
 

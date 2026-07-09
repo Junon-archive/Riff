@@ -9,15 +9,15 @@ i18nKey: "lesson.m2.w8.d1"
 
 ## ① Theory
 
-Welcome to the last week! This week's backing is the heart of R&B/jazz — the **ii–V–I** (in C: **Dm7 → G7 → Cmaj7**), a four-bar loop. Over it you'll mix everything from two months into your own comping.
+Welcome to the last week! This week's backing is the heart of R&B/jazz — the **ii–V–I** (in C: **Dm7 → G7 → Cmaj7**), a four-bar loop. <mark>Over it you'll mix everything from two months into your own comping</mark>.
 
-Today, lay out your **choice cards.** You can grab the same progression several ways:
+Today, lay out your **<mark>choice cards</mark>.** You can grab the same progression several ways:
 
-- **Shell voicings** (Week 4) — just R·3·7, thin and clean. Root-string crossing (5·6·5).
-- **9th tensions** (Week 6) — add shimmering color.
-- **High register / top notes** (Weeks 5·7) — make it sing on the thin strings.
+- **<mark>Shell voicings</mark>** (Week 4) — just R·3·7, thin and clean. Root-string crossing (5·6·5).
+- **<mark>9th tensions</mark>** (Week 6) — add shimmering color.
+- **<mark>High register / top notes</mark>** (Weeks 5·7) — make it sing on the thin strings.
 
-There's no single right answer. The core of this week is **choosing,** each time, "how do I grab this chord right now?" Today you learn the basic set — the ii–V–I as shells — and the choice to add a 9th to the I (Cmaj7). Don't feel pressured — there's nothing new to memorize this week. It's the week you pull out the tools stacked up in your hands over the past two months. Think of today as laying the whole toolbox open and glancing over "what have I got in here again?"
+There's no single right answer. The core of this week is **<mark>choosing</mark>,** each time, <mark>"how do I grab this chord right now?"</mark> Today you learn the basic set — the ii–V–I as shells — and the choice to add a 9th to the I (Cmaj7). Don't feel pressured — there's nothing new to memorize this week. It's the week you pull out the tools stacked up in your hands over the past two months. Think of today as laying the whole toolbox open and glancing over "what have I got in here again?"
 
 ## ② Visuals
 
@@ -57,7 +57,7 @@ There's no single right answer. The core of this week is **choosing,** each time
 }
 ```
 
-**Choice: play the I as a Cmaj7 shell, or as Cmaj9.** Add the 9th (yellow) for shimmer.
+**Choice: play the I as a Cmaj7 shell, or as Cmaj9.** <mark>Add the 9th (yellow) for shimmer</mark>.
 
 ```json
 {
@@ -142,16 +142,16 @@ There's no single right answer. The core of this week is **choosing,** each time
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-Fret the Dm7·G7·Cmaj7 shells, three strings clear, dropped strings dead. Then grab Cmaj9 (add 9) too.
+Fret the Dm7·G7·Cmaj7 shells, three strings clear, dropped strings dead. <mark>Then grab Cmaj9 (add 9) too</mark>.
 
 **10–20 min · Brain training (today's target = seeing the choices)**
-Grab each chord two ways — "shell? or 9-chord?" — mapping the root string, guide tones, and 9th position. Organize the 8-week toolkit into a mental map.
+Grab each chord two ways — "shell? or 9-chord?" — mapping the root string, guide tones, and 9th position. <mark>Organize the 8-week toolkit into a mental map</mark>.
 
 **20–40 min · Real comping (Examples 1 & 2 / 74–84 BPM)**
-**Repeat Example 1's shell ii–V–I at BPM 78** several times → then **add a 9th to the I like Example 2.** Over an R&B backing track (if you have one), alternate the two versions and compare colors.
+**Repeat Example 1's shell ii–V–I at BPM 78** several times → then **add a 9th to the I like Example 2.** Over an R&B backing track (if you have one), <mark>alternate the two versions and compare colors</mark>.
 
 **40–50 min · Record & reflect (recommended)**
-Record 15 seconds each of the two versions and compare. Check: do you hear the color difference between shell and 9-chord, and is the root-string crossing smooth?
+Record 15 seconds each of the two versions and compare. Check: <mark>do you hear the color difference between shell and 9-chord</mark>, and is the root-string crossing smooth?
 
 **Done when:** you can comp the ii–V–I two ways — shell, and with a 9th on the I — and grasp the sense of "choosing how to grab a chord."
 

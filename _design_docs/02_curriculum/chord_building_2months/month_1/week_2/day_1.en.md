@@ -9,7 +9,7 @@ i18nKey: "lesson.m1.w2.d1"
 
 ## ① Theory
 
-All last week the root sat on the **6th string.** This week, why move that home to the **5th string?** Because freeing up just one root string opens the whole neck. Relax — not one rule changes. It's still "stack the 3rd and 5th over the root." But when the root moves to another string, the 3rd and 5th follow to new spots too, so today is about learning that new map.
+All last week the root sat on the **6th string.** This week, why move that home to the **<mark>5th string</mark>?** Because freeing up just one root string opens the whole neck. Relax — not one rule changes. It's still "stack the 3rd and 5th over the root." But when the root moves to another string, the 3rd and 5th follow to new spots too, so today is about <mark>learning that new map</mark>.
 
 Our example is **C major (A-form)** with the root on the 5th string, 3rd fret. Broken down by interval, one spot at a time:
 
@@ -41,13 +41,13 @@ Our example is **C major (A-form)** with the root on the 5th string, 3rd fret. B
 - **R (root)** — 5th string, fret 3 (C). This week's new home.
 - **5 (5th)** — 4th string, fret 5 (G). The string just above the root.
 - **R (root)** — 3rd string, fret 5 (C). The octave root.
-- **3 (3rd)** — 2nd string, fret 5 (E). Today's expression note (green).
+- **3 (3rd)** — 2nd string, fret 5 (E). <mark>Today's expression note</mark> (green).
 
-And **the 6th string is unused.** Here a new A-form habit is born — **killing the 6th string firmly.** If a string lower than the root leaks through, the chord turns muddy. Mute it with a light thumb over the top, or with the tip of your root finger touching the 6th string. It feels like one more thing to mind at first, but within a few days your hand does it on its own.
+And **the 6th string is unused.** Here a new A-form habit is born — **<mark>killing the 6th string firmly</mark>.** If a string lower than the root leaks through, <mark>the chord turns muddy</mark>. Mute it with a light thumb over the top, or with the tip of your root finger touching the 6th string. It feels like one more thing to mind at first, but within a few days your hand does it on its own.
 
 ## ② Visuals
 
-**C major (A-form)** with the root on the 5th string. The 6th and 1st strings are ✕ (muted); the green is the **3rd (E)** on the 2nd string.
+**C major (A-form)** with the root on the 5th string. The 6th and 1st strings are ✕ (muted); the green is the **<mark>3rd (E)</mark>** on the 2nd string.
 
 ```json
 {
@@ -138,16 +138,16 @@ And **the 6th string is unused.** Here a new A-form habit is born — **killing 
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-Fret C (A-form) and ring the strings one at a time from the 5th to the 2nd. Top priority: **are the 6th and 1st strings firmly dead?** Only the four used strings, clean.
+Fret C (A-form) and ring the strings one at a time from the 5th to the 2nd. Top priority: **<mark>are the 6th and 1st strings firmly dead?</mark>** Only the four used strings, clean.
 
 **10–20 min · Brain training (today's target = the 3rd, E)**
-Fret **Example 1** naming R·3·5 aloud, then isolate just the **3rd (E)** on the 2nd string, fret 5, over and over. You pass when you can find, eyes closed, where the 3rd went now that the root is on the 5th string.
+Fret **Example 1** naming R·3·5 aloud, then isolate just the **<mark>3rd (E)</mark>** on the 2nd string, fret 5, over and over. You pass when you can find, eyes closed, where the 3rd went now that the root is on the 5th string.
 
 **20–40 min · Real comping (Example 2 / 70–80 BPM)**
-**Repeat Example 2 at BPM 75 4×.** Stay aware that the 6th string is dead on every strum. Once comfortable, move just the root to the 5th string, fret 5 (D) and apply the same pattern. Today adapts your hand to the new coordinate "root on the 5th string."
+**Repeat Example 2 at BPM 75 4×.** Stay aware that the 6th string is dead on every strum. Once comfortable, move just the root to the 5th string, fret 5 (D) and apply the same pattern. Today <mark>adapts your hand to the new coordinate</mark> "root on the 5th string."
 
 **40–50 min · Record & reflect (recommended)**
-Record 30 seconds of the C comp. Check: **did the low 6th string leak through,** and are the four strings clear? If the 6th rang, fix your mute position tomorrow.
+Record 30 seconds of the C comp. Check: **<mark>did the low 6th string leak through,</mark>** and are the four strings clear? If the 6th rang, fix your mute position tomorrow.
 
 **Done when:** you can ring C (A-form) cleanly with the 6th string muted, and fret R·3·5 from the 5th-string root with your eyes closed.
 
