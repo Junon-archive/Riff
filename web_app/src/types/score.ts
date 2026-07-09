@@ -52,6 +52,13 @@ export interface ScoreMeta {
   tuning?: string[];
   /** 조성/스케일 (예: A minor, A Dorian, C major) */
   key?: string;
+  /**
+   * 오선보 조표(key signature). VexFlow 조 이름 spec: 장조 'C','G','D','A','E','B','F#','C#',
+   * 'F','Bb','Eb','Ab','Db','Gb','Cb' / 단조 'Am','Em','Bm','F#m',…,'Dm','Gm','Cm',….
+   * 있으면 staff.ts가 clef 뒤에 조표를 그린다(임시표 철자도 정확해짐). 없으면 조표 미표기(기존 동일).
+   * 참고: meta.key(예 "A Dorian")는 설명용 문자열이라 조표를 강제하지 않는다 — 조표는 이 필드로 명시.
+   */
+  keySignature?: string;
   /** 스케일/모드명 (예: A Mixolydian) */
   scale?: string;
   /** 20~300 */

@@ -146,6 +146,11 @@ const TECHNIQUES = new Set([
 const ROLES = new Set(['root', 'chord_tone', 'target', 'color', 'blue_note', 'scale', 'passing']);
 const STROKES = new Set(['down', 'up', 'arpeggio']); // 스트럼/아르페지오
 const FEELS = new Set(['straight', 'swing8', 'swing16']);
+// 오선보 조표(meta.keySignature) 화이트리스트 = VexFlow addKeySignature 가 받는 조 이름.
+const KEY_SIGNATURES = new Set([
+  'C', 'Am', 'G', 'Em', 'D', 'Bm', 'A', 'F#m', 'E', 'C#m', 'B', 'G#m', 'F#', 'D#m', 'C#', 'A#m',
+  'F', 'Dm', 'Bb', 'Gm', 'Eb', 'Cm', 'Ab', 'Fm', 'Db', 'Bbm', 'Gb', 'Ebm', 'Cb', 'Abm',
+]);
 // 렌더러 역량 가드: staff.ts(VexFlow, notation=staff/staff+tab/rhythm)가 실제로 그리는 technique.
 // bend/hammer_on/pull_off/slide/vibrato/harmonic 은 staff.ts 미구현 → 오선보 경로에서 쓰면 화면에
 // 조용히 사라진다. 이 기법이 필요하면 tab.ts 경로(notation 미지정/"tab")로 내야 한다(tab.ts는 전부 그림).
@@ -174,6 +179,8 @@ function validateScore(score, ctx) {
     at(`meta.notation 부정확: ${score.meta.notation}`);
   // 슬래시 노트헤드 미구현이므로 rhythm(슬래시 악보) 금지. 리듬 컴핑은 staff+tab + chord[] 로 표현한다.
   if (score.meta.notation === 'rhythm') at('meta.notation:"rhythm" 미지원(슬래시 노트헤드 미구현) — staff+tab 사용');
+  if (score.meta.keySignature !== undefined && !KEY_SIGNATURES.has(score.meta.keySignature))
+    at(`meta.keySignature 부정확(VexFlow 조 이름 아님): ${score.meta.keySignature}`);
   if (score.meta.feel !== undefined && !FEELS.has(score.meta.feel))
     at(`meta.feel 부정확: ${score.meta.feel}`);
 

@@ -28,7 +28,8 @@
           "minItems": 4,
           "maxItems": 6
         },
-        "key": { "type": "string", "description": "조성/스케일 (예: A minor, A Dorian, C major)" },
+        "key": { "type": "string", "description": "조성/스케일 (예: A minor, A Dorian, C major) — 설명용, 조표를 강제하지 않음" },
+        "keySignature": { "type": "string", "description": "오선보 조표(VexFlow 조 이름 spec). 장조 C·G·D·A·E·B·F#·C#·F·Bb·Eb·Ab·Db·Gb·Cb / 단조 Am·Em·Bm…Dm·Gm·Cm…. 있으면 staff.ts가 clef 뒤에 조표 렌더. 생략 시 미표기." },
         "scale": { "type": "string", "description": "스케일/모드명(선택, 예: A Mixolydian) — 구 root/scale 필드 대체" },
         "tempoBpm": { "type": "integer", "minimum": 20, "maximum": 300, "description": "구 tempo/tempo_bpm 통일 필드" },
         "notation": {

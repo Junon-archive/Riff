@@ -85,6 +85,21 @@ function resolveOpenMidi(meta?: { tuning?: unknown; stringCount?: number }): (st
 const WRITTEN_OCTAVE_SHIFT = 1;
 const SHARP = ['c', 'c#', 'd', 'd#', 'e', 'f', 'f#', 'g', 'g#', 'a', 'a#', 'b'];
 const FLAT = ['c', 'db', 'd', 'eb', 'e', 'f', 'gb', 'g', 'ab', 'a', 'bb', 'b'];
+/**
+ * 오선보 조표(meta.keySignature) → 임시표 개수. VexFlow addKeySignature 가 받는 조 이름의
+ * 화이트리스트 겸 조표 폭 예약용. 표에 없는 값은 조표 미표기(안전 폴백 — 빌드 안 깨짐).
+ */
+const KEY_ACCIDENTALS: Record<string, number> = {
+  C: 0, Am: 0,
+  G: 1, Em: 1, D: 2, Bm: 2, A: 3, 'F#m': 3, E: 4, 'C#m': 4,
+  B: 5, 'G#m': 5, 'F#': 6, 'D#m': 6, 'C#': 7, 'A#m': 7,
+  F: 1, Dm: 1, Bb: 2, Gm: 2, Eb: 3, Cm: 3, Ab: 4, Fm: 4,
+  Db: 5, Bbm: 5, Gb: 6, Ebm: 6, Cb: 7, Abm: 7,
+};
+/** meta.keySignature 검증 → 유효한 VexFlow 조 이름이면 반환, 아니면 null(미표기). */
+function validKeySignature(ks: unknown): string | null {
+  return typeof ks === 'string' && ks in KEY_ACCIDENTALS ? ks : null;
+}
 /** duration → VexFlow 코드 */
 const DUR: Record<string, string> = {
   whole: 'w',
@@ -423,6 +438,9 @@ export function renderStaff(score: Score, mode: StaffMode): string {
   // 개방현 실제음 = meta.tuning 계산(없으면 표준 EADGBE 폴백). ★03② — OPEN_MIDI 하드코딩 대체.
   const openOf = resolveOpenMidi(score.meta);
   const nStr = score.meta?.stringCount ?? 6; // ★03③ — string 범위 상한(6=기존 불변)
+  // ★03① 조표: meta.keySignature 있으면 clef 뒤에 조표. 없으면 null → ksW=0 → 폭·레이아웃 불변.
+  const keySig = validKeySignature(score.meta?.keySignature);
+  const ksW = keySig ? 10 + 6 * (KEY_ACCIDENTALS[keySig] ?? 0) : 0; // 조표 폭 예약(임시표 수 비례)
   const [numBeats, beatValue] = (tabData.timeSignature ?? '4/4')
     .split('/')
     .map((x) => parseInt(x, 10));
@@ -475,7 +493,7 @@ export function renderStaff(score: Score, mode: StaffMode): string {
     const measureArea = (mb: BuiltMeasure) =>
       Math.max(MIN_MW, Math.min(MAX_MW, mb.stave.length * PER_NOTE));
     const rowNoteArea = rows.map((r) => r.reduce((a, mb) => a + measureArea(mb), 0));
-    const totalW = Math.max(...rowNoteArea.map((w) => CLEF_W + TS_W + w)) + 2 * MARGIN_X;
+    const totalW = Math.max(...rowNoteArea.map((w) => CLEF_W + ksW + TS_W + w)) + 2 * MARGIN_X;
     const totalH = MARGIN_TOP + rows.length * sysH + 12;
 
     const host = doc.getElementById('vf')!;
@@ -489,12 +507,13 @@ export function renderStaff(score: Score, mode: StaffMode): string {
       const x = MARGIN_X;
       const mCount = rowMeasures.length;
       const noteAreaW = rowNoteArea[ri] ?? MIN_MW;
-      const thisStaveW = CLEF_W + TS_W + noteAreaW;
+      const thisStaveW = CLEF_W + ksW + TS_W + noteAreaW;
 
       const stave = new Stave(x, sysTop + trebleDy, thisStaveW);
       // 기타 표기: treble-8vb(클레프 아래 작은 "8"). 음표는 pitchOf 에서 +1 옥타브로 표기 →
       // 8vb 주석과 합쳐져 "다른 기타 악보와 위치 정렬 + 실제음 정확"이 성립한다.
       stave.addClef('treble', 'default', '8vb');
+      if (keySig) stave.addKeySignature(keySig); // ★03① 조표(clef 뒤·박자표 앞)
       if (tabData.timeSignature) stave.addTimeSignature(tabData.timeSignature);
       // 각 줄 첫 마디에 마디 번호.
       const firstMeasureNum =

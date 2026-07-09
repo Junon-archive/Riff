@@ -1,6 +1,6 @@
 ---
 id: 03-notation-accuracy
-status: IN_PROGRESS (②③ 완료 2026-07-09 — 튜닝 수정 + 다현 일반화(타브·지판·검증기·타입·스키마) — ① 조표만 대기)
+status: DONE (①②③ 전부 완료 2026-07-09 — 조표 + 튜닝 수정 + 다현/지판 일반화. 기존 116일 dist 바이트 불변 증명)
 priority: medium
 risk: high
 depends_on: []          # 문서 내부 순서: 튜닝 → 6현일반화. 조표는 독립.
@@ -81,7 +81,7 @@ owner: null
 
 ## 체크리스트
 
-- [ ] ① meta.keySignature 필드 + staff.ts addKeySignature
+- [x] ① meta.keySignature 필드(타입·스키마·검증기 화이트리스트) + staff.ts addKeySignature(clef 뒤·조표 폭 예약) — 2026-07-09. 무효 조 이름은 안전 폴백(미표기). 조 이름 spec 채택(장/단조 30종)
 - [x] ② staff.ts 가 meta.tuning 읽어 음정 계산 (`resolveOpenMidi`로 OPEN_MIDI 하드코딩 대체) — 2026-07-09. tab.ts 현이름 파생은 ③으로 이월(대소문자 불변 이슈)
 - [x] ② 골든 스냅샷 기존 6현 픽셀 불변 확인 — dist 전체 md5 before==after(`31d885e9…`), invariants 315블록 회귀 0, Drop-D 격리 렌더로 튜닝 반영 확인
 - [x] ③ stringCount 리터럴6 → 집합(4·5·6) (타입 `score.ts`·스키마·검증기 `build-content.mjs`) — 2026-07-09. + tuning 길이=stringCount 검증 추가
@@ -94,5 +94,5 @@ owner: null
 ## 미해결 질문 (사람 결정)
 
 - ~~정말 베이스/우쿨렐레 커리큘럼을 할 것인가?~~ → **베이스 확정(2026-07-09).** ③ 다현 지판까지 정식 착수(지판 이미지 필수).
-- keySignature 표현: 조 이름("G") vs 샾/플랫 개수 — VexFlow 입력 형식과 저작 편의 절충.
+- ~~keySignature 표현: 조 이름("G") vs 샾/플랫 개수~~ → **조 이름 spec 채택(2026-07-09).** VexFlow `addKeySignature`가 조 이름을 직접 받고 임시표 철자도 정확해짐. 장/단조 30종 화이트리스트(`KEY_ACCIDENTALS`/`KEY_SIGNATURES`), 표에 없으면 미표기 폴백.
 - 4현 튜닝 기본값(베이스 BEAD/EADG?) 정의 위치. → **10_bass-support.md Phase B3에서 4 EADG / 5 BEADG / 6 BEADGC 로 확정**(렌더 계산 함수 + 스키마 description SSOT).
