@@ -9,17 +9,17 @@ i18nKey: "lesson.m2.w5.d3"
 
 ## ① Theory
 
-The real difficulty of high three-string cutting isn't making sound — it's **stopping the sound.** However wide the right hand sweeps in 16ths, the 4th, 5th, and 6th strings must never ring.
+The real difficulty of high three-string cutting isn't making sound — it's **<mark>stopping the sound</mark>.** However wide the right hand sweeps in 16ths, the 4th, 5th, and 6th strings must never ring.
 
-Here's the problem. To cut crisply you must swing the right hand wide, and that naturally grazes the lower strings too. The pro's secret here is the **left-hand mute.** With the side of the triad-holding fingers and the tip of the index, you lightly cover the unused lower strings and pre-kill them. Then even if the right hand sweeps all six, only the top three actually ring. Right hand crisp, left hand covering firmly — this division of labor is the core of clean cutting.
+Here's the problem. To cut crisply you must swing the right hand wide, and that naturally grazes the lower strings too. The pro's secret here is the **<mark>left-hand mute</mark>.** With the side of the triad-holding fingers and the tip of the index, you lightly cover the unused lower strings and pre-kill them. Then even if the right hand sweeps all six, only the top three actually ring. Right hand crisp, left hand covering firmly — this division of labor is <mark>the core of clean cutting</mark>.
 
-This actually makes it easier. The right hand no longer has to mind "only three strings" and can sweep wide. The left-hand mute lifts the burden of aim. The secret to why cutting funk sounds so effortlessly crisp lies exactly in this left-hand mute.
+This actually makes it easier. The right hand no longer has to mind "only three strings" and can sweep wide. The left-hand mute lifts the burden of aim. The secret to why cutting funk <mark>sounds so effortlessly crisp</mark> lies exactly in this left-hand mute.
 
-Having the left hand both hold the chord and mute is overwhelming at first. Especially covering the 6th with the index tip and the 4th/5th with the side of the triad fingers is unfamiliar. Of course. Today, even if it's not perfect, just feeling that lower-string noise "dropped sharply" when you cut wide is big progress. Once this left-hand mute sits in your hand, the right hand can actually swing freely and crisp. The firmer the covering hand, the freer the striking hand.
+Having the left hand both hold the chord and mute is overwhelming at first. Especially covering the 6th with the index tip and the 4th/5th with the side of the triad fingers is unfamiliar. Of course. Today, even if it's not perfect, just feeling that lower-string noise "dropped sharply" when you cut wide is big progress. Once this left-hand mute sits in your hand, the right hand can actually swing freely and crisp. <mark>The firmer the covering hand</mark>, <mark>the freer the striking hand</mark>.
 
 ## ② Visuals
 
-Only three strings ring under a wide cutting stroke — the left-hand mute kills the lower strings. Right hand crisp, left hand firm.
+Only three strings ring under a wide cutting stroke — <mark>the left-hand mute kills the lower strings</mark>. Right hand crisp, left hand firm.
 
 **E major triad (review).** Only these three ring; mute the 4/5/6 firmly with the side of the left fingers and the index tip.
 
@@ -124,16 +124,16 @@ Only three strings ring under a wide cutting stroke — the left-hand mute kills
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-BPM 60–70. Holding the triad, cover the lower strings with the left hand and check only three ring even sweeping all six.
+BPM 60–70. Holding the triad, cover the lower strings with the left hand and check <mark>only three ring even sweeping all six</mark>.
 
 **10–20 min · Brain training (today's target = the left-hand mute)**
-Sweeping the right hand wide, burn in the feel of killing the lower strings with the left mute alone. Confirm the index-tip (6th) and finger-side (4/5) positions.
+Sweeping the right hand wide, burn in the feel of <mark>killing the lower strings with the left mute alone</mark>. Confirm the index-tip (6th) and finger-side (4/5) positions.
 
 **20–40 min · Real groove (Examples 1·2 / BPM 72)**
-Repeat **Example 1** (mute cutting) 4× at BPM 72 → then **Example 2** (wide cutting). The point is only three ring even sweeping wide.
+Repeat **Example 1** (mute cutting) 4× at BPM 72 → then **Example 2** (wide cutting). The point is <mark>only three ring even sweeping wide</mark>.
 
 **40–50 min · Record & reflect (recommended)**
-Record and check: is there no lower-string noise / do the three ring crisply / is the right hand crisply wide?
+Record and check: <mark>is there no lower-string noise</mark> / <mark>do the three ring crisply</mark> / <mark>is the right hand crisply wide</mark>?
 
 **Done when:** with the lower strings killed by the left mute, you can cut only the top three cleanly even sweeping the right hand wide.
 

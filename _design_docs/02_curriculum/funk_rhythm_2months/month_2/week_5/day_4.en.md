@@ -9,17 +9,17 @@ i18nKey: "lesson.m2.w5.d4"
 
 ## ① Theory
 
-The week's finish line. Today you lay Month 1's **ghosts and accents** onto the high three-string triad and complete a four-bar cutting groove over a backing track.
+The week's finish line. Today you lay Month 1's **<mark>ghosts and accents</mark>** onto the high three-string triad and complete a four-bar cutting groove over a backing track.
 
-The principle is identical to last month's one-chord jam. Only the stage changed — from the thick six-string E9 to the thin three-string triad. But that stage change transforms the sound. Up high, the ghost "chick" is lighter and crisper, and the accent "pop" leaps out sparkling like glass. Using the same rhythmic language (motor, ghosts, accents), moving it to three-string cutting makes it far more sophisticated and "Nile Rodgers."
+The principle is identical to last month's one-chord jam. Only the stage changed — from the thick six-string E9 to the thin three-string triad. But that stage change transforms the sound. Up high, the ghost "chick" is lighter and crisper, and the accent "pop" leaps out sparkling like glass. Using the same rhythmic language (motor, ghosts, accents), moving it to three-string cutting makes it far more sophisticated and <mark>"Nile Rodgers."</mark>
 
-Yesterday's left-hand mute backs this up firmly. Cutting wide while killing the lower strings, you lay the three layers — ghost, real note, accent — on the top three only. Shifting the triad now and then, or changing to minor for color, keeps four bars from getting dull.
+Yesterday's left-hand mute backs this up firmly. Cutting wide while killing the lower strings, you lay the three layers — <mark>ghost, real note, accent</mark> — on the top three only. Shifting the triad now and then, or changing to minor for color, keeps four bars from getting dull.
 
-Looking back on the week, you've gained funk's "tone color." Instead of thick chords, you can now make shimmering cutting on three thin strings. Next week you go one step further — dropping even the chord to strike **a single string** and draw a bass-line: single-note funk. If today's three-string cutting groove shimmers locked with the backing, this week is a perfect success. Moving from thick chords to thin three strings this week, your funk has grown more sophisticated. You can now choose the "color" of the sound yourself.
+Looking back on the week, you've gained <mark>funk's "tone color."</mark> Instead of thick chords, you can now make shimmering cutting on three thin strings. Next week you go one step further — dropping even the chord to strike **<mark>a single string</mark>** and draw a bass-line: single-note funk. If today's three-string cutting groove shimmers locked with the backing, this week is a perfect success. Moving from thick chords to thin three strings this week, your funk has grown more sophisticated. You can now choose the "color" of the sound yourself.
 
 ## ② Visuals
 
-A finished cutting groove of ghosts and accents on the three-string triad. Up high, the contrast shimmers more.
+A finished cutting groove of ghosts and accents on the three-string triad. <mark>Up high, the contrast shimmers more</mark>.
 
 **E major triad (review).** Lay the three layers — ghost, real, accent — over these three strings. Keep the lower strings killed with the left mute.
 
@@ -142,16 +142,16 @@ A finished cutting groove of ghosts and accents on the three-string triad. Up hi
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-BPM 60–70. Drop ghosts and accents onto the three-string triad to warm up. Keep checking the lower-string mute.
+BPM 60–70. <mark>Drop ghosts and accents onto the three-string triad</mark> to warm up. Keep checking the lower-string mute.
 
 **10–20 min · Brain training (today's target = three layers + three strings)**
-Set accents to the backing snare and picture how to place ghost/real/accent in three-string cutting.
+Set accents to the backing snare and picture <mark>how to place ghost/real/accent in three-string cutting</mark>.
 
 **20–40 min · Real groove (Examples 1·2 / BPM 74)**
-Repeat **Example 1** (groove A) over a backing 4× → then **Example 2** (groove B). Once easy, vary with minor, inversion, other spots. Zero lower strings.
+Repeat **Example 1** (groove A) over a backing 4× → then **Example 2** (groove B). Once easy, vary with <mark>minor, inversion, other spots</mark>. Zero lower strings.
 
 **40–50 min · Record & reflect (recommended)**
-Record and check: do only three ring crisply / does the accent lock with the snare / is there no lower-string noise?
+Record and check: <mark>do only three ring crisply</mark> / <mark>does the accent lock with the snare</mark> / <mark>is there no lower-string noise</mark>?
 
 **Done when:** you can hold a cutting groove of ghosts and accents on the three-string triad over a backing with no lower-string noise. (Week 5 complete!)
 

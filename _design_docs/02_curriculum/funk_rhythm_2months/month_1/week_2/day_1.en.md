@@ -9,11 +9,11 @@ i18nKey: "lesson.m1.w2.d1"
 
 ## ① Theory
 
-The real secret of funk groove isn't the notes you play — it's the sounds you *don't* play. They're called **ghost notes.**
+The real secret of funk groove isn't the notes you play — it's the sounds you *don't* play. They're called **<mark>ghost notes</mark>.**
 
-A ghost note is played with the left hand fully relaxed, fingers merely resting on the strings. No pitch rings — just a percussive, pitchless "chuck" or "chick." On a drum kit it's the hi-hat: not melody, but the grain that fills the rhythm.
+A ghost note is played with the left hand fully relaxed, fingers merely resting on the strings. No pitch rings — just a percussive, pitchless "chuck" or "chick." On a drum kit it's the hi-hat: not melody, but <mark>the grain that fills the rhythm</mark>.
 
-Funk's groove comes precisely from this **contrast between real notes and ghosts.** A clear "ta" (left hand pressed, ringing) against a dead "chick" (relaxed, choked). Alternate them — "ta-chick-chick-ta" — and a flat run of 16ths suddenly starts to grind like a drum. The right-hand motor is exactly Week 1's. The only thing that changes is one thing: **left-hand pressure** — press (ta), release (chick).
+Funk's groove comes precisely from this **<mark>contrast between real notes and ghosts</mark>.** A clear "ta" (left hand pressed, ringing) against a dead "chick" (relaxed, choked). Alternate them — "ta-chick-chick-ta" — and a flat run of 16ths suddenly starts to grind like a drum. The right-hand motor is exactly Week 1's. The only thing that changes is one thing: **<mark>left-hand pressure</mark>** — press (ta), release (chick).
 
 ```json
 {
@@ -43,11 +43,11 @@ Funk's groove comes precisely from this **contrast between real notes and ghosts
 }
 ```
 
-At first the ghost will ring too loud, or make no sound at all — that's normal. The feel of releasing "just enough to choke it" takes a few days. Don't rush. Today, just telling "ta" from "chick" clearly by ear, from the same hand position, is enough. The moment this ta/chick contrast settles into your hand, your strumming stops being a flat chord and starts turning into a percussion instrument that plays rhythm. Today you only need to fasten that first button.
+At first the ghost will ring too loud, or make no sound at all — that's normal. The feel of releasing "just enough to choke it" takes a few days. Don't rush. Today, just telling "ta" from "chick" clearly by ear, from the same hand position, is enough. The moment this ta/chick contrast settles into your hand, your strumming stops being a flat chord and starts turning into <mark>a percussion instrument that plays rhythm</mark>. Today you only need to fasten that first button.
 
 ## ② Visuals
 
-From one hand position, contrast the sound by changing only left-hand pressure. In the examples below, **a note (blue) is a real "ta"** (left hand pressed); a muted note is a ghost "chick" (relaxed).
+From one hand position, contrast the sound by changing only left-hand pressure. In the examples below, **<mark>a note (blue) is a real "ta"</mark>** (left hand pressed); a muted note is a <mark>ghost "chick"</mark> (relaxed).
 
 **Example 1 — ta-chick-chick-chick (1 bar).** Only the first sixteenth of each beat is a real note; the other three are ghosts. The real note clearly marks the beat.
 
@@ -134,16 +134,16 @@ From one hand position, contrast the sound by changing only left-hand pressure. 
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-BPM 60–70. Left fingers resting and relaxed, mechanically repeat 16th ghost scratches. Right-hand motor exactly as in Week 1.
+BPM 60–70. Left fingers resting and relaxed, mechanically repeat 16th <mark>ghost scratches</mark>. Right-hand motor exactly as in Week 1.
 
 **10–20 min · Brain training (today's target = telling ta from chick)**
-Count "ta-chick-chick-ta" aloud, distinguishing real from ghost as you split the beat. Decide in advance when to add and release left-hand pressure.
+Count "ta-chick-chick-ta" aloud, <mark>distinguishing real from ghost</mark> as you split the beat. Decide in advance when to add and release left-hand pressure.
 
 **20–40 min · Real groove (Examples 1·2 / BPM 64)**
-Repeat **Example 1** (ta-chick-chick-chick) 4× at BPM 64 → then **Example 2** (off-beat real note). The key is hearing the contrast of real vs ghost.
+Repeat **Example 1** (ta-chick-chick-chick) 4× at BPM 64 → then **Example 2** (off-beat real note). The key is hearing <mark>the contrast of real vs ghost</mark>.
 
 **40–50 min · Record & reflect (recommended)**
-Record and check: did ghosts come out cleanly as pitchless "chucks" / is the contrast with real notes audible / did the right hand never stop?
+Record and check: <mark>did ghosts come out cleanly as pitchless "chucks"</mark> / <mark>is the contrast with real notes audible</mark> / <mark>did the right hand never stop</mark>?
 
 **Done when:** from one hand position, you can clearly tell a real note ("ta") from a ghost ("chick") using left-hand pressure alone.
 

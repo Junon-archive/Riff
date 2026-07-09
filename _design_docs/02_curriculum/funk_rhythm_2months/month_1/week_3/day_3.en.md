@@ -9,9 +9,9 @@ i18nKey: "lesson.m1.w3.d3"
 
 ## ① Theory
 
-Now you merge Week 2's ghosts with Week 3's accents. Real funk texture is born here — accents ("pop") jumping out, one or two at a time, from the soft-laid ghosts ("chick-chick").
+Now you merge Week 2's ghosts with Week 3's accents. Real funk texture is born here — accents ("pop") <mark>jumping out, one or two at a time</mark>, from the soft-laid ghosts ("chick-chick").
 
-From today the sound has **three layers.** First, the relaxed ghost ("chick") — pitchless, dead, the background. Second, the normal real note ("ta") — a clear middle voice. Third, the hard accent ("pop") — the star that leaps out. The amazing part: you make all three **from the same hand position.** By managing left-hand pressure and right-hand force, you choke (chick), ring (ta), and strike (pop). In the notation, colorless = ghost, blue = normal real note, green = accent.
+From today the sound has **<mark>three layers</mark>.** First, the relaxed ghost ("chick") — pitchless, dead, the background. Second, the normal real note ("ta") — a clear middle voice. Third, the hard accent ("pop") — the star that leaps out. The amazing part: you make all three **<mark>from the same hand position</mark>.** By managing left-hand pressure and right-hand force, you choke (chick), ring (ta), and strike (pop). In the notation, colorless = ghost, blue = normal real note, green = accent.
 
 ```json
 {
@@ -41,13 +41,13 @@ From today the sound has **three layers.** First, the relaxed ghost ("chick") �
 }
 ```
 
-Once this three-layer light-and-shadow appears, a flat rhythm suddenly sounds three-dimensional. In drum terms, the hi-hat (chick), kick (ta), and snare (pop) all come from one hand. This is the secret to a single funk guitar sounding like a rhythm section.
+Once this three-layer light-and-shadow appears, a flat rhythm suddenly sounds three-dimensional. In drum terms, the hi-hat (chick), kick (ta), and snare (pop) all come from one hand. This is the secret to a single funk guitar <mark>sounding like a rhythm section</mark>.
 
-Managing three levels at once can feel overwhelming at first. Of course — you're turning a volume knob three notches with one finger. Today doesn't need to be perfect. If just the "chick" vs "pop" contrast is clear, you're halfway there; with a "ta" quietly mixed in, it's a big success. Handling three layers freely takes time, but it's that powerful a weapon. Don't rush.
+Managing three levels at once can feel overwhelming at first. Of course — you're turning a volume knob three notches with one finger. Today doesn't need to be perfect. If just the "chick" vs "pop" contrast is clear, you're halfway there; with a "ta" quietly mixed in, it's a big success. Handling three layers freely takes time, but it's <mark>that powerful a weapon</mark>. Don't rush.
 
 ## ② Visuals
 
-Three layers of sound from one spot. Colorless = ghost ('chick'), blue = normal real note ('ta'), green = accent ('pop').
+<mark>Three layers of sound</mark> from one spot. Colorless = ghost ('chick'), blue = normal real note ('ta'), green = accent ('pop').
 
 **Example 1 — ghost + accent (1 bar).** Ghost background, a normal real note on the head of beats 1 and 3, an accent on the '&' of beats 2 and 4. The basic form with all three layers.
 
@@ -134,16 +134,16 @@ Three layers of sound from one spot. Colorless = ghost ('chick'), blue = normal 
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-BPM 60–70. From one spot, alternate the three sounds — 'chick' (ghost), 'ta' (real), 'pop' (accent) — to warm up the three pressure levels.
+BPM 60–70. From one spot, alternate the three sounds — 'chick' (ghost), 'ta' (real), 'pop' (accent) — to warm up <mark>the three pressure levels</mark>.
 
 **10–20 min · Brain training (today's target = three-layer separation)**
-Sing the three sounds distinctly: "ta-chick-chick-chick, chick-chick-POP-chick." Picture in advance which is chick/ta/pop.
+Sing the three sounds distinctly: "ta-chick-chick-chick, chick-chick-POP-chick." Picture in advance <mark>which is chick/ta/pop</mark>.
 
 **20–40 min · Real groove (Examples 1·2 / BPM 70)**
-Repeat **Example 1** (ghost + accent) 4× at BPM 70 → then **Example 2** (pulled accent). The key is a clear three-layer contrast.
+Repeat **Example 1** (ghost + accent) 4× at BPM 70 → then **Example 2** (pulled accent). The key is <mark>a clear three-layer contrast</mark>.
 
 **40–50 min · Record & reflect (recommended)**
-Record and check: are chick/ta/pop distinct / does the background ghost never cut / does the accent pop the most?
+Record and check: <mark>are chick/ta/pop distinct</mark> / <mark>does the background ghost never cut</mark> / <mark>does the accent pop the most</mark>?
 
 **Done when:** from one hand position, you can make three layers — ghost, real, accent — by pressure, and play a groove with clear contrast.
 

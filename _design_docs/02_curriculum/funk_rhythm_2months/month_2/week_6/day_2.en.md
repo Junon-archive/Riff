@@ -9,11 +9,11 @@ i18nKey: "lesson.m2.w6.d2"
 
 ## ① Theory
 
-Yesterday you drew a line on one string. Today it crosses **two strings, the 5th and 4th.** With two strings open, the line sings across a wider range.
+Yesterday you drew a line on one string. Today it crosses **<mark>two strings, the 5th and 4th</mark>.** With two strings open, the line sings across a wider range.
 
-The core difficulty: when the line moves from the 5th to the 4th string, you must **quickly kill the 5th you just played and ring only the 4th.** Otherwise the two notes overlap and get messy. The feel of moving your finger to the new string while simultaneously cleaning up the one you just played — that's the real skill of a single-note line. The left hand always opens only "the one string ringing now" and covers the rest.
+The core difficulty: when the line moves from the 5th to the 4th string, you must **<mark>quickly kill the 5th you just played and ring only the 4th</mark>.** Otherwise the two notes overlap and get messy. The feel of moving your finger to the new string while simultaneously cleaning up the one you just played — that's <mark>the real skill of a single-note line</mark>. The left hand always opens only "the one string ringing now" and covers the rest.
 
-Today's material is the 5th- and 4th-string notes of the E pentatonic box (yesterday's map). Add the 4th string's 4th and 5th to the 5th string's R and b3, and you can build a line rising and falling like E-G-A-B. A bass-line-or-riff-sounding, thoroughly funky line.
+Today's material is the 5th- and 4th-string notes of the E pentatonic box (yesterday's map). Add the 4th string's 4th and 5th to the 5th string's R and b3, and you can build <mark>a line rising and falling like E-G-A-B</mark>. A bass-line-or-riff-sounding, thoroughly funky line.
 
 ```json
 {
@@ -30,11 +30,11 @@ Today's material is the 5th- and 4th-string notes of the E pentatonic box (yeste
 }
 ```
 
-Crossing strings while minding the mute keeps the hands busy at first. Especially just after a string change, the previous string tends to ring on with a "hum." Of course. Today, even if the line is slow, focus on the previous string being cleaned up on every change. Once this settles, your line widens freely to two, three strings. A line once trapped on one string starts to sing across the neck. With just two strings open today, the melodies you can express multiply. Two strings are the stepping stone that soon becomes three, then four.
+Crossing strings while minding the mute keeps the hands busy at first. Especially just after a string change, the previous string tends to ring on with a "hum." Of course. Today, even if the line is slow, focus on the previous string being cleaned up on every change. Once this settles, your line widens freely to two, three strings. A line once trapped on one string starts to sing across the neck. With just two strings open today, the melodies you can express multiply. Two strings are <mark>the stepping stone that soon becomes three, then four</mark>.
 
 ## ② Visuals
 
-A line crossing the 5th and 4th strings. Killing the previous string on the change is key. Recheck the note positions with the map.
+A line crossing the 5th and 4th strings. <mark>Killing the previous string</mark> on the change is key. Recheck the note positions with the map.
 
 **E note box (review).** Today add the 4th string (4th, 5th) to the 5th string (R, b3). The mute stays even across the change.
 
@@ -138,16 +138,16 @@ A line crossing the 5th and 4th strings. Killing the previous string on the chan
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-BPM 60–70. Pluck 5th↔4th alternately, checking the previous string dies on the change. Keep the other strings muted.
+BPM 60–70. Pluck 5th↔4th alternately, checking <mark>the previous string dies on the change</mark>. Keep the other strings muted.
 
 **10–20 min · Brain training (today's target = string change + mute)**
-Burn in the 5th/4th notes with the map. Slowly repeat moving the finger to the new string while covering the previous one.
+Burn in the 5th/4th notes with the map. Slowly repeat <mark>moving the finger to the new string while covering the previous one</mark>.
 
 **20–40 min · Real groove (Examples 1·2 / BPM 72)**
-Repeat **Example 1** (two-string line) 4× at BPM 72 → then **Example 2** (cross riff). A clean behind-you on the string change is the key.
+Repeat **Example 1** (two-string line) 4× at BPM 72 → then **Example 2** (cross riff). <mark>A clean behind-you on the string change</mark> is the key.
 
 **40–50 min · Record & reflect (recommended)**
-Record and check: does the previous note not ring on across the change / is the line clearly connected / is there no noise from the other strings?
+Record and check: <mark>does the previous note not ring on across the change</mark> / <mark>is the line clearly connected</mark> / <mark>is there no noise from the other strings</mark>?
 
 **Done when:** you can play a line crossing the 5th and 4th strings clearly, keeping the mute even as strings change.
 

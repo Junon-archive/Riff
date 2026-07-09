@@ -9,17 +9,17 @@ i18nKey: "lesson.m1.w2.d2"
 
 ## ① Theory
 
-That muted scratch you swung all through Week 1 — it was already a ghost note. Today you promote that scratch from an "accidental sound" to an **intentional rhythm instrument.**
+That muted scratch you swung all through Week 1 — it was already a ghost note. Today you promote that scratch from an "accidental sound" to an **<mark>intentional rhythm instrument</mark>.**
 
-The goal is to fill all sixteen 16ths with ghosts, making an **even, dense "chick-chick-chick"** like a drum's hi-hat. The hard part here isn't speed — it's **evenness.** If some ghosts are loud and others choke out, it's not a hi-hat but messy noise. Keep the right-hand down/up force and the left-hand pressure steady so all sixteen "chicks" come out the same size.
+The goal is to fill all sixteen 16ths with ghosts, making an **<mark>even, dense "chick-chick-chick"</mark>** like a drum's hi-hat. The hard part here isn't speed — it's **<mark>evenness</mark>.** If some ghosts are loud and others choke out, it's not a hi-hat but messy noise. Keep the right-hand down/up force and the left-hand pressure steady so all sixteen "chicks" come out the same size.
 
-The left hand stays lightly resting on the strings the whole time. Lift it and the sound cuts; press too hard and pitch leaks. "Resting, held still" — this neutral state is today's core.
+The left hand stays lightly resting on the strings the whole time. Lift it and the sound cuts; press too hard and pitch leaks. <mark>"Resting, held still"</mark> — this neutral state is today's core.
 
-It may feel boring. But you need this even ghost carpet so that tomorrow, when you drop real notes onto it, the contrast pops. The flatter the background, the more the star stands out. Today is the day you lay this hi-hat carpet — 30 seconds, a minute, longer and longer. Don't be discouraged if it isn't perfectly even. If today's "chick-chick" is a touch smoother than yesterday's, you've already moved a step forward — the sturdier the background, the more tomorrow's groove comes alive.
+It may feel boring. But you need <mark>this even ghost carpet</mark> so that tomorrow, when you drop real notes onto it, the contrast pops. The flatter the background, the more the star stands out. Today is the day you lay this hi-hat carpet — 30 seconds, a minute, longer and longer. Don't be discouraged if it isn't perfectly even. If today's "chick-chick" is a touch smoother than yesterday's, you've already moved a step forward — the sturdier the background, the more tomorrow's groove comes alive.
 
 ## ② Visuals
 
-Today the whole screen is ghosts. Both examples are dense ghosts with no real notes — material for watching evenness.
+Today the whole screen is ghosts. Both examples are dense ghosts with no real notes — <mark>material for watching evenness</mark>.
 
 **Example 1 — ghost motor (1 bar).** All sixteen 16ths as ghosts. The goal: sixteen "chicks" all the same size.
 
@@ -106,16 +106,16 @@ Today the whole screen is ghosts. Both examples are dense ghosts with no real no
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-BPM 60–70. Ghost scratches only, left hand resting. Find the neutral pressure of "resting, held still."
+BPM 60–70. Ghost scratches only, left hand resting. Find <mark>the neutral pressure</mark> of "resting, held still."
 
 **10–20 min · Brain training (today's target = evenness)**
-Count "chick-chick-chick" all the same size while swinging. Police by ear that no loud/soft "chicks" creep in.
+Count "chick-chick-chick" <mark>all the same size</mark> while swinging. Police by ear that no loud/soft "chicks" creep in.
 
 **20–40 min · Real groove (Examples 1·2 / BPM 66)**
-Repeat **Example 1** (ghost motor) 4× at BPM 66 → then **Example 2** (ghost that breathes). The point is sixteen even beads.
+Repeat **Example 1** (ghost motor) 4× at BPM 66 → then **Example 2** (ghost that breathes). The point is <mark>sixteen even beads</mark>.
 
 **40–50 min · Record & reflect (recommended)**
-Record and check: are all "chicks" the same size / did pitch leak / did you hold evenness for 30 seconds?
+Record and check: <mark>are all "chicks" the same size</mark> / <mark>did pitch leak</mark> / <mark>did you hold evenness for 30 seconds</mark>?
 
 **Done when:** you can hold 16th ghosts even like a hi-hat, with no pitch leaking, for 30+ seconds.
 

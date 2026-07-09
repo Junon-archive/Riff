@@ -9,11 +9,11 @@ i18nKey: "lesson.m1.w1.d1"
 
 ## ① Theory
 
-If your funk never quite grooves, the culprit is usually not your left-hand chords — it's the right hand. Eighty percent of funk is right-hand rhythm, and its beating heart is the **16th-note motor.**
+If your funk never quite grooves, the culprit is usually not your left-hand chords — it's the right hand. Eighty percent of funk is right-hand rhythm, and its beating heart is the **<mark>16th-note motor</mark>.**
 
-16ths split one beat into four pieces. Count aloud: "1-e-&-a." Four per beat, sixteen across four beats — hence "16th." Over that grid your right hand swings, alternating **down (moving down) and up (coming back)**, so down-up-down-up falls naturally onto the sixteenths.
+16ths split one beat into four pieces. Count aloud: "1-e-&-a." Four per beat, sixteen across four beats — hence "16th." Over that grid your right hand swings, alternating **down (moving down) and up (coming back)**, so <mark>down-up-down-up</mark> falls naturally onto the sixteenths.
 
-The single most important feeling is this: **the right hand never stops, like a sewing machine or a pendulum.** Whether you actually strike a string or not, it's your wrist — not your forearm — that keeps swinging up and down. That swing is the engine of the groove.
+The single most important feeling is this: **the right hand never stops, like a sewing machine or a pendulum.** Whether you actually strike a string or not, it's your wrist — not your forearm — that keeps swinging up and down. That swing is the <mark>engine of the groove</mark>.
 
 ```json
 {
@@ -43,11 +43,11 @@ The single most important feeling is this: **the right hand never stops, like a 
 }
 ```
 
-At first your hand will feel stiff and the beat will smear — that's completely normal. Today isn't about a clean sound; it's about laying your left fingers lightly across the strings to mute them and burning in the "chika-chika" swing. Once this one motor is in place, every funk rhythm you learn later just rides on top of it. Even if today ends with no sound at all — just a swinging hand — that counts as a success. That hand-that-never-stops is the real strength that will carry you through the next two months.
+At first your hand will feel stiff and the beat will smear — that's completely normal. Today isn't about a clean sound; it's about laying your left fingers lightly across the strings to mute them and burning in the "chika-chika" swing. Once this one motor is in place, every funk rhythm you learn later just rides on top of it. Even if today ends with no sound at all — just a swinging hand — that counts as a success. That <mark>hand-that-never-stops</mark> is the real strength that will carry you through the next two months.
 
 ## ② Visuals
 
-Today's stage isn't sound — it's **the swing.** Both examples below stay muted (left fingers resting on the strings), so you watch only the right-hand 16ths. (The plain, colorless notes are deliberate — right now rhythm, not pitch, is the star.)
+Today's stage isn't sound — it's **the swing.** Both examples below stay muted (left fingers resting on the strings), so you watch only the <mark>right-hand 16ths</mark>. (The plain, colorless notes are deliberate — right now rhythm, not pitch, is the star.)
 
 **Example 1 — 16th motor (1 bar).** Sixteen sixteenth-notes splitting each beat into four. Down-up-down-up, never resting.
 
@@ -134,16 +134,16 @@ Today's stage isn't sound — it's **the swing.** Both examples below stay muted
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-Metronome BPM 60–70. With your left fingers resting to mute the strings, mechanically repeat 16th empty-picking / muted scratching anywhere. Focus on the swing, not the sound.
+Metronome BPM 60–70. With your left fingers resting to mute the strings, mechanically repeat 16th <mark>empty-picking</mark> / muted scratching anywhere. Focus on the swing, not the sound.
 
 **10–20 min · Brain training (today's target = splitting the beat)**
-To the metronome, count "1-e-&-a" aloud while swinging your hand. Sync mouth and hand so one beat divides exactly into four.
+To the metronome, count "<mark>1-e-&-a</mark>" aloud while swinging your hand. Sync mouth and hand so one beat divides exactly into four.
 
 **20–40 min · Real groove (Examples 1·2 / BPM 65)**
-Repeat **Example 1** (1-bar motor) 4× at BPM 65 → once easy, stretch to **Example 2** (2-bar endurance). The key is that the hand never stops as the bar turns.
+Repeat **Example 1** (1-bar motor) 4× at BPM 65 → once easy, stretch to **Example 2** (2-bar endurance). The key is that <mark>the hand never stops</mark> as the bar turns.
 
 **40–50 min · Record & reflect (recommended)**
-Record 30 seconds and check: are down/up even in volume / did the beat drag / did the hand ever stop mid-way?
+Record 30 seconds and check: <mark>are down/up even in volume</mark> / <mark>did the beat drag</mark> / <mark>did the hand ever stop mid-way</mark>?
 
 **Done when:** you can swing four beats of muted 16ths without the hand stopping, and count "1-e-&-a" to split each beat into four.
 

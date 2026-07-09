@@ -9,11 +9,11 @@ i18nKey: "lesson.m1.w1.d3"
 
 ## ① Theory
 
-The motor is spinning, so today we make it **even.** Two keys — the balance of down and up, and "empty picking."
+The motor is spinning, so today we make it **even.** Two keys — <mark>the balance of down and up</mark>, and "<mark>empty picking</mark>."
 
-For most people the downstroke is strong and clear while the upstroke is weak and vague. Then the 16ths limp along like "BOOM-tick-BOOM-tick." Good funk keeps down and up **as even as twins in volume and timing.** Close your eyes and play downs only, then ups only, and match their size.
+For most people the downstroke is strong and clear while the upstroke is weak and vague. Then the 16ths limp along like "BOOM-tick-BOOM-tick." Good funk keeps down and up **<mark>as even as twins in volume and timing</mark>.** Close your eyes and play downs only, then ups only, and match their size.
 
-The second key is **empty picking (ghost strokes).** You don't sound every 16th — at some spots you **pass without striking the strings.** Yet the right hand never stops here: it keeps swinging through the air, grazing the strings only where a note should sound. The rests in the notation are exactly those "the hand moves but the strings aren't struck" spots.
+The second key is **<mark>empty picking (ghost strokes)</mark>.** You don't sound every 16th — at some spots you **<mark>pass without striking the strings</mark>.** Yet the right hand never stops here: it keeps swinging through the air, grazing the strings only where a note should sound. The rests in the notation are exactly those "the hand moves but the strings aren't struck" spots.
 
 ```json
 {
@@ -43,11 +43,11 @@ The second key is **empty picking (ghost strokes).** You don't sound every 16th 
 }
 ```
 
-Why it matters: if the hand stops and restarts, the beat *will* drag. Keep the swing and merely choose the "strike spots," and your timing locks in tight. Confusion at first is normal — the hand must move on a spot where you don't play. Slowly, keep the hand swinging and count only the "strike spots" aloud. This feel is the foundation for next week's ghost notes. So don't blame yourself if you fumble today. This awkwardness of hand and head working apart is a gate everyone passes through.
+Why it matters: if the hand stops and restarts, the beat *will* drag. Keep the swing and merely choose the "strike spots," and your timing locks in tight. Confusion at first is normal — the hand must move on a spot where you don't play. Slowly, keep the hand swinging and count only the "strike spots" aloud. This feel is the foundation for next week's <mark>ghost notes</mark>. So don't blame yourself if you fumble today. This awkwardness of hand and head working apart is a gate everyone passes through.
 
 ## ② Visuals
 
-Tell 'strike spots' from 'empty spots' with your eyes. In the notation below, notes are where you actually graze the strings; rests are empty-picking spots where the hand moves but the strings aren't struck.
+Tell 'strike spots' from 'empty spots' with your eyes. In the notation below, notes are where you actually graze the strings; rests are <mark>empty-picking spots</mark> where the hand moves but the strings aren't struck.
 
 **Example 1 — strike the beat only (1 bar).** Sound only the first sixteenth of each beat (the down); the other three are empty picking. The hand keeps swinging in 16ths.
 
@@ -134,16 +134,16 @@ Tell 'strike spots' from 'empty spots' with your eyes. In the notation below, no
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-BPM 60–70. Play downs only 16×, ups only 16×, matching their volume. Then alternate down-up.
+BPM 60–70. Play downs only 16×, ups only 16×, <mark>matching their volume</mark>. Then alternate down-up.
 
 **10–20 min · Brain training (today's target = empty picking)**
-Keep the hand swinging in 16ths but count only the "strike spots" aloud (e.g. "1...&..."). Train the feel of the hand not stopping while you pick out only the sounds.
+Keep the hand swinging in 16ths but count only the "strike spots" aloud (e.g. "1...&..."). Train the feel of <mark>the hand not stopping</mark> while you pick out only the sounds.
 
 **20–40 min · Real groove (Examples 1·2 / BPM 68)**
-Repeat **Example 1** (strike the beat) 4× at BPM 68 → then **Example 2** (beat and "and"). The point is that the hand still swings on the rest spots.
+Repeat **Example 1** (strike the beat) 4× at BPM 68 → then **Example 2** (beat and "and"). The point is that <mark>the hand still swings</mark> on the rest spots.
 
 **40–50 min · Record & reflect (recommended)**
-Record and check: is the timing of struck notes accurate / did the hand stop on empty spots / are down and up even?
+Record and check: <mark>is the timing of struck notes accurate</mark> / <mark>did the hand stop on empty spots</mark> / <mark>are down and up even</mark>?
 
 **Done when:** keeping the right-hand swing, you can pick out only the spots you want (empty picking) and play down and up at even volume.
 

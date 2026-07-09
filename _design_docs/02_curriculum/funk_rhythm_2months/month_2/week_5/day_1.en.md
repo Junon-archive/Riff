@@ -9,11 +9,11 @@ i18nKey: "lesson.m2.w5.d1"
 
 ## ① Theory
 
-That shimmering, crisp cutting sound of funk never comes from thick six-string chords. It comes only from the thin high strings — the **1st, 2nd, and 3rd.**
+That shimmering, crisp cutting sound of funk never comes from thick six-string chords. It comes only from the thin high strings — the **<mark>1st, 2nd, and 3rd</mark>.**
 
-The reason is simple. The high strings are light and bright, so cutting them gives a crisp sound like rolling glass beads. The low strings, by contrast, are dull and heavy, and won't produce funk's signature sparkle. So pros kill the 4th, 5th, and 6th strings entirely and stab only the top three. It's like dotting with a fine pen instead of painting a wall with a broad brush.
+The reason is simple. The high strings are light and bright, so cutting them gives a crisp sound like rolling glass beads. The low strings, by contrast, are dull and heavy, and won't produce funk's signature sparkle. So pros kill the 4th, 5th, and 6th strings entirely and stab only the top three. It's like <mark>dotting with a fine pen instead of painting a wall with a broad brush</mark>.
 
-Today's first shape is the **E major triad** (three strings). The root is on the 3rd string, with the 3rd and 5th stacked above (diagram below). Just three notes, three strings. This week's real battleground is the **control to hit that narrow target (three strings) accurately.** It takes far more precise aim than sweeping all six.
+Today's first shape is the **<mark>E major triad</mark>** (three strings). The root is on the 3rd string, with the 3rd and 5th stacked above (diagram below). Just three notes, three strings. This week's real battleground is the **<mark>control to hit that narrow target (three strings) accurately</mark>.** It takes far more precise aim than sweeping all six.
 
 ```json
 {
@@ -31,11 +31,11 @@ Today's first shape is the **E major triad** (three strings). The root is on the
 }
 ```
 
-Hitting only the three strings while not touching the lower ones is, of course, hard at first — the neighbors keep leaking. That's normal. Today it's fine if the sound is a little messy; just grab the feel of landing the right hand cleanly on the top three. This sound is the legendary cutting-funk tone typified by Nile Rodgers. It's surprising, the first time you play it today, that three thin strings make a sound this sophisticated. Think of it as the first day of breaking the habit of gripping all six strings.
+Hitting only the three strings while not touching the lower ones is, of course, hard at first — the neighbors keep leaking. That's normal. Today it's fine if the sound is a little messy; just grab the feel of landing the right hand cleanly on the top three. This sound is <mark>the legendary cutting-funk tone</mark> typified by Nile Rodgers. It's surprising, the first time you play it today, that three thin strings make a sound this sophisticated. Think of it as the first day of breaking the habit of gripping all six strings.
 
 ## ② Visuals
 
-Today's shape, the E major triad. Use only the 1st/2nd/3rd strings and mute the 4th/5th/6th firmly (✕).
+Today's shape, the E major triad. Use only <mark>the 1st/2nd/3rd strings</mark> and mute the 4th/5th/6th firmly (✕).
 
 **E major triad (high three strings).** The 3rd string is the root (R), with the 3rd and 5th above. Kill the 4th/5th/6th strings.
 
@@ -140,16 +140,16 @@ Today's shape, the E major triad. Use only the 1st/2nd/3rd strings and mute the 
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-BPM 60–70. Hold the E major triad and cut in 16ths. Focus-check that the lower strings (4/5/6) don't leak.
+BPM 60–70. Hold the E major triad and cut in 16ths. Focus-check that <mark>the lower strings (4/5/6) don't leak</mark>.
 
 **10–20 min · Brain training (today's target = three-string aim)**
-Eyes closed, practice grazing only the top three strings with the right hand. Burn in the feel of landing cleanly on the three without touching the lower ones.
+Eyes closed, practice grazing only the top three strings with the right hand. Burn in the feel of <mark>landing cleanly on the three</mark> without touching the lower ones.
 
 **20–40 min · Real groove (Examples 1·2 / BPM 68)**
-Repeat **Example 1** (three-string cutting) 4× at BPM 68 → then **Example 2** (off-beat cutting). Once easy, move the triad to another spot to vary it.
+Repeat **Example 1** (three-string cutting) 4× at BPM 68 → then **Example 2** (off-beat cutting). Once easy, <mark>move the triad to another spot</mark> to vary it.
 
 **40–50 min · Record & reflect (recommended)**
-Record and check: did only the 1/2/3 strings ring cleanly / is there no lower-string noise / is the cutting crisp?
+Record and check: <mark>did only the 1/2/3 strings ring cleanly</mark> / <mark>is there no lower-string noise</mark> / <mark>is the cutting crisp</mark>?
 
 **Done when:** with the E major triad, you can hit only the top three strings accurately and hold a 16th cut with no lower-string noise.
 

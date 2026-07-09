@@ -9,9 +9,9 @@ i18nKey: "lesson.m2.w6.d3"
 
 ## ① Theory
 
-The single-note line you drew so far, left as is, has big gaps between notes and feels a bit plain. Today you **fill those gaps with Month 1's ghost notes** to make a dense groove.
+The single-note line you drew so far, left as is, has big gaps between notes and feels a bit plain. Today you **<mark>fill those gaps with Month 1's ghost notes</mark>** to make a dense groove.
 
-The principle is exactly last month's. Press the left hand on the line's real notes ("ta") to ring them clearly, and fill the empty 16th slots between notes with relaxed ghosts ("chuck"). Then a sparse line becomes a groove rolling nonstop like "ta-chuck-chuck-ta-chuck." The right-hand motor never stops start to finish; the left hand only alternates "press or release."
+The principle is exactly last month's. Press the left hand on the line's real notes ("ta") to ring them clearly, and fill the empty 16th slots between notes with relaxed ghosts ("chuck"). Then a sparse line becomes a groove rolling nonstop like <mark>"ta-chuck-chuck-ta-chuck."</mark> The right-hand motor never stops start to finish; the left hand only alternates "press or release."
 
 ```json
 {
@@ -41,13 +41,13 @@ The principle is exactly last month's. Press the left hand on the line's real no
 }
 ```
 
-Why is this powerful? Even with only a few line notes, the groove sounds full. Where Nile-Rodgers-style cutting filled the groove with chords, today you get the same fullness from a single-note line + ghosts. Few notes, thick groove.
+Why is this powerful? Even with only a few line notes, the groove sounds full. Where Nile-Rodgers-style cutting filled the groove with chords, today you get the same fullness from a single-note line + ghosts. <mark>Few notes</mark>, <mark>thick groove</mark>.
 
-Alternating line notes and ghosts is confusing at first. Especially the timing of pressing the left hand precisely only on the real notes and releasing right after is hard. Of course. Today, even if the line is simple, bring out the "note clear, gaps chuck" contrast. Once that lives, just a few notes can fill a room with groove. This is funk's magic — not playing a lot, but playing little and filling the gaps with groove. Grab this feel today and you'll first taste the joy of rationing notes.
+Alternating line notes and ghosts is confusing at first. Especially the timing of pressing the left hand precisely only on the real notes and releasing right after is hard. Of course. Today, even if the line is simple, bring out the "note clear, gaps chuck" contrast. Once that lives, just a few notes can fill a room with groove. This is <mark>funk's magic</mark> — not playing a lot, but playing little and filling the gaps with groove. Grab this feel today and you'll first taste <mark>the joy of rationing notes</mark>.
 
 ## ② Visuals
 
-Alternate line real notes (blue) and ghosts (colorless). Few notes, yet ghosts fill the gaps and the groove is full.
+Alternate line real notes (blue) and ghosts (colorless). Few notes, yet <mark>ghosts fill the gaps</mark> and the groove is full.
 
 **Example 1 — line + ghost (1 bar).** Real notes sparse (E·A·G), all gaps ghost "chuck." A few notes, yet the groove is full.
 
@@ -134,16 +134,16 @@ Alternate line real notes (blue) and ghosts (colorless). Few notes, yet ghosts f
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-BPM 60–70. Pick one note and alternate "ta (press)" and "chuck (release)" to warm up pressure on/off. Right-hand motor keeps going.
+BPM 60–70. Pick one note and alternate "ta (press)" and "chuck (release)" to warm up <mark>pressure on/off</mark>. Right-hand motor keeps going.
 
 **10–20 min · Brain training (today's target = line + ghost)**
-Sing "ta-chuck-chuck-ta," separating line notes from ghosts. Picture where the real notes are in advance.
+Sing "ta-chuck-chuck-ta," separating line notes from ghosts. Picture <mark>where the real notes are</mark> in advance.
 
 **20–40 min · Real groove (Examples 1·2 / BPM 74)**
-Repeat **Example 1** (line + ghost) 4× at BPM 74 → then **Example 2** (ghost groove line). The gaps filling with ghosts is the key.
+Repeat **Example 1** (line + ghost) 4× at BPM 74 → then **Example 2** (ghost groove line). <mark>The gaps filling with ghosts</mark> is the key.
 
 **40–50 min · Record & reflect (recommended)**
-Record and check: are the real notes clear / do ghosts fill the gaps / did the right hand never stop?
+Record and check: <mark>are the real notes clear</mark> / <mark>do ghosts fill the gaps</mark> / <mark>did the right hand never stop</mark>?
 
 **Done when:** you can fill a single-note line's gaps with ghosts to make a full groove from few notes.
 

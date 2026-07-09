@@ -9,11 +9,11 @@ i18nKey: "lesson.m2.w6.d1"
 
 ## ① Theory
 
-If you thought funk guitar was all chords, today's a twist. Like Nile Rodgers or Curtis Mayfield, pros pick out one string at a time to draw a **bass-line-like single-note line.** They drop the chord entirely and build a groove note by note.
+If you thought funk guitar was all chords, today's a twist. Like Nile Rodgers or Curtis Mayfield, pros pick out one string at a time to draw a **<mark>bass-line-like single-note line</mark>.** They drop the chord entirely and build a groove note by note.
 
-The principle: kill the other five strings completely (left- and right-hand mute) and ring only one string clearly. If a chord is a brush painting broadly, single notes are a pen drawing a fine line. Over the same right-hand motor, this time you place one clear note instead of a chord.
+The principle: kill the other five strings completely (left- and right-hand mute) and ring only one string clearly. If a chord is a brush painting broadly, single notes are <mark>a pen drawing a fine line</mark>. Over the same right-hand motor, this time you place one clear note instead of a chord.
 
-Today you draw a short E line on **the 5th string alone.** The root E sits at the 5th string, 7th fret — the same spot as last week's E9 root. Make a short riff from a few notes around it (note map below). Two things are key. First, mute the unused strings perfectly for zero noise. Second, aim one string accurately and ring it clearly.
+Today you draw a short E line on **<mark>the 5th string alone</mark>.** The root E sits at the 5th string, 7th fret — the same spot as last week's E9 root. Make a short riff from a few notes around it (note map below). Two things are key. First, <mark>mute the unused strings perfectly for zero noise</mark>. Second, <mark>aim one string accurately and ring it clearly</mark>.
 
 ```json
 {
@@ -30,11 +30,11 @@ Today you draw a short E line on **the 5th string alone.** The root E sits at th
 }
 ```
 
-Hitting just one string accurately is surprisingly hard. Neighbors leak, or too much force smears the note. That's normal. Today, even if the line isn't flashy, grab the feel of "one string clear, the rest silent." The moment this line locks with the bass, your funk suddenly gets thick and solid. The hand that only comped with chords now starts to draw lines. Awkward at first, but once this single-note world opens, what you can express doubles.
+Hitting just one string accurately is surprisingly hard. Neighbors leak, or too much force smears the note. That's normal. Today, even if the line isn't flashy, grab the feel of "one string clear, the rest silent." <mark>The moment this line locks with the bass</mark>, your funk suddenly gets thick and solid. The hand that only comped with chords now starts to draw lines. Awkward at first, but once this single-note world opens, what you can express doubles.
 
 ## ② Visuals
 
-A map of today's notes. Blue = the root E (5th string, 7th fret) and the 5th; the rest are pentatonic notes. Draw the line on the 5th string alone.
+A map of today's notes. Blue = the root E (5th string, 7th fret) and the 5th; the rest are pentatonic notes. <mark>Draw the line on the 5th string alone</mark>.
 
 **E funk note box (strings 5-4).** Blue is the root R (5th, 7th) and the 5th. Today use the 5th-string notes only (b7·R·b3).
 
@@ -138,16 +138,16 @@ A map of today's notes. Blue = the root E (5th string, 7th fret) and the 5th; th
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-BPM 60–70. Pluck only the 5th string and mute the other five perfectly. Focus-check for zero noise.
+BPM 60–70. Pluck only the 5th string and <mark>mute the other five perfectly</mark>. Focus-check for zero noise.
 
 **10–20 min · Brain training (today's target = one-string aim + mute)**
-Using the note map, burn in the 5th-string notes (b7·R·b3). Train the left hand to press only the line notes and cover the rest.
+Using the note map, burn in the 5th-string notes (b7·R·b3). Train the left hand to <mark>press only the line notes and cover the rest</mark>.
 
 **20–40 min · Real groove (Examples 1·2 / BPM 70)**
-Repeat **Example 1** (5th-string line) 4× at BPM 70 → then **Example 2** (2-bar riff). One string clear, the rest silent, is the key.
+Repeat **Example 1** (5th-string line) 4× at BPM 70 → then **Example 2** (2-bar riff). <mark>One string clear</mark>, <mark>the rest silent</mark>, is the key.
 
 **40–50 min · Record & reflect (recommended)**
-Record and check: did only one string ring clearly / is there no noise from the others / is the line clear like a bass?
+Record and check: <mark>did only one string ring clearly</mark> / <mark>is there no noise from the others</mark> / <mark>is the line clear like a bass</mark>?
 
 **Done when:** you can play a short E line on the 5th string alone, clearly and with no noise from the other strings.
 

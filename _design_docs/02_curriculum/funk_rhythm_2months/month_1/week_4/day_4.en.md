@@ -9,17 +9,17 @@ i18nKey: "lesson.m1.w4.d4"
 
 ## ① Theory
 
-The month's finish line. Today you complete and record a groove mixing ghosts, real notes, and accents on one chord — E9 (or Em7) — over a backing track. Carrying minutes on rhythm alone, without changing a single chord — this is the essence of funk.
+The month's finish line. Today you complete and record a groove mixing ghosts, real notes, and accents on one chord — E9 (or Em7) — over a backing track. Carrying minutes on rhythm alone, without changing a single chord — this is <mark>the essence of funk</mark>.
 
-Let's look back over the month. Week 1 you built a right-hand 16th motor that never stops; Week 2 you laid a hi-hat with left-hand ghosts; Week 3 you stabbed a snare with accents; Week 4 you set a real chord, E9, on top. Now you hold both a **rhythm engine and a real chord.** Without any fancy chord progression, the right hand alone can fill a room with groove.
+Let's look back over the month. Week 1 you built <mark>a right-hand 16th motor that never stops</mark>; Week 2 you laid <mark>a hi-hat</mark> with left-hand ghosts; Week 3 you stabbed <mark>a snare</mark> with accents; Week 4 you set <mark>a real chord, E9</mark>, on top. Now you hold both a **<mark>rhythm engine and a real chord</mark>.** Without any fancy chord progression, the right hand alone can fill a room with groove.
 
-There's no right answer to today's jam. Take the examples as a skeleton, then shift the accent spots, slip to Em7 for color now and then, and adjust the ghost density to build "your groove." And be sure to record. The moment the backing's drums and bass lock with your guitar as one body, you'll get goosebumps yourself.
+There's no right answer to today's jam. Take the examples as a skeleton, then shift the accent spots, slip to Em7 for color now and then, and adjust the ghost density to build <mark>"your groove."</mark> And be sure to record. The moment the backing's drums and bass lock with your guitar as one body, you'll get goosebumps yourself.
 
-You made it here — genuinely impressive. The hand that two months ago fretted "why won't my funk groove" now designs a groove on a single chord. Next month, onto this solid rhythm you'll add **minimal three-string voicings, single notes, staccato, and shuffle** to widen your expression dramatically. Be sure to keep the groove you recorded today — it's the proof of a month.
+You made it here — genuinely impressive. The hand that two months ago fretted "why won't my funk groove" now designs a groove on a single chord. Next month, onto this solid rhythm you'll add **<mark>minimal three-string voicings, single notes, staccato, and shuffle</mark>** to widen your expression dramatically. Be sure to keep the groove you recorded today — it's the proof of a month.
 
 ## ② Visuals
 
-A finished jam mixing all three layers on the one chord E9. Not an answer but a skeleton — vary it into your own groove.
+A finished jam mixing all three layers on the one chord E9. Not an answer but a skeleton — vary it into <mark>your own groove</mark>.
 
 **E9 (review).** Root at 5th string, 7th fret; yellow = the 9th. Today's jam rolls on this one chord (and Em7 at times).
 
@@ -142,16 +142,16 @@ A finished jam mixing all three layers on the one chord E9. Not an answer but a 
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-BPM 60–70. Lightly run through the month's motor, ghosts, accents, and E9. Check that the hand remembers.
+BPM 60–70. Lightly run through <mark>the month's motor, ghosts, accents, and E9</mark>. Check that the hand remembers.
 
 **10–20 min · Brain training (today's target = designing your own jam)**
-Using the examples as a skeleton, picture how you'll place the accent spots, Em7 color changes, and ghost density.
+Using the examples as a skeleton, picture how you'll place <mark>the accent spots, Em7 color changes, and ghost density</mark>.
 
 **20–40 min · Real groove (Examples 1·2 / BPM 72)**
-Play **Examples 1·2** over a backing, then vary freely from that skeleton, rolling four-plus bars unbroken. Minutes on a single chord.
+Play **Examples 1·2** over a backing, then vary freely from that skeleton, rolling four-plus bars unbroken. <mark>Minutes on a single chord</mark>.
 
 **40–50 min · Record & reflect (recommended)**
-Record 1–2 minutes of your own jam and check: did the hand never stop / does the accent lock with the snare / are all three layers audible / did you vary it so it isn't dull?
+Record 1–2 minutes of your own jam and check: <mark>did the hand never stop</mark> / <mark>does the accent lock with the snare</mark> / <mark>are all three layers audible</mark> / <mark>did you vary it so it isn't dull</mark>?
 
 **Done when:** on the one chord E9 (or Em7), you can roll your own groove mixing ghosts + real notes + accents over a backing for a minute or more, and record it. (Month 1 complete!)
 

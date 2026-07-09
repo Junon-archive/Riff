@@ -9,17 +9,17 @@ i18nKey: "lesson.m1.w3.d4"
 
 ## ① Theory
 
-The week's finish line. Today you complete a groove mixing one or two accents + ghosts + real notes over a backing track. Rolling the three sound layers (chick/ta/pop) with one hand, this time the goal is to **lock them with the drums.**
+The week's finish line. Today you complete a groove mixing one or two accents + ghosts + real notes over a backing track. Rolling the three sound layers (chick/ta/pop) with one hand, this time the goal is to **<mark>lock them with the drums</mark>.**
 
-The key is one thing: **stacking the accent on the backing's snare.** In popular music the snare usually falls on beats 2 and 4. Land your "pop" exactly there and a magic happens where guitar and drums move as one body. Conversely, if the accent misses the snare, the groove floats no matter how well you play. So today, keep the backing on and find by ear the spot where your accent snaps onto the snare.
+The key is one thing: **<mark>stacking the accent on the backing's snare</mark>.** In popular music the snare usually falls on beats 2 and 4. Land your "pop" exactly there and a magic happens where guitar and drums move as one body. Conversely, if the accent misses the snare, the groove floats no matter how well you play. So today, keep the backing on and find by ear the spot where your accent snaps onto the snare.
 
-Looking back over three weeks: onto the right-hand 16th motor (Week 1), you laid a hi-hat with left-hand ghosts (Week 2), and stabbed a snare with accents (Week 3). Now your single guitar is a rhythm machine with hi-hat, kick, and snare. It can carry minutes without changing a single chord.
+Looking back over three weeks: onto <mark>the right-hand 16th motor</mark> (Week 1), you laid <mark>a hi-hat</mark> with left-hand ghosts (Week 2), and stabbed <mark>a snare</mark> with accents (Week 3). Now your single guitar is a rhythm machine with hi-hat, kick, and snare. It can carry minutes without changing a single chord.
 
-Just getting here is genuinely impressive. Next week you'll finally grab a real chord — funk's emblem, **E9** — and lay all this motor, ghosts, and accents on top to complete a one-chord jam. If today, over the backing, you felt "my accent locks with the snare," you've already begun to speak the rhythmic language of funk.
+Just getting here is genuinely impressive. Next week you'll finally grab a real chord — funk's emblem, **<mark>E9</mark>** — and lay all this motor, ghosts, and accents on top to complete a one-chord jam. If today, over the backing, you felt "my accent locks with the snare," you've already begun to speak the rhythmic language of funk.
 
 ## ② Visuals
 
-A finished groove mixing all three layers. Stack the accent (green) onto the backing snare (beats 2 and 4).
+A finished groove mixing all three layers. Stack the accent (green) onto <mark>the backing snare (beats 2 and 4)</mark>.
 
 **Example 1 — accent groove A (2 bars).** A basic funk groove with real notes, ghosts, and accents evenly mixed. The accent on the '&' of beats 2 and 4 locks with the snare.
 
@@ -124,16 +124,16 @@ A finished groove mixing all three layers. Stack the accent (green) onto the bac
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-BPM 60–70. Lightly review the accents/ghosts/real notes from D1–D3. Check the three-layer contrast sits in your hand.
+BPM 60–70. Lightly review the accents/ghosts/real notes from D1–D3. Check <mark>the three-layer contrast</mark> sits in your hand.
 
 **10–20 min · Brain training (today's target = accent on the snare)**
-Listen to the backing snare (beats 2 and 4) and sing your "pop" stacked there. Picture where the accent meets the snare.
+Listen to the backing snare (beats 2 and 4) and sing your "pop" stacked there. Picture <mark>where the accent meets the snare</mark>.
 
 **20–40 min · Real groove (Examples 1·2 / BPM 72)**
-Repeat **Example 1** (groove A) over a backing 4× → then **Example 2** (groove B). The key is the accent locking with the snare.
+Repeat **Example 1** (groove A) over a backing 4× → then **Example 2** (groove B). The key is <mark>the accent locking with the snare</mark>.
 
 **40–50 min · Record & reflect (recommended)**
-Record two passes of two bars with the backing and check: does the accent lock with the snare / are the three layers distinct / does the background ghost never cut?
+Record two passes of two bars with the backing and check: <mark>does the accent lock with the snare</mark> / <mark>are the three layers distinct</mark> / <mark>does the background ghost never cut</mark>?
 
 **Done when:** you can hold a groove mixing accents + ghosts + real notes over a backing, with the accent locked to the snare (beats 2 and 4). (Week 3 complete!)
 

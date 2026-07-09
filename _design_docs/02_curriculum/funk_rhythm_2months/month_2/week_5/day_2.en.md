@@ -9,9 +9,9 @@ i18nKey: "lesson.m2.w5.d2"
 
 ## ① Theory
 
-The E major triad you grabbed yesterday — today you change its whole color by **moving just one finger.**
+The E major triad you grabbed yesterday — today you change its whole color by **<mark>moving just one finger</mark>.**
 
-The first change is **minor.** Drop the 2nd string by exactly one fret (9→8) and the bright E major becomes a dark E minor. The 3rd fell a half step to a b3 (green in the diagram). This moment where one finger turns bright into sad is the very principle you saw in last month's chord building. Within these narrow three strings, that switch is alive just the same.
+The first change is **<mark>minor</mark>.** Drop the 2nd string by exactly one fret (9→8) and the bright E major becomes a dark E minor. The 3rd fell a half step to a b3 (green in the diagram). This moment where one finger turns bright into sad is <mark>the very principle you saw in last month's chord building</mark>. Within these narrow three strings, that switch is alive just the same.
 
 ```json
 {
@@ -29,7 +29,7 @@ The first change is **minor.** Drop the 2nd string by exactly one fret (9→8) a
 }
 ```
 
-The second is **inversion.** The same E major, but reorder the three notes (which one sits on top) and the feel changes. Today you also taste a low 2nd-inversion shape — the 5th dropped to the bottom instead of the root. Same chord, yet it shimmers with a slightly different color. That such varied expressions come from three narrow strings is the true charm of triad cutting.
+The second is **<mark>inversion</mark>.** The same E major, but reorder the three notes (which one sits on top) and the feel changes. Today you also taste a low 2nd-inversion shape — the 5th dropped to the bottom instead of the root. Same chord, yet it shimmers with a slightly different color. That such varied expressions come from three narrow strings is <mark>the true charm of triad cutting</mark>.
 
 ```json
 {
@@ -47,11 +47,11 @@ The second is **inversion.** The same E major, but reorder the three notes (whic
 }
 ```
 
-Juggling several shapes can confuse the hand. Of course. Today, don't try to memorize them all; just firmly grab "one fret on the 2nd string flips bright and dark." If you can slip that switch in mid-cutting, your one-chord jam suddenly becomes far more colorful. You're not memorizing a new chord — just moving one finger from a shape you know, so there's no burden. Bright or dark: now it's your choice.
+Juggling several shapes can confuse the hand. Of course. Today, don't try to memorize them all; just firmly grab "one fret on the 2nd string flips bright and dark." If you can slip that switch in mid-cutting, your one-chord jam suddenly becomes far more colorful. You're not memorizing a new chord — just moving one finger from a shape you know, so there's no burden. <mark>Bright or dark</mark>: now it's your choice.
 
 ## ② Visuals
 
-Same three strings, three colors from different fingers. Green = the changed note (b3). Contrast E minor and the 2nd inversion.
+Same three strings, <mark>three colors from different fingers</mark>. Green = the changed note (b3). Contrast E minor and the 2nd inversion.
 
 **E minor triad.** From yesterday's major, only the 2nd string 9→8 (green = b3). Bright into dark — one finger's difference.
 
@@ -174,16 +174,16 @@ Same three strings, three colors from different fingers. Green = the changed not
 ## ③ Today's practice (50-minute routine)
 
 **0–10 min · Warm-up**
-BPM 60–70. Alternate E major↔minor with one fret on the 2nd string. The inversion shape lightly too.
+BPM 60–70. Alternate E major↔minor with <mark>one fret on the 2nd string</mark>. The inversion shape lightly too.
 
 **10–20 min · Brain training (today's target = the color switch)**
-Keeping the cutting, practice slipping major↔minor. Burn in the feel of moving only the 2nd-string finger.
+Keeping the cutting, practice slipping major↔minor. Burn in the feel of <mark>moving only the 2nd-string finger</mark>.
 
 **20–40 min · Real groove (Examples 1·2 / BPM 70)**
-Repeat **Example 1** (color-changing cut) 4× at BPM 70 → then **Example 2** (major → minor). Once easy, move to the inversion to vary it.
+Repeat **Example 1** (color-changing cut) 4× at BPM 70 → then **Example 2** (major → minor). Once easy, <mark>move to the inversion</mark> to vary it.
 
 **40–50 min · Record & reflect (recommended)**
-Record and check: is the major↔minor color clearly distinct / does the cutting stay on three strings / is the change smooth?
+Record and check: <mark>is the major↔minor color clearly distinct</mark> / <mark>does the cutting stay on three strings</mark> / <mark>is the change smooth</mark>?
 
 **Done when:** within the same three strings, you can switch major↔minor with one finger and taste the inversion shape for a different color.
 
