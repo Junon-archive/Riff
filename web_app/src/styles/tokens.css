@@ -56,6 +56,8 @@
   /* 아티클 타이포 강조(라이트) — 레슨 상세(Day) 리포트 레이아웃용 */
   --red-500:         #F04452;
   --highlight:        color-mix(in srgb, var(--green-500) 20%, white);
+  /* 산문 하이라이트(하늘색) — 08 Highlight. 스코어 role "highlight"(초록, color_legend SSOT)와 분리. */
+  --prose-hl:         color-mix(in srgb, var(--blue-500) 20%, white);
   --num-accent-red:   var(--red-500);
   --num-accent-blue:  var(--blue-600);
 
@@ -92,6 +94,7 @@
 
   /* 아티클 타이포 강조(다크) — 저휘도 반투명 하이라이트 + 다크 배경 대비용 강조색 */
   --highlight:        color-mix(in srgb, var(--green-500) 22%, transparent);
+  --prose-hl:         color-mix(in srgb, var(--blue-500) 30%, transparent);
   --num-accent-red:   #FF6B75;
   --num-accent-blue:  var(--primary);
 }

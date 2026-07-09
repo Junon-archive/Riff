@@ -551,7 +551,16 @@ function buildCurriculum(curriculumId) {
     durationMonths: curMeta?.durationMonths ?? null,
     // 커리큘럼 소개(3언어 문단 배열 또는 문자열). 커리큘럼 첫 페이지 상단에 "이 과정은 이런 걸 배웁니다"로
     // 노출된다(백로그 01 Part C). 내부용 overview.md 와 별개인 사용자용 필드. 없으면 null → 미표시.
-    intro: curMeta?.intro ?? null,
+    // intro 문단은 inline() 로 변환해 HTML 로 싣는다(**볼드**→<b>, <mark> 통과). CurriculumView 가 set:html.
+    // 08 Highlight: 커리큘럼 소개는 볼드+하이라이트 지원. intro 없으면 null(가법 — 기존 커리큘럼 불변).
+    intro: curMeta?.intro
+      ? Object.fromEntries(
+          Object.entries(curMeta.intro).map(([lang, paras]) => [
+            lang,
+            Array.isArray(paras) ? paras.map((p) => inline(String(p))) : inline(String(paras)),
+          ]),
+        )
+      : null,
     // 주의: 커리큘럼 최상위 overview.md 는 내부 설계 문서(트래킹 표·메타)라 사용자 노출 금지 →
     // manifest 에 html 을 싣지 않는다. 카드 소개는 taglines/forWho 로 대체.
     totalDays: allDayKeys.length,

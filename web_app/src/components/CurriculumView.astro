@@ -49,7 +49,7 @@ const introParagraphs: string[] = Array.isArray(introRaw)
     {curriculum.forWho && <p class="curr-for-who curr-head-for-who">{curriculum.forWho[lang]}</p>}
     {introParagraphs.length > 0 && (
       <div class="curr-intro">
-        {introParagraphs.map((p) => <p>{p}</p>)}
+        {introParagraphs.map((p) => <p set:html={p}></p>)}
       </div>
     )}
   </section>

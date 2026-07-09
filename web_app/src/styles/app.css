@@ -258,6 +258,9 @@ h1.display {
 .curr-intro { margin-top: 14px; max-width: 62ch; }
 .curr-intro p { margin: 0 0 10px; font-size: 15px; line-height: 1.7; color: var(--text-2); }
 .curr-intro p:last-child { margin-bottom: 0; }
+/* 08 Highlight: 커리큘럼 소개 강조 — 하이라이트(하늘색)+볼드 */
+.curr-intro mark { background: var(--prose-hl); color: inherit; padding: 0 2px; border-radius: 2px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.curr-intro b, .curr-intro strong { font-weight: 700; color: var(--text-1); }
 .prog-summary {
   margin-top: 16px; padding: 18px 20px; background: var(--primary-weak);
   border-radius: var(--radius); border: none;
