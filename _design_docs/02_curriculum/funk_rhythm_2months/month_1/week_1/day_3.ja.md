@@ -15,6 +15,34 @@ i18nKey: "lesson.m1.w1.d3"
 
 2つ目は**空ピッキング（ゴーストストローク）** です。16ビートを全部鳴らすのではなく、ある場所は**弦を弾かずに通り過ぎます。** でもここで右手は絶対に止まりません — 宙で揺れ続け、音を出す場所だけ弦をかすめるんです。楽譜で休符になっている場所こそ「手は動くが弦は弾かない」場所です。
 
+```json
+{
+  "id": "m1.w1.d3.downbeat_pick",
+  "type": "tab",
+  "meta": { "title": "Play the beat, empty-pick the rest (1 bar)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E", "tempoBpm": 68, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 5, "fret": 5, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "rest": true },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "rest": true },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "rest": true },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "rest": true },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "rest": true },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "rest": true },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "rest": true },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "rest": true },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "rest": true },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "rest": true },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "rest": true },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "rest": true }
+    ]}
+  ]}
+}
+```
+
 なぜ大事かというと、手が止まって再出発すると必ず拍がずれるからです。揺れを保ったまま「弾く場所」だけを選べば、タイミングがピタッと合います。最初は戸惑って当然 — 弾かない場所なのに手は動かすんですから。ゆっくり、手は揺れ続け、口で「弾く場所」だけ数えて身につけましょう。この感覚が来週のゴーストノートの土台です。だから今日つまずいても自分を責めないで。手と頭がバラバラに動くこのぎこちなさは、誰もが必ず通る関門なんです。
 
 ## ② ビジュアル資料

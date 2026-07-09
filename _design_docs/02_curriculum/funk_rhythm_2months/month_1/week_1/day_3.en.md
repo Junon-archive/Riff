@@ -15,6 +15,34 @@ For most people the downstroke is strong and clear while the upstroke is weak an
 
 The second key is **empty picking (ghost strokes).** You don't sound every 16th — at some spots you **pass without striking the strings.** Yet the right hand never stops here: it keeps swinging through the air, grazing the strings only where a note should sound. The rests in the notation are exactly those "the hand moves but the strings aren't struck" spots.
 
+```json
+{
+  "id": "m1.w1.d3.downbeat_pick",
+  "type": "tab",
+  "meta": { "title": "Play the beat, empty-pick the rest (1 bar)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E", "tempoBpm": 68, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 5, "fret": 5, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "rest": true },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "rest": true },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "rest": true },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "rest": true },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "rest": true },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "rest": true },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "rest": true },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "rest": true },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "rest": true },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "rest": true },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "rest": true },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "rest": true }
+    ]}
+  ]}
+}
+```
+
 Why it matters: if the hand stops and restarts, the beat *will* drag. Keep the swing and merely choose the "strike spots," and your timing locks in tight. Confusion at first is normal — the hand must move on a spot where you don't play. Slowly, keep the hand swinging and count only the "strike spots" aloud. This feel is the foundation for next week's ghost notes. So don't blame yourself if you fumble today. This awkwardness of hand and head working apart is a gate everyone passes through.
 
 ## ② Visuals

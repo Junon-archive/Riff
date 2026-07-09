@@ -15,6 +15,21 @@ The core difficulty: when the line moves from the 5th to the 4th string, you mus
 
 Today's material is the 5th- and 4th-string notes of the E pentatonic box (yesterday's map). Add the 4th string's 4th and 5th to the 5th string's R and b3, and you can build a line rising and falling like E-G-A-B. A bass-line-or-riff-sounding, thoroughly funky line.
 
+```json
+{
+  "id": "m2.w6.d1.note_map",
+  "type": "fretboard_diagram",
+  "meta": { "title": "E funk note box (strings 5-4)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E" },
+  "fretboard": { "startFret": 4, "fretSpan": 8, "dots": [
+    { "string": 5, "fret": 5, "label": "b7", "role": "scale" },
+    { "string": 5, "fret": 7, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 5, "fret": 10, "label": "b3", "role": "scale" },
+    { "string": 4, "fret": 7, "label": "4", "role": "scale" },
+    { "string": 4, "fret": 9, "label": "5", "role": "chord_tone" }
+  ]}
+}
+```
+
 Crossing strings while minding the mute keeps the hands busy at first. Especially just after a string change, the previous string tends to ring on with a "hum." Of course. Today, even if the line is slow, focus on the previous string being cleaned up on every change. Once this settles, your line widens freely to two, three strings. A line once trapped on one string starts to sing across the neck. With just two strings open today, the melodies you can express multiply. Two strings are the stepping stone that soon becomes three, then four.
 
 ## ② Visuals

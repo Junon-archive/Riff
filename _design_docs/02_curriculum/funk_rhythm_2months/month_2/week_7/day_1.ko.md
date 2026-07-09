@@ -15,6 +15,42 @@ i18nKey: "lesson.m2.w7.d1"
 
 오늘은 **같은 패턴을 두 방식으로** 비교해봐요. 하나는 음을 끝까지 울리는 레가토, 하나는 짧게 끊고 침묵을 두는 스타카토. 똑같은 네 번의 타격인데, 끊고 안 끊고에 따라 소리의 인상이 얼마나 달라지는지 귀로 직접 느껴보세요. 펑크는 대부분 스타카토 쪽이에요 — 짧고 단단하게 끊어야 그루브가 조여지거든요.
 
+```json
+{
+  "id": "m2.w7.d1.legato",
+  "type": "tab",
+  "meta": { "title": "Legato — full ring (1 bar)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E", "tempoBpm": 70, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 5, "fret": 7, "duration": "quarter", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 7, "duration": "quarter", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 7, "duration": "quarter", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 7, "duration": "quarter", "role": "chord_tone", "label": "R" }
+    ]}
+  ]}
+}
+```
+
+```json
+{
+  "id": "m2.w7.d1.staccato",
+  "type": "tab",
+  "meta": { "title": "Staccato — short stabs (1 bar)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E", "tempoBpm": 70, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 7, "duration": "eighth", "rest": true },
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 7, "duration": "eighth", "rest": true },
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 7, "duration": "eighth", "rest": true },
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 7, "duration": "eighth", "rest": true }
+    ]}
+  ]}
+}
+```
+
 끊는 타이밍이 처음엔 어려워요. 너무 일찍 끊으면 음이 안 나고, 늦으면 안 끊기죠. 왼손 힘을 살짝 빼거나 오른손 옆면을 줄에 얹어 끊는데, 이 타이밍은 며칠 연습해야 손에 붙어요. 정상이에요. 오늘은 '끊는다'는 감각이 뭔지 몸으로 아는 것만으로 충분해요. 이 작은 기술 하나가, 지금까지 배운 모든 그루브를 훨씬 타이트하게 만들어주는 마법의 도구예요.
 
 ## ② 시각 자료

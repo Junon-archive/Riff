@@ -15,6 +15,56 @@ i18nKey: "lesson.m2.w7.d3"
 
 한 가지 알아둘 게 있어요. 셔플은 악보로 정확히 적기가 어려워요(정확히는 삼잇단음표 느낌이라서요). 그래서 악보는 그냥 정박으로 두고, 제목과 설명에 **'스윙해서 치라(long-short)'** 고 표시하는 게 관행이에요. 오늘 예제도 그래요 — 악보는 8분음표지만, 실제로는 "따-암 따-암"으로 굴려서 치세요.
 
+```json
+{
+  "id": "m2.w7.d3.straight",
+  "type": "tab",
+  "meta": { "title": "Straight 8ths (play even)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E", "tempoBpm": 74, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" }
+    ]}
+  ]}
+}
+```
+
+```json
+{
+  "id": "m2.w7.d3.shuffle",
+  "type": "tab",
+  "meta": { "title": "16th shuffle feel — SWING the 8ths (long-short)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E", "tempoBpm": 74, "notation": "staff+tab", "feel": "swing8" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 10, "duration": "eighth", "role": "scale", "label": "b3" },
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 10, "duration": "eighth", "role": "scale", "label": "b3" },
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 10, "duration": "eighth", "role": "scale", "label": "b3" },
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 10, "duration": "eighth", "role": "scale", "label": "b3" }
+    ]},
+    { "measure": 2, "notes": [
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 10, "duration": "eighth", "role": "scale", "label": "b3" },
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 10, "duration": "eighth", "role": "scale", "label": "b3" },
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 10, "duration": "eighth", "role": "scale", "label": "b3" },
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 10, "duration": "eighth", "role": "scale", "label": "b3" }
+    ]}
+  ]}
+}
+```
+
 핵심은 눈이 아니라 **귀와 몸**이에요. 입으로 "따-암"을 계속 굴리면서, 그 흔들림을 손으로 옮기는 거죠. 정박과 셔플을 번갈아 쳐보면 그 차이가 확 느껴져요. 처음엔 어색하고 자꾸 정박으로 돌아가지만, 당연해요. 오늘은 '흔들린다'는 느낌 자체를 몸에 새기면 충분해요.
 
 ## ② 시각 자료

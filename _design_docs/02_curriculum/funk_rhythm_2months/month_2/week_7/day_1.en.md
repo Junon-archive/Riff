@@ -15,6 +15,42 @@ Staccato is the technique of laying your hand lightly on the string right after 
 
 Today you compare **the same pattern two ways** — one legato, ringing to the end, one staccato, cut short with silence. The same four strokes, yet feel by ear how different the impression is with and without the cut. Funk is mostly staccato — short and firm cuts are what tighten the groove.
 
+```json
+{
+  "id": "m2.w7.d1.legato",
+  "type": "tab",
+  "meta": { "title": "Legato — full ring (1 bar)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E", "tempoBpm": 70, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 5, "fret": 7, "duration": "quarter", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 7, "duration": "quarter", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 7, "duration": "quarter", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 7, "duration": "quarter", "role": "chord_tone", "label": "R" }
+    ]}
+  ]}
+}
+```
+
+```json
+{
+  "id": "m2.w7.d1.staccato",
+  "type": "tab",
+  "meta": { "title": "Staccato — short stabs (1 bar)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E", "tempoBpm": 70, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 7, "duration": "eighth", "rest": true },
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 7, "duration": "eighth", "rest": true },
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 7, "duration": "eighth", "rest": true },
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 7, "duration": "eighth", "rest": true }
+    ]}
+  ]}
+}
+```
+
 The cut timing is hard at first. Cut too early and no note sounds; too late and it doesn't cut. You cut by easing the left-hand force or laying the side of the right hand on the strings, and that timing takes a few days to settle. That's normal. Today, just knowing in your body what "cutting" feels like is enough. This one small technique is a magic tool that makes every groove you've learned so far far tighter.
 
 ## ② Visuals

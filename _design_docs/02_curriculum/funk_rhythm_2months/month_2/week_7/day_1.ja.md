@@ -15,6 +15,42 @@ i18nKey: "lesson.m2.w7.d1"
 
 今日は**同じパターンを2つの方法で**比較します。1つは最後まで鳴らすレガート、1つは短く切って沈黙を置くスタッカート。同じ4回の打撃なのに、切るか切らないかで音の印象がどれだけ変わるか、耳で感じてください。ファンクはほとんどスタッカート寄り — 短く硬く切ってこそグルーヴが締まります。
 
+```json
+{
+  "id": "m2.w7.d1.legato",
+  "type": "tab",
+  "meta": { "title": "Legato — full ring (1 bar)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E", "tempoBpm": 70, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 5, "fret": 7, "duration": "quarter", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 7, "duration": "quarter", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 7, "duration": "quarter", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 7, "duration": "quarter", "role": "chord_tone", "label": "R" }
+    ]}
+  ]}
+}
+```
+
+```json
+{
+  "id": "m2.w7.d1.staccato",
+  "type": "tab",
+  "meta": { "title": "Staccato — short stabs (1 bar)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E", "tempoBpm": 70, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 7, "duration": "eighth", "rest": true },
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 7, "duration": "eighth", "rest": true },
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 7, "duration": "eighth", "rest": true },
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 7, "duration": "eighth", "rest": true }
+    ]}
+  ]}
+}
+```
+
 切るタイミングは最初は難しい。早すぎると音が出ず、遅いと切れません。左手の力を少し抜くか右手の側面を弦に乗せて切りますが、このタイミングは数日練習して手になじみます。正常です。今日は「切る」という感覚が何かを体で知るだけで十分です。この小さな技術1つが、これまで学んだすべてのグルーヴをずっとタイトにする魔法の道具です。
 
 ## ② ビジュアル資料

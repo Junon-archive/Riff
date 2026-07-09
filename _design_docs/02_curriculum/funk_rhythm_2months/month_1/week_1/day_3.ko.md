@@ -15,6 +15,34 @@ i18nKey: "lesson.m1.w1.d3"
 
 두 번째는 **빈 피킹(고스트 스트로크)** 이에요. 16비트를 다 소리 내는 게 아니라, 어떤 자리는 **줄을 안 치고 지나가요.** 그런데 여기서 오른손은 절대 멈추지 않아요 — 허공에서 계속 흔들리다가, 소리 낼 자리에서만 줄을 스치는 거예요. 악보에서 쉼표로 표시된 자리가 바로 '손은 움직이지만 줄은 안 치는' 자리예요.
 
+```json
+{
+  "id": "m1.w1.d3.downbeat_pick",
+  "type": "tab",
+  "meta": { "title": "Play the beat, empty-pick the rest (1 bar)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E", "tempoBpm": 68, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 5, "fret": 5, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "rest": true },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "rest": true },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "rest": true },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "rest": true },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "rest": true },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "rest": true },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "rest": true },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "rest": true },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "rest": true },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "technique": "dead_note", "role": "scale" },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "rest": true },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "rest": true },
+      { "string": 5, "fret": 5, "duration": "sixteenth", "rest": true }
+    ]}
+  ]}
+}
+```
+
 이게 왜 중요하냐면, 손이 멈췄다 다시 출발하면 반드시 박이 밀리거든요. 흔들림을 유지한 채 '칠 자리'만 고르면 타이밍이 칼같이 맞아요. 처음엔 헷갈리는 게 당연해요 — 안 치는 자리인데 손은 움직여야 하니까요. 천천히, 손은 계속 스윙하고 입으로 '치는 자리'만 세면서 익혀 봅시다. 이 감각이 다음 주 고스트 노트의 밑바탕이에요. 그러니 오늘 좀 헤매더라도 자책하지 마세요. 손과 머리가 따로 노는 이 어색함은 누구나 반드시 거쳐 가는 관문이거든요.
 
 ## ② 시각 자료

@@ -15,6 +15,56 @@ i18nKey: "lesson.m2.w7.d3"
 
 1つ知っておくこと。シャッフルは楽譜に正確に書きにくい（正確には三連符の感じだから）。だから楽譜はそのまま定拍にして、タイトルと説明に**「スイングして弾く（long-short）」**と示すのが慣例です。今日の例も同じ — 楽譜は8分音符ですが、実際は「ダー・ドゥ ダー・ドゥ」で転がして弾いてください。
 
+```json
+{
+  "id": "m2.w7.d3.straight",
+  "type": "tab",
+  "meta": { "title": "Straight 8ths (play even)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E", "tempoBpm": 74, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" }
+    ]}
+  ]}
+}
+```
+
+```json
+{
+  "id": "m2.w7.d3.shuffle",
+  "type": "tab",
+  "meta": { "title": "16th shuffle feel — SWING the 8ths (long-short)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E", "tempoBpm": 74, "notation": "staff+tab", "feel": "swing8" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 10, "duration": "eighth", "role": "scale", "label": "b3" },
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 10, "duration": "eighth", "role": "scale", "label": "b3" },
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 10, "duration": "eighth", "role": "scale", "label": "b3" },
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 10, "duration": "eighth", "role": "scale", "label": "b3" }
+    ]},
+    { "measure": 2, "notes": [
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 10, "duration": "eighth", "role": "scale", "label": "b3" },
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 10, "duration": "eighth", "role": "scale", "label": "b3" },
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 10, "duration": "eighth", "role": "scale", "label": "b3" },
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 10, "duration": "eighth", "role": "scale", "label": "b3" }
+    ]}
+  ]}
+}
+```
+
 肝心なのは目ではなく**耳と体**です。口で「ダー・ドゥ」を転がし続けながら、その揺れを手に移すんです。定拍とシャッフルを交互に弾くと違いがはっきり感じられます。最初はぎこちなく、すぐ定拍に戻りますが、当然です。今日は「揺れる」という感じ自体を体に刻めば十分です。
 
 ## ② ビジュアル資料

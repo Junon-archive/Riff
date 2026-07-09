@@ -15,6 +15,21 @@ i18nKey: "lesson.m2.w6.d2"
 
 今日の素材はEペンタトニック・ボックスの5・4弦の音です（昨日のマップ）。5弦のR・b3に4弦の4度・5度を足すと、E-G-A-Bのように上下するラインが作れます。ベースラインやリフのように聞こえる、まさにファンクらしいラインです。
 
+```json
+{
+  "id": "m2.w6.d1.note_map",
+  "type": "fretboard_diagram",
+  "meta": { "title": "E funk note box (strings 5-4)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E" },
+  "fretboard": { "startFret": 4, "fretSpan": 8, "dots": [
+    { "string": 5, "fret": 5, "label": "b7", "role": "scale" },
+    { "string": 5, "fret": 7, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 5, "fret": 10, "label": "b3", "role": "scale" },
+    { "string": 4, "fret": 7, "label": "4", "role": "scale" },
+    { "string": 4, "fret": 9, "label": "5", "role": "chord_tone" }
+  ]}
+}
+```
+
 弦をまたぎながらミュートまで気にすると、最初は手が忙しい。特に弦を変えた直後に前の弦が「ウーン」と残って鳴りやすい。当然です。今日はラインが遅くてもいいので、弦を変えるたびに後ろがきれいに片づくかに集中してください。この感覚が身につけば、あなたのラインは2弦、3弦へ自由に広がります。1弦に閉じ込められていたラインが、ネックの上を行き来して歌い始めるんです。今日2弦開くだけで、表現できるメロディがずっと増えます。2弦がやがて3弦、4弦へつながる頼もしい足場です。
 
 ## ② ビジュアル資料

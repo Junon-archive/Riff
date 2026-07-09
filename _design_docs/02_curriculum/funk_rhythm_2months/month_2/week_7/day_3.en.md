@@ -15,6 +15,56 @@ Shuffle rolls a pair of eighth notes not "evenly" but **"long-short."** Voice it
 
 One thing to know: shuffle is hard to notate exactly (it's really a triplet feel). So the convention is to leave the notation straight and mark in the title and text to **"swing it (long-short)."** Today's example is the same — the notation is eighth notes, but actually roll it "daa-dm daa-dm."
 
+```json
+{
+  "id": "m2.w7.d3.straight",
+  "type": "tab",
+  "meta": { "title": "Straight 8ths (play even)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E", "tempoBpm": 74, "notation": "staff+tab" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" }
+    ]}
+  ]}
+}
+```
+
+```json
+{
+  "id": "m2.w7.d3.shuffle",
+  "type": "tab",
+  "meta": { "title": "16th shuffle feel — SWING the 8ths (long-short)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E", "tempoBpm": 74, "notation": "staff+tab", "feel": "swing8" },
+  "tab": { "timeSignature": "4/4", "measures": [
+    { "measure": 1, "notes": [
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 10, "duration": "eighth", "role": "scale", "label": "b3" },
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 10, "duration": "eighth", "role": "scale", "label": "b3" },
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 10, "duration": "eighth", "role": "scale", "label": "b3" },
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 10, "duration": "eighth", "role": "scale", "label": "b3" }
+    ]},
+    { "measure": 2, "notes": [
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 10, "duration": "eighth", "role": "scale", "label": "b3" },
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 10, "duration": "eighth", "role": "scale", "label": "b3" },
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 10, "duration": "eighth", "role": "scale", "label": "b3" },
+      { "string": 5, "fret": 7, "duration": "eighth", "role": "chord_tone", "label": "R" },
+      { "string": 5, "fret": 10, "duration": "eighth", "role": "scale", "label": "b3" }
+    ]}
+  ]}
+}
+```
+
 The key is not the eyes but the **ears and body.** Keep rolling "daa-dm" with your voice and transfer that sway to your hands. Alternate straight and shuffle and the difference jumps out. It's awkward at first and keeps snapping back to straight — of course. Today, just burning the feel of "swaying" into your body is enough.
 
 ## ② Visuals

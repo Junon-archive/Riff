@@ -15,6 +15,21 @@ i18nKey: "lesson.m2.w6.d2"
 
 오늘의 재료는 E 펜타토닉 박스의 5·4번 줄 음들이에요(어제 노트 맵). 5번 줄의 R·b3에 4번 줄의 4도·5도가 더해지면, E-G-A-B처럼 오르내리는 라인을 만들 수 있어요. 베이스라인이나 리프처럼 들리는, 딱 펑크스러운 라인이죠.
 
+```json
+{
+  "id": "m2.w6.d1.note_map",
+  "type": "fretboard_diagram",
+  "meta": { "title": "E funk note box (strings 5-4)", "stringCount": 6, "tuning": ["E", "A", "D", "G", "B", "E"], "key": "E" },
+  "fretboard": { "startFret": 4, "fretSpan": 8, "dots": [
+    { "string": 5, "fret": 5, "label": "b7", "role": "scale" },
+    { "string": 5, "fret": 7, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 5, "fret": 10, "label": "b3", "role": "scale" },
+    { "string": 4, "fret": 7, "label": "4", "role": "scale" },
+    { "string": 4, "fret": 9, "label": "5", "role": "chord_tone" }
+  ]}
+}
+```
+
 줄을 넘나들며 뮤트까지 챙기려니 처음엔 손이 바빠요. 특히 줄을 바꾼 직후에 이전 줄이 '웅' 하고 남아 울리기 쉬워요. 당연해요. 오늘은 라인이 느려도 좋으니, 줄을 바꿀 때마다 뒤가 깔끔이 정리되는지에 집중하세요. 이 감각이 붙으면 여러분의 라인은 두 줄, 세 줄로 자유롭게 넓어져요. 한 줄에 갇혀 있던 라인이 넥 위를 넘나들며 노래하기 시작하는 거죠. 오늘 두 줄만 열려도, 표현할 수 있는 멜로디가 훨씬 많아져요. 두 줄이 곧 세 줄, 네 줄로 이어질 든든한 발판이에요.
 
 ## ② 시각 자료
