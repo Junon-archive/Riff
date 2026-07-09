@@ -51,6 +51,17 @@ const DONATION_BUTTONS: { channel: DonationChannel; iconClass: string; icon: str
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="color-scheme" content="light dark" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    {/* PWA (07_pwa 트랙 A) — 설치형 앱: 매니페스트·테마색·애플 홈설치 메타. */}
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#FFFFFF" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#17171C" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon-180.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Riff" />
+
     <title>{title}</title>
     <meta name="description" content={desc} />
     {noindex ? <meta name="robots" content="noindex,follow" /> : null}
@@ -83,6 +94,19 @@ const DONATION_BUTTONS: { channel: DonationChannel; iconClass: string; icon: str
           document.documentElement.dataset.theme = next;
         });
       })();
+    </script>
+
+    {/* 서비스워커 등록(PWA 오프라인/설치) — 배포 도메인에서만(로컬 dev/preview 는 캐시 방지 위해 제외). */}
+    <script is:inline>
+      if (
+        'serviceWorker' in navigator &&
+        location.hostname !== 'localhost' &&
+        location.hostname !== '127.0.0.1'
+      ) {
+        window.addEventListener('load', function () {
+          navigator.serviceWorker.register('/sw.js').catch(function () {});
+        });
+      }
     </script>
 
     <ClientRouter />

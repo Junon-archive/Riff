@@ -1,11 +1,13 @@
 ---
 id: 07-pwa
-status: TODO
+status: IN_PROGRESS
 priority: medium
 risk: low
 depends_on: []
 owner: null
 ---
+
+> 🟡 진행 중(2026-07-09). **트랙 A(PWA 토대)·B(iOS 홈)·C(Android 무스토어) 코드 구현 완료** — 매니페스트·아이콘 4종·hand-rolled 서비스워커·head 메타·SW 등록. build 361p 통과·dist 자산·head 배선 검증. **남음:** 배포 후 실기기 설치/오프라인 육안 검증(SW는 localhost 제외라 배포본에서 확인), 그리고 트랙 D(Play).
 
 # 07 · PWA 앱화 (Android Play 등재 + iOS/Android 홈 설치)
 
@@ -53,7 +55,7 @@ owner: null
 
 1. **매니페스트:** `public/manifest.webmanifest`(또는 `@vite-pwa/astro` 자동 생성) — `name:"Riff"`·`short_name:"Riff"`·`icons`·`display:"standalone"`·`theme_color`·`background_color`·`start_url:"/"`·`scope:"/"`·`lang:"ko"`·`categories:["education"]`. 매니페스트는 단일 언어라 대표값(ko) 하나로.
 2. **아이콘 세트:** **현 픽 로고 SVG**(`Base.astro:130-131`)에서 파생(확정) — 192×192·512×512·**maskable 512**(안전영역 패딩)·`apple-touch-icon` 180×180(투명배경 지양). 원본(SSOT)은 `assets/`, 산출은 `public/`(듀오톤 썸네일과 동일 패턴, playbook §8 참조). 일회성 sharp 스크립트 권장(빌드 파이프라인 미연결).
-3. **서비스워커:** `@vite-pwa/astro`(워크박스) devDependency 추가 → 빌드 시 SW 자동 생성, `registerType:'autoUpdate'`. **런타임 추가는 SW 하나뿐**(무런타임 프레임워크 원칙 유지).
+3. **서비스워커(구현: hand-rolled, 의존성 0):** `@vite-pwa/astro` 대신 `public/sw.js`를 직접 작성했다 — 프로젝트 "무런타임 devDep 최소" 원칙, 락파일/빌드설정 무변경, 버전 호환 리스크 0. autoUpdate = `install`에서 `skipWaiting` + `activate`에서 `clients.claim`, 캐시 무효화 = `CACHE_VERSION` 상수. 등록은 `Base.astro` 인라인 스크립트(배포 도메인에서만, localhost 제외). **클라이언트 추가는 SW 하나뿐**(무런타임 프레임워크 원칙 유지).
 4. **캐싱 전략(확정: App Shell + 방문분 런타임):** 전량 precache 안 함(성장하는 콘텐츠에 확장 불가). **precache = 앱 셸만**(해시 자산 `/_astro/*`·매니페스트·아이콘·핵심 HTML) → 오프라인에서도 즉시 열림. **레슨 본문·이미지 = 방문 시 런타임 캐싱**(HTML=StaleWhileRevalidate/NetworkFirst, `/_astro/*`=CacheFirst, 이미지=CacheFirst). 새 커리큘럼이 늘어도 precache 목록·용량 불변.
 5. **head 메타:** `Base.astro <head>`에 `<link rel="manifest">`·`theme-color`·apple 메타(아래 트랙 B) 추가. viewport는 이미 `viewport-fit=cover`라 standalone 적합.
 
@@ -140,19 +142,21 @@ owner: null
 ## 체크리스트
 
 **트랙 A — PWA 토대 (필수 선행)**
-- [ ] `manifest.webmanifest` 작성(또는 `@vite-pwa/astro` 설정)
-- [ ] 아이콘 세트 생성(192·512·maskable·180) + 원본 SSOT 보존
-- [ ] 서비스워커 도입(`@vite-pwa/astro`) + 캐싱 전략 확정
-- [ ] `Base.astro <head>` 메타(manifest·theme-color) 추가
-- [ ] V1 + Lighthouse installability 통과
+- [x] `public/manifest.webmanifest` 작성(hand-rolled, name Riff·standalone·아이콘 3종)
+- [x] 아이콘 세트 생성(192·512·maskable 512·apple 180) — `scripts/generate-pwa-icons.mjs`(픽 로고 파생)
+- [x] 서비스워커(`public/sw.js`, hand-rolled) + 캐싱(앱 셸 precache + 방문분 런타임)
+- [x] `Base.astro <head>` 메타(manifest·theme-color) + SW 등록 스크립트
+- [x] V1 build 361p 통과 + dist 자산·head 배선 검증
+- [ ] 배포본에서 Lighthouse installability 통과 확인(로컬 SW 미등록이라 배포 후)
 
 **트랙 B — iOS 홈 설치**
-- [ ] apple-touch-icon 180 + 애플 메타 3종
+- [x] apple-touch-icon 180 + 애플 메타 3종(capable·status-bar·title Riff)
 - [ ] (선택) 스플래시
-- [ ] iOS 실기기 홈 화면 추가 검증
+- [ ] iOS 실기기 홈 화면 추가 검증(배포 후)
 
 **트랙 C — Android 무스토어 설치**
-- [ ] WebAPK 설치 배너 동작 확인
+- [x] 매니페스트+SW+HTTPS 충족(설치 조건) — 코드 완료
+- [ ] WebAPK 설치 배너 동작 확인(배포 후 실기기)
 - [ ] (선택) `beforeinstallprompt` 커스텀 설치 버튼
 
 **트랙 D — Google Play 등재**

@@ -78,6 +78,12 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-09 (PWA 트랙 A·B·C — 설치형 PWA 토대, 백로그 07)
+- **설치형 PWA 코드 구현(iOS 홈 + Android 무스토어 설치 충족):** 매니페스트(`public/manifest.webmanifest`, name Riff·standalone), 앱 아이콘 4종(`public/icons/`, 픽 로고 파생 — 192·512·maskable 512·apple-touch 180, 생성기 `scripts/generate-pwa-icons.mjs`), **hand-rolled 서비스워커**(`public/sw.js`, 의존성 0 — 앱 셸 precache + 방문분 런타임: HTML NetworkFirst·`/_astro/*` CacheFirst·기타 SWR, `CACHE_VERSION` 무효화·autoUpdate), `Base.astro <head>` 메타(manifest·theme-color 라이트/다크·애플 홈설치 3종·apple-touch-icon) + SW 등록(배포 도메인 한정).
+- **@vite-pwa/astro 미채택:** 무런타임 devDep 최소 원칙·락파일/빌드설정 무변경·버전 호환 리스크 0 위해 SW 직접 작성. 클라이언트 추가는 SW 하나뿐.
+- **검증:** `astro check` 0 error · `npm run build` exit 0(361p) · dist에 manifest/sw.js/icons 포함 · 전 페이지 head 배선 · SHELL precache URL 전부 존재 · sw.js 문법 OK. **배포 후 남음:** 실기기 설치·오프라인·Lighthouse installability(SW는 localhost 제외).
+- 백로그 07 status→IN_PROGRESS. 다음: 배포 검증 → 트랙 D(Play, $25).
+
 ### 2026-07-09 (백로그 08 재작업 — 하이라이트 레시피 A방식 재적용, B방식 폐기)
 - **배경:** 08 파일럿(아래 항목)이 채택했던 "볼드 회피" 규칙(B방식)이 하이라이트를 어정쩡한 술어/조사 경계로 밀어내(`밝은가 어두운가는 전부 이 3도가` 처럼 동사를 버리는 절단) 어색했다 → 폐기하고 **A방식**(볼드+하이라이트 겹침 허용 + 문법 경계 우선 명사구)으로 동일 범위를 재작성.
 - **범위:** `chord_building_2months` intro(3문단×3언어) + `month_1/week_1` day1~4(①②③④)×3언어 = 13파일(meta.json 1 + day md 12).

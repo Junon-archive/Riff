@@ -24,7 +24,7 @@
 | 04 | [슬래시 리듬 표기](04_slash-rhythm.md) | 🔴 TODO | 낮음 | 중간 | 없음 |
 | 05 | [태그·필터 브라우징](05_tag-filter.md) | 🔴 TODO | 낮음 | 낮음 | 없음 |
 | 06 | [기존 커리큘럼 악보 인라인 재배치](06_visual-relocation.md) | 🟢 DONE (77 day, 1 선별제외) | 중간 | 낮음 | 01(완료) |
-| 07 | [PWA 앱화 (Android Play 등재 + iOS/Android 홈 설치)](07_pwa.md) | 🔴 TODO | 중간 | 낮음 | 없음 |
+| 07 | [PWA 앱화 (Android Play 등재 + iOS/Android 홈 설치)](07_pwa.md) | 🟡 IN_PROGRESS (트랙 A·B·C 코드 완료, 배포검증·D 남음) | 중간 | 낮음 | 없음 |
 | 08 | [산문 하이라이트 + 커리큘럼 볼드 (레시피 동결)](08_Highlight.md) | 🔴 TODO | 중간 | 낮음 | 없음 |
 
 ## 공통 원칙 — "추가는 되고, 기존은 안 깨진다" (모든 묶음이 준수)
