@@ -319,6 +319,240 @@
       }
     ]
   },
+  "beginner_electric_1month#m1.w3.d1.e5_shape": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "1:0::",
+      "2:0::",
+      "3:0::",
+      "4:0::",
+      "5:2:chord_tone:5",
+      "6:0:root:R"
+    ]
+  },
+  "beginner_electric_1month#m1.w3.d1.a5_shape": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "1:0::",
+      "2:0::",
+      "3:0::",
+      "4:2:chord_tone:5",
+      "5:0:root:R",
+      "6:0::"
+    ]
+  },
+  "beginner_electric_1month#m1.w3.d1.e5_quarters": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 8,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "beginner_electric_1month#m1.w3.d1.a5_quarters": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 8,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "beginner_electric_1month#m1.w3.d2.g5_shape": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "1:0::",
+      "2:0::",
+      "3:0::",
+      "4:0::",
+      "5:5:chord_tone:5",
+      "6:3:root:R"
+    ]
+  },
+  "beginner_electric_1month#m1.w3.d2.c5_shape": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "1:0::",
+      "2:0::",
+      "3:0::",
+      "4:5:chord_tone:5",
+      "5:3:root:R",
+      "6:0::"
+    ]
+  },
+  "beginner_electric_1month#m1.w3.d2.g5_a5_move": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 2,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 2,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "beginner_electric_1month#m1.w3.d2.c5_d5_move": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 2,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 2,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "beginner_electric_1month#m1.w3.d3.e5_pm_riff": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 8,
+        "rests": 0,
+        "deads": 0,
+        "heads": 16,
+        "techs": [
+          "palm_mute"
+        ]
+      }
+    ]
+  },
+  "beginner_electric_1month#m1.w3.d3.chug_accent": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 8,
+        "rests": 0,
+        "deads": 0,
+        "heads": 16,
+        "techs": [
+          "palm_mute"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 7,
+        "rests": 0,
+        "deads": 0,
+        "heads": 14,
+        "techs": [
+          "none",
+          "palm_mute"
+        ]
+      }
+    ]
+  },
+  "beginner_electric_1month#m1.w3.d4.climb_prep": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 3,
+        "rests": 0,
+        "deads": 0,
+        "heads": 6,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "beginner_electric_1month#m1.w3.d4.powerchord_riff": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 8,
+        "rests": 0,
+        "deads": 0,
+        "heads": 16,
+        "techs": [
+          "palm_mute"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 6,
+        "rests": 0,
+        "deads": 0,
+        "heads": 12,
+        "techs": [
+          "none",
+          "palm_mute"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 8,
+        "rests": 0,
+        "deads": 0,
+        "heads": 16,
+        "techs": [
+          "palm_mute"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 3,
+        "rests": 0,
+        "deads": 0,
+        "heads": 6,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
   "chord_building_2months#m1.w1.d1.g_major_eform": {
     "type": "fretboard_diagram",
     "dots": [
