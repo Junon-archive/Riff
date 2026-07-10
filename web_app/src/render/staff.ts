@@ -377,6 +377,7 @@ function buildMeasure(
   beatInt: number,
   withTab: boolean,
   rhythm: boolean,
+  clef: string,
 ): BuiltMeasure {
   const stave: StaveNote[] = [];
   const tab: (TabNote | GhostNote)[] = [];
@@ -470,7 +471,8 @@ function buildMeasure(
         ...chordExtra,
       ];
       const pitches = entries.map((e) => pitchOf(e.string, e.fret, flats, openOf));
-      sNote = new StaveNote({ keys: pitches.map((p) => p.key), duration: durTok });
+      // ★clef: bass 면 음표 line 을 낮은음자리표 기준으로 계산(미지정 시 treble 기본 → 베이스 2옥타브 어긋남·렛저 폭발).
+      sNote = new StaveNote({ keys: pitches.map((p) => p.key), duration: durTok, clef });
       pitches.forEach((p, i) => {
         if (p.acc) sNote.addModifier(new Accidental(p.acc), i);
       });
@@ -488,7 +490,7 @@ function buildMeasure(
       // 단음. 데드 노트는 오선보 X 글리프(키 3번째 파트) + 타브 "X", 임시표 억제.
       const { key, acc } = pitchOf(s, fret, flats, openOf);
       const staffKey = dead ? `${key}/x` : key;
-      sNote = new StaveNote({ keys: [staffKey], duration: durTok });
+      sNote = new StaveNote({ keys: [staffKey], duration: durTok, clef });
       if (acc && !dead) sNote.addModifier(new Accidental(acc), 0);
       tabCol = roleColor(n) ?? 'currentColor';
       sNote.setStyle({ fillStyle: tabCol, strokeStyle: tabCol });
@@ -595,6 +597,7 @@ export function renderStaff(score: Score, mode: StaffMode): string {
   const nStr = score.meta?.stringCount ?? 6; // ★03③ — string 범위 상한(6=기존 불변)
   // ★10-B1 베이스: bass clef + 오선 라인 앵커 분기. guitar(기본)는 기존 treble 상수 → 불변.
   const isBass = score.meta?.instrument === 'bass';
+  const clef = isBass ? 'bass' : 'treble'; // StaveNote 음표 line 계산 기준(기타=treble 기본과 동일 → 불변).
   const bottomLine = isBass ? BASS_BOTTOM_LINE : TREBLE_TOP_LINE;
   const topLine = isBass ? BASS_TOP_LINE : TREBLE_HI_LINE;
   // ★03① 조표: meta.keySignature 있으면 clef 뒤에 조표. 없으면 null → ksW=0 → 폭·레이아웃 불변.
@@ -612,7 +615,7 @@ export function renderStaff(score: Score, mode: StaffMode): string {
     // 마디별 tickable 생성 → 전부 비면 빈 SVG
     const isRhythm = mode === 'rhythm';
     const built = (tabData.measures as Measure[]).map((m) =>
-      buildMeasure(m, flats, openOf, nStr, beatInt, withTab, isRhythm),
+      buildMeasure(m, flats, openOf, nStr, beatInt, withTab, isRhythm, clef),
     );
     if (built.every((b) => b.stave.length === 0)) return emptySvg();
 
@@ -630,6 +633,7 @@ export function renderStaff(score: Score, mode: StaffMode): string {
           beatInt,
           withTab,
           isRhythm,
+          clef,
         );
         if (k > 0) {
           sT.push(new BarNote());
