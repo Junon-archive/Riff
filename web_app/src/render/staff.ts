@@ -651,7 +651,52 @@ export function renderStaff(score: Score, mode: StaffMode): string {
     const measureArea = (mb: BuiltMeasure) =>
       Math.max(MIN_MW, Math.min(MAX_MW, mb.stave.length * PER_NOTE));
     const rowNoteArea = rows.map((r) => r.reduce((a, mb) => a + measureArea(mb), 0));
-    const totalW = Math.max(...rowNoteArea.map((w) => CLEF_W + ksW + TS_W + w)) + 2 * MARGIN_X;
+
+    // ★17-1 클리핑 제거: 줄의 "실제" 최소 note 폭을 VexFlow 로 미리 재서(preCalculateMinTotalWidth),
+    //   추정폭(음표수×PER_NOTE)이 부족한 빽빽한 마디(P.M.·임시표 등 modifier 폭 미반영)면 그만큼 넓힌다.
+    //   ⚠️ preCalculateMinTotalWidth 는 넘긴 voice/note 를 오염시키므로 측정은 disposable 객체로만 하고,
+    //      렌더 객체(built)는 손대지 않는다. noteAreaW=max(추정,최소)라 이미 맞던 줄은 추정 그대로 → 바이트 불변.
+    const rowMinNoteW = (ri: number, rowMeasures: BuiltMeasure[]): number => {
+      const sT: (StaveNote | BarNote)[] = [];
+      const tT: (TabNote | GhostNote | BarNote)[] = [];
+      rowMeasures.forEach((_mb, mi) => {
+        const md = buildMeasure(
+          tabData.measures![ri * MEASURES_PER_ROW + mi] as Measure,
+          flats,
+          openOf,
+          nStr,
+          beatInt,
+          withTab,
+          isRhythm,
+        );
+        if (mi > 0) {
+          sT.push(new BarNote());
+          tT.push(new BarNote());
+        }
+        sT.push(...md.stave);
+        tT.push(...md.tab);
+      });
+      const mCount = rowMeasures.length;
+      const vS = new Voice({ num_beats: (numBeats || 4) * mCount, beat_value: beatValue || 4 })
+        .setStrict(false)
+        .addTickables(sT);
+      const vv: Voice[] = [vS];
+      if (withTab) {
+        vv.push(
+          new Voice({ num_beats: (numBeats || 4) * mCount, beat_value: beatValue || 4 })
+            .setStrict(false)
+            .addTickables(tT),
+        );
+      }
+      const f = new Formatter();
+      vv.forEach((v) => f.joinVoices([v]));
+      return f.preCalculateMinTotalWidth(vv);
+    };
+    const noteAreaByRow = rows.map((r, ri) =>
+      Math.max(rowNoteArea[ri]!, Math.ceil(rowMinNoteW(ri, r))),
+    );
+
+    const totalW = Math.max(...noteAreaByRow.map((w) => CLEF_W + ksW + TS_W + w)) + 2 * MARGIN_X;
     const totalH = MARGIN_TOP + rows.length * sysH + 12;
 
     const host = doc.getElementById('vf')!;
@@ -664,7 +709,7 @@ export function renderStaff(score: Score, mode: StaffMode): string {
       const sysTop = MARGIN_TOP + ri * sysH;
       const x = MARGIN_X;
       const mCount = rowMeasures.length;
-      const noteAreaW = rowNoteArea[ri] ?? MIN_MW;
+      const noteAreaW = noteAreaByRow[ri] ?? MIN_MW;
       const thisStaveW = CLEF_W + ksW + TS_W + noteAreaW;
 
       const stave = new Stave(x, sysTop + trebleDy, thisStaveW);

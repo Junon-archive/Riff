@@ -1,11 +1,13 @@
 ---
 id: 17-staff-overflow
-status: TODO
+status: IN_PROGRESS
 priority: high
 risk: medium
 depends_on: []
 owner: null
 ---
+
+> 🟡 진행 중(2026-07-10). **단계 1(클리핑 제거) 구현·검증 완료.** `staff.ts`에 `preCalculateMinTotalWidth`로 줄별 실제 최소폭을 재서 `noteAreaByRow=max(추정,ceil(minW))`로 사이징(측정은 disposable 객체, 렌더 객체 pristine). 검증: `astro check` 0e·`build` 412p·**입문 일렉 m1w3d3·d4 우측 잘림 소멸 육안(래스터)**·**check-invariants 회귀 0(354블록 — 의미 불변, 폭만 확장)**. **남음:** 단계 2(폭기반 줄바꿈 — 빽빽 마디 1/줄로 커지게)·단계 3(스크롤 폴백).
 
 # 17 · 오선보/타브 오버플로 클리핑 + 폭기반 줄바꿈
 
@@ -56,7 +58,7 @@ owner: null
 ## 검증 방법
 
 - **V1** `cd web_app && npm run build` exit 0.
-- **육안(핵심):** `beginner_electric .../m1w3d3·d4` 오선보 우측 잘림 소멸 + 음표 크기 읽을 만함. 데스크톱/모바일 폭 모두.
+- **육안(핵심):** `beginner_electric .../m1w3d3·d4` 오선보 우측 잘림 소멸 + 음표 크기 읽을 만함. 데스크톱/모바일 폭 모두. 이때 사용자에게 확인을 요청하며 수정이 반영된 예시가 어느 커리큘럼 몇개월차-몇주차-몇일차 내용인지 언급하여 확인이 용이하게 한다.
 - **V3** `check-invariants.mjs`: 변경 블록이 "잘리던/빽빽한 staff+tab 블록"에 한정되는지 확인 → 의도된 reflow면 baseline 갱신. **성긴 2마디/줄·단일 성긴 마디 블록은 불변**이어야 함.
 - **회귀 스캔:** 전 커리큘럼 staff+tab 렌더 — tofu·검정누출·viewBox 누락 0(기존 스모크 재사용).
 
@@ -70,11 +72,10 @@ owner: null
 
 ## 체크리스트
 
-**단계 1 — 클리핑 제거(저churn)**
-- [ ] 줄별 minW = `preCalculateMinTotalWidth` 산출(선-패스 분리)
-- [ ] `noteAreaW = max(추정, ceil(minW)+pad)` + totalW 재계산 → resize 전 확정
-- [ ] voice/note 공유(이중 생성·이중 format 방지)
-- [ ] 일렉 m1w3d3·d4 잘림 소멸 육안
+**단계 1 — 클리핑 제거(저churn)** ✅ 완료(2026-07-10)
+- [x] 줄별 minW = `preCalculateMinTotalWidth` 산출 — **측정은 disposable 객체(buildMeasure 재호출), 렌더 객체 pristine** (이중 format 회피)
+- [x] `noteAreaByRow = max(추정, ceil(minW))` + totalW 재계산 → resize 전 확정
+- [x] 일렉 m1w3d3·d4 잘림 소멸 육안(래스터) + check-invariants 회귀 0(354블록)
 
 **단계 2 — 폭기반 줄바꿈**
 - [ ] `MEASURES_PER_ROW` 고정 → 목표폭 그리디 패킹
