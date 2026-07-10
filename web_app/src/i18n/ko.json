@@ -127,7 +127,7 @@
   "progress": {
     "title": "나의 기록",
     "saved_money": "지금까지 약 {amount} 레슨비를 아꼈어요",
-    "saved_money_zero": "모든 강의는 끝까지 무료예요. 지금부터 함께 시작해요",
+    "saved_money_zero": "모든 강의는 끝까지 무료예요.<br>지금부터 함께 시작해요",
     "lessons_done": "레슨 {count}개를 끝냈어요",
     "streak": "{count}일째 이어가는 중이에요 🔥",
     "completion": "완주율 {count}%예요",
