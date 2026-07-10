@@ -82,10 +82,11 @@
 
 ## 4. 변경 로그 (Changelog)
 
-### 2026-07-10 (백로그 09 — 입문 일렉 트랙 1주차 day 저작, /goal 순차 진행)
-- **범위:** `beginner_electric_1month` month_1/week_1 day_1~4 × ko/en/ja = 12파일(curriculum-architect 위임). 손 만들기 메커닉(자세·다운피킹·크로매틱·얼터네이트·스파이더). /goal로 주차별 순차 저작(1주차 완료 후 정지, 나머지 대기).
-- **검증:** build 376p(361→+15) exit 0(박자합·스키마 게이트), check-invariants 신규 8블록만 추가·기존 315블록 지문 값 변경 0(baseline 323 갱신), day별 3언어 `<mark>` 8개 일치·④/완료기준 mark=0·악보 json 3언어 바이트 동일·스파이더 핀고정 프롬프트와 바이트 동일.
-- **다음:** week_2(두 손 싱크+첫 리프) → week_3(파워코드) → week_4(곡 완성·졸업). 각 주차 승인 후 진행.
+### 2026-07-10 (백로그 09 — 입문 일렉 트랙 16일 day 저작 완료, /goal 주차별 순차)
+- **범위:** `beginner_electric_1month` 4주 × 4일 × ko/en/ja = **48파일 저작 완료**(주차별 curriculum-architect 위임, /goal로 순차: week_1 손만들기 → week_2 두손싱크+첫리프 → week_3 파워코드 → week_4 곡완성·졸업). 각 주차 저작→검증→커밋 체크포인트.
+- **검증(주차별+전수):** build 412p(361→+51) exit 0(박자합·스키마 게이트), check-invariants 354블록(신규 39·기존 315 지문 값 변경 0), 16일 전량 3언어 `<mark>` 개수 일치(총 91)·④/완료기준 줄 mark=0·악보 json 3언어 바이트 동일·핀고정 5개(스파이더·펜타리프·파워코드리프·코러스루프·펜타박스) 프롬프트와 바이트 동일.
+- **day4 졸업:** ④ 뒤 '## 졸업' 마무리 섹션(4주 성장표·다음 트랙 배웅)이 splitSections로 tips에 포함돼 '오늘의 연습' 아래 정상 렌더, 3언어 정합.
+- **다음:** 커리큘럼 대표 이미지(`/curriculum/beginner-electric.webp`) 제작만 남음(09 트랙 콘텐츠 저작은 완료).
 
 ### 2026-07-09 (백로그 04 완료 — 슬래시 리듬 표기)
 - **배경:** `notation:"rhythm"`이 검증기에서 원천 차단(VexFlow 4.2.5 폰트에 rhythm slash 글리프 부재 확인 — `noteheadSlashed*`(취소선)만 있고 표준 rhythm slash 없음).
