@@ -150,7 +150,7 @@ A|-7-7-7-7---3-5-7-|   ← 같은 파워코드 폼을 3→5→7 슬라이드
 - [x] **완성물 리프 4마디 JSON 승격 완료** — 스파이더·Em 리프·파워코드 리프·코러스 루프 모두 박자합 4.0 검증(펜타 박스1 scale_shape 포함). 프롬프트에 임베드.
 - [x] **트랙 id/title/tagline + forWho + intro 3개국어 확정** — meta.json 작성 완료.
 - [x] **month_1·week_1~4 overview 3개국어 작성 완료.**
-- [~] **16일 Day별 상세 저작** (각 프롬프트 실행 → day_N.{ko,en,ja}.md 생성 → 빌드 검증) — 주차별 순차 진행 중(/goal): **week_1 완료(2026-07-10, 12파일, build 376p·invariants 회귀0·3언어 mark 8일치)**. week_2~4 대기.
+- [~] **16일 Day별 상세 저작** (각 프롬프트 실행 → day_N.{ko,en,ja}.md 생성 → 빌드 검증) — 주차별 순차 진행 중(/goal): **week_1·2 완료(2026-07-10, 각 12파일, build 376→388p·invariants 회귀0·3언어 mark 일치)**. week_3~4 대기.
 - [ ] 완성물 리프 **변형안 후보 중 택1** (원하면 — 현재 각 1개 확정)
 - [ ] 커리큘럼 대표 **이미지**(`/curriculum/beginner-electric.webp`) 제작
 
