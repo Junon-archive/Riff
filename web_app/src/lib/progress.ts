@@ -52,6 +52,19 @@ export function savedMoneyWon(state: GhState, curriculumId: string): number {
   return getCompletedSet(state, curriculumId).size * VIRTUAL_LESSON_PRICE;
 }
 
+/** 전(全) 커리큘럼 통틀어 완료한 총 Day 수(도네이션 시트 "아낀 레슨비" 합산용). */
+export function totalCompletedDays(state: GhState): number {
+  return Object.values(state.progress).reduce(
+    (sum, cur) => sum + (cur?.completedDays?.length ?? 0),
+    0,
+  );
+}
+
+/** 전 커리큘럼 합산 아낀 레슨비(원). */
+export function totalSavedMoneyWon(state: GhState): number {
+  return totalCompletedDays(state) * VIRTUAL_LESSON_PRICE;
+}
+
 /**
  * 아낀 레슨비의 언어별 통화 표기.
  * OPEN-3(technical_spec §12): 표시 통화 환산율은 미확정. 단가(₩20,000/Day)는 고정 상수이며,
@@ -64,8 +77,8 @@ export function savedMoneyWon(state: GhState, curriculumId: string): number {
 const APPROX_KRW_PER_USD = 1400;
 const APPROX_KRW_PER_JPY = 9.3;
 
-export function formatSavedMoney(state: GhState, curriculumId: string, lang: Lang): string {
-  const won = savedMoneyWon(state, curriculumId);
+/** 원(won) 금액 → 언어별 통화 문자열. formatSavedMoney/formatTotalSavedMoney 공용. */
+function formatWon(won: number, lang: Lang): string {
   if (lang === 'ko') {
     const man = Math.round(won / 10000);
     return man >= 1 ? `${man.toLocaleString('ko-KR')}만 원` : `${won.toLocaleString('ko-KR')}원`;
@@ -76,4 +89,13 @@ export function formatSavedMoney(state: GhState, curriculumId: string, lang: Lan
   }
   const usd = Math.round(won / APPROX_KRW_PER_USD);
   return `$${usd.toLocaleString('en-US')}`;
+}
+
+export function formatSavedMoney(state: GhState, curriculumId: string, lang: Lang): string {
+  return formatWon(savedMoneyWon(state, curriculumId), lang);
+}
+
+/** 전 커리큘럼 합산 아낀 레슨비의 언어별 통화 표기(도네이션 시트용). */
+export function formatTotalSavedMoney(state: GhState, lang: Lang): string {
+  return formatWon(totalSavedMoneyWon(state), lang);
 }

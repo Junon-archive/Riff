@@ -127,6 +127,7 @@
   "progress": {
     "title": "あなたの記録",
     "saved_money": "これまでで約 {amount} のレッスン代を節約できました",
+    "saved_money_zero": "すべてのレッスンは最後まで無料です。今から一緒に始めましょう",
     "lessons_done": "レッスンを{count}個やり終えました",
     "streak": "{count}日つづいています 🔥",
     "completion": "達成率 {count}%です",

@@ -12,7 +12,7 @@
  *     교체되므로, 상태 의존 값(진도율·완료 체크·닉네임 칩 등)은 `astro:page-load`마다 다시 채운다.
  *   - `astro:page-load`는 최초 로드 + 매 전환마다 발생한다. 중복 바인딩 방지는 `delegatesBound` 가드로.
  */
-import { DEFAULT_CURRICULUM_ID, DONATION_CHANNELS, DONATION_ORDER, DREAM_ITEMS, SUPPORTED_LANGS } from '../config';
+import { DONATION_CHANNELS, DONATION_ORDER, DREAM_ITEMS, SUPPORTED_LANGS } from '../config';
 import type { DonationChannel, Lang } from '../config';
 import {
   loadState,
@@ -28,7 +28,7 @@ import {
   touchLastActive,
 } from '../lib/storage';
 import { setActiveLang, t } from '../lib/i18n';
-import { formatSavedMoney, getCompletedSet } from '../lib/progress';
+import { formatTotalSavedMoney, getCompletedSet, totalSavedMoneyWon } from '../lib/progress';
 import {
   evalAlmostThere,
   evalEnterWeek2,
@@ -89,16 +89,16 @@ function refreshNickChip(state: GhState): void {
   }
 }
 
-/** 현재 페이지가 속한 커리큘럼 id(레슨/커리큘럼 뷰의 data-curriculum, 없으면 기본값). */
-function activeCurriculumId(): string {
-  const el = document.querySelector<HTMLElement>('#view-curriculum, #view-lesson');
-  return el?.dataset.curriculum ?? DEFAULT_CURRICULUM_ID;
-}
-
 function updateSaveAmount(state: GhState): void {
   const el = document.getElementById('saveAmount');
   if (!el) return;
-  const formatted = formatSavedMoney(state, activeCurriculumId(), currentLangFromDom());
+  // 아낀 레슨비 = 전(全) 커리큘럼 합산. 완료 0일 때는 금액 대신 응원 문구로.
+  const totalWon = totalSavedMoneyWon(state);
+  if (totalWon <= 0) {
+    el.innerHTML = t('progress.saved_money_zero');
+    return;
+  }
+  const formatted = formatTotalSavedMoney(state, currentLangFromDom());
   el.innerHTML = t('progress.saved_money', { amount: `<b>${formatted}</b>` });
 }
 

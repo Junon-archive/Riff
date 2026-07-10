@@ -127,6 +127,7 @@
   "progress": {
     "title": "Your progress",
     "saved_money": "You've saved about {amount} in lesson fees so far",
+    "saved_money_zero": "Every lesson is free, all the way through. Let's start together",
     "lessons_done": "You've finished {count} lessons",
     "streak": "{count} days in a row 🔥",
     "completion": "{count}% complete",
