@@ -21,6 +21,41 @@ i18nKey: "lesson.m1.w1.d1"
 
 今日は左手はお休み。**4弦の開放E**だけを右手で弾きます。下の例は、同じ音を<mark>4分音符から8分音符へ</mark>細かく詰めていくコースです。各例を**4弦・5弦の2バージョン**で並べて載せました。
 
+楽譜に進む前に、**各弦がどこにあるか**をまず地図で見ます。下は開放弦の指板図です — **4弦でも5弦でもE・A・D・Gの位置は同じ**で、5弦はいちばん下に低音Bが1本増えるだけです。
+
+```json
+{
+  "id": "m1.w1.d1.string_map_4",
+  "type": "fretboard_diagram",
+  "meta": { "title": "Open string map — 4-string", "instrument": "bass", "stringCount": 4, "tuning": ["E","A","D","G"], "key": "E" },
+  "fretboard": { "startFret": 0, "fretSpan": 4, "dots": [
+    { "string": 4, "fret": 0, "label": "E", "isRoot": true, "role": "root" },
+    { "string": 3, "fret": 0, "label": "A" },
+    { "string": 2, "fret": 0, "label": "D" },
+    { "string": 1, "fret": 0, "label": "G" }
+  ]}
+}
+```
+
+▶ **4弦。** 青が根音E（4弦）です。上にA・D・Gが並びます。
+
+```json
+{
+  "id": "m1.w1.d1.string_map_5",
+  "type": "fretboard_diagram",
+  "meta": { "title": "Open string map — 5-string", "instrument": "bass", "stringCount": 5, "tuning": ["B","E","A","D","G"], "key": "E" },
+  "fretboard": { "startFret": 0, "fretSpan": 4, "dots": [
+    { "string": 5, "fret": 0, "label": "B" },
+    { "string": 4, "fret": 0, "label": "E", "isRoot": true, "role": "root" },
+    { "string": 3, "fret": 0, "label": "A" },
+    { "string": 2, "fret": 0, "label": "D" },
+    { "string": 1, "fret": 0, "label": "G" }
+  ]}
+}
+```
+
+▶ **5弦。** E・A・D・Gは4弦と同じ位置。いちばん下に低音B（5弦）が1本増えるだけです。
+
 **例1 — 4分音符。** 1拍に1回、開放Eをはじきます。人差し指と中指を交互に使うことだけ覚えて。
 
 ```json

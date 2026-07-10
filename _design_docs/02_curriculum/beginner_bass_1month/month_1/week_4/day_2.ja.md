@@ -21,6 +21,39 @@ i18nKey: "lesson.m1.w4.d2"
 
 今日は**オクターブを手に覚える2つの例**を見ます。まず**オクターブ・ボックス**を半小節ずつ押さえて<mark>弦を飛ばす手の形</mark>を覚え、次に**R–5–8–5**で転がして今日の完成物をつくります。各例を**4弦・5弦の2バージョン**で載せました。
 
+例に入る前に、**オクターブ・ボックスの手の形**を指板図でまず目に焼きつけます。下の図で青い根音E（4弦）から**2弦上・2フレット上**へ上がるとオクターブE（2弦2フレット）です — 根音・5度・オクターブが四角い箱のようにひとつの手に収まります。
+
+```json
+{
+  "id": "m1.w4.d2.octave_box_shape_4",
+  "type": "fretboard_diagram",
+  "meta": { "title": "Octave box hand shape on E — 4-string", "instrument": "bass", "stringCount": 4, "tuning": ["E","A","D","G"], "key": "E" },
+  "fretboard": { "startFret": 0, "fretSpan": 4, "dots": [
+    { "string": 4, "fret": 0, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 3, "fret": 2, "finger": 1, "label": "5", "role": "chord_tone" },
+    { "string": 2, "fret": 2, "finger": 3, "label": "8", "role": "chord_tone" }
+  ]}
+}
+```
+
+▶ **4弦。** 根音E → 5度B → オクターブE。あいだの3弦は空けておく（眠らせる）場所です。
+
+```json
+{
+  "id": "m1.w4.d2.octave_box_shape_5",
+  "type": "fretboard_diagram",
+  "meta": { "title": "Octave box hand shape on E — 5-string", "instrument": "bass", "stringCount": 5, "tuning": ["B","E","A","D","G"], "key": "E" },
+  "fretboard": { "startFret": 0, "fretSpan": 4, "dots": [
+    { "string": 5, "fret": 0, "muted": true },
+    { "string": 4, "fret": 0, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 3, "fret": 2, "finger": 1, "label": "5", "role": "chord_tone" },
+    { "string": 2, "fret": 2, "finger": 3, "label": "8", "role": "chord_tone" }
+  ]}
+}
+```
+
+▶ **5弦。** 手の形は4弦と同じ。いちばん下の低音B（5弦）は×、親指で眠らせておきます。
+
 **例1 — オクターブ・ボックス。** 開放E（**4弦**）のルートを半小節、**2弦2フレット**のオクターブを半小節押さえます。あいだの**3弦は触れず眠らせたまま**手を移します。
 
 ```json

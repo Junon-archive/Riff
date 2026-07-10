@@ -21,6 +21,41 @@ Your right hand plucks the string with no pick, using **<mark>two fingers, index
 
 Today your left hand rests; you play only **the open E on the 4th string** with your right hand. The example below is a course that narrows the same note <mark>from quarter notes to eighth notes</mark>. Each example is laid out in **both a 4-string and a 5-string version**.
 
+Before we move to the score, let's map out **where each string lives** first. Below is an open-string diagram — **the E·A·D·G spots are the same on a 4- or 5-string**, and the 5-string just adds one low B at the very bottom.
+
+```json
+{
+  "id": "m1.w1.d1.string_map_4",
+  "type": "fretboard_diagram",
+  "meta": { "title": "Open string map — 4-string", "instrument": "bass", "stringCount": 4, "tuning": ["E","A","D","G"], "key": "E" },
+  "fretboard": { "startFret": 0, "fretSpan": 4, "dots": [
+    { "string": 4, "fret": 0, "label": "E", "isRoot": true, "role": "root" },
+    { "string": 3, "fret": 0, "label": "A" },
+    { "string": 2, "fret": 0, "label": "D" },
+    { "string": 1, "fret": 0, "label": "G" }
+  ]}
+}
+```
+
+▶ **4-string.** Blue is the root E (4th string). A·D·G sit in a row above it.
+
+```json
+{
+  "id": "m1.w1.d1.string_map_5",
+  "type": "fretboard_diagram",
+  "meta": { "title": "Open string map — 5-string", "instrument": "bass", "stringCount": 5, "tuning": ["B","E","A","D","G"], "key": "E" },
+  "fretboard": { "startFret": 0, "fretSpan": 4, "dots": [
+    { "string": 5, "fret": 0, "label": "B" },
+    { "string": 4, "fret": 0, "label": "E", "isRoot": true, "role": "root" },
+    { "string": 3, "fret": 0, "label": "A" },
+    { "string": 2, "fret": 0, "label": "D" },
+    { "string": 1, "fret": 0, "label": "G" }
+  ]}
+}
+```
+
+▶ **5-string.** E·A·D·G are the same spots as the 4-string. Only one more low B (5th string) at the very bottom.
+
 **Example 1 — quarter notes.** Pluck the open E once per beat. Just remember to alternate index and middle.
 
 ```json

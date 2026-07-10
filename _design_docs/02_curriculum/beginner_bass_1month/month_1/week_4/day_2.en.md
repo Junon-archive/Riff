@@ -21,6 +21,39 @@ Today too, **the fingering is identical on a 4- or 5-string**. On a 5-string, ke
 
 Today you look at **two examples for learning the octave by hand**. First you fret the **octave box** half a bar each to learn <mark>the string-skipping shape</mark>, then you roll it **R–5–8–5** to build today's finished piece. Each example is laid out in **both a 4-string and a 5-string version**.
 
+Before the examples, let's burn the **octave box hand shape** into your eyes with a diagram first. In the picture below, from the blue root E (4th string) go **two strings up and two frets up** to the octave E (2nd string, 2nd fret) — root, fifth, and octave sit in one hand like a little square box.
+
+```json
+{
+  "id": "m1.w4.d2.octave_box_shape_4",
+  "type": "fretboard_diagram",
+  "meta": { "title": "Octave box hand shape on E — 4-string", "instrument": "bass", "stringCount": 4, "tuning": ["E","A","D","G"], "key": "E" },
+  "fretboard": { "startFret": 0, "fretSpan": 4, "dots": [
+    { "string": 4, "fret": 0, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 3, "fret": 2, "finger": 1, "label": "5", "role": "chord_tone" },
+    { "string": 2, "fret": 2, "finger": 3, "label": "8", "role": "chord_tone" }
+  ]}
+}
+```
+
+▶ **4-string.** Root E → fifth B → octave E. The 3rd string in between is the spot you leave empty (asleep).
+
+```json
+{
+  "id": "m1.w4.d2.octave_box_shape_5",
+  "type": "fretboard_diagram",
+  "meta": { "title": "Octave box hand shape on E — 5-string", "instrument": "bass", "stringCount": 5, "tuning": ["B","E","A","D","G"], "key": "E" },
+  "fretboard": { "startFret": 0, "fretSpan": 4, "dots": [
+    { "string": 5, "fret": 0, "muted": true },
+    { "string": 4, "fret": 0, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 3, "fret": 2, "finger": 1, "label": "5", "role": "chord_tone" },
+    { "string": 2, "fret": 2, "finger": 3, "label": "8", "role": "chord_tone" }
+  ]}
+}
+```
+
+▶ **5-string.** The hand shape is identical to the 4-string. The low B (5th string) at the bottom is ×, keep it asleep with your thumb.
+
 **Example 1 — the octave box.** Fret the open E (**4th string**) root for half a bar, and the octave on the **2nd string, 2nd fret** for half a bar. Move your hand **leaving the 3rd string in between untouched and asleep**.
 
 ```json

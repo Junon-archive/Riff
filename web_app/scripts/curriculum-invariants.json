@@ -1,4 +1,23 @@
 {
+  "beginner_bass_1month#m1.w1.d1.string_map_4": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "1:0::G",
+      "2:0::D",
+      "3:0::A",
+      "4:0:root:E"
+    ]
+  },
+  "beginner_bass_1month#m1.w1.d1.string_map_5": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "1:0::G",
+      "2:0::D",
+      "3:0::A",
+      "4:0:root:E",
+      "5:0::B"
+    ]
+  },
   "beginner_bass_1month#m1.w1.d1.open_e_quarter_4": {
     "type": "tab",
     "notation": "staff+tab",
@@ -993,6 +1012,23 @@
           "none"
         ]
       }
+    ]
+  },
+  "beginner_bass_1month#m1.w4.d2.octave_box_shape_4": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "2:2:chord_tone:8",
+      "3:2:chord_tone:5",
+      "4:0:root:R"
+    ]
+  },
+  "beginner_bass_1month#m1.w4.d2.octave_box_shape_5": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "2:2:chord_tone:8",
+      "3:2:chord_tone:5",
+      "4:0:root:R",
+      "5:0::"
     ]
   },
   "beginner_bass_1month#m1.w4.d2.octave_shape_4": {

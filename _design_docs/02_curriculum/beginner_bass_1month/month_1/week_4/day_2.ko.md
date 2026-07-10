@@ -21,6 +21,39 @@ i18nKey: "lesson.m1.w4.d2"
 
 오늘은 **옥타브를 손에 익히는 두 예제**를 봐요. 먼저 **옥타브 박스**를 반 마디씩 짚어 <mark>줄을 건너뛰는 손모양</mark>을 익히고, 그다음 **R–5–8–5**로 굴려 오늘의 완성물을 만들어요. 각 예제를 **4현·5현 두 버전**으로 실었어요.
 
+예제로 들어가기 전에, **옥타브 박스 손모양**을 지판으로 먼저 눈에 새겨요. 아래 그림에서 파랑 근음 E(4번현)부터 **2현 위·2프렛 위**로 올라가면 옥타브 E(2번현 2프렛)예요 — 근음·5도·옥타브가 네모 상자처럼 한 손에 잡혀요.
+
+```json
+{
+  "id": "m1.w4.d2.octave_box_shape_4",
+  "type": "fretboard_diagram",
+  "meta": { "title": "Octave box hand shape on E — 4-string", "instrument": "bass", "stringCount": 4, "tuning": ["E","A","D","G"], "key": "E" },
+  "fretboard": { "startFret": 0, "fretSpan": 4, "dots": [
+    { "string": 4, "fret": 0, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 3, "fret": 2, "finger": 1, "label": "5", "role": "chord_tone" },
+    { "string": 2, "fret": 2, "finger": 3, "label": "8", "role": "chord_tone" }
+  ]}
+}
+```
+
+▶ **4현.** 근음 E → 5도 B → 옥타브 E. 사이의 3번현은 비워 두는(재우는) 자리예요.
+
+```json
+{
+  "id": "m1.w4.d2.octave_box_shape_5",
+  "type": "fretboard_diagram",
+  "meta": { "title": "Octave box hand shape on E — 5-string", "instrument": "bass", "stringCount": 5, "tuning": ["B","E","A","D","G"], "key": "E" },
+  "fretboard": { "startFret": 0, "fretSpan": 4, "dots": [
+    { "string": 5, "fret": 0, "muted": true },
+    { "string": 4, "fret": 0, "label": "R", "isRoot": true, "role": "root" },
+    { "string": 3, "fret": 2, "finger": 1, "label": "5", "role": "chord_tone" },
+    { "string": 2, "fret": 2, "finger": 3, "label": "8", "role": "chord_tone" }
+  ]}
+}
+```
+
+▶ **5현.** 손 모양은 4현과 똑같아요. 맨 아래 저음 B(5번현)는 ×, 엄지로 재워 두세요.
+
 **예제 1 — 옥타브 박스.** 개방 E(**4번현**) 루트를 반 마디, **2번현 2프렛**의 옥타브를 반 마디 짚어요. 사이의 **3번현은 건드리지 않고 재운 채** 손을 옮겨요.
 
 ```json

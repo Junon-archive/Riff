@@ -21,6 +21,41 @@ i18nKey: "lesson.m1.w1.d1"
 
 오늘은 왼손은 쉬고, **4번현 개방 E**만 오른손으로 쳐요. 아래 예제는 같은 음을 <mark>4분음표에서 8분음표로</mark> 촘촘하게 좁혀가는 코스예요. 각 예제를 **4현·5현 두 버전**으로 나란히 실었어요.
 
+악보로 넘어가기 전에, **각 현이 어디 있는지** 먼저 지도로 봐요. 아래는 개방현 지판이에요 — **4현이든 5현이든 E·A·D·G 자리는 똑같고**, 5현은 맨 아래에 저음 B 하나가 더 붙을 뿐이에요.
+
+```json
+{
+  "id": "m1.w1.d1.string_map_4",
+  "type": "fretboard_diagram",
+  "meta": { "title": "Open string map — 4-string", "instrument": "bass", "stringCount": 4, "tuning": ["E","A","D","G"], "key": "E" },
+  "fretboard": { "startFret": 0, "fretSpan": 4, "dots": [
+    { "string": 4, "fret": 0, "label": "E", "isRoot": true, "role": "root" },
+    { "string": 3, "fret": 0, "label": "A" },
+    { "string": 2, "fret": 0, "label": "D" },
+    { "string": 1, "fret": 0, "label": "G" }
+  ]}
+}
+```
+
+▶ **4현.** 파랑이 근음 E(4번현)예요. 위로 A·D·G가 나란히 놓여요.
+
+```json
+{
+  "id": "m1.w1.d1.string_map_5",
+  "type": "fretboard_diagram",
+  "meta": { "title": "Open string map — 5-string", "instrument": "bass", "stringCount": 5, "tuning": ["B","E","A","D","G"], "key": "E" },
+  "fretboard": { "startFret": 0, "fretSpan": 4, "dots": [
+    { "string": 5, "fret": 0, "label": "B" },
+    { "string": 4, "fret": 0, "label": "E", "isRoot": true, "role": "root" },
+    { "string": 3, "fret": 0, "label": "A" },
+    { "string": 2, "fret": 0, "label": "D" },
+    { "string": 1, "fret": 0, "label": "G" }
+  ]}
+}
+```
+
+▶ **5현.** E·A·D·G는 4현과 똑같은 자리. 맨 아래 저음 B(5번현) 하나만 더 있어요.
+
 **예제 1 — 4분음표.** 한 박에 한 번씩 개방 E를 튕겨요. 검지와 중지를 번갈아 쓰는 것만 기억해요.
 
 ```json
