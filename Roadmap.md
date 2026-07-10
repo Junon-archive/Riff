@@ -82,6 +82,12 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-10 (백로그 14 — 슬랩/펑크 4주차 day 저작 = **Month 1 졸업**)
+- week_4(옥타브+고스트 결합 → 옥타브 슬랩 그루브 곡 완성) day_1~4 × 3언어=12파일. 핀고정 octave_ghost_song 4·5현 바이트 동일. build 514p exit 0, invariants 신규 18블록·회귀0(baseline 510), 4·5현 병행·slap·볼드/mark 3언어 일치. M1(썸→팝→옥타브→고스트) 마무리, day_4 (1개월차 졸업!) 표기.
+
+### 2026-07-10 (백로그 14 — 슬랩/펑크 3주차 day 저작)
+- week_3(고스트 & 뮤팅 — dead_note로 "칙" 채우기) day_1~4 × 3언어=12파일. 핀고정 ghost_octave_groove 4·5현 바이트 동일. build 502p exit 0, invariants 신규 22블록·회귀0(baseline 492), 4·5현 병행·slap·볼드/mark 3언어 일치.
+
 ### 2026-07-10 (백로그 14 — 슬랩/펑크 2주차 day 저작)
 - week_2(T-P 코디네이션·옥타브 모양·첫 슬랩 그루브) day_1~4 × 3언어=12파일. 핀고정 octave_groove_rough 4·5현 바이트 동일. build 490p exit 0, invariants 신규 24블록·회귀0(baseline 470), 4·5현 병행·slap·볼드/mark 3언어 일치.
 

@@ -1,6 +1,6 @@
 ---
 id: 14-slap-funk-bass-curriculum
-status: IN_PROGRESS (준비물 완료 + day 저작 진행 중 — /goal 주차별 순차: week_1·2 완료, week_3~8 대기)
+status: IN_PROGRESS (준비물 완료 + day 저작 진행 중 — /goal 주차별 순차: week_1~4 완료(M1 졸업), week_5~8 대기)
 priority: medium
 risk: medium
 depends_on: [10, 13]
