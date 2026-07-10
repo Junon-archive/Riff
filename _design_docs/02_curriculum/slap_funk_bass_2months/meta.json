@@ -1,0 +1,47 @@
+{
+  "id": "slap_funk_bass_2months",
+  "title": {
+    "ko": "슬랩 & 펑크 베이스 — 두 달 T-P 그루브",
+    "en": "Slap & Funk Bass: Two Months of T-P Groove",
+    "ja": "スラップ&ファンク・ベース — 2か月のT-Pグルーヴ"
+  },
+  "tagline": {
+    "ko": "엄지로 치고 손가락으로 튕겨 — 썸·팝으로 만드는 펑크 그루브 8주",
+    "en": "Thumb strikes, finger snaps — funk groove from slap in 8 weeks",
+    "ja": "親指で叩き指で弾く — サム・プルで作るファンクグルーヴ8週間"
+  },
+  "instrument": "bass",
+  "image": "/curriculum/slap-funk-bass.webp",
+  "topic": "bass-slap-funk",
+  "level": 2,
+  "tags": [
+    "bass",
+    "slap",
+    "funk",
+    "thumb-pop",
+    "intermediate"
+  ],
+  "durationMonths": 2,
+  "forWho": {
+    "ko": "베이스 기초를 뗐고, 이제 슬랩으로 튀는 펑크 그루브를 치고 싶은 분께",
+    "en": "For those who finished bass fundamentals and now want to play punchy funk grooves with slap",
+    "ja": "ベース基礎を終え、スラップで弾けるファンクグルーヴを弾きたい方へ"
+  },
+  "intro": {
+    "ko": [
+      "이 과정은 베이스 기초를 뗀 분이 **슬랩**으로 넘어가는 2개월 트랙이에요. 슬랩은 두 가지 소리예요 — 엄지로 치는 **썸**(드럼의 킥)과 손가락으로 튕기는 **팝**(스네어). 이 둘과 그 사이를 채우는 고스트로 <mark>손 하나로 드럼을 흉내내는</mark> 그루브를 만듭니다. 4현이든 5현이든 함께 배워요.",
+      "1개월차엔 **썸과 팝**을 각각 소리 내고 고스트·뮤팅으로 바운스를 얹어 <mark>옥타브 슬랩 그루브</mark>를 완성하고, 2개월차엔 **16비트 싱코페이션**·해머온/풀오프 레가토·**팝핑 멜로디**를 더해 <mark>클래식 펑크 그루브 곡</mark>을 녹음합니다.",
+      "매일 **50분**, 끝엔 늘 메트로놈·드럼 앞에서 확인되는 그루브 하나가 남아요. 목표는 화려한 묘기가 아니라 <mark>몸이 저절로 흔들리는 그루브</mark> — 두 달 뒤엔 펑크 슬랩 라인을 처음부터 끝까지 밀어붙이는 자신을 만나게 됩니다."
+    ],
+    "en": [
+      "This 2-month track takes someone who finished bass fundamentals into **slap**. Slap is two sounds — the **thumb** (a kick drum) that strikes, and the **pop** (a snare) that snaps. With these two plus the ghosts that fill the gaps, you build grooves that <mark>imitate a drum kit with one hand</mark>. You learn 4- and 5-string together.",
+      "Month 1 sounds out **thumb and pop**, then layers ghosts and muting for bounce to finish an <mark>octave slap groove</mark>; Month 2 adds **16th-note syncopation**, hammer-on/pull-off legato, and **popping melody** to record a <mark>classic funk groove tune</mark>.",
+      "**50 minutes** a day, and each ends with one groove you can check against a metronome or drums. The goal isn't flashy tricks — it's a <mark>groove that makes your body move on its own</mark>. Two months in, you'll drive a funk slap line from start to finish."
+    ],
+    "ja": [
+      "この講座は、ベース基礎を終えた人が**スラップ**へ進む2か月トラックです。スラップは2つの音 — 親指で叩く**サム**（キック）と、指で弾く**プル**（スネア）。この2つと、間を埋めるゴーストで<mark>片手でドラムを真似る</mark>グルーヴを作ります。4弦でも5弦でも一緒に学びます。",
+      "1か月目は**サムとプル**を出し、ゴーストとミュートでバウンスを足して<mark>オクターブ・スラップ・グルーヴ</mark>を完成させ、2か月目は**16分のシンコペーション**・ハンマリング/プリング・**ポッピング・メロディ**を加えて<mark>クラシック・ファンクのグルーヴ曲</mark>を録音します。",
+      "毎日**50分**、終わりには必ずメトロノームやドラムの前で確認できるグルーヴが一つ残ります。目標は派手な技ではなく、<mark>体が勝手に揺れるグルーヴ</mark> — 2か月後には、ファンク・スラップのラインを最初から最後まで押し切る自分に出会えます。"
+    ]
+  }
+}
