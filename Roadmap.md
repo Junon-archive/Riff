@@ -82,6 +82,11 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-10 (백로그 09 — 입문 일렉 트랙 1주차 day 저작, /goal 순차 진행)
+- **범위:** `beginner_electric_1month` month_1/week_1 day_1~4 × ko/en/ja = 12파일(curriculum-architect 위임). 손 만들기 메커닉(자세·다운피킹·크로매틱·얼터네이트·스파이더). /goal로 주차별 순차 저작(1주차 완료 후 정지, 나머지 대기).
+- **검증:** build 376p(361→+15) exit 0(박자합·스키마 게이트), check-invariants 신규 8블록만 추가·기존 315블록 지문 값 변경 0(baseline 323 갱신), day별 3언어 `<mark>` 8개 일치·④/완료기준 mark=0·악보 json 3언어 바이트 동일·스파이더 핀고정 프롬프트와 바이트 동일.
+- **다음:** week_2(두 손 싱크+첫 리프) → week_3(파워코드) → week_4(곡 완성·졸업). 각 주차 승인 후 진행.
+
 ### 2026-07-09 (백로그 04 완료 — 슬래시 리듬 표기)
 - **배경:** `notation:"rhythm"`이 검증기에서 원천 차단(VexFlow 4.2.5 폰트에 rhythm slash 글리프 부재 확인 — `noteheadSlashed*`(취소선)만 있고 표준 rhythm slash 없음).
 - **구현:** staff.ts rhythm 모드가 음정 무시하고 가운데 줄(b/4)에 노트헤드 **투명** 리듬 음을 놓아 VexFlow가 스템·빔·간격·`chordSymbol`을 처리 → 각 음 위치에 **자체 슬래시 바(ctx path)** 오버레이(채움=quarter↓, 열림=half·whole). 검증기 rhythm 차단 해제, 라우팅은 기존 존재.
