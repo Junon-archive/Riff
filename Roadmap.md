@@ -82,6 +82,12 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-10 (백로그 14 — 슬랩/펑크 베이스 준비물 + 1주차 day 저작, /goal 순차)
+- 준비물: `slap_funk_bass_2months`(2개월·level2) 프롬프트 8개 강화(볼드·지판)·meta·overview 30·이미지. 1주차(썸&팝) day_1~4 × 3언어=12파일.
+- slap_thumb/slap_pop/dead_note 첫 활용 — dist에 T/P 글리프 렌더(10-B2·백로그 05 초록 테마 실동작). 핀고정 tp_alternation 4·5현 바이트 동일.
+- 검증: build 478p exit 0, invariants 신규 24블록만 추가·기존 지문 값 변경 0(baseline 446), 4·5현 병행·볼드/mark 3언어 일치.
+- 다음: week_2~8(M1 옥타브 그루브 → M2 펑크 응용·졸업).
+
 ### 2026-07-10 (백로그 05 완료 — 악기 세그먼트 토글 + 베이스 연초록 액센트 테마 + View Transition)
 - **단계 1(순서 위생):** `build-content.mjs` `CURRICULUM_ORDER` 하드코딩 제거 → `meta.json` **`level` 오름차순** 정렬(쉬운 코스 상단, 동률=id 이름순 안정). 별도 `order` 필드 없음. `content.config.ts` 경고 정합 정리. manifest 순서 = beginner_bass·beginner_electric(1) → chord·funk·solo(2).
 - **단계 2(세그먼트 토글 + hero 스왑 + 기억):** 랜딩 필터에서 **'전체' 칩 제거** → `[기타][베이스]` 2개(기본 기타). `home.title` i18n을 `{guitar,bass}` 로 분화(3언어, 베이스=악기 단어만 치환), leaf 참조 3곳(pages/index·[lang]/index·HomeView) 수정. hero `<h1>`에 `data-title-guitar/bass` 노출 → 토글 시 `innerHTML` 스왑. 선택 악기 **`riff_instrument` localStorage 기억**(`storage.ts` 래퍼, `config.ts` 키).
