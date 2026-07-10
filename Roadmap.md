@@ -82,6 +82,12 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-10 (백로그 13 — 입문 베이스 트랙 1주차 day 저작, /goal 주차별 순차)
+- **범위:** `beginner_bass_1month` month_1/week_1 day_1~4 × ko/en/ja = 12파일. 오른손·소리내기(자세·투핑거·개방 E·줄이동·왼손 첫 운지·E·A 루트 펄스). 베이스 트랙 사이트 첫 노출.
+- **★4·5현 병행:** 모든 예제를 `_4`(EADG)/`_5`(BEADG) 두 블록으로, 5현 tab이 4현과 완전 동일하고 meta(stringCount·tuning)만 차이. instrument:bass 전 블록.
+- **검증:** build 427p(412→+15) exit 0, check-invariants 신규 16블록만 추가·기존 354블록 지문 값 변경 0(baseline 370), 3언어 mark 일치·④/완료기준 mark=0·악보 3언어 바이트 동일·핀고정 루트펄스 4·5현 바이트 동일. 도구태그 오염 없음.
+- **다음:** week_2(뮤팅) → week_3(드럼과 락) → week_4(R-5-8 라인·졸업).
+
 ### 2026-07-10 (백로그 17 — 오선보/타브 오버플로 클리핑 + 폭기반 줄바꿈 + 스크롤 폴백)
 - **증상:** 입문 일렉 팜뮤트 파워코드 마디(8음 전부 chord+P.M.)에서 오선보+타브가 카드 우측에서 잘림. 긴 악보는 좁은 컬럼에서 너무 작게 보임.
 - **단계 1(클리핑):** `staff.ts`가 줄별 실제 최소폭(`Formatter.preCalculateMinTotalWidth`)을 재서 `noteAreaByRow=max(추정,ceil(minW))`로 사이징. 측정은 disposable 객체, 렌더 객체 pristine(이중 format 회피).
