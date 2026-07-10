@@ -301,6 +301,9 @@ const monthDayKeys = location.month.weeks.flatMap((w) => w.days).map((d) => d.da
     border-radius: 16px;
   }
   .render-area + .render-area { margin-top: 32px; }
+  /* ★17-3 스크롤 폴백: 자연폭이 넓은 극단 밀집 오선보(staffsvg min-width>컨테이너)는
+     축소 대신 가로 스크롤. 성긴 악보는 min-width 없어 width:100%로 컨테이너에 맞춰짐(무해). */
+  .render-mount { overflow-x: auto; }
   .render-mount :global(.fretboard),
   .render-mount :global(.tabsvg),
   .render-mount :global(.staffsvg) {

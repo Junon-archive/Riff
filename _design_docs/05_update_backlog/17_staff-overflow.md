@@ -1,17 +1,17 @@
 ---
 id: 17-staff-overflow
-status: IN_PROGRESS
+status: DONE
 priority: high
 risk: medium
 depends_on: []
 owner: null
 ---
 
-> 🟡 진행 중(2026-07-10). **단계 1(클리핑 제거)·단계 2(폭기반 줄바꿈) 구현·검증 완료.**
-> - 단계 1: `preCalculateMinTotalWidth`로 줄별 실제 최소폭 → `noteAreaByRow=max(추정,ceil(minW))` 사이징(측정=disposable, 렌더 객체 pristine).
-> - 단계 2: 기존 2마디 쌍 유지하되 **쌍 최소폭 > `TARGET_ROW_W`(560px)이면 그 쌍만 1마디/줄로 분리** → 빽빽 마디가 커진다. 성긴 쌍·단일 마디는 불변.
-> - 검증: `astro check` 0e·`build` 412p·**일렉 m1w3d4 = 4마디 각 1/줄로 커짐(래스터)**·solo_scale 등 성긴 블록 viewBox 불변·전체 186 staff 스캔 병리적 분리 0(최대높이 1214=일렉 4마디)·**check-invariants 회귀 0(354블록, 의미 불변)**.
-> - **남음:** 단계 3(스크롤 폴백 — 16분음 16개 등 단일 밀집 마디가 좁은 컬럼에서 여전히 작을 때). **선택**.
+> ✅ 완료(2026-07-10). **단계 1·2·3 전부 구현·검증.** 커밋: 14712e4(1) · 165f66e(2) · 본 커밋(3).
+> - 단계 1(클리핑): `preCalculateMinTotalWidth`로 줄별 실제 최소폭 → `noteAreaByRow=max(추정,ceil(minW))`(측정=disposable, 렌더 객체 pristine).
+> - 단계 2(줄바꿈): 2마디 쌍 유지하되 **쌍 최소폭 > `TARGET_ROW_W`(560)이면 그 쌍만 1마디/줄 분리** → 빽빽 마디 커짐. 성긴 쌍·단일 마디 불변.
+> - 단계 3(스크롤 폴백): `postProcess`가 **자연폭 > 560인 극단 밀집 오선보에만 `min-width:{w}px` 부착** + `.render-mount{overflow-x:auto}` → 좁은 화면서 축소 대신 가로 스크롤. 성긴 악보는 무부착(width:100% 현행) → 회귀 0.
+> - 검증: `astro check` 0e·`build` 412p·일렉 m1w3d4 래스터(4마디 커짐)·**min-width 부착=극단 밀집 66p(3언어)만·solo_scale 0개**·`.render-mount overflow-x` dist 반영·**check-invariants 회귀 0(354블록)**.
 
 # 17 · 오선보/타브 오버플로 클리핑 + 폭기반 줄바꿈
 
@@ -86,9 +86,9 @@ owner: null
 - [x] 성긴 쌍·단일 마디 불변(solo_scale viewBox 불변 확인), 빽빽 쌍만 1/줄로 커짐(일렉 d4·펑크 개선)
 - [x] 일렉 d4 4마디 세로 스택·음표 커짐 육안 + check-invariants 0 + 전체 스캔 병리 0
 
-**단계 3 — 스크롤 폴백**
-- [ ] `.render-area`/`.render-mount` `overflow-x:auto` + 가독성 바닥
-- [ ] 극단 단일 마디 스크롤 동작 확인
+**단계 3 — 스크롤 폴백** ✅ 완료(2026-07-10)
+- [x] `.render-mount overflow-x:auto` + `postProcess` 자연폭>560 오선보만 `min-width:{w}px`(가독성 바닥, 성긴 것 회귀 0)
+- [x] 극단 밀집 66p(3언어)만 부착·solo_scale 0개 확인 + check-invariants 0
 
 **공통**
 - [ ] V1 build + V3 invariants(변경 블록 한정 확인 후 baseline 갱신) + 회귀 스캔

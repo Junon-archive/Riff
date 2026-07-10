@@ -290,14 +290,18 @@ function tabChordColor(entries: ColorSource[]): string | null {
   return cols.size === 1 ? [...cols][0]! : null;
 }
 
-/** 루트 svg 손질: 고정 크기 제거·viewBox 지정·class/role/aria·검정→currentColor. */
+/** 루트 svg 손질: 고정 크기 제거·viewBox 지정·class/role/aria·검정→currentColor.
+ *  ★17-3 스크롤 폴백: 자연폭(w)이 TARGET_ROW_W 를 넘는 극단(단일 밀집 마디 등)만 min-width=w 부여
+ *  → 좁은 화면(모바일)에서 축소 대신 가로 스크롤(.render-mount overflow-x:auto)로 가독성 유지.
+ *  560 이하(성긴 악보·단계2 분리 후 마디)는 min-width 없음 → width:100% 현행 그대로(회귀 0). */
 function postProcess(svg: string, title: string, w: number, h: number): string {
+  const minWStyle = w > TARGET_ROW_W ? ` style="min-width:${w}px"` : '';
   let out = svg.replace(/^<svg([^>]*)>/, (_m, attrs: string) => {
     const a = attrs
       .replace(/\swidth="[^"]*"/, '')
       .replace(/\sheight="[^"]*"/, '')
       .replace(/\sviewBox="[^"]*"/, '');
-    return `<svg${a} viewBox="0 0 ${w} ${h}" class="staffsvg" role="img" aria-label="${esc(title)}">`;
+    return `<svg${a} viewBox="0 0 ${w} ${h}" class="staffsvg"${minWStyle} role="img" aria-label="${esc(title)}">`;
   });
   out = out.replace(/(fill|stroke)="(?:black|#000000|#000)"/g, '$1="currentColor"');
   return out;
