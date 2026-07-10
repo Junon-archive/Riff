@@ -28,6 +28,7 @@ const MAP = [
   { src: 'curriculum1.jpg', out: 'solo-scale.webp' },
   { src: 'curriculum2.jpg', out: 'chord-building.webp' },
   { src: 'curriculum3.jpg', out: 'funk-rhythm.webp' },
+  { src: 'curriculum4.jpg', out: 'beginner-electric.webp' }, // 입문 일렉 트랙(사용자 확정 2026-07-10)
 ];
 
 const TARGET_BYTES = 120 * 1024;
