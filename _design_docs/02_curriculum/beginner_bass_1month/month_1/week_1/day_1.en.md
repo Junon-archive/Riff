@@ -9,17 +9,17 @@ i18nKey: "lesson.m1.w1.d1"
 
 ## ① Theory
 
-Today's the day you finally pick up a bass for the first time. Flashy slap and fast lines can wait. Today's one and only star is <mark>one clean low note</mark>. In a band, the bass joins hands with the drums and lays down the floor of the song. So don't try to play well from day one — just say a relaxed hello to your bass first.
+Today's the day you finally pick up a bass for the first time. Flashy slap and fast lines can wait. Today's one and only star is **<mark>one clean low note</mark>**. In a band, the bass joins hands with the drums and **lays down the floor of the song**. So don't try to play well from day one — just say a relaxed hello to your bass first.
 
-Sit down, rest the bass's curved waist on your right thigh, and tilt the neck up just slightly so it's nearly level with the floor. If you play standing, set the strap to the <mark>same height</mark> as when seated so your wrist stays comfortable. Let your shoulders drop. Before you make a sound, tune all four strings (five if it's a 5-string) with a clip-on tuner or a tuner app. Only when the tuning is right will today's note finally sound like "your" note.
+Sit down, rest the bass's curved waist on your right thigh, and tilt the neck up just slightly so it's **nearly level with the floor**. If you play standing, set the strap to the <mark>same height</mark> as when seated so your wrist stays comfortable. Let your shoulders drop. Before you make a sound, tune all four strings (five if it's a 5-string) with a clip-on tuner or a tuner app. **Only when the tuning is right** will today's note finally sound like "your" note.
 
-Basses come as 4-string and 5-string. A 4-string has four strings from low to high — E·A·D·G; a 5-string just adds <mark>one more low B string</mark> below them. Don't be scared — the position and hand shape of the E·A·D·G strings are exactly the same on a 4- or 5-string. The 5-string simply has one extra string for lower notes as a bonus. That's why every score in this curriculum shows the 4- and 5-string side by side. Whichever bass you're holding, just watch your own instrument's block and follow along.
+Basses come as **4-string and 5-string**. A 4-string has four strings from low to high — E·A·D·G; a 5-string just adds <mark>one more low B string</mark> below them. Don't be scared — the position and hand shape of **the E·A·D·G strings** are exactly the same on a 4- or 5-string. The 5-string simply has one extra string for lower notes as a bonus. That's why every score in this curriculum shows the 4- and 5-string side by side. Whichever bass you're holding, just watch your own instrument's block and follow along.
 
-Your right hand plucks the string with no pick, using <mark>two fingers, index and middle</mark>. Think of it as two fingers taking turns walking — index then middle, middle then index. Your thumb rests lightly on the pickup or the 4th string to support your hand. Today your left hand rests, and you'll ring out the thickest E string (4th string) open, evenly. Sore fingertips are normal, so don't worry — calluses form in a few days. This one even note becomes the floor of every line you'll learn later.
+Your right hand plucks the string with no pick, using **<mark>two fingers, index and middle</mark>**. Think of it as two fingers taking turns walking — index then middle, middle then index. Your thumb rests lightly on the pickup or the 4th string to support your hand. Today your left hand rests, and you'll ring out **the thickest E string (4th string) open**, evenly. Sore fingertips are normal, so don't worry — calluses form in a few days. This one even note becomes the floor of every line you'll learn later.
 
 ## ② Visuals
 
-Today your left hand rests; you play only the open E on the 4th string with your right hand. The example below is a course that narrows the same note <mark>from quarter notes to eighth notes</mark>. Each example is laid out in both a 4-string and a 5-string version.
+Today your left hand rests; you play only **the open E on the 4th string** with your right hand. The example below is a course that narrows the same note <mark>from quarter notes to eighth notes</mark>. Each example is laid out in **both a 4-string and a 5-string version**.
 
 **Example 1 — quarter notes.** Pluck the open E once per beat. Just remember to alternate index and middle.
 
@@ -108,13 +108,13 @@ Today your left hand rests; you play only the open E on the 4th string with your
 ## ③ Today's practice (30-minute routine)
 
 **0–7 min · Warm-up**
-Set the metronome to BPM 60 and loosen up your hand while relaxing your shoulder and arm. A comfortable posture comes before the sound for now.
+Set the metronome to BPM 60 and loosen up your hand while relaxing your shoulder and arm. **A comfortable posture** comes before the sound for now.
 
 **7–17 min · Today's skill**
-Pluck the open E on the 4th string very slowly, alternating index and middle. Whether the two fingers' <mark>volume stays steady</mark> is today's goal.
+Pluck the open E on the 4th string very slowly, **alternating index and middle**. Whether the two fingers' <mark>volume stays steady</mark> is today's goal.
 
 **17–27 min · Applying it**
-Repeat Example 1 (quarter notes) four times at BPM 60 → once comfortable, move to Example 2 (eighth notes) and do it four times at BPM 65. If the sound smears, drop back down to quarter notes.
+Repeat Example 1 (quarter notes) four times at BPM 60 → once comfortable, move to Example 2 (eighth notes) and do it four times at BPM 65. **If the sound smears**, drop back down to quarter notes.
 
 **27–30 min · Check**
 Write down the BPM you reached, and if you like, record 30 seconds to hear whether the eight notes are even in size.

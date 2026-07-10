@@ -9,17 +9,17 @@ i18nKey: "lesson.m1.w1.d2"
 
 ## ① Theory
 
-Yesterday you loosened up your hand on a single open E. Today you step one string over. Today's one goal is <mark>moving smoothly between the E and A strings</mark>. Most bass lines are built by crossing back and forth between strings, so once this string move gets comfortable, everything you'll learn later gets much easier. It's not hard — it's just yesterday's two-finger plucking, carried on while changing strings.
+Yesterday you loosened up your hand on a single open E. Today you step one string over. Today's one goal is **<mark>moving smoothly between the E and A strings</mark>**. Most bass lines are built by crossing back and forth between strings, so once this **string move** gets comfortable, everything you'll learn later gets much easier. It's not hard — it's just yesterday's two-finger plucking, carried on while changing strings.
 
-The key is <mark>not stopping the index-middle alternation even when the string changes</mark>. If you started with the index on E, then after crossing to A the next one is still the middle — the fingers keep walking in turns, and only the string shifts over. Don't move your whole right hand big; the two fingertips crossing just barely to the neighbor string is plenty. At first the beat stumbles the moment the string changes, which is normal — that seam is exactly today's polishing spot.
+The key is **<mark>not stopping the index-middle alternation even when the string changes</mark>**. If you started with the index on E, then after crossing to A the next one is still the middle — the fingers keep walking in turns, and only the string shifts over. Don't move your whole right hand big; the two fingertips crossing just barely to the neighbor string is plenty. At first the beat stumbles the moment the string changes, which is normal — that **seam** is exactly today's polishing spot.
 
-Now the thumb gets one job. When you play E (4th string) the thumb rests on the pickup, but when you play A (3rd string) you shift the thumb <mark>up onto the E string</mark>. That way the E string you aren't playing gets muted on its own and stays quiet. This trick of the thumb following and covering the lower strings is called a "moving anchor" (a thumb that follows along). It feels awkward now, but in a few days your hand catches on by itself, so don't worry.
+Now the thumb gets one job. When you play E (4th string) the thumb rests on the pickup, but when you play A (3rd string) you shift the thumb <mark>up onto the E string</mark>. That way the E string you aren't playing **gets muted on its own** and stays quiet. This trick of the thumb following and covering the lower strings is called a **"moving anchor" (a thumb that follows along)**. It feels awkward now, but in a few days your hand catches on by itself, so don't worry.
 
-On a 5-string there's one more low string, so the thumb has more to cover — when you play A, cover both the E and the low B with your thumb to put both strings to sleep. The positions and fingering are exactly the same as the 4-string; you only add muting the B string the 4-string doesn't have, and the rest stays put. On any bass, what your hand learns today is "ring the string you play, mute the strings you don't."
+On a 5-string there's one more low string, so the thumb has more to cover — when you play A, **cover both the E and the low B with your thumb** to put both strings to sleep. The positions and fingering are exactly the same as the 4-string; you only add **muting the B string** the 4-string doesn't have, and the rest stays put. On any bass, what your hand learns today is "ring the string you play, mute the strings you don't."
 
 ## ② Visuals
 
-Today you move between two open strings, E (4th string) and A (3rd string). The examples below go from <mark>crossing slowly, one at a time</mark> to moving back and forth in tight eighth notes. Each example is laid out in a 4-string and a 5-string version.
+Today you move between **two open strings, E (4th string) and A (3rd string)**. The examples below go from <mark>crossing slowly, one at a time</mark> to moving back and forth in tight eighth notes. Each example is laid out in **a 4-string and a 5-string version**.
 
 **Example 1 — quarter-note string crossing.** E→A→E→A, crossing one per beat, crisp and clear.
 
@@ -108,13 +108,13 @@ Today you move between two open strings, E (4th string) and A (3rd string). The 
 ## ③ Today's practice (30-minute routine)
 
 **0–7 min · Warm-up**
-Loosen up again with yesterday's open-E two-finger plucking at BPM 60. Start by reviving whether the index and middle are the same volume.
+Loosen up again with yesterday's open-E two-finger plucking at BPM 60. Start by reviving whether **the index and middle are the same volume**.
 
 **7–17 min · Today's skill**
-Repeat Example 1 (string crossing) at BPM 60. Build only the feel of crossing between E and A <mark>while keeping the finger alternation going</mark>.
+Repeat Example 1 (string crossing) at BPM 60. Build only **the feel of crossing between E and A** <mark>while keeping the finger alternation going</mark>.
 
 **17–27 min · Applying it**
-Do Example 2 (eighth notes) four times at BPM 60 → once the seam is smooth, raise it one step to BPM 65 for four more. If the beat pushes back, drop to 60 again.
+Do Example 2 (eighth notes) four times at BPM 60 → **once the seam is smooth**, raise it one step to BPM 65 for four more. If the beat pushes back, drop to 60 again.
 
 **27–30 min · Check**
 Write down the BPM you reached, and if you like, record 30 seconds to hear whether the sound cuts out at the point where the string changes.

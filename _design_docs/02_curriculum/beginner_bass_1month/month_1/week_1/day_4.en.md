@@ -9,17 +9,17 @@ i18nKey: "lesson.m1.w1.d4"
 
 ## ① Theory
 
-At last, the final day of week 1. Today you glue together everything you learned piece by piece — the right-hand two fingers, the E↔A string move, and the left hand's muting. Put all three into one riff and that's this week's deliverable, the <mark>E·A root pulse</mark>. It isn't flashy, but it's the true first sound of a bass — locking down the floor of the song right next to the drums.
+At last, the final day of week 1. Today you glue together everything you learned piece by piece — the right-hand two fingers, the E↔A string move, and the left hand's muting. Put all three into one riff and that's this week's deliverable, the **<mark>E·A root pulse</mark>**. It isn't flashy, but it's the true first sound of a bass — **locking down the floor of the song** right next to the drums.
 
-The bass's first job isn't flash, it's <mark>becoming one with the drums</mark>. So today's goal isn't speed; it's repeating two measures crisply, locked right onto the metronome. Measure 1 is the open E (4th string) eight times, measure 2 is the open A (3rd string) eight times — the string move you learned through yesterday is used here as is. If both fingers are the same volume and the beat doesn't push back when the measure changes, that's success.
+The bass's first job isn't flash, it's **<mark>becoming one with the drums</mark>**. So today's goal isn't speed; it's **repeating two measures crisply, locked right onto the metronome**. Measure 1 is the open E (4th string) eight times, measure 2 is the open A (3rd string) eight times — the string move you learned through yesterday is used here as is. If both fingers are the same volume and the beat doesn't push back when the measure changes, that's success.
 
-Even though this pulse is all open strings, your left hand isn't idle. The left hand plays <mark>the gatekeeper that puts the strings you don't play to sleep</mark> — lay your fingers lightly across the D·G strings so that even a stray brush stays silent. The "press straight, right behind the fret" you learned yesterday isn't used today, but it stays in your hand as a solid tool to pull out when you add notes to a line later.
+Even though this pulse is all open strings, your left hand isn't idle. The left hand plays **<mark>the gatekeeper that puts the strings you don't play to sleep</mark>** — **lay your fingers lightly across the D·G strings** so that even a stray brush stays silent. The "press straight, right behind the fret" you learned yesterday isn't used today, but it stays in your hand as a solid tool to pull out when you add notes to a line later.
 
-On a 5-string there's one more string to put to sleep — cover the low B with your right thumb and the D·G with your left. Even so, <mark>the strings we use are the same</mark>. E and A are the same open strings (4th and 3rd) on a 4- or 5-string, so the spots your right hand plays are exactly identical. If you can run these two measures at 60–65 without wavering today, that's proof the hand you built this week has truly grown.
+On a 5-string there's one more string to put to sleep — cover the low B with your right thumb and the D·G with your left. Even so, **<mark>the strings we use are the same</mark>**. E and A are **the same open strings (4th and 3rd)** on a 4- or 5-string, so the spots your right hand plays are exactly identical. If you can run these two measures at 60–65 without wavering today, that's proof the hand you built this week has truly grown.
 
 ## ② Visuals
 
-Today you complete this week's deliverable, the E·A root pulse. First <mark>sketch the two measures in slow quarter notes</mark>, then move to the eighth-note pulse. Each example is laid out in a 4-string and a 5-string version.
+Today you complete this week's deliverable, the **E·A root pulse**. First <mark>sketch the two measures in slow quarter notes</mark>, then move to the eighth-note pulse. Each example is laid out in **a 4-string and a 5-string version**.
 
 **Prep — quarter-note root pulse.** Measure 1 is the open E, measure 2 the open A, one per beat. Cross only the measure boundary where the string changes smoothly.
 
@@ -140,13 +140,13 @@ Today you complete this week's deliverable, the E·A root pulse. First <mark>ske
 ## ③ Today's practice (30-minute routine)
 
 **0–7 min · Warm-up**
-Loosen up again with yesterday's open↔fret contrast and the E↔A string move at BPM 60. Revive the feeling of the two hands meeting.
+Loosen up again with yesterday's open↔fret contrast and the E↔A string move at BPM 60. Revive **the feeling of the two hands meeting**.
 
 **7–17 min · Today's skill**
-Repeat the prep example (quarter-note root pulse) at BPM 60. Smooth out only the <mark>measure boundary</mark> where you cross from the open-E measure to the open-A measure.
+Repeat the prep example (quarter-note root pulse) at BPM 60. Smooth out only the <mark>measure boundary</mark> **where you cross from the open-E measure to the open-A measure**.
 
 **17–27 min · Applying it (this week's deliverable)**
-Repeat the E·A root pulse four times at BPM 60 → once it's buzz-free, raise it one step to BPM 65 for four more. Get it on the 4-string, then confirm the same feel on the 5-string.
+Repeat the E·A root pulse four times at BPM 60 → **once it's buzz-free**, raise it one step to BPM 65 for four more. Get it on the 4-string, then confirm the same feel on the 5-string.
 
 **27–30 min · Check**
 Record this week's BPM, and record 30 seconds to hear whether the two measures flow as one breath and no noise creeps in.
