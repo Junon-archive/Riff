@@ -595,6 +595,342 @@
       }
     ]
   },
+  "beginner_bass_1month#m1.w3.d1.kick_root_quarter_4": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "beginner_bass_1month#m1.w3.d1.kick_root_quarter_5": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "beginner_bass_1month#m1.w3.d1.subdivision_eighths_4": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 8,
+        "rests": 0,
+        "deads": 0,
+        "heads": 8,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "beginner_bass_1month#m1.w3.d1.subdivision_eighths_5": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 8,
+        "rests": 0,
+        "deads": 0,
+        "heads": 8,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "beginner_bass_1month#m1.w3.d2.eighth_line_even_4": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 8,
+        "rests": 0,
+        "deads": 0,
+        "heads": 8,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "beginner_bass_1month#m1.w3.d2.eighth_line_even_5": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 8,
+        "rests": 0,
+        "deads": 0,
+        "heads": 8,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "beginner_bass_1month#m1.w3.d2.eighth_line_pocket_4": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 7,
+        "rests": 1,
+        "deads": 0,
+        "heads": 7,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "beginner_bass_1month#m1.w3.d2.eighth_line_pocket_5": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 7,
+        "rests": 1,
+        "deads": 0,
+        "heads": 7,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "beginner_bass_1month#m1.w3.d3.two_chord_prep_4": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "beginner_bass_1month#m1.w3.d3.two_chord_prep_5": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "beginner_bass_1month#m1.w3.d3.two_chord_eighths_4": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 8,
+        "rests": 0,
+        "deads": 0,
+        "heads": 8,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 8,
+        "rests": 0,
+        "deads": 0,
+        "heads": 8,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "beginner_bass_1month#m1.w3.d3.two_chord_eighths_5": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 8,
+        "rests": 0,
+        "deads": 0,
+        "heads": 8,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 8,
+        "rests": 0,
+        "deads": 0,
+        "heads": 8,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "beginner_bass_1month#m1.w3.d4.eighth_root_line_prep_4": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 2,
+        "rests": 0,
+        "deads": 0,
+        "heads": 2,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 2,
+        "rests": 0,
+        "deads": 0,
+        "heads": 2,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "beginner_bass_1month#m1.w3.d4.eighth_root_line_prep_5": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 2,
+        "rests": 0,
+        "deads": 0,
+        "heads": 2,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 2,
+        "rests": 0,
+        "deads": 0,
+        "heads": 2,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "beginner_bass_1month#m1.w3.d4.eighth_root_line_4": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 7,
+        "rests": 1,
+        "deads": 0,
+        "heads": 7,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 7,
+        "rests": 1,
+        "deads": 0,
+        "heads": 7,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "beginner_bass_1month#m1.w3.d4.eighth_root_line_5": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 7,
+        "rests": 1,
+        "deads": 0,
+        "heads": 7,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 7,
+        "rests": 1,
+        "deads": 0,
+        "heads": 7,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
   "beginner_electric_1month#m1.w1.d1.open_down_quarter": {
     "type": "tab",
     "notation": "staff+tab",
