@@ -712,7 +712,12 @@ export function renderStaff(score: Score, mode: StaffMode): string {
     const abovePx = Math.max(0, writtenMax - topLine) * PX_PER_SEMI; // 고음 렛저라인 여유
     const trebleDy = Math.round(16 + abovePx);
     const tabDy = Math.round(trebleDy + 80 + belowPx + 16);
-    const sysH = withTab ? tabDy + 150 : Math.round(trebleDy + 80 + belowPx + 22);
+    // 베이스 타브는 좌측 "TAB" clef 글자(6줄 기준 고정 크기·위치)가 낮은 스테이브보다 아래로
+    // 치우쳐 나오므로, 잘리지 않게 하단 여백을 추가한다(줄 간격 확대 tabSpacing 과 한 세트). 기타=0.
+    const bassTabExtra = isBass ? 32 : 0;
+    const sysH = withTab
+      ? tabDy + 150 + bassTabExtra
+      : Math.round(trebleDy + 80 + belowPx + 22);
 
     // 마디 폭 = 음표 수 비례(clamp). 줄 폭 = 마디 폭 합. 전체 폭 = 가장 넓은 줄.
     const measureArea = (mb: BuiltMeasure) =>
@@ -766,8 +771,15 @@ export function renderStaff(score: Score, mode: StaffMode): string {
 
       let tabstave: TabStave | null = null;
       if (withTab) {
-        // ★타브 줄 수 = 현 수(nStr). 4현 베이스=4줄, 5현=5줄, 6현 기타=6줄(TabStave 기본과 동일 → 불변).
-        tabstave = new TabStave(x, sysTop + tabDy, thisStaveW, { num_lines: nStr });
+        // ★타브 줄 수 = 현 수(nStr). 4현 베이스=4줄, 5현=5줄, 6현 기타=6줄.
+        // 줄 간격을 조정해 타브 총 높이를 현 수와 무관하게 6현 기준(5칸×13px)으로 고정 →
+        // 좌측 "TAB" clef 글자(고정 크기)가 낮은 스테이브 밖으로 튀어나오지 않는다.
+        // 6현은 (13×5)/5 = 13 으로 TabStave 기본과 동일 → 기타 산출 바이트 불변.
+        const tabSpacing = (13 * 5) / (nStr - 1);
+        tabstave = new TabStave(x, sysTop + tabDy, thisStaveW, {
+          num_lines: nStr,
+          spacing_between_lines_px: tabSpacing,
+        });
         tabstave.addClef('tab');
         // 오선보/타브 음표 x 정렬: 타브의 노트 시작 x 를 오선보와 맞춘다.
         tabstave.setNoteStartX(stave.getNoteStartX());
