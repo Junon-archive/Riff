@@ -1,6 +1,6 @@
 ---
 id: 09-beginner-electric-curriculum
-status: IN_PROGRESS (16일 day 저작 완료 2026-07-10 — 대표 이미지만 대기)
+status: DONE (16일 day 저작 + 대표 이미지 완료 2026-07-10)
 priority: high
 risk: low
 depends_on: []
@@ -152,7 +152,7 @@ A|-7-7-7-7---3-5-7-|   ← 같은 파워코드 폼을 3→5→7 슬라이드
 - [x] **month_1·week_1~4 overview 3개국어 작성 완료.**
 - [x] **16일 Day별 상세 저작 완료(2026-07-10, /goal 주차별 순차)** — week_1~4 각 12파일=총 48파일. build 412p(361→+51), invariants 354블록(신규 39·기존 회귀0), 16일 전량 3언어 mark 일치·④/완료기준 mark=0·악보 3언어 바이트 동일·핀고정 5개 바이트 동일. day4 졸업 섹션 포함.
 - [ ] 완성물 리프 **변형안 후보 중 택1** (원하면 — 현재 각 1개 확정)
-- [ ] 커리큘럼 대표 **이미지**(`/curriculum/beginner-electric.webp`) 제작
+- [x] 커리큘럼 대표 **이미지**(`/curriculum/beginner-electric.webp`) 제작 — 2026-07-10, curriculum4.jpg(헤드스톡)→webp 1200x800 21.5KB
 
 ## §12. 준수할 공통 규약 (기존 자산 재사용 — 새로 정의 안 함)
 - Day 4단 구조(① 이론 토스체 "왜" → ② 시각자료 JSON 렌더 → ③ 연습 루틴 → ④ 팁/실수).
