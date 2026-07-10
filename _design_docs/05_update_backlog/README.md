@@ -22,7 +22,7 @@
 | 02 | [표현 기법(밴딩·해머링·붙임줄·잇단음·비4/4)](02_expressive-techniques.md) | 🟢 DONE (A 기법·B tie·C tuplet·D 비4/4, 기존 바이트 불변) | 중간 | 중간 | 없음 |
 | 03 | [악보 음정 정확성(조표·튜닝·다현)](03_notation-accuracy.md) | 🟢 DONE (①②③: 조표+튜닝+다현/지판, 기존 116일 바이트 불변) | 중간 | 높음 | 없음(내부 순서 있음) |
 | 04 | [슬래시 리듬 표기](04_slash-rhythm.md) | 🟢 DONE (자체 슬래시 바 path, 기존 바이트 불변) | 낮음 | 중간 | 없음 |
-| 05 | [태그·필터 브라우징](05_tag-filter.md) | 🔴 TODO | 낮음 | 낮음 | 없음 |
+| 05 | [커리큘럼 브라우징 — 악기 그룹핑 + 악기별 액센트 테마](05_tag-filter.md) | 🔴 TODO | 중간 | 중간 | 없음 |
 | 06 | [기존 커리큘럼 악보 인라인 재배치](06_visual-relocation.md) | 🟢 DONE (77 day, 1 선별제외) | 중간 | 낮음 | 01(완료) |
 | 07 | [PWA 앱화 (Android Play 등재 + iOS/Android 홈 설치)](07_pwa.md) | 🟡 IN_PROGRESS (A·B 검증완료·C 코드완료/안드검증보류·D 미착수) | 중간 | 낮음 | 없음 |
 | 08 | [산문 하이라이트 + 커리큘럼 볼드 (레시피 동결)](08_Highlight.md) | 🟢 DONE (3커리큘럼 116 day + intro 3종 × 3언어, `<mark>` 4182개) | 중간 | 낮음 | 없음 |
@@ -30,7 +30,7 @@
 | 10 | [베이스 지원 (클레프·slap·튜닝·다현·지판) + 베이스 커리큘럼](10_bass-support.md) | 🟡 IN_PROGRESS (엔진 B0~B4 완료 · 콘텐츠 B5 대기) | 중간 | 높음 | 03·02(완료) |
 | 11 | [블루스 커리큘럼 신설 (2개월·리듬+리드)](11_blues-curriculum.md) | 🔴 TODO (구상·저작 미착수) | 높음 | 낮음 | 없음 |
 | 12 | [R&B/네오소울 보이싱 커리큘럼 신설 (2개월)](12_neosoul-voicing-curriculum.md) | 🔴 TODO (구상·저작 미착수) | 중간 | 낮음 | 없음 |
-| 13 | [베이스 기초 커리큘럼 신설 (1개월·손 만들기)](13_beginner-bass-curriculum.md) | 🔴 TODO (구상·저작 미착수) | 높음 | 중간 | 10 |
+| 13 | [베이스 기초 커리큘럼 신설 (1개월·손 만들기)](13_beginner-bass-curriculum.md) | 🔴 TODO (설계 상세 확정·저작 미착수) | 높음 | 중간 | 10 |
 | 14 | [슬랩/펑크 베이스 커리큘럼 신설 (2개월)](14_slap-funk-bass-curriculum.md) | 🔴 TODO (구상·저작 미착수) | 중간 | 중간 | 10·13 |
 | 15 | [그루브 & 포켓 베이스 커리큘럼 신설 (1개월)](15_groove-pocket-bass-curriculum.md) | 🔴 TODO (구상·저작 미착수) | 중간 | 중간 | 10·13 |
 | 16 | [워킹 베이스 커리큘럼 신설 (2개월)](16_walking-bass-curriculum.md) | 🔴 TODO (구상·저작 미착수) | 중간 | 중간 | 10·13 |
