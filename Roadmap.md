@@ -82,6 +82,9 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-11 (백로그 14 — 슬랩/펑크 7주차 day 저작)
+- week_7(팝핑 멜로디·더블스탑 chord[]·더블썸 맛보기) day_1~4 × 3언어=12파일. 핀고정 popping_melody 4·5현 바이트 동일. build 550p exit 0, invariants 신규 30블록·회귀0(baseline 570→600), 4·5현 병행·slap·볼드/mark 3언어 일치.
+
 ### 2026-07-11 (백로그 14 — 슬랩/펑크 6주차 day 저작)
 - week_6(해머온/풀오프 레가토 → E 마이너 펜타토닉 슬랩 릭) day_1~4 × 3언어=12파일. 핀고정 pentatonic_slap_lick 4·5현 바이트 동일. build 538p exit 0, invariants 신규 30블록·회귀0(baseline 540→570), hammer_on/pull_off 첫 활용, 4·5현 병행·slap·볼드/mark 3언어 일치.
 
