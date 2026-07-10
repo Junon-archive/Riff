@@ -82,6 +82,10 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-11 (백로그 14 **완료** — 슬랩/펑크 8주차 day 저작 = **트랙 졸업**)
+- week_8(옥타브·고스트·싱코·팝핑 종합 → 클래식 펑크 슬랩 그루브 곡 완성·녹음, 2마디) day_1~4 × 3언어=12파일. 핀고정 funk_slap_graduation 4·5현 바이트 동일. build 562p exit 0, invariants 신규 30블록·회귀0(baseline 600→630), day_4 (슬랩/펑크 졸업!) 3언어 라벨·다음 트랙(셔플&바운스·워킹) 다리.
+- **백로그 14 완료:** slap_funk_bass_2months 2개월·8주·32일 × 3언어 = **96 day 파일** 전량 저작·검증·커밋·push 완료. 옥타브 슬랩(M1) → 16싱코·레가토·팝핑·졸업(M2). slap_thumb/slap_pop/dead_note·hammer_on/pull_off·chord[] 더블스탑 전 활용, 4·5현 병행.
+
 ### 2026-07-11 (백로그 14 — 슬랩/펑크 7주차 day 저작)
 - week_7(팝핑 멜로디·더블스탑 chord[]·더블썸 맛보기) day_1~4 × 3언어=12파일. 핀고정 popping_melody 4·5현 바이트 동일. build 550p exit 0, invariants 신규 30블록·회귀0(baseline 570→600), 4·5현 병행·slap·볼드/mark 3언어 일치.
 
