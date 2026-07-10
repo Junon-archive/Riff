@@ -1,6 +1,6 @@
 ---
 id: 13-beginner-bass-curriculum
-status: IN_PROGRESS (주차 프롬프트 4개 완료 — day 저작 미착수. 엔진 10 B0~B4 완료)
+status: DONE (16일 day 저작 완료 + 지판 보강 + 볼드/하이라이트 정합, 2026-07-10)
 priority: high
 risk: medium
 depends_on: [10]
@@ -105,7 +105,7 @@ depends_on: [10]
 - [x] **주차 프롬프트 4개 작성 완료**(week_1~4, §13 청사진 + 4/5현 병행 블록 + 연초록 하이라이트 + 핑거스타일·30분. 핀 고정 완성물 8블록 박자합 4.0·현범위 검증).
 - [x] **프롬프트 정합 수정 완료(2026-07-10):** ① day-끝 라벨 '완성물'→'오늘의 완료 기준'(기존 132일·08 앵커 정합, day_4는 (N주차 완성!) 병기) ② 연초록 하이라이트 단언→"악기 테마 05 적용 시"로 완화(05 미구현 반영).
 - [x] **저작 준비물 완비(2026-07-10):** meta.json(intro 3언어·instrument:bass·image) + overview 15파일(month_1+week_1~4×3언어, 일렉 형식) + 대표 이미지(`beginner-bass.webp`, bass_curriculum4 핑거스타일). build 발견·파싱 OK.
-- [~] 프롬프트 실행 → `day_N.{ko,en,ja}.md` 16일 저작 → build·박자합·invariants 통과 — /goal 주차별 순차 진행 중: **week_1·2 완료(2026-07-10, 각 12파일, build 439p·invariants 회귀0·4·5현 병행 쌍·핀고정 검증)**. week_3~4 대기. + **산문 볼드 보강**(기존 기타 커리큘럼 방식) + **intro 볼드/하이라이트 분리** 완료.
+- [x] **프롬프트 실행 → 16일 day 저작 완료(2026-07-10, /goal 주차별 순차)** — week_1~4 각 12파일=48파일. build 463p, invariants baseline 422(신규 64블록·기존 회귀0), 4·5현 병행 쌍·핀고정 4주 전부·instrument:bass·볼드+하이라이트 3언어 일치. + **지판 보강**(w1d1 음위치 지도·w4d2 옥타브 박스, fretboard_diagram 4·5현, 03③ 베이스 지판 첫 활용) + **intro 볼드/하이라이트 분리**.
 
 ## 준수 공통 규약 (재사용)
 - Day 4단(①이론 ②시각 ③30분 루틴 ④팁), 토스톤(긁지 않기), i18n 3언어(악보 JSON 바이트 동일), 인라인 배치+`▶`연주안내, 산문 `<mark>` 하이라이트(↔ 악보 `role:target` 초록과 구분).
