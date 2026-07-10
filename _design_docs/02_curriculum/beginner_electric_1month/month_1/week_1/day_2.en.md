@@ -9,15 +9,15 @@ i18nKey: "lesson.m1.w1.d2"
 
 ## ① Theory
 
-Yesterday you woke up the right hand; today it's the left hand's turn. The left hand's first principle is just one thing — <mark>one finger, one fret</mark>. Index on fret 1, middle on 2, ring on 3, pinky on 4. Each finger has its own assigned spot. Picture four fingers lined up side by side on the frets. Like stepping up a staircase one stair at a time, index through pinky each take their place in turn.
+Yesterday you woke up the right hand; today it's the **left hand's** turn. The left hand's first principle is just one thing — <mark>one finger, one fret</mark>. **Index on fret 1**, middle on 2, ring on 3, pinky on 4. Each finger has its own assigned spot. Picture four fingers lined up side by side on the frets. Like stepping up a staircase one stair at a time, index through pinky each take their place in turn.
 
-Where you press matters too. Press not in the middle of the fret but <mark>just behind the fret (left of the metal bar)</mark>, and you get a clean, buzz-free sound with little force. And stand your fingertip up, pressing with the plump part just under the nail. Lay the finger flat and it touches the neighboring string and chokes the sound.
+Where you press matters too. Press not in the middle of the fret but <mark>just behind the fret (left of the metal bar)</mark>, and you get a **clean, buzz-free sound** with little force. And **stand your fingertip up**, pressing with the plump part just under the nail. Lay the finger flat and it touches the neighboring string and chokes the sound.
 
-Playing 1-2-3-4 in order across one string is <mark>chromatic practice</mark>. Rising one half-step, one fret at a time — the most boring but most reliable finger workout in the world. At first your pinky won't listen and will fly off on its own — that's normal; it's naturally the weakest one, and in a few days it starts pulling its weight. It's okay if this drill feels a bit boring — the fingers that endure the boredom become the fastest, most accurate fingers later. Nail down this <mark>independence of all four fingers</mark> today, and from here on your fingers find their spots on their own in any phrase.
+Playing 1-2-3-4 in order across one string is <mark>chromatic practice</mark>. **Rising one half-step**, one fret at a time — the most boring but most reliable finger workout in the world. At first your **pinky** won't listen and will fly off on its own — that's normal; it's naturally the weakest one, and in a few days it starts pulling its weight. It's okay if this drill feels a bit boring — the fingers that endure the boredom become the fastest, most accurate fingers later. Nail down this <mark>independence of all four fingers</mark> today, and from here on your fingers find their spots on their own in any phrase.
 
 ## ② Visuals
 
-Both examples below press 1-2-3-4 on the 6th string. The frets are low, so your hand reaches comfortably. The notes have no color because right now <mark>finger placement over pitch</mark> is the star.
+Both examples below press 1-2-3-4 on the **6th string**. The frets are low, so your hand reaches comfortably. The notes have no color because right now <mark>finger placement over pitch</mark> is the star.
 
 **Example 1 — quarter-note chromatic.** One note per beat, slowly. Eyeing the finger numbers (1·2·3·4).
 
@@ -39,7 +39,7 @@ Both examples below press 1-2-3-4 on the 6th string. The frets are low, so your 
 
 ▶ **BPM 60.** Note by note, leave each pressed finger down until the next one lands. Focus only on whether the sound is clean.
 
-**Example 2 — eighth-note round-trip chromatic.** One bar that climbs 1-2-3-4 and then <mark>comes back down</mark> 4-3-2-1. On the way down, build the feel of lifting one finger at a time.
+**Example 2 — eighth-note round-trip chromatic.** One bar that climbs 1-2-3-4 and then <mark>comes back down</mark> 4-3-2-1. On the way down, build the feel of **lifting one finger at a time**.
 
 ```json
 {
@@ -66,10 +66,10 @@ Both examples below press 1-2-3-4 on the 6th string. The frets are low, so your 
 ## ③ Today's practice (30-minute routine)
 
 **0–7 min · Warm-up**
-Repeat yesterday's open-6th-string downpicking at BPM 60–65 to loosen up. This is time to get back <mark>your right hand's evenness</mark>.
+Repeat yesterday's open-6th-string **downpicking** at BPM 60–65 to loosen up. This is time to get back <mark>your right hand's evenness</mark>.
 
 **7–17 min · Today's skill**
-Play 1-2-3-4 on the 6th string very slowly. Especially watch whether the pinky (finger 4) <mark>lands clearly</mark> on the fret.
+Play 1-2-3-4 on the 6th string very slowly. Especially watch whether the **pinky (finger 4)** <mark>lands clearly</mark> on the fret.
 
 **17–27 min · Applying it**
 **Example 1** (quarter notes) four times at BPM 60 → once comfortable, move to **Example 2** (eighth round-trip) and do it four times at BPM 60. If it buzzes, don't raise the speed — fix where you're pressing.

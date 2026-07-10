@@ -9,15 +9,15 @@ i18nKey: "lesson.m1.w4.d1"
 
 ## ① Theory
 
-Last week you stacked power-chord bricks. But hit the same chord <mark>four times, neat and even</mark>, and it feels a little flat. Today we give that riff a face. The trick isn't playing more — it's actually <mark>resting now and then</mark>. The gap a rest carves out breathes life into the sound, and pulling a beat slightly early makes the riff feel like it's leaping forward. Four weeks ago even ringing one open string was a struggle; now you're designing rhythm.
+Last week you stacked power-chord bricks. But hit the same chord <mark>four times, neat and even</mark>, and it feels a little flat. Today we give that riff a face. The trick isn't playing more — it's actually <mark>resting now and then</mark>. The **gap a rest carves out** breathes life into the sound, and **pulling a beat slightly early** makes the riff feel like it's leaping forward. Four weeks ago even ringing one open string was a struggle; now you're designing rhythm.
 
-First, rests. A rest on the staff isn't a "don't play" sign, it's a "breathe here" sign. Only when there's a gap between sounds does the next hit land harder. On the rest, your picking hand lays the palm or a finger lightly over the strings to cut the sound dead. One empty slot actually makes the next sound stand out more sharply. A riff that breathes sounds far cooler than one crammed full.
+First, rests. A rest on the staff isn't a "don't play" sign, it's a "**breathe here**" sign. Only when there's a gap between sounds does the next hit land harder. On the rest, your picking hand lays the palm or a finger lightly over the strings to cut the sound dead. **One empty slot** actually makes the next sound stand out more sharply. A riff that breathes sounds far cooler than one crammed full.
 
-Next, syncopation. Normally you play on the beat, but every so often playing early, in between beats (the upbeat), gives the rhythm a <mark>forward-leaning tension</mark>. Add a touch of octave on top and the same riff gets a thicker voice. Today we drip in these three — rests, syncopation, octaves — one drop at a time to bring yesterday's riff to life. Expression comes not from the number of notes but from how you place sound and silence. So don't rush — hold each slot in its exact place.
+Next, syncopation. Normally you play on the beat, but every so often playing early, in between beats (the upbeat), gives the rhythm a <mark>forward-leaning tension</mark>. Add a touch of **octave** on top and the same riff gets a thicker voice. Today we drip in these three — **rests, syncopation, octaves** — one drop at a time to bring yesterday's riff to life. Expression comes not from the number of notes but from how you place sound and silence. So don't rush — hold each slot in its exact place.
 
 ## ② Visuals
 
-First, feel the <mark>gap</mark> a rest makes. Play E5 for two beats, then rest one, and repeat.
+First, feel the <mark>gap</mark> a rest makes. Play E5 for **two beats, then rest one**, and repeat.
 
 ```json
 {
@@ -37,7 +37,7 @@ First, feel the <mark>gap</mark> a rest makes. Play E5 for two beats, then rest 
 
 ▶ BPM 80. Play two beats, rest one. On the rest, mute the strings with your palm to cut the sound dead.
 
-Now octaves. Lay the same note an octave higher (8) over the root and the riff's voice gets thicker.
+Now octaves. Lay the same **note an octave higher (8)** over the root and the riff's voice gets thicker.
 
 ```json
 {
@@ -93,10 +93,10 @@ Now put all three into one riff. Breathe with the rests, pull the upbeats early,
 At BPM 70, grip and release last week's power-chord shapes (E5·G5) to warm up your hands, checking both notes ring clear.
 
 **7–17 min · Today's skill**
-Repeat the rest drill and octaves very slowly. On the <mark>resting spot</mark>, check the sound cuts cleanly, and that the two octave notes sound together.
+Repeat the rest drill and octaves very slowly. On the <mark>resting spot</mark>, check the sound cuts cleanly, and that the **two octave notes** sound together.
 
 **17–27 min · Applying it**
-Repeat the rhythm riff four times at BPM 80 → once there's no wobble, raise it one step to the target BPM 90. Just focus on resting fully on the rests and pulling the upbeats a touch early.
+Repeat the rhythm riff four times at BPM 80 → once there's **no wobble**, raise it one step to the target BPM 90. Just focus on resting fully on the rests and pulling the upbeats a touch early.
 
 **27–30 min · Check**
 Write down the BPM you reached and record 30 seconds to hear whether the rests come through clearly and the riff has a face now.

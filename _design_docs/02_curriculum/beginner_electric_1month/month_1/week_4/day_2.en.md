@@ -9,15 +9,15 @@ i18nKey: "lesson.m1.w4.d2"
 
 ## ① Theory
 
-A song doesn't flow at the same intensity from start to finish. It has to whisper quietly, then have a <mark>moment it bursts open</mark> to move people. Today we build two parts — a verse that stays low, and a chorus that opens wide. There are no hard new chords. We take the power chords you already own and use them with two faces just by changing intensity. Add just one contrast in intensity and a flat riff suddenly sounds like a song. Four weeks ago even one note was a struggle; now you're building a song's push and pull.
+A song doesn't flow at the same intensity from start to finish. It has to whisper quietly, then have a <mark>moment it bursts open</mark> to move people. Today we build two parts — **a verse that stays low, and a chorus that opens wide**. There are no hard new chords. We take the power chords you already own and use them with **two faces just by changing intensity**. Add just one contrast in intensity and a flat riff suddenly sounds like a song. Four weeks ago even one note was a struggle; now you're building a song's push and pull.
 
-The verse is palm-muted. Press the strings lightly with the palm of your picking hand to trap the sound stuffy, and it becomes a low, growling <mark>whisper</mark>. For the chorus, you lift that palm. The trapped sound releases all at once and the power chords ring wide open. Same chord — but one palm splits "quiet" from "loud." When the sound flings open on the chorus, the listener's heart opens with it. This contrast is the song's expression.
+**The verse is palm-muted.** Press the strings lightly with the palm of your picking hand to trap the sound stuffy, and it becomes a low, growling <mark>whisper</mark>. For the chorus, **you lift that palm**. The trapped sound releases all at once and the power chords ring wide open. Same chord — but one palm splits "quiet" from "loud." When the sound flings open on the chorus, the listener's heart opens with it. This contrast is the song's expression.
 
-The most important thing is <mark>crossing over without stopping</mark>. At the instant you cross from the verse's last chord to the chorus's first, you lift the palm. The beginner's trap is a little hesitation when parts change. Learn the palm-lift timing into your body in advance and the two parts join into a single flow. The transition isn't hard — you just lift the palm at one moment you've decided in advance. Get this transition smooth today, and you're already playing a "song."
+The most important thing is <mark>crossing over without stopping</mark>. At the instant you cross from the verse's last chord to the chorus's first, **you lift the palm**. The beginner's trap is a little hesitation when parts change. Learn the palm-lift timing into your body in advance and the two parts join into a single flow. The transition isn't hard — you just lift the palm at **one moment you've decided in advance**. Get this transition smooth today, and you're already playing a "song."
 
 ## ② Visuals
 
-First the verse. Keep open E5 low with palm muting. Lay the palm on lightly to trap the sound, and drive it even.
+First the verse. Keep open E5 **low with palm muting**. Lay the palm on lightly to trap the sound, and drive it even.
 
 ```json
 {
@@ -41,7 +41,7 @@ First the verse. Keep open E5 low with palm muting. Lay the palm on lightly to t
 
 ▶ BPM 100. Press with the palm to growl it low. If the sound feels stuffy and trapped, you've got it.
 
-Now the chorus. Lift the palm and ring C5→G5 wide open. Same hand, but the sound flings open.
+Now the chorus. **Lift the palm and ring C5→G5 wide open.** Same hand, but the sound flings open.
 
 ```json
 {
@@ -110,10 +110,10 @@ Now join the two. Drive two verse bars, then at the <mark>instant you lift the p
 At BPM 80, lightly repeat the open-E5 palm-muted chug on the 6th string to revive your picking-hand palm position.
 
 **7–17 min · Today's skill**
-Play the verse (palm-muted) and the chorus (wide open) separately to widen the sound difference. Learn the <mark>palm-lift timing</mark> into your body on the verse's last beat.
+Play the verse (palm-muted) and the chorus (wide open) separately to **widen the sound difference**. Learn the <mark>palm-lift timing</mark> into your body on the verse's last beat.
 
 **17–27 min · Applying it**
-Repeat the transition example four times at BPM 90 → once there's no hesitation, raise it one step to the target BPM 100. Focus only on the beat not breaking as you cross from verse to chorus.
+Repeat the transition example four times at BPM 90 → once there's **no hesitation**, raise it one step to the target BPM 100. Focus only on the beat not breaking as you cross from verse to chorus.
 
 **27–30 min · Check**
 Write down the BPM you reached and record 30 seconds to hear whether the intensity difference between verse and chorus comes through and the transition doesn't break.

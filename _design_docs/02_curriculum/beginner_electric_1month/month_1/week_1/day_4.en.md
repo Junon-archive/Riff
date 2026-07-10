@@ -9,15 +9,15 @@ i18nKey: "lesson.m1.w1.d4"
 
 ## ① Theory
 
-At last, the final day of the week — today you glue together everything you learned piece by piece. Downpicking, chromatic 1-2-3-4, alternate picking — put all three into one riff and that's the <mark>spider chromatic</mark>. It's named for the way your fingers crawl across the fretboard like a spider. The name sounds grand, but it's really just the 1-2-3-4 you've played until yesterday, linked together while only changing strings. Your hand already knows every motion, so there's nothing to fear.
+At last, the final day of the week — today you glue together everything you learned piece by piece. Downpicking, chromatic 1-2-3-4, alternate picking — put all three into one riff and that's the <mark>spider chromatic</mark>. It's named for the way your fingers crawl across the fretboard **like a spider**. The name sounds grand, but it's really just the **1-2-3-4** you've played until yesterday, linked together while only changing strings. Your hand already knows every motion, so there's nothing to fear.
 
-Only one thing is newly added: <mark>string crossing</mark>. Play 1-2-3-4 on the 6th string, then the 5th, then down through the 4th, 3rd, 2nd, and 1st. Here your right hand only needs the feel of "shifting over to sit one string across." Keep the alternate picking going and just change strings. The right-hand pick only shifts by about the thickness of one string, so the motion is much smaller than you'd think.
+Only one thing is newly added: <mark>string crossing</mark>. Play 1-2-3-4 on the 6th string, then the **5th**, then down through the 4th, 3rd, 2nd, and 1st. Here your right hand only needs the feel of "shifting over to sit one string across." **Keep the alternate picking going** and just change strings. The right-hand pick only shifts by about the thickness of one string, so the motion is much smaller than you'd think.
 
-At first the beat will stumble the moment the string changes — that's normal, and that seam is exactly today's polishing spot. If you can play this one riff from the 6th string down to the 1st <mark>buzz-free all the way</mark>, that's <mark>solid proof</mark> that everything you learned this week has stuck to your hand. And if you can't make it all the way to the 1st string today, that's fine — even two or three smooth strings mean your hand is definitely growing. The hand you built this week — today you see it with your own eyes.
+At first the beat will stumble the moment the string changes — that's normal, and that seam is exactly today's polishing spot. If you can play this one riff **from the 6th string down to the 1st** <mark>buzz-free all the way</mark>, that's <mark>solid proof</mark> that everything you learned this week has stuck to your hand. And if you can't make it all the way to the 1st string today, that's fine — even **two or three smooth strings** mean your hand is definitely growing. The hand you built this week — today you see it with your own eyes.
 
 ## ② Visuals
 
-First, pull out just the string crossing and practice it. 6th string 1-2-3-4, then 5th string 1-2-3-4 — once this <mark>first seam</mark> smooths out, the rest is the same principle repeated.
+First, pull out just the **string crossing** and practice it. 6th string 1-2-3-4, then 5th string 1-2-3-4 — once this <mark>first seam</mark> smooths out, the rest is the same principle repeated.
 
 ```json
 {
@@ -41,7 +41,7 @@ First, pull out just the string crossing and practice it. 6th string 1-2-3-4, th
 
 ▶ **BPM 60.** Don't stop the alternate picking even at the moment you cross to the 5th string. Only the string changes; the round-trip stays.
 
-Now, this week's deliverable: the spider chromatic. Climb from the 6th string to the 1st, then in the last measure turn around and <mark>come back to the 2nd string</mark>. Repeat it and it becomes a looping riff that flows on naturally.
+Now, this week's deliverable: the **spider chromatic**. Climb from the 6th string to the 1st, then in the last measure turn around and <mark>come back to the 2nd string</mark>. Repeat it and it becomes a looping riff that flows on naturally.
 
 ```json
 {
@@ -101,10 +101,10 @@ Now, this week's deliverable: the spider chromatic. Climb from the 6th string to
 Play yesterday's chromatic alternate (1-2-3-4) on the 6th string at BPM 60. Revive the feeling of the two hands meeting.
 
 **7–17 min · Today's skill**
-Repeat Example 1 (the string-crossing drill) at BPM 60. Smooth it out by focusing <mark>only on the seam</mark> where you cross from the 6th to the 5th string.
+Repeat Example 1 (the string-crossing drill) at BPM 60. Smooth it out by focusing <mark>only on the seam</mark> where you cross from the **6th to the 5th string**.
 
 **17–27 min · Applying it (this week's deliverable)**
-Repeat the spider chromatic four times at BPM 60 → once it's buzz-free, raise it one step (BPM 65) for four more, and up to 70 if you have room. The goal is for 6→1 string to flow <mark>as one breath</mark>.
+Repeat the spider chromatic four times at BPM 60 → once it's buzz-free, raise it one step (BPM 65) for four more, and up to 70 if you have room. The goal is for **6→1 string** to flow <mark>as one breath</mark>.
 
 **27–30 min · Check**
 Record this week's top BPM, and record 30 seconds to check that the sound doesn't cut out at the points where strings change.

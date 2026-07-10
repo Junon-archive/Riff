@@ -9,15 +9,15 @@ i18nKey: "lesson.m1.w3.d1"
 
 ## ① Theory
 
-You cleared single-note riffs through Week 2, so this week the <mark>'rock sound'</mark> finally arrives. A power chord sounds fancy, but it's really <mark>a single brick built from two fingers</mark>. One root note plus the 5th right above it — ring just those two and that's a power chord. It's neither bright nor dark, so it sits on any song, like the heart of rock. No need to fear the word 'chord' at all.
+You cleared single-note riffs through Week 2, so this week the <mark>'rock sound'</mark> finally arrives. A power chord sounds fancy, but it's really <mark>a single brick built from two fingers</mark>. **One root note plus the 5th right above it** — ring just those two and that's a power chord. It's **neither bright nor dark**, so it sits on any song, like the heart of rock. No need to fear the word 'chord' at all.
 
-Today you learn two shapes. One puts the **root on the 6th string**, the other on the 5th string. Fret the root, then press the 5th two frets up on the string right below it — done. We start on open strings, so barely any fingers are needed. Open 6th string is E5, open 5th string is A5 — two power chords already in your hands.
+Today you learn two shapes. One puts the **root on the 6th string**, the other on the 5th string. Fret the root, then press the **5th two frets up** on the string right below it — done. We start on open strings, so barely any fingers are needed. **Open 6th string is E5, open 5th string is A5** — two power chords already in your hands.
 
-The real skill of a power chord isn't the pressing, it's <mark>killing the strings you don't use</mark>. Only two notes should ring clearly while the other four stay silent. Drape the flesh of your fretting fingers lightly over the neighboring strings, and let your picking-hand palm hush the lower strings. Keep your unused left-hand fingers laid lightly across the strings, and aim your pick at just the two power-chord strings — the noise drops away fast. A little noise at first is fine. Once you can keep just two notes at a slow tempo, riffs like 〈You Really Got Me〉 and 〈Iron Man〉 land in your hands from this one shape. Once one brick is laid, the next one sits down far more easily.
+The real skill of a power chord isn't the pressing, it's <mark>killing the strings you don't use</mark>. **Only two notes should ring clearly** while the other four stay silent. Drape the flesh of your fretting fingers lightly over the neighboring strings, and let your **picking-hand palm** hush the lower strings. Keep your unused left-hand fingers laid lightly across the strings, and aim your pick at just the two power-chord strings — the noise drops away fast. A little noise at first is fine. Once you can keep just two notes at a slow tempo, riffs like 〈You Really Got Me〉 and 〈Iron Man〉 land in your hands from this one shape. Once one brick is laid, the next one sits down far more easily.
 
 ## ② Visuals
 
-Two shapes to learn today. First E5 with the <mark>root on the 6th string</mark>, then A5 with the root on the 5th. The finger shape is identical; only the strings shift over by one.
+Two shapes to learn today. First E5 with the <mark>root on the 6th string</mark>, then A5 with the root on the 5th. **The finger shape is identical**; only the strings shift over by one.
 
 ```json
 {
@@ -55,7 +55,7 @@ Two shapes to learn today. First E5 with the <mark>root on the 6th string</mark>
 
 ▶ Now the root has moved to the 5th string. The 6th is X too — be sure to hush it with your picking-hand palm.
 
-Now that you've seen the shape, let's actually play it. Strike E5 once per beat, four crisp times.
+Now that you've seen the shape, let's actually play it. Strike E5 **once per beat**, four crisp times.
 
 ```json
 {
@@ -101,10 +101,10 @@ Now the same on A5.
 Set the metronome to BPM 60 and lightly repeat Week 2's palm-muted chug on the 6th string to loosen your hands. Reset your picking-hand palm position first.
 
 **7–17 min · Today's skill**
-Grab and release the E5 and A5 shapes very slowly, checking that <mark>only two notes</mark> ring clearly. Inspect string by string that the other four stay silent.
+Grab and release the **E5 and A5 shapes** very slowly, checking that <mark>only two notes</mark> ring clearly. Inspect string by string that the other four stay silent.
 
 **17–27 min · Applying it**
-Repeat the examples (four E5 strums · four A5 strums) four times each at BPM 70 → once there's no noise, raise it one step. Focus only on both notes sounding together.
+Repeat the examples (four E5 strums · four A5 strums) four times each at BPM 70 → once there's **no noise**, raise it one step. Focus only on both notes sounding together.
 
 **27–30 min · Check**
 Write down the BPM you reached, and if you like, record 30 seconds to hear whether any stray strings leak.

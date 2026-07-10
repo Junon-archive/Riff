@@ -9,15 +9,15 @@ i18nKey: "lesson.m1.w3.d3"
 
 ## ① Theory
 
-Now you dress the power chord in rhythm. What your right hand learns today is <mark>palm muting</mark> — resting the edge of your picking-hand palm on the bridge to half-block the sound. The wide-open power chord suddenly turns into a low, growling "chug-chug." That's the heartbeat groove of rock and metal riffs. It'll surprise you how completely one palm changes the sound's expression. Move the right hand from the wrist, flicking lightly, not from the arm — that's how you drive it long without tiring.
+Now you dress the power chord in rhythm. What your right hand learns today is <mark>palm muting</mark> — resting the **edge of your picking-hand palm** on the bridge to half-block the sound. The wide-open power chord suddenly turns into a low, growling "chug-chug." That's the **heartbeat groove of rock and metal riffs**. It'll surprise you how completely one palm changes the sound's expression. Move the right hand from the wrist, flicking lightly, not from the arm — that's how you drive it long without tiring.
 
-The partner of a palm-muted riff is <mark>downpicking</mark>. Striking only top-to-down makes the sound heavy and even. The key is where you rest the palm — just in front of the bridge; cover too deep and the pitch vanishes, too shallow and nothing gets blocked. Roll it around until your hand memorizes the spot where "the pitch stays but the tail cuts short." Keep the palm on the bridge without lifting it off the strings, and just repeat the picking — the position soon settles into your body.
+The partner of a palm-muted riff is <mark>downpicking</mark>. **Striking only top-to-down** makes the sound heavy and even. The key is where you rest the palm — just in front of the bridge; cover too deep and the pitch vanishes, too shallow and nothing gets blocked. Roll it around until your hand memorizes the spot where "**the pitch stays but the tail cuts short**." Keep the palm on the bridge without lifting it off the strings, and just repeat the picking — the position soon settles into your body.
 
-Today's goal isn't speed, it's <mark>an evenness glued to the beat</mark>. When all eight "chugs" come out at the same strength and length, that's done. Shelve the urge to add dynamics for now. Evenness first, expression next. Once this palm-muted chug sticks, the heavy intro of 〈Iron Man〉 comes straight out of your hands.
+Today's goal isn't speed, it's <mark>an evenness glued to the beat</mark>. When all eight "chugs" come out at the **same strength and length**, that's done. Shelve the urge to add dynamics for now. **Evenness first**, expression next. Once this palm-muted chug sticks, the heavy intro of 〈Iron Man〉 comes straight out of your hands.
 
 ## ② Visuals
 
-First, drive open E5 with palm muting only. Make all eight <mark>"chugs"</mark> come out at the same strength and length.
+First, drive open E5 with palm muting only. Make all eight <mark>"chugs"</mark> come out at the **same strength and length**.
 
 ```json
 {
@@ -41,7 +41,7 @@ First, drive open E5 with palm muting only. Make all eight <mark>"chugs"</mark> 
 
 ▶ BPM 90, all downpicks. Rest the palm on the bridge to find the "pitch stays, tail cuts short" sound. Keep all eight chugs even.
 
-Now build a groove. Chug along palm-muted, then lift the palm off only the last chord to let it ring wide open (green accent).
+Now build a groove. Chug along palm-muted, then lift the palm off **only the last chord** to let it ring wide open (green accent).
 
 ```json
 {
@@ -80,10 +80,10 @@ Now build a groove. Chug along palm-muted, then lift the palm off only the last 
 At BPM 70, lightly repeat yesterday's G5↔A5 round trip to warm the left hand, and set your picking-hand palm in front of the bridge first.
 
 **7–17 min · Today's skill**
-Play Example 1 (palm-muted E5 chug) slowly. Fine-tune the palm depth to find the sound where <mark>the pitch stays but the tail cuts short</mark>. Check by ear that all eight chugs are even.
+Play Example 1 (palm-muted E5 chug) slowly. Fine-tune the **palm depth** to find the sound where <mark>the pitch stays but the tail cuts short</mark>. Check by ear that all eight chugs are even.
 
 **17–27 min · Applying it**
-Repeat Example 2 (chug + open E5) four times at BPM 80 → once it's even, raise it to 90. Don't forget to lift the palm off only the green E5 to let it ring wide.
+Repeat Example 2 (chug + open E5) four times at BPM 80 → once it's **even**, raise it to 90. Don't forget to lift the palm off only the green E5 to let it ring wide.
 
 **27–30 min · Check**
 Write down the BPM you reached and record 30 seconds to hear whether every chug is even in strength and length.

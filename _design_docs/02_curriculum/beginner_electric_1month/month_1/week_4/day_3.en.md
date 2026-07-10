@@ -9,15 +9,15 @@ i18nKey: "lesson.m1.w4.d3"
 
 ## ① Theory
 
-All week you've handled chords. Today we turn for a moment to taste <mark>melody</mark>. Solos — that sound of the guitar singing — mostly come out of a scale called the "pentatonic." It's a five-note scale, and since not one of its notes sounds off, even a beginner poking around at random ends up sounding decent. Today we'll only crack it open as a <mark>taste</mark> — mastering it fully is the next journey's job.
+All week you've handled chords. Today we turn for a moment to taste <mark>melody</mark>. Solos — that sound of the guitar singing — mostly come out of a scale called the "**pentatonic**." It's a **five-note scale**, and since not one of its notes sounds off, even a beginner poking around at random ends up sounding decent. Today we'll only crack it open as a <mark>taste</mark> — mastering it fully is the next journey's job.
 
-The shape is called "Box 1." Around the 5th fret, two notes per string, it climbs and descends six strings like a ladder. The blue note is the root (A), and the note highlighted in green is the b3 — the special note that decides this scale's color. Your fingers use only the index (1) and the ring/pinky (3·4), so it's not hard. All five notes fit within one hand position, so you won't get lost on the fretboard. Today all you need is to sweep this shape up and down until it settles into your hand.
+The shape is called "**Box 1**." Around the 5th fret, two notes per string, it climbs and descends six strings like a ladder. The blue note is the root (A), and the note highlighted in green is the **b3** — the special note that decides this scale's color. Your fingers use only the index (1) and the ring/pinky (3·4), so it's not hard. All five notes fit within one hand position, so you won't get lost on the fretboard. Today all you need is to sweep this shape up and down until it settles into your hand.
 
-Then we add one bit of magic. The <mark>hammer-on and pull-off</mark>. After striking one note, sounding the next by "hammering" it with a finger and no pick is the hammer-on; the reverse, "flicking" the finger to sound a lower note, is the pull-off. You need these two for a solo to connect like singing instead of breaking up. The more you save on picking, the more smoothly the sound flows. Taste that feel today with one short three-note lick, and the next track's door is already open.
+Then we add one bit of magic. The <mark>hammer-on and pull-off</mark>. After striking one note, sounding the next by "hammering" it with a finger and no pick is the **hammer-on**; the reverse, "flicking" the finger to sound a lower note, is the **pull-off**. You need these two for a solo to connect like singing instead of breaking up. The more you save on picking, the more smoothly the sound flows. Taste that feel today with one short three-note lick, and the next track's door is already open.
 
 ## ② Visuals
 
-First, today's map — A minor pentatonic Box 1. Start on the blue root (A) and climb up and down six strings.
+First, today's map — **A minor pentatonic Box 1**. Start on the blue root (A) and climb up and down six strings.
 
 ```json
 {
@@ -66,7 +66,7 @@ Now practice the hammer-on and pull-off on the 6th string. Move between the root
 
 ▶ BPM 70. Pick the root (A · 5th fret) just once, hammer the green b3 (8th fret) with your pinky (hammer-on) → flick the finger to return to the root (pull-off).
 
-Finally, the <mark>three-note lick</mark>. Root to b3 with a hammer-on, back to root with a pull-off — singing with just three notes inside the box.
+Finally, the <mark>three-note lick</mark>. Root to b3 with a hammer-on, back to root with a pull-off — singing with **just three notes inside the box**.
 
 ```json
 {
@@ -91,10 +91,10 @@ Finally, the <mark>three-note lick</mark>. Root to b3 with a hammer-on, back to 
 At BPM 70, sweep Box 1 from the 6th-string root to the 1st string, one note at a time, very slowly, to lay the shape into your hand.
 
 **7–17 min · Today's skill**
-Repeat the 6th-string legato drill. Pick once at the start; sound the rest with the left-hand strength of <mark>hammering and flicking</mark>. Check both notes ring clearly.
+Repeat the 6th-string legato drill. Pick once at the start; sound the rest with the **left-hand strength** of <mark>hammering and flicking</mark>. Check both notes ring clearly.
 
 **17–27 min · Applying it**
-Repeat the three-note lick at BPM 70 → once the three notes connect smoothly, hold it there. You can even chain the lick two or three times and play it like a little phrase.
+Repeat the three-note lick at BPM 70 → once the **three notes connect smoothly**, hold it there. You can even chain the lick two or three times and play it like a little phrase.
 
 **27–30 min · Check**
 Write down the BPM you reached and record 30 seconds to hear whether the hammer-on and pull-off ring clearly even without a pick.

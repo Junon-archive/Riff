@@ -9,15 +9,15 @@ i18nKey: "lesson.m1.w2.d2"
 
 ## ① Theory
 
-If you caught the feel of the two hands locking on one point yesterday, today you take that hand <mark>over to the next string</mark>. A riff never stays on just one string. Keeping the alternate picking (down-up) unbroken as you move between strings — that's the whole of today. If yesterday's sync is still alive, today crosses over more easily than you'd expect. The right hand shifting over to the next string is a tiny motion, so there's nothing to be scared of.
+If you caught the feel of the two hands locking on one point yesterday, today you take that hand <mark>over to the next string</mark>. A **riff** never stays on just one string. Keeping the **alternate picking (down-up)** unbroken as you move between strings — that's the whole of today. If yesterday's sync is still alive, today crosses over more easily than you'd expect. The right hand shifting over to the next string is a tiny motion, so there's nothing to be scared of.
 
-There are two ways to cross a string. <mark>Inside picking</mark>, which digs in between the two strings, and outside picking, which wraps around the outside. The names sound hard but your body picks them up fast. It's only the difference between striking down then catching the next string with an up, or striking up then crossing with a down. Today you just taste both, slowly. For now you don't even need to memorize which one is inside and which is outside — just keep the hand rolling without a break.
+There are two ways to cross a string. <mark>Inside picking</mark>, which digs in between the two strings, and **outside picking**, which wraps around the outside. The names sound hard but your body picks them up fast. It's only the difference between **striking down then catching the next string with an up**, or striking up then crossing with a down. Today you just taste both, slowly. For now you don't even need to memorize which one is inside and which is outside — just keep the hand rolling without a break.
 
-The key is that the pick moves by only the thickness of one string. Swing big and the beat pushes back and you scrape the neighboring string. Keep the wrist nearly in place and just shift the pick tip over to sit on the neighbor. A little hesitation at the seam where the string changes is normal, so care only about not stopping and keeping the alternate picking rolling. Once this feel sets in, real riffs start landing in your hand — Friday's riff is really just a string of these crossings too. Keep the shoulder and elbow still and think of only the wrist and pick tip doing the work, and it gets much easier.
+The key is that the pick moves by **only the thickness of one string**. Swing big and the beat pushes back and you scrape the neighboring string. **Keep the wrist nearly in place** and just shift the pick tip over to sit on the neighbor. A little hesitation at the seam where the string changes is normal, so care only about not stopping and keeping the alternate picking rolling. Once this feel sets in, real riffs start landing in your hand — Friday's riff is really just a string of these crossings too. Keep the shoulder and elbow still and think of only the wrist and pick tip doing the work, and it gets much easier.
 
 ## ② Visuals
 
-First, oscillate over just two strings so the picking never breaks. Once it's comfortable, widen it to <mark>three strings</mark>.
+First, oscillate over just two strings so the **picking never breaks**. Once it's comfortable, widen it to <mark>three strings</mark>.
 
 **Example 1 — two-string oscillation.** Alternate the 6th string (2nd fret) and the 5th (open). Fix the direction: down on the 6th, up on the 5th.
 
@@ -43,7 +43,7 @@ First, oscillate over just two strings so the picking never breaks. Once it's co
 
 ▶ **BPM 60, alternate.** Fix the rule: down on the 6th, up on the 5th. Don't stop at the seam.
 
-**Example 2 — three-string zigzag.** Move across the 6th-5th-4th strings, all open. The left hand rests; only the right hand moves house.
+**Example 2 — three-string zigzag.** Move across the 6th-5th-4th strings, all open. The left hand rests; **only the right hand moves house**.
 
 ```json
 {
@@ -73,10 +73,10 @@ First, oscillate over just two strings so the picking never breaks. Once it's co
 Repeat yesterday's 1-3-2-4 on the 6th string at BPM 60 to wake the hands. Revive the sync feel first.
 
 **7–17 min · Today's skill**
-Play Example 1 (two-string oscillation) very slowly. Down on the 6th, up on the 5th — smooth out only the seam while <mark>keeping the pick direction fixed</mark>.
+Play Example 1 (two-string oscillation) very slowly. **Down on the 6th, up on the 5th** — smooth out only the seam while <mark>keeping the pick direction fixed</mark>.
 
 **17–27 min · Applying it**
-Repeat Example 2 (three-string zigzag) four times at BPM 60 → once it's unbroken, raise it one step. If you scrape the neighboring string, slow back down.
+Repeat Example 2 (three-string zigzag) four times at BPM 60 → once it's **unbroken**, raise it one step. If you scrape the neighboring string, slow back down.
 
 **27–30 min · Check**
 Write down the BPM you reached, and record 30 seconds to hear whether the sound cuts out where the strings change.

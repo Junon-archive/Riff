@@ -9,15 +9,15 @@ i18nKey: "lesson.m1.w3.d4"
 
 ## ① Theory
 
-At last, the final day of Week 3. The three things you built this week — <mark>the power-chord shape</mark>, moving the shape, palm-muted downpicking — all go into a single riff. Today's riff is an original that growls low under palm muting, then pushes the power chords up like a staircase and bursts wide open. The goal isn't to play well, it's to run it start to finish without a wobble.
+At last, the final day of Week 3. The three things you built this week — <mark>the power-chord shape</mark>, moving the shape, palm-muted downpicking — all go into a single riff. Today's riff is an original that **growls low under palm muting**, then pushes the power chords up like a staircase and bursts wide open. The goal isn't to play well, it's to **run it start to finish without a wobble**.
 
-The riff is four bars. Bars 1 and 3 drive open E5 with a <mark>palm-muted chug</mark>, while bars 2 and 4 slide the 5th-string root shape up the staircase C5→D5→E5. The contrast — the low, buried sound opening wide as the palm lifts on the climb — is the riff's expression. The moment to lift the palm is exactly when you cross from the 6th string to the 5th-string shape — rehearse it in advance and the riff bursts far more brightly. You land on the final green E5 (7th fret) and stop dead.
+The riff is four bars. Bars 1 and 3 drive open E5 with a <mark>palm-muted chug</mark>, while bars 2 and 4 slide the 5th-string root shape up the staircase **C5→D5→E5**. The contrast — the low, buried sound opening wide as the palm lifts on the climb — is the riff's expression. **The moment to lift the palm** is exactly when you cross from the 6th string to the 5th-string shape — rehearse it in advance and the riff bursts far more brightly. You land on the final green E5 (7th fret) and stop dead.
 
-Once you know the structure, it's not hard — <mark>a repeating root + a stair-step rise, then landing</mark>, the basic grammar of a rock riff. The staircase reuses the C5↔D5 move you drilled up through yesterday. This feel lives on in songs like 〈You Really Got Me〉 and 〈Iron Man〉. If four bars feel like too much at once, learn the palm-mute bars (1 and 3) and the climb bars (2 and 4) separately, then join them up. Run this riff through at the target BPM today, and Week 3 is carved fully into your hands.
+Once you know the structure, it's not hard — <mark>a repeating root + a stair-step rise, then landing</mark>, the basic grammar of a rock riff. The staircase reuses the **C5↔D5 move** you drilled up through yesterday. This feel lives on in songs like 〈You Really Got Me〉 and 〈Iron Man〉. If four bars feel like too much at once, learn the palm-mute bars (1 and 3) and the climb bars (2 and 4) **separately, then join them up**. Run this riff through at the target BPM today, and Week 3 is carved fully into your hands.
 
 ## ② Visuals
 
-First, isolate the trickiest spot — the <mark>climb</mark> (C5→D5→E5) of the last bar. Get this staircase smooth and the whole riff eases up.
+First, isolate the trickiest spot — the <mark>climb</mark> (C5→D5→E5) of the last bar. **Get this staircase smooth** and the whole riff eases up.
 
 ```json
 {
@@ -36,7 +36,7 @@ First, isolate the trickiest spot — the <mark>climb</mark> (C5→D5→E5) of t
 
 ▶ BPM 80. Push the 5th-string shape up two frets at a time and land precisely on the green E5 (7th fret). Move the whole thing while holding the shape.
 
-Now this week's finished piece. Keep open E5 low with palm muting, and release the palm on the climb to ring wide open.
+Now this week's finished piece. Keep **open E5 low with palm muting**, and release the palm on the climb to ring wide open.
 
 ```json
 {
@@ -89,10 +89,10 @@ Now this week's finished piece. Keep open E5 low with palm muting, and release t
 At BPM 70, lightly repeat yesterday's palm-muted chug (open E5) on the 6th string to revive your picking-hand palm position.
 
 **7–17 min · Today's skill**
-Repeat Example 1 (climb prep) at BPM 80. Push the 5th-string shape up the staircase and focus on landing precisely on the green E5 (7th fret), <mark>climbing the stairs</mark>.
+Repeat Example 1 (climb prep) at BPM 80. Push the **5th-string shape** up the staircase and focus on landing precisely on the green E5 (7th fret), <mark>climbing the stairs</mark>.
 
 **17–27 min · Applying it (this week's finished piece)**
-Repeat the pinned riff four times at BPM 80 → once there's no wobble, raise it one step to the target BPM 90. Keep open E5 low and palm-muted, the climb wide open — don't lose that contrast.
+Repeat the pinned riff four times at BPM 80 → once there's **no wobble**, raise it one step to the target BPM 90. Keep open E5 low and palm-muted, the climb wide open — don't lose that contrast.
 
 **27–30 min · Check**
 Write down the BPM you reached and record 30 seconds to hear whether the riff runs start to finish without a break.

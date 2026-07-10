@@ -9,15 +9,15 @@ i18nKey: "lesson.m1.w4.d4"
 
 ## ① Theory
 
-Congratulations. Today is <mark>graduation day</mark>. Think back to day one, four weeks ago — even ringing one open string cleanly was a struggle. Yet now you've stacked power chords, given rhythm a face, joined verse to chorus, and even tasted the pentatonic. Today we gather all of it and finish <mark>one song, start to finish</mark>. Isn't it amazing that all of this came into your hands in just four weeks? The goal isn't to play well, it's to go all the way through without stopping.
+Congratulations. Today is <mark>graduation day</mark>. Think back to day one, four weeks ago — even **ringing one open string cleanly** was a struggle. Yet now you've **stacked power chords, given rhythm a face, joined verse to chorus, and even tasted the pentatonic**. Today we gather all of it and finish <mark>one song, start to finish</mark>. Isn't it amazing that all of this came into your hands in just four weeks? The goal isn't to play well, it's to go all the way through without stopping.
 
-Today's finished song is a chorus that turns on four chords — E5→C5→G5→D5. One chord per bar, ringing wide open with downstrokes. This four-chord loop is actually the backbone of countless famous songs. Tunes like 〈Smells Like Teen Spirit〉 and 〈Song 2〉 roll along on exactly this kind of progression. Memorize just the order the chords turn in, and your hands already know the rest. Carry the tabs onward with whatever song you love — today, this hand opens the door to those songs.
+Today's finished song is a chorus that turns on four chords — **E5→C5→G5→D5**. One chord per bar, ringing wide open with downstrokes. This four-chord loop is actually the **backbone of countless famous songs**. Tunes like 〈Smells Like Teen Spirit〉 and 〈Song 2〉 roll along on exactly this kind of progression. Memorize just the order the chords turn in, and your hands already know the rest. Carry the tabs onward with whatever song you love — today, this hand opens the door to those songs.
 
-The final mission is <mark>recording</mark>. Record your finished song once, start to finish, and play today's you to the you of four weeks ago. It doesn't have to be perfect. If you went all the way through without stopping, that's already a fine graduation piece. Listen back a few months from now and you'll see how precious today's recording is. So — shall we leave one last song behind?
+The final mission is <mark>recording</mark>. **Record your finished song once, start to finish**, and play today's you to the you of four weeks ago. It doesn't have to be perfect. If you went all the way through without stopping, that's already a **fine graduation piece**. Listen back a few months from now and you'll see how precious today's recording is. So — shall we leave one last song behind?
 
 ## ② Visuals
 
-Before the finished song, rehearse the four-chord changes slowly. Two beats per chord, settling the spots where the shape changes into your hand.
+Before the finished song, rehearse the four-chord changes slowly. **Two beats per chord**, settling the spots where the shape changes into your hand.
 
 ```json
 {
@@ -39,7 +39,7 @@ Before the finished song, rehearse the four-chord changes slowly. Two beats per 
 
 ▶ BPM 80. The four chords (E5→C5→G5→D5), two beats each. Settle the spots where the shape changes slowly into your hand, and land on the green D5.
 
-Now <mark>this month's finished song</mark>. One chord per bar, a chorus ringing wide open with downstrokes, start to finish.
+Now <mark>this month's finished song</mark>. One chord per bar, a chorus **ringing wide open with downstrokes**, start to finish.
 
 ```json
 {
@@ -83,10 +83,10 @@ Now <mark>this month's finished song</mark>. One chord per bar, a chorus ringing
 At BPM 80, grip and release last three weeks' power-chord shapes (E5·C5·G5·D5) one by one to warm up your hands.
 
 **7–17 min · Today's skill**
-Repeat the change prep at BPM 80. Check the shapes connect smoothly, <mark>without stopping</mark>, at the spots where the four chords change.
+Repeat the change prep at BPM 80. Check the shapes **connect smoothly**, <mark>without stopping</mark>, at the spots where the four chords change.
 
 **17–27 min · Applying it (this month's finished song)**
-Run the chorus loop start to finish at BPM 90 → once there's no break, raise it one step to the target BPM 100. Four bars in one flow, wide open with downstrokes.
+Run the chorus loop start to finish at BPM 90 → once there's **no break**, raise it one step to the target BPM 100. Four bars in one flow, wide open with downstrokes.
 
 **27–30 min · Check**
 Record the whole finished song once at the target BPM. As if playing it to yourself on day one, four weeks ago.
