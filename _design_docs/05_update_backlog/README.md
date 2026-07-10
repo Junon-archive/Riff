@@ -26,7 +26,7 @@
 | 06 | [기존 커리큘럼 악보 인라인 재배치](06_visual-relocation.md) | 🟢 DONE (77 day, 1 선별제외) | 중간 | 낮음 | 01(완료) |
 | 07 | [PWA 앱화 (Android Play 등재 + iOS/Android 홈 설치)](07_pwa.md) | 🟡 IN_PROGRESS (A·B 검증완료·C 코드완료/안드검증보류·D 미착수) | 중간 | 낮음 | 없음 |
 | 08 | [산문 하이라이트 + 커리큘럼 볼드 (레시피 동결)](08_Highlight.md) | 🟢 DONE (3커리큘럼 116 day + intro 3종 × 3언어, `<mark>` 4182개) | 중간 | 낮음 | 없음 |
-| 09 | [입문 일렉 커리큘럼 신설 (1개월·손 만들기)](09_beginner-electric-curriculum.md) | 🟡 IN_PROGRESS (프롬프트·meta·overview 완료·day 미착수) | 높음 | 낮음 | 없음 |
+| 09 | [입문 일렉 커리큘럼 신설 (1개월·손 만들기)](09_beginner-electric-curriculum.md) | 🟢 DONE (16일 day 48파일 + 대표 이미지, 2026-07-10) | 높음 | 낮음 | 없음 |
 | 10 | [베이스 지원 (클레프·slap·튜닝·다현·지판) + 베이스 커리큘럼](10_bass-support.md) | 🟡 IN_PROGRESS (엔진 B0~B4 완료 · 콘텐츠 B5 대기) | 중간 | 높음 | 03·02(완료) |
 
 ## 공통 원칙 — "추가는 되고, 기존은 안 깨진다" (모든 묶음이 준수)
