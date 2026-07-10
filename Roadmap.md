@@ -82,6 +82,14 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-10 (백로그 13 — 입문 베이스 트랙 저작 준비: 프롬프트 정합·meta·overview·이미지)
+- **범위:** `beginner_bass_1month` day 저작 착수 준비물 완비(day 문서는 다음 단계). 4·5현 병행·투핑거(피크 미사용)·30분 트랙.
+- **① 프롬프트 정합:** 주차 프롬프트 4개 day-끝 라벨 '오늘의 완성물:' → '오늘의 완료 기준:'(기존 132일·08 앵커 정합, day_4는 (N주차 완성!) 병기), 루틴 볼드 '오늘의 결과물'. ② 연초록 하이라이트 "자동 렌더" 단언 → "악기 테마(백로그 05) 적용 시 연초록(적용 전 하늘색)"으로 완화(05 미구현·전방호환).
+- **③ meta.json:** id·title·tagline·forWho·intro(3언어, `<mark>`)·instrument:bass·level:1·image·tags. build-content 발견·파싱 OK(day 없어 manifest 스킵 — 정상).
+- **overview 15파일:** month_1 + week_1~4 × ko/en/ja, 입문 일렉 overview 형식 표준, week_N_prompt와 내용 정합, 3언어 `<mark>` 각 2개 일치.
+- **대표 이미지:** `bass_curriculum4.jpg`(오른손 핑거스타일)→`beginner-bass.webp`(1200×800, 18KB), 스크립트 MAP 추가, 기존 4 webp 바이트 불변.
+- **다음:** 16일 day 저작(/goal 주차별 순차, 09와 동일 방식)만 남음. 베이스 day는 `instrument:bass`·4/5현 병행 블록.
+
 ### 2026-07-10 (백로그 09 — 입문 일렉 트랙 16일 day 저작 완료, /goal 주차별 순차)
 - **범위:** `beginner_electric_1month` 4주 × 4일 × ko/en/ja = **48파일 저작 완료**(주차별 curriculum-architect 위임, /goal로 순차: week_1 손만들기 → week_2 두손싱크+첫리프 → week_3 파워코드 → week_4 곡완성·졸업). 각 주차 저작→검증→커밋 체크포인트.
 - **검증(주차별+전수):** build 412p(361→+51) exit 0(박자합·스키마 게이트), check-invariants 354블록(신규 39·기존 315 지문 값 변경 0), 16일 전량 3언어 `<mark>` 개수 일치(총 91)·④/완료기준 줄 mark=0·악보 json 3언어 바이트 동일·핀고정 5개(스파이더·펜타리프·파워코드리프·코러스루프·펜타박스) 프롬프트와 바이트 동일.
