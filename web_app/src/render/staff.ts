@@ -762,7 +762,8 @@ export function renderStaff(score: Score, mode: StaffMode): string {
 
       let tabstave: TabStave | null = null;
       if (withTab) {
-        tabstave = new TabStave(x, sysTop + tabDy, thisStaveW);
+        // ★타브 줄 수 = 현 수(nStr). 4현 베이스=4줄, 5현=5줄, 6현 기타=6줄(TabStave 기본과 동일 → 불변).
+        tabstave = new TabStave(x, sysTop + tabDy, thisStaveW, { num_lines: nStr });
         tabstave.addClef('tab');
         // 오선보/타브 음표 x 정렬: 타브의 노트 시작 x 를 오선보와 맞춘다.
         tabstave.setNoteStartX(stave.getNoteStartX());
