@@ -29,8 +29,6 @@ const REPO_ROOT = resolve(WEB_APP, '..');
 
 const CURRICULA_ROOT = join(REPO_ROOT, '_design_docs', '02_curriculum');
 const OUT_ROOT = join(WEB_APP, 'src', 'content');
-// 랜딩 노출/정렬 우선순위(먼저 나오는 것이 앞 카드). 여기 없는 커리큘럼은 이름순으로 뒤에 붙는다.
-const CURRICULUM_ORDER = ['solo_scale_3months', 'chord_building_2months'];
 
 const LANGS = ['ko', 'en', 'ja'];
 const SECTION_MARKERS = ['①', '②', '③', '④'];
@@ -607,17 +605,14 @@ function buildCurriculum(curriculumId) {
 
 /* ---------------------------------------------------------------
    커리큘럼 자동 발견: 02_curriculum 하위에서 meta.json 을 가진 디렉터리.
-   CURRICULUM_ORDER 우선, 그 외 이름순.
+   여기서는 이름순(결정적)으로만 나열 — 노출 순서(level 오름차순)는
+   main() 에서 각 커리큘럼의 meta.level 을 읽은 뒤 최종 정렬한다.
    --------------------------------------------------------------- */
 function discoverCurricula() {
-  const dirs = readdirSync(CURRICULA_ROOT, { withFileTypes: true })
+  return readdirSync(CURRICULA_ROOT, { withFileTypes: true })
     .filter((d) => d.isDirectory() && existsSync(join(CURRICULA_ROOT, d.name, 'meta.json')))
-    .map((d) => d.name);
-  const rank = (id) => {
-    const i = CURRICULUM_ORDER.indexOf(id);
-    return i === -1 ? CURRICULUM_ORDER.length : i;
-  };
-  return dirs.sort((a, b) => rank(a) - rank(b) || a.localeCompare(b));
+    .map((d) => d.name)
+    .sort((a, b) => a.localeCompare(b));
 }
 
 /* ---------------------------------------------------------------
@@ -637,6 +632,11 @@ function main() {
     if (cur) curricula.push(cur);
   }
   if (curricula.length === 0) fail('빌드된 커리큘럼이 없음(모두 day 0)');
+
+  // 랜딩 노출 순서 = meta.level 오름차순(쉬운 코스가 상단). 별도 order 필드는 두지 않는다(확정).
+  // 동률 level 은 안정 정렬로 discoverCurricula() 의 결정적 순서(id 이름순)를 그대로 유지한다.
+  // (Array.prototype.sort 는 ECMA-262 이후 안정 정렬이 보장됨 — Node 런타임 전제.)
+  curricula.sort((a, b) => (a.level ?? Number.MAX_SAFE_INTEGER) - (b.level ?? Number.MAX_SAFE_INTEGER));
 
   const manifest = {
     schemaVersion: 1,

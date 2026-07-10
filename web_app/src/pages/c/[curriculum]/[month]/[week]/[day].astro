@@ -9,6 +9,7 @@ import { findCurriculum, findDayLocation, getManifest } from '../../../../../lib
 import { cleanTitle } from '../../../../../views/textUtils';
 import { lessonRoutes, segmentsToDayKey } from '../../../../../lib/paths';
 import { curriculumPath, localize } from '../../../../../lib/urls';
+import { toInstrument } from '../../../../../lib/storage';
 
 export function getStaticPaths() {
   return lessonRoutes().map((r) => ({ params: r.params, props: { dayKey: r.dayKey } }));
@@ -25,8 +26,17 @@ const canonicalPath = `/c/${curriculum}/${month}/${week}/${day}/`;
 const title = `${dayTitle} · ${cleanTitle(loc.month.titles[lang])} — ${translate(lang, 'common.app_name')}`;
 // dayKey 재구성 검증(라우트 무결성): 세그먼트 → dayKey 와 props 일치.
 void segmentsToDayKey(month!, week!, day!);
+// 악기 액센트 테마(05_tag-filter.md 단계 3) — 콘텐츠 기반(B): 이 코스의 meta.instrument 가 권위값.
+const instrument = toInstrument(node.instrument);
 ---
 
-<Base lang={lang} title={title} canonicalPath={canonicalPath} backHref={localize(lang, curriculumPath(curriculum!))}>
+<Base
+  lang={lang}
+  title={title}
+  canonicalPath={canonicalPath}
+  backHref={localize(lang, curriculumPath(curriculum!))}
+  instrument={instrument}
+  instrumentFromFilter={false}
+>
   <LessonView lang={lang} curriculumId={curriculum!} dayKey={dayKey} />
 </Base>

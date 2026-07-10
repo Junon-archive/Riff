@@ -40,10 +40,12 @@
   /* 커리큘럼 카드 썸네일 그래디언트 오버레이(듀오톤 이미지 위) — 라이트. 다크는 [data-theme] 에서 재정의. */
   --grad-a: rgba(69,147,252,.55);
   --grad-b: rgba(27,100,218,.85);
-  /* 이미지 없는 카드(.no-img)용 불투명 브랜드 밴드 — 색을 컴포넌트에 하드코딩하지 않도록 토큰화. */
+  /* 이미지 없는 카드(.no-img)용 불투명 브랜드 밴드 — 색을 컴포넌트에 하드코딩하지 않도록 토큰화.
+     --primary/--num-accent-blue/--primary-press 경유(하드코딩 --blue-* 대신) — 기타(파랑)에서
+     값 동일(렌더 불변), [data-instrument="bass"] 스코프에서 자동으로 초록 밴드가 된다(05_tag-filter 단계 3). */
   --grad-fallback:
     radial-gradient(120% 120% at 100% 0%, rgba(255,255,255,.28), transparent 60%),
-    linear-gradient(135deg, var(--blue-500) 0%, var(--blue-600) 55%, var(--blue-700) 100%);
+    linear-gradient(135deg, var(--primary) 0%, var(--num-accent-blue) 55%, var(--primary-press) 100%);
 
   --shadow:    0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(0,0,0,.06);
   --shadow-sm: 0 1px 2px rgba(0,0,0,.05), 0 2px 8px rgba(0,0,0,.04);
@@ -98,3 +100,36 @@
   --num-accent-red:   #FF6B75;
   --num-accent-blue:  var(--primary);
 }
+
+/* ── 백로그 05 단계 3 — 베이스 악기 액센트: 연초록(에메랄드, hue≈143°). design_spec §2.7 SSOT.
+   기타=Toss 블루 현행 유지(폴백). [data-instrument="bass"] 스코프에서만 가법 오버라이드.
+   악보(지판/타브/오선보) 색은 절대 안 건드림 — 아래 악보 컨테이너 클램프로 파랑 유지. */
+/* 채도 살짝 톤다운(HSL S 20%↓, hue·명도 유지 → 대비는 오히려 소폭 상승, 쨍한 느낌 완화). 2026-07-10. */
+:root[data-instrument="bass"] {
+  --primary:       #2B8C50;
+  --primary-press: #1E703D;
+  --primary-weak:  #E8F4ED;
+  --grad-a: rgba(48,163,96,.55);
+  --grad-b: rgba(30,112,61,.85);
+  --num-accent-blue: #257D47;
+  --prose-hl: color-mix(in srgb, var(--primary) 20%, white);
+}
+[data-theme="dark"][data-instrument="bass"] {
+  --primary:       #199A4B;
+  --primary-press: #2B8C50;
+  --primary-weak:  #14281C;
+  --grad-a: rgba(48,163,96,.32);
+  --grad-b: rgba(12,52,27,.90);
+  --prose-hl: color-mix(in srgb, var(--primary) 30%, transparent);
+}
+
+/* 악보는 테마 무관: 베이스에서도 악보 SVG(지판/타브/오선보)는 현행 파랑 유지(라이트/다크만 반영).
+   specificity 주의 — :root[data-instrument="bass"] 가 .fretboard 등 클래스 셀렉터보다 상위(root)라
+   값이 이길 수 있으므로, 반드시 같은 [data-instrument="bass"] 스코프 아래에서 재선언해 이겨야 한다.
+   렌더러(render/{fretboard,tab,staff}.ts) 출력 문자열은 절대 미수정(SVG 바이트 불변) — CSS 클램프만. */
+:root[data-instrument="bass"] .fretboard,
+:root[data-instrument="bass"] .tabsvg,
+:root[data-instrument="bass"] .staffsvg { --primary: #3182F6; }
+[data-theme="dark"][data-instrument="bass"] .fretboard,
+[data-theme="dark"][data-instrument="bass"] .tabsvg,
+[data-theme="dark"][data-instrument="bass"] .staffsvg { --primary: #4593FC; }

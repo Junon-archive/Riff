@@ -19,6 +19,9 @@ export const STATE_SCHEMA_VERSION = 1;
 /** 테마 저장 키 (design_spec §6). */
 export const THEME_KEY = 'riff_theme';
 
+/** 랜딩 악기 필터 기억 키 (05_tag-filter.md 단계 2). */
+export const INSTRUMENT_KEY = 'riff_instrument';
+
 /** 기본(현재 유일) 커리큘럼 id. 콘텐츠 파이프라인 산출물 경로와 일치. */
 export const DEFAULT_CURRICULUM_ID = 'solo_scale_3months';
 

@@ -14,7 +14,10 @@
     "badge": "No login, no payment"
   },
   "home": {
-    "title": "Guitar felt hard because<br><span class='accent'>the path was unclear</span>",
+    "title": {
+      "guitar": "Guitar felt hard because<br><span class='accent'>the path was unclear</span>",
+      "bass": "Bass felt hard because<br><span class='accent'>the path was unclear</span>"
+    },
     "lead": "Follow one small lesson a day. A clear, step-by-step order — free all the way through.",
     "teaser": {
       "title": "More curricula are on the way",

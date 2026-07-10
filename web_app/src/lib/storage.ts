@@ -5,7 +5,7 @@
  *
  * localStorage 직접 접근은 이 파일로만 한정한다(technical_spec §3.1).
  */
-import { STORAGE_KEY, STATE_SCHEMA_VERSION, DEFAULT_LANG, THEME_KEY } from '../config';
+import { STORAGE_KEY, STATE_SCHEMA_VERSION, DEFAULT_LANG, THEME_KEY, INSTRUMENT_KEY } from '../config';
 import type { Lang, DonationChannel } from '../config';
 import type { GhState, CurriculumProgress } from '../types/state';
 
@@ -313,4 +313,29 @@ export function getTheme(): Theme {
 
 export function setTheme(theme: Theme): void {
   backend.set(THEME_KEY, theme);
+}
+
+/* ------------------------------------------------------------------
+ * 5. 랜딩 악기 필터 기억 (05_tag-filter.md 단계 2) — gh_state 스키마 밖의 독립
+ *    "브라우징 필터" 선호값이지만, 테마와 동일한 이유로 이 파일의 backend 래퍼를 재사용한다.
+ *    ⚠️ 전역 "모드"가 아니다 — 커리큘럼/레슨 페이지의 악기 테마는 항상 콘텐츠(meta.instrument)를
+ *    따르며 이 값을 참조하지 않는다(랜딩 세그먼트 토글 기억 전용).
+ * ---------------------------------------------------------------- */
+export type Instrument = 'guitar' | 'bass';
+
+export function getInstrumentFilter(): Instrument {
+  return backend.get(INSTRUMENT_KEY) === 'bass' ? 'bass' : 'guitar';
+}
+
+export function setInstrumentFilter(instrument: Instrument): void {
+  backend.set(INSTRUMENT_KEY, instrument);
+}
+
+/**
+ * manifest 의 `curriculum.instrument`(string | null, meta.json 자유 문자열)를 악기 액센트 테마 축
+ * (`data-instrument`, 05_tag-filter.md 단계 3)에 쓸 수 있는 값으로 정규화한다. 'bass' 가 아니면
+ * 전부 'guitar'(현행 파랑) — 콘텐츠 기반(B) 결정의 SSR 측 헬퍼. localStorage 는 관여하지 않는다.
+ */
+export function toInstrument(value: string | null | undefined): Instrument {
+  return value === 'bass' ? 'bass' : 'guitar';
 }

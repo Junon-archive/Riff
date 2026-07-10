@@ -14,9 +14,9 @@ export function getStaticPaths() {
 }
 
 const lang = Astro.params.lang as Lang;
-const title = `${translate(lang, 'common.app_name')} — ${stripAndTruncate(translate(lang, 'home.title'), 60)}`;
+const title = `${translate(lang, 'common.app_name')} — ${stripAndTruncate(translate(lang, 'home.title.guitar'), 60)}`;
 ---
 
-<Base lang={lang} title={title} canonicalPath="/" showDonate={false}>
+<Base lang={lang} title={title} canonicalPath="/" showDonate={false} instrument="guitar" instrumentFromFilter={true}>
   <HomeView lang={lang} />
 </Base>

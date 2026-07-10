@@ -53,7 +53,7 @@
 - **📁 업데이트 백로그 — `_design_docs/05_update_backlog/`** — 미래 렌더러/구조 개선을 작업 묶음별 상세 설계로 문서화. 각 md에 관련 코드 위치·수정 상세·기존 불변 보장·검증 게이트·체크리스트·status. 착수 시 해당 문서 따라 진행하고 status 갱신. **README.md가 인덱스.** 현재 상태:
   - 🟢 **완료:** 01 시각자료 배치+소개 · 06 악보 인라인 재배치(77 day) · 08 산문 하이라이트(116 day+intro 3) · 03 악보 음정 정확성(①조표+②튜닝+③다현/지판) · 02 표현기법(A~D) · 04 슬래시 리듬 · **09 입문 일렉 커리큘럼(16일 48파일+대표 이미지)**. (엔진 변경은 전부 기존 116일 바이트 불변)
   - 🟡 **진행 중:** 07 PWA 앱화(A·B 검증완료·C 안드검증보류·D 미착수).
-  - 🔴 **대기:** 05 태그 필터.
+  - 🟢 **05 커리큘럼 브라우징**(악기 세그먼트 토글 + 베이스 연초록 액센트 테마 + 악보 클램프 + View Transition) 완료.
   - 🟢 **10 베이스 엔진**(B0~B4: 클레프·slap·튜닝·다현·지판·옥타브앵커) 완료 · 🟢 **13 입문 베이스 커리큘럼(16일 48파일)** 완료. 커리큘럼 저작은 13~16으로 위임.
 - **신규 커리큘럼 6종(백로그 11~16)** — 기타: 11 블루스(3개월·프롬프트 12개 완료)·12 R&B/네오소울(2개월·구상). 베이스: 13 기초(완료)·14 슬랩펑크(2개월·프롬프트 8개 완료)·15 셔플바운스(2개월·설계 확정)·16 워킹(2개월·구상). **프롬프트 완료분(11·13·14)은 day 저작만 남음.** 상태 인덱스 = `_design_docs/05_update_backlog/README.md`.
 - **타브 재생 기능** — 향후 자체 Web Audio로 릭 재생·속도조절(AlphaTab 미채택 결정, 필요 시 자체 구현).
@@ -81,6 +81,16 @@
 ---
 
 ## 4. 변경 로그 (Changelog)
+
+### 2026-07-10 (백로그 05 완료 — 악기 세그먼트 토글 + 베이스 연초록 액센트 테마 + View Transition)
+- **단계 1(순서 위생):** `build-content.mjs` `CURRICULUM_ORDER` 하드코딩 제거 → `meta.json` **`level` 오름차순** 정렬(쉬운 코스 상단, 동률=id 이름순 안정). 별도 `order` 필드 없음. `content.config.ts` 경고 정합 정리. manifest 순서 = beginner_bass·beginner_electric(1) → chord·funk·solo(2).
+- **단계 2(세그먼트 토글 + hero 스왑 + 기억):** 랜딩 필터에서 **'전체' 칩 제거** → `[기타][베이스]` 2개(기본 기타). `home.title` i18n을 `{guitar,bass}` 로 분화(3언어, 베이스=악기 단어만 치환), leaf 참조 3곳(pages/index·[lang]/index·HomeView) 수정. hero `<h1>`에 `data-title-guitar/bass` 노출 → 토글 시 `innerHTML` 스왑. 선택 악기 **`riff_instrument` localStorage 기억**(`storage.ts` 래퍼, `config.ts` 키).
+- **단계 3(초록 테마 + 악보 클램프 + VT):** `<html data-instrument>` 축 신설 + 첫 페인트 전 인라인 스크립트로 **FOUC 0**. **콘텐츠 기반(B)**: 레슨/커리큘럼은 SSR `meta.instrument`(권위), 랜딩만 `riff_instrument` 기억값. `tokens.css` `[data-instrument="bass"]` 초록 포크(라이트/다크) + `--grad-fallback` 을 `var(--primary…)` 참조로 리팩터(기타 바이트 불변). **악보 클램프** — `[data-instrument="bass"] .fretboard/.tabsvg/.staffsvg` 에서 `--primary` 파랑 재선언(specificity로 승리) → **렌더러 미변경·SVG 바이트 불변, 악보는 테마 무관 파랑 유지**. `applyInstrumentFilter` 를 `document.startViewTransition` 으로 감싸 색+hero+카드 크로스페이드(미지원 폴백·`prefers-reduced-motion` 존중).
+- **후원 하트 + 섬네일 듀오톤:** 후원 버튼 하트 `💙`→`💚`(CSS `::before content`, `data-instrument` 스코프, 기타 파랑 유지). 카드 섬네일 초록 듀오톤 필터 2종(`#duotone-light/dark-bass`) 신설 — 파랑 스톱을 hue≈143° 회전 → 그래디언트 옅은 중앙부 파란기 제거.
+- **채도 톤다운:** 초기 에메랄드가 완료 버튼·섬네일에서 쨍하다는 피드백 → 초록 전 토큰·듀오톤 스톱 **HSL 채도 20%↓**(hue·명도 유지). 명도 유지로 **대비는 오히려 상승**(라이트 버튼 3.71→4.23, 다크 3.07→3.64).
+- **불변 보장:** 기타(파랑) 전 페이지 산출 불변, 악보 SVG 바이트 불변(`check-invariants` 회귀 0), Toss 결제 아이콘·PWA `theme_color`·favicon 파랑 고정.
+- **검증:** `npm run build` exit 0(463p) · `astro check` 0 errors · `check-invariants` **422블록 회귀 0** · WCAG 4콤보(라이트/다크 × 기타/베이스) 전부 현행 파랑 이상 · dist 확인(베이스 레슨 `data-instrument="bass"`, 초록 포크·악보 클램프·하트/듀오톤 스왑, 악보 여전히 `var(--primary,#3182F6)`).
+- **문서:** `web_app/docs/design_spec.md §2.7`(초록 스케일·듀오톤·톤다운 값 SSOT), `04_localization/translation_map.md §10`(home.title 악기별), `05_update_backlog/05_tag-filter.md` status→DONE.
 
 ### 2026-07-10 (신규 커리큘럼 6종 설계·주차 프롬프트 — 백로그 11~16)
 - **라인업 확장 설계:** 기타 2(11 블루스·12 R&B/네오소울) + 베이스 4(13 기초·14 슬랩펑크·15 셔플바운스·16 워킹) 신설. 각 백로그 md에 포지셔닝·관통철학·월/주 아크·완성물 원칙·차별화·의존 박제. 디렉터리 스캐폴드(month/week) 생성.

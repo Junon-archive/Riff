@@ -175,6 +175,10 @@ h1.display {
   filter: url(#duotone-light);
 }
 [data-theme="dark"] .curr-thumb .thumb-img { filter: url(#duotone-dark); }
+/* 베이스 악기: 이미지 듀오톤도 초록으로(중앙부 파란기 제거). data-instrument 스코프라 기타는 파랑 유지.
+   specificity: :root[data-instrument="bass"] .curr-thumb .thumb-img (0,0,4,0) > 위 base 규칙. 다크는 뒤에 둬 승리. */
+:root[data-instrument="bass"] .curr-thumb .thumb-img { filter: url(#duotone-light-bass); }
+[data-theme="dark"][data-instrument="bass"] .curr-thumb .thumb-img { filter: url(#duotone-dark-bass); }
 /* z3 — 브랜드 블루 그래디언트(색은 tokens.css 변수로만, 하드코딩 금지). */
 .curr-thumb::before {
   content: ""; position: absolute; inset: 0; z-index: 3; pointer-events: none;
@@ -407,6 +411,11 @@ h1.display {
   padding: 24px 20px calc(28px + var(--safe-b));
   background: transparent;
 }
+/* 후원 버튼 하트 — 이모지는 색 코드가 아니라 글리프 자체가 색이라 --primary 토큰 포크로는
+   안 바뀐다(05_tag-filter.md 단계 3). content 스왑으로 악기 축에 맞춘다: 기타=💙, 베이스=💚.
+   장식 요소라 마크업(Base.astro)에서 aria-hidden 처리, 텍스트는 별도 <span>. */
+.donate-heart::before { content: "💙"; }
+:root[data-instrument="bass"] .donate-heart::before { content: "💚"; }
 
 /* ============================================================
    바텀시트 / 모달 공통

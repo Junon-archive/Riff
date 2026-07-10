@@ -26,7 +26,10 @@ import {
   serializeStateToCode,
   restoreStateFromCode,
   touchLastActive,
+  getInstrumentFilter,
+  setInstrumentFilter,
 } from '../lib/storage';
+import type { Instrument } from '../lib/storage';
 import { setActiveLang, t } from '../lib/i18n';
 import { formatTotalSavedMoney, getCompletedSet, totalSavedMoneyWon } from '../lib/progress';
 import {
@@ -426,23 +429,76 @@ function handleUndo(): void {
 }
 
 /* ------------------------------------------------------------------
- * 악기 필터 칩 (랜딩 #instrumentFilter) — 커리큘럼이 늘어도 하드코딩 분기 없이
- * data-instrument 값으로만 카드를 in-place 필터한다. 칩 자체의 노출 여부(2종 이상일 때만)는
- * SSR(HomeView.astro)이 이미 판정해 `hidden` 을 심어두므로, 여기서는 클릭 시 필터링만 담당.
+ * 악기 세그먼트 토글 (랜딩 #instrumentFilter) — '전체' 없음, 항상 한 악기만 노출.
+ * 커리큘럼이 늘어도 하드코딩 분기 없이 data-instrument 값으로만 카드를 in-place 필터한다.
+ * 칩 자체의 노출 여부(2종 이상일 때만)는 SSR(HomeView.astro)이 이미 판정해 `hidden` 을
+ * 심어두므로, 여기서는 필터링·hero 카피 스왑·기억(riff_instrument)만 담당.
+ * 색(--data-instrument)·View Transition 은 단계 3(05_tag-filter.md) 범위.
  * ---------------------------------------------------------------- */
-function applyInstrumentFilter(chip: HTMLElement): void {
-  const filterRoot = chip.closest('#instrumentFilter');
-  if (!filterRoot) return;
-  const value = chip.dataset.filterInstrument ?? 'all';
+
+/** hero <h1> 의 data-title-guitar/data-title-bass(둘 다 translate() 발원 HTML)로 교체. */
+function swapHeroTitle(value: Instrument): void {
+  const hero = document.querySelector<HTMLElement>('.hero h1[data-title-guitar]');
+  if (!hero) return;
+  const html = value === 'bass' ? hero.dataset.titleBass : hero.dataset.titleGuitar;
+  if (html) hero.innerHTML = html;
+}
+
+/**
+ * 칩 active 토글 + 카드 in-place show/hide(display, DOM 제거 아님 — SEO) + hero 카피 스왑 +
+ * `<html data-instrument>`(색 액센트, 05_tag-filter.md 단계 3). 랜딩(홈)에만 존재하는 #instrumentFilter
+ * 를 통해서만 호출되므로, 여기서 데이터셋을 세팅해도 콘텐츠(커리큘럼/레슨) 페이지의 SSR 값(그 코스
+ * meta.instrument)에는 영향이 없다 — 그 페이지엔 이 함수를 호출할 트리거 자체가 없다.
+ */
+function renderInstrumentFilter(filterRoot: Element, value: Instrument): void {
+  document.documentElement.dataset.instrument = value;
 
   $all<HTMLElement>('.chip-btn', filterRoot).forEach((btn) => {
-    btn.classList.toggle('active', btn === chip);
+    btn.classList.toggle('active', btn.dataset.filterInstrument === value);
   });
 
   $all<HTMLElement>('#currList .curr-card').forEach((card) => {
-    const show = value === 'all' || card.dataset.instrument === value;
-    card.style.display = show ? '' : 'none';
+    card.style.display = card.dataset.instrument === value ? '' : 'none';
   });
+
+  swapHeroTitle(value);
+}
+
+/**
+ * 칩 클릭 핸들러 — 렌더(칩·카드·hero·색) + 선택 기억(storage.ts 래퍼 경유).
+ * `document.startViewTransition` 지원 브라우저에서는 hero 카피 + 액센트 색 + 카드 목록 전환을
+ * 한 번에 크로스페이드한다(05_tag-filter.md 단계 3). 미지원이면 콜백을 즉시 실행 — 기능은 동일하고
+ * 전환 애니메이션만 생략된다. `prefers-reduced-motion` 은 app.css 의 전역 규칙이 duration 을
+ * 억제하므로 별도 가드 없이 존중된다.
+ */
+function applyInstrumentFilter(chip: HTMLElement): void {
+  const filterRoot = chip.closest('#instrumentFilter');
+  if (!filterRoot) return;
+  const value: Instrument = chip.dataset.filterInstrument === 'bass' ? 'bass' : 'guitar';
+
+  const commit = (): void => {
+    renderInstrumentFilter(filterRoot, value);
+    setInstrumentFilter(value);
+  };
+
+  if (typeof document.startViewTransition === 'function') {
+    document.startViewTransition(commit);
+  } else {
+    commit();
+  }
+}
+
+/**
+ * 페이지 로드마다(astro:page-load) 기억된 악기(riff_instrument, 기본 'guitar')로 재확정한다.
+ * 첫 페인트 전 FOUC 방지는 이미 Base.astro 의 head 인라인 스크립트(색·`data-instrument`)와
+ * HomeView.astro 의 body 인라인 스크립트(칩·카드·hero)가 동기로 처리했으므로, 여기서는 같은 값으로
+ * 다시 렌더해 idempotent 하게 정합만 맞춘다(중복 실행돼도 결과 동일, 깜빡임 없음). 랜딩이 아닌
+ * 페이지에는 #instrumentFilter 가 없으므로 조용히 no-op.
+ */
+function initInstrumentFilter(): void {
+  const filterRoot = document.getElementById('instrumentFilter');
+  if (!filterRoot) return;
+  renderInstrumentFilter(filterRoot, getInstrumentFilter());
 }
 
 /* ------------------------------------------------------------------
@@ -623,6 +679,7 @@ function onPageLoad(): void {
   hydrateCurriculum(state);
   onLessonEnter(state);
   hydrateLesson(state);
+  initInstrumentFilter();
 
   // 세션(소프트 내비게이션 전체) 당 1회만: 닉네임 유도 + welcome_back(state_storage §5).
   if (!bootDone) {

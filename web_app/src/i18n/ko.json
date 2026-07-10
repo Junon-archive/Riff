@@ -14,7 +14,10 @@
     "badge": "로그인도, 결제도 없어요"
   },
   "home": {
-    "title": "기타가 어려웠던 이유,<br><span class='accent'>연습 순서</span>가 없어서였어요",
+    "title": {
+      "guitar": "기타가 어려웠던 이유,<br><span class='accent'>연습 순서</span>가 없어서였어요",
+      "bass": "베이스가 어려웠던 이유,<br><span class='accent'>연습 순서</span>가 없어서였어요"
+    },
     "lead": "하루에 하나씩만 따라오세요. 촘촘한 순서대로, 끝까지 무료로 배울 수 있게 만들었어요.",
     "teaser": {
       "title": "다음 커리큘럼이 기다리고 있어요",

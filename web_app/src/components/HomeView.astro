@@ -22,23 +22,37 @@ const manifest = getManifest();
  * 데이터가 늘어나면 하드코딩 분기 없이 자연히 나타난다). 판정은 SSR에서, 실제 필터링은
  * scripts/app.ts 가 data-instrument 로 카드를 in-place 토글한다.
  */
-const instruments = [...new Set(manifest.curricula.map((c) => c.instrument).filter((v): v is string => !!v))];
+// 필터 칩 노출 순서: 기타 우선 → 베이스 → 그 외(등장순). manifest 커리큘럼 순서와 무관하게 고정한다.
+const INSTRUMENT_ORDER = ['guitar', 'bass'];
+const instruments = [...new Set(manifest.curricula.map((c) => c.instrument).filter((v): v is string => !!v))].sort(
+  (a, b) => {
+    const ia = INSTRUMENT_ORDER.indexOf(a);
+    const ib = INSTRUMENT_ORDER.indexOf(b);
+    return (ia === -1 ? INSTRUMENT_ORDER.length : ia) - (ib === -1 ? INSTRUMENT_ORDER.length : ib);
+  },
+);
 const showInstrumentFilter = instruments.length >= 2;
 ---
 
 <main class="view" id="view-home">
   <section class="hero">
     <span class="free-badge">🎁 <span>{translate(lang, 'free.badge')}</span></span>
-    <h1 class="display" set:html={translate(lang, 'home.title')}></h1>
+    <h1
+      class="display"
+      data-title-guitar={translate(lang, 'home.title.guitar')}
+      data-title-bass={translate(lang, 'home.title.bass')}
+      set:html={translate(lang, 'home.title.guitar')}
+    ></h1>
     <p class="lead">{translate(lang, 'home.lead')}</p>
   </section>
 
+  {/*
+    세그먼트 토글 — '전체' 없음, 항상 기타/베이스 중 하나만 노출(05_tag-filter.md 단계 2).
+    기본 활성 = 기타(SSR). 실제 필터링/기억 복원은 scripts/app.ts 가 담당.
+  */}
   <div class="filter-chips" id="instrumentFilter" hidden={!showInstrumentFilter}>
-    <button type="button" class="chip-btn active" data-filter-instrument="all">
-      {translate(lang, 'filter.all')}
-    </button>
     {instruments.map((inst) => (
-      <button type="button" class="chip-btn" data-filter-instrument={inst}>
+      <button type="button" class={`chip-btn${inst === 'guitar' ? ' active' : ''}`} data-filter-instrument={inst}>
         {translate(lang, `instrument.${inst}`)}
       </button>
     ))}
@@ -98,4 +112,39 @@ const showInstrumentFilter = instruments.length >= 2;
   </div>
 
   <ContactSection lang={lang} />
+
+  {/*
+    악기 필터 FOUC 방지(05_tag-filter.md 단계 3) — 색(<html data-instrument>)은 Base.astro 의 head
+    플래시 스크립트가 이미 처리하지만, 칩 active·카드 표시·hero 카피는 body 콘텐츠라 head 에서 잡을 수
+    없다. 여기서 riff_instrument(localStorage)를 동기(is:inline)로 읽어 페인트 전에 즉시 복원한다.
+    scripts/app.ts 의 renderInstrumentFilter() 와 동일 로직(소량 중복 — theme flash 패턴과 같은 이유로
+    인라인 허용). astro:page-load 시 app.ts 가 다시 한 번 같은 값으로 렌더해 idempotent 하게 정합을
+    맞춘다(중복 실행돼도 결과 동일).
+  */}
+  <script is:inline>
+    (function () {
+      try {
+        var v = localStorage.getItem('riff_instrument') === 'bass' ? 'bass' : 'guitar';
+
+        var filterRoot = document.getElementById('instrumentFilter');
+        if (filterRoot) {
+          var chips = filterRoot.querySelectorAll('.chip-btn');
+          for (var i = 0; i < chips.length; i++) {
+            chips[i].classList.toggle('active', chips[i].dataset.filterInstrument === v);
+          }
+        }
+
+        var cards = document.querySelectorAll('#currList .curr-card');
+        for (var j = 0; j < cards.length; j++) {
+          cards[j].style.display = cards[j].dataset.instrument === v ? '' : 'none';
+        }
+
+        var hero = document.querySelector('.hero h1[data-title-guitar]');
+        if (hero) {
+          var html = v === 'bass' ? hero.dataset.titleBass : hero.dataset.titleGuitar;
+          if (html) hero.innerHTML = html;
+        }
+      } catch (e) {}
+    })();
+  </script>
 </main>

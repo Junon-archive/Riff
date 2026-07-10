@@ -14,7 +14,10 @@
     "badge": "ログインも決済もありません"
   },
   "home": {
-    "title": "ギターが難しかった理由は、<br><span class='accent'>練習の順番</span>がなかったから",
+    "title": {
+      "guitar": "ギターが難しかった理由は、<br><span class='accent'>練習の順番</span>がなかったから",
+      "bass": "ベースが難しかった理由は、<br><span class='accent'>練習の順番</span>がなかったから"
+    },
     "lead": "1日ひとつだけ進めましょう。ていねいな順番で、最後まで無料で学べるように作りました。",
     "teaser": {
       "title": "次のカリキュラムも準備中です",

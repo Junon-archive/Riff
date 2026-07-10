@@ -9,6 +9,7 @@ import { findCurriculum, getManifest } from '../../../lib/content';
 import { cleanTitle } from '../../../views/textUtils';
 import { curriculumRoutes } from '../../../lib/paths';
 import { localize } from '../../../lib/urls';
+import { toInstrument } from '../../../lib/storage';
 
 export function getStaticPaths() {
   return curriculumRoutes().map((r) => ({ params: { curriculum: r.curriculum } }));
@@ -19,8 +20,18 @@ const { curriculum } = Astro.params;
 const node = findCurriculum(getManifest(), curriculum!)!;
 const canonicalPath = `/c/${curriculum}/`;
 const title = `${cleanTitle(node.titles[lang])} — ${translate(lang, 'common.app_name')}`;
+// 악기 액센트 테마(05_tag-filter.md 단계 3) — 콘텐츠 기반(B): 이 코스의 meta.instrument 가 권위값.
+const instrument = toInstrument(node.instrument);
 ---
 
-<Base lang={lang} title={title} canonicalPath={canonicalPath} backHref={localize(lang, '/')} showDonate={false}>
+<Base
+  lang={lang}
+  title={title}
+  canonicalPath={canonicalPath}
+  backHref={localize(lang, '/')}
+  showDonate={false}
+  instrument={instrument}
+  instrumentFromFilter={false}
+>
   <CurriculumView lang={lang} curriculumId={curriculum!} />
 </Base>

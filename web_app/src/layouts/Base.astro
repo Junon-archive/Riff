@@ -12,6 +12,7 @@ import { translate } from '../lib/i18n';
 import { altUrls } from '../lib/urls';
 import type { DonationChannel, Lang } from '../config';
 import { DONATION_CHANNELS, isDonationChannelPreparing, SUPPORTED_LANGS } from '../config';
+import type { Instrument } from '../lib/storage';
 import '../styles/tokens.css';
 import '../styles/app.css';
 
@@ -27,9 +28,30 @@ interface Props {
   noindex?: boolean;
   /** 하단 고정 '후원하기' CTA 노출. 홈·커리큘럼 페이지는 false 로 숨긴다(부담 완화). 기본 true. */
   showDonate?: boolean;
+  /**
+   * 악기별 액센트 테마 축(05_tag-filter.md 단계 3) — `<html data-instrument>` SSR 값.
+   * 콘텐츠(커리큘럼/레슨) 페이지 = 그 코스 `meta.instrument`(권위값, 고정).
+   * 홈 = 기본 'guitar'(플래시 스크립트가 첫 페인트 전 localStorage 값으로 오버라이드할 수 있음).
+   */
+  instrument?: Instrument;
+  /**
+   * true = 랜딩(브라우징 필터) — 인라인 플래시 스크립트가 `riff_instrument` 로 위 instrument 를
+   * 오버라이드해도 된다. false = 콘텐츠 페이지 — 스크립트가 절대 개입하지 않고 SSR 값을 고정한다.
+   */
+  instrumentFromFilter?: boolean;
 }
 
-const { lang, title, description, canonicalPath, backHref, noindex = false, showDonate = true } = Astro.props;
+const {
+  lang,
+  title,
+  description,
+  canonicalPath,
+  backHref,
+  noindex = false,
+  showDonate = true,
+  instrument = 'guitar',
+  instrumentFromFilter = false,
+} = Astro.props;
 const alts = altUrls(canonicalPath);
 const homeHref = lang === 'ko' ? '/' : `/${lang}/`;
 const desc = description ?? translate(lang, 'home.lead');
@@ -45,7 +67,7 @@ const DONATION_BUTTONS: { channel: DonationChannel; iconClass: string; icon: str
 ---
 
 <!doctype html>
-<html lang={lang} data-theme="light">
+<html lang={lang} data-theme="light" data-instrument={instrument} data-instrument-filter={instrumentFromFilter ? 'true' : 'false'}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -96,6 +118,28 @@ const DONATION_BUTTONS: { channel: DonationChannel; iconClass: string; icon: str
       })();
     </script>
 
+    {/*
+      악기 액센트 테마 플래시 방지(05_tag-filter.md 단계 3, riff_theme 패턴과 동일) —
+      `data-instrument-filter="true"` 인 페이지(랜딩)에서만 localStorage `riff_instrument` 를 읽어
+      `<html data-instrument>` 를 첫 페인트 전에 덮어쓴다. 콘텐츠(커리큘럼/레슨) 페이지는
+      `data-instrument-filter="false"` 라 이 스크립트가 개입하지 않고 SSR 값(그 코스의 meta.instrument)이
+      그대로 유지된다. astro:after-swap 에서도 재적용(swapRootAttributes 가 새 페이지의 <html> 속성을
+      그대로 복사하므로, 매 네비게이션마다 이 판정을 다시 한다).
+    */}
+    <script is:inline>
+      (function () {
+        var apply = function () {
+          try {
+            if (document.documentElement.dataset.instrumentFilter !== 'true') return;
+            var v = localStorage.getItem('riff_instrument');
+            document.documentElement.dataset.instrument = v === 'bass' ? 'bass' : 'guitar';
+          } catch (e) {}
+        };
+        apply();
+        document.addEventListener('astro:after-swap', apply);
+      })();
+    </script>
+
     {/* 서비스워커 등록(PWA 오프라인/설치) — 배포 도메인에서만(로컬 dev/preview 는 캐시 방지 위해 제외). */}
     <script is:inline>
       if (
@@ -141,6 +185,27 @@ const DONATION_BUTTONS: { channel: DonationChannel; iconClass: string; icon: str
           <feFuncB type="table" tableValues="0.1412 0.8392"/>
         </feComponentTransfer>
       </filter>
+      {/*
+        베이스 악기용 초록 듀오톤(백로그 05 단계 3) — 파랑 스톱을 에메랄드 색상(hue≈143°)으로
+        회전 후 채도 20%↓ 톤다운(쨍한 느낌 완화, 2026-07-10). 라이트: #156132→#8CF2B3, 다크: #082112→#5CC885.
+        [data-instrument="bass"] 일 때만 CSS 가 이 필터로 전환(app.css). 기타는 파랑 필터 유지.
+      */}
+      <filter id="duotone-light-bass" color-interpolation-filters="sRGB">
+        <feColorMatrix type="matrix" values=".2126 .7152 .0722 0 0  .2126 .7152 .0722 0 0  .2126 .7152 .0722 0 0  0 0 0 1 0"/>
+        <feComponentTransfer>
+          <feFuncR type="table" tableValues="0.0824 0.5490"/>
+          <feFuncG type="table" tableValues="0.3804 0.9490"/>
+          <feFuncB type="table" tableValues="0.1961 0.7020"/>
+        </feComponentTransfer>
+      </filter>
+      <filter id="duotone-dark-bass" color-interpolation-filters="sRGB">
+        <feColorMatrix type="matrix" values=".2126 .7152 .0722 0 0  .2126 .7152 .0722 0 0  .2126 .7152 .0722 0 0  0 0 0 1 0"/>
+        <feComponentTransfer>
+          <feFuncR type="table" tableValues="0.0314 0.3608"/>
+          <feFuncG type="table" tableValues="0.1294 0.7843"/>
+          <feFuncB type="table" tableValues="0.0706 0.5216"/>
+        </feComponentTransfer>
+      </filter>
     </svg>
 
     <div class="app">
@@ -180,7 +245,7 @@ const DONATION_BUTTONS: { channel: DonationChannel; iconClass: string; icon: str
           홈·커리큘럼 페이지(showDonate=false)에서는 숨긴다(레슨 페이지에서만 노출). */}
       {showDonate && (
         <div class="footer-cta" id="footerCta">
-          <button class="btn secondary" id="openDonateBtn">💙 <span>{translate(lang, 'donate.footer')}</span></button>
+          <button class="btn secondary" id="openDonateBtn"><span class="donate-heart" aria-hidden="true"></span> <span>{translate(lang, 'donate.footer')}</span></button>
         </div>
       )}
     </div>
