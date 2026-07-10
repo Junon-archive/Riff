@@ -147,7 +147,8 @@ function beatUnit(numBeats: number, beatValue: number): number {
 }
 
 /* ---- 레이아웃 상수 ---------------------------------------------------- */
-const MEASURES_PER_ROW = 2; // 한 줄에 2마디
+const MEASURES_PER_ROW = 2; // 한 줄에 최대 2마디(쌍). ★17-2: 쌍의 실제 최소폭이 아래 목표폭 초과 시 1마디씩 분리.
+const TARGET_ROW_W = 560; // ★17-2 줄 목표 가독폭(note-area px). 이보다 넓어질 빽빽한 쌍만 1/줄로 쪼갠다(축소 완화).
 const MARGIN_X = 12;
 const MARGIN_TOP = 14;
 const CLEF_W = 42; // 음자리표 폭
@@ -611,10 +612,68 @@ export function renderStaff(score: Score, mode: StaffMode): string {
     );
     if (built.every((b) => b.stave.length === 0)) return emptySvg();
 
-    // 2마디씩 줄(row)로 묶기
-    const rows: BuiltMeasure[][] = [];
+    // ★17 줄의 실제 최소 note 폭 측정 헬퍼(인덱스 기반, disposable — 렌더 객체 built 는 불변).
+    //   ⚠️ preCalculateMinTotalWidth 는 넘긴 voice/note 를 오염시키므로 측정용은 매번 새로 빌드해 버린다.
+    const minNoteWForIdxs = (idxs: number[]): number => {
+      const sT: (StaveNote | BarNote)[] = [];
+      const tT: (TabNote | GhostNote | BarNote)[] = [];
+      idxs.forEach((mIdx, k) => {
+        const md = buildMeasure(
+          tabData.measures![mIdx] as Measure,
+          flats,
+          openOf,
+          nStr,
+          beatInt,
+          withTab,
+          isRhythm,
+        );
+        if (k > 0) {
+          sT.push(new BarNote());
+          tT.push(new BarNote());
+        }
+        sT.push(...md.stave);
+        tT.push(...md.tab);
+      });
+      const mCount = idxs.length;
+      const vS = new Voice({ num_beats: (numBeats || 4) * mCount, beat_value: beatValue || 4 })
+        .setStrict(false)
+        .addTickables(sT);
+      const vv: Voice[] = [vS];
+      if (withTab) {
+        vv.push(
+          new Voice({ num_beats: (numBeats || 4) * mCount, beat_value: beatValue || 4 })
+            .setStrict(false)
+            .addTickables(tT),
+        );
+      }
+      const f = new Formatter();
+      vv.forEach((v) => f.joinVoices([v]));
+      return f.preCalculateMinTotalWidth(vv);
+    };
+
+    // ★17-2 줄 구성: 기존 2마디 쌍 유지. 단, 쌍의 실제 최소폭(pairW)이 목표 가독폭을 넘으면 그 쌍만
+    //   1마디씩 분리 → 성긴 쌍은 그대로 2/줄(불변), 빽빽한 쌍(팜뮤트 파워코드 등)만 1/줄로 커진다(축소 완화).
+    //   rows = 원본 마디 인덱스 배열의 배열. rowMinWArr = 각 줄의 실측 최소폭(사이징에 재사용).
+    const rows: number[][] = [];
+    const rowMinWArr: number[] = [];
     for (let i = 0; i < built.length; i += MEASURES_PER_ROW) {
-      rows.push(built.slice(i, i + MEASURES_PER_ROW));
+      const idxs: number[] = [];
+      for (let k = i; k < Math.min(i + MEASURES_PER_ROW, built.length); k++) idxs.push(k);
+      if (idxs.length >= 2) {
+        const pairW = minNoteWForIdxs(idxs);
+        if (pairW > TARGET_ROW_W) {
+          for (const idx of idxs) {
+            rows.push([idx]);
+            rowMinWArr.push(minNoteWForIdxs([idx]));
+          }
+        } else {
+          rows.push(idxs);
+          rowMinWArr.push(pairW);
+        }
+      } else {
+        rows.push(idxs);
+        rowMinWArr.push(minNoteWForIdxs(idxs));
+      }
     }
 
     // 음역대 기반 적응형 세로 오프셋: 오선보에 "그려지는" 표기 음역(concert+SHIFT 옥타브)을 기준으로
@@ -650,50 +709,12 @@ export function renderStaff(score: Score, mode: StaffMode): string {
     // 마디 폭 = 음표 수 비례(clamp). 줄 폭 = 마디 폭 합. 전체 폭 = 가장 넓은 줄.
     const measureArea = (mb: BuiltMeasure) =>
       Math.max(MIN_MW, Math.min(MAX_MW, mb.stave.length * PER_NOTE));
-    const rowNoteArea = rows.map((r) => r.reduce((a, mb) => a + measureArea(mb), 0));
+    const rowNoteArea = rows.map((idxs) => idxs.reduce((a, i) => a + measureArea(built[i]!), 0));
 
-    // ★17-1 클리핑 제거: 줄의 "실제" 최소 note 폭을 VexFlow 로 미리 재서(preCalculateMinTotalWidth),
-    //   추정폭(음표수×PER_NOTE)이 부족한 빽빽한 마디(P.M.·임시표 등 modifier 폭 미반영)면 그만큼 넓힌다.
-    //   ⚠️ preCalculateMinTotalWidth 는 넘긴 voice/note 를 오염시키므로 측정은 disposable 객체로만 하고,
-    //      렌더 객체(built)는 손대지 않는다. noteAreaW=max(추정,최소)라 이미 맞던 줄은 추정 그대로 → 바이트 불변.
-    const rowMinNoteW = (ri: number, rowMeasures: BuiltMeasure[]): number => {
-      const sT: (StaveNote | BarNote)[] = [];
-      const tT: (TabNote | GhostNote | BarNote)[] = [];
-      rowMeasures.forEach((_mb, mi) => {
-        const md = buildMeasure(
-          tabData.measures![ri * MEASURES_PER_ROW + mi] as Measure,
-          flats,
-          openOf,
-          nStr,
-          beatInt,
-          withTab,
-          isRhythm,
-        );
-        if (mi > 0) {
-          sT.push(new BarNote());
-          tT.push(new BarNote());
-        }
-        sT.push(...md.stave);
-        tT.push(...md.tab);
-      });
-      const mCount = rowMeasures.length;
-      const vS = new Voice({ num_beats: (numBeats || 4) * mCount, beat_value: beatValue || 4 })
-        .setStrict(false)
-        .addTickables(sT);
-      const vv: Voice[] = [vS];
-      if (withTab) {
-        vv.push(
-          new Voice({ num_beats: (numBeats || 4) * mCount, beat_value: beatValue || 4 })
-            .setStrict(false)
-            .addTickables(tT),
-        );
-      }
-      const f = new Formatter();
-      vv.forEach((v) => f.joinVoices([v]));
-      return f.preCalculateMinTotalWidth(vv);
-    };
-    const noteAreaByRow = rows.map((r, ri) =>
-      Math.max(rowNoteArea[ri]!, Math.ceil(rowMinNoteW(ri, r))),
+    // ★17-1 클리핑 제거: noteAreaW = max(추정폭, ceil(실측 최소폭)). rowMinWArr 은 줄 구성 때 이미 실측.
+    //   추정폭이 부족한 빽빽한 줄(P.M.·임시표 modifier 폭 미반영)만 넓어지고, 이미 맞던 줄은 추정 그대로.
+    const noteAreaByRow = rows.map((_idxs, ri) =>
+      Math.max(rowNoteArea[ri]!, Math.ceil(rowMinWArr[ri]!)),
     );
 
     const totalW = Math.max(...noteAreaByRow.map((w) => CLEF_W + ksW + TS_W + w)) + 2 * MARGIN_X;
@@ -705,7 +726,8 @@ export function renderStaff(score: Score, mode: StaffMode): string {
     renderer.resize(totalW, totalH);
     const ctx = renderer.getContext();
 
-    rows.forEach((rowMeasures, ri) => {
+    rows.forEach((rowIdxs, ri) => {
+      const rowMeasures = rowIdxs.map((i) => built[i]!); // 인덱스 → 렌더용 BuiltMeasure
       const sysTop = MARGIN_TOP + ri * sysH;
       const x = MARGIN_X;
       const mCount = rowMeasures.length;
@@ -720,8 +742,7 @@ export function renderStaff(score: Score, mode: StaffMode): string {
       if (tabData.timeSignature) stave.addTimeSignature(tabData.timeSignature);
       // 각 줄 첫 마디에 마디 번호.
       const firstMeasureNum =
-        (tabData.measures[ri * MEASURES_PER_ROW] as Measure | undefined)?.measure ??
-        ri * MEASURES_PER_ROW + 1;
+        (tabData.measures[rowIdxs[0]!] as Measure | undefined)?.measure ?? rowIdxs[0]! + 1;
       stave.setMeasure(firstMeasureNum);
       if (ri === 0) {
         // 템포(♩=bpm)와 스윙 필(정박 악보 + "Swing …" 지시)은 첫 줄에만.

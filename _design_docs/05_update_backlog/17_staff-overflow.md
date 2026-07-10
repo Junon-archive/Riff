@@ -7,7 +7,11 @@ depends_on: []
 owner: null
 ---
 
-> 🟡 진행 중(2026-07-10). **단계 1(클리핑 제거) 구현·검증 완료.** `staff.ts`에 `preCalculateMinTotalWidth`로 줄별 실제 최소폭을 재서 `noteAreaByRow=max(추정,ceil(minW))`로 사이징(측정은 disposable 객체, 렌더 객체 pristine). 검증: `astro check` 0e·`build` 412p·**입문 일렉 m1w3d3·d4 우측 잘림 소멸 육안(래스터)**·**check-invariants 회귀 0(354블록 — 의미 불변, 폭만 확장)**. **남음:** 단계 2(폭기반 줄바꿈 — 빽빽 마디 1/줄로 커지게)·단계 3(스크롤 폴백).
+> 🟡 진행 중(2026-07-10). **단계 1(클리핑 제거)·단계 2(폭기반 줄바꿈) 구현·검증 완료.**
+> - 단계 1: `preCalculateMinTotalWidth`로 줄별 실제 최소폭 → `noteAreaByRow=max(추정,ceil(minW))` 사이징(측정=disposable, 렌더 객체 pristine).
+> - 단계 2: 기존 2마디 쌍 유지하되 **쌍 최소폭 > `TARGET_ROW_W`(560px)이면 그 쌍만 1마디/줄로 분리** → 빽빽 마디가 커진다. 성긴 쌍·단일 마디는 불변.
+> - 검증: `astro check` 0e·`build` 412p·**일렉 m1w3d4 = 4마디 각 1/줄로 커짐(래스터)**·solo_scale 등 성긴 블록 viewBox 불변·전체 186 staff 스캔 병리적 분리 0(최대높이 1214=일렉 4마디)·**check-invariants 회귀 0(354블록, 의미 불변)**.
+> - **남음:** 단계 3(스크롤 폴백 — 16분음 16개 등 단일 밀집 마디가 좁은 컬럼에서 여전히 작을 때). **선택**.
 
 # 17 · 오선보/타브 오버플로 클리핑 + 폭기반 줄바꿈
 
@@ -77,10 +81,10 @@ owner: null
 - [x] `noteAreaByRow = max(추정, ceil(minW))` + totalW 재계산 → resize 전 확정
 - [x] 일렉 m1w3d3·d4 잘림 소멸 육안(래스터) + check-invariants 회귀 0(354블록)
 
-**단계 2 — 폭기반 줄바꿈**
-- [ ] `MEASURES_PER_ROW` 고정 → 목표폭 그리디 패킹
-- [ ] 목표폭 튜닝(성긴 2마디는 2/줄 유지 → churn 최소)
-- [ ] 긴 악보 세로 스택·음표 크기 육안(모바일/데스크톱)
+**단계 2 — 폭기반 줄바꿈** ✅ 완료(2026-07-10)
+- [x] rows 를 원본 마디 인덱스 배열로 전환 + **기존 2마디 쌍 유지, 쌍 최소폭 > TARGET_ROW_W(560)이면 그 쌍만 1/줄 분리** (전역 재패킹 아님 → churn 최소)
+- [x] 성긴 쌍·단일 마디 불변(solo_scale viewBox 불변 확인), 빽빽 쌍만 1/줄로 커짐(일렉 d4·펑크 개선)
+- [x] 일렉 d4 4마디 세로 스택·음표 커짐 육안 + check-invariants 0 + 전체 스캔 병리 0
 
 **단계 3 — 스크롤 폴백**
 - [ ] `.render-area`/`.render-mount` `overflow-x:auto` + 가독성 바닥
