@@ -82,6 +82,9 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-10 (백로그 14 — 슬랩/펑크 2주차 day 저작)
+- week_2(T-P 코디네이션·옥타브 모양·첫 슬랩 그루브) day_1~4 × 3언어=12파일. 핀고정 octave_groove_rough 4·5현 바이트 동일. build 490p exit 0, invariants 신규 24블록·회귀0(baseline 470), 4·5현 병행·slap·볼드/mark 3언어 일치.
+
 ### 2026-07-10 (백로그 14 — 슬랩/펑크 베이스 준비물 + 1주차 day 저작, /goal 순차)
 - 준비물: `slap_funk_bass_2months`(2개월·level2) 프롬프트 8개 강화(볼드·지판)·meta·overview 30·이미지. 1주차(썸&팝) day_1~4 × 3언어=12파일.
 - slap_thumb/slap_pop/dead_note 첫 활용 — dist에 T/P 글리프 렌더(10-B2·백로그 05 초록 테마 실동작). 핀고정 tp_alternation 4·5현 바이트 동일.
