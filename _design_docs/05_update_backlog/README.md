@@ -30,10 +30,11 @@
 | 10 | [베이스 지원 (클레프·slap·튜닝·다현·지판) + 베이스 커리큘럼](10_bass-support.md) | 🟡 IN_PROGRESS (엔진 B0~B4 완료 · 콘텐츠 B5 대기) | 중간 | 높음 | 03·02(완료) |
 | 11 | [블루스 커리큘럼 신설 (2개월·리듬+리드)](11_blues-curriculum.md) | 🔴 TODO (구상·저작 미착수) | 높음 | 낮음 | 없음 |
 | 12 | [R&B/네오소울 보이싱 커리큘럼 신설 (2개월)](12_neosoul-voicing-curriculum.md) | 🔴 TODO (구상·저작 미착수) | 중간 | 낮음 | 없음 |
-| 13 | [베이스 기초 커리큘럼 신설 (1개월·손 만들기)](13_beginner-bass-curriculum.md) | 🔴 TODO (설계 상세 확정·저작 미착수) | 높음 | 중간 | 10 |
+| 13 | [베이스 기초 커리큘럼 신설 (1개월·손 만들기)](13_beginner-bass-curriculum.md) | 🟡 IN_PROGRESS (프롬프트 4개 완료·day 미착수) | 높음 | 중간 | 10 |
 | 14 | [슬랩/펑크 베이스 커리큘럼 신설 (2개월)](14_slap-funk-bass-curriculum.md) | 🔴 TODO (구상·저작 미착수) | 중간 | 중간 | 10·13 |
-| 15 | [그루브 & 포켓 베이스 커리큘럼 신설 (1개월)](15_groove-pocket-bass-curriculum.md) | 🔴 TODO (구상·저작 미착수) | 중간 | 중간 | 10·13 |
+| 15 | [셔플 & 바운스 베이스 커리큘럼 (2개월·필 트랙)](15_shuffle-bounce-bass-curriculum.md) | 🔴 TODO (설계 상세 확정·저작 미착수) | 중간 | 중간 | 10·13 |
 | 16 | [워킹 베이스 커리큘럼 신설 (2개월)](16_walking-bass-curriculum.md) | 🔴 TODO (구상·저작 미착수) | 중간 | 중간 | 10·13 |
+| 17 | [오선보/타브 오버플로 클리핑 + 폭기반 줄바꿈](17_staff-overflow.md) | 🔴 TODO | 높음 | 중간 | 없음 |
 
 ## 공통 원칙 — "추가는 되고, 기존은 안 깨진다" (모든 묶음이 준수)
 
