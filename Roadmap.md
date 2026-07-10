@@ -82,6 +82,9 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-11 (백로그 14 — 슬랩/펑크 6주차 day 저작)
+- week_6(해머온/풀오프 레가토 → E 마이너 펜타토닉 슬랩 릭) day_1~4 × 3언어=12파일. 핀고정 pentatonic_slap_lick 4·5현 바이트 동일. build 538p exit 0, invariants 신규 30블록·회귀0(baseline 540→570), hammer_on/pull_off 첫 활용, 4·5현 병행·slap·볼드/mark 3언어 일치.
+
 ### 2026-07-10 (백로그 14 — 슬랩/펑크 5주차 day 저작 = **Month 2 착수**)
 - week_5(16비트 싱코페이션 — 16 그리드에 T/P/고스트 배치, 당김음 그루브) day_1~4 × 3언어=12파일. 핀고정 sixteenth_synco 4·5현 바이트 동일. build 526p exit 0, invariants 신규 30블록·회귀0(baseline 510→540), 4·5현 병행·slap·볼드/mark 3언어 일치.
 
