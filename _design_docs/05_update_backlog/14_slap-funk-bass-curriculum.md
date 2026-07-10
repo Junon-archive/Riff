@@ -1,6 +1,6 @@
 ---
 id: 14-slap-funk-bass-curriculum
-status: TODO (설계 상세 확정 — 주차 프롬프트·day 미착수. 엔진 10 B0~B4 완료)
+status: IN_PROGRESS (주차 프롬프트 8개 완료 — day 저작 미착수. 엔진 10 B0~B4 완료)
 priority: medium
 risk: medium
 depends_on: [10, 13]
@@ -101,7 +101,8 @@ depends_on: [10, 13]
 - [ ] 슬랩 표기 정밀도(좌수슬랩을 별 글자로 낼지 — 10과 조율, 기본은 T/P + dead_note)
 - [ ] M1 옥타브 그루브·M2 졸업 그루브 **정확한 마디·박자** 확정(JSON 승격)
 - [ ] 키·톤(M1 E 옥타브 기준 등)
-- [ ] 4/5현 병행 규약 반영 **주차 프롬프트 작성**(§13 청사진 + 병행 블록 + 슬랩 표기) → day 저작 → build·박자합·invariants 통과
+- [x] **주차 프롬프트 8개 작성 완료**(week_1~8, §13 청사진 + 4/5현 병행 + 슬랩 표기 slap_thumb/pop·dead_note·hammer/pull. 핀 고정 완성물 8블록 박자합 4.0·현범위·기법 검증).
+- [ ] 프롬프트 실행 → `day_N.{ko,en,ja}.md` 32일 저작 → build·박자합·invariants 통과 ← 다음 작업
 
 ## 준수 공통 규약 (재사용)
 - Day 4단(①이론 ②시각 ③50분 루틴 ④팁), 토스톤(긁지 않기), i18n 3언어(악보 JSON 바이트 동일), 인라인 배치+`▶`연주안내, 산문 `<mark>`(베이스=연초록, 악기 테마 05 적용 시 ↔ 악보 `role:target` 초록과 기능·레이어로 구분).
