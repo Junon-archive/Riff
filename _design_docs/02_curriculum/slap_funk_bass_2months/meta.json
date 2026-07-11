@@ -1,9 +1,9 @@
 {
   "id": "slap_funk_bass_2months",
   "title": {
-    "ko": "슬랩 & 펑크 베이스 — 두 달 T-P 그루브",
-    "en": "Slap & Funk Bass: Two Months of T-P Groove",
-    "ja": "スラップ&ファンク・ベース — 2か月のT-Pグルーヴ"
+    "ko": "슬랩 & 펑크 베이스",
+    "en": "Slap & Funk Bass",
+    "ja": "スラップ & ファンク・ベース"
   },
   "tagline": {
     "ko": "엄지로 치고 손가락으로 튕겨 — 썸·팝으로 만드는 펑크 그루브 8주",
@@ -23,9 +23,9 @@
   ],
   "durationMonths": 2,
   "forWho": {
-    "ko": "베이스 기초를 뗐고, 이제 슬랩으로 튀는 펑크 그루브를 치고 싶은 분께",
-    "en": "For those who finished bass fundamentals and now want to play punchy funk grooves with slap",
-    "ja": "ベース基礎を終え、スラップで弾けるファンクグルーヴを弾きたい方へ"
+    "ko": "핑거는 되는데, 슬랩만 잡으면 딱딱 소리만 나는 분께",
+    "en": "For players whose fingerstyle is solid but slap comes out clacky, not funky",
+    "ja": "フィンガーはできるのに、スラップになると硬い音しか出ない人へ"
   },
   "intro": {
     "ko": [

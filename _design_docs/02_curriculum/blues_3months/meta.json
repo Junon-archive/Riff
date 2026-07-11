@@ -1,14 +1,14 @@
 {
   "id": "blues_3months",
   "title": {
-    "ko": "3개월 블루스 — 리듬부터 솔로까지",
-    "en": "3-Month Blues: From Rhythm to Solo",
-    "ja": "3か月ブルース — リズムからソロまで"
+    "ko": "블루스 로드맵",
+    "en": "Blues Roadmap",
+    "ja": "ブルース・ロードマップ"
   },
   "tagline": {
-    "ko": "셔플로 묻고 벤딩으로 답한다 — 12주 블루스 로드맵",
-    "en": "Ask with the shuffle, answer with a bend — a 12-week blues roadmap",
-    "ja": "シャッフルで問い、ベンドで答える — 12週間ブルース・ロードマップ"
+    "ko": "셔플로 묻고 벤딩으로 답한다 — 12주 블루스 여정",
+    "en": "Ask with the shuffle, answer with a bend — a 12-week blues journey",
+    "ja": "シャッフルで問い、ベンドで答える — 12週間ブルースの旅"
   },
   "instrument": "guitar",
   "image": "/curriculum/blues.webp",
@@ -23,9 +23,9 @@
   ],
   "durationMonths": 3,
   "forWho": {
-    "ko": "입문 일렉을 뗐고, 이제 블루스를 리듬도 리드도 제대로 치고 싶은 분께",
-    "en": "For players past the electric basics who want to play blues — rhythm and lead alike",
-    "ja": "エレキ入門を終え、ブルースをリズムもリードもちゃんと弾きたい人へ"
+    "ko": "박스는 외웠는데, '말하는' 솔로는 안 나오는 분께",
+    "en": "For players who've memorized the pentatonic box but can't make a solo that 'speaks'",
+    "ja": "ペンタボックスは覚えたのに、「語る」ソロが出てこない人へ"
   },
   "intro": {
     "ko": [

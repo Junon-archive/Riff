@@ -82,6 +82,13 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-12 (랜딩 카드 카피 확정안 반영 — title/tagline/forWho 일괄 수정, `_design_docs/02_curriculum/*/meta.json`)
+- **범위:** 10개 커리큘럼 중 8개(`solo_scale_3months`·`chord_building_2months`·`funk_rhythm_2months`·`blues_3months`·`neosoul_voicing_2months`·`shuffle_bounce_bass_2months`·`slap_funk_bass_2months`·`walking_bass_2months`) `meta.json`의 `title`(전체)·`tagline`(blues만)·`forWho`(신규 5개만) 3언어 수정. `beginner_electric_1month`·`beginner_bass_1month`는 변경 없음(확정안대로 유지).
+- **제목:** "N개월/N-Month/Nか月", "커리큘럼/curriculum" 등 기간·행정어 제거(기간은 카드 배지가 담당). 예: "2개월 코드 빌딩 시스템"→"코드 빌딩 시스템", "3개월 솔로/스케일 마스터 커리큘럼"→"솔로 & 스케일 마스터".
+- **태그라인:** 전 커리큘럼 기존 en/ja 값 유지. 예외로 `blues_3months`만 "로드맵/Roadmap/ロードマップ" 중복(제목=블루스 로드맵, 태그라인에도 로드맵) 해소 — "12주 블루스 로드맵"→"12주 블루스 여정"(en: roadmap→journey, ja: ロードマップ→の旅).
+- **forWho:** 유지 5개(기초2·chord·funk·solo)는 불변. 신규 5개(blues·neosoul·shuffle·slap·walking)는 "할 수 있는 것 → 딱 막히는 지점 → 분께" 구조로 토스톤 재작문(예: blues "박스는 외웠는데, '말하는' 솔로는 안 나오는 분께" / neosoul "코드는 치는데, 그 나른한 R&B 보이싱 색은 못 내는 분께"). 내부 id·선수과목 나열 제거.
+- **검증:** 10개 meta.json 전부 JSON 유효·title/tagline/forWho 3언어 키 누락 0(python 스크립트 검증)·`git diff` 로 지정 외 필드(intro·tags·level 등) 불변 확인·`npm run build` exit 0(1006p, build-content 파싱 OK)·dist에서 신규 title(예: "블루스 로드맵"/"Blues Roadmap") 렌더 확인. **커밋 미실행**(검증·커밋은 사용자).
+
 ### 2026-07-11 (오선보 조판 — 줄 마지막 마디 끝 여백 확보, staff.ts)
 - **증상:** 한 줄의 마지막 마디에서 끝 음표가 종료 세로줄에 바짝 붙음(워킹 M1W4D4 실측 끝여백 10.9px, 펑크 M2W8D4 등). 주로 줄 마지막 마디.
 - **원인:** `staff.ts` 가 한 줄의 마디들을 이어 `Formatter.format(voices, noteAreaW)` 로 justify하는데 **끝 여백을 예약하지 않아** 마지막 음표가 stave 종료 세로줄에 밀착.

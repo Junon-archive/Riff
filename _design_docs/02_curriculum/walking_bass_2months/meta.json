@@ -1,9 +1,9 @@
 {
   "id": "walking_bass_2months",
   "title": {
-    "ko": "워킹 베이스 — 두 달, 코드 위를 걷다",
-    "en": "Walking Bass: Two Months of Walking the Changes",
-    "ja": "ウォーキング・ベース — 2か月、コードの上を歩く"
+    "ko": "워킹 베이스 라인",
+    "en": "Walking Bass Lines",
+    "ja": "ウォーキング・ベースライン"
   },
   "tagline": {
     "ko": "매 1박에 착지하고 4박에 다리를 놓아 — 코드 위를 걷는 재즈·블루스 워킹 8주",
@@ -23,9 +23,9 @@
   ],
   "durationMonths": 2,
   "forWho": {
-    "ko": "베이스 기초를 뗐고, 이제 코드 위를 걸으며 재즈·블루스 체인지를 항해하고 싶은 분께",
-    "en": "For those who finished bass fundamentals and now want to walk over chords and navigate jazz-blues changes",
-    "ja": "ベース基礎を終え、コードの上を歩いてジャズ・ブルースのチェンジを航海したい方へ"
+    "ko": "코드는 아는데, 그 위를 '걷는' 라인은 못 만드는 분께",
+    "en": "For players who know the chords but can't build a line that 'walks' over them",
+    "ja": "コードは分かるのに、その上を「歩く」ラインが作れない人へ"
   },
   "intro": {
     "ko": [

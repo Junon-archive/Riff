@@ -1,9 +1,9 @@
 {
   "id": "chord_building_2months",
   "title": {
-    "ko": "2개월 코드 빌딩 시스템",
-    "en": "2-Month Chord Building System",
-    "ja": "2か月コードビルディング・システム"
+    "ko": "코드 빌딩 시스템",
+    "en": "Chord Building System",
+    "ja": "コードビルディング・システム"
   },
   "tagline": {
     "ko": "코드는 외우지 말고 조립하세요 — 근음 위 인터벌로 8주",

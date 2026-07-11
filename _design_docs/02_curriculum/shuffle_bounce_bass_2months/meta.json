@@ -1,9 +1,9 @@
 {
   "id": "shuffle_bounce_bass_2months",
   "title": {
-    "ko": "셔플 & 바운스 베이스 — 두 달, 튀는 그루브",
-    "en": "Shuffle & Bounce Bass: Two Months of Groove That Bounces",
-    "ja": "シャッフル&バウンス・ベース — 2か月の跳ねるグルーヴ"
+    "ko": "셔플 & 바운스 베이스",
+    "en": "Shuffle & Bounce Bass",
+    "ja": "シャッフル & バウンス・ベース"
   },
   "tagline": {
     "ko": "8분을 롱-숏으로 굴리고 16분을 스윙해 — 셔플과 바운스로 튀는 그루브 8주",
@@ -23,9 +23,9 @@
   ],
   "durationMonths": 2,
   "forWho": {
-    "ko": "베이스 기초를 뗐고, 이제 정박을 넘어 튀고 흔들리는 그루브(셔플·바운스)를 치고 싶은 분께",
-    "en": "For those who finished bass fundamentals and now want grooves that bounce and swing beyond straight time",
-    "ja": "ベース基礎を終え、ジャストを越えて跳ねて揺れるグルーヴ（シャッフル・バウンス）を弾きたい方へ"
+    "ko": "정박 루트는 치는데, 튀는 셔플 그루브는 안 나오는 분께",
+    "en": "For players who can lock in a straight root but can't get that bouncing shuffle groove",
+    "ja": "ジャストのルートは弾けるのに、跳ねるシャッフルグルーヴが出ない人へ"
   },
   "intro": {
     "ko": [

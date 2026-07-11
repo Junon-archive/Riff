@@ -1,9 +1,9 @@
 {
   "id": "neosoul_voicing_2months",
   "title": {
-    "ko": "2개월 네오소울 보이싱 — 어루만지는 코드",
-    "en": "2-Month Neo-Soul Voicing: Caressing the Chord",
-    "ja": "2か月ネオソウル・ボイシング — 撫でるコード"
+    "ko": "R&B/네오소울 보이싱",
+    "en": "R&B/Neo-Soul Voicing",
+    "ja": "R&B/ネオソウル・ボイシング"
   },
   "tagline": {
     "ko": "Dm9→G13 하나로 물들이고 미끄러지고 번지게 — 8주 네오소울 로드맵",
@@ -24,9 +24,9 @@
   ],
   "durationMonths": 2,
   "forWho": {
-    "ko": "chord_building과 solo_scale을 뗐고, 이제 코드를 네오소울처럼 어루만지고 싶은 분께",
-    "en": "For players who've finished chord_building and solo_scale and now want to caress chords like neo-soul",
-    "ja": "chord_buildingとsolo_scaleを終え、コードをネオソウルのように撫でたい人へ"
+    "ko": "코드는 치는데, 그 나른한 R&B 보이싱 색은 못 내는 분께",
+    "en": "For players who can play chords but can't get that lazy R&B color into their voicings",
+    "ja": "コードは弾けるのに、あの気だるいR&Bのボイシングの色が出せない人へ"
   },
   "intro": {
     "ko": [
