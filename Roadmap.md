@@ -82,6 +82,11 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-11 (백로그 15 — 셔플&바운스 3주차 day 저작)
+- **3주차(12마디 셔플 I-IV-V):** day_1~4 × 3언어 = 12파일. D1 IV(A7) 부기 이동(A 루트=3번현 개방) → D2 V(B7) 부기 이동 → D3 12마디 순회(코드 전환) → D4 12마디 셔플 라인 + 핀 고정 `boogie_move`(E7→A7, 4·5현). 산문에 12마디 폼(E7-A7-E7…B7) 제시, 부기 폼을 I·IV·V로 이동. 부기 role 프롬프트 그대로.
+- **검증:** build 718p exit0(셔플 day 12), check-invariants 신규 16블록·회귀0(baseline 동시 세션 커밋에 이미 가법 포함), 볼드/mark 3언어 일치·악보 JSON 3언어 바이트동일·④/완료줄 mark0·핀 JSON=프롬프트 바이트동일·4·5현 병행쌍·태그오염0.
+- **다음:** week_4(턴어라운드 → 12마디 셔플 완주·M1 졸업).
+
 ### 2026-07-11 (백로그 11 — 블루스 6주차 day 저작: 표현적 벤딩·비브라토·슬라이드)
 - **6주차:** day_1~4 × 3언어 = 12파일. D1 반음·온음 벤딩 → D2 비브라토(손목) → D3 슬라이드 → D4 표현 릭 통합(핀 고정 `bend_lick`). **배포 콘텐츠 최초 bend/slide/vibrato 사용**(`technique:"bend"`+`bendTarget` half/full·`slide`+`slideToFret`·`vibrato`).
 - **검증:** build green 715p exit0(동시 세션 미완성 트랙이 잠시 막았으나 green 창 확보), check-invariants 삭제전용키 0(회귀0)·blues w6 신규 23블록(baseline→904), 볼드/mark 3언어 일치·JSON 3언어 바이트동일·④/완료줄 mark0·핀 JSON=프롬프트 바이트동일·태그오염0·①이론 498~536.
