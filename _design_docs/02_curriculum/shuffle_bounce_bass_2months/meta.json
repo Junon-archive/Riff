@@ -1,0 +1,47 @@
+{
+  "id": "shuffle_bounce_bass_2months",
+  "title": {
+    "ko": "셔플 & 바운스 베이스 — 두 달, 튀는 그루브",
+    "en": "Shuffle & Bounce Bass: Two Months of Groove That Bounces",
+    "ja": "シャッフル&バウンス・ベース — 2か月の跳ねるグルーヴ"
+  },
+  "tagline": {
+    "ko": "8분을 롱-숏으로 굴리고 16분을 스윙해 — 셔플과 바운스로 튀는 그루브 8주",
+    "en": "Roll eighths long-short, swing the sixteenths — bouncing groove from shuffle in 8 weeks",
+    "ja": "8分をロング・ショートで転がし16分をスウィング — シャッフルとバウンスの跳ねるグルーヴ8週間"
+  },
+  "instrument": "bass",
+  "image": "/curriculum/shuffle-bounce-bass.webp",
+  "topic": "bass-shuffle-bounce",
+  "level": 2,
+  "tags": [
+    "bass",
+    "shuffle",
+    "bounce",
+    "groove",
+    "intermediate"
+  ],
+  "durationMonths": 2,
+  "forWho": {
+    "ko": "베이스 기초를 뗐고, 이제 정박을 넘어 튀고 흔들리는 그루브(셔플·바운스)를 치고 싶은 분께",
+    "en": "For those who finished bass fundamentals and now want grooves that bounce and swing beyond straight time",
+    "ja": "ベース基礎を終え、ジャストを越えて跳ねて揺れるグルーヴ（シャッフル・バウンス）を弾きたい方へ"
+  },
+  "intro": {
+    "ko": [
+      "이 과정은 베이스 기초를 뗀 분이 정박을 넘어 **셔플**과 **바운스**로 넘어가는 2개월 트랙이에요. 핵심은 하나예요 — <mark>박자는 격자가 아니라 삼각형</mark>. 8분음표를 균등하게가 아니라 **롱-숏**(따-그닥)으로 굴리면 그루브가 통통 튑니다. 4현이든 5현이든 함께 배워요.",
+      "1개월차엔 **트리플렛**(삼각형)을 느끼고 **부기 워크**(R-5-6-b7)로 셔플 베이스라인을 세워, 12마디를 한 바퀴 도는 <mark>셔플 블루스</mark>를 완주해요. 2개월차엔 **스윙16**·**고스트**·**레이백**을 더해 네오소울·힙합 냄새가 나는 <mark>끈적한 바운스 그루브</mark>를 녹음합니다.",
+      "매일 **50분**, 끝엔 늘 메트로놈 앞에서 확인되는 그루브 하나가 남아요. 목표는 정확함이 아니라 **굴러가는 타이밍** — 두 달 뒤엔 <mark>몸이 저절로 흔들리는 그루브</mark>로 셔플과 바운스를 자유롭게 오가는 자신을 만나요."
+    ],
+    "en": [
+      "This 2-month track takes someone who finished bass fundamentals past straight time into **shuffle** and **bounce**. The whole idea is one thing — <mark>a beat isn't a grid, it's a triangle</mark>. Roll your eighth notes **long-short** (da-ga) instead of evenly, and the groove starts to bounce. You learn 4- and 5-string together.",
+      "Month 1 feels the **triplet** (the triangle) and builds a shuffle bassline with a **boogie walk** (R-5-6-b7), driving a full 12-bar <mark>shuffle blues</mark>. Month 2 adds **swing-16**, **ghosts**, and **laid-back** feel to record a <mark>sticky bounce groove</mark> that smells of neo-soul and hip-hop.",
+      "**50 minutes** a day, and each ends with one groove you can check against a metronome. The goal isn't precision — it's a **rolling sense of timing**. Two months in, you'll move freely between shuffle and bounce with a <mark>groove that makes your body sway on its own</mark>."
+    ],
+    "ja": [
+      "この講座は、ベース基礎を終えた人がジャストを越えて**シャッフル**と**バウンス**へ進む2か月トラックです。核心はひとつ — <mark>拍は格子ではなく三角形</mark>。8分音符を均等にではなく**ロング・ショート**（ダー・ガ）で転がすと、グルーヴが跳ね始めます。4弦でも5弦でも一緒に学びます。",
+      "1か月目は**トリプレット**（三角形）を感じ、**ブギー・ウォーク**（R-5-6-b7）でシャッフルのベースラインを組み、12小節を一周する<mark>シャッフル・ブルース</mark>を弾き切ります。2か月目は**スウィング16**・**ゴースト**・**レイバック**を足して、ネオソウル・ヒップホップの香りがする<mark>ねばりつくバウンス・グルーヴ</mark>を録音します。",
+      "毎日**50分**、終わりには必ずメトロノームの前で確認できるグルーヴが一つ残ります。目標は正確さではなく、**転がるタイミング** — 2か月後には、<mark>体が勝手に揺れるグルーヴ</mark>でシャッフルとバウンスを自在に行き来する自分に出会えます。"
+    ]
+  }
+}

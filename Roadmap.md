@@ -82,6 +82,14 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-11 (백로그 15 착수 — 셔플&바운스 베이스 준비물: meta·이미지·overview)
+- **범위:** `shuffle_bounce_bass_2months`(베이스·2개월·8주·level2) day 저작 착수 준비물 완비(day 문서는 다음 단계, /goal 주차별 순차). 오른손 핑거스타일·4·5현 병행·키 E.
+- **meta.json 생성:** id/title·tagline·forWho·intro(3언어)/instrument:"bass"/level:2/durationMonths:2/tags/image. ★intro 볼드(용어·수치)≠하이라이트(`<mark>`, 약속·성과) 분리, 3언어 볼드 10·mark 4 정확 일치·겹침 0. 관통 철학("박자는 격자가 아니라 삼각형 — 롱-숏으로 굴리면 그루브가 튄다") 반영.
+- **overview 30파일:** month_1~2 + week_1~8 × ko/en/ja. slap_funk 트랙 헤딩 구조 템플릿, 각 주차 프롬프트와 정합(M1 셔플: 트리플렛→부기 R-5-6-b7→12마디 I-IV-V→턴어라운드졸업 / M2 바운스: 고스트→스윙16→레이백→종합졸업). 전 30파일 3언어 볼드·mark 개수 일치·겹침 0·언어오염 0·dayKey(m1.w1~m2.w8) 정확.
+- **대표 이미지:** `bass_curriculum5.jpg`(핑거보드 운지)→`shuffle-bounce-bass.webp`(1200×800·q72·15.2KB). optimize-curriculum-images MAP 추가, 기존 webp 6개 md5 바이트 불변. meta.json image 참조.
+- **검증:** `cd web_app && npm run build` exit 0(601p, 셔플 트랙 발견·meta 파싱 OK, day 없어 라우팅 스킵=정상). web_app 코드 무변경(스크립트 MAP 1줄·webp만).
+- **다음:** week_1(트리플렛·셔플 루트펄스) ~ week_8(종합 바운스 졸업) day 저작.
+
 ### 2026-07-11 (악보 렌더 다듬기 — 지판 개방현 마크 · 오선보 스윙/템포 겹침)
 - **지판 개방현/뮤트 마크 위치(2건, `fretboard.ts`):** ① 개방현(○)·뮤트(✕) 마크가 왼쪽 거터 `x=22`에 있어 계이름(stringName `x≈14`)과 겹쳐 **계이름을 가리던 것** 수정 → `OPEN_MUTE_X` 상수로 넛 쪽 이동. ② 이어서 계이름–넛 사이 **시각 중앙으로 균형**(`PAD_L-14`, 계이름 여유 5.5px·넛 여유 7.5px, "Am:R" 최장 label 넛 미침범). 개방현/뮤트 있는 전 지판(기타·베이스·스케일·코드) 일괄 적용. `check-invariants` 회귀 0(좌표는 데이터 지문 무관).
 - **오선보 단일 마디 스윙↔템포 겹침(`staff.ts`, 백로그 17 부수이슈):** `meta.feel`(swing)+`tempoBpm`+전체 1마디면 "Swing …"(상단 중앙)과 `♩=bpm`(좌상단)이 좁은 스테이브에서 겹치던 것 수정 → `swingTempoOverlap` 판정 시 `trebleDy +30`(스테이브 하향·상단 공간 확보) + `setText shift_y -34`(스윙 위로)로 세로 분리(간격 38px). 2마디+·feel/tempo 없음은 불변(스윙 높이 정합 보존). 재현: `blues m1w1d3`.

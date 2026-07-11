@@ -32,6 +32,7 @@ const MAP = [
   { src: 'curriculum9.jpg', out: 'blues.webp' }, // 블루스 트랙(선버스트 스트랫 피킹, 사용자 확정 2026-07-11)
   { src: 'bass_curriculum4.jpg', out: 'beginner-bass.webp' }, // 입문 베이스 트랙(오른손 핑거스타일, 사용자 확정 2026-07-10)
   { src: 'bass_curriculum3.jpg', out: 'slap-funk-bass.webp' }, // 슬랩/펑크 베이스 트랙(사용자 확정 2026-07-10)
+  { src: 'bass_curriculum5.jpg', out: 'shuffle-bounce-bass.webp' }, // 셔플&바운스 트랙, 사용자 확정 2026-07-11
 ];
 
 const TARGET_BYTES = 120 * 1024;
