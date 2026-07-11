@@ -82,6 +82,11 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-11 (백로그 12 — 네오소울 1주차 day 저작)
+- **1주차(코어 그립 Dm9·G13):** day_1~4 × 3언어 = 12파일. D1 Dm9(x5355x) 그립 `fretboard_diagram` → D2 G13(3x345x) 그립 → D3 Dm9↔G13 전환(새끼손가락 앵커) → D4 Dm9→G13 뱀프(핀 고정 `vamp_grips` 프롬프트 바이트동일). 루트리스 중음역 보이싱, 텐션(9·13)=`role:"color"`·`notation:"staff+tab"`.
+- **검증:** build 667p exit0, check-invariants 신규 10블록·회귀0(baseline 813, neosoul만 201+/0−), 볼드/mark 3언어 일치·악보 JSON 3언어 바이트동일·④/완료줄 mark0·핀 JSON=프롬프트 바이트동일·태그오염0.
+- **다음:** week_2(텐션으로 물들이기 — sus4→3 해결).
+
 ### 2026-07-11 (백로그 16 — 워킹 베이스 준비물 + 프롬프트 보강, /goal 착수)
 - **준비물:** meta.json(level 3·키 F·재즈/블루스 하모니 캡스톤·섬네일 walking-bass.webp=bass_curriculum1) + overview 30(month 2×3 + week 8×3). intro 3언어 볼드12·mark4 서로 다른 위치·겹침0, 파일별 3언어 볼드/mark 동수·bullet mark0·금지어0.
 - **프롬프트 보강(day 저작 전):** W2~8 지판 '병기 가능'→'권장(주당 최소 1블록)'(W1 필수 유지), W7·8 고스트=dead_note+role:scale·label생략 명시, W6 enclosure 오해방지 주.
