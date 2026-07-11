@@ -82,6 +82,11 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-11 (백로그 11 — 블루스 4주차 day 저작 = Month 1(리듬) 졸업)
+- **4주차(턴어라운드 → 12마디 셔플 완주):** day_1~4 × 3언어 = 12파일. D1 턴어라운드(V-IV-I-V) → D2 인트로/엔딩 태그 → D3 12마디 리허설 → D4 12마디 셔플 완주·녹음(핀 고정 `turnaround`, `(M1 졸업!)`). Month 1(셔플·부기·12마디·턴어라운드) 마무리.
+- **검증:** build exit0(blues day 16), check-invariants 삭제전용키 0(순수 순서변동)·신규 20블록(blues w4)·회귀0, 볼드/mark 3언어 일치·JSON 3언어 바이트동일·④/완료줄 mark0·핀 JSON=프롬프트 바이트동일·태그오염0. (baseline diff에 동시 세션 shuffle_bounce 20블록 포함 — 가법.)
+- **다음:** Month 2(표현 리드) — week_5(마이너 펜타 박스1 + 블루노트).
+
 ### 2026-07-11 (백로그 15 착수 — 셔플&바운스 베이스 준비물: meta·이미지·overview)
 - **범위:** `shuffle_bounce_bass_2months`(베이스·2개월·8주·level2) day 저작 착수 준비물 완비(day 문서는 다음 단계, /goal 주차별 순차). 오른손 핑거스타일·4·5현 병행·키 E.
 - **meta.json 생성:** id/title·tagline·forWho·intro(3언어)/instrument:"bass"/level:2/durationMonths:2/tags/image. ★intro 볼드(용어·수치)≠하이라이트(`<mark>`, 약속·성과) 분리, 3언어 볼드 10·mark 4 정확 일치·겹침 0. 관통 철학("박자는 격자가 아니라 삼각형 — 롱-숏으로 굴리면 그루브가 튄다") 반영.
