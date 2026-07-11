@@ -160,6 +160,10 @@ const TS_W = 26; // 박자표 폭(정렬용으로 전 줄 예약)
 const PER_NOTE = 28; // 음표(쉼표 포함) 1개당 폭
 const MIN_MW = 150; // 마디 최소 폭
 const MAX_MW = 480; // 마디 최대 폭(16분음표 16개 등 최대 밀도)
+// 줄 마지막 마디 끝 음표와 종료 세로줄 사이 여백(px). Formatter 는 노트를 noteAreaW 에 꽉 justify 해
+// 끝 여백을 예약하지 않으므로, 스테이브 끝(종료 세로줄)만 이만큼 오른쪽으로 밀어 마지막 음표가
+// 세로줄에 바짝 붙는 것을 막는다. **format 폭(noteAreaW)은 불변** → 내부 음표 간격 압축 없음.
+const RIGHT_PAD = 18;
 // 세로 레이아웃은 음역대에 따라 적응(저음 렛저라인이 타브와 겹치지 않게, 고음역은 컴팩트하게).
 // ★ 기준선은 오선보에 실제로 "그려지는" 표기 음(written MIDI) 기준이다. 음표도 표기 옥타브(concert+SHIFT)로
 //    비교해야 렛저라인 여백이 맞다. (WRITTEN_OCTAVE_SHIFT 를 바꾸면 아래 두 상수는 그대로 두고 노트 비교만 shift.)
@@ -779,7 +783,8 @@ export function renderStaff(score: Score, mode: StaffMode): string {
       Math.max(rowNoteArea[ri]!, Math.ceil(rowMinWArr[ri]!)),
     );
 
-    const totalW = Math.max(...noteAreaByRow.map((w) => CLEF_W + ksW + TS_W + w)) + 2 * MARGIN_X;
+    const totalW =
+      Math.max(...noteAreaByRow.map((w) => CLEF_W + ksW + TS_W + w + RIGHT_PAD)) + 2 * MARGIN_X;
     const totalH = MARGIN_TOP + rows.length * sysH + 12;
     // over-wide = 가장 넓은 줄의 **실측 최소폭**(rowMinWArr)이 목표폭 초과 → 단일 마디가 통째로 280 넘음
     //   → min-width 스크롤 대상. (noteAreaByRow 는 PER_NOTE 추정치가 섞여 성긴 2마디 줄도 ≥300 으로 부풀어
@@ -798,7 +803,8 @@ export function renderStaff(score: Score, mode: StaffMode): string {
       const x = MARGIN_X;
       const mCount = rowMeasures.length;
       const noteAreaW = noteAreaByRow[ri] ?? MIN_MW;
-      const thisStaveW = CLEF_W + ksW + TS_W + noteAreaW;
+      // 종료 세로줄을 RIGHT_PAD 만큼 오른쪽으로(노트 format 폭은 noteAreaW 그대로) → 마지막 마디 끝 여백.
+      const thisStaveW = CLEF_W + ksW + TS_W + noteAreaW + RIGHT_PAD;
 
       const stave = new Stave(x, sysTop + trebleDy, thisStaveW);
       // 기타 표기: treble-8vb(클레프 아래 작은 "8"). 음표는 pitchOf 에서 +1 옥타브로 표기 →
