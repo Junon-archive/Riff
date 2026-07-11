@@ -82,6 +82,12 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-11 (백로그 11 착수 — 블루스 준비물 + 1주차 day 저작, /goal 순차)
+- **준비물:** `blues_3months`(기타·3개월·level2) meta.json은 프롬프트 하드닝 커밋(4ac8149)에서 생성 완료 → 이번엔 **month_1~3 + week_1~12 overview 45파일**(ko/en/ja) 신규 저작. 최신 기타 트랙(funk_rhythm) 구조 채택, 3언어 볼드·mark 개수 전량 일치·언어 오염 0.
+- **1주차(셔플 필 + A7 부기 리프):** day_1~4 × 3언어 = 12파일. D1 셔플 필(롱-숏) → D2 더블스탑 손모양(fretboard_diagram) → D3 부기 리프 R-5-6-b7 → D4 A7 셔플 부기 2마디(핀 고정). `feel:"swing8"`·`notation:"staff+tab"` 실사용.
+- **검증:** build 562p exit0(blues day 4), check-invariants 신규 17블록·회귀0(baseline→687), 볼드/mark 3언어 일치·악보 JSON 3언어 바이트동일·④/완료줄 mark0·핀 JSON=프롬프트 바이트동일·태그오염0.
+- **다음:** week_2(12마디 폼 + 도미넌트7) ~ week_12(리듬↔리드 대화·졸업).
+
 ### 2026-07-11 (랜딩 — 완료 커리큘럼 맨 아래로 정렬, 사용자별 진도 기반)
 - **동작:** 사용자가 어떤 커리큘럼의 **전체 진도를 완료**(완료 Day 수 ≥ totalDays)하면, 그 사용자의 랜딩 목록에서 해당 카드가 **맨 아래로** 내려간다. 미완료는 기존 `level` 오름차순 유지, 완료끼리는 상대 순서 유지. 완료 카드가 전부 리스트 끝으로 몰리므로 **악기 필터(기타/베이스)와 무관하게** 각 뷰에서 "미완료 먼저·완료 나중"이 성립.
 - **구현:** `HomeView.astro` 카드에 `data-curriculum`·`data-total-days` 추가. **FOUC 방지 인라인 스크립트**(하단, `gh_state` 직접 읽기)가 첫 페인트 전 완료 카드를 `#currList` 끝으로 `appendChild` → 하드 로드 깜빡임 0. `app.ts` `reorderCompletedCurricula(state)`(`getCompletedSet` 사용)가 `onPageLoad`(astro:page-load)마다 idempotent 재적용 → soft-nav(레슨 완료 후 홈 복귀)도 즉시 반영.
