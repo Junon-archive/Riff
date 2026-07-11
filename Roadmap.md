@@ -82,6 +82,12 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-11 (백로그 12 — 네오소울 5주차 day 저작 = Month 2 착수)
+- **5주차(더블스탑 b3→3 스미어):** day_1~4 × 3언어 = 12파일. D1 b3→3(F→F#) 해머온 스미어 → D2 3·6도 더블스탑 스미어 → D3 뱀프에 장식 삽입 → D4 스미어 릭(핀 고정 `smear_lick` 바이트동일). 스미어=`hammer_on`, 착지 3도=`role:"target"`+highlight.
+- **결함 수정(빌드가 잡음):** day_2 `doublestop_smear`·`doublestop_loop` 마디2가 `chord[]` 대표음≠최저음(대표 string1<chord string3) 스키마 위반 → 6도 스미어를 저음 성부(string4 대표)로 재배치, 파트너 D를 chord(string2)로. 지판·산문 3언어 동기화. **커스텀 검증기에 '대표음=최저음' 규칙 추가**(w1~4 소급 통과).
+- **검증:** build 883p exit0, check-invariants read-only neosoul 회귀0(삭제/변경된 neosoul 블록 0), 볼드/mark 3언어 일치·악보 JSON 3언어 바이트동일·④/완료줄 mark0·핀 JSON=프롬프트 바이트동일·태그오염0·대표음 규칙 통과. ※공유 baseline은 동시 세션 드리프트(slap_funk 등 삭제됨 표시)로 커밋 미포함 — 트랙 종료 후 전체 정합 --update 예정.
+- **다음:** week_6(그레이스노트 & 스미어 — 풀오프 하행 장식).
+
 ### 2026-07-11 (백로그 16 — 워킹 베이스 4주차 day 저작 = Month 1 졸업)
 - **4주차(스윙 4분음 + F 블루스 12마디):** day_1~4 × 3언어 = 12파일. D1 스윙 4분음 필 → D2 12마디 전반부(F7-Bb7) → D3 후반부(C7 턴어라운드)+리허설 → D4 12마디 완주·녹음. 핀 고정 `f_blues_walk`(첫 4마디) + 전체 12마디 조립(폼 F7|Bb7|F7|F7|Bb7|Bb7|F7|F7|C7|Bb7|F7|C7). **`(M1 졸업!)`** — Month 1(코드톤·밀도램프·접근음·F블루스) 마무리.
 - **검증:** build-content 격리 exit0(walking day JSON 16=M1 완성)·마디 박자합 4.0 전수·3언어 JSON 바이트동일·볼드/mark 3언어 동수·④완료줄 mark0·핀 JSON=프롬프트 바이트동일·4/5현 병행쌍·태그오염0. invariants --update 보류(동시세션 부분 build, baseline 온전).
