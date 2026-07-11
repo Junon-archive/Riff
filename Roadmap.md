@@ -82,6 +82,11 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-11 (백로그 15 — 셔플&바운스 7주차 day 저작 + w6·w7 baseline 정합)
+- **7주차(레이백 & 하프타임 맛보기):** day_1~4 × 3언어 = 12파일. D1 뒷박에 눕기(behind the beat) → D2 앞·정박·뒤 밀당(같은 라인 3위치) → D3 〈맛보기〉 하프타임 셔플 필 → D4 레이백 그루브 + 핀 고정 `laidback_groove`(rest 공간 많은 스윙16, 4·5현). 레이백은 렌더 기호 없어 산문 설명(악보=정박).
+- **검증:** build 886p exit0(neosoul chord 오류 해소된 클린 창 포착), check-invariants 회귀0·baseline 1225로 --update(**셔플 w6·w7 각 14블록 정합** — 6주차 커밋서 미뤄둔 baseline 부채 해소). 볼드/mark 3언어 일치·JSON 3언어 바이트동일·④/완료줄 mark0·핀 바이트동일·feel swing16·chord[] 미사용·4·5현 병행·태그오염0.
+- **다음:** week_8(스윙16+고스트+레이백 종합 바운스 그루브 완성·녹음 = 최종 졸업).
+
 ### 2026-07-11 (백로그 11 — 블루스 10주차 day 저작 + baseline 부채 일괄 해소)
 - **10주차(메이저/마이너 'BB' 색):** day_1~4 × 3언어 = 12파일. D1 메이저 3도(C#) 위치 → D2 b3→3 반음(BB 색) → D3 A7 위 3도 선택 → D4 BB 색 통합(핀 고정 `bb_lick`). 메이저3도 강조=`role:"target"`+`highlight:true`(초록).
 - **★baseline 일괄 갱신:** 동시 세션 churn으로 연기됐던 w8·w9·w10 blues 60블록 + 동시세션분을 green 빌드 창에서 일괄 `--update`(→1225, 삭제전용키 0=회귀0). 이로써 blues baseline 부채 해소.
