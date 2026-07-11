@@ -82,6 +82,11 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-11 (백로그 16 — 워킹 베이스 6주차 day 저작)
+- **6주차(감싸기 enclosure·타깃팅 심화):** day_1~4 × 3언어 = 12파일. D1 반음 위·아래 감싸기 개념 → D2 루트 감싸기 → D3 3도 감싸기 → D4 감싸기 워킹(핀 고정 `enclosure` 1마디, 목표 C=`role:"target"`+`highlight`, 4·5현). 착지 목표음 초록 강조. 핀 ▶에 '감싸기만 떼어 본 연습' 오해방지.
+- **검증:** build-content 격리 exit0(walking day JSON 24)·마디 박자합 4.0·3언어 JSON 바이트동일·볼드/mark 3언어 동수·④완료줄 mark0·핀 JSON=프롬프트 바이트동일·4/5현 병행쌍·태그오염0·①이론 513~563. invariants --update 보류(동시세션 부분 build, baseline 온전).
+- **다음:** week_7(장식&필 — 고스트·데드·8분·해머).
+
 ### 2026-07-11 (백로그 12 — 네오소울 7주차 day 저작)
 - **7주차(레이백 스윙16 & 뮤트 커팅):** day_1~4 × 3언어 = 12파일. D1 16비트 컴핑+뮤트 커팅(`dead_note`) → D2 레이백(박자 뒤에 눕기) → D3 스윙16 끈적함 → D4 레이백 컴핑(핀 고정 `laidback_comp`, `feel:"swing16"` 바이트동일). 커팅=`dead_note`(role:scale), 텐션=`role:"color"`.
 - **검증:** build 964p exit0, check-invariants read-only neosoul 회귀0(삭제/변경 0, 전역 삭제 0), 볼드/mark 3언어 일치·악보 JSON 3언어 바이트동일·④/완료줄 mark0·핀 JSON=프롬프트 바이트동일·태그오염0·chord[] 대표음=최저음 통과. baseline 최종 정합 예정(day만 커밋).
