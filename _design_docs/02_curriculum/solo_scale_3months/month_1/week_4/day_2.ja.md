@@ -70,6 +70,7 @@ lang: ja
   "id": "m1.w4.d2.vibrato_expression_phrase",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Vibrato expression — slide into b5 + wide slow vibrato on landings",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -149,6 +150,7 @@ lang: ja
   "id": "m1.w4.d2.vibrato_expression_phrase",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Vibrato expression — slide into b5 + wide slow vibrato on landings",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

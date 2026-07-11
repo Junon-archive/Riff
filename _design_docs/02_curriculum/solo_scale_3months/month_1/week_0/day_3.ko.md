@@ -66,6 +66,7 @@ i18nKey: lesson.m1.w0.d3
   "id": "m1.w0.d3.third_interval_taste",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "3rd-interval taste in Am pentatonic (skip-one pairs, ascending)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -147,6 +148,7 @@ i18nKey: lesson.m1.w0.d3
   "id": "m1.w0.d3.third_interval_taste",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "3rd-interval taste in Am pentatonic (skip-one pairs, ascending)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

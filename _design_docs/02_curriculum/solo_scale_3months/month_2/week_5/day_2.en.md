@@ -97,6 +97,7 @@ Today's four-note drill. Loop **A-B-C** to build <mark>the feel of passing throu
   "id": "m2.w5.d2.b_passing_to_third_4note",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "4-note sequence: 2nd(B) passing tone resolving to Am 3rd (C)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -137,6 +138,7 @@ Set the metronome to 80 and loosen up your hand with **<mark>yesterday's 3rd-int
   "id": "m2.w5.d2.b_passing_to_third_4note",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "4-note sequence: 2nd(B) passing tone resolving to Am 3rd (C)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

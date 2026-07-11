@@ -67,6 +67,7 @@ Amコードトーン（A・C・E）をネック全体（0〜12フレット）に
   "id": "m2.w7.d1.am_arpeggio_1_3_5",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Am arpeggio 1-3-5 (A -> C -> E), 5th position",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

@@ -70,6 +70,7 @@ i18nKey: "lesson.m3.w11.d3"
   "id": "m3.w11.d3.rock_longtone_bend_phrase",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Rock long-tone bend phrase (A5 B>C# / D5 F#) with dramatic space",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

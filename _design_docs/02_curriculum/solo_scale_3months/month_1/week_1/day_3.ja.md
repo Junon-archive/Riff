@@ -62,6 +62,7 @@ lang: ja
   "id": "m1.w1.d3.four_note_descending",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "4-note (16th) descending sequence — Am pentatonic Box 1",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

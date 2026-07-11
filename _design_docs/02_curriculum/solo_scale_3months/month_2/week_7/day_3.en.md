@@ -93,6 +93,7 @@ Now the real connection. Measure 1: Am (land on the 3rd, C) → Measure 2: C (a 
   "id": "m2.w7.d3.am_to_c_connection",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Am -> C connection: land 3rd C, minimal move to 3rd E",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -133,6 +134,7 @@ With the metronome at 68, repeat the connecting phrase above in eighth notes. Fo
   "id": "m2.w7.d3.am_to_c_connection",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Am -> C connection: land 3rd C, minimal move to 3rd E",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

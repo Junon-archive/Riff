@@ -82,6 +82,7 @@ Am 코드톤 지도예요. 스케일 5음 중에서 **<mark>코드톤 3개(R·�
   "id": "m1.w1.d4.target_landing_lick",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Target-landing lick over Am (resolve on R and b3)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -126,6 +127,7 @@ Am 코드톤 지도예요. 스케일 5음 중에서 **<mark>코드톤 3개(R·�
   "id": "m1.w1.d4.target_landing_lick",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Target-landing lick over Am (resolve on R and b3)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

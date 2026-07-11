@@ -57,6 +57,7 @@ This is a sample transition-jam phrase. Measures 1–2 play around over the C ch
   "id": "m2.w6.d4.transition_jam_phrase",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "C -> Am transition jam — land E over C, land C over Am",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

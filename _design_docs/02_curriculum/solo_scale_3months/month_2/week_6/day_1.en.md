@@ -64,6 +64,7 @@ And here's a short example to hear "same shape, different landing" with your own
   "id": "m2.w6.d1.same_shape_two_centers",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Same shape, two centers — resolve to A (Am) vs resolve to C (C major)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

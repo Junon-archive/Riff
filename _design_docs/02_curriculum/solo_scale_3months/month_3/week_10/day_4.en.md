@@ -62,6 +62,7 @@ Second, today's main event, the **<mark>A7 → D7 target lick.</mark>** Bar 1: o
   "id": "m3.w10.d4.a7_d7_target_lick",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "A7->D7 change: target A7-3(C#) then D7-3(F#), b7 & blue note",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -98,6 +99,7 @@ Third, the **<mark>3rd interval run.</mark>** Climb through Position 1 pairing u
   "id": "m3.w10.d4.thirds_interval_run",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "A Mixolydian diatonic 3rds (ascending, land on major 3rd C#)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -143,6 +145,7 @@ Ascend through the 3rd interval run above at 90. Start at 80 if you need to. The
   "id": "m3.w10.d4.thirds_interval_run",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "A Mixolydian diatonic 3rds (ascending, land on major 3rd C#)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -216,6 +219,7 @@ Put on an "A7 D7 blues backing track slow" (a slow 12-bar blues works great too)
   "id": "m3.w10.d4.a7_d7_target_lick",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "A7->D7 change: target A7-3(C#) then D7-3(F#), b7 & blue note",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

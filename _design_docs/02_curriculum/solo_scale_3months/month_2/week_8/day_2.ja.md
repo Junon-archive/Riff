@@ -33,6 +33,7 @@ lang: ja
   "id": "m2.w8.d2.third_interval_warmup",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Diatonic 3rds warmup surfacing guide tones (C major)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -75,6 +76,7 @@ lang: ja
   "id": "m2.w8.d2.guide_tone_line",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "ii-V-I guide tone line (Dm7 F -> G7 B -> Cmaj7 E)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -117,6 +119,7 @@ lang: ja
   "id": "m2.w8.d2.third_interval_warmup",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Diatonic 3rds warmup surfacing guide tones (C major)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -163,6 +166,7 @@ lang: ja
   "id": "m2.w8.d2.guide_tone_line",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "ii-V-I guide tone line (Dm7 F -> G7 B -> Cmaj7 E)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

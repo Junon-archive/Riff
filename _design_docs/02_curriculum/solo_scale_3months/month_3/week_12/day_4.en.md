@@ -33,6 +33,7 @@ A retake **<mark>doesn't mean re-recording the whole song every time.</mark>** I
   "id": "m3.w12.d4.switch_retake_excerpt",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Retake excerpt - the mode-switch seam (D7 -> A7, bars 4-5)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -73,6 +74,7 @@ Loop just the excerpt above (the two-bar seam) at metronome 92. Especially smoot
   "id": "m3.w12.d4.switch_retake_excerpt",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Retake excerpt - the mode-switch seam (D7 -> A7, bars 4-5)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

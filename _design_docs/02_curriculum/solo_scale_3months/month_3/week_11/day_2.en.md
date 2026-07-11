@@ -71,6 +71,7 @@ Second, today's **<mark>funk staccato phrase.</mark>** Notice how tightly the 16
   "id": "m3.w11.d2.funk_staccato_phrase",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Funk staccato phrase (Am7 C / D9 F#) with tight rests",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

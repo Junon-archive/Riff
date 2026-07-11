@@ -95,6 +95,7 @@ lang: ja
   "id": "m1.w3.d1.box3_to_box4_slide",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Box 3 -> Box 4 sliding connection (land on b3)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -144,6 +145,7 @@ lang: ja
   "id": "m1.w3.d1.box3_to_box4_slide",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Box 3 -> Box 4 sliding connection (land on b3)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

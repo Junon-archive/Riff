@@ -60,6 +60,7 @@ Today's key weapon: the **<mark>3rd-interval sequence</mark>.** You climb in ski
   "id": "m2.w5.d1.pentatonic_thirds_sequence",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Pentatonic 3rd-interval (skip-one) sequence landing on b3 (C)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

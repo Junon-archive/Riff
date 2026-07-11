@@ -103,6 +103,7 @@ Here's today's mini bending lesson phrase. Measure 1 trains you to **play the re
   "id": "m1.w4.d1.accurate_bend_phrase",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Accurate bending — full bend to 5 (match reference) & half bend to b5",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -146,6 +147,7 @@ Pull up an "Am7 blues backing track slow" on YouTube or an app. Today's mission 
   "id": "m1.w4.d1.accurate_bend_phrase",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Accurate bending — full bend to 5 (match reference) & half bend to b5",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

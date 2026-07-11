@@ -95,6 +95,7 @@ Here's today's centerpiece — a 3-measure blues phrase. Measure 1 = **<mark>5 �
   "id": "m1.w4.d3.blues_phrase_full",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Blues phrase — 3rd intervals + b5 passing + bend/vibrato punctuation",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -148,6 +149,7 @@ Turn off the metronome and get the 3-measure phrase above into your hands, very 
   "id": "m1.w4.d3.blues_phrase_full",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Blues phrase — 3rd intervals + b5 passing + bend/vibrato punctuation",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

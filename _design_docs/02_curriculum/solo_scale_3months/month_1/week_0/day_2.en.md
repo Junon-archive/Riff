@@ -35,6 +35,7 @@ The classic fix is the **<mark>spider walk (chromatic 1–2–3–4)</mark>.** A
   "id": "m1.w0.d2.spider_1234",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Spider walk — chromatic 1-2-3-4 across strings",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -86,6 +87,7 @@ The classic fix is the **<mark>spider walk (chromatic 1–2–3–4)</mark>.** A
   "id": "m1.w0.d2.finger_independence_1324",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Finger independence — 1-3-2-4 permutation",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

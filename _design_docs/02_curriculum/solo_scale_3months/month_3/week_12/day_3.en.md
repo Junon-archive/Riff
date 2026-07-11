@@ -29,6 +29,7 @@ First, the **<mark>completed 8-bar original solo.</mark>** At the end of each ba
   "id": "m3.w12.d3.original_solo_full",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Original solo - full 8 bars (Am7 D7 Am7 D7 | A7 D7 Am7 Am7)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -138,6 +139,7 @@ Learn the finished tab **<mark>two bars at a time.</mark>** Bars 1-2 → 3-4 →
   "id": "m3.w12.d3.original_solo_full",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Original solo - full 8 bars (Am7 D7 Am7 D7 | A7 D7 Am7 Am7)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

@@ -92,6 +92,7 @@ Am 펜타토닉 1번 블록 (5프렛 근음). 초록 강조(♭3=C)가 <mark>앞
   "id": "m1.w1.d1.four_note_sequence",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "4-note (16th) ascending sequence — Am pentatonic Box 1",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -135,6 +136,7 @@ Am 펜타토닉 1번 블록 (5프렛 근음). 초록 강조(♭3=C)가 <mark>앞
   "id": "m1.w1.d1.four_note_sequence",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "4-note (16th) ascending sequence — Am pentatonic Box 1",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

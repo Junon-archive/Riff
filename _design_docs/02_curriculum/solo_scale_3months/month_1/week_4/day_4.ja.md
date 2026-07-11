@@ -64,6 +64,7 @@ lang: ja
   "id": "m1.w4.d4.capstone_call_response_lick",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "1-month capstone — call & response over Am7 (all skills combined)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -121,6 +122,7 @@ lang: ja
   "id": "m1.w4.d4.capstone_call_response_lick",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "1-month capstone — call & response over Am7 (all skills combined)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

@@ -62,6 +62,7 @@ AmのコードトーンR・♭3・5のネック地図です。5〜13フレット
   "id": "m1.w2.d4.cross_box_target_lick",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Cross-box improv lick (slide between boxes, resolve on b3)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

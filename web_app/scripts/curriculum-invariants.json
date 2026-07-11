@@ -21511,7 +21511,7 @@
   },
   "solo_scale_3months#m1.w0.d2.spider_1234": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -21547,7 +21547,7 @@
   },
   "solo_scale_3months#m1.w0.d2.finger_independence_1324": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -21580,7 +21580,7 @@
   },
   "solo_scale_3months#m1.w0.d3.third_interval_taste": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -21606,7 +21606,7 @@
   },
   "solo_scale_3months#m1.w0.d4.one_note_groove": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -21650,7 +21650,7 @@
   },
   "solo_scale_3months#m1.w1.d1.four_note_sequence": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -21683,7 +21683,7 @@
   },
   "solo_scale_3months#m1.w1.d2.third_interval_seq": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -21736,7 +21736,7 @@
   },
   "solo_scale_3months#m1.w1.d3.four_note_descending": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -21765,7 +21765,7 @@
   },
   "solo_scale_3months#m1.w1.d4.target_landing_lick": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -21811,7 +21811,7 @@
   },
   "solo_scale_3months#m1.w2.d1.box1_to_box2_slide": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -21856,7 +21856,7 @@
   },
   "solo_scale_3months#m1.w2.d2.box2_to_box3_slide": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -21899,7 +21899,7 @@
   },
   "solo_scale_3months#m1.w2.d3.three_box_3rd_sequence": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -21958,7 +21958,7 @@
   },
   "solo_scale_3months#m1.w2.d4.cross_box_target_lick": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -22005,7 +22005,7 @@
   },
   "solo_scale_3months#m1.w3.d1.box3_to_box4_slide": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -22050,7 +22050,7 @@
   },
   "solo_scale_3months#m1.w3.d2.box4_to_box5_octave": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -22125,7 +22125,7 @@
   },
   "solo_scale_3months#m1.w3.d3.full_neck_3rd_run": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -22194,7 +22194,7 @@
   },
   "solo_scale_3months#m1.w3.d4.nearest_3rd_landing": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -22243,7 +22243,7 @@
   },
   "solo_scale_3months#m1.w4.d1.accurate_bend_phrase": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -22291,7 +22291,7 @@
   },
   "solo_scale_3months#m1.w4.d2.vibrato_expression_phrase": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -22338,7 +22338,7 @@
   },
   "solo_scale_3months#m1.w4.d3.blues_phrase_full": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -22395,7 +22395,7 @@
   },
   "solo_scale_3months#m1.w4.d4.capstone_call_response_lick": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -22462,7 +22462,7 @@
   },
   "solo_scale_3months#m2.w5.d1.pentatonic_thirds_sequence": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -22507,7 +22507,7 @@
   },
   "solo_scale_3months#m2.w5.d2.b_passing_to_third_4note": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -22544,7 +22544,7 @@
   },
   "solo_scale_3months#m2.w5.d3.f_passing_resolve": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -22591,7 +22591,7 @@
   },
   "solo_scale_3months#m2.w5.d4.natural_minor_jam_lick": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -22639,7 +22639,7 @@
   },
   "solo_scale_3months#m2.w6.d1.same_shape_two_centers": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -22686,7 +22686,7 @@
   },
   "solo_scale_3months#m2.w6.d2.c_major_third_interval": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -22734,7 +22734,7 @@
   },
   "solo_scale_3months#m2.w6.d3.center_shift_4note": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -22775,7 +22775,7 @@
   },
   "solo_scale_3months#m2.w6.d4.transition_jam_phrase": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -22846,7 +22846,7 @@
   },
   "solo_scale_3months#m2.w7.d1.am_arpeggio_1_3_5": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -22895,7 +22895,7 @@
   },
   "solo_scale_3months#m2.w7.d2.c_arpeggio_1_3_5": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -22939,7 +22939,7 @@
   },
   "solo_scale_3months#m2.w7.d3.am_to_c_connection": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -22981,7 +22981,7 @@
   },
   "solo_scale_3months#m2.w7.d4.chord_tone_jam_lick": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -23053,7 +23053,7 @@
   },
   "solo_scale_3months#m2.w8.d2.third_interval_warmup": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -23079,7 +23079,7 @@
   },
   "solo_scale_3months#m2.w8.d2.guide_tone_line": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -23116,7 +23116,7 @@
   },
   "solo_scale_3months#m2.w8.d3.landing_timing": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -23143,7 +23143,7 @@
   },
   "solo_scale_3months#m2.w8.d3.arrival_with_space": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -23180,7 +23180,7 @@
   },
   "solo_scale_3months#m2.w8.d4.record_target_phrase": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -23247,7 +23247,7 @@
   },
   "solo_scale_3months#m3.w10.d1.bluesy_mixolydian_lick": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -23275,7 +23275,7 @@
   },
   "solo_scale_3months#m3.w10.d2.four_note_sequence_pos1": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -23304,7 +23304,7 @@
   },
   "solo_scale_3months#m3.w10.d2.blue_note_hammer_vs_bend": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -23369,7 +23369,7 @@
   },
   "solo_scale_3months#m3.w10.d3.position_shift_lick": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -23410,7 +23410,7 @@
   },
   "solo_scale_3months#m3.w10.d4.a7_d7_target_lick": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -23439,7 +23439,7 @@
   },
   "solo_scale_3months#m3.w10.d4.thirds_interval_run": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -23478,7 +23478,7 @@
   },
   "solo_scale_3months#m3.w11.d1.blues_layback_phrase": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -23518,7 +23518,7 @@
   },
   "solo_scale_3months#m3.w11.d2.funk_staccato_phrase": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -23558,7 +23558,7 @@
   },
   "solo_scale_3months#m3.w11.d3.rock_longtone_bend_phrase": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -23598,7 +23598,7 @@
   },
   "solo_scale_3months#m3.w11.d4.medley_transition_phrase": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -23675,7 +23675,7 @@
   },
   "solo_scale_3months#m3.w12.d2.motif_call": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -23692,7 +23692,7 @@
   },
   "solo_scale_3months#m3.w12.d2.motif_response": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -23720,7 +23720,7 @@
   },
   "solo_scale_3months#m3.w12.d3.original_solo_full": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -23825,7 +23825,7 @@
   },
   "solo_scale_3months#m3.w12.d4.switch_retake_excerpt": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -23854,7 +23854,7 @@
   },
   "solo_scale_3months#m3.w9.d1.aeolian_vs_dorian_6th": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -23903,7 +23903,7 @@
   },
   "solo_scale_3months#m3.w9.d2.third_interval_dorian": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -23929,7 +23929,7 @@
   },
   "solo_scale_3months#m3.w9.d2.f_sharp_color_line": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -23957,7 +23957,7 @@
   },
   "solo_scale_3months#m3.w9.d3.four_note_sequence_dorian": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -23996,7 +23996,7 @@
   },
   "solo_scale_3months#m3.w9.d3.chord_change_targeting": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,
@@ -24056,7 +24056,7 @@
   },
   "solo_scale_3months#m3.w9.d4.eight_bar_dorian_solo": {
     "type": "tab",
-    "notation": null,
+    "notation": "staff+tab",
     "measures": [
       {
         "beat": 16,

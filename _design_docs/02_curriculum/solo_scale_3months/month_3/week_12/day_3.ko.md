@@ -28,6 +28,7 @@ i18nKey: "lesson.m3.w12.d3"
   "id": "m3.w12.d3.original_solo_full",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Original solo - full 8 bars (Am7 D7 Am7 D7 | A7 D7 Am7 Am7)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -137,6 +138,7 @@ i18nKey: "lesson.m3.w12.d3"
   "id": "m3.w12.d3.original_solo_full",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Original solo - full 8 bars (Am7 D7 Am7 D7 | A7 D7 Am7 Am7)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

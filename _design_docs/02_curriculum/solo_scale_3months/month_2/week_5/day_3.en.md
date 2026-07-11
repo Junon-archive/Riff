@@ -101,6 +101,7 @@ Today's drill. Measure 1 repeats the **F → E (5th)** half-step resolution, and
   "id": "m2.w5.d3.f_passing_resolve",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "6th(F) passing tone resolving to 5th(E) and to b3(C)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -144,6 +145,7 @@ Set the metronome to 85 and loosen up with everything so far — 3 minutes of th
   "id": "m2.w5.d3.f_passing_resolve",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "6th(F) passing tone resolving to 5th(E) and to b3(C)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

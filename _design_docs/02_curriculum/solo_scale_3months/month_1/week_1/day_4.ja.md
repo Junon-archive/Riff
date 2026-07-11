@@ -83,6 +83,7 @@ Amのコードトーン地図です。スケール5音のうち、**<mark>コー
   "id": "m1.w1.d4.target_landing_lick",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Target-landing lick over Am (resolve on R and b3)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -127,6 +128,7 @@ Amのコードトーン地図です。スケール5音のうち、**<mark>コー
   "id": "m1.w1.d4.target_landing_lick",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Target-landing lick over Am (resolve on R and b3)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

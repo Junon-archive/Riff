@@ -56,6 +56,7 @@ i18nKey: "lesson.m1.w2.d3"
   "id": "m1.w2.d3.three_box_3rd_sequence",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "3rd-interval sequence linking Box 1 -> 2 -> 3 (land b3 at each seam)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

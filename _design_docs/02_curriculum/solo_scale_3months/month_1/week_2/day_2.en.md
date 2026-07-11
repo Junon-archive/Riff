@@ -93,6 +93,7 @@ Here's today's connecting line. You run up through Box 2, then **<mark>slide the
   "id": "m1.w2.d2.box2_to_box3_slide",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Box 2 -> Box 3 sliding connection (land on b3)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -142,6 +143,7 @@ Put on a backing track. Rule: **hang out in Box 2, then <mark>use the 2nd-string
   "id": "m1.w2.d2.box2_to_box3_slide",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Box 2 -> Box 3 sliding connection (land on b3)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

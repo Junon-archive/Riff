@@ -63,6 +63,7 @@ C 메이저 포지션이에요. 어제랑 똑같은 지판인데, 오늘은 **<m
   "id": "m2.w6.d2.c_major_third_interval",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "C major 3rd-interval line resolving to bright 3rd (E)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

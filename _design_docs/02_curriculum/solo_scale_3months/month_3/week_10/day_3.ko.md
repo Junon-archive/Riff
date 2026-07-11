@@ -99,6 +99,7 @@ Position 2는 근음 A를 **4번 줄 7프렛**에 두는 자리예요. 대략 7~
   "id": "m3.w10.d3.position_shift_lick",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Position shift lick: Pos1 -> slide -> Pos2, land on major 3rd",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -213,6 +214,7 @@ Position 2는 근음 A를 **4번 줄 7프렛**에 두는 자리예요. 대략 7~
   "id": "m3.w10.d3.position_shift_lick",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Position shift lick: Pos1 -> slide -> Pos2, land on major 3rd",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

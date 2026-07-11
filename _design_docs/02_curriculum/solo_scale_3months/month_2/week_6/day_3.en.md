@@ -101,6 +101,7 @@ Here's the main shuttle drill. Measure 1 rolls through the 4-note pattern and la
   "id": "m2.w6.d3.center_shift_4note",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "4-note sequence drill — resolve to C (Am b3) then E (C bright 3rd)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -159,6 +160,7 @@ Keep the metronome on and alternate between the two measures above. Measure 1 (l
   "id": "m2.w6.d3.center_shift_4note",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "4-note sequence drill — resolve to C (Am b3) then E (C bright 3rd)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

@@ -93,6 +93,7 @@ Now for today's main dish. Starting in Box 1, you <mark>**slide** the A on the 4
   "id": "m1.w2.d1.box1_to_box2_slide",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Box 1 -> Box 2 sliding connection (land on b3)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -139,6 +140,7 @@ Metronome off. Just repeat **<mark>the one key move</mark>** from the connecting
   "id": "m1.w2.d1.box1_to_box2_slide",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Box 1 -> Box 2 sliding connection (land on b3)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

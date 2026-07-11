@@ -33,6 +33,7 @@ lang: ja
   "id": "m3.w12.d4.switch_retake_excerpt",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Retake excerpt - the mode-switch seam (D7 -> A7, bars 4-5)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -73,6 +74,7 @@ lang: ja
   "id": "m3.w12.d4.switch_retake_excerpt",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Retake excerpt - the mode-switch seam (D7 -> A7, bars 4-5)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

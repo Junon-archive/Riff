@@ -28,6 +28,7 @@ i18nKey: "lesson.m2.w8.d4"
   "id": "m2.w8.d4.record_target_phrase",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Week 8 target phrase to record (full ii-V-I guide tone line)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

@@ -30,6 +30,7 @@ i18nKey: "lesson.m3.w9.d2"
   "id": "m3.w9.d2.third_interval_dorian",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "3rd-interval sequence in A Dorian (F# color, land on b3)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -71,6 +72,7 @@ i18nKey: "lesson.m3.w9.d2"
   "id": "m3.w9.d2.f_sharp_color_line",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "A Dorian color line - sing the natural 6th (F#), resolve to b3",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

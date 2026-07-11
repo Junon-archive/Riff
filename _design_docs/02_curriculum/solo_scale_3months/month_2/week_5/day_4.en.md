@@ -64,6 +64,7 @@ Today's integration lick. Measure 1 uses both **A-B-C** (the bridge going up) an
   "id": "m2.w5.d4.natural_minor_jam_lick",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "A natural minor jam lick — B & F as color, resolving to b3 (C) with vibrato",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -108,6 +109,7 @@ Metronome off. Get the integration lick above into your hands, especially the fi
   "id": "m2.w5.d4.natural_minor_jam_lick",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "A natural minor jam lick — B & F as color, resolving to b3 (C) with vibrato",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

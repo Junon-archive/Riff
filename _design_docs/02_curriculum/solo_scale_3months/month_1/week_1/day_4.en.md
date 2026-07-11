@@ -83,6 +83,7 @@ Here's an example landing lick. Bar 1 lands on the root A, bar 2 lands on the â™
   "id": "m1.w1.d4.target_landing_lick",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Target-landing lick over Am (resolve on R and b3)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -127,6 +128,7 @@ No metronome â€” slowly get the landing lick above into your hands. Especially t
   "id": "m1.w1.d4.target_landing_lick",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Target-landing lick over Am (resolve on R and b3)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

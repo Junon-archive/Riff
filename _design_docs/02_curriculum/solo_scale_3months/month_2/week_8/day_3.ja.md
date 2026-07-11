@@ -30,6 +30,7 @@ lang: ja
   "id": "m2.w8.d3.landing_timing",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Fast ii-V-I landing on the beat (Dm7/G7 two beats each)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -68,6 +69,7 @@ lang: ja
   "id": "m2.w8.d3.arrival_with_space",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Land the 3rd, then leave space (arrival drill with rests)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -115,6 +117,7 @@ lang: ja
   "id": "m2.w8.d3.arrival_with_space",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Land the 3rd, then leave space (arrival drill with rests)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

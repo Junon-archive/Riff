@@ -68,6 +68,7 @@ i18nKey: "lesson.m3.w11.d4"
   "id": "m3.w11.d4.medley_transition_phrase",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Medley transition phrase (blues -> funk -> rock) with mood switching",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

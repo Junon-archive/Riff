@@ -97,6 +97,7 @@ Aミクソリディアン＝**<mark>A B C# D E F# G</mark>**。メジャース�
   "id": "m3.w10.d1.bluesy_mixolydian_lick",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Bluesy Mixolydian lick (b3 blue note -> major 3rd, b7 tension -> 3rd)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -202,6 +203,7 @@ Aミクソリディアン＝**<mark>A B C# D E F# G</mark>**。メジャース�
   "id": "m3.w10.d1.bluesy_mixolydian_lick",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Bluesy Mixolydian lick (b3 blue note -> major 3rd, b7 tension -> 3rd)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

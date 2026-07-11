@@ -64,6 +64,7 @@ lang: ja
   "id": "m2.w5.d4.natural_minor_jam_lick",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "A natural minor jam lick — B & F as color, resolving to b3 (C) with vibrato",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -108,6 +109,7 @@ lang: ja
   "id": "m2.w5.d4.natural_minor_jam_lick",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "A natural minor jam lick — B & F as color, resolving to b3 (C) with vibrato",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

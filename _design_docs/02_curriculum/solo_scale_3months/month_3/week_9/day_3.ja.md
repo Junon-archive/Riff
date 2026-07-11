@@ -36,6 +36,7 @@ lang: ja
   "id": "m3.w9.d3.four_note_sequence_dorian",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "A Dorian 4-note sequence (F# rises in groups 3-4)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -108,6 +109,7 @@ lang: ja
   "id": "m3.w9.d3.chord_change_targeting",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Am7 lands on C(b3), D7 lands on F#(6) - target the changes",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -160,6 +162,7 @@ lang: ja
   "id": "m3.w9.d3.four_note_sequence_dorian",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "A Dorian 4-note sequence (F# rises in groups 3-4)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -234,6 +237,7 @@ lang: ja
   "id": "m3.w9.d3.chord_change_targeting",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Am7 lands on C(b3), D7 lands on F#(6) - target the changes",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

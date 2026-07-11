@@ -94,6 +94,7 @@ i18nKey: "lesson.m1.w4.d3"
   "id": "m1.w4.d3.blues_phrase_full",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Blues phrase — 3rd intervals + b5 passing + bend/vibrato punctuation",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -147,6 +148,7 @@ A 블루스 스케일 1번 블록을 3도 인터벌 상·하행으로 한 바퀴
   "id": "m1.w4.d3.blues_phrase_full",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Blues phrase — 3rd intervals + b5 passing + bend/vibrato punctuation",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

@@ -97,6 +97,7 @@ Third, today's bluesy lick. Bar 1 starts on the root, then **<mark>half-step ben
   "id": "m3.w10.d1.bluesy_mixolydian_lick",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Bluesy Mixolydian lick (b3 blue note -> major 3rd, b7 tension -> 3rd)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -202,6 +203,7 @@ Put on an "A7 vamp backing track" or "A7 groove jam." One mission: **<mark>alway
   "id": "m3.w10.d1.bluesy_mixolydian_lick",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Bluesy Mixolydian lick (b3 blue note -> major 3rd, b7 tension -> 3rd)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

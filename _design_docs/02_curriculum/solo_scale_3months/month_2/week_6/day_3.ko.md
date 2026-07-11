@@ -100,6 +100,7 @@ i18nKey: "lesson.m2.w6.d3"
   "id": "m2.w6.d3.center_shift_4note",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "4-note sequence drill — resolve to C (Am b3) then E (C bright 3rd)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -158,6 +159,7 @@ i18nKey: "lesson.m2.w6.d3"
   "id": "m2.w6.d3.center_shift_4note",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "4-note sequence drill — resolve to C (Am b3) then E (C bright 3rd)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

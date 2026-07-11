@@ -74,6 +74,7 @@ lang: ja
   "id": "m1.w3.d4.nearest_3rd_landing",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Nearest-3rd landing over Am (high box -> mid box)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -166,6 +167,7 @@ lang: ja
   "id": "m1.w3.d4.nearest_3rd_landing",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Nearest-3rd landing over Am (high box -> mid box)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

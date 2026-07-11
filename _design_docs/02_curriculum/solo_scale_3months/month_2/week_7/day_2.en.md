@@ -67,6 +67,7 @@ In open position, pick out just C·E·G and run them up and down as a **<mark>1-
   "id": "m2.w7.d2.c_arpeggio_1_3_5",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "C major arpeggio 1-3-5 (C -> E -> G), open position",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

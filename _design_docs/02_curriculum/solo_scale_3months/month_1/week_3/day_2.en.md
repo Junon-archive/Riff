@@ -95,6 +95,7 @@ Here's a line that connects Box 4 to Box 5 and keeps climbing all the way to the
   "id": "m1.w3.d2.box4_to_box5_octave",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Box 4 -> Box 5 -> octave root (wrap point)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -143,6 +144,7 @@ Play the backing track, rule: start in Box 4 (fret 12) → move into Box 5 (fret
   "id": "m1.w3.d2.box4_to_box5_octave",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Box 4 -> Box 5 -> octave root (wrap point)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

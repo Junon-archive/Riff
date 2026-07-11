@@ -57,6 +57,7 @@ lang: ja
   "id": "m2.w7.d4.chord_tone_jam_lick",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Am|C|Am|C chord-tone jam - land the 3rd every change",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

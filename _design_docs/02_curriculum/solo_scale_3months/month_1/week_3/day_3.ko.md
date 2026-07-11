@@ -91,6 +91,7 @@ i18nKey: "lesson.m1.w3.d3"
   "id": "m1.w3.d3.full_neck_3rd_run",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Full-neck 3rd-interval run (Box 1 -> 3 -> 5, land on b3)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

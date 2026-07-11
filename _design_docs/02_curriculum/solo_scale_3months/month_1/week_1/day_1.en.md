@@ -93,6 +93,7 @@ Here's today's core weapon — a <mark>4-note (16th note) ascending sequence</ma
   "id": "m1.w1.d1.four_note_sequence",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "4-note (16th) ascending sequence — Am pentatonic Box 1",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -136,6 +137,7 @@ With the metronome at 60, run the 4-note sequence ascending only, from the 6th s
   "id": "m1.w1.d1.four_note_sequence",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "4-note (16th) ascending sequence — Am pentatonic Box 1",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

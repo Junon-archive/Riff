@@ -28,6 +28,7 @@ First, the **<mark>call (the motif in its original form).</mark>** Over Am7, tos
   "id": "m3.w12.d2.motif_call",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Original solo motif - the CALL (Am7, land on b3)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -56,6 +57,7 @@ Second, the **<mark>response (answering with variation).</mark>** Stretched out 
   "id": "m3.w12.d2.motif_response",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Original solo motif - the RESPONSE (D7 F# color -> A7 mode switch to major 3rd)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -99,6 +101,7 @@ No backing track — just repeat the call motif (D-E-C + rest) 10 times. **<mark
   "id": "m3.w12.d2.motif_response",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Original solo motif - the RESPONSE (D7 F# color -> A7 mode switch to major 3rd)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -134,6 +137,7 @@ No backing track — just repeat the call motif (D-E-C + rest) 10 times. **<mark
   "id": "m3.w12.d2.motif_call",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Original solo motif - the CALL (Am7, land on b3)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

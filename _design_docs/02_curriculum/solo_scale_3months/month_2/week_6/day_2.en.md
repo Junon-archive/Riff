@@ -64,6 +64,7 @@ Here's today's main event — a <mark>C major 3rd-interval sequence climbing upw
   "id": "m2.w6.d2.c_major_third_interval",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "C major 3rd-interval line resolving to bright 3rd (E)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

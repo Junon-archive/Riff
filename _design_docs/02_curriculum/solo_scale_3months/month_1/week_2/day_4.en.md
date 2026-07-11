@@ -62,6 +62,7 @@ Here's an example cross-box improv lick. Measure 1 climbs up in Box 2 and slides
   "id": "m1.w2.d4.cross_box_target_lick",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Cross-box improv lick (slide between boxes, resolve on b3)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

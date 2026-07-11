@@ -95,6 +95,7 @@ lang: ja
   "id": "m1.w4.d3.blues_phrase_full",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Blues phrase — 3rd intervals + b5 passing + bend/vibrato punctuation",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -148,6 +149,7 @@ Aブルーススケール第1ボックスを3度インターバルで上行・�
   "id": "m1.w4.d3.blues_phrase_full",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Blues phrase — 3rd intervals + b5 passing + bend/vibrato punctuation",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

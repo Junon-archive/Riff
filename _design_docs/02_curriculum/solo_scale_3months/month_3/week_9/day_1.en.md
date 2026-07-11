@@ -27,6 +27,7 @@ That's it. Just one note in the scale changes: **<mark>b6 → ♮6</mark>**. But
   "id": "m3.w9.d1.aeolian_vs_dorian_6th",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Aeolian b6(F) vs Dorian natural 6(F#) - hear the difference",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -108,6 +109,7 @@ Second, here's a short line for <mark>comparing Aeolian vs. Dorian by ear</mark>
   "id": "m3.w9.d1.aeolian_vs_dorian_6th",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Aeolian b6(F) vs Dorian natural 6(F#) - hear the difference",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

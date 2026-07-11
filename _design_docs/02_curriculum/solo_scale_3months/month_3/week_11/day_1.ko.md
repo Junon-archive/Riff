@@ -72,6 +72,7 @@ i18nKey: "lesson.m3.w11.d1"
   "id": "m3.w11.d1.blues_layback_phrase",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Blues layback phrase (A7 C# / D7 F#) with breathing space",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

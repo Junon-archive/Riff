@@ -101,6 +101,7 @@ lang: ja
   "id": "m2.w5.d3.f_passing_resolve",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "6th(F) passing tone resolving to 5th(E) and to b3(C)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -144,6 +145,7 @@ lang: ja
   "id": "m2.w5.d3.f_passing_resolve",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "6th(F) passing tone resolving to 5th(E) and to b3(C)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

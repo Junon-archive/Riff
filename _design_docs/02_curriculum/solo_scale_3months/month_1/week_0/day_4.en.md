@@ -42,6 +42,7 @@ Below is a tab for **<mark>"riding a rhythm on one note + leaving space."</mark>
   "id": "m1.w0.d4.one_note_groove",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "One-note groove with rests — timing & space drill (root A)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

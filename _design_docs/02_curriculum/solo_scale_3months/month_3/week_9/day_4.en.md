@@ -63,6 +63,7 @@ Second, here's the **<mark>8-bar improv model</mark>**. The Am7 sections land on
   "id": "m3.w9.d4.eight_bar_dorian_solo",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "8-bar A Dorian solo over Am7-D7 (F# color + 3rd targeting)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -174,6 +175,7 @@ Without the backing track yet, go through the 8-bar model slowly, bar by bar. Re
   "id": "m3.w9.d4.eight_bar_dorian_solo",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "8-bar A Dorian solo over Am7-D7 (F# color + 3rd targeting)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

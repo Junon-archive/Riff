@@ -100,6 +100,7 @@ Third, today's **<mark>position shift lick.</mark>** Bar 1 plays around in Posit
   "id": "m3.w10.d3.position_shift_lick",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Position shift lick: Pos1 -> slide -> Pos2, land on major 3rd",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -214,6 +215,7 @@ Put on an "A7 vamp backing track," with today's mission: **<mark>move from Posit
   "id": "m3.w10.d3.position_shift_lick",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Position shift lick: Pos1 -> slide -> Pos2, land on major 3rd",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

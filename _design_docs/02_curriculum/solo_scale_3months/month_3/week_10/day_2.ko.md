@@ -28,6 +28,7 @@ i18nKey: "lesson.m3.w10.d2"
   "id": "m3.w10.d2.four_note_sequence_pos1",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "A Mixolydian 4-note sequence (Position 1, ascending)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -98,6 +99,7 @@ i18nKey: "lesson.m3.w10.d2"
   "id": "m3.w10.d2.blue_note_hammer_vs_bend",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Blue note to major 3rd: hammer-on vs bend (b3 C -> 3 C#)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

@@ -95,6 +95,7 @@ Now here's the connecting line between Box 3 and Box 4. Measure 1 sweeps through
   "id": "m1.w3.d1.box3_to_box4_slide",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Box 3 -> Box 4 sliding connection (land on b3)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -144,6 +145,7 @@ Pull up any "Am backing track." Today's rule: start playing in Box 3 (fret 9), a
   "id": "m1.w3.d1.box3_to_box4_slide",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "Box 3 -> Box 4 sliding connection (land on b3)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],

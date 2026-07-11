@@ -96,6 +96,7 @@ i18nKey: "lesson.m2.w5.d2"
   "id": "m2.w5.d2.b_passing_to_third_4note",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "4-note sequence: 2nd(B) passing tone resolving to Am 3rd (C)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
@@ -136,6 +137,7 @@ i18nKey: "lesson.m2.w5.d2"
   "id": "m2.w5.d2.b_passing_to_third_4note",
   "type": "tab",
   "meta": {
+    "notation": "staff+tab",
     "title": "4-note sequence: 2nd(B) passing tone resolving to Am 3rd (C)",
     "stringCount": 6,
     "tuning": ["E", "A", "D", "G", "B", "E"],
