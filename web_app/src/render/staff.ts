@@ -754,13 +754,16 @@ export function renderStaff(score: Score, mode: StaffMode): string {
     const writtenMax = maxMidi + 12 * WRITTEN_OCTAVE_SHIFT;
     const belowPx = Math.max(0, bottomLine - writtenMin) * PX_PER_SEMI; // 저음 렛저라인 여유
     const abovePx = Math.max(0, writtenMax - topLine) * PX_PER_SEMI; // 고음 렛저라인 여유
-    // 스윙+템포 겹침(전체 1마디): 스테이브 위에 "Swing …"과 ♩=bpm 두 줄이 필요하나 좁아서 겹친다.
+    // 스윙+템포 겹침(첫 줄이 1마디): 스테이브 위에 "Swing …"과 ♩=bpm 두 줄이 필요하나 좁아서 겹친다.
     // → 스테이브를 아래로 더 내려(상단 여백 확보) 스윙을 그 위에 얹는다(setText shift_y 와 한 세트).
     const feelForOverlap = score.meta?.feel;
+    // 겹침은 **첫 줄(템포·스윙이 그려지는 줄)이 1마디로 좁을 때** 생긴다. 전체 마디 수가 아니라 rows[0]
+    // 기준으로 판정해야 한다 — ★17-v2 그리디 wrap 때문에 2마디+ 스코어도 첫 줄이 1마디가 될 수 있다
+    // (그때 전체 마디 수로만 보면 겹침을 놓친다: 셔플 부기 등 2마디 스윙 스코어).
     const swingTempoOverlap =
       (feelForOverlap === 'swing8' || feelForOverlap === 'swing16') &&
       typeof score.meta?.tempoBpm === 'number' &&
-      (tabData.measures?.length ?? 0) === 1;
+      (rows[0]?.length ?? 0) === 1;
     const trebleDy = Math.round(16 + abovePx + (swingTempoOverlap ? 30 : 0));
     const tabDy = Math.round(trebleDy + 80 + belowPx + 16);
     const sysH = withTab ? tabDy + 150 : Math.round(trebleDy + 80 + belowPx + 22);
@@ -815,8 +818,8 @@ export function renderStaff(score: Score, mode: StaffMode): string {
         const feel = score.meta?.feel;
         if (feel === 'swing8' || feel === 'swing16') {
           const label = feel === 'swing16' ? 'Swing 16ths' : 'Swing 8ths';
-          // 겹침(전체 1마디+템포)일 때만 스윙을 위로 올려 세로 분리(위 trebleDy +30 여백과 한 세트).
-          // 2마디+ 는 스테이브가 넓어 안 겹치므로 기존 높이 유지(여러 줄에서 스윙 높이 정합 보존).
+          // 겹침(첫 줄 1마디+템포)일 때만 스윙을 위로 올려 세로 분리(위 trebleDy +30 여백과 한 세트).
+          // 첫 줄이 2마디+ 면 스테이브가 넓어 안 겹치므로 기존 높이 유지(여러 줄 스윙 높이 정합 보존).
           stave.setText(label, StaveModifierPosition.ABOVE, swingTempoOverlap ? { shift_y: -34 } : {});
         }
       }
