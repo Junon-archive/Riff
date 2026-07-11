@@ -14,6 +14,9 @@ import type { Score, Dot, Barre, NoteRole, ScoreMeta } from '../types/score';
 /* ---- 기하 상수 -------------------------------------------------------- */
 const PAD_L = 48; // 왼쪽 여백(현 이름 + 개방/뮤트 표기)
 const PAD_R = 22;
+// 개방(o)·뮤트(x) 마크의 가로 위치. 현 이름(stringName, x≈14)과 겹쳐 계이름을 가리던 것을
+// 넛(fx(0)=PAD_L) 쪽으로 8px 밀어 분리한다(넛은 침범하지 않음). 개방 label 도 여기에 정렬.
+const OPEN_MUTE_X = PAD_L - 18;
 const PAD_T = 26;
 const PAD_B = 30; // 프렛 번호 라벨
 const ROW_H = 36; // 현 간격(세로) — 점 위 도수 라벨이 위 현의 점에 가리지 않도록 넉넉히
@@ -188,18 +191,18 @@ export function renderFretboard(score: Score): string {
     // 뮤트(x) — 왼쪽 거터
     if (dot.muted) {
       parts.push(
-        `<text x="${PAD_L - 26}" y="${y + 5}" text-anchor="middle" font-size="14" font-weight="700" fill="currentColor" opacity="0.5">✕</text>`,
+        `<text x="${OPEN_MUTE_X}" y="${y + 5}" text-anchor="middle" font-size="14" font-weight="700" fill="currentColor" opacity="0.5">✕</text>`,
       );
       continue;
     }
     // 개방현(o) — 왼쪽 거터
     if (f === 0) {
       parts.push(
-        `<circle cx="${PAD_L - 26}" cy="${y}" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8" opacity="0.55"/>`,
+        `<circle cx="${OPEN_MUTE_X}" cy="${y}" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8" opacity="0.55"/>`,
       );
       if (dot.label) {
         parts.push(
-          `<text x="${PAD_L - 26}" y="${y - 11}" text-anchor="middle" font-size="9.5" font-weight="700" fill="currentColor" opacity="0.6">${esc(dot.label)}</text>`,
+          `<text x="${OPEN_MUTE_X}" y="${y - 11}" text-anchor="middle" font-size="9.5" font-weight="700" fill="currentColor" opacity="0.6">${esc(dot.label)}</text>`,
         );
       }
       continue;
