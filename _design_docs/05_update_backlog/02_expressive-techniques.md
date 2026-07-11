@@ -9,7 +9,9 @@ owner: null
 
 # 02 · 표현 기법 (밴딩·해머링·붙임줄·잇단음·비4/4)
 
-> **🐛 후속 버그픽스 (2026-07-11) — 잇단음(C) 빔 그룹핑 수정:** 3잇단음이 빔으로 **2음씩** 묶여 "셋잇단음처럼 안 보이던" 문제. **원인:** `staff.ts` `buildMeasure` 빔 flush 가 **박 경계(`pos % beatInt`, nominal duration)** 기준이라 8분 3잇단(nominal 6단위)이 2음(=4단위=1박)에서 잘림. **수정:** 잇단음 음표는 빔·튜플렛을 **잇단음 그룹(num개) 단위**로 flush(pos 는 그룹 완료 시 실제 점유 span `inSpaceOf×unit` 만큼 전진 → 후속 음 박 정합 유지). 스트레이트 8·16분은 기존 박경계 flush 불변. **재현:** `shuffle_bounce_bass_2months/m1/w1/d1` "Triplet grid". **검증:** build 0 · check-invariants 회귀 0(SVG만·콘텐츠 지문 무관) · 셔플 레슨 빔 마디당 6→4(=박당 1빔=3잇단 묶음).
+> **🐛 후속 버그픽스 ① (2026-07-11) — 잇단음(C) 빔 그룹핑:** 3잇단음이 빔으로 **2음씩** 묶여 "셋잇단음처럼 안 보이던" 문제. **원인:** `staff.ts` `buildMeasure` 빔 flush 가 **박 경계(`pos % beatInt`, nominal duration)** 기준이라 8분 3잇단(nominal 6단위)이 2음(=4단위=1박)에서 잘림. **수정:** 잇단음 음표는 빔·튜플렛을 **잇단음 그룹(num개) 단위**로 flush(pos 는 그룹 완료 시 실제 점유 span `inSpaceOf×unit` 만큼 전진 → 후속 음 박 정합 유지). 스트레이트 8·16분은 기존 박경계 flush 불변. **재현:** `shuffle_bounce_bass_2months/m1/w1/d1` "Triplet grid". **검증:** build 0 · check-invariants 회귀 0 · 셔플 빔 마디당 6→4.
+>
+> **🐛 후속 버그픽스 ② (2026-07-11) — 잇단음 오선보/타브 음 x정렬 어긋남:** 3잇단 구간에서 **오선보 음표와 타브 숫자의 가로 위치가 안 맞던** 문제. **원인:** `Tuplet` 이 **오선보 음(StaveNote)에만** 생성돼 tick 을 `num/inSpaceOf` 비율로 압축하는데, **타브 음(TabNote)엔 Tuplet 미적용** → 두 Voice 의 tick 총량이 달라 공동 포맷 시 x 정렬이 어긋남(타브가 균일 분산, 오선보는 잇단음 클러스터). **수정:** `buildMeasure` 가 잇단음 그룹에 **타브 음도 병행 수집**(`tabNotes`) → 렌더에서 **타브 음에도 같은 `Tuplet` 생성**(tick 조정용, 괄호·숫자는 오선보만 draw). **검증:** build 0 · check-invariants 회귀 0(SVG만) · 셔플 타브 x간격이 박 경계에서 벌어지는 클러스터 패턴(오선보와 정합). 육안(타브 숫자가 오선보 음 아래 정렬)은 배포 후 확인.
 
 ## 목적 (왜)
 

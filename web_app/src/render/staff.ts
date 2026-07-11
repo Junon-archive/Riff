@@ -366,8 +366,8 @@ interface BuiltMeasure {
   beams: StaveNote[][];
   /** stave[i] 가 다음 음과 붙임줄(tie)로 이어지는지(★02-B). stave 와 같은 길이. */
   tieAfter: boolean[];
-  /** 잇단음 그룹(★02-C): 연속 num개 음 묶음. */
-  tuplets: { notes: StaveNote[]; num: number; inSpaceOf: number }[];
+  /** 잇단음 그룹(★02-C): 연속 num개 음 묶음. tabNotes = 같은 잇단음의 타브 음(오선보/타브 tick 정렬용). */
+  tuplets: { notes: StaveNote[]; tabNotes: (TabNote | GhostNote)[]; num: number; inSpaceOf: number }[];
   /** stave[i]→[i+1] 연결(★02-A 고도화): 이음줄(hammer/pull) 또는 슬라이드 사선. stave 와 같은 길이. */
   linkAfter: (null | { kind: 'slur' } | { kind: 'slide'; dir: number })[];
   /** 슬래시 리듬(★04): 노트헤드 숨긴 리듬 음 → 가운데 줄에 커스텀 슬래시 바 오버레이 대상. */
@@ -390,14 +390,16 @@ function buildMeasure(
   const tieAfter: boolean[] = [];
   const linkAfter: BuiltMeasure['linkAfter'] = [];
   const slashes: BuiltMeasure['slashes'] = [];
-  const tuplets: { notes: StaveNote[]; num: number; inSpaceOf: number }[] = [];
+  const tuplets: BuiltMeasure['tuplets'] = [];
   let curTup: StaveNote[] = [];
+  let curTupTab: (TabNote | GhostNote)[] = [];
   let curTupSpec: { num: number; inSpaceOf: number } | null = null;
   const flushTup = () => {
     if (curTup.length && curTupSpec) {
-      tuplets.push({ notes: curTup, num: curTupSpec.num, inSpaceOf: curTupSpec.inSpaceOf });
+      tuplets.push({ notes: curTup, tabNotes: curTupTab, num: curTupSpec.num, inSpaceOf: curTupSpec.inSpaceOf });
     }
     curTup = [];
+    curTupTab = [];
     curTupSpec = null;
   };
   let curBeam: StaveNote[] = [];
@@ -573,6 +575,7 @@ function buildMeasure(
       //   안 보이는" 문제 → num 개를 한 빔으로 묶는다. pos 는 그룹 완료 시 실제 점유 span 만큼 전진
       //   (예: 8분 3잇단 = inSpaceOf(2) × unit(2) = 4 = 1박) → 후속 음의 박 경계 정합 유지.
       curTup.push(sNote);
+      curTupTab.push(tNote); // 타브 음도 같은 잇단음 그룹에 → 렌더에서 Tuplet tick 조정(오선보와 정렬)
       curTupSpec = n.tuplet;
       if (curTup.length >= n.tuplet.num) {
         pos += n.tuplet.inSpaceOf * unit;
@@ -828,7 +831,7 @@ export function renderStaff(score: Score, mode: StaffMode): string {
       const flatTie: boolean[] = [];
       const flatLink: BuiltMeasure['linkAfter'] = [];
       const flatSlashes: BuiltMeasure['slashes'] = [];
-      const tupGroups: { notes: StaveNote[]; num: number; inSpaceOf: number }[] = [];
+      const tupGroups: BuiltMeasure['tuplets'] = [];
       rowMeasures.forEach((mb, mi) => {
         if (mi > 0) {
           sTick.push(new BarNote());
@@ -848,6 +851,11 @@ export function renderStaff(score: Score, mode: StaffMode): string {
       const tupletObjs = tupGroups.map(
         (g) => new Tuplet(g.notes, { num_notes: g.num, notes_occupied: g.inSpaceOf }),
       );
+      // ★02-C 확장: 같은 잇단음을 **타브 음표에도** 적용해 tick 을 오선보와 맞춘다(정렬 어긋남 수정).
+      //   Tuplet 생성자가 tick 을 조정하므로 생성만 하면 됨 — 괄호·숫자는 오선보(tupletObjs)만 draw, 타브는 미표기.
+      if (withTab)
+        for (const g of tupGroups)
+          if (g.tabNotes.length) new Tuplet(g.tabNotes, { num_notes: g.num, notes_occupied: g.inSpaceOf });
 
       const vStaff = new Voice({ num_beats: (numBeats || 4) * mCount, beat_value: beatValue || 4 })
         .setStrict(false)
