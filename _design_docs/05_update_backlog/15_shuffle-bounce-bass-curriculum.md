@@ -1,6 +1,6 @@
 ---
 id: 15-shuffle-bounce-bass-curriculum
-status: IN_PROGRESS (주차 프롬프트 8개 완료 — day 저작 미착수)
+status: DONE (2개월·8주·96 day 파일 3언어 저작·검증·커밋 완료 2026-07-11)
 priority: medium
 risk: medium
 depends_on: [10, 13]
