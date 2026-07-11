@@ -19,7 +19,7 @@
 # 산문 강조 규칙 (볼드 + 하이라이트 + 지판)
 - **★볼드 필수:** 산문 본문(①②③)에서 **핵심 용어·음이름·수치·지시**를 `**볼드**`로. ①이론 풍부하게(문단당 1~3개).
 - **하이라이트:** 핵심 문장 `<mark>…</mark>`(05 적용 시 연한 초록, 미구현 시 기본색). 문단당 1~2곳. 산문 `<mark>`(글) ↔ 악보 `role:target`(초록 음 점) 혼용 금지.
-- **★지판(fretboard_diagram) 활용:** 손 위치는 `fretboard_diagram`(4·5현) 병기 가능. 순수 시간순 라인은 tab.
+- **★지판(fretboard_diagram) 활용:** 손 위치는 `fretboard_diagram`(4·5현) **권장 — 주당 최소 1블록 이상 병기**(배포 표준: 매 주·거의 매 day 지판). 순수 시간순 라인은 tab.
 
 # 시각자료 인라인 배치
 - JSON을 설명 산문 바로 아래 인라인(4현→5현). 각 악보 밑 `▶ 연주 안내 한 줄` 필수.
@@ -29,7 +29,7 @@
 
 # 표준 JSON 스키마 · 필드 규약
 - id: `"m2.w8.d{일}.슬러그_4|_5"`. type: `fretboard_diagram` | `tab`. meta: `{ title, instrument:"bass", stringCount:4|5, tuning, key?, tempoBpm?, notation:"staff+tab", feel? }`. ⛔ `"rhythm"`.
-- 현 번호 4현 4(E)~1(G)/5현 5(B)~1(G). 코드톤=도수·`chord_tone`, 접근=음이름·`passing`, 고스트=`dead_note`. ⛔ 스키마 밖 필드명 금지. **워킹=`feel:"swing8"`.** ⛔ 빨강 없음.
+- 현 번호 4현 4(E)~1(G)/5현 5(B)~1(G). 코드톤=도수·`chord_tone`, 접근=음이름·`passing`, 고스트=`technique:"dead_note"`+`role:"scale"`·`label` 생략(배포 표준 — 무채색 렌더). ⛔ 스키마 밖 필드명 금지. **워킹=`feel:"swing8"`.** ⛔ 빨강 없음.
 
 # 이번 주차 목표 (2개월차 8주차 — 최종 졸업)
 **진행 위 워킹을 완성한다 — ii-V-I + 턴어라운드로 도는 오리지널 진행.**

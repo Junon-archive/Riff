@@ -82,6 +82,11 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-11 (백로그 11 — 블루스 5주차 day 저작 = Month 2(표현 리드) 착수)
+- **5주차(마이너 펜타 박스1 + 블루노트):** day_1~4 × 3언어 = 12파일. D1 박스1(`scale_shape`) → D2 블루노트 b5(`role:"blue_note"` 보라) → D3 박스1 짧은 프레이즈 → D4 블루스 스케일 통합(핀 고정 `a_blues_box1`). **`scale_shape`·`blue_note` 첫 사용**(dist 렌더 확인).
+- **검증:** build exit0(blues day 20), check-invariants 삭제전용키 0(회귀0)·신규 18블록(blues w5), 볼드/mark 3언어 일치·JSON 3언어 바이트동일·④/완료줄 mark0·핀 JSON=프롬프트 바이트동일·태그오염0·①이론 510~557. (baseline diff에 동시세션 neosoul·shuffle_bounce 블록 포함 — 가법.)
+- **다음:** week_6(표현적 벤딩·비브라토·슬라이드 — 배포 콘텐츠 최초 bend/slide 사용).
+
 ### 2026-07-11 (백로그 12 — 네오소울 준비물 + 프롬프트 지판 강도 통일, /goal 착수)
 - **프롬프트 하드닝:** `neosoul_voicing_2months` 주차 프롬프트 8개 지판 병기 강도 통일 — W2·W3 '병기'·W4~8 '병기 가능'을 W1과 동일 강도(`fretboard_diagram` 반드시 병기·주당 최소 1개·손모양 각인)로 상향. M1↔M2 지판 밀도 격차 방지, 손모양 대상은 주차 소재로 구체화. 핀고정 JSON·박자합 무손.
 - **준비물:** meta.json(기타·level3·2개월·intro 볼드≠<mark> 분리·3언어 bold11/mark3 일치) + overview 30파일(month_1·2 + week_1~8 × ko/en/ja, blues 헤딩 구조·각 week_N_prompt 정합·3언어 볼드/mark 개수 전량 일치) + 섬네일 `curriculum10.jpg`→`neosoul-voicing.webp`(1200×800·q72·30.1KB, MAP 항목 추가·기존 webp 바이트 불변).

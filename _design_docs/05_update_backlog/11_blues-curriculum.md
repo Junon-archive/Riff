@@ -1,6 +1,6 @@
 ---
 id: 11-blues-curriculum
-status: IN_PROGRESS (day 저작 진행 — 4/12주 완료, Month 1 리듬 졸업)
+status: IN_PROGRESS (day 저작 진행 — 5/12주 완료, Month 2 표현 리드 착수)
 priority: high
 risk: low
 depends_on: []
