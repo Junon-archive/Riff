@@ -8607,6 +8607,207 @@
       "6:3:root:R"
     ]
   },
+  "neosoul_voicing_2months#m1.w1.d3.dm9_grip": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "1:0::",
+      "2:5:color:9",
+      "3:5:chord_tone:b7",
+      "4:3:chord_tone:b3",
+      "5:5:root:R",
+      "6:0::"
+    ]
+  },
+  "neosoul_voicing_2months#m1.w1.d3.g13_grip": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "1:0::",
+      "2:5:color:13",
+      "3:4:chord_tone:3",
+      "4:3:chord_tone:b7",
+      "5:0::",
+      "6:3:root:R"
+    ]
+  },
+  "neosoul_voicing_2months#m1.w1.d3.change_drill": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 1,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 1,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 1,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 1,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "neosoul_voicing_2months#m1.w1.d3.change_half": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 2,
+        "rests": 0,
+        "deads": 0,
+        "heads": 8,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 2,
+        "rests": 0,
+        "deads": 0,
+        "heads": 8,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "neosoul_voicing_2months#m1.w1.d3.anchor": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "2:5:color:E"
+    ]
+  },
+  "neosoul_voicing_2months#m1.w1.d4.dm9_grip": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "1:0::",
+      "2:5:color:9",
+      "3:5:chord_tone:b7",
+      "4:3:chord_tone:b3",
+      "5:5:root:R",
+      "6:0::"
+    ]
+  },
+  "neosoul_voicing_2months#m1.w1.d4.g13_grip": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "1:0::",
+      "2:5:color:13",
+      "3:4:chord_tone:3",
+      "4:3:chord_tone:b7",
+      "5:0::",
+      "6:3:root:R"
+    ]
+  },
+  "neosoul_voicing_2months#m1.w1.d4.vamp_grips": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 1,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 1,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "neosoul_voicing_2months#m1.w1.d4.vamp_4bars": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 1,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 1,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 1,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 1,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "neosoul_voicing_2months#m1.w1.d4.root_move": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "5:5:root:Dm9 R",
+      "6:3:root:G13 R"
+    ]
+  },
   "shuffle_bounce_bass_2months#m1.w1.d1.e_root_position_4": {
     "type": "fretboard_diagram",
     "dots": [
