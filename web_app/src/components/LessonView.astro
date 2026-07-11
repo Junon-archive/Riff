@@ -300,7 +300,9 @@ const monthDayKeys = location.month.weeks.flatMap((w) => w.days).map((d) => d.da
   /* ---- 지판/타브 SVG 렌더 영역: 카드감 제거. 산문 흐름 속 슬롯 위치에 인라인 렌더(01 Part A) ---- */
   .render-area {
     margin: 24px 0;
-    padding: 24px 12px;
+    /* ★19 가로 패딩 축소(12px→4px): 모바일서 지판/악보 이미지가 산문 텍스트 라인폭까지 닿게.
+       세로 24px·카드감 유지(풀블리드 아님). 이미지는 폭 1px=판독성이라 텍스트와 달리 넓힘. */
+    padding: 24px 4px;
     background: var(--card-sub);
     border-radius: 16px;
   }
@@ -324,6 +326,9 @@ const monthDayKeys = location.month.weeks.flatMap((w) => w.days).map((d) => d.da
     width: 100%;
     height: auto;
     display: block;
+    /* ★19 짧은 악보 중앙 정렬: staffsvg 는 max-width:{자연폭} 캡이라 넓은 컬럼서 좌측 치우침 →
+       margin-inline:auto 로 "짧으면 중앙·100%면 무효과" 자동. fretboard/tabsvg 는 항상 100%라 무해. */
+    margin-inline: auto;
     color: var(--text);
   }
   .render-cap {

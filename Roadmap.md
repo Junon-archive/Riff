@@ -82,6 +82,11 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-11 (백로그 19 **완료** — 악보/지판 카드 모바일 가로폭 확대 + 짧은 악보 중앙 정렬)
+- **문제:** 지판/악보 카드 이미지가 카드 좌우 패딩(12px×2)만큼 산문 텍스트폭보다 좁음(모바일서 판독 손해). 1마디짜리 짧은 staff 악보는 `max-width:{자연폭}` 캡 + 블록 기본정렬로 카드 왼쪽에 치우침.
+- **해결(A안 + 중앙정렬, CSS-only):** ① `.render-area` 가로 패딩 축소 — `LessonView.astro` `24px 12px→24px 4px`(레슨 실렌더), `app.css` 전역 `20px 18px→20px 6px`(정합). 세로·카드감 유지(풀블리드 아님). ② `.render-mount .fretboard/.tabsvg/.staffsvg` 에 `margin-inline:auto` — 자연폭 캡(짧은 악보)일 때만 중앙, 100% 꽉 차면 무효과 → "짧으면 중앙·길면 그대로" 자동. over-wide 스크롤 악보 무충돌.
+- **검증:** build exit 0(1006p)·불변식 회귀 0(1454블록, CSS-only라 SVG 바이트 무관·baseline --update 불필요)·dist 번들에 `padding:24px 4px`·`.staffsvg{…margin-inline:auto…}` 컴파일 확인. 픽셀 육안(모바일 폭 정렬·짧은 악보 중앙)은 사용자 확인 권장.
+
 ### 2026-07-11 (백로그 18 **완료** — 솔로/스케일 tab → staff+tab 이식, `render/tab.ts` 제거)
 - **배경:** solo_scale_3months 89개 tab 블록만 `meta.notation` 미지정이라 구식 자체 타브 SVG(`render/tab.ts`)로 라우팅 — 다른 9개 커리큘럼은 전부 `staff+tab`(VexFlow 오선보+타브 결합). 렌더 경로 이원화 해소 + 표기 일관성 위해 이식.
 - **단계 0(R1, 커밋 `c02a272`):** `preferFlats` 를 정규식 조 루트(`^[A-G][b♭#♯]?`) 기반으로 정밀화 — "A blues"/"A Mixolydian(blues)"의 서술어 'b' 를 플랫 조로 오판하던 버그 수정(유닛 10/10).

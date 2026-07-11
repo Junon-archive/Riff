@@ -377,7 +377,7 @@ h1.display {
 /* SVG 렌더 영역 (지판/타브) */
 .render-area {
   background: var(--card); border: 1px solid var(--line);
-  border-radius: var(--radius); padding: 20px 18px; overflow: hidden;
+  border-radius: var(--radius); padding: 20px 6px; overflow: hidden; /* ★19 가로 패딩 축소(18→6, 이미지 폭 확대 정합) */
 }
 .render-area + .render-area { margin-top: 12px; }
 .render-cap {

@@ -1,14 +1,16 @@
 ---
 id: 19-score-card-width-center
-status: TODO
+status: DONE
 priority: medium
 risk: low
 depends_on: []      # 17(오선보 줄바꿈)과 파일은 겹치나(LessonView/staff.ts) 코드 라인 비충돌 — 독립 착수 가능
-owner: null
+owner: claude
 ---
 
 # 19 · 악보/지판 카드 — 모바일 가로폭 확대 + 짧은 악보 중앙 정렬
 
+> ✅ **완료 2026-07-11.** (A안 + 중앙정렬, CSS-only) 카드 가로 패딩 축소(`LessonView.astro` 24px 12px→**24px 4px**, `app.css` 전역 20px 18px→**20px 6px**) + `.render-mount .fretboard/.tabsvg/.staffsvg` 에 **`margin-inline:auto`**. build exit 0(1006p)·불변식 회귀 0(1454블록, CSS-only라 무관)·dist 번들에 새 규칙 컴파일 확인.
+>
 > 📐 **CSS-only 개선.** SVG 출력·데이터·불변식·빌드에 영향 0(할루시네이션/회귀 리스크 없음). 모바일에서 지판·악보 카드를 **산문 텍스트 폭까지 넓히고**(A안: 풀블리드 아님), 1마디짜리 **짧은 악보를 좌측 치우침 대신 가운데**로 배치한다. 방향 확정: 사용자 2026-07-11(A안 + 중앙정렬).
 
 ## 목적 (왜)
@@ -102,18 +104,18 @@ owner: null
 ## 체크리스트
 
 **수정 1 — 카드 폭**
-- [ ] `LessonView.astro:303` `.render-area` 가로 패딩 축소(12px→4px, 또는 미디어쿼리)
-- [ ] `app.css:380` 전역 `.render-area` 가로 패딩 정합 축소(선택)
-- [ ] 모바일 이미지 폭 = 텍스트 폭 육안
+- [x] `LessonView.astro:303` `.render-area` 가로 패딩 축소(12px→**4px**, 전역·미디어쿼리 없이)
+- [x] `app.css:380` 전역 `.render-area` 가로 패딩 정합 축소(18px→**6px**)
+- [~] 모바일 이미지 폭 = 텍스트 폭 — dist 번들 CSS `padding:24px 4px` 컴파일 확인. 픽셀 육안은 사용자 확인 권장
 
 **수정 2 — 중앙 정렬**
-- [ ] `LessonView.astro:321-328` SVG 규칙에 `margin-inline:auto` 추가
-- [ ] 짧은 악보 중앙·밀집 악보 무영향·over-wide 스크롤 무영향 육안
+- [x] `LessonView.astro:321-328` SVG 규칙에 `margin-inline:auto` 추가
+- [~] 짧은 악보 중앙·밀집 악보 무영향·over-wide 스크롤 무영향 — 규칙 원리상 자동 처리, dist `.render-mount .staffsvg{...margin-inline:auto...}` 컴파일 확인. 픽셀 육안은 사용자 확인 권장
 
 **공통**
-- [ ] build 0 + 불변식 회귀 0(무관 확인)
-- [ ] 다크모드·데스크톱 회귀 육안
-- [ ] Roadmap 변경로그 + 이 문서 status(DONE)·체크리스트 + README 갱신
+- [x] build 0(1006p) + 불변식 회귀 0(1454블록, CSS-only 무관 확인)
+- [~] 다크모드·데스크톱 회귀 — CSS 변경 범위상 무영향(배경 `--card-sub`·`currentColor` 불변). 픽셀 육안 미수행
+- [x] Roadmap 변경로그 + 이 문서 status(DONE)·체크리스트 + README 갱신
 
 ## 미해결 질문 (사람 결정)
 
