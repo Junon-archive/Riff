@@ -82,6 +82,12 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-11 (백로그 11 — 블루스 10주차 day 저작 + baseline 부채 일괄 해소)
+- **10주차(메이저/마이너 'BB' 색):** day_1~4 × 3언어 = 12파일. D1 메이저 3도(C#) 위치 → D2 b3→3 반음(BB 색) → D3 A7 위 3도 선택 → D4 BB 색 통합(핀 고정 `bb_lick`). 메이저3도 강조=`role:"target"`+`highlight:true`(초록).
+- **★baseline 일괄 갱신:** 동시 세션 churn으로 연기됐던 w8·w9·w10 blues 60블록 + 동시세션분을 green 빌드 창에서 일괄 `--update`(→1225, 삭제전용키 0=회귀0). 이로써 blues baseline 부채 해소.
+- **검증:** build green exit0, blues 회귀0·핀 JSON=프롬프트 바이트동일, 볼드/mark 3언어 일치·JSON 3언어 바이트동일·④/완료줄 mark0·태그오염0·①이론 493~552.
+- **다음:** week_11(릭 어휘 확장·프레이징 성숙).
+
 ### 2026-07-11 (백로그 12 — 네오소울 5주차 day 저작 = Month 2 착수)
 - **5주차(더블스탑 b3→3 스미어):** day_1~4 × 3언어 = 12파일. D1 b3→3(F→F#) 해머온 스미어 → D2 3·6도 더블스탑 스미어 → D3 뱀프에 장식 삽입 → D4 스미어 릭(핀 고정 `smear_lick` 바이트동일). 스미어=`hammer_on`, 착지 3도=`role:"target"`+highlight.
 - **결함 수정(빌드가 잡음):** day_2 `doublestop_smear`·`doublestop_loop` 마디2가 `chord[]` 대표음≠최저음(대표 string1<chord string3) 스키마 위반 → 6도 스미어를 저음 성부(string4 대표)로 재배치, 파트너 D를 chord(string2)로. 지판·산문 3언어 동기화. **커스텀 검증기에 '대표음=최저음' 규칙 추가**(w1~4 소급 통과).
