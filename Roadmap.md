@@ -82,6 +82,11 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-11 (백로그 15 — 셔플&바운스 6주차 day 저작)
+- **6주차(스윙16 바운스):** day_1~4 × 3언어 = 12파일. D1 16분 그리드(1-e-&-a)+스윙16 감 → D2 네오소울 바운스 루트 라인(rest 여백) → D3 고스트+스윙16 결합 → D4 스윙16 그루브 + 핀 고정 `swing16_bounce`(E 루트+5도+b7+고스트 16분, `feel:"swing16"`, 4·5현). 네오소울/힙합 바운스.
+- **검증:** 볼드/mark 3언어 일치·악보 JSON 3언어 바이트동일·④/완료줄 mark0·핀 JSON=프롬프트 바이트동일·feel swing16·고스트 dead_note·role(5=chord_tone/b7=scale)·4·5현 병행쌍·태그오염0. **스키마·현/프렛·박자합·chord대표음 독립 정밀검증 실위반0.** (전체 `npm run build`는 동시 세션 neosoul의 chord 대표음 스키마 오류로 일시 차단 — shuffle 무관, baseline --update는 클린 창에서 일괄 반영 예정.)
+- **다음:** week_7(레이백·하프타임 맛보기) ~ week_8(종합 바운스 졸업).
+
 ### 2026-07-11 (백로그 11 — 블루스 9주차 day 저작 = Month 3(심화·통합) 착수)
 - **9주차(코드 따라가기):** day_1~4 × 3언어 = 12파일. D1 A7 착지 → D2 D7 착지 → D3 A7↔D7 오가며 착지 → D4 코드 따라가기 통합(핀 고정 `chord_targeting`). 착지목표=`role:"target"`+`highlight:true`(초록). 박스1 안 코드 반응만 — 전 지판 시스템은 solo_scale 핸드오프 명시.
 - **검증:** build-content blues day 36 정상·check-invariants blues 삭제0(회귀0)·blues w9 신규 20블록, 볼드/mark 3언어 일치·JSON 3언어 바이트동일·④/완료줄 mark0·핀 JSON=프롬프트 바이트동일·태그오염0·①이론 513~529. (동시 세션 미완성이 full-build 지속 차단 → w8·w9 baseline은 다음 green 창 일괄 갱신.)
