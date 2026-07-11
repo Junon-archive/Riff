@@ -67,11 +67,10 @@ owner: null
 2. **마디 그리디 wrap(마디 경계에서만):** v1의 "2마디 고정/쌍 분리"를 폐기하고, 줄에 마디를 계속 넣되 누적 minW(=`preCalculateMinTotalWidth`, v1-1 재사용)가 목표폭 초과 직전까지 → 다음 줄. 성긴 마디는 여러 개/줄, 빽빽하면 1개/줄. **한 마디는 절대 두 줄에 걸치지 않는다.**
 3. **넓은 단일 마디만 힌트 스크롤:** 한 마디 minW가 목표폭을 넘으면 그 마디는 자기 줄에 놓고 **그 시스템만 가로 스크롤**(`min-width` 부착) + `.render-mount`에 **페이드/그림자 힌트**로 "더 있음" 표시(잘림 오인 방지). 마디를 쪼개지 않음. 그 외 전부 스크롤 제거(width:100%).
 4. `tab.ts`·`fretboard.ts` 무변경.
-5. **[부수 이슈] 단일 마디에서 스윙 텍스트 ↔ 템포 겹침 수정** (같은 파일·영역이라 v2와 함께 처리 권장):
-   - **증상:** `meta.feel`(swing8/16) + `meta.tempoBpm` 이 함께면, **마디가 1개일 때만** 오선보 상단의 "Swing 8ths"(setText ABOVE, 중앙) 와 `♩=bpm`(setTempo, 좌상단)이 **가로로 겹친다**(스테이브가 좁아 x 근접). 마디 2개+면 넓어서 안 겹침. (재현: `blues m1w1d3` "A7 boogie riff — 1 bar".)
-   - **위치:** `staff.ts:770-779`(첫 줄 `ri===0` 에서 `stave.setTempo(...)` + `stave.setText(label, StaveModifierPosition.ABOVE)`).
-   - **해결(조건부 세로 분리):** 마디 1개일 때만 스윙 텍스트를 위로 올려 세로 분리, 2개+는 기존 높이 유지(여러 마디 높이 정합 보존). `mCount`(그 줄 마디 수, `:756`에 이미 계산됨) 로 분기 → `stave.setText(label, ABOVE, mCount === 1 ? { shift_y: -N } : {})`. **StaveText 는 `shift_y`(세로)·`justification` 옵션 지원 확인됨**(vexflow `StaveText.constructor` options). `shift_y` 값(-10~-14 추정)은 착수 시 래스터 실측으로 확정.
-   - **주의:** v2 가 `rows`/`mCount`/첫줄 판정 로직을 바꾸므로, 그 재설계된 구조 위에서 `mCount===1` 분기를 넣는다(현재 라인번호는 v1 기준 — 착수 시 재확인). tempoBpm 없고 feel 만 있는 경우엔 겹칠 상대가 없으니 무해(분기 그대로 둬도 됨).
+5. **[부수 이슈] 단일 마디에서 스윙 텍스트 ↔ 템포 겹침 수정 — ✅ 완료(2026-07-11):**
+   - **증상:** `meta.feel`(swing8/16) + `meta.tempoBpm` 이 함께면, **전체 1마디일 때만** 오선보 상단의 "Swing …"(setText ABOVE, 중앙) 와 `♩=bpm`(setTempo, 좌상단)이 **가로+세로로 겹친다**(스테이브가 좁아 근접). 2마디+면 넓어서 안 겹침. (재현: `blues m1w1d3`.)
+   - **해결(구현):** `swingTempoOverlap = feel(swing8/16) && tempoBpm && measures.length===1` 판정 → ① **`trebleDy += 30`**(스테이브를 아래로 내려 상단 2줄 공간 확보 — viewBox 위 잘림 방지) + ② **`setText(label, ABOVE, { shift_y: -34 })`**(스윙을 위로) 로 세로 분리. baseline 실측: 스윙 y=40 / 템포 y=78(간격 38px)·상단 여유 충분. `mCount` 대신 **전체 마디수(measures.length)** 기준(겹치는 건 성긴 단일 마디 블록뿐).
+   - **불변:** 2마디+·feel 없음·tempo 없음 블록은 분기 미적용 → 스윙 높이 불변(측정: 여러마디 swing_y=44 그대로). `check-invariants` 기존 블록 회귀 0(y좌표는 지문 무관).
 
 ### v2 불변 보장 / 검증
 - **콘텐츠 JSON 무관(순수 레이아웃).** 단 wrap 규칙 변경으로 **다수 staff 블록 SVG가 reflow** → `check-invariants.mjs` baseline **의도적 갱신**(`--update`)+diff 리뷰 필수. "어떤 블록이 왜 바뀌는지" 커밋 명시. (v1과 달리 churn이 큼 — 감수.)
