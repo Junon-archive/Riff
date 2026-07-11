@@ -1,6 +1,6 @@
 ---
 id: 11-blues-curriculum
-status: IN_PROGRESS (day 저작 진행 — 6/12주 완료, 표현 리드·벤딩/슬라이드 실콘텐츠 첫 투입)
+status: IN_PROGRESS (day 저작 진행 — 7/12주 완료, 표현 리드 프레이징까지)
 priority: high
 risk: low
 depends_on: []
