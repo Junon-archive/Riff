@@ -1,6 +1,6 @@
 ---
 id: 17-staff-overflow
-status: IN_PROGRESS (v1 완료 2026-07-10 — 클리핑·2마디쌍 분리·스크롤 폴백. 그러나 스크롤 폴백이 모바일서 잘림으로 오인되고 단일 밀집마디가 미해결 → v2 재설계 2026-07-11: 마디 단위 세로 줄바꿈 기본(마디 온전 유지·mid-measure 걸침 없음) + 넓은 단일 마디만 힌트 있는 가로 스크롤. 박 단위 분할은 미관·관습 때문에 폐기)
+status: DONE (v2 완료 2026-07-11 — 마디 단위 세로 줄바꿈@280 + 넓은 단일 마디만 페이드-힌트 가로 스크롤 + 스크롤 스코핑 버그 수정. 모바일/PC 육안 검증 통과. 박 단위 분할·축소는 폐기. v1 3단계는 이력 보존.)
 priority: high
 risk: medium
 depends_on: []
@@ -21,7 +21,7 @@ owner: null
 
 > v1(아래 원문·3단계)은 "잘림"을 완전히 못 없앴다. 진단 결과 **스크롤 폴백이 근본책이 아니라 증상 이전**이었다. v2는 **세로 줄바꿈을 기본 정책**으로 삼는다. 아래 v1 섹션은 이력으로 보존.
 
-> **⚙️ v2 구현 상태 (2026-07-11):** 코드 구현 완료 — `staff.ts` 마디 그리디 wrap@280 + `max-width`(확대금지)/`min-width`(over-wide 스크롤), `LessonView.astro` 스크롤 힌트. `check-invariants` 회귀 0(레이아웃만·콘텐츠 지문 무관 → baseline 갱신 불요). **육안 검증은 라이브 배포 후 진행.**
+> **✅ v2 완료 (2026-07-11):** 코드 구현 + 배포 + **모바일/PC 육안 검증 통과**. `staff.ts` 마디 그리디 wrap@280 + `max-width`(확대금지)/`min-width`(over-wide 스크롤), `LessonView.astro` 스크롤 힌트(페이드 mask). `check-invariants` 회귀 0(레이아웃만·콘텐츠 지문 무관 → baseline 갱신 불요).
 > **🐛 결정적 버그 발견·수정 (핵심):** v1의 "스크롤 폴백"은 **처음부터 작동한 적이 없었다** → 그래서 계속 "스크롤"이 아니라 "잘림"으로 보였다. 원인: `hydrateScoreSlots`가 악보를 `set:html`로 주입해 `.render-mount` 요소엔 Astro 스코프 속성(`data-astro-*`)이 안 붙는데, `.render-mount{overflow-x:auto}`·`.render-mount .staffsvg{width:100%}`가 **스코프된 셀렉터**(`.render-mount[data-astro-…]`)로 컴파일돼 **매칭 실패** → overflow-x·width:100% 미적용 → 전역 `.render-area{overflow:hidden}`이 그냥 잘랐다. **수정:** 해당 규칙들을 `:global()`로 전환(컴파일 CSS에서 `data-astro` 스코프 render-mount 규칙 **0건** 확인). 성긴 악보의 모바일 축소(width:100%)도 이 수정으로 비로소 작동.
 
 ### v2 확정 방향
@@ -81,8 +81,10 @@ owner: null
 ### v2 미해결 질문 (착수 시 사람 결정)
 - ~~목표폭 정확값~~ → **280px 확정**(실측 knee, 2026-07-11).
 - ~~스크롤되는 마디 범위~~ → **280에서 22%(154/706), funk·slap·electric 집중**(비가역 밀집). 실측 완료.
-- **reflow churn 수용 범위** — 대량 baseline 갱신 리뷰 부담(착수 시 diff 리뷰).
-- **스크롤 힌트 구현** — 그림자 vs 페이드 mask(CSS), 어느 쪽(구현 시 택1).
+- ~~reflow churn 수용 범위~~ → **비이슈로 판명.** `check-invariants` 가 SVG 레이아웃을 지문에 안 넣어(콘텐츠만) 레이아웃 변경은 **회귀 0** → baseline 갱신 불필요.
+- ~~스크롤 힌트 구현~~ → **페이드 `mask-image` 채택**(`.render-mount.scrollable`, `::after` 절대배치의 스크롤 딸림 함정 회피). 구현 완료.
+
+**→ 남은 미해결 질문 없음. v2 DONE.**
 
 ---
 
@@ -163,9 +165,9 @@ owner: null
 - [x] `.render-mount overflow-x:auto` + `postProcess` 자연폭>560 오선보만 `min-width:{w}px`(가독성 바닥, 성긴 것 회귀 0)
 - [x] 극단 밀집 66p(3언어)만 부착·solo_scale 0개 확인 + check-invariants 0
 
-**공통**
-- [ ] V1 build + V3 invariants(변경 블록 한정 확인 후 baseline 갱신) + 회귀 스캔
-- [ ] Roadmap·이 문서 갱신
+**공통** (v2 로 최종 마감 2026-07-11)
+- [x] V1 build + V3 invariants(레이아웃 변경은 콘텐츠 지문 무관 → 회귀 0, baseline 갱신 불요) + 회귀 스캔
+- [x] Roadmap·이 문서 갱신 (v2 DONE)
 
 ## 미해결 질문 (v1 — v2에서 방향 재확정됨)
 

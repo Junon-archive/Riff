@@ -34,7 +34,7 @@
 | 14 | [슬랩/펑크 베이스 커리큘럼 (2개월)](14_slap-funk-bass-curriculum.md) | ✅ DONE (8주 32일 × 3언어 = 96 day 저작·검증·커밋 완료) | 중간 | 중간 | 10·13 |
 | 15 | [셔플 & 바운스 베이스 커리큘럼 (2개월·필 트랙)](15_shuffle-bounce-bass-curriculum.md) | 🟢 DONE (8주·96 day 저작·검증·커밋 완료) | 중간 | 중간 | 10·13 |
 | 16 | [워킹 베이스 커리큘럼 (2개월·level 3 재즈 캡스톤)](16_walking-bass-curriculum.md) | 🟢 DONE (8주 32일 × 3언어 = 96 day 저작·검증·커밋 완료, 2026-07-11) | 중간 | 중간 | 10·13 |
-| 17 | [오선보/타브 오버플로 — 세로 줄바꿈 재설계(v2)](17_staff-overflow.md) | 🟡 IN_PROGRESS (v1 완료 2026-07-10 미흡 → v2 마디 단위 세로 줄바꿈(마디 온전)·넓은 마디만 힌트 스크롤 재설계 2026-07-11, 착수 대기) | 높음 | 중간 | 없음 |
+| 17 | [오선보/타브 오버플로 — 세로 줄바꿈 재설계(v2)](17_staff-overflow.md) | 🟢 DONE (v2 마디 단위 세로 줄바꿈@280·넓은 마디만 페이드-힌트 스크롤·스크롤 스코핑 버그 수정, 모바일/PC 육안 검증 통과 2026-07-11) | 높음 | 중간 | 없음 |
 | 18 | [솔로/스케일 tab → staff+tab 이식 (tab.ts 제거)](18_solo-tab-to-staff.md) | 🟢 DONE (2026-07-11 — solo 89블록 staff+tab 이식·R1 preferFlats 정밀화·tab.ts 삭제, build 0·불변식 0) | 중간 | 중간 | 17 |
 | 19 | [악보/지판 카드 모바일 가로폭 확대 + 짧은 악보 중앙 정렬](19_score-card-width-center.md) | 🟢 DONE (2026-07-11 — CSS-only, 카드 가로패딩 축소 + `margin-inline:auto` 중앙, build 0·불변식 무관) | 중간 | 낮음 | 없음 |
 
