@@ -35,6 +35,7 @@
 | 15 | [셔플 & 바운스 베이스 커리큘럼 (2개월·필 트랙)](15_shuffle-bounce-bass-curriculum.md) | 🟡 IN_PROGRESS (프롬프트 8개 완료·day 미착수) | 중간 | 중간 | 10·13 |
 | 16 | [워킹 베이스 커리큘럼 신설 (2개월)](16_walking-bass-curriculum.md) | 🔴 TODO (구상·저작 미착수) | 중간 | 중간 | 10·13 |
 | 17 | [오선보/타브 오버플로 — 세로 줄바꿈 재설계(v2)](17_staff-overflow.md) | 🟡 IN_PROGRESS (v1 완료 2026-07-10 미흡 → v2 마디 단위 세로 줄바꿈(마디 온전)·넓은 마디만 힌트 스크롤 재설계 2026-07-11, 착수 대기) | 높음 | 중간 | 없음 |
+| 18 | [솔로/스케일 tab → staff+tab 이식 (tab.ts 제거)](18_solo-tab-to-staff.md) | 🔴 TODO (조사 완료 2026-07-11 — solo 89블록만 미지정·리스크 R1 preferFlats·R2 baseline) | 중간 | 중간 | 없음(17과 순서 조율) |
 
 ## 공통 원칙 — "추가는 되고, 기존은 안 깨진다" (모든 묶음이 준수)
 
