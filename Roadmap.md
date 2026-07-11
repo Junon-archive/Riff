@@ -82,6 +82,11 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-11 (백로그 11 — 블루스 8주차 day 저작 = Month 2(표현 리드) 졸업)
+- **8주차:** day_1~4 × 3언어 = 12파일. D1 대표 릭1(벤딩) → D2 릭2(하행 착지) → D3 릭을 12마디 배치 → D4 첫 솔로 완주·녹음(핀 고정 `signature_lick`, `(M2 졸업!)`). Month 2(박스1·블루노트·벤딩·프레이징) 마무리 — 12마디 위 첫 솔로.
+- **검증:** build-content blues day 32 정상(스키마·박자합 통과)·check-invariants blues 삭제0(회귀0)·blues w8 신규 20블록, 볼드/mark 3언어 일치·JSON 3언어 바이트동일·④/완료줄 mark0·핀 JSON=프롬프트 바이트동일·태그오염0·①이론 521~543. (동시 세션 neosoul w4 미완성이 full-build 간헐 차단 → baseline --update는 다음 green 창에서 w8 포함 갱신.)
+- **다음:** Month 3(심화·통합) — week_9(코드 따라가기).
+
 ### 2026-07-11 (백로그 16 — 워킹 베이스 2주차 day 저작)
 - **2주차(뼈대→라인, 밀도 램프):** day_1~4 × 3언어 = 12파일. D1 루트만(온음표) → D2 루트+5도(2분음) → D3 코드톤 아르페지오(4분음) → D4 F7→Bb7 아르페지오 워킹(핀 고정 `arp_walk` 2마디, 4·5현). 밀도 한 단계씩 상향, 매 마디 1박 루트 착지.
 - **검증:** build-content 격리(walking+완성트랙) exit0(walking day JSON 8)·마디 박자합 4.0·3언어 JSON 바이트동일·볼드/mark 3언어 동수·④완료줄 mark0·핀 JSON=프롬프트 바이트동일·4/5현 병행쌍·태그오염0·①이론 627~685. invariants는 동시세션 부분 build로 src/content 잔해 → --update 보류(baseline 온전), walking baseline은 클린 build 시 정합(가법).
