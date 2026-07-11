@@ -82,6 +82,11 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-11 (백로그 12 — 네오소울 4주차 day 저작 = Month 1(보이싱&무브먼트) 졸업)
+- **4주차(보이스 리딩 & 탑노트 멜로디):** day_1~4 × 3언어 = 12파일. D1 보이스 리딩(공통음 유지·최소 이동) → D2 탑노트 인식 → D3 탑노트 멜로디 라인 → D4 코드+탑노트 멜로디 뱀프(핀 고정 `top_note_melody` 바이트동일). 탑노트 강조=`role:"target"`+`highlight`(초록)·경과=`role:"scale"`. day_4 `(M1 졸업!)`/`(Month 1 complete!)`/`（M1修了！）` 3언어.
+- **검증:** build 805p exit0, check-invariants read-only neosoul 회귀0(변경/삭제된 neosoul 블록 0), 볼드/mark 3언어 일치·악보 JSON 3언어 바이트동일·④/완료줄 mark0·핀 JSON=프롬프트 바이트동일·태그오염0. baseline은 동시 세션 순서 churn 회피 위해 day만 커밋(회귀는 read-only로 확인, 최종 정합 예정).
+- **M1(보이싱&무브먼트) 졸업:** Dm9·G13 코어그립 → 텐션 → 크로매틱 접근 → 탑노트 멜로디. 다음 M2 week_5(더블스탑 b3→3 스미어).
+
 ### 2026-07-11 (백로그 11 — 블루스 8주차 day 저작 = Month 2(표현 리드) 졸업)
 - **8주차:** day_1~4 × 3언어 = 12파일. D1 대표 릭1(벤딩) → D2 릭2(하행 착지) → D3 릭을 12마디 배치 → D4 첫 솔로 완주·녹음(핀 고정 `signature_lick`, `(M2 졸업!)`). Month 2(박스1·블루노트·벤딩·프레이징) 마무리 — 12마디 위 첫 솔로.
 - **검증:** build-content blues day 32 정상(스키마·박자합 통과)·check-invariants blues 삭제0(회귀0)·blues w8 신규 20블록, 볼드/mark 3언어 일치·JSON 3언어 바이트동일·④/완료줄 mark0·핀 JSON=프롬프트 바이트동일·태그오염0·①이론 521~543. (동시 세션 neosoul w4 미완성이 full-build 간헐 차단 → baseline --update는 다음 green 창에서 w8 포함 갱신.)
