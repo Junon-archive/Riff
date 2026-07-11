@@ -82,6 +82,12 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-11 (백로그 11 — 블루스 6주차 day 저작: 표현적 벤딩·비브라토·슬라이드)
+- **6주차:** day_1~4 × 3언어 = 12파일. D1 반음·온음 벤딩 → D2 비브라토(손목) → D3 슬라이드 → D4 표현 릭 통합(핀 고정 `bend_lick`). **배포 콘텐츠 최초 bend/slide/vibrato 사용**(`technique:"bend"`+`bendTarget` half/full·`slide`+`slideToFret`·`vibrato`).
+- **검증:** build green 715p exit0(동시 세션 미완성 트랙이 잠시 막았으나 green 창 확보), check-invariants 삭제전용키 0(회귀0)·blues w6 신규 23블록(baseline→904), 볼드/mark 3언어 일치·JSON 3언어 바이트동일·④/완료줄 mark0·핀 JSON=프롬프트 바이트동일·태그오염0·①이론 498~536.
+- **★dist 글리프 확인:** blues m2/w6 d1 벤딩 `full`×2·`½`×2, d4 핀 `full`×3 렌더 확인 — VexFlow staff+tab에서 벤딩 화살표·슬라이드 정상(백로그 02-A 엔진 검증의 첫 실콘텐츠 투입).
+- **다음:** week_7(블루스 프레이징 — 콜앤리스폰스·여백).
+
 ### 2026-07-11 (백로그 12 — 네오소울 1주차 day 저작)
 - **1주차(코어 그립 Dm9·G13):** day_1~4 × 3언어 = 12파일. D1 Dm9(x5355x) 그립 `fretboard_diagram` → D2 G13(3x345x) 그립 → D3 Dm9↔G13 전환(새끼손가락 앵커) → D4 Dm9→G13 뱀프(핀 고정 `vamp_grips` 프롬프트 바이트동일). 루트리스 중음역 보이싱, 텐션(9·13)=`role:"color"`·`notation:"staff+tab"`.
 - **검증:** build 667p exit0, check-invariants 신규 10블록·회귀0(baseline 813, neosoul만 201+/0−), 볼드/mark 3언어 일치·악보 JSON 3언어 바이트동일·④/완료줄 mark0·핀 JSON=프롬프트 바이트동일·태그오염0.
