@@ -33,6 +33,8 @@ const MAP = [
   { src: 'bass_curriculum4.jpg', out: 'beginner-bass.webp' }, // 입문 베이스 트랙(오른손 핑거스타일, 사용자 확정 2026-07-10)
   { src: 'bass_curriculum3.jpg', out: 'slap-funk-bass.webp' }, // 슬랩/펑크 베이스 트랙(사용자 확정 2026-07-10)
   { src: 'bass_curriculum5.jpg', out: 'shuffle-bounce-bass.webp' }, // 셔플&바운스 트랙, 사용자 확정 2026-07-11
+  { src: 'bass_curriculum1.jpg', out: 'walking-bass.webp' }, // 워킹 베이스 트랙(정장 핑거스타일, 사용자 확정 2026-07-11)
+  { src: 'curriculum10.jpg', out: 'neosoul-voicing.webp' }, // 네오소울 트랙(무드 선버스트 스트랫, 사용자 확정 2026-07-11)
 ];
 
 const TARGET_BYTES = 120 * 1024;

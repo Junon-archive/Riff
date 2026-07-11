@@ -1,0 +1,48 @@
+{
+  "id": "neosoul_voicing_2months",
+  "title": {
+    "ko": "2개월 네오소울 보이싱 — 어루만지는 코드",
+    "en": "2-Month Neo-Soul Voicing: Caressing the Chord",
+    "ja": "2か月ネオソウル・ボイシング — 撫でるコード"
+  },
+  "tagline": {
+    "ko": "Dm9→G13 하나로 물들이고 미끄러지고 번지게 — 8주 네오소울 로드맵",
+    "en": "Color it, slide it, smear it with one Dm9→G13 — an 8-week neo-soul roadmap",
+    "ja": "Dm9→G13 一つで染めて滑って滲ませる — 8週間ネオソウル・ロードマップ"
+  },
+  "instrument": "guitar",
+  "image": "/curriculum/neosoul-voicing.webp",
+  "topic": "neosoul",
+  "level": 3,
+  "tags": [
+    "neosoul",
+    "rnb",
+    "voicing",
+    "tension",
+    "chromatic",
+    "comping"
+  ],
+  "durationMonths": 2,
+  "forWho": {
+    "ko": "chord_building과 solo_scale을 뗐고, 이제 코드를 네오소울처럼 어루만지고 싶은 분께",
+    "en": "For players who've finished chord_building and solo_scale and now want to caress chords like neo-soul",
+    "ja": "chord_buildingとsolo_scaleを終え、コードをネオソウルのように撫でたい人へ"
+  },
+  "intro": {
+    "ko": [
+      "이 과정은 chord_building과 solo_scale을 뗀 분을 위한 **2개월 네오소울 보이싱 캡스톤**이에요. 네오소울은 코드를 잡는 게 아니라 **어루만지는 것** — **텐션**으로 물들이고, **크로매틱**으로 미끄러지고, **장식**으로 번지게 하죠. 시그니처 뱀프 **Dm9→G13** 하나를 무대로, <mark>코드에서 '소리'를 끌어내는 법</mark>을 배웁니다.",
+      "1개월엔 **중음역 보이싱**으로 뱀프를 잡고(**루트는 베이스에 맡기는** 루트리스 감각), **텐션·크로매틱 접근·탑노트 멜로디**로 같은 뱀프를 물들여요. 2개월엔 **더블스탑 스미어·그레이스노트·레이백 스윙16**으로 장식과 그루브를 얹어, <mark>혼자 치는 네오소울 컴핑 한 곡</mark>을 완성하고 녹음합니다.",
+      "셰이프 암기보다 **움직임과 장식과 필**이 먼저예요. 이 여정 끝엔 <mark>코드를 어루만져 네오소울로 노래하는 나</mark>를 만나요."
+    ],
+    "en": [
+      "This is a **2-month neo-soul voicing capstone** for players who've finished chord_building and solo_scale. Neo-soul isn't about gripping chords — it's about **caressing** them: coloring with **tension**, sliding with **chromaticism**, blurring with **ornaments**. With one signature vamp, **Dm9→G13**, as your stage, you'll learn to <mark>draw a 'sound' out of a chord</mark>.",
+      "Month 1 grips the vamp with **mid-range voicings** (a rootless feel where **the bass takes the root**) and colors that same vamp with **tension, chromatic approach, and top-note melody**. Month 2 layers ornament and groove with **double-stop smears, grace notes, and laid-back swing 16ths** to finish and record <mark>a full neo-soul comping piece you play on your own</mark>.",
+      "Feel comes before memorizing shapes — **movement, ornament, and feel** first. By the end you'll meet <mark>a version of yourself who caresses chords and sings in neo-soul</mark>."
+    ],
+    "ja": [
+      "この講座は、chord_buildingとsolo_scaleを終えた人のための**2か月ネオソウル・ボイシング・キャップストーン**です。ネオソウルはコードを掴むのではなく**撫でること** — **テンション**で染め、**クロマチック**で滑り、**装飾**で滲ませます。シグネチャー・ヴァンプ**Dm9→G13**一つを舞台に、<mark>コードから「音」を引き出す方法</mark>を学びます。",
+      "1か月目は**中音域ボイシング**でヴァンプを掴み（**ルートはベースに任せる**ルートレス感覚）、**テンション・クロマチック接近・トップノート・メロディ**で同じヴァンプを染めます。2か月目は**ダブルストップ・スミア・グレースノート・レイバック・スイング16**で装飾とグルーヴを重ね、<mark>一人で弾くネオソウル・コンピング一曲</mark>を完成して録音します。",
+      "シェイプ暗記より**動きと装飾とフィール**が先です。この旅の終わりには<mark>コードを撫でてネオソウルで歌う自分</mark>に出会います。"
+    ]
+  }
+}
