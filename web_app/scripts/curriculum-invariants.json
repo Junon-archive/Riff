@@ -4208,6 +4208,321 @@
       "5:7:chord_tone:5"
     ]
   },
+  "blues_3months#m2.w6.d1.bend_intro": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "bend",
+          "none"
+        ]
+      }
+    ]
+  },
+  "blues_3months#m2.w6.d1.bend_position": {
+    "type": "scale_shape",
+    "dots": [
+      "2:5:target:5",
+      "3:5:scale:b3",
+      "3:7:scale:4",
+      "4:7:root:R"
+    ]
+  },
+  "blues_3months#m2.w6.d1.warmup": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "blues_3months#m2.w6.d1.half_bend": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 2,
+        "rests": 0,
+        "deads": 0,
+        "heads": 2,
+        "techs": [
+          "bend",
+          "none"
+        ]
+      }
+    ]
+  },
+  "blues_3months#m2.w6.d1.whole_bend": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 2,
+        "rests": 0,
+        "deads": 0,
+        "heads": 2,
+        "techs": [
+          "bend",
+          "none"
+        ]
+      }
+    ]
+  },
+  "blues_3months#m2.w6.d1.push_from_wrist": {
+    "type": "scale_shape",
+    "dots": [
+      "2:5:target:5",
+      "3:7:scale:4"
+    ]
+  },
+  "blues_3months#m2.w6.d2.vibrato_intro": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 1,
+        "rests": 0,
+        "deads": 0,
+        "heads": 1,
+        "techs": [
+          "vibrato"
+        ]
+      }
+    ]
+  },
+  "blues_3months#m2.w6.d2.vibrato_spots": {
+    "type": "scale_shape",
+    "dots": [
+      "1:5:root:R",
+      "2:5:chord_tone:5",
+      "3:5:target:b3",
+      "4:7:root:R"
+    ]
+  },
+  "blues_3months#m2.w6.d2.warmup": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 2,
+        "rests": 0,
+        "deads": 0,
+        "heads": 2,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "blues_3months#m2.w6.d2.vibrato_practice": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 2,
+        "rests": 0,
+        "deads": 0,
+        "heads": 2,
+        "techs": [
+          "vibrato"
+        ]
+      }
+    ]
+  },
+  "blues_3months#m2.w6.d2.vibrato_lick": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none",
+          "vibrato"
+        ]
+      }
+    ]
+  },
+  "blues_3months#m2.w6.d2.wrist_not_finger": {
+    "type": "scale_shape",
+    "dots": [
+      "3:5:target:b3",
+      "4:7:root:R"
+    ]
+  },
+  "blues_3months#m2.w6.d3.slide_intro": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 2,
+        "rests": 0,
+        "deads": 0,
+        "heads": 2,
+        "techs": [
+          "slide"
+        ]
+      }
+    ]
+  },
+  "blues_3months#m2.w6.d3.slide_route": {
+    "type": "scale_shape",
+    "dots": [
+      "3:5:scale:b3",
+      "3:7:target:4",
+      "4:7:root:R"
+    ]
+  },
+  "blues_3months#m2.w6.d3.warmup": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "blues_3months#m2.w6.d3.slide_into_root": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 2,
+        "rests": 0,
+        "deads": 0,
+        "heads": 2,
+        "techs": [
+          "slide",
+          "vibrato"
+        ]
+      }
+    ]
+  },
+  "blues_3months#m2.w6.d3.slide_lick": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none",
+          "slide"
+        ]
+      }
+    ]
+  },
+  "blues_3months#m2.w6.d3.dont_lift": {
+    "type": "scale_shape",
+    "dots": [
+      "3:5:scale:b3",
+      "3:7:target:4"
+    ]
+  },
+  "blues_3months#m2.w6.d4.three_voices": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 3,
+        "rests": 0,
+        "deads": 0,
+        "heads": 3,
+        "techs": [
+          "bend",
+          "slide",
+          "vibrato"
+        ]
+      }
+    ]
+  },
+  "blues_3months#m2.w6.d4.lick_map": {
+    "type": "scale_shape",
+    "dots": [
+      "2:5:chord_tone:5",
+      "3:5:scale:b3",
+      "3:7:target:4",
+      "4:7:root:R"
+    ]
+  },
+  "blues_3months#m2.w6.d4.warmup": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 2,
+        "rests": 0,
+        "deads": 0,
+        "heads": 2,
+        "techs": [
+          "bend",
+          "vibrato"
+        ]
+      }
+    ]
+  },
+  "blues_3months#m2.w6.d4.bend_lick": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "bend",
+          "none",
+          "vibrato"
+        ]
+      }
+    ]
+  },
+  "blues_3months#m2.w6.d4.aim_and_land": {
+    "type": "scale_shape",
+    "dots": [
+      "2:5:target:5",
+      "3:7:scale:4",
+      "4:7:root:R"
+    ]
+  },
   "chord_building_2months#m1.w1.d1.g_major_eform": {
     "type": "fretboard_diagram",
     "dots": [
@@ -8808,6 +9123,401 @@
       "6:3:root:G13 R"
     ]
   },
+  "neosoul_voicing_2months#m1.w2.d1.dm_add9_grip": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "1:0::",
+      "2:5:color:9",
+      "3:0::",
+      "4:3:chord_tone:b3",
+      "5:5:root:R",
+      "6:0::"
+    ]
+  },
+  "neosoul_voicing_2months#m1.w2.d1.dm9_grip": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "1:0::",
+      "2:5:color:9",
+      "3:5:chord_tone:b7",
+      "4:3:chord_tone:b3",
+      "5:5:root:R",
+      "6:0::"
+    ]
+  },
+  "neosoul_voicing_2months#m1.w2.d1.add9_vs_m9": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 1,
+        "rests": 0,
+        "deads": 0,
+        "heads": 3,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 1,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "neosoul_voicing_2months#m1.w2.d1.color_drill": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 1,
+        "rests": 0,
+        "deads": 0,
+        "heads": 3,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 1,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 1,
+        "rests": 0,
+        "deads": 0,
+        "heads": 3,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 1,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "neosoul_voicing_2months#m1.w2.d1.ninth_spot": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "2:5:color:9",
+      "5:5:root:R"
+    ]
+  },
+  "neosoul_voicing_2months#m1.w2.d2.dm11_grip": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "1:3:color:11",
+      "2:0::",
+      "3:5:chord_tone:b7",
+      "4:3:chord_tone:b3",
+      "5:5:root:R",
+      "6:0::"
+    ]
+  },
+  "neosoul_voicing_2months#m1.w2.d2.g13_grip": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "1:0::",
+      "2:5:color:13",
+      "3:4:chord_tone:3",
+      "4:3:chord_tone:b7",
+      "5:0::",
+      "6:3:root:R"
+    ]
+  },
+  "neosoul_voicing_2months#m1.w2.d2.g7_vs_g13": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 1,
+        "rests": 0,
+        "deads": 0,
+        "heads": 3,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 1,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "neosoul_voicing_2months#m1.w2.d2.thirteenth_drill": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 1,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 1,
+        "rests": 0,
+        "deads": 0,
+        "heads": 3,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 1,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 1,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "neosoul_voicing_2months#m1.w2.d2.thirteenth_spot": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "2:5:color:13",
+      "6:3:root:R"
+    ]
+  },
+  "neosoul_voicing_2months#m1.w2.d3.g13sus4_grip": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "1:0::",
+      "2:5:color:13",
+      "3:5:color:4",
+      "4:3:chord_tone:b7",
+      "5:0::",
+      "6:3:root:R"
+    ]
+  },
+  "neosoul_voicing_2months#m1.w2.d3.g13_resolve": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "1:0::",
+      "2:5:color:13",
+      "3:4:chord_tone:3",
+      "4:3:chord_tone:b7",
+      "5:0::",
+      "6:3:root:R"
+    ]
+  },
+  "neosoul_voicing_2months#m1.w2.d3.sus_resolve": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 2,
+        "rests": 0,
+        "deads": 0,
+        "heads": 8,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "neosoul_voicing_2months#m1.w2.d3.sus_vamp_drill": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 1,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 2,
+        "rests": 0,
+        "deads": 0,
+        "heads": 8,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 1,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 2,
+        "rests": 0,
+        "deads": 0,
+        "heads": 8,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "neosoul_voicing_2months#m1.w2.d3.melt_move": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "3:4:chord_tone:3",
+      "3:5:color:4 (sus)"
+    ]
+  },
+  "neosoul_voicing_2months#m1.w2.d4.dm9_recap": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "1:0::",
+      "2:5:color:9",
+      "3:5:chord_tone:b7",
+      "4:3:chord_tone:b3",
+      "5:5:root:R",
+      "6:0::"
+    ]
+  },
+  "neosoul_voicing_2months#m1.w2.d4.g13sus4_recap": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "1:0::",
+      "2:5:color:13",
+      "3:5:color:4",
+      "4:3:chord_tone:b7",
+      "5:0::",
+      "6:3:root:R"
+    ]
+  },
+  "neosoul_voicing_2months#m1.w2.d4.tension_vamp": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 1,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 2,
+        "rests": 0,
+        "deads": 0,
+        "heads": 8,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "neosoul_voicing_2months#m1.w2.d4.tension_vamp_loop": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 1,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 2,
+        "rests": 0,
+        "deads": 0,
+        "heads": 8,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 1,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 2,
+        "rests": 0,
+        "deads": 0,
+        "heads": 8,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "neosoul_voicing_2months#m1.w2.d4.color_map": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "2:5:color:9 / 13",
+      "3:4:chord_tone:3",
+      "3:5:color:4 (sus)"
+    ]
+  },
   "shuffle_bounce_bass_2months#m1.w1.d1.e_root_position_4": {
     "type": "fretboard_diagram",
     "dots": [
@@ -9504,6 +10214,558 @@
     "type": "tab",
     "notation": "staff+tab",
     "measures": [
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "shuffle_bounce_bass_2months#m1.w3.d1.a_boogie_shape_4": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "2:2:chord_tone:5",
+      "2:4:chord_tone:6",
+      "2:5:scale:b7",
+      "3:0:root:R"
+    ]
+  },
+  "shuffle_bounce_bass_2months#m1.w3.d1.a_boogie_shape_5": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "2:2:chord_tone:5",
+      "2:4:chord_tone:6",
+      "2:5:scale:b7",
+      "3:0:root:R"
+    ]
+  },
+  "shuffle_bounce_bass_2months#m1.w3.d1.a_boogie_4": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "shuffle_bounce_bass_2months#m1.w3.d1.a_boogie_5": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "shuffle_bounce_bass_2months#m1.w3.d2.b_boogie_shape_4": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "2:4:chord_tone:5",
+      "2:6:chord_tone:6",
+      "2:7:scale:b7",
+      "3:2:root:R"
+    ]
+  },
+  "shuffle_bounce_bass_2months#m1.w3.d2.b_boogie_shape_5": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "2:4:chord_tone:5",
+      "2:6:chord_tone:6",
+      "2:7:scale:b7",
+      "3:2:root:R"
+    ]
+  },
+  "shuffle_bounce_bass_2months#m1.w3.d2.b_boogie_4": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "shuffle_bounce_bass_2months#m1.w3.d2.b_boogie_5": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "shuffle_bounce_bass_2months#m1.w3.d3.i_iv_v_roots_4": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "3:0:root:R",
+      "3:2:root:R",
+      "4:0:root:R"
+    ]
+  },
+  "shuffle_bounce_bass_2months#m1.w3.d3.i_iv_v_roots_5": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "3:0:root:R",
+      "3:2:root:R",
+      "4:0:root:R"
+    ]
+  },
+  "shuffle_bounce_bass_2months#m1.w3.d3.change_4bars_4": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "shuffle_bounce_bass_2months#m1.w3.d3.change_4bars_5": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "shuffle_bounce_bass_2months#m1.w3.d4.boogie_move_4": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "shuffle_bounce_bass_2months#m1.w3.d4.boogie_move_5": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "shuffle_bounce_bass_2months#m1.w3.d4.twelve_bar_line_4": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "shuffle_bounce_bass_2months#m1.w3.d4.twelve_bar_line_5": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
       {
         "beat": 16,
         "onsets": 4,
@@ -16918,6 +18180,464 @@
         "techs": [
           "none",
           "vibrato"
+        ]
+      }
+    ]
+  },
+  "walking_bass_2months#m1.w1.d1.f7_root_4": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "4:1:root:R"
+    ]
+  },
+  "walking_bass_2months#m1.w1.d1.f7_root_5": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "4:1:root:R"
+    ]
+  },
+  "walking_bass_2months#m1.w1.d1.f7_tones_4": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "3:3:chord_tone:5",
+      "3:6:chord_tone:b7",
+      "4:1:root:R",
+      "4:5:chord_tone:3"
+    ]
+  },
+  "walking_bass_2months#m1.w1.d1.f7_tones_5": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "3:3:chord_tone:5",
+      "3:6:chord_tone:b7",
+      "4:1:root:R",
+      "4:5:chord_tone:3"
+    ]
+  },
+  "walking_bass_2months#m1.w1.d1.f7_r3_4": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "walking_bass_2months#m1.w1.d1.f7_r3_5": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "walking_bass_2months#m1.w1.d1.f7_arpeggio_4": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "walking_bass_2months#m1.w1.d1.f7_arpeggio_5": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "walking_bass_2months#m1.w1.d1.f7_b7_4": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "3:6:chord_tone:b7"
+    ]
+  },
+  "walking_bass_2months#m1.w1.d1.f7_b7_5": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "3:6:chord_tone:b7"
+    ]
+  },
+  "walking_bass_2months#m1.w1.d2.bb7_root_4": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "3:1:root:R"
+    ]
+  },
+  "walking_bass_2months#m1.w1.d2.bb7_root_5": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "3:1:root:R"
+    ]
+  },
+  "walking_bass_2months#m1.w1.d2.bb7_tones_4": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "2:3:chord_tone:5",
+      "2:6:chord_tone:b7",
+      "3:1:root:R",
+      "3:5:chord_tone:3"
+    ]
+  },
+  "walking_bass_2months#m1.w1.d2.bb7_tones_5": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "2:3:chord_tone:5",
+      "2:6:chord_tone:b7",
+      "3:1:root:R",
+      "3:5:chord_tone:3"
+    ]
+  },
+  "walking_bass_2months#m1.w1.d2.c7_tones_4": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "2:5:chord_tone:5",
+      "2:8:chord_tone:b7",
+      "3:3:root:R",
+      "3:7:chord_tone:3"
+    ]
+  },
+  "walking_bass_2months#m1.w1.d2.c7_tones_5": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "2:5:chord_tone:5",
+      "2:8:chord_tone:b7",
+      "3:3:root:R",
+      "3:7:chord_tone:3"
+    ]
+  },
+  "walking_bass_2months#m1.w1.d2.bb7_arpeggio_4": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "walking_bass_2months#m1.w1.d2.bb7_arpeggio_5": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "walking_bass_2months#m1.w1.d2.c7_arpeggio_4": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "walking_bass_2months#m1.w1.d2.c7_arpeggio_5": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "walking_bass_2months#m1.w1.d2.thirds_4": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "3:5:target:Bb7-3",
+      "3:7:target:C7-3"
+    ]
+  },
+  "walking_bass_2months#m1.w1.d2.thirds_5": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "3:5:target:Bb7-3",
+      "3:7:target:C7-3"
+    ]
+  },
+  "walking_bass_2months#m1.w1.d3.f7_tones_4": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "3:3:chord_tone:5",
+      "3:6:chord_tone:b7",
+      "4:1:root:R",
+      "4:5:chord_tone:3"
+    ]
+  },
+  "walking_bass_2months#m1.w1.d3.f7_tones_5": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "3:3:chord_tone:5",
+      "3:6:chord_tone:b7",
+      "4:1:root:R",
+      "4:5:chord_tone:3"
+    ]
+  },
+  "walking_bass_2months#m1.w1.d3.f7_updown_4": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "walking_bass_2months#m1.w1.d3.f7_updown_5": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "walking_bass_2months#m1.w1.d3.f7_bb7_4": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "walking_bass_2months#m1.w1.d3.f7_bb7_5": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "walking_bass_2months#m1.w1.d3.three_chord_walk_4": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "walking_bass_2months#m1.w1.d3.three_chord_walk_5": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "walking_bass_2months#m1.w1.d3.f7_down_4": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "walking_bass_2months#m1.w1.d3.f7_down_5": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
         ]
       }
     ]
