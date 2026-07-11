@@ -82,6 +82,11 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-11 (백로그 15 — 셔플&바운스 2주차 day 저작)
+- **2주차(부기 워크 R-5-6-b7):** day_1~4 × 3언어 = 12파일. D1 루트+5도 R-5 셔플 → D2 부기 상행 R-5-6-b7(`fretboard_diagram` 병기) → D3 부기 왕복(상·하행) → D4 E 부기 셔플 그루브 + 핀 고정 `e_boogie`(4·5현). 부기 role은 프롬프트 그대로 **R=root/5·6=chord_tone/b7=scale**(색 유지·변경 없음). `feel:"swing8"`.
+- **검증:** build 664p exit0(셔플 day 8), check-invariants 신규 16블록·회귀0(baseline 동시 세션 커밋에 이미 가법 포함), 볼드/mark 3언어 일치·악보 JSON 3언어 바이트동일·④/완료줄 mark0·핀 JSON=프롬프트 바이트동일·4·5현 병행쌍·태그오염0.
+- **다음:** week_3(12마디 셔플 I-IV-V) ~ week_8(종합 바운스 졸업).
+
 ### 2026-07-11 (백로그 11 — 블루스 5주차 day 저작 = Month 2(표현 리드) 착수)
 - **5주차(마이너 펜타 박스1 + 블루노트):** day_1~4 × 3언어 = 12파일. D1 박스1(`scale_shape`) → D2 블루노트 b5(`role:"blue_note"` 보라) → D3 박스1 짧은 프레이즈 → D4 블루스 스케일 통합(핀 고정 `a_blues_box1`). **`scale_shape`·`blue_note` 첫 사용**(dist 렌더 확인).
 - **검증:** build exit0(blues day 20), check-invariants 삭제전용키 0(회귀0)·신규 18블록(blues w5), 볼드/mark 3언어 일치·JSON 3언어 바이트동일·④/완료줄 mark0·핀 JSON=프롬프트 바이트동일·태그오염0·①이론 510~557. (baseline diff에 동시세션 neosoul·shuffle_bounce 블록 포함 — 가법.)
