@@ -1,6 +1,6 @@
 ---
 id: 16-walking-bass-curriculum
-status: IN_PROGRESS (주차 프롬프트 8개 완료 — day 저작 미착수)
+status: IN_PROGRESS (선행물 완료: meta·overview30·섬네일 — day 저작 착수)
 priority: medium
 risk: medium
 depends_on: [10, 13]
@@ -73,7 +73,8 @@ depends_on: [10, 13]
 - [ ] 재즈 하모니 선수지식 사전 설명 분량(코드톤을 얼마나 처음부터 풀지)
 - [ ] F7·Bb7·C7·Gm7 등 **정확한 운지·마디·박자·접근음** 확정(JSON 승격, 4/5현 병행)
 - [x] **주차 프롬프트 8개 작성 완료(2026-07-11)**: week_1~8, §13 청사진 + 4/5현 병행 + 결함 5종 방지 "필수 규칙" 블록. M1 뼈대(코드톤·밀도램프·접근음·F블루스 워킹) / M2 항해(ii-V-I·enclosure·장식필·오리지널 졸업). 핀 고정 8블록 박자합 4.0·role(passing 포함)·기법·튜닝 검증.
-- [ ] 프롬프트 실행 → `day_N.{ko,en,ja}.md` 32일 저작 + meta.json·overview → build·박자합·invariants 통과 ← 다음 작업
+- [x] **선행물 완료(2026-07-11)**: meta.json(level 3·키 F·섬네일 walking-bass.webp=bass_curriculum1) + overview 30(month 2×3 + week 8×3), 파일별 3언어 볼드/mark 동수, build-content 격리 exit0. 커밋 35e0427.
+- [ ] 프롬프트 실행 → `day_N.{ko,en,ja}.md` 32일 저작 → build·박자합·invariants 통과 ← 다음 작업(week_1부터 순차)
 
 ## 준수 공통 규약 (재사용)
 - Day 4단(①이론 ②시각 ③50분 루틴 ④팁), 토스톤(긁지 않기·"왕초보" 금지), i18n 3언어(악보 JSON 바이트 동일), 인라인 배치+`▶`연주안내, 산문 `<mark>`(베이스=연초록, 05 적용 시 ↔ 악보 `role:target` 초록과 기능·레이어 구분)·**볼드 필수**·**지판(fretboard_diagram) 병기**·④/완료기준 `<mark>` 금지.

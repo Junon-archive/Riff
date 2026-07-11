@@ -82,6 +82,12 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-11 (백로그 16 — 워킹 베이스 준비물 + 프롬프트 보강, /goal 착수)
+- **준비물:** meta.json(level 3·키 F·재즈/블루스 하모니 캡스톤·섬네일 walking-bass.webp=bass_curriculum1) + overview 30(month 2×3 + week 8×3). intro 3언어 볼드12·mark4 서로 다른 위치·겹침0, 파일별 3언어 볼드/mark 동수·bullet mark0·금지어0.
+- **프롬프트 보강(day 저작 전):** W2~8 지판 '병기 가능'→'권장(주당 최소 1블록)'(W1 필수 유지), W7·8 고스트=dead_note+role:scale·label생략 명시, W6 enclosure 오해방지 주.
+- **검증:** build-content 격리(walking+완성트랙) exit0 — walking 발견·meta 파싱·'day 없어 스킵' 정상(전역 build는 동시세션 neosoul 미완성으로 무관 실패). 커밋 35e0427(준비물 32파일).
+- **다음:** week_1(코드톤 F7·Bb7·C7) day 저작부터 순차.
+
 ### 2026-07-11 (백로그 15 — 셔플&바운스 2주차 day 저작)
 - **2주차(부기 워크 R-5-6-b7):** day_1~4 × 3언어 = 12파일. D1 루트+5도 R-5 셔플 → D2 부기 상행 R-5-6-b7(`fretboard_diagram` 병기) → D3 부기 왕복(상·하행) → D4 E 부기 셔플 그루브 + 핀 고정 `e_boogie`(4·5현). 부기 role은 프롬프트 그대로 **R=root/5·6=chord_tone/b7=scale**(색 유지·변경 없음). `feel:"swing8"`.
 - **검증:** build 664p exit0(셔플 day 8), check-invariants 신규 16블록·회귀0(baseline 동시 세션 커밋에 이미 가법 포함), 볼드/mark 3언어 일치·악보 JSON 3언어 바이트동일·④/완료줄 mark0·핀 JSON=프롬프트 바이트동일·4·5현 병행쌍·태그오염0.
