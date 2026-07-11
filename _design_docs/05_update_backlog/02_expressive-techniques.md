@@ -9,6 +9,8 @@ owner: null
 
 # 02 · 표현 기법 (밴딩·해머링·붙임줄·잇단음·비4/4)
 
+> **🐛 후속 버그픽스 (2026-07-11) — 잇단음(C) 빔 그룹핑 수정:** 3잇단음이 빔으로 **2음씩** 묶여 "셋잇단음처럼 안 보이던" 문제. **원인:** `staff.ts` `buildMeasure` 빔 flush 가 **박 경계(`pos % beatInt`, nominal duration)** 기준이라 8분 3잇단(nominal 6단위)이 2음(=4단위=1박)에서 잘림. **수정:** 잇단음 음표는 빔·튜플렛을 **잇단음 그룹(num개) 단위**로 flush(pos 는 그룹 완료 시 실제 점유 span `inSpaceOf×unit` 만큼 전진 → 후속 음 박 정합 유지). 스트레이트 8·16분은 기존 박경계 flush 불변. **재현:** `shuffle_bounce_bass_2months/m1/w1/d1` "Triplet grid". **검증:** build 0 · check-invariants 회귀 0(SVG만·콘텐츠 지문 무관) · 셔플 레슨 빔 마디당 6→4(=박당 1빔=3잇단 묶음).
+
 ## 목적 (왜)
 
 오선보(staff.ts) 경로가 **음표는 그리지만 연주 기호 일부를 못 그린다.** 미래 커리큘럼(블루스/록 리드, 리듬 정밀 표기)이 이걸 필요로 한다. VexFlow 4.2.5 자체는 전부 지원하므로(keysignature/stavetie/tuplet/voice 소스 확인), **staff.ts에 가법 분기만 추가**하면 된다.

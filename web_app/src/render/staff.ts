@@ -563,20 +563,27 @@ function buildMeasure(
       linkAfter.push({ kind: 'slide', dir: n.slideToFret != null ? Math.sign(n.slideToFret - fret) : 1 });
     else linkAfter.push(null);
 
-    // ★02-C 잇단음: 연속된 tuplet 음을 num개씩 묶는다.
-    if (n.tuplet) {
-      curTup.push(sNote);
-      curTupSpec = n.tuplet;
-      if (curTup.length >= n.tuplet.num) flushTup();
-    } else {
-      flushTup();
-    }
-
-    // 8·16분음표만 빔 대상. 박(beat) 경계에서 끊는다.
+    // 8·16분음표만 빔 대상.
     if (n.duration === 'eighth' || n.duration === 'sixteenth') curBeam.push(sNote);
     else flush();
-    pos += unit;
-    if (pos % beatInt === 0) flush();
+
+    if (n.tuplet) {
+      // ★02-C 잇단음: 빔·튜플렛을 **잇단음 그룹(num개) 단위**로 끊는다.
+      //   박 경계(pos % beatInt) flush 를 타면 3잇단이 2음(=1박 nominal)에서 잘려 "셋잇단음처럼
+      //   안 보이는" 문제 → num 개를 한 빔으로 묶는다. pos 는 그룹 완료 시 실제 점유 span 만큼 전진
+      //   (예: 8분 3잇단 = inSpaceOf(2) × unit(2) = 4 = 1박) → 후속 음의 박 경계 정합 유지.
+      curTup.push(sNote);
+      curTupSpec = n.tuplet;
+      if (curTup.length >= n.tuplet.num) {
+        pos += n.tuplet.inSpaceOf * unit;
+        flush();
+        flushTup();
+      }
+    } else {
+      flushTup();
+      pos += unit;
+      if (pos % beatInt === 0) flush(); // 박(beat) 경계에서 끊는다(스트레이트 8·16분).
+    }
   }
   flush();
   flushTup();

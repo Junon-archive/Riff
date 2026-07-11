@@ -82,6 +82,12 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-11 (버그픽스 — 셋잇단음 빔 그룹핑: 2음씩 → 3음씩, staff.ts)
+- **증상:** 3잇단음("3" 마커는 정상)이 빔으로 **2음씩** 묶여 셋잇단음처럼 안 보임(재현: `shuffle_bounce_bass_2months/m1/w1/d1` "Triplet grid").
+- **원인:** `staff.ts` `buildMeasure` 빔 flush 가 **박 경계(`pos % beatInt`, nominal duration)** 기준 → 8분 3잇단(nominal 6단위)이 2음(=4단위=1박)에서 잘림.
+- **수정:** 잇단음 음표는 빔·튜플렛을 **잇단음 그룹(num개) 단위**로 flush, pos 는 그룹 완료 시 실제 점유 span(`inSpaceOf×unit`)만큼 전진(후속 음 박 정합 유지). 스트레이트 8·16분 빔은 기존 박경계 flush 불변. 백로그 02(잇단음 C) 후속 버그픽스.
+- **검증:** build exit 0 · `check-invariants` 회귀 0(SVG 레이아웃만·콘텐츠 지문 무관) · 셔플 레슨 빔 마디당 6→4(=박당 1빔=3잇단). 육안(3잇단 3음 묶임)은 배포 후 확인.
+
 ### 2026-07-11 (백로그 15 — 셔플&바운스 1주차 day 저작)
 - **1주차(트리플렛 + 셔플 루트 펄스):** day_1~4 × 3언어 = 12파일. D1 트리플렛 그리드(`tuplet:{num:3,inSpaceOf:2}`)·E 루트 위치 `fretboard_diagram` → D2 스트레이트→스윙 롱-숏(가운데 음 빼기, `rest`) → D3 셔플 루트 펄스 메트로놈(swing8) → D4 2코드 위 셔플 루트 + 핀 고정 `shuffle_root_pulse`(4·5현). `feel:"swing8"`·`notation:"staff+tab"` 실사용.
 - **검증:** build 628p exit0(셔플 day 4), check-invariants 신규 20블록·회귀0(baseline 761 — 동시 세션 블루스 커밋에 이미 가법 포함), 볼드/mark 3언어 일치·악보 JSON 3언어 바이트동일·④/완료줄 mark0·핀 JSON=프롬프트 바이트동일·4·5현 병행쌍·태그오염0.
