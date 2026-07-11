@@ -82,6 +82,11 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-11 (백로그 15 — 셔플&바운스 1주차 day 저작)
+- **1주차(트리플렛 + 셔플 루트 펄스):** day_1~4 × 3언어 = 12파일. D1 트리플렛 그리드(`tuplet:{num:3,inSpaceOf:2}`)·E 루트 위치 `fretboard_diagram` → D2 스트레이트→스윙 롱-숏(가운데 음 빼기, `rest`) → D3 셔플 루트 펄스 메트로놈(swing8) → D4 2코드 위 셔플 루트 + 핀 고정 `shuffle_root_pulse`(4·5현). `feel:"swing8"`·`notation:"staff+tab"` 실사용.
+- **검증:** build 628p exit0(셔플 day 4), check-invariants 신규 20블록·회귀0(baseline 761 — 동시 세션 블루스 커밋에 이미 가법 포함), 볼드/mark 3언어 일치·악보 JSON 3언어 바이트동일·④/완료줄 mark0·핀 JSON=프롬프트 바이트동일·4·5현 병행쌍·태그오염0.
+- **다음:** week_2(부기 워크 R-5-6-b7) ~ week_8(종합 바운스 졸업).
+
 ### 2026-07-11 (백로그 11 — 블루스 4주차 day 저작 = Month 1(리듬) 졸업)
 - **4주차(턴어라운드 → 12마디 셔플 완주):** day_1~4 × 3언어 = 12파일. D1 턴어라운드(V-IV-I-V) → D2 인트로/엔딩 태그 → D3 12마디 리허설 → D4 12마디 셔플 완주·녹음(핀 고정 `turnaround`, `(M1 졸업!)`). Month 1(셔플·부기·12마디·턴어라운드) 마무리.
 - **검증:** build exit0(blues day 16), check-invariants 삭제전용키 0(순수 순서변동)·신규 20블록(blues w4)·회귀0, 볼드/mark 3언어 일치·JSON 3언어 바이트동일·④/완료줄 mark0·핀 JSON=프롬프트 바이트동일·태그오염0. (baseline diff에 동시 세션 shuffle_bounce 20블록 포함 — 가법.)
