@@ -82,6 +82,11 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-11 (백로그 11 — 블루스 9주차 day 저작 = Month 3(심화·통합) 착수)
+- **9주차(코드 따라가기):** day_1~4 × 3언어 = 12파일. D1 A7 착지 → D2 D7 착지 → D3 A7↔D7 오가며 착지 → D4 코드 따라가기 통합(핀 고정 `chord_targeting`). 착지목표=`role:"target"`+`highlight:true`(초록). 박스1 안 코드 반응만 — 전 지판 시스템은 solo_scale 핸드오프 명시.
+- **검증:** build-content blues day 36 정상·check-invariants blues 삭제0(회귀0)·blues w9 신규 20블록, 볼드/mark 3언어 일치·JSON 3언어 바이트동일·④/완료줄 mark0·핀 JSON=프롬프트 바이트동일·태그오염0·①이론 513~529. (동시 세션 미완성이 full-build 지속 차단 → w8·w9 baseline은 다음 green 창 일괄 갱신.)
+- **다음:** week_10(메이저/마이너 'BB' 색).
+
 ### 2026-07-11 (백로그 16 — 워킹 베이스 3주차 day 저작)
 - **3주차(접근음 — 타겟&어프로치):** day_1~4 × 3언어 = 12파일. D1 크로매틱 접근(다음 코드 루트 반음 위/아래) → D2 스케일·도미넌트 접근 → D3 4박에 접근음 → D4 접근음 워킹 F7↔Bb7(핀 고정 `approach_walk` 2마디, 4·5현). 접근/경과음=`role:"passing"`+음이름 label. 매 1박 착지·4박 다리.
 - **검증:** build-content 격리 exit0(walking day JSON 12)·마디 박자합 4.0·3언어 JSON 바이트동일·볼드/mark 3언어 동수·④완료줄 mark0·핀 JSON=프롬프트 바이트동일·4/5현 병행쌍·태그오염0·①이론 525~574. invariants --update 보류(동시세션 부분 build, baseline 온전·클린 build 시 가법).
