@@ -1,6 +1,6 @@
 ---
 id: 11-blues-curriculum
-status: IN_PROGRESS (day 저작 진행 — 11/12주 완료, 최종 졸업 주차만 남음)
+status: DONE (12주·48일·144파일 저작·검증·커밋·push 완료 — 트랙 졸업 2026-07-11)
 priority: high
 risk: low
 depends_on: []

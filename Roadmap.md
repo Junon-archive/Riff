@@ -82,6 +82,12 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-11 (백로그 11 **완료** — 블루스 12주차 day 저작 = **트랙 졸업**)
+- **12주차(리듬↔리드 대화·최종 졸업):** day_1~4 × 3언어 = 12파일. D1 컴핑→솔로 전환 → D2 2마디 대화 → D3 12마디 전체 대화 → D4 최종 졸업 녹음 + solo_scale 핸드오프(핀 고정 `rhythm_lead_dialogue`, chord[] 컴핑+박스1 릭·`feel:swing8`, `(블루스 졸업!)`).
+- **백로그 11 완료:** `blues_3months` 3개월·12주·48일 × 3언어 = **144 day 파일** 전량 저작·검증·커밋·push 완료. M1 리듬(셔플·부기·12마디·턴어라운드) → M2 표현 리드(박스1·블루노트·벤딩·프레이징·첫 솔로) → M3 심화·통합(코드 따라가기·BB색·프레이징 성숙·리듬↔리드 대화). 준비물 meta.json + overview 45파일 + 대표 섬네일(blues.webp) 포함.
+- **★전 트랙 캡스톤 검증:** 48일 3언어 볼드·mark 개수 일치·악보 JSON 3언어 바이트동일·**12개 핀 고정 JSON 전부 프롬프트와 바이트동일**·④/완료줄 mark0·도구태그 0. build green exit0(blues day 48), check-invariants 삭제전용키 0(회귀0·baseline→1378). 배포 콘텐츠 최초 bend/slide/vibrato 실렌더 확인(w6 dist 글리프). `scale_shape`·`blue_note`(보라)·`role:color`(노랑)·`role:target`(초록) 실사용.
+- **다음:** blues 트랙 라이브. 남은 신규 커리큘럼(12 네오소울·16 워킹 등)은 동시 진행 중.
+
 ### 2026-07-11 (백로그 16 — 워킹 베이스 6주차 day 저작)
 - **6주차(감싸기 enclosure·타깃팅 심화):** day_1~4 × 3언어 = 12파일. D1 반음 위·아래 감싸기 개념 → D2 루트 감싸기 → D3 3도 감싸기 → D4 감싸기 워킹(핀 고정 `enclosure` 1마디, 목표 C=`role:"target"`+`highlight`, 4·5현). 착지 목표음 초록 강조. 핀 ▶에 '감싸기만 떼어 본 연습' 오해방지.
 - **검증:** build-content 격리 exit0(walking day JSON 24)·마디 박자합 4.0·3언어 JSON 바이트동일·볼드/mark 3언어 동수·④완료줄 mark0·핀 JSON=프롬프트 바이트동일·4/5현 병행쌍·태그오염0·①이론 513~563. invariants --update 보류(동시세션 부분 build, baseline 온전).
