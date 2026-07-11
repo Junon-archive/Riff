@@ -82,6 +82,13 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-11 (백로그 17 v2 구현 — 악보 세로 줄바꿈@280 + 스크롤 스코핑 버그 수정)
+- **결정적 버그 수정(핵심):** v1의 "스크롤 폴백"이 **처음부터 작동 안 했다** → 계속 "잘림"으로 보인 진짜 원인. `hydrateScoreSlots`가 악보를 `set:html`로 주입해 `.render-mount` 요소에 Astro 스코프 속성이 안 붙는데, `.render-mount{overflow-x:auto}`·`.staffsvg{width:100%}`가 스코프 셀렉터로 컴파일돼 **매칭 실패** → 전역 `.render-area{overflow:hidden}`이 그냥 잘랐다. **수정: 해당 규칙 `:global()` 전환**(`LessonView.astro`). 성긴 악보의 모바일 축소(width:100%)도 이제야 작동.
+- **v2 세로 줄바꿈 구현(`staff.ts`):** `TARGET_ROW_W 560→280`(실측 knee), 2마디 고정 쌍 폐기 → **마디 그리디 패킹**(마디 온전·mid-measure 걸침 0). 모든 SVG `max-width:{자연폭}`(데스크톱 확대 금지) + **over-wide score만 `min-width`**(좁은 화면 가로 스크롤) + `.render-mount.scrollable` 우측 페이드 힌트("→ 더 있음").
+- **실측 근거:** 706 고유 마디 계측 — 92px 고정 크롬 탓 폰 note-area 204~234px, 전형 마디 260~280 집중, 280에서 스크롤 22%(knee, funk 16분·slap·팜뮤트 비가역 밀집에 집중). 상세 = `05_update_backlog/17_staff-overflow.md §v2`.
+- **불변:** 콘텐츠 JSON·악보 지문 무관(순수 레이아웃) → `check-invariants` 회귀 0, baseline 갱신 불요. tab.ts·fretboard 무변경.
+- **검증:** `npm run build` exit 0 · `check-invariants` 회귀 0 · 컴파일 CSS에 `data-astro` 스코프 render-mount 규칙 0건 확인. **육안(모바일/PC)은 라이브 배포 후 진행 — funk m1w4·slap·electric m1w3 밀집 마디 스크롤+페이드, 성긴 마디 축소로 온전.**
+
 ### 2026-07-11 (신규 커리큘럼 주차 프롬프트 저작 — 11·12·15·16 + 결함 5종 방지)
 - **프롬프트 파이프라인 완성:** 신규 커리큘럼 4종의 주차 프롬프트를 저작·검증·핀 고정 → **프롬프트만 남은 트랙 0개**(전부 day 저작 단계로).
   - **15 셔플&바운스**(8주) — M1 셔플(트리플렛→swing8·부기 R-5-6-b7·E 12마디 블루스) / M2 바운스(고스트·swing16·레이백). 핑거스타일·4/5현 병행.

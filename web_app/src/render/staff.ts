@@ -17,8 +17,9 @@
  *    (v5 는 `<text>`+웹폰트 방식이라 jsdom 에 canvas/폰트 metrics 가 없어 스템 어긋남·글리프 깨짐 발생.)
  *  - 프렛 숫자만 시스템 폰트 `<text>` 로 그리며, 그 폭 측정에 `<text>.getBBox()` 를 쓰므로 jsdom 에 근사 스텁을 심는다.
  *
- * 레이아웃:
- *  - 한 줄(system)에 **2마디**씩 배치하고 세로로 쌓는다(가독성). 마디가 많으면 여러 줄로 자동 줄바꿈.
+ * 레이아웃(★17-v2):
+ *  - 마디를 목표폭(TARGET_ROW_W=280, note-area px)에 맞춰 **그리디로 세로 wrap**(마디 경계에서만, mid-measure
+ *    분할 없음). 성긴 마디는 여러 개/줄, 빽빽하면 1개/줄. 단일 마디가 목표폭 초과면 그 줄만 가로 스크롤(over-wide).
  *  - 8·16분음표 빔은 **박(beat) 단위로 끊는다**(16분음표는 4개씩, 8분음표는 2개씩) — 한 마디 통짜 빔 방지.
  */
 import { JSDOM } from 'jsdom';
@@ -147,8 +148,10 @@ function beatUnit(numBeats: number, beatValue: number): number {
 }
 
 /* ---- 레이아웃 상수 ---------------------------------------------------- */
-const MEASURES_PER_ROW = 2; // 한 줄에 최대 2마디(쌍). ★17-2: 쌍의 실제 최소폭이 아래 목표폭 초과 시 1마디씩 분리.
-const TARGET_ROW_W = 560; // ★17-2 줄 목표 가독폭(note-area px). 이보다 넓어질 빽빽한 쌍만 1/줄로 쪼갠다(축소 완화).
+// ★17-v2 목표 wrap 폭(note-area px). 모바일 렌더 컬럼 note-area(360px≈204·390px≈234) 실측 + 마디
+//   자연폭 분포 knee(전형적 마디 260~280 클러스터가 여기서 1/줄 수용)를 종합해 280 확정.
+//   마디를 이 폭에 맞춰 그리디로 세로 wrap(마디 경계에서만). 단일 마디가 280 초과면 그 마디만 한 줄(over-wide).
+const TARGET_ROW_W = 280;
 const MARGIN_X = 12;
 const MARGIN_TOP = 14;
 const CLEF_W = 42; // 음자리표 폭
@@ -291,17 +294,19 @@ function tabChordColor(entries: ColorSource[]): string | null {
 }
 
 /** 루트 svg 손질: 고정 크기 제거·viewBox 지정·class/role/aria·검정→currentColor.
- *  ★17-3 스크롤 폴백: 자연폭(w)이 TARGET_ROW_W 를 넘는 극단(단일 밀집 마디 등)만 min-width=w 부여
- *  → 좁은 화면(모바일)에서 축소 대신 가로 스크롤(.render-mount overflow-x:auto)로 가독성 유지.
- *  560 이하(성긴 악보·단계2 분리 후 마디)는 min-width 없음 → width:100% 현행 그대로(회귀 0). */
-function postProcess(svg: string, title: string, w: number, h: number): string {
-  const minWStyle = w > TARGET_ROW_W ? ` style="min-width:${w}px"` : '';
+ *  ★17-v2 폭 정책:
+ *   - **모든 score 에 `max-width:{자연폭 w}px`** → 데스크톱 넓은 컬럼에서 width:100% 로 확대되지 않고
+ *     자연 크기로 좌측 정렬(우측 여백). 모바일(컬럼<w)에선 width:100% 로 완만 축소.
+ *   - **over-wide(가장 넓은 줄 note-area > TARGET_ROW_W)에만 추가로 `min-width:{w}px`** → 좁은 화면서
+ *     축소 대신 가로 스크롤(.render-mount overflow-x:auto). 이 경우만 LessonView 가 `.scrollable` 힌트 부착. */
+function postProcess(svg: string, title: string, w: number, h: number, overWide: boolean): string {
+  const style = overWide ? `max-width:${w}px;min-width:${w}px` : `max-width:${w}px`;
   let out = svg.replace(/^<svg([^>]*)>/, (_m, attrs: string) => {
     const a = attrs
       .replace(/\swidth="[^"]*"/, '')
       .replace(/\sheight="[^"]*"/, '')
       .replace(/\sviewBox="[^"]*"/, '');
-    return `<svg${a} viewBox="0 0 ${w} ${h}" class="staffsvg"${minWStyle} role="img" aria-label="${esc(title)}">`;
+    return `<svg${a} viewBox="0 0 ${w} ${h}" class="staffsvg" style="${style}" role="img" aria-label="${esc(title)}">`;
   });
   out = out.replace(/(fill|stroke)="(?:black|#000000|#000)"/g, '$1="currentColor"');
   return out;
@@ -659,29 +664,35 @@ export function renderStaff(score: Score, mode: StaffMode): string {
       return f.preCalculateMinTotalWidth(vv);
     };
 
-    // ★17-2 줄 구성: 기존 2마디 쌍 유지. 단, 쌍의 실제 최소폭(pairW)이 목표 가독폭을 넘으면 그 쌍만
-    //   1마디씩 분리 → 성긴 쌍은 그대로 2/줄(불변), 빽빽한 쌍(팜뮤트 파워코드 등)만 1/줄로 커진다(축소 완화).
+    // ★17-v2 줄 구성: 마디 그리디 패킹(마디 경계에서만, mid-measure 분할 절대 없음).
+    //   줄에 마디를 계속 넣되, 넣었을 때 줄의 실측 최소폭(누적 note-area + 마디간 간격 포함)이 목표폭(280)을
+    //   넘으면 다음 줄로. 단일 마디 minW 가 이미 280 초과면 그 마디 혼자 한 줄(over-wide → 스크롤).
+    //   실측은 disposable voice(minNoteWForIdxs) — 렌더용 built 는 pristine 유지.
     //   rows = 원본 마디 인덱스 배열의 배열. rowMinWArr = 각 줄의 실측 최소폭(사이징에 재사용).
     const rows: number[][] = [];
     const rowMinWArr: number[] = [];
-    for (let i = 0; i < built.length; i += MEASURES_PER_ROW) {
-      const idxs: number[] = [];
-      for (let k = i; k < Math.min(i + MEASURES_PER_ROW, built.length); k++) idxs.push(k);
-      if (idxs.length >= 2) {
-        const pairW = minNoteWForIdxs(idxs);
-        if (pairW > TARGET_ROW_W) {
-          for (const idx of idxs) {
-            rows.push([idx]);
-            rowMinWArr.push(minNoteWForIdxs([idx]));
-          }
-        } else {
-          rows.push(idxs);
-          rowMinWArr.push(pairW);
-        }
-      } else {
-        rows.push(idxs);
-        rowMinWArr.push(minNoteWForIdxs(idxs));
+    let curRow: number[] = [];
+    let curRowW = 0;
+    for (let i = 0; i < built.length; i++) {
+      if (curRow.length === 0) {
+        curRow = [i];
+        curRowW = minNoteWForIdxs([i]); // 첫 마디는 무조건 담는다(280 초과여도 over-wide 로 단독 배치).
+        continue;
       }
+      const combined = minNoteWForIdxs([...curRow, i]); // BarNote 간격 포함 실측
+      if (combined <= TARGET_ROW_W) {
+        curRow.push(i);
+        curRowW = combined;
+      } else {
+        rows.push(curRow);
+        rowMinWArr.push(curRowW);
+        curRow = [i];
+        curRowW = minNoteWForIdxs([i]);
+      }
+    }
+    if (curRow.length) {
+      rows.push(curRow);
+      rowMinWArr.push(curRowW);
     }
 
     // 음역대 기반 적응형 세로 오프셋: 오선보에 "그려지는" 표기 음역(concert+SHIFT 옥타브)을 기준으로
@@ -727,6 +738,10 @@ export function renderStaff(score: Score, mode: StaffMode): string {
 
     const totalW = Math.max(...noteAreaByRow.map((w) => CLEF_W + ksW + TS_W + w)) + 2 * MARGIN_X;
     const totalH = MARGIN_TOP + rows.length * sysH + 12;
+    // over-wide = 가장 넓은 줄의 **실측 최소폭**(rowMinWArr)이 목표폭 초과 → 단일 마디가 통째로 280 넘음
+    //   → min-width 스크롤 대상. (noteAreaByRow 는 PER_NOTE 추정치가 섞여 성긴 2마디 줄도 ≥300 으로 부풀어
+    //    over-wide 오탐이 나므로 반드시 실측 minW 로 판정한다.)
+    const overWide = Math.max(...rowMinWArr) > TARGET_ROW_W;
 
     const host = doc.getElementById('vf')!;
     host.innerHTML = '';
@@ -898,7 +913,7 @@ export function renderStaff(score: Score, mode: StaffMode): string {
     });
 
     const svg = host.innerHTML;
-    return postProcess(svg, title, totalW, totalH);
+    return postProcess(svg, title, totalW, totalH, overWide);
   } finally {
     if (prevDoc === undefined) delete (globalThis as { document?: Document }).document;
     else (globalThis as { document?: Document }).document = prevDoc;

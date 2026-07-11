@@ -52,7 +52,11 @@ function hydrateScoreSlots(html: string): string {
     (_m, n) => {
       const score = content.scores[Number(n)];
       if (!score) return '';
-      return `<figure class="render-area"><div class="render-mount">${renderScore(score)}</div><figcaption class="render-cap">${esc(score.meta.title)}</figcaption></figure>`;
+      const svg = renderScore(score);
+      // ★17-v2: over-wide 오선보(SVG 에 min-width 부착)만 .render-mount 에 scrollable 클래스 →
+      //   CSS 우측 페이드 힌트("→ 더 있음")로 가로 스크롤 안내(잘림 오인 방지).
+      const mountCls = /min-width:/.test(svg) ? 'render-mount scrollable' : 'render-mount';
+      return `<figure class="render-area"><div class="${mountCls}">${svg}</div><figcaption class="render-cap">${esc(score.meta.title)}</figcaption></figure>`;
     },
   );
 }
@@ -301,12 +305,22 @@ const monthDayKeys = location.month.weeks.flatMap((w) => w.days).map((d) => d.da
     border-radius: 16px;
   }
   .render-area + .render-area { margin-top: 32px; }
-  /* ★17-3 스크롤 폴백: 자연폭이 넓은 극단 밀집 오선보(staffsvg min-width>컨테이너)는
-     축소 대신 가로 스크롤. 성긴 악보는 min-width 없어 width:100%로 컨테이너에 맞춰짐(무해). */
-  .render-mount { overflow-x: auto; }
-  .render-mount :global(.fretboard),
-  .render-mount :global(.tabsvg),
-  .render-mount :global(.staffsvg) {
+  /* ★17-v2 스크롤 폴백: over-wide 오선보(staffsvg min-width>컨테이너)만 축소 대신 가로 스크롤.
+     성긴 악보는 min-width 없고 max-width(자연폭)만 있어 좁은 화면=width:100% 완만 축소, 넓은 화면=확대금지. */
+  /* ⚠️ render-mount/svg 는 hydrateScoreSlots 가 set:html 로 주입 → Astro 스코프 속성(data-astro-*)이
+     안 붙는다. 따라서 이 규칙들은 반드시 :global 이어야 매칭된다. (스코프로 두면 overflow-x:auto 도
+     .staffsvg{width:100%} 도 안 걸려 → 스크롤 안 되고 성긴 악보도 축소 안 돼 → .render-area{overflow:hidden}
+     이 그냥 잘라버린다. v1부터의 "스크롤 아닌 잘림" 근본 원인.) */
+  :global(.render-mount) { overflow-x: auto; }
+  /* over-wide 마디가 있는 score 만 scrollable — 우측 페이드로 "→ 더 있음" 힌트(잘림 오인 방지).
+     mask 는 스크롤 컨테이너의 보이는 박스에 고정(::after 절대배치의 스크롤 딸림 함정 회피). */
+  :global(.render-mount.scrollable) {
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 26px), transparent);
+    mask-image: linear-gradient(to right, #000 calc(100% - 26px), transparent);
+  }
+  :global(.render-mount .fretboard),
+  :global(.render-mount .tabsvg),
+  :global(.render-mount .staffsvg) {
     width: 100%;
     height: auto;
     display: block;
