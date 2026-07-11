@@ -9,9 +9,13 @@ owner: claude
 
 # 19 · 악보/지판 카드 — 모바일 가로폭 확대 + 짧은 악보 중앙 정렬
 
-> ✅ **완료 2026-07-11.** (A안 + 중앙정렬, CSS-only) 카드 가로 패딩 축소(`LessonView.astro` 24px 12px→**24px 4px**, `app.css` 전역 20px 18px→**20px 6px**) + `.render-mount .fretboard/.tabsvg/.staffsvg` 에 **`margin-inline:auto`**. build exit 0(1006p)·불변식 회귀 0(1454블록, CSS-only라 무관)·dist 번들에 새 규칙 컴파일 확인.
+> ✅ **완료 2026-07-11.** (CSS-only, 사용자 육안 확인 완료) 카드가 산문 폭까지 확장 + 짧은 악보 중앙정렬.
 >
-> 📐 **CSS-only 개선.** SVG 출력·데이터·불변식·빌드에 영향 0(할루시네이션/회귀 리스크 없음). 모바일에서 지판·악보 카드를 **산문 텍스트 폭까지 넓히고**(A안: 풀블리드 아님), 1마디짜리 **짧은 악보를 좌측 치우침 대신 가운데**로 배치한다. 방향 확정: 사용자 2026-07-11(A안 + 중앙정렬).
+> ⚠️ **원인 정정(중요):** 최초 진단(카드 패딩·max-width 캡)이 **틀렸다.** 실제 원인은 **① `<figure class="render-area">` 의 브라우저 기본 좌우 마진 40px 가 리셋 안 됨**(프로젝트 리셋은 `html,body{margin:0}` 뿐, `figure` 없음 → 카드가 산문보다 좌우 40px씩=합 80px 좁음) **+ ② 카드 figure 가 `set:html` 로 주입돼 Astro 스코프 속성이 없어 `LessonView.astro` 의 스코프 `.render-area` 규칙이 미적용**(전역 `app.css .render-area` 만 먹음). → 최초 커밋의 LessonView 패딩 변경은 죽은 코드였고, 살아있던 패딩 축소도 80px 마진에 묻혀 체감 0.
+>
+> **최종 수정:** 전역 `app.css .render-area` 에 **`margin: 24px 0`**(좌우 마진 0 리셋) 추가 → 카드 좌우가 산문 문단과 정렬. 가로 패딩도 20px 18px→**20px 6px**. `.render-mount .fretboard/.tabsvg/.staffsvg` 의 **`margin-inline:auto`**(:global 이라 주입 figure 에도 적용) 로 짧은 악보 중앙. **짧은 악보 자체를 꽉 채우는 max-width 캡 해제는 하지 않음**(사용자 결정 2026-07-11 — 불필요). build 0·불변식 무관(CSS-only).
+>
+> 📐 **CSS-only 개선.** SVG 출력·데이터·불변식·빌드에 영향 0. 모바일에서 지판·악보 **카드를 산문 텍스트 폭까지 넓히고**(풀블리드 아님), 짧은 악보를 **가운데** 배치. 방향 확정: 사용자 2026-07-11.
 
 ## 목적 (왜)
 

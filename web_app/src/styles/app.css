@@ -376,8 +376,12 @@ h1.display {
 
 /* SVG 렌더 영역 (지판/타브) */
 .render-area {
+  /* ★19 핵심수정: <figure> 브라우저 기본 좌우 마진 40px 때문에 카드가 산문보다 80px 좁았음 →
+     margin-inline:0 리셋해 카드를 산문 폭까지 확장. (set:html 로 주입된 figure 라 스코프 규칙 미적용 →
+     실제 적용되는 이 전역 규칙에서 리셋해야 함.) 가로 패딩도 축소(18→6)해 이미지가 산문폭에 근접. */
+  margin: 24px 0;
   background: var(--card); border: 1px solid var(--line);
-  border-radius: var(--radius); padding: 20px 6px; overflow: hidden; /* ★19 가로 패딩 축소(18→6, 이미지 폭 확대 정합) */
+  border-radius: var(--radius); padding: 20px 6px; overflow: hidden;
 }
 .render-area + .render-area { margin-top: 12px; }
 .render-cap {
