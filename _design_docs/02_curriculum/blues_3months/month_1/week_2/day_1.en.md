@@ -9,11 +9,11 @@ i18nKey: "lesson.m1.w2.d1"
 
 ## ① Theory
 
-The door to Week 2 is open. This week's goal is just two things. Learn the **12-bar blues form**, and move last week's boogie to D7 and E7. Today, as the first step, you'll get the three **dominant 7 chords** that make the blues its own sound into your hands. <mark>In the blues, the I, IV, and V are all 7 chords.</mark> In ordinary music the tonic is a bright major, but the blues paints a slightly tense color by adding a **b7** on top. That b7 is the very voice of the blues.
+The door to Week 2 is open. This week's goal is just two things. Learn the **12-bar blues form**, and move last week's boogie to D7 and E7. Today, as the first step, you'll get the three **dominant 7 chords** that make the blues its own sound into your hands. <mark>In the blues, the I, IV, and V are all 7 chords.</mark> In ordinary music the tonic is a bright major, but the blues paints a slightly tense color by adding a **b7** on top. That b7 is the very voice of the blues. If a bright major chord is a wide-open smile, the dominant 7 with its b7 on top is a smile with the eyes slightly narrowed. That subtle tension keeps holding your ear. Even if the theory feels hard, don't worry. Today is simply the day you meet these three chords with your fingertips.
 
 The three pillars of A blues are **A7** (I), **D7** (IV), and **E7** (V). A7 is home, D7 is one step out, and E7 is the most tense, making you want to come back home. All three are built from root, 3rd, 5th, and b7 — only the name changes, the character stays the same. <mark>So the hand feel of grabbing one carries straight into the other two.</mark>
 
-Today, don't mind the speed or the rhythm. Your only goal is to ring each of the three chords **cleanly**, one by one. If you just remember **which string is the root** in each chord, it'll help a lot when you move the boogie tomorrow.
+Today, don't mind the speed or the rhythm. Your only goal is to ring each of the three chords **cleanly**, one by one. If you just remember **which string is the root** in each chord, it'll help a lot when you move the boogie tomorrow. This time spent checking each chord by sound makes next week's 12 bars far more comfortable.
 
 Let's start with home, the I chord, **A7**. The open A on the 5th string is the root.
 

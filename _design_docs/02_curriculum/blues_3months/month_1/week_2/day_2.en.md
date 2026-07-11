@@ -9,9 +9,9 @@ i18nKey: "lesson.m1.w2.d2"
 
 ## ① Theory
 
-Now that you have the three chords in hand, today you move last week's **boogie riff** straight to D7 and E7. One amazing fact. <mark>The boogie hand shape stays the same even when the chord changes.</mark> Fret the root, then open and close your fingers on the very next string as **5th → 6th → b7 → 6th** — remember that shape? You just place it as is on each chord, changing only the root string.
+Now that you have the three chords in hand, today you move last week's **boogie riff** straight to D7 and E7. One amazing fact. <mark>The boogie hand shape stays the same even when the chord changes.</mark> Fret the root, then open and close your fingers on the very next string as **5th → 6th → b7 → 6th** — remember that shape? You just place it as is on each chord, changing only the root string. You're not memorizing a new shape from scratch — you're just moving one you already know, so it's much easier. On guitar, reusing one shape across many spots happens a great deal. Today you feel that principle in your body for the first time. So even if your hand gets confused, don't hurry — just check the position slowly.
 
-The key is the root string. On A7 it's the 5th string, on D7 the 4th, on E7 the 6th. <mark>When the root moves over one string, the walking string moves over one string right alongside it.</mark> So the A7 boogie walks on the **5th and 4th strings**, the D7 boogie on the **4th and 3rd strings**, and the E7 boogie on the **6th and 5th strings** — all the same way.
+The key is the root string. On A7 it's the 5th string, on D7 the 4th, on E7 the 6th. <mark>When the root moves over one string, the walking string moves over one string right alongside it.</mark> So the A7 boogie walks on the **5th and 4th strings**, the D7 boogie on the **4th and 3rd strings**, and the E7 boogie on the **6th and 5th strings** — all the same way. Wherever the root sits, the walking spot is always the very next string beside it. Hold on to this one rule and all three chords look like the same picture.
 
 Today, learn the D7 and E7 boogie one clear bar each. You may roll it with a **shuffle feel** already, or press it straight. <mark>What matters is the feel that the hand shape carries over across chords.</mark>
 

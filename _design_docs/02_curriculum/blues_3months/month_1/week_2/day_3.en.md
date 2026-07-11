@@ -9,7 +9,7 @@ i18nKey: "lesson.m1.w2.d3"
 
 ## ① Theory
 
-Today you finally go around the stage of the blues, the **12-bar form**, once. A 12-bar blues is <mark>a playground map where three chords turn at fixed spots</mark>. Memorize the spots and you can follow any blues. The map of A blues looks like this.
+Today you finally go around the stage of the blues, the **12-bar form**, once. A 12-bar blues is <mark>a playground map where three chords turn at fixed spots</mark>. Memorize the spots and you can follow any blues. It may look like a lot of bars at first, but it's really just three lines of four bars each. Think of it as memorizing one short map rather than a whole song, and it feels much lighter. The map of A blues looks like this.
 
 ```
 | A7 | D7 | A7 | A7 |
@@ -17,9 +17,9 @@ Today you finally go around the stage of the blues, the **12-bar form**, once. A
 | E7 | D7 | A7 | E7 |
 ```
 
-One line is four bars, and three lines make **12 bars**. Bars 1–4 are around home (A7), bars 5–8 visit the IV (D7), and bars 9–12 hit their most tense on the V (E7) and come back home. These last four bars are called the **turnaround**.
+One line is four bars, and three lines make **12 bars**. Bars 1–4 are around home (A7), bars 5–8 visit the IV (D7), and bars 9–12 hit their most tense on the V (E7) and come back home. These last four bars are called the **turnaround**. The turnaround is where one lap wraps up and opens the door to the next, so it's the most dramatic four bars in the blues.
 
-Today's real point is the **quick change**. <mark>After bar 1's A7, you pop over to D7 once in bar 2.</mark> Without it, bars 1–4 would be four bars of A7, but adding the quick change gives a much more blues-like flavor. Just remember that only bar 2 changes to **D7**.
+Today's real point is the **quick change**. <mark>After bar 1's A7, you pop over to D7 once in bar 2.</mark> Without it, bars 1–4 would be four bars of A7, but adding the quick change gives a much more blues-like flavor. Just remember that only bar 2 changes to **D7**. The rest of the spots are just repeats of the familiar A7, D7, and E7, so there's almost nothing new to memorize.
 
 Let's gather the root spots of the three chords onto one board.
 

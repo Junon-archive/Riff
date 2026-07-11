@@ -9,9 +9,9 @@ i18nKey: "lesson.m1.w2.d4"
 
 ## ① Theory
 
-Here's Week 2's finish line. Today you combine all the pieces so far. Onto the **12-bar form** (D3), you stack the **moved boogie** (D2) to complete one lap. <mark>Each time the chord changes, you just switch the boogie's root string 5 → 4 → 6.</mark> There's nothing new to learn. You're only connecting what's already in your hands.
+Here's Week 2's finish line. Today you combine all the pieces so far. Onto the **12-bar form** (D3), you stack the **moved boogie** (D2) to complete one lap. <mark>Each time the chord changes, you just switch the boogie's root string 5 → 4 → 6.</mark> There's nothing new to learn. You're only connecting what's already in your hands. The pieces you've stacked one by one all week finally come together today into the shape of a song. Start easy, as if fitting the last piece of a puzzle. It's fine if it isn't perfect. Making it all the way around once is itself a big achievement today.
 
-Today's core is the **move**. Keep the boogie hand shape as is, and the moment the chord changes, move **only the root string up or down one string**. For example, going from bar 1's A7 to bar 2's D7, the hand walking on the 5th string lifts wholesale to the 4th string. <mark>The finger spacing doesn't change one bit.</mark>
+Today's core is the **move**. Keep the boogie hand shape as is, and the moment the chord changes, move **only the root string up or down one string**. For example, going from bar 1's A7 to bar 2's D7, the hand walking on the 5th string lifts wholesale to the 4th string. Think of your whole hand sliding over to the next string like an elevator, and it gets easy. <mark>The finger spacing doesn't change one bit.</mark>
 
 Let's look at the root spots of the three boogies once more.
 
@@ -29,7 +29,7 @@ Let's look at the root spots of the three boogies once more.
 ```
 ▶ **A7 = 5th, D7 = 4th, E7 = 6th string root.** The same hand shape walks over these three open strings.
 
-The representative move to complete today is **A7 → D7**. If these two bars are smooth, the other chord moves follow the same principle and connect right away.
+The representative move to complete today is **A7 → D7**. If these two bars are smooth, the other chord moves follow the same principle and connect right away. So if you etch just this one move into your body today, the whole 12 bars will follow naturally. Each time the chord changes, your hand will find the next string on its own, without you having to puzzle it out anew.
 
 ## ② Visuals
 
