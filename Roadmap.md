@@ -82,6 +82,11 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-11 (백로그 16 **완료** — 워킹 베이스 8주차 day 저작 = **트랙 졸업**)
+- **8주차(최종 졸업):** day_1~4 × 3언어 = 12파일. D1 진행 파악(ii-V-I+턴어라운드 순환) → D2 진행 위 워킹(코드톤+접근) → D3 장식+리허설(멈추지 않는 순환) → D4 최종 졸업 녹음(핀 고정 `walking_graduation` 4마디 Gm7-C7-Fmaj7-C7 턴어라운드, 4·5현). day_4 `(워킹 베이스 졸업!)` 3언어. 베이스 재즈/하모니 캡스톤 서사.
+- **트랙 완성:** 워킹 베이스 8주 × 4일 × 3언어 = **96 day 파일** 저작 완료(meta·overview 30·섬네일 포함). 키 F, M1(코드톤·밀도램프·접근음·F블루스) → M2(ii-V-I·enclosure·장식·오리지널 졸업).
+- **검증:** 전역 build exit0(10트랙·walking day JSON 32)·마디 박자합 4.0 전수·3언어 JSON 바이트동일·볼드/mark 3언어 동수·④완료줄 mark0·핀 JSON 8주 전부 프롬프트 바이트동일·4/5현 병행쌍·태그오염0. **check-invariants: walking 신규 56블록·회귀0(1454블록 일치)·baseline --update 반영.**
+
 ### 2026-07-11 (백로그 16 — 워킹 베이스 7주차 day 저작)
 - **7주차(장식 & 필):** day_1~4 × 3언어 = 12파일. D1 고스트노트('칙') → D2 8분음 필(약박 두 음) → D3 해머온 장식 → D4 장식 워킹(핀 고정 `ornament_walk` 1마디, F7 4분음+고스트+8분 필, 4·5현). 고스트=`dead_note`+`role:"scale"`·label생략(무색), 해머=`hammer_on`, 필=eighth. 4분음 뼈대 유지.
 - **검증:** build-content 격리 exit0(walking day JSON 28, hammer_on·dead_note 렌더 게이트 통과)·마디 박자합 4.0·3언어 JSON 바이트동일·볼드/mark 3언어 동수·④완료줄 mark0·핀 JSON=프롬프트 바이트동일·4/5현 병행쌍·태그오염0·①이론 507~523. invariants --update 보류(동시세션 부분 build, baseline 온전).

@@ -33,7 +33,7 @@
 | 13 | [베이스 기초 커리큘럼 신설 (1개월·손 만들기)](13_beginner-bass-curriculum.md) | 🟢 DONE (16일 48파일+지판·볼드 정합) | 높음 | 중간 | 10 |
 | 14 | [슬랩/펑크 베이스 커리큘럼 (2개월)](14_slap-funk-bass-curriculum.md) | ✅ DONE (8주 32일 × 3언어 = 96 day 저작·검증·커밋 완료) | 중간 | 중간 | 10·13 |
 | 15 | [셔플 & 바운스 베이스 커리큘럼 (2개월·필 트랙)](15_shuffle-bounce-bass-curriculum.md) | 🟢 DONE (8주·96 day 저작·검증·커밋 완료) | 중간 | 중간 | 10·13 |
-| 16 | [워킹 베이스 커리큘럼 (2개월·level 3 재즈 캡스톤)](16_walking-bass-curriculum.md) | 🟡 IN_PROGRESS (준비물 완료: meta·overview30·섬네일 · day 미착수) | 중간 | 중간 | 10·13 |
+| 16 | [워킹 베이스 커리큘럼 (2개월·level 3 재즈 캡스톤)](16_walking-bass-curriculum.md) | 🟢 DONE (8주 32일 × 3언어 = 96 day 저작·검증·커밋 완료, 2026-07-11) | 중간 | 중간 | 10·13 |
 | 17 | [오선보/타브 오버플로 — 세로 줄바꿈 재설계(v2)](17_staff-overflow.md) | 🟡 IN_PROGRESS (v1 완료 2026-07-10 미흡 → v2 마디 단위 세로 줄바꿈(마디 온전)·넓은 마디만 힌트 스크롤 재설계 2026-07-11, 착수 대기) | 높음 | 중간 | 없음 |
 | 18 | [솔로/스케일 tab → staff+tab 이식 (tab.ts 제거)](18_solo-tab-to-staff.md) | 🔴 TODO (조사 완료 2026-07-11 — solo 89블록만 미지정·리스크 R1 preferFlats·R2 baseline) | 중간 | 중간 | **17(완료 후 착수 확정)** |
 
