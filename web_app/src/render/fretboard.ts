@@ -14,9 +14,10 @@ import type { Score, Dot, Barre, NoteRole, ScoreMeta } from '../types/score';
 /* ---- 기하 상수 -------------------------------------------------------- */
 const PAD_L = 48; // 왼쪽 여백(현 이름 + 개방/뮤트 표기)
 const PAD_R = 22;
-// 개방(o)·뮤트(x) 마크의 가로 위치. 현 이름(stringName, x≈14)과 겹쳐 계이름을 가리던 것을
-// 넛(fx(0)=PAD_L) 쪽으로 8px 밀어 분리한다(넛은 침범하지 않음). 개방 label 도 여기에 정렬.
-const OPEN_MUTE_X = PAD_L - 18;
+// 개방(o)·뮤트(x) 마크의 가로 위치. 현 이름(stringName, x≈14)과 넛(fx(0)=PAD_L) 사이의
+// 시각적 중앙에 둔다 — 계이름과 겹치지 않으면서(왼쪽) 넛과의 빈 공간도 줄여 균형을 맞춘다.
+// (개방 label 도 여기에 정렬. label 이 가장 긴 "Am:R" 이 넛을 넘지 않는 선.)
+const OPEN_MUTE_X = PAD_L - 14;
 const PAD_T = 26;
 const PAD_B = 30; // 프렛 번호 라벨
 const ROW_H = 36; // 현 간격(세로) — 점 위 도수 라벨이 위 현의 점에 가리지 않도록 넉넉히
