@@ -82,6 +82,11 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-11 (백로그 11 — 블루스 11주차 day 저작: 릭 어휘 확장·프레이징 성숙)
+- **11주차:** day_1~4 × 3언어 = 12파일. D1 슬라이드 진입 → D2 벤딩+비브라토(우는 릭) → D3 레이백·다이내믹 → D4 표현 통합 릭(핀 고정 `expressive_lick`, slide→bend→vibrato).
+- **검증:** build-content blues day 44 정상·check-invariants blues 삭제0(회귀0)·blues w11 신규 20블록, 볼드/mark 3언어 일치·JSON 3언어 바이트동일·④/완료줄 mark0·핀 JSON=프롬프트 바이트동일·태그오염0·①이론 525~534. (동시 세션 미완성이 full-build 차단 → w11 baseline은 다음 green 창에서 w12와 함께 갱신.)
+- **다음:** week_12(리듬↔리드 대화 → 최종 졸업 + solo_scale 핸드오프).
+
 ### 2026-07-11 (백로그 12 — 네오소울 6주차 day 저작)
 - **6주차(그레이스노트 & 장식):** day_1~4 × 3언어 = 12파일. D1 앞꾸밈음(짧은 앞음→목표음) → D2 풀오프 하행 장식 → D3 코드에 장식 얹기 → D4 장식 릭(핀 고정 `grace_lick` 바이트동일). 그레이스노트=짧은 앞음+`pull_off` 근사. D3 chord[] 대표음=최저음 준수.
 - **검증:** build 928p exit0, check-invariants read-only neosoul 회귀0(삭제/변경 0, 이번엔 전 세션 추가만·baseline 드리프트 해소), 볼드/mark 3언어 일치·악보 JSON 3언어 바이트동일·④/완료줄 mark0·핀 JSON=프롬프트 바이트동일·태그오염0·대표음 규칙 통과. baseline은 최종 정합 예정(day만 커밋).
