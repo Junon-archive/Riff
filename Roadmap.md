@@ -82,6 +82,12 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-11 (랜딩 — 완료 커리큘럼 맨 아래로 정렬, 사용자별 진도 기반)
+- **동작:** 사용자가 어떤 커리큘럼의 **전체 진도를 완료**(완료 Day 수 ≥ totalDays)하면, 그 사용자의 랜딩 목록에서 해당 카드가 **맨 아래로** 내려간다. 미완료는 기존 `level` 오름차순 유지, 완료끼리는 상대 순서 유지. 완료 카드가 전부 리스트 끝으로 몰리므로 **악기 필터(기타/베이스)와 무관하게** 각 뷰에서 "미완료 먼저·완료 나중"이 성립.
+- **구현:** `HomeView.astro` 카드에 `data-curriculum`·`data-total-days` 추가. **FOUC 방지 인라인 스크립트**(하단, `gh_state` 직접 읽기)가 첫 페인트 전 완료 카드를 `#currList` 끝으로 `appendChild` → 하드 로드 깜빡임 0. `app.ts` `reorderCompletedCurricula(state)`(`getCompletedSet` 사용)가 `onPageLoad`(astro:page-load)마다 idempotent 재적용 → soft-nav(레슨 완료 후 홈 복귀)도 즉시 반영.
+- **불변:** 빌드타임 정렬(단계 1 `level` 오름차순)은 그대로, 이건 그 위의 **사용자별 클라이언트 DOM 재배치**일 뿐(콘텐츠 무관). 로그인/서버 없이 localStorage 진도로만 판정(Zero-Cost).
+- **검증:** `astro check` 0 errors · `npm run build` exit 0 · `check-invariants` 회귀 0 · dist 카드 `data-curriculum`/`data-total-days` + 인라인 재정렬 스크립트 확인.
+
 ### 2026-07-11 (백로그 14 **완료** — 슬랩/펑크 8주차 day 저작 = **트랙 졸업**)
 - week_8(옥타브·고스트·싱코·팝핑 종합 → 클래식 펑크 슬랩 그루브 곡 완성·녹음, 2마디) day_1~4 × 3언어=12파일. 핀고정 funk_slap_graduation 4·5현 바이트 동일. build 562p exit 0, invariants 신규 30블록·회귀0(baseline 600→630), day_4 (슬랩/펑크 졸업!) 3언어 라벨·다음 트랙(셔플&바운스·워킹) 다리.
 - **백로그 14 완료:** slap_funk_bass_2months 2개월·8주·32일 × 3언어 = **96 day 파일** 전량 저작·검증·커밋·push 완료. 옥타브 슬랩(M1) → 16싱코·레가토·팝핑·졸업(M2). slap_thumb/slap_pop/dead_note·hammer_on/pull_off·chord[] 더블스탑 전 활용, 4·5현 병행.

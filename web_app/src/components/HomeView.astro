@@ -60,7 +60,7 @@ const showInstrumentFilter = instruments.length >= 2;
 
   <div id="currList">
     {manifest.curricula.map((c) => (
-      <a class="card curr-card tap" data-instrument={c.instrument ?? ''} href={localize(lang, curriculumPath(c.id))}>
+      <a class="card curr-card tap" data-instrument={c.instrument ?? ''} data-curriculum={c.id} data-total-days={c.totalDays} href={localize(lang, curriculumPath(c.id))}>
         <div class={`curr-thumb${c.image ? '' : ' no-img'}`}>
           {c.image && (
             <img
@@ -137,6 +137,21 @@ const showInstrumentFilter = instruments.length >= 2;
         var cards = document.querySelectorAll('#currList .curr-card');
         for (var j = 0; j < cards.length; j++) {
           cards[j].style.display = cards[j].dataset.instrument === v ? '' : 'none';
+        }
+
+        // 완료 커리큘럼 맨 아래로 (사용자별 진도 gh_state) — 페인트 전 재정렬(FOUC 없음).
+        var list = document.getElementById('currList');
+        if (list) {
+          var st = {};
+          try { st = JSON.parse(localStorage.getItem('gh_state') || '{}') || {}; } catch (e2) {}
+          var prog = st.progress || {};
+          var cc = list.querySelectorAll('.curr-card');
+          for (var m = 0; m < cc.length; m++) {
+            var cid = cc[m].dataset.curriculum;
+            var tot = parseInt(cc[m].dataset.totalDays || '0', 10);
+            var dn = (prog[cid] && prog[cid].completedDays && prog[cid].completedDays.length) || 0;
+            if (cid && tot > 0 && dn >= tot) list.appendChild(cc[m]);
+          }
         }
 
         var hero = document.querySelector('.hero h1[data-title-guitar]');

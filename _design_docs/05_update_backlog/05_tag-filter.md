@@ -1,6 +1,6 @@
 ---
 id: 05-tag-filter
-status: DONE (단계 1·2·3 전부 완료 2026-07-10 — 악기 세그먼트 토글 + 베이스 연초록 액센트 테마 + View Transition 배선 완료)
+status: DONE (단계 1·2·3 전부 완료 2026-07-10 — 악기 세그먼트 토글 + 베이스 연초록 액센트 테마 + View Transition 배선 완료. +2026-07-11 후속: 완료 커리큘럼 랜딩 하단 정렬 — 사용자별 진도로 완료 커리큘럼 카드를 목록 맨 아래로, FOUC 없이 인라인+onPageLoad 재정렬)
 priority: medium
 risk: medium
 depends_on: []

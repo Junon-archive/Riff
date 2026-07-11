@@ -663,6 +663,24 @@ function bindDelegatesOnce(): void {
  * ---------------------------------------------------------------- */
 let bootDone = false;
 
+/* ------------------------------------------------------------------
+ * 완료 커리큘럼 맨 아래로 (랜딩) — 사용자별 진도로 클라이언트 재정렬.
+ * 완료(완료 Day 수 ≥ totalDays)한 커리큘럼 카드를 #currList 끝으로 이동(상대 순서 유지),
+ * 미완료는 기존 level 오름차순 유지. 완료 카드가 전부 끝으로 몰리므로 악기 필터(display 토글)
+ * 뒤에도 각 악기 뷰에서 "미완료 먼저·완료 나중"이 성립. HomeView 인라인 스크립트가 하드 로드
+ * 시 FOUC 없이 먼저 처리하고, 여기서 soft-nav(astro:page-load) 마다 idempotent 하게 재정렬한다.
+ * ---------------------------------------------------------------- */
+function reorderCompletedCurricula(state: GhState): void {
+  const list = document.getElementById('currList');
+  if (!list) return;
+  for (const card of $all<HTMLElement>('.curr-card', list)) {
+    const id = card.dataset.curriculum;
+    const total = Number(card.dataset.totalDays ?? '0');
+    if (!id || total <= 0) continue;
+    if (getCompletedSet(state, id).size >= total) list.append(card);
+  }
+}
+
 function onPageLoad(): void {
   bindDelegatesOnce();
 
@@ -680,6 +698,7 @@ function onPageLoad(): void {
   onLessonEnter(state);
   hydrateLesson(state);
   initInstrumentFilter();
+  reorderCompletedCurricula(state);
 
   // 세션(소프트 내비게이션 전체) 당 1회만: 닉네임 유도 + welcome_back(state_storage §5).
   if (!bootDone) {
