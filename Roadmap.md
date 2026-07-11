@@ -82,6 +82,11 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-12 (랜딩 커리큘럼 순서 — 레벨 내 "치고 싶은 것" 우선, order 보조키)
+- **동작:** 정렬을 `level` 오름차순 + **같은 레벨 내 `meta.order` 오름차순**으로. order=욕망 강도(기타 L2: 솔로1>블루스2>펑크3>코드4 / 베이스 L2: 슬랩1>셔플2). 결과 — 기타: 일렉기초→솔로→블루스→펑크→코드→네오소울, 베이스: 베이스기초→슬랩→셔플→워킹.
+- **구현:** 10개 meta.json에 `order` 정수 추가(내부 정렬용·화면 미노출), `build-content.mjs` 노드에 order + 정렬 `(level, order)`. 악기 세그먼트 필터가 상대순서 보존이라 order는 악기별 리스트 순서만 맞추면 됨. (백로그 05 "order 없이 level만" 결정을 이 요구로 재개.)
+- **검증:** build exit 0 · check-invariants 회귀 0(메타·정렬은 콘텐츠 지문 무관) · manifest 악기별 순서 검증.
+
 ### 2026-07-12 (랜딩 카드 카피 확정안 반영 — title/tagline/forWho 일괄 수정, `_design_docs/02_curriculum/*/meta.json`)
 - **범위:** 10개 커리큘럼 중 8개(`solo_scale_3months`·`chord_building_2months`·`funk_rhythm_2months`·`blues_3months`·`neosoul_voicing_2months`·`shuffle_bounce_bass_2months`·`slap_funk_bass_2months`·`walking_bass_2months`) `meta.json`의 `title`(전체)·`tagline`(blues만)·`forWho`(신규 5개만) 3언어 수정. `beginner_electric_1month`·`beginner_bass_1month`는 변경 없음(확정안대로 유지).
 - **제목:** "N개월/N-Month/Nか月", "커리큘럼/curriculum" 등 기간·행정어 제거(기간은 카드 배지가 담당). 예: "2개월 코드 빌딩 시스템"→"코드 빌딩 시스템", "3개월 솔로/스케일 마스터 커리큘럼"→"솔로 & 스케일 마스터".

@@ -577,6 +577,7 @@ function buildCurriculum(curriculumId) {
     image: curMeta?.image ?? null,
     topic: curMeta?.topic ?? null,
     level: curMeta?.level ?? null,
+    order: curMeta?.order ?? null, // 같은 level 내 정렬 보조키(작을수록 상단). 내부 정렬용, 화면 미노출.
     tags: curMeta?.tags ?? [],
     // 분류 스킴(등급 라벨 금지, "이런 분께" + 기간 배지 + 악기 필터로 대체):
     // forWho = 카드에 노출되는 3언어 한 줄("이런 분께"). durationMonths = 기간 메타 배지.
@@ -633,10 +634,15 @@ function main() {
   }
   if (curricula.length === 0) fail('빌드된 커리큘럼이 없음(모두 day 0)');
 
-  // 랜딩 노출 순서 = meta.level 오름차순(쉬운 코스가 상단). 별도 order 필드는 두지 않는다(확정).
-  // 동률 level 은 안정 정렬로 discoverCurricula() 의 결정적 순서(id 이름순)를 그대로 유지한다.
-  // (Array.prototype.sort 는 ECMA-262 이후 안정 정렬이 보장됨 — Node 런타임 전제.)
-  curricula.sort((a, b) => (a.level ?? Number.MAX_SAFE_INTEGER) - (b.level ?? Number.MAX_SAFE_INTEGER));
+  // 랜딩 노출 순서 = meta.level 오름차순(쉬운 코스 상단), 같은 level 내에서는 meta.order 오름차순.
+  //   order = "치고 싶은 것" 우선(기타 L2: 솔로1>블루스2>펑크3>코드4 / 베이스 L2: 슬랩1>셔플2). 없으면 뒤로.
+  //   악기 세그먼트 필터가 상대 순서를 보존하므로, order 는 각 악기 리스트 내 순서만 맞추면 된다.
+  //   level·order 동률은 안정 정렬로 discoverCurricula() 의 결정적 순서(id 이름순) 유지.
+  curricula.sort(
+    (a, b) =>
+      (a.level ?? Number.MAX_SAFE_INTEGER) - (b.level ?? Number.MAX_SAFE_INTEGER) ||
+      (a.order ?? Number.MAX_SAFE_INTEGER) - (b.order ?? Number.MAX_SAFE_INTEGER),
+  );
 
   const manifest = {
     schemaVersion: 1,
