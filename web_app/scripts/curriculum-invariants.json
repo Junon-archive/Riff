@@ -18641,5 +18641,173 @@
         ]
       }
     ]
+  },
+  "walking_bass_2months#m1.w1.d4.f7_anchor_4": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "4:1:root:R",
+      "4:5:target:3"
+    ]
+  },
+  "walking_bass_2months#m1.w1.d4.f7_anchor_5": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "4:1:root:R",
+      "4:5:target:3"
+    ]
+  },
+  "walking_bass_2months#m1.w1.d4.f7_shape_4": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "3:3:chord_tone:5",
+      "3:6:chord_tone:b7",
+      "4:1:root:R",
+      "4:5:chord_tone:3"
+    ]
+  },
+  "walking_bass_2months#m1.w1.d4.f7_shape_5": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "3:3:chord_tone:5",
+      "3:6:chord_tone:b7",
+      "4:1:root:R",
+      "4:5:chord_tone:3"
+    ]
+  },
+  "walking_bass_2months#m1.w1.d4.bb7_shape_4": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "2:3:chord_tone:5",
+      "2:6:chord_tone:b7",
+      "3:1:root:R",
+      "3:5:chord_tone:3"
+    ]
+  },
+  "walking_bass_2months#m1.w1.d4.bb7_shape_5": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "2:3:chord_tone:5",
+      "2:6:chord_tone:b7",
+      "3:1:root:R",
+      "3:5:chord_tone:3"
+    ]
+  },
+  "walking_bass_2months#m1.w1.d4.c7_shape_4": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "2:5:chord_tone:5",
+      "2:8:chord_tone:b7",
+      "3:3:root:R",
+      "3:7:chord_tone:3"
+    ]
+  },
+  "walking_bass_2months#m1.w1.d4.c7_shape_5": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "2:5:chord_tone:5",
+      "2:8:chord_tone:b7",
+      "3:3:root:R",
+      "3:7:chord_tone:3"
+    ]
+  },
+  "walking_bass_2months#m1.w1.d4.f7_arpeggio_4": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "walking_bass_2months#m1.w1.d4.f7_arpeggio_5": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 4,
+        "rests": 0,
+        "deads": 0,
+        "heads": 4,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "walking_bass_2months#m1.w1.d4.f7_prep_4": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 2,
+        "rests": 0,
+        "deads": 0,
+        "heads": 2,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 2,
+        "rests": 0,
+        "deads": 0,
+        "heads": 2,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "walking_bass_2months#m1.w1.d4.f7_prep_5": {
+    "type": "tab",
+    "notation": "staff+tab",
+    "measures": [
+      {
+        "beat": 16,
+        "onsets": 2,
+        "rests": 0,
+        "deads": 0,
+        "heads": 2,
+        "techs": [
+          "none"
+        ]
+      },
+      {
+        "beat": 16,
+        "onsets": 2,
+        "rests": 0,
+        "deads": 0,
+        "heads": 2,
+        "techs": [
+          "none"
+        ]
+      }
+    ]
+  },
+  "walking_bass_2months#m1.w1.d4.review_4": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "3:1:root:Bb",
+      "3:3:root:C",
+      "4:1:root:F"
+    ]
+  },
+  "walking_bass_2months#m1.w1.d4.review_5": {
+    "type": "fretboard_diagram",
+    "dots": [
+      "3:1:root:Bb",
+      "3:3:root:C",
+      "4:1:root:F"
+    ]
   }
 }
