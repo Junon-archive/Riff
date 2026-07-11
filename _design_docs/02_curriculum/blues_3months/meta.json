@@ -1,0 +1,47 @@
+{
+  "id": "blues_3months",
+  "title": {
+    "ko": "3개월 블루스 — 리듬부터 솔로까지",
+    "en": "3-Month Blues: From Rhythm to Solo",
+    "ja": "3か月ブルース — リズムからソロまで"
+  },
+  "tagline": {
+    "ko": "셔플로 묻고 벤딩으로 답한다 — 12주 블루스 로드맵",
+    "en": "Ask with the shuffle, answer with a bend — a 12-week blues roadmap",
+    "ja": "シャッフルで問い、ベンドで答える — 12週間ブルース・ロードマップ"
+  },
+  "instrument": "guitar",
+  "image": "/curriculum/blues.webp",
+  "topic": "blues",
+  "level": 2,
+  "tags": [
+    "blues",
+    "shuffle",
+    "bending",
+    "pentatonic",
+    "electric"
+  ],
+  "durationMonths": 3,
+  "forWho": {
+    "ko": "입문 일렉을 뗐고, 이제 블루스를 리듬도 리드도 제대로 치고 싶은 분께",
+    "en": "For players past the electric basics who want to play blues — rhythm and lead alike",
+    "ja": "エレキ入門を終え、ブルースをリズムもリードもちゃんと弾きたい人へ"
+  },
+  "intro": {
+    "ko": [
+      "이 과정은 입문 일렉을 뗀 분을 위한 **3개월 블루스 로드맵**이에요. 블루스의 심장은 둘 — **셔플 리듬**으로 그루브를 만들고 **벤딩**으로 음을 울리는 거죠. 이 둘을 <mark>12마디 위에서 주고받으며 '블루스를 말하는' 법</mark>을 배웁니다.",
+      "1개월엔 **셔플·부기·12마디 폼·도미넌트7**로 리듬의 몸을 만들고, 2개월엔 **마이너 펜타 박스1·블루노트·벤딩**으로 리드의 목소리를 얻어요. 3개월엔 **코드 따라가기·메이저/마이너 색**을 더해 <mark>혼자 컴핑과 솔로를 오가는 완성된 블루스</mark>를 녹음합니다.",
+      "정확한 음보다 **셔플의 그루브**와 **벤딩의 표정**이 먼저예요. 이 여정 끝엔 <mark>백킹 위에서 자유롭게 블루스를 노래하는 나</mark>를 만나고, 다음 여정 **솔로/스케일**로 넘어갈 준비를 마칩니다."
+    ],
+    "en": [
+      "This is a **3-month blues roadmap** for players who've finished the electric basics. Blues has two hearts — you build the groove with the **shuffle rhythm** and make notes cry with **bending**. You'll learn to <mark>trade these back and forth over a 12-bar and 'speak' the blues</mark>.",
+      "Month 1 builds the body of the rhythm with **shuffle, boogie, the 12-bar form, and dominant 7ths**; Month 2 finds the voice of the lead with **minor pentatonic Box 1, the blue note, and bending**; Month 3 adds **chord targeting and major/minor color** to record <mark>a complete blues where you trade comping and soloing on your own</mark>.",
+      "Feel comes before precision — the **groove of the shuffle** and the **expression of a bend** first. By the end you'll meet <mark>a version of yourself who sings the blues freely over a backing track</mark>, ready to move on to the **solo/scale** journey next."
+    ],
+    "ja": [
+      "この講座は、エレキ入門を終えた人のための**3か月ブルース・ロードマップ**です。ブルースの心臓は二つ — **シャッフルリズム**でグルーヴをつくり、**ベンディング**で音を泣かせること。この二つを<mark>12小節の上で交わし、「ブルースを話す」方法</mark>を学びます。",
+      "1か月目は**シャッフル・ブギ・12小節フォーム・ドミナント7**でリズムの体をつくり、2か月目は**マイナーペンタ・ボックス1・ブルーノート・ベンディング**でリードの声を得ます。3か月目は**コードを追う・メジャー/マイナーの色**を加えて、<mark>一人でコンピングとソロを行き来する完成したブルース</mark>を録音します。",
+      "正確な音より、**シャッフルのグルーヴ**と**ベンドの表情**が先です。この旅の終わりには<mark>バッキングの上で自由にブルースを歌う自分</mark>に出会い、次の旅**ソロ/スケール**へ進む準備が整います。"
+    ]
+  }
+}
