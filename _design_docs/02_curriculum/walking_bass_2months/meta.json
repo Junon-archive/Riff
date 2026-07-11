@@ -1,0 +1,47 @@
+{
+  "id": "walking_bass_2months",
+  "title": {
+    "ko": "워킹 베이스 — 두 달, 코드 위를 걷다",
+    "en": "Walking Bass: Two Months of Walking the Changes",
+    "ja": "ウォーキング・ベース — 2か月、コードの上を歩く"
+  },
+  "tagline": {
+    "ko": "매 1박에 착지하고 4박에 다리를 놓아 — 코드 위를 걷는 재즈·블루스 워킹 8주",
+    "en": "Land on beat one, bridge on beat four — walking jazz-blues bass lines in 8 weeks",
+    "ja": "1拍で着地し4拍で橋を架ける — コードの上を歩くジャズ・ブルースのウォーキング8週間"
+  },
+  "instrument": "bass",
+  "image": "/curriculum/walking-bass.webp",
+  "topic": "bass-walking",
+  "level": 3,
+  "tags": [
+    "bass",
+    "walking",
+    "jazz",
+    "blues",
+    "advanced"
+  ],
+  "durationMonths": 2,
+  "forWho": {
+    "ko": "베이스 기초를 뗐고, 이제 코드 위를 걸으며 재즈·블루스 체인지를 항해하고 싶은 분께",
+    "en": "For those who finished bass fundamentals and now want to walk over chords and navigate jazz-blues changes",
+    "ja": "ベース基礎を終え、コードの上を歩いてジャズ・ブルースのチェンジを航海したい方へ"
+  },
+  "intro": {
+    "ko": [
+      "이 과정은 베이스 기초를 뗀 분이 코드 위를 걷는 **워킹 베이스**로 넘어가는 2개월 트랙이에요. 핵심은 하나예요 — <mark>베이스는 코드를 걷는다</mark>. 매 **1박**엔 코드에 착지하고, **4박**엔 다음 코드로 다리를 놓아요. 키는 **F**로 통일해 걷는 근육을 차곡차곡 쌓아요. 4현이든 5현이든 함께 배워요.",
+      "1개월차엔 **코드톤**(R-3-5-7)을 지판에서 찾아 **밀도 램프**(루트→루트5→코드톤→접근음)로 라인을 세우고, **크로매틱 접근음**으로 코드를 이어 <mark>F 블루스 12마디</mark>를 완주해요. 2개월차엔 **ii-V-I**·**감싸기(enclosure)**·**장식(고스트·필)**을 더해, 오리지널 진행 위를 매끄럽게 걷는 <mark>졸업 워킹 라인</mark>을 녹음합니다.",
+      "매일 **50분**, 끝엔 늘 메트로놈 앞에서 확인되는 워킹 라인 하나가 남아요. 목표는 화려함이 아니라 **부드러운 보이스 리딩** — 작은 걸음으로 다음 코드를 미리 겨냥하는 거예요. 두 달 뒤엔 <mark>코드만 보면 걸어지는 손</mark>으로 블루스와 ii-V-I를 자유롭게 항해하는 자신을 만나요."
+    ],
+    "en": [
+      "This 2-month track takes someone who finished bass fundamentals into **walking bass** — walking over the chords. The whole idea is one thing — <mark>the bass walks the chords</mark>. On **beat one** you land on the chord, and on **beat four** you bridge to the next one. Everything stays in **F** so you build your walking muscle step by step. You learn 4- and 5-string together.",
+      "Month 1 finds the **chord tones** (R-3-5-7) on the fretboard, builds lines with a **density ramp** (root → root-fifth → chord tones → approach notes), and connects chords with **chromatic approach notes** to finish a full <mark>12-bar F blues</mark>. Month 2 adds **ii-V-I**, **enclosure**, and **ornaments (ghosts and fills)** to record a <mark>graduation walking line</mark> that strolls smoothly over an original progression.",
+      "**Fifty minutes** a day, and each ends with one walking line you can check against a metronome. The goal isn't flash — it's **smooth voice leading**, aiming at the next chord in small steps. Two months in, you'll navigate blues and ii-V-I freely, with <mark>hands that walk the moment they see the chords</mark>."
+    ],
+    "ja": [
+      "この講座は、ベース基礎を終えた人がコードの上を歩く**ウォーキング・ベース**へ進む2か月トラックです。核心はひとつ — <mark>ベースはコードを歩く</mark>。**1拍目**でコードに着地し、**4拍目**で次のコードへ橋を架けます。キーは**F**に統一して、歩く筋肉を少しずつ積み上げます。4弦でも5弦でも一緒に学びます。",
+      "1か月目は**コードトーン**（R-3-5-7）を指板で見つけ、**密度ランプ**（ルート→ルート5→コードトーン→アプローチ）でラインを組み、**クロマチック・アプローチ**でコードをつないで<mark>Fブルース12小節</mark>を弾き切ります。2か月目は**ii-V-I**・**エンクロージャー**・**装飾（ゴースト・フィル）**を足して、オリジナル進行の上を滑らかに歩く<mark>卒業ウォーキング・ライン</mark>を録音します。",
+      "毎日**50分**、終わりには必ずメトロノームの前で確認できるウォーキング・ラインが一つ残ります。目標は派手さではなく、**滑らかなヴォイス・リーディング** — 小さな歩幅で次のコードを先に狙うことです。2か月後には、<mark>コードを見た瞬間に歩ける手</mark>でブルースとii-V-Iを自在に航海する自分に出会えます。"
+    ]
+  }
+}
