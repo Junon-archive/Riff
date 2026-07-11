@@ -32,7 +32,7 @@
 | 12 | [R&B/네오소울 보이싱 커리큘럼 신설 (2개월)](12_neosoul-voicing-curriculum.md) | 🔴 TODO (구상·저작 미착수) | 중간 | 낮음 | 없음 |
 | 13 | [베이스 기초 커리큘럼 신설 (1개월·손 만들기)](13_beginner-bass-curriculum.md) | 🟢 DONE (16일 48파일+지판·볼드 정합) | 높음 | 중간 | 10 |
 | 14 | [슬랩/펑크 베이스 커리큘럼 (2개월)](14_slap-funk-bass-curriculum.md) | ✅ DONE (8주 32일 × 3언어 = 96 day 저작·검증·커밋 완료) | 중간 | 중간 | 10·13 |
-| 15 | [셔플 & 바운스 베이스 커리큘럼 (2개월·필 트랙)](15_shuffle-bounce-bass-curriculum.md) | 🔴 TODO (설계 상세 확정·저작 미착수) | 중간 | 중간 | 10·13 |
+| 15 | [셔플 & 바운스 베이스 커리큘럼 (2개월·필 트랙)](15_shuffle-bounce-bass-curriculum.md) | 🟡 IN_PROGRESS (프롬프트 8개 완료·day 미착수) | 중간 | 중간 | 10·13 |
 | 16 | [워킹 베이스 커리큘럼 신설 (2개월)](16_walking-bass-curriculum.md) | 🔴 TODO (구상·저작 미착수) | 중간 | 중간 | 10·13 |
 | 17 | [오선보/타브 오버플로 클리핑 + 폭기반 줄바꿈](17_staff-overflow.md) | 🟢 DONE (1 클리핑·2 줄바꿈·3 스크롤폴백, 회귀 0) | 높음 | 중간 | 없음 |
 
