@@ -427,14 +427,30 @@ function buildMeasure(
     const unit = DUR_INT[n.duration] ?? 4;
 
     if (n.rest) {
-      flush();
-      flushTup();
-      stave.push(new StaveNote({ keys: ['b/4'], duration: `${durCode}r` }));
-      tab.push(new GhostNote(durCode));
+      const rNote = new StaveNote({ keys: ['b/4'], duration: `${durCode}r` });
+      const gTab = new GhostNote(durCode);
+      stave.push(rNote);
+      tab.push(gTab);
       tieAfter.push(false);
       linkAfter.push(null);
-      pos += unit;
-      if (pos % beatInt === 0) flush();
+      if (n.tuplet) {
+        // ★02-C 잇단음 내 쉼표("가운데 빼기" 셔플): 튜플렛 그룹엔 **포함**(브래킷·tick 정합),
+        //   빔엔 **미포함**(빔은 앞뒤 실음끼리 쉼표 위로 이어짐). → rest 가 빔·튜플렛을 flush 해서
+        //   빔이 박 경계를 넘어 잘못 연결되던 문제 수정. 완료 판정·pos 전진은 실음 브랜치와 동일.
+        curTup.push(rNote);
+        curTupTab.push(gTab);
+        curTupSpec = n.tuplet;
+        if (curTup.length >= n.tuplet.num) {
+          pos += n.tuplet.inSpaceOf * unit;
+          flush();
+          flushTup();
+        }
+      } else {
+        flush();
+        flushTup();
+        pos += unit;
+        if (pos % beatInt === 0) flush();
+      }
       continue;
     }
 
