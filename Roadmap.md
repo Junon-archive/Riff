@@ -82,6 +82,11 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-11 (백로그 15 — 셔플&바운스 5주차 day 저작 = Month 2(바운스) 착수)
+- **5주차(고스트노트 바운스):** day_1~4 × 3언어 = 12파일. D1 데드노트 "칙"(왼손 살짝 얹어 음정없이) → D2 루트+고스트 교대(둥-칙) → D3 뮤팅으로 공간 만들기 → D4 고스트 그루브 + 핀 고정 `ghost_bounce`(E 루트+고스트 8분, 4·5현). **`technique:"dead_note"` 첫 사용**(고스트=role:scale 무색), Month 2(바운스) 진입.
+- **검증:** build 805p exit0(셔플 day 20, 동시 세션 빌드창 포착), check-invariants 신규 14블록·회귀0(baseline 1078로 --update), 볼드/mark 3언어 일치·악보 JSON 3언어 바이트동일·④/완료줄 mark0·핀 JSON=프롬프트 바이트동일·고스트 dead_note·4·5현 병행쌍·태그오염0. (스키마·현/프렛 범위·박자합 독립 정밀검증 실위반0.)
+- **다음:** week_6(스윙16 바운스) ~ week_8(종합 바운스 졸업).
+
 ### 2026-07-11 (백로그 12 — 네오소울 4주차 day 저작 = Month 1(보이싱&무브먼트) 졸업)
 - **4주차(보이스 리딩 & 탑노트 멜로디):** day_1~4 × 3언어 = 12파일. D1 보이스 리딩(공통음 유지·최소 이동) → D2 탑노트 인식 → D3 탑노트 멜로디 라인 → D4 코드+탑노트 멜로디 뱀프(핀 고정 `top_note_melody` 바이트동일). 탑노트 강조=`role:"target"`+`highlight`(초록)·경과=`role:"scale"`. day_4 `(M1 졸업!)`/`(Month 1 complete!)`/`（M1修了！）` 3언어.
 - **검증:** build 805p exit0, check-invariants read-only neosoul 회귀0(변경/삭제된 neosoul 블록 0), 볼드/mark 3언어 일치·악보 JSON 3언어 바이트동일·④/완료줄 mark0·핀 JSON=프롬프트 바이트동일·태그오염0. baseline은 동시 세션 순서 churn 회피 위해 day만 커밋(회귀는 read-only로 확인, 최종 정합 예정).
