@@ -82,6 +82,11 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-11 (백로그 11 — 블루스 2주차 day 저작 + 대표 섬네일)
+- **2주차(12마디 폼 + 도미넌트7 + 퀵체인지):** day_1~4 × 3언어 = 12파일. D1 도미넌트7 세 코드(A7·D7·E7 `fretboard_diagram`) → D2 부기를 D7·E7로 이동 → D3 12마디 순회(퀵체인지) → D4 부기 이동 A7→D7(핀 고정). 코드 스트로크·더블스탑 `chord[]` 활용.
+- **대표 섬네일:** `curriculum9.jpg`(선버스트 스트랫 피킹, 사용자 확정)→`blues.webp`(1200×800·q72·28.4KB). optimize-images MAP 추가, 기존 6 webp 바이트 불변. meta.json image 이미 참조 → 카드 노출.
+- **검증:** build 589p exit0(blues day 8), check-invariants 신규 18블록·회귀0(baseline→705), 볼드/mark 3언어 일치·JSON 3언어 바이트동일·④/완료줄 mark0·핀 JSON=프롬프트 바이트동일·태그오염0.
+
 ### 2026-07-11 (백로그 11 착수 — 블루스 준비물 + 1주차 day 저작, /goal 순차)
 - **준비물:** `blues_3months`(기타·3개월·level2) meta.json은 프롬프트 하드닝 커밋(4ac8149)에서 생성 완료 → 이번엔 **month_1~3 + week_1~12 overview 45파일**(ko/en/ja) 신규 저작. 최신 기타 트랙(funk_rhythm) 구조 채택, 3언어 볼드·mark 개수 전량 일치·언어 오염 0.
 - **1주차(셔플 필 + A7 부기 리프):** day_1~4 × 3언어 = 12파일. D1 셔플 필(롱-숏) → D2 더블스탑 손모양(fretboard_diagram) → D3 부기 리프 R-5-6-b7 → D4 A7 셔플 부기 2마디(핀 고정). `feel:"swing8"`·`notation:"staff+tab"` 실사용.

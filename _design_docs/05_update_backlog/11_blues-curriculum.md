@@ -1,6 +1,6 @@
 ---
 id: 11-blues-curriculum
-status: IN_PROGRESS (준비물 완료 + day 저작 진행 — 1/12주 완료)
+status: IN_PROGRESS (준비물 완료 + day 저작 진행 — 2/12주 완료)
 priority: high
 risk: low
 depends_on: []
