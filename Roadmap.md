@@ -82,6 +82,12 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-11 (버그픽스 — 지판 개방현 루트에 role 색 미적용, fretboard.ts)
+- **증상:** 지판에서 개방현 루트(O 표기)가 산문의 "파란 점"과 달리 **무색**으로 렌더(재현: `shuffle_bounce_bass m1/w1/d1` "E root position").
+- **원인:** 개방현(fret 0) 렌더 경로가 `dotStyle`(역할 색)을 안 쓰고 `stroke=currentColor` 고정 → 프렛 짚는 음만 색이 들어가고 개방현은 무색.
+- **수정:** 개방현 O·라벨을 `dotStyle` 색으로(루트=파랑). 역할 없는 개방현은 기존 currentColor·opacity 유지(바이트 불변).
+- **검증:** build 0 · check-invariants 회귀 0(SVG만) · dist 셔플바운스 개방 루트 O `stroke=var(--primary)` 확인.
+
 ### 2026-07-11 (버그픽스 — 스윙/템포 겹침: v2 wrap 상호작용, staff.ts)
 - **증상:** 1마디로 보이는 스윙 악보에서 "Swing 8ths" 표기와 ♩=bpm 템포가 겹침(재현: `shuffle_bounce_bass m1/w3/d2` b_boogie 부기).
 - **원인(신규·상호작용):** 기존 겹침수정(다른 세션, 백로그 17 부수이슈)이 **전체 마디 수 `measures.length===1`** 로 판정했는데, ★17-v2 그리디 wrap 이 **2마디 스코어도 1마디/줄로 분리** → 첫 줄이 1마디(좁음)라 겹치는데 전체 마디=2 라 조건이 놓침.

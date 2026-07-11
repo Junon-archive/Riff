@@ -196,14 +196,17 @@ export function renderFretboard(score: Score): string {
       );
       continue;
     }
-    // 개방현(o) — 왼쪽 거터
+    // 개방현(o) — 왼쪽 거터. role/root 면 그 색(루트=파랑)으로 O·라벨을 칠한다(산문 "파란 점"과 정합).
+    //   역할 없는 개방현은 기존 그대로(currentColor·기존 opacity) → 바이트 불변.
     if (f === 0) {
+      const os = dotStyle(dot);
+      const oColor = os.outlined ? 'currentColor' : os.fill; // 역할 있으면 그 색, 없으면 기본
       parts.push(
-        `<circle cx="${OPEN_MUTE_X}" cy="${y}" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8" opacity="0.55"/>`,
+        `<circle cx="${OPEN_MUTE_X}" cy="${y}" r="6.5" fill="none" stroke="${oColor}" stroke-width="1.8" opacity="${os.outlined ? '0.55' : '0.9'}"/>`,
       );
       if (dot.label) {
         parts.push(
-          `<text x="${OPEN_MUTE_X}" y="${y - 11}" text-anchor="middle" font-size="9.5" font-weight="700" fill="currentColor" opacity="0.6">${esc(dot.label)}</text>`,
+          `<text x="${OPEN_MUTE_X}" y="${y - 11}" text-anchor="middle" font-size="9.5" font-weight="700" fill="${oColor}" opacity="${os.outlined ? '0.6' : '1'}">${esc(dot.label)}</text>`,
         );
       }
       continue;
