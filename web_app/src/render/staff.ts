@@ -202,10 +202,17 @@ function esc(s: string): string {
     .replace(/"/g, '&quot;');
 }
 
+/**
+ * 이명동음(#↔b) 선호를 조(調) 이름으로 판정. 조 이름의 **루트(첫 음이름 + 선택적 ♭/#)만** 본다.
+ * 서술어의 우연한 소문자 b("A blues", "A Mixolydian (blues)")를 플랫으로 오판하던 버그 수정(★18-R1).
+ * 플랫 조 = 루트가 ♭표기(Bb·Eb·Ab·Db·Gb·Cb·Fb) 또는 F(major/minor 둘 다 조표에 ♭). 그 외(#루트·자연 루트)는 샤프.
+ */
 function preferFlats(key?: string): boolean {
   if (!key) return false;
-  const k = key.replace(/\s+/g, '');
-  return /^(F|Bb|Eb|Ab|Db|Gb|Cb)/.test(k) || /b/.test(k);
+  const m = key.trim().match(/^([A-G])([b♭#♯])?/);
+  if (!m) return false;
+  if (m[2] === '#' || m[2] === '♯') return false; // 샤프 루트(F#·C# 등)
+  return m[2] === 'b' || m[2] === '♭' || m[1] === 'F'; // ♭루트 또는 F조
 }
 
 /**
