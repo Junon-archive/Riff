@@ -82,6 +82,12 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-11 (백로그 12 — 네오소울 준비물 + 프롬프트 지판 강도 통일, /goal 착수)
+- **프롬프트 하드닝:** `neosoul_voicing_2months` 주차 프롬프트 8개 지판 병기 강도 통일 — W2·W3 '병기'·W4~8 '병기 가능'을 W1과 동일 강도(`fretboard_diagram` 반드시 병기·주당 최소 1개·손모양 각인)로 상향. M1↔M2 지판 밀도 격차 방지, 손모양 대상은 주차 소재로 구체화. 핀고정 JSON·박자합 무손.
+- **준비물:** meta.json(기타·level3·2개월·intro 볼드≠<mark> 분리·3언어 bold11/mark3 일치) + overview 30파일(month_1·2 + week_1~8 × ko/en/ja, blues 헤딩 구조·각 week_N_prompt 정합·3언어 볼드/mark 개수 전량 일치) + 섬네일 `curriculum10.jpg`→`neosoul-voicing.webp`(1200×800·q72·30.1KB, MAP 항목 추가·기존 webp 바이트 불변).
+- **검증:** build 631p exit0(트랙 발견·meta·overview 파싱 OK, day 없어 페이지 스킵=정상). 커밋 2개(프롬프트 하드닝 / 준비물).
+- **다음:** week_1(코어 그립 Dm9·G13) ~ week_8(종합·네오소울 졸업) day 저작 /goal 순차.
+
 ### 2026-07-11 (버그픽스 — 셋잇단음 빔 그룹핑: 2음씩 → 3음씩, staff.ts)
 - **증상:** 3잇단음("3" 마커는 정상)이 빔으로 **2음씩** 묶여 셋잇단음처럼 안 보임(재현: `shuffle_bounce_bass_2months/m1/w1/d1` "Triplet grid").
 - **원인:** `staff.ts` `buildMeasure` 빔 flush 가 **박 경계(`pos % beatInt`, nominal duration)** 기준 → 8분 3잇단(nominal 6단위)이 2음(=4단위=1박)에서 잘림.
