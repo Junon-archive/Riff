@@ -1,6 +1,6 @@
 ---
 id: 12-neosoul-voicing-curriculum
-status: IN_PROGRESS (주차 프롬프트 8개 완료 — day 저작 미착수)
+status: DONE (32일 day 저작·검증·커밋·push 완료 2026-07-11)
 priority: medium
 risk: low
 depends_on: []
@@ -63,7 +63,7 @@ depends_on: []
 - [ ] 크로매틱 접근을 어느 각도로(반음 위 vs 아래, 어느 코드에)
 - [ ] 그레이스노트 표기 정밀도(백로그 02 표현기법 글리프와 조율)
 - [x] **주차 프롬프트 8개 작성 완료(2026-07-11)**: week_1~8, §13 청사진 + 결함 5종 방지 "필수 규칙" 블록 처음부터 내장. M1 보이싱&무브먼트(Dm9·G13 그립·텐션·크로매틱 접근·탑노트 멜로디) / M2 장식&그루브(b3→3 스미어·그레이스노트·레이백 스윙16 커팅·종합). 핀 고정 8블록 박자합 4.0·chord[] role·기법·현범위 검증.
-- [ ] 프롬프트 실행 → `day_N.{ko,en,ja}.md` 32일 저작 + meta.json·overview → build·박자합·invariants 통과 ← 다음 작업
+- [x] **프롬프트 실행 → `day_N.{ko,en,ja}.md` 32일 저작 완료(2026-07-11)** + meta.json·overview 30·섬네일(`neosoul-voicing.webp`) → build 985p exit0·박자합 4.0·invariants neosoul 회귀0(143블록 baseline 반영)·3언어 볼드/mark 일치·핀고정 8블록 바이트동일·chord[] 대표음=최저음 통과. 주차별 순차 저작·검증·커밋·push. (M1 보이싱&무브먼트 → M2 장식&그루브&종합 졸업.) day_2 스키마 위반(대표음≠최저음) 1건 발견·수정. **트랙 졸업.**
 
 ## 준수 공통 규약 (재사용)
 - Day 4단(①이론 ②시각 ③50분 루틴 ④팁), 토스톤(긁지 않기·"왕초보" 금지), i18n 3언어(악보 JSON 바이트 동일), 인라인 배치+`▶`연주안내, 산문 `<mark>`(기타=기본색 ↔ 악보 `role:target` 초록과 구분)·**볼드 필수**·**지판(fretboard_diagram) 병기**·④/완료기준 `<mark>` 금지.

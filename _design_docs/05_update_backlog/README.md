@@ -29,7 +29,7 @@
 | 09 | [입문 일렉 커리큘럼 신설 (1개월·손 만들기)](09_beginner-electric-curriculum.md) | 🟢 DONE (16일 day 48파일 + 대표 이미지, 2026-07-10) | 높음 | 낮음 | 없음 |
 | 10 | [베이스 지원 (클레프·slap·튜닝·다현·지판) + 베이스 커리큘럼](10_bass-support.md) | 🟡 IN_PROGRESS (엔진 B0~B4 완료 · 콘텐츠 B5 대기) | 중간 | 높음 | 03·02(완료) |
 | 11 | [블루스 커리큘럼 (3개월·리듬+표현 리드·solo 온램프)](11_blues-curriculum.md) | 🟢 DONE (3개월·12주·48일 = 144 day 저작·검증·커밋 완료 · 대표 섬네일 포함) | 높음 | 낮음 | 없음 |
-| 12 | [R&B/네오소울 보이싱 커리큘럼 (2개월·level 3 캡스톤)](12_neosoul-voicing-curriculum.md) | 🟡 IN_PROGRESS (프롬프트 8개 완료·day 미착수) | 중간 | 낮음 | 없음 |
+| 12 | [R&B/네오소울 보이싱 커리큘럼 (2개월·level 3 캡스톤)](12_neosoul-voicing-curriculum.md) | 🟢 DONE (32일 day 저작·검증·커밋 완료 2026-07-11) | 중간 | 낮음 | 없음 |
 | 13 | [베이스 기초 커리큘럼 신설 (1개월·손 만들기)](13_beginner-bass-curriculum.md) | 🟢 DONE (16일 48파일+지판·볼드 정합) | 높음 | 중간 | 10 |
 | 14 | [슬랩/펑크 베이스 커리큘럼 (2개월)](14_slap-funk-bass-curriculum.md) | ✅ DONE (8주 32일 × 3언어 = 96 day 저작·검증·커밋 완료) | 중간 | 중간 | 10·13 |
 | 15 | [셔플 & 바운스 베이스 커리큘럼 (2개월·필 트랙)](15_shuffle-bounce-bass-curriculum.md) | 🟢 DONE (8주·96 day 저작·검증·커밋 완료) | 중간 | 중간 | 10·13 |
