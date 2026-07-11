@@ -82,6 +82,11 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-11 (백로그 11 — 블루스 3주차 day 저작 + 2·3주차 ①이론 보강)
+- **3주차(리듬 변주 — 9th·스톱타임·다이내믹):** day_1~4 × 3언어 = 12파일. D1 9th 코드 A9(`fretboard_diagram`, 텐션음 `role:"color"` 노랑) → D2 스톱타임(`rest:true` 침묵) → D3 다이내믹(세게·여리게·백비트) → D4 변주 통합(핀 고정 `stoptime_a7`).
+- **①이론 밀도 보강(2·3주차):** 초기 저작분의 ①국어 분량이 배포 트랙(funk/beginner) 최저선보다 얇아(week_2 299~427), 산문만 확장해 480~552(공백제외)로 상향. ②③④·악보 JSON·완료기준 무변경, 볼드/mark 3언어 일치·JSON 바이트동일 보존. (이후 주차는 위임 시 분량 기준 강화.)
+- **검증:** build 601p exit0(blues day 12), check-invariants 신규 16블록·회귀0(baseline→721), 볼드/mark 3언어 일치·JSON 3언어 바이트동일·④/완료줄 mark0·핀 JSON=프롬프트 바이트동일·태그오염0.
+
 ### 2026-07-11 (백로그 17 v2 구현 — 악보 세로 줄바꿈@280 + 스크롤 스코핑 버그 수정)
 - **결정적 버그 수정(핵심):** v1의 "스크롤 폴백"이 **처음부터 작동 안 했다** → 계속 "잘림"으로 보인 진짜 원인. `hydrateScoreSlots`가 악보를 `set:html`로 주입해 `.render-mount` 요소에 Astro 스코프 속성이 안 붙는데, `.render-mount{overflow-x:auto}`·`.staffsvg{width:100%}`가 스코프 셀렉터로 컴파일돼 **매칭 실패** → 전역 `.render-area{overflow:hidden}`이 그냥 잘랐다. **수정: 해당 규칙 `:global()` 전환**(`LessonView.astro`). 성긴 악보의 모바일 축소(width:100%)도 이제야 작동.
 - **v2 세로 줄바꿈 구현(`staff.ts`):** `TARGET_ROW_W 560→280`(실측 knee), 2마디 고정 쌍 폐기 → **마디 그리디 패킹**(마디 온전·mid-measure 걸침 0). 모든 SVG `max-width:{자연폭}`(데스크톱 확대 금지) + **over-wide score만 `min-width`**(좁은 화면 가로 스크롤) + `.render-mount.scrollable` 우측 페이드 힌트("→ 더 있음").
