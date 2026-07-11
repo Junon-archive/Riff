@@ -82,6 +82,11 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-11 (백로그 12 — 네오소울 3주차 day 저작)
+- **3주차(크로매틱 접근):** day_1~4 × 3언어 = 12파일. D1 Ab13 그립(G13 폼+1프렛, `fretboard_diagram`) → D2 Ab13→G13 반음 슬라이드(`technique:"slide"`+`slideToFret`) → D3 뱀프 삽입(Dm9→Ab13→G13) → D4 크로매틱 접근 뱀프(핀 고정 `chromatic_approach` 바이트동일).
+- **검증:** build 763p exit0, check-invariants neosoul 회귀0(변경/삭제된 neosoul 블록 0, 전부 추가), 볼드/mark 3언어 일치·악보 JSON 3언어 바이트동일·④/완료줄 mark0·핀 JSON=프롬프트 바이트동일·태그오염0. ※baseline은 동시 세션(shuffle) 실시간 수정으로 순수가법 아니라 이 커밋에 미포함 — neosoul 블록은 peer --update가 반영(자가치유), 트랙 종료 시 정합 커밋 예정.
+- **다음:** week_4(보이스 리딩 & 탑노트 멜로디 — M1 졸업).
+
 ### 2026-07-11 (백로그 11 — 블루스 7주차 day 저작: 프레이징·콜앤리스폰스·여백)
 - **7주차:** day_1~4 × 3언어 = 12파일. D1 짧은 프레이즈 → D2 콜앤리스폰스(질문↔대답) → D3 여백 두기(`rest`) → D4 프레이징 통합(핀 고정 `call_response`). 질문=4도 열림, 대답=근음 착지.
 - **검증:** build green exit0, check-invariants 삭제전용키 0(회귀0)·blues w7 신규 20블록(baseline→985), 볼드/mark 3언어 일치·JSON 3언어 바이트동일·④/완료줄 mark0·핀 JSON=프롬프트 바이트동일·태그오염0·①이론 510~595. (동시 세션 미완성 트랙이 full-build를 간헐 차단 → blues는 build-content 독립 통과로 day 선커밋, green 창에서 baseline 확정.)
