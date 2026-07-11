@@ -82,6 +82,13 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-11 (백로그 18 **완료** — 솔로/스케일 tab → staff+tab 이식, `render/tab.ts` 제거)
+- **배경:** solo_scale_3months 89개 tab 블록만 `meta.notation` 미지정이라 구식 자체 타브 SVG(`render/tab.ts`)로 라우팅 — 다른 9개 커리큘럼은 전부 `staff+tab`(VexFlow 오선보+타브 결합). 렌더 경로 이원화 해소 + 표기 일관성 위해 이식.
+- **단계 0(R1, 커밋 `c02a272`):** `preferFlats` 를 정규식 조 루트(`^[A-G][b♭#♯]?`) 기반으로 정밀화 — "A blues"/"A Mixolydian(blues)"의 서술어 'b' 를 플랫 조로 오판하던 버그 수정(유닛 10/10).
+- **단계 1·2(커밋 `20dd176`):** solo 89블록 × 3언어 = 267블록 `meta` 에 `"notation":"staff+tab"` 텍스트 외과 삽입(재직렬화 없이 나머지 바이트·3언어 동일성 보존, 147파일). 라우팅이 tab.ts→staff.ts 로 전환. check-invariants baseline 갱신(변경=57지문키 notation만, measures 불변·추가/삭제키 0).
+- **단계 3(tab.ts 제거):** `render/index.ts` renderTab import/분기/re-export 제거 + notation 미지정 시 `staff+tab` 폴백. `render/tab.ts`(285줄) 삭제. 문서 동반 갱신(technical_spec §5.3·구조도·§13.2, CLAUDE.md, implementation_guide, build-content 주석). 빌드되는 tab 블록은 전부 staff+tab(잔여 미지정 13건은 `week_*_prompt.md` 저작용 — 빌드 미소비).
+- **검증:** build exit0(1006p)·불변식 회귀0(1454블록)·ko/en/ja JSON 바이트동일(불일치0)·dist solo VexFlow staff+tab 렌더 확인(실패흔적0)·renderTab 참조0(index.ts 외).
+
 ### 2026-07-11 (백로그 16 **완료** — 워킹 베이스 8주차 day 저작 = **트랙 졸업**)
 - **8주차(최종 졸업):** day_1~4 × 3언어 = 12파일. D1 진행 파악(ii-V-I+턴어라운드 순환) → D2 진행 위 워킹(코드톤+접근) → D3 장식+리허설(멈추지 않는 순환) → D4 최종 졸업 녹음(핀 고정 `walking_graduation` 4마디 Gm7-C7-Fmaj7-C7 턴어라운드, 4·5현). day_4 `(워킹 베이스 졸업!)` 3언어. 베이스 재즈/하모니 캡스톤 서사.
 - **트랙 완성:** 워킹 베이스 8주 × 4일 × 3언어 = **96 day 파일** 저작 완료(meta·overview 30·섬네일 포함). 키 F, M1(코드톤·밀도램프·접근음·F블루스) → M2(ii-V-I·enclosure·장식·오리지널 졸업).

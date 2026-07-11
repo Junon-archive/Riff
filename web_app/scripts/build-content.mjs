@@ -152,8 +152,8 @@ const KEY_SIGNATURES = new Set([
   'F', 'Dm', 'Bb', 'Gm', 'Eb', 'Cm', 'Ab', 'Fm', 'Db', 'Bbm', 'Gb', 'Ebm', 'Cb', 'Abm',
 ]);
 // 렌더러 역량 가드: staff.ts(VexFlow, notation=staff/staff+tab/rhythm)가 실제로 그리는 technique.
-// bend/hammer_on/pull_off/slide/vibrato/harmonic 은 staff.ts 미구현 → 오선보 경로에서 쓰면 화면에
-// 조용히 사라진다. 이 기법이 필요하면 tab.ts 경로(notation 미지정/"tab")로 내야 한다(tab.ts는 전부 그림).
+// 모든 tab 블록은 staff.ts 로만 렌더된다(구 tab.ts 는 백로그 18 에서 제거) → 미지원 기법을 쓰면
+// 화면에서 조용히 사라지므로, 여기 없는 기법은 반드시 staff.ts 에 렌더를 먼저 구현하고 이 Set 을 넓힌다.
 // ★staff.ts 에 새 기법 렌더를 추가하면 이 Set 한 줄만 넓히면 된다(락이 아니라 능력 계약).
 // 오선보(staff.ts) 경로가 렌더 가능한 technique. ★02-A: 밴딩·해머온·풀오프·슬라이드·비브라토·하모닉
 // 을 오선보 위 텍스트 마커(Annotation)로 렌더 구현 후 완화. (구현 안 된 기법은 계속 막아 조용한 증발 방지.)
@@ -210,7 +210,7 @@ function validateScore(score, ctx) {
         if (n.technique !== undefined && !TECHNIQUES.has(n.technique))
           at(`note.technique 부정확: ${n.technique}`);
         if (staffRoute && n.technique !== undefined && !STAFF_TECHNIQUES.has(n.technique))
-          at(`오선보(notation:"${score.meta.notation}") 경로 미지원 technique: "${n.technique}" — 밴딩/해머링 등은 tab.ts 경로(notation 미지정/"tab")로 내거나 staff.ts에 렌더 추가 후 STAFF_TECHNIQUES 확장`);
+          at(`오선보(notation:"${score.meta.notation}") 경로 미지원 technique: "${n.technique}" — staff.ts에 렌더 추가 후 STAFF_TECHNIQUES 확장 필요(모든 tab 블록은 staff.ts 로만 렌더)`);
         if (n.role !== undefined && !ROLES.has(n.role)) at(`note.role 부정확: ${n.role}`);
         if (n.stroke !== undefined && !STROKES.has(n.stroke)) at(`note.stroke 부정확: ${n.stroke}`);
         if (n.chord !== undefined) {

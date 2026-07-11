@@ -29,7 +29,7 @@
 
 ### → notation-renderer (`technical_spec.md` §5·§13.1)
 - `src/render/fretboard.ts` — `renderFretboard(score: Score): string`
-- `src/render/tab.ts` — `renderTab(score: Score): string`
+- `src/render/staff.ts` — `renderStaff(score, mode): string` (VexFlow 오선보+타브, 모든 tab 블록. 구 `tab.ts`/`renderTab` 은 백로그 18 에서 제거)
 - 입력 타입은 이미 `src/types/score.ts` 준비됨. `src/render/index.ts` 재노출 주석 해제만 남음.
 - 실 데이터: `src/content/**/*.json` 의 `scores[]`(105건) + 스키마 `examples` 2건으로 시각 검증.
 

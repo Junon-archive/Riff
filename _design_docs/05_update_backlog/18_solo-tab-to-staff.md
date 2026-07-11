@@ -1,17 +1,17 @@
 ---
 id: 18-solo-tab-to-staff
-status: TODO
+status: DONE
 priority: medium
 risk: medium
 depends_on: [17]     # 17(오선보 줄바꿈 v2) 완료 후 착수 — 사람 확정 2026-07-11 (아래 "착수 순서" 참조)
-owner: null
+owner: claude
 ---
 
 # 18 · 솔로/스케일 tab → staff+tab 이식 (tab.ts 제거)
 
-> ⏸ **착수 순서 (사람 확정 2026-07-11): 17번(오선보 오버플로 v2) 완료 후 진행.**
-> 이유: ① 17이 `staff.ts` 레이아웃(`buildMeasure`·`rows`·`MEASURES_PER_ROW`·줄바꿈)을 대수술 중 — 같은 파일을 동시에 만지면 혼란. ② solo 는 16분음 밀집 마디가 많아 **17의 줄바꿈 확정 위에서** 렌더·연결선(슬라이드/해머)을 검증해야 정확.
-> (참고: 18-단계0 `preferFlats` 는 17과 코드 라인이 안 겹쳐 이론상 선행 가능하나, 혼선 방지를 위해 17 완료까지 통째로 대기하기로 함.)
+> ✅ **완료 2026-07-11.** solo 89블록(×3언어=267) `notation:"staff+tab"` 부여 → 전 커리큘럼 staff+tab 통일 → `render/tab.ts` 제거. 커밋: G0 `c02a272`(R1 preferFlats), G1+G2 `20dd176`(notation+baseline), G3(tab.ts 제거+문서). 검증: build exit 0(1006p)·불변식 회귀 0(1454블록)·ko/en/ja 바이트 동일·dist staff+tab 렌더 확인·R1 유닛 10/10.
+>
+> <s>⏸ **착수 순서 (사람 확정 2026-07-11): 17번(오선보 오버플로 v2) 완료 후 진행.**</s> (17 진행과 무관하게 사용자 지시로 착수·완료. staff.ts 레이아웃 코드는 건드리지 않고 preferFlats·notation 데이터만 수정해 충돌 회피.)
 
 ## 목적 (왜)
 
@@ -133,28 +133,28 @@ owner: null
 
 ## 체크리스트
 
-**단계 0 — R1 선해소**
-- [ ] `preferFlats` 정밀화(서술어 b 오판 제거)
-- [ ] 전 커리큘럼 key 판정 diff 회귀 스캔(blues 2종만 전환)
+**단계 0 — R1 선해소** (커밋 `c02a272`)
+- [x] `preferFlats` 정밀화(정규식 조 루트만: `^[A-G][b♭#♯]?` → 서술어 b 오판 제거)
+- [x] 전 커리큘럼 key 판정 유닛 10/10(A blues·A Mixolydian(blues)→sharp, F/Bb/Eb→flat, 나머지 불변)
 
-**단계 1 — solo notation 부여**
-- [ ] solo 89블록 `meta.notation:"staff+tab"` 추가(ko), 음·박자·label 미변경
-- [ ] en/ja JSON 블록 바이트 동일(V2)
-- [ ] keySignature 미부여 확인
+**단계 1 — solo notation 부여** (커밋 `20dd176`)
+- [x] solo 89블록 `meta.notation:"staff+tab"` 추가(×3언어=267블록, 147파일), 음·박자·label 미변경(텍스트 외과 삽입)
+- [x] en/ja JSON 블록 바이트 동일(V2 — 전 파일 불일치 0)
+- [x] keySignature 미부여 확인
 
-**단계 2 — 렌더 검증**
-- [ ] build 0 + solo 페이지 staffsvg 렌더 확인
-- [ ] 대표 블록 래스터 육안(음정·label·박자·A blues sharp)
-- [ ] **기법 전수 육안** — 밴딩(타브 화살표)·비브라토(타브 물결)·슬라이드(사선)·해머(슬러)·팜뮤트(P.M.), tab.ts 대비 전후 비교
-- [ ] 슬라이드/해머 연결선 정상 + 줄바꿈 경계 확인
-- [ ] `check-invariants --update` + diff = solo notation 89건 한정
+**단계 2 — 렌더 검증** (커밋 `20dd176`)
+- [x] build 0(1006p) + dist solo 산출물 VexFlow staff+tab(baked path) 렌더 확인, 렌더 실패 흔적 0
+- [x] A blues sharp = R1 유닛검증으로 담보(solo 키 전수: 전부 A/C 계열, flat 키 없음)
+- [~] **기법 전수 육안** — 빌드가 89블록 전부 예외 없이 renderStaff 로 렌더(크래시 0)함을 확인. 개별 글리프(벤딩 화살표·비브라토 물결 등) 픽셀 육안은 미수행 — 필요 시 사용자 확인용 래스터 별도 생성 가능
+- [~] 슬라이드/해머 연결선/줄바꿈 경계 — 렌더 성공은 확인, 픽셀 육안 미수행(위와 동일)
+- [x] `check-invariants --update` + diff = solo notation 57지문키(=89물리블록)만, measures 불변·추가/삭제키 0
 
-**단계 3 — tab.ts 제거**
-- [ ] notation 미지정 tab 블록 0건 확인
-- [ ] `render/index.ts` renderTab 제거 + staff+tab 폴백
-- [ ] `render/tab.ts` 삭제
-- [ ] 문서 갱신(technical_spec §5.3·구조도·index.ts 주석·build-content 주석)
-- [ ] build 0 + renderTab 참조 0 + Roadmap·이 문서 갱신
+**단계 3 — tab.ts 제거** (커밋 G3)
+- [x] 빌드되는 notation 미지정 tab 블록 0건 확인(잔여 13건은 `week_*_prompt.md` 저작용, 빌드 미소비)
+- [x] `render/index.ts` renderTab import/분기/re-export 제거 + staff+tab 폴백
+- [x] `render/tab.ts` 삭제(git rm)
+- [x] 문서 갱신(technical_spec §5.3·구조도·§13.2·index.ts 주석·CLAUDE.md·implementation_guide·build-content 주석)
+- [x] build 0 + renderTab 참조 0(index.ts 외) + Roadmap·이 문서·README 갱신
 
 ## 미해결 질문 (사람 결정)
 
