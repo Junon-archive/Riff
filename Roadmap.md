@@ -82,6 +82,11 @@
 
 ## 4. 변경 로그 (Changelog)
 
+### 2026-07-11 (백로그 16 — 워킹 베이스 5주차 day 저작 = Month 2 착수)
+- **5주차(ii-V-I 워킹):** day_1~4 × 3언어 = 12파일. D1 Gm7·C7·Fmaj7 코드톤 → D2 Gm7→C7 잇기(접근음 Db) → D3 C7→Fmaj7 해결(이끔음 E) → D4 ii-V-I 워킹(핀 고정 `ii_v_i_walk` 3마디, 4·5현). 재즈의 집으로 가는 길, 각 코드 루트 착지+접근음. Gm7 b3·Fmaj7 maj7 도수 라벨.
+- **검증:** build-content 격리 exit0(walking day JSON 20)·마디 박자합 4.0·3언어 JSON 바이트동일·볼드/mark 3언어 동수·④완료줄 mark0·핀 JSON=프롬프트 바이트동일·4/5현 병행쌍·태그오염0·①이론 551~650. invariants --update 보류(동시세션 부분 build, baseline 온전).
+- **다음:** week_6(감싸기 enclosure·타깃팅 심화).
+
 ### 2026-07-11 (백로그 11 — 블루스 11주차 day 저작: 릭 어휘 확장·프레이징 성숙)
 - **11주차:** day_1~4 × 3언어 = 12파일. D1 슬라이드 진입 → D2 벤딩+비브라토(우는 릭) → D3 레이백·다이내믹 → D4 표현 통합 릭(핀 고정 `expressive_lick`, slide→bend→vibrato).
 - **검증:** build-content blues day 44 정상·check-invariants blues 삭제0(회귀0)·blues w11 신규 20블록, 볼드/mark 3언어 일치·JSON 3언어 바이트동일·④/완료줄 mark0·핀 JSON=프롬프트 바이트동일·태그오염0·①이론 525~534. (동시 세션 미완성이 full-build 차단 → w11 baseline은 다음 green 창에서 w12와 함께 갱신.)
