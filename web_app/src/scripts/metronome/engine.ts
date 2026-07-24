@@ -110,6 +110,9 @@ export class MetronomeEngine {
   private visualQueue: BeatEvent[] = [];
   private buffers = new Map<string, AudioBuffer>();
   private pending = new Map<string, Promise<void>>();
+  /** 디코드 전 원본 바이트 — AudioContext 없이도 미리 받아 둘 수 있어 첫 박 폴백을 막는다. */
+  private encoded = new Map<string, ArrayBuffer>();
+  private prefetching = new Map<string, Promise<void>>();
 
   /**
    * 이미 예약했지만 아직 울리지 않은 소스 노드(시각 큐와 같은 이유로 시간순). stop() 이
@@ -149,7 +152,11 @@ export class MetronomeEngine {
       // 급격한 게인 점프는 틱 잡음을 만든다 → 아주 짧은 램프로 부드럽게.
       this.master.gain.setTargetAtTime(this.settings.volume, this.ctx.currentTime, 0.01);
     }
-    if (patch.timbre || patch.bpm) void this.preloadSamples();
+    if (patch.timbre || patch.bpm) {
+      // 음색을 바꾼 순간부터 미리 받아 둔다 → 재생 버튼을 눌렀을 때 첫 박부터 제 소리가 난다.
+      this.prefetch();
+      void this.preloadSamples();
+    }
   }
 
   /** 현재 실제로 울릴 음색 — 목소리는 VOICE_MAX_BPM 이상에서 자동으로 클릭이 된다. */
@@ -182,7 +189,15 @@ export class MetronomeEngine {
     // 모바일/자동재생 정책: 사용자 제스처 안에서 resume 해야 소리가 난다.
     if (this.ctx.state === 'suspended') await this.ctx.resume();
 
-    void this.preloadSamples();
+    // 버튼·FAB 는 먼저 반응시킨다(체감 지연 0). 실제 발음은 아래 준비가 끝난 뒤 시작.
+    this.playing = true;
+    this.onPlayingChange?.(true);
+
+    // 샘플 음색인데 아직 디코드 전이면 여기서 기다린다. 기다리지 않으면 첫 한두 박이
+    // 합성 클릭으로 새어 나온다(드럼을 골랐는데 "틱" 하고 시작하는 문제).
+    // mount 시 prefetch() 로 바이트를 미리 받아 두므로 보통 이 await 는 즉시 끝난다.
+    if (!this.samplesReady()) await this.preloadSamples();
+    if (!this.playing) return; // 기다리는 사이 사용자가 정지했으면 취소.
 
     this.pulseIndex = 0;
     this.subIndex = 0;
@@ -191,10 +206,33 @@ export class MetronomeEngine {
     // 첫 발음까지 약간의 여유 — 예약 창보다 앞서면 스케줄러가 즉시 과거를 예약하게 된다.
     this.nextNoteTime = this.ctx.currentTime + 0.08;
 
-    this.playing = true;
-    this.onPlayingChange?.(true);
     this.timer = window.setInterval(() => this.tick(), LOOKAHEAD_MS);
     this.tick();
+  }
+
+  /**
+   * 패널이 붙는 시점에 호출 — 현재 음색의 샘플 바이트를 미리 받아 둔다.
+   * AudioContext 를 만들지 않으므로 사용자 제스처 없이 불러도 자동재생 정책 경고가 없다.
+   */
+  prefetch(): void {
+    for (const url of this.timbreUrls()) {
+      if (this.buffers.has(url) || this.encoded.has(url) || this.prefetching.has(url)) continue;
+      const task = fetch(url)
+        .then((res) => {
+          if (!res.ok) throw new Error(`sample ${res.status}`);
+          return res.arrayBuffer();
+        })
+        .then((data) => {
+          this.encoded.set(url, data);
+        })
+        .catch(() => {
+          // 파일 미확보 — 합성 클릭 폴백으로 계속 동작한다.
+        })
+        .finally(() => {
+          this.prefetching.delete(url);
+        });
+      this.prefetching.set(url, task);
+    }
   }
 
   stop(): void {
@@ -366,15 +404,24 @@ export class MetronomeEngine {
 
   /* ---- 샘플 로드 ---- */
 
-  /** 현재 음색에 필요한 샘플만 받아 디코드한다(안 쓰는 음색은 네트워크 0). */
-  private async preloadSamples(): Promise<void> {
-    const timbre = this.settings.timbre;
-    const urls: string[] = [];
-    if (timbre === 'drum' && this.samples.drum) urls.push(...Object.values(this.samples.drum));
-    if (timbre === 'voice' && this.samples.voice && this.settings.bpm < VOICE_MAX_BPM) {
-      urls.push(...Object.values(this.samples.voice));
+  /** 현재 음색이 실제로 쓰는 샘플 URL 목록(안 쓰는 음색은 네트워크 0). */
+  private timbreUrls(): string[] {
+    const { timbre, bpm } = this.settings;
+    if (timbre === 'drum' && this.samples.drum) return Object.values(this.samples.drum);
+    if (timbre === 'voice' && this.samples.voice && bpm < VOICE_MAX_BPM) {
+      return Object.values(this.samples.voice);
     }
-    await Promise.all(urls.map((u) => this.loadBuffer(u)));
+    return [];
+  }
+
+  /** 현재 음색에 필요한 버퍼가 모두 디코드돼 있는지(= 폴백 없이 바로 시작할 수 있는지). */
+  private samplesReady(): boolean {
+    return this.timbreUrls().every((url) => this.buffers.has(url));
+  }
+
+  /** 현재 음색에 필요한 샘플만 받아 디코드한다. */
+  private async preloadSamples(): Promise<void> {
+    await Promise.all(this.timbreUrls().map((u) => this.loadBuffer(u)));
   }
 
   private loadBuffer(url: string): Promise<void> {
@@ -385,12 +432,25 @@ export class MetronomeEngine {
     const ctx = this.ctx;
     if (!ctx) return Promise.resolve();
 
-    const task = fetch(url)
-      .then((res) => {
-        if (!res.ok) throw new Error(`sample ${res.status}`);
-        return res.arrayBuffer();
+    // prefetch() 가 미리 받아 둔 바이트가 있으면 네트워크를 건너뛴다.
+    const cached = this.encoded.get(url);
+    const bytes = cached
+      ? Promise.resolve(cached)
+      : (this.prefetching.get(url) ?? Promise.resolve()).then(() => {
+          const late = this.encoded.get(url);
+          if (late) return late;
+          return fetch(url).then((res) => {
+            if (!res.ok) throw new Error(`sample ${res.status}`);
+            return res.arrayBuffer();
+          });
+        });
+
+    const task = bytes
+      .then((data) => {
+        // decodeAudioData 는 전달한 ArrayBuffer 를 detach 한다 → 재사용 불가라 캐시에서 뺀다.
+        this.encoded.delete(url);
+        return ctx.decodeAudioData(data);
       })
-      .then((data) => ctx.decodeAudioData(data))
       .then((buf) => {
         this.buffers.set(url, buf);
       })

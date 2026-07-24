@@ -54,6 +54,9 @@ export function mountMetronome(root: HTMLElement): void {
   }
 
   boundRoot = root;
+  // 저장된 음색이 샘플 기반(드럼·목소리)이면 지금 바이트를 미리 받아 둔다 — 재생 버튼을 누른
+  // 뒤에야 받기 시작하면 첫 한두 박이 합성 클릭으로 새어 나온다.
+  engine.prefetch();
   if (root.dataset.metroBound !== '1') {
     root.dataset.metroBound = '1';
     bind(root);
