@@ -37,6 +37,7 @@ const instrument = toInstrument(node.instrument);
   backHref={localize(lang, curriculumPath(curriculum!))}
   instrument={instrument}
   instrumentFromFilter={false}
+  functions={true}
 >
   <LessonView lang={lang} curriculumId={curriculum!} dayKey={dayKey} />
 </Base>

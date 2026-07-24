@@ -1,0 +1,154 @@
+---
+/**
+ * MetronomePanel.astro — 메트로놈 UI 마크업(정적).
+ * SSOT: 20_metronome.md PART B(B1 컨트롤 구성).
+ *
+ * 이 컴포넌트는 "셸 중립"이다 — 레슨 내 플로팅 오버레이(FunctionsFab.astro)와 전용 페이지
+ * (pages/tools/[tool].astro)가 같은 마크업을 그대로 쓴다. 셸만 다르고 패널 내부는 공용(A1).
+ *
+ * ⚠️ 여기엔 <script> 를 두지 않는다. 스크립트를 넣으면 이 컴포넌트를 포함한 모든 레슨 페이지
+ *    번들에 오디오 코드가 실려 지연 로드(V2)가 깨진다. 바인딩은 app.ts 가 FAB 클릭/전용 페이지
+ *    진입 시 `import('../scripts/metronome/panel')` 로 지연 로드해서 수행한다.
+ *
+ * 상태 복원(마지막 BPM·박자·음색…)은 localStorage 라 SSR 로는 알 수 없다 → 기본값(4/4·90BPM)으로
+ * 그려 두고 panel.ts 가 mount 시 저장값으로 다시 칠한다.
+ */
+import { translate } from '../lib/i18n';
+import { buildSampleManifest } from '../lib/samples.server';
+import { METER_SPECS, VOICE_MAX_BPM } from '../scripts/metronome/engine';
+import { BPM_MIN, BPM_MAX, DEFAULT_METRONOME_SETTINGS } from '../lib/storage';
+import type { Lang } from '../config';
+import type { Meter, Subdivision } from '../types/metronome';
+
+interface Props {
+  lang: Lang;
+  /** 전용 페이지 = true(제목/설명 노출). 오버레이 = false(세그먼트가 이미 문맥을 준다). */
+  standalone?: boolean;
+}
+const { lang, standalone = false } = Astro.props;
+
+// 빌드 타임 1회 탐지 — public/metronome/** 에 CC0 파일이 떨어지면 다음 빌드에서 자동으로 켜진다.
+const samples = buildSampleManifest();
+
+const METERS: Meter[] = ['2/4', '3/4', '4/4', '6/8'];
+const SUBDIVISIONS: Subdivision[] = [1, 2, 3, 4];
+const TIMBRES = [
+  { id: 'click', available: true },
+  { id: 'drum', available: samples.drum !== null },
+  { id: 'voice', available: samples.voice !== null },
+] as const;
+
+const initial = DEFAULT_METRONOME_SETTINGS;
+const initialRoles = METER_SPECS[initial.meter].roles;
+---
+
+<section class="metro" data-metro data-samples={JSON.stringify(samples)}>
+  {standalone && (
+    <header class="metro-head">
+      <h1 class="metro-title">{translate(lang, 'metro.title')}</h1>
+      <p class="metro-sub">{translate(lang, 'metro.sub')}</p>
+    </header>
+  )}
+
+  {/* 시각 박 표시 — 동그라미(번호) + 아래 점 점등. 강박은 파동(ripple). 세분음 시각 없음(B0). */}
+  <div class="metro-beats" data-metro-beats role="img" aria-label={translate(lang, 'metro.beats')}>
+    {initialRoles.map((role, i) => (
+      <span class={`metro-beat${role === 'strong' ? ' is-strong' : ''}`}>
+        <b>{i + 1}</b>
+        <i></i>
+      </span>
+    ))}
+  </div>
+
+  {/* BPM — 큰 숫자 + −/＋ + 슬라이더 */}
+  <div class="metro-bpm">
+    <button class="metro-step" type="button" data-metro-bpm-step="-1" aria-label={translate(lang, 'metro.bpm_down')}>−</button>
+    <div class="metro-bpm-val">
+      <strong data-metro-bpm-text>{initial.bpm}</strong>
+      <span>{translate(lang, 'metro.bpm')}</span>
+    </div>
+    <button class="metro-step" type="button" data-metro-bpm-step="1" aria-label={translate(lang, 'metro.bpm_up')}>+</button>
+  </div>
+  <input
+    class="metro-range"
+    type="range"
+    min={BPM_MIN}
+    max={BPM_MAX}
+    value={initial.bpm}
+    step="1"
+    data-metro-bpm-range
+    aria-label={translate(lang, 'metro.bpm')}
+  />
+
+  <div class="metro-actions">
+    <button class="btn secondary metro-tap" type="button" data-metro-tap>{translate(lang, 'metro.tap')}</button>
+    <button class="btn metro-play" type="button" data-metro-toggle aria-pressed="false">
+      <span data-metro-toggle-text>{translate(lang, 'metro.start')}</span>
+    </button>
+  </div>
+  <p class="metro-hint">{translate(lang, 'metro.tap_hint')}</p>
+
+  {/* 박자 — 2/4 · 3/4 · 4/4 · 6/8 (자유 입력 없음, B0) */}
+  <div class="metro-field">
+    <span class="metro-label">{translate(lang, 'metro.meter')}</span>
+    <div class="metro-seg" data-metro-meter role="group" aria-label={translate(lang, 'metro.meter')}>
+      {METERS.map((m) => (
+        <button type="button" data-value={m} class={m === initial.meter ? 'active' : ''} aria-pressed={m === initial.meter}>{m}</button>
+      ))}
+    </div>
+  </div>
+
+  {/* 세분 — 소리만(시각 이펙트 없음, B0) */}
+  <div class="metro-field">
+    <span class="metro-label">{translate(lang, 'metro.subdivision')}</span>
+    <div class="metro-seg" data-metro-subdivision role="group" aria-label={translate(lang, 'metro.subdivision')}>
+      {SUBDIVISIONS.map((s) => (
+        <button type="button" data-value={s} class={s === initial.subdivision ? 'active' : ''} aria-pressed={s === initial.subdivision}>
+          {translate(lang, `metro.sub_${s}`)}
+        </button>
+      ))}
+    </div>
+  </div>
+
+  {/*
+    음색 — 합성 클릭은 항상 가능(자산 0KB). 드럼·목소리는 샘플 슬롯 계약(20_metronome.md B3)에
+    맞는 CC0 파일이 public/metronome/** 에 있을 때만 활성화된다(빌드 타임 탐지).
+  */}
+  <div class="metro-field">
+    <span class="metro-label">{translate(lang, 'metro.timbre')}</span>
+    <div class="metro-seg" data-metro-timbre role="group" aria-label={translate(lang, 'metro.timbre')}>
+      {TIMBRES.map((tb) => (
+        <button
+          type="button"
+          data-value={tb.id}
+          class={tb.id === initial.timbre ? 'active' : ''}
+          aria-pressed={tb.id === initial.timbre}
+          disabled={!tb.available}
+          aria-disabled={!tb.available}
+        >
+          {translate(lang, `metro.timbre_${tb.id}`)}
+          {!tb.available && <em class="metro-soon">{translate(lang, 'metro.sample_soon')}</em>}
+        </button>
+      ))}
+    </div>
+  </div>
+
+  <div class="metro-field">
+    <span class="metro-label">{translate(lang, 'metro.volume')}</span>
+    <input
+      class="metro-range metro-volume"
+      type="range"
+      min="0"
+      max="100"
+      value={Math.round(initial.volume * 100)}
+      step="1"
+      data-metro-volume
+      aria-label={translate(lang, 'metro.volume')}
+    />
+  </div>
+
+  {/* 목소리 자동 비활성(≥VOICE_MAX_BPM) 안내 — panel.ts 가 조건에 따라 hidden 토글 */}
+  <p class="metro-note" data-metro-note hidden>
+    {translate(lang, 'metro.voice_limit', { bpm: VOICE_MAX_BPM })}
+  </p>
+</section>

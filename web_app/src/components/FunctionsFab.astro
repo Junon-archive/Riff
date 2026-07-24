@@ -1,0 +1,73 @@
+---
+/**
+ * FunctionsFab.astro — Functions 공통 셸(레슨/커리큘럼 페이지 우하단 FAB + 플로팅 오버레이).
+ * SSOT: 20_metronome.md PART A(A0·A2).
+ *
+ * - 랜딩에는 노출하지 않는다(랜딩은 카드 행으로 진입 — FunctionCards.astro).
+ * - FAB 를 누르면 페이지 전체가 바뀌지 않고 오버레이가 뜬다(커리큘럼에서 나간 느낌 X).
+ * - 오버레이 맨 위 Segmented Control 로 도구를 고른다. 미구현 도구는 "곧 열려요"로 비활성.
+ * - 재생 중 FAB 아이콘 = 이퀄라이저 바 애니메이션(app.css `.fn-fab.playing`).
+ * - open/close·패널 전환·오디오 엔진 지연 로드는 전부 scripts/app.ts 가 담당한다.
+ */
+import { translate } from '../lib/i18n';
+import { findFunctionTool, overlayFunctionTools } from '../lib/functions';
+import MetronomePanel from './MetronomePanel.astro';
+import type { Lang } from '../config';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+
+const tools = overlayFunctionTools();
+const metronome = findFunctionTool('metronome')!;
+const defaultTool = tools.find((tool) => tool.ready) ?? tools[0]!;
+const iconSvg = (inner: string, size: number) =>
+  `<svg viewBox="0 0 24 24" width="${size}" height="${size}" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${inner}</svg>`;
+---
+
+<button
+  class="fn-fab"
+  id="fnFab"
+  type="button"
+  aria-label={translate(lang, 'fn.open')}
+  aria-controls="fnScrim"
+  aria-expanded="false"
+>
+  <span class="fn-fab-ico" set:html={iconSvg(metronome.icon, 26)}></span>
+  {/* 재생 중 표시 — 아이콘 대신 이퀄라이저 바가 움직인다(CSS 로 교차 전환). */}
+  <span class="fn-eq" aria-hidden="true"><i></i><i></i><i></i></span>
+</button>
+
+<div class="scrim fn-scrim" id="fnScrim">
+  <div class="sheet fn-sheet" role="dialog" aria-modal="true" aria-label={translate(lang, 'fn.open')}>
+    <div class="grip"></div>
+
+    <div class="fn-seg" id="fnSeg" role="tablist" aria-label={translate(lang, 'fn.open')}>
+      {tools.map((tool) => (
+        <button
+          type="button"
+          role="tab"
+          class={tool.id === defaultTool.id ? 'active' : ''}
+          data-fn-tab={tool.id}
+          aria-selected={tool.id === defaultTool.id}
+          disabled={!tool.ready}
+          aria-disabled={!tool.ready}
+        >
+          <span set:html={iconSvg(tool.icon, 18)}></span>
+          <span>{translate(lang, `fn.${tool.id}`)}</span>
+          {!tool.ready && <em class="fn-soon">{translate(lang, 'fn.soon')}</em>}
+        </button>
+      ))}
+    </div>
+
+    {/* 패널 교체도 부드럽게(A0) — .fn-panel 의 opacity/translate 전환은 app.css 담당. */}
+    <div class="fn-panels">
+      <div class="fn-panel" data-fn-panel="metronome">
+        <MetronomePanel lang={lang} />
+      </div>
+    </div>
+
+    <button class="btn ghost" data-close-sheet>{translate(lang, 'fn.close')}</button>
+  </div>
+</div>

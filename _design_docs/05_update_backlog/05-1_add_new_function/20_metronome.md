@@ -1,14 +1,15 @@
 ---
 id: 20-metronome
-status: TODO
+status: DONE (v1 구현·검증 완료 2026-07-24 — Functions 공통 셸 + 메트로놈. 합성 클릭 라이브 / 드럼·목소리는 샘플 파일만 대기)
 priority: high
 risk: medium
 depends_on: []
 owner: null
 ---
 
-> 🔴 TODO (2026-07-24). **설계 확정 완료 · 구현 대기.** 모든 결정 마감(아래 확정 표들). 이 문서 하나로 다른 CC 세션이 바로 착수 가능. 다음 실물 준비물: **CC0 드럼(킥·스네어·하이햇)·목소리(One~) 샘플 확보**.
-> **릴리스 순서:** 메트로놈 = **Functions 1호**(자산 0·리스크 낮음) → 먼저 배포. 배킹(21)은 후속. 이 문서가 **Functions 공통 셸(FAB·오버레이·전용 페이지)의 SSOT** — 21_backing 은 이 셸을 참조만 한다.
+> ✅ DONE (2026-07-24). **Functions 공통 셸 + 메트로놈 v1 구현·검증 완료.** 검증 게이트 V1~V7 전량 통과(아래 「구현 기록」).
+> **남은 실물 준비물 1가지:** CC0 **드럼(킥·스네어·하이햇)·목소리(One~Six)** 샘플 파일. 아래 **§B3-1 샘플 슬롯 계약**대로 `web_app/public/metronome/**` 에 떨구기만 하면 **다음 빌드에서 자동으로 음색이 활성화**된다(코드 수정 0).
+> **릴리스 순서:** 메트로놈 = **Functions 1호**(자산 0·리스크 낮음) → 배포 완료. 배킹(21)은 후속. 이 문서가 **Functions 공통 셸(FAB·오버레이·전용 페이지)의 SSOT** — 21_backing 은 이 셸을 참조만 한다(레지스트리 `ready: true` + 패널 컴포넌트만 추가하면 카드·세그먼트·라우트가 자동 생성).
 
 # 20 · 메트로놈 (Metronome) + Functions 공통 셸
 
@@ -110,7 +111,26 @@ owner: null
 - **일반 클릭 = 합성(자산 0KB):** `OscillatorNode`+`GainNode` 엔벨로프(빠른 attack·지수 감쇠). 강박=높은 음/큰 게인, 약박=낮은 음. 세분음은 더 여리게. → 예쁜 클릭을 파일 없이.
 - **드럼·목소리 = 샘플:** 짧은 mono 파일을 빌드 자산으로 로드→`decodeAudioData`→`AudioBuffer` 캐시. 매 발음마다 **새 `AudioBufferSourceNode`**.
   - **"빠른 템포에서 목소리 겹침/잘림" 해결됨:** 매 박 새 노드라 샘플이 박 간격보다 길어도 **겹쳐 재생(끊김 없음)**. (단일 `<audio>` 방식의 문제였음.) 매우 빠를 때 처리(겹침 허용/하드컷/특정 BPM 이상 비활성)는 아래 Q.
-- **샘플 슬롯 계약(파일만 넣으면 되게):** `sounds/{voice}/{1..N}.m4a`, `sounds/drum/{accent,beat,sub}.m4a` 식 규약 + 매핑 테이블 미리 정의 → CC0 파일 확보 시 드롭인.
+- **샘플 슬롯 계약:** 아래 §B3-1 로 확정(구현 완료).
+
+### B3-1. 샘플 슬롯 계약 (확정 2026-07-24 · 구현 완료 — CC0 확보 세션은 이 규약만 보면 됨)
+
+**둘 곳(고정 경로).** `web_app/public/` 아래에 그대로 떨군다. 빌드 타임에 `src/lib/samples.server.ts` 가 존재를 탐지해 패널의 `data-samples` JSON 으로 내려주고, 엔진이 그 URL 을 `fetch → decodeAudioData → AudioBuffer` 로 캐시한다.
+
+| 슬롯 | 경로 | 쓰임(매핑) |
+|---|---|---|
+| 킥 | `public/metronome/drum/kick.m4a` | **강박**(모든 박자의 1박) |
+| 스네어 | `public/metronome/drum/snare.m4a` | **백비트** — 4/4의 2·4박, 2/4의 2박, **6/8은 4번째 8분**(부강박). 3/4엔 없음 |
+| 하이햇 | `public/metronome/drum/hihat.m4a` | 나머지 약박 + **모든 세분음**(게인 0.22로 아주 여리게) |
+| 목소리 1~6 | `public/metronome/voice/1.m4a` … `6.m4a` | 펄스 번호 그대로(`1.m4a`=1박). **6개 필요**(6/8의 8분 6펄스가 최대) |
+
+**규칙(중요).**
+- **표준 확장자 = `.m4a`(AAC).** 다른 포맷도 자동 인식한다 — 탐색 우선순위 `m4a → mp3 → ogg → wav`. 같은 슬롯에 여러 포맷을 두면 앞선 것이 쓰인다.
+- **세트 단위로만 켜진다.** 드럼은 **3개 전부**, 목소리는 **1~6 전부** 있어야 그 음색이 활성화된다. 하나라도 없으면 그 음색 버튼은 "준비 중"으로 비활성(합성 클릭은 언제나 동작).
+- 권장 스펙: **mono · 44.1kHz · 길이 ≤ 0.5s(목소리는 ≤ 0.7s) · 피크 -1dBFS 정규화 · 앞쪽 무음(선행 정적) 제거**. 앞 무음이 남아 있으면 그만큼 박이 뒤로 밀려 들린다.
+- 목소리는 **영어 One·Two·Three·Four·Five·Six**(3언어 공통, B0 확정).
+- **라이선스 = CC0**. 출처·라이선스는 확보 세션이 `_design_docs/05_update_backlog/05-1_add_new_function/` 에 별도 메모로 남길 것.
+- 파일이 들어온 뒤 **코드 수정은 필요 없다.** `npm run build` 만 다시 돌리면 음색 버튼이 자동으로 켜진다.
 
 ### B4. 결정 완료 (2026-07-24)
 
@@ -126,6 +146,60 @@ owner: null
 - 드럼 = **킥/스네어/하이햇 3종 키트**(백비트 스네어 포함) — 확정.
 - 강박 파동 세기: Toss 톤 상 **아주 은은하게**가 기본(구현 시 시각 튜닝).
 
+---
+
+## 구현 기록 (2026-07-24)
+
+### 파일 맵
+
+| 역할 | 파일 |
+|---|---|
+| 도구 레지스트리(SSOT — 카드·세그먼트·라우트가 전부 이걸 봄) | `web_app/src/lib/functions.ts` |
+| 샘플 존재 탐지(빌드 타임, node:fs) | `web_app/src/lib/samples.server.ts` |
+| 오디오 엔진(룩어헤드 스케줄러·합성·샘플) | `web_app/src/scripts/metronome/engine.ts` |
+| 패널 컨트롤러(DOM 배선·rAF 시각·탭 템포) | `web_app/src/scripts/metronome/panel.ts` |
+| 패널 마크업(셸 중립 — 오버레이·전용 페이지 공용) | `web_app/src/components/MetronomePanel.astro` |
+| FAB + 플로팅 오버레이 + Segmented Control | `web_app/src/components/FunctionsFab.astro` |
+| 랜딩 진입 카드 행(4개) | `web_app/src/components/FunctionCards.astro` → `HomeView.astro` |
+| 전용 페이지(ko / en·ja) | `web_app/src/pages/tools/[tool].astro` · `pages/[lang]/tools/[tool].astro` |
+| 지연 로드·오버레이 open/close·이동 시 정지 | `web_app/src/scripts/app.ts` (`loadMetronome()` 동적 import) |
+| 설정 저장 래퍼 · 타입 | `lib/storage.ts`(`riff_metronome` 키) · `types/metronome.ts` |
+| 스타일 | `web_app/src/styles/functions.css` |
+| i18n | `src/i18n/{ko,en,ja}.json` — `fn.*`(도구 이름·FAB) · `metro.*`(패널) |
+
+### 확정된 규약·상수
+
+- **라우트:** 전용 페이지 = `/tools/{toolId}/`(ko 무접두) · `/en/tools/…` · `/ja/tools/…`. 헬퍼 `lib/urls.ts` `toolPath()`. sitemap.xml 에 자동 포함.
+- **FAB 노출:** `Base.astro` 의 `functions` prop(기본 false) → 커리큘럼 개요·레슨 페이지 4개 라우트만 `true`. 랜딩·도구 페이지는 노출 없음.
+- **BPM 30~300**(`lib/storage.ts` `BPM_MIN`/`BPM_MAX`), 기본 90 · 4/4 · 세분 없음 · 클릭 · 볼륨 0.8.
+- **목소리 자동 비활성 임계 = 180 BPM** — `engine.ts` `VOICE_MAX_BPM` 상수(여기만 고치면 됨).
+- **6/8 의 BPM 기준 = 8분음표(=시각 동그라미 1개).** 강박 1, 부강박 4번째 8분.
+- **세분은 소리만**(8분/셋잇단/16분) — 시각 이펙트 없음. 시각은 박 동그라미 + 아래 점 점등 + 강박 파동뿐.
+- **백그라운드 탭 보정:** 예약 창을 0.1s → 1.5s 로 넓혀(`SCHEDULE_AHEAD_HIDDEN_S`) 타이머 throttle 에도 소리가 끊기지 않게 했다. 정지 시에는 아직 울리지 않은 예약 노드를 전부 취소해 꼬리 소리를 남기지 않는다.
+
+### 검증 결과 (V1~V7 전량 통과)
+
+| 게이트 | 결과 |
+|---|---|
+| V1 빌드·타입 | `npm run build` 1009 페이지 exit 0 · `astro check` **0 errors / 0 warnings** |
+| V2 지연 로드 | 엔진은 별도 async 청크(`_astro/panel.*.js`, 8.4KB)로 분리. **어떤 페이지 HTML 에도 `<script>`·`modulepreload` 없음** — FAB 클릭/도구 페이지 진입 시에만 로드(헤드리스 실측 확인) |
+| V3 타이밍 | 가짜 클록 시뮬레이션: 4/4 120BPM **10분(1201발음) 간격오차 0.000ms·누적 0.000ms**, 6/8 200BPM 16분세분 5분(4001발음) 동일, 1초 throttle 백그라운드 3분에도 구멍 0 |
+| V4 이동 시 정지 | 레슨 d1→d2 소프트 내비게이션 시 정지 + FAB 리셋 + 오버레이 닫힘, 이동 후 저장 설정(6/8) 복원 확인 |
+| V5 오버레이 지속 | 닫아도 재생 유지 + FAB 이퀄라이저 유지 + `aria-expanded` 리셋 확인 |
+| V6 i18n | ko/en/ja 3언어 라벨 누락 0(전용 페이지 3언어 렌더 확인) |
+| V7 Toss 톤·테마 | 라이트/다크 × 기타(파랑)/베이스(초록) 스크린샷 육안 확인 — 액센트가 `riff_instrument` 를 따라 전환됨 |
+
+(헤드리스 Chrome CDP 자동 점검 28/28 통과 — FAB·오버레이·지연로드·재생·설정 저장·이동 정지·랜딩 카드·전용 페이지·i18n.)
+
+### 서비스워커 메모
+
+`public/sw.js` 의 앱셸 precache(`SHELL` 배열)에는 **메트로놈 샘플을 넣지 않았다** — `cache.addAll()` 은 목록 중 하나라도 404 면 install 전체가 실패하므로, 아직 없는 파일을 미리 적어 두면 SW 가 깨진다. 샘플은 **동일 출처 정적 자산 규칙(StaleWhileRevalidate)** 으로 첫 재생 뒤 자동 캐시된다. 파일 확보 후 오프라인 첫 사용까지 보장하고 싶다면 그때 `SHELL` 에 추가하고 `CACHE_VERSION` 을 올릴 것.
+
+### 남은 일
+
+- **CC0 샘플 확보**(§B3-1 규약대로 드롭인) → 드럼·목소리 음색 자동 활성화. 그 뒤 실기기 톤 튜닝(게인 밸런스)만 선택적으로.
+- 21_backing 은 이 셸 위에 얹는다: `lib/functions.ts` 의 `backing.ready → true` + `BackingPanel.astro` 추가 + `pages/tools/[tool].astro` 분기 한 줄.
+
 ## 검증 게이트 (착수 후)
 
 - V1 `npm run build` exit 0 · `astro check` 0.
@@ -138,12 +212,13 @@ owner: null
 
 ## 체크리스트
 
-- [ ] 「결정 대기 질문」 답변 수합 → 확정 표 반영
-- [ ] Functions 공통 셸 PoC(FAB·플로팅 오버레이·Segmented·부드러운 전환·지연 로드·before-swap 정지)
-- [ ] Web Audio 룩어헤드 스케줄러 + 세분 + 시각 동기(글로우/파동)
-- [ ] 합성 클릭 음색(강/약/세분)
-- [ ] 드럼·목소리 샘플 슬롯/디코드/매핑(파일 대기 상태까지)
-- [ ] 박자(2/4·3/4·4/4·6/8)·탭 템포·볼륨·설정 저장
-- [ ] 전용 페이지(3언어) + 랜딩 카드 행 진입
-- [ ] 검증 게이트 통과
-- [ ] Roadmap.md 갱신 + 본 문서 status→(부분)DONE
+- [x] 「결정 대기 질문」 답변 수합 → 확정 표 반영
+- [x] Functions 공통 셸(FAB·플로팅 오버레이·Segmented·부드러운 전환·지연 로드·before-swap 정지)
+- [x] Web Audio 룩어헤드 스케줄러 + 세분 + 시각 동기(글로우/파동)
+- [x] 합성 클릭 음색(강/약/세분)
+- [x] 드럼·목소리 샘플 슬롯/디코드/매핑(파일 대기 상태까지 — §B3-1 계약 확정)
+- [x] 박자(2/4·3/4·4/4·6/8)·탭 템포·볼륨·설정 저장
+- [x] 전용 페이지(3언어) + 랜딩 카드 행 진입
+- [x] 검증 게이트 통과(V1~V7)
+- [x] Roadmap.md 갱신 + 본 문서 status→DONE
+- [ ] **(외부 대기)** CC0 드럼·목소리 샘플 파일 드롭인 → 재빌드

@@ -2,7 +2,7 @@
 
 > 무료 기타 레슨 웹 서비스. 이 문서는 **현재 구현 상황·변경 로그·다음 작업**을 관리하는 단일 대시보드다.
 > 규칙: 작업이 하나 끝날 때마다 이 파일을 갱신한다(`CLAUDE.md` 고정 규칙).
-> 최종 갱신: 2026-07-24 · **라이브: https://guitar-riff.pages.dev**
+> 최종 갱신: 2026-07-24(백로그 20 메트로놈 구현 완료) · **라이브: https://guitar-riff.pages.dev**
 
 ---
 
@@ -20,6 +20,7 @@
 | **web_app (Astro)** | ✅ 운영 | Astro+TS 정적 163 페이지, SEO(레슨별 HTML·hreflang), View Transitions |
 | **도네이션** | ✅ 운영 | 카카오페이·토스·PayPal 실연동(QR/링크 토글), 드림기타 후원 연출, 세무 고지 |
 | **커리큘럼 분류** | ✅ 완료 | forWho·개월/일수 배지 + 악기 필터 칩 인프라(2종+ 시 노출) |
+| **Functions(연습 도구)** | ✅ 1호 라이브 / 🟡 확장중 | **메트로놈**(`/tools/metronome/`, 3언어) + 공통 셸(랜딩 카드·레슨 FAB→플로팅 오버레이·지연 로드). 드럼/목소리 음색은 CC0 샘플 파일 대기. 반주(21)·튜너(22)·루프(23)는 "곧 열려요" |
 | **배포(CF Pages)** | ✅ 완료 | GitHub 연동 자동배포, `guitar-riff.pages.dev` |
 
 **요약:** 설계 → 3개월 콘텐츠(3언어) → Astro 앱 → 실도메인 배포 → 도네이션 실연동까지 **1차 릴리스 완료**. 이후는 콘텐츠 확장(신규 커리큘럼)과 운영 다듬기 단계.
@@ -51,8 +52,9 @@
 
 ### 🟨 다음 후보 (신규 개발)
 - **📁 업데이트 백로그 — `_design_docs/05_update_backlog/`** — 미래 렌더러/구조 개선을 작업 묶음별 상세 설계로 문서화. 각 md에 관련 코드 위치·수정 상세·기존 불변 보장·검증 게이트·체크리스트·status. 착수 시 해당 문서 따라 진행하고 status 갱신. **README.md가 인덱스.** 현재 상태:
-  - 🟢 **완료(18/19):** 01·02·03·04·**05**(악기 세그먼트 토글+베이스 연초록 테마+View Transition)·06·08·09·**10 베이스 엔진**(B0~B4: 클레프·slap·튜닝·다현·지판·옥타브앵커)·**11~16 신규 커리큘럼 6종**(블루스·R&B네오소울·베이스기초·슬랩펑크·셔플바운스·워킹 — 프롬프트+day 저작 **전부 완료**)·**17 악보 세로 줄바꿈 v2**(스크롤 스코핑 버그 수정 포함)·**18 solo tab→staff 이식**(tab.ts 제거)·**19 카드 가로폭·중앙정렬**. 상태 인덱스 = `_design_docs/05_update_backlog/README.md`.
-  - 🟡 **진행 중(유일한 미완 백로그):** 07 PWA 앱화(A·B 검증완료·C 안드검증보류·D 미착수).
+  - 🟢 **완료(19/20):** **20 Functions 공통 셸 + 메트로놈 v1**(FAB·플로팅 오버레이·전용 페이지·지연 로드·룩어헤드 스케줄러 — CC0 샘플 파일만 외부 대기)·01·02·03·04·**05**(악기 세그먼트 토글+베이스 연초록 테마+View Transition)·06·08·09·**10 베이스 엔진**(B0~B4: 클레프·slap·튜닝·다현·지판·옥타브앵커)·**11~16 신규 커리큘럼 6종**(블루스·R&B네오소울·베이스기초·슬랩펑크·셔플바운스·워킹 — 프롬프트+day 저작 **전부 완료**)·**17 악보 세로 줄바꿈 v2**(스크롤 스코핑 버그 수정 포함)·**18 solo tab→staff 이식**(tab.ts 제거)·**19 카드 가로폭·중앙정렬**. 상태 인덱스 = `_design_docs/05_update_backlog/README.md`.
+  - 🟡 **진행 중:** 07 PWA 앱화(A·B 검증완료·C 안드검증보류·D 미착수).
+  - 🔴 **미착수(Functions 확장):** 21 배킹(설계+기타 프롬프트 41트랙 완료·음원 생성 대기) · 22 튜너 · 23 루프 스테이션. 셸은 20에서 완성돼 있어 각 도구는 레지스트리 `ready` + 패널 컴포넌트만 추가하면 된다.
 - **타브 재생 기능** — 향후 자체 Web Audio로 릭 재생·속도조절(AlphaTab 미채택 결정, 필요 시 자체 구현).
 - **오선보 v2(선택)** — 산문 label·technique(H/P/sl/P.M.) 오버레이, 리듬 전용 슬래시 표기. (v1 오선보+타브 결합은 구현 완료 — 위 ✅ 참조.)
 
@@ -79,6 +81,30 @@
 ---
 
 ## 4. 변경 로그 (Changelog)
+
+### 2026-07-24 (백로그 20 **구현 완료** — Functions 공통 셸 + 메트로놈 v1, 검증 게이트 V1~V7 통과)
+- **범위:** 커리큘럼 외 연습 도구("Functions") 1호 출시. **공통 셸**(랜딩 카드 행 · 레슨 FAB → 플로팅 오버레이 · Segmented Control · 도구별 전용 페이지 · 지연 로드 · 이동 시 정지)과 **메트로놈 기능**을 함께 구현. SSOT = `05-1_add_new_function/20_metronome.md`.
+- **신규 파일:** `lib/functions.ts`(도구 레지스트리 SSOT) · `lib/samples.server.ts`(빌드타임 샘플 탐지) · `scripts/metronome/{engine,panel}.ts` · `components/{MetronomePanel,FunctionsFab,FunctionCards}.astro` · `pages/tools/[tool].astro` + `pages/[lang]/tools/[tool].astro` · `styles/functions.css` · `types/metronome.ts`.
+- **타이밍(핵심):** `setInterval` 직접 발음 금지 원칙대로 **Web Audio 룩어헤드 스케줄러**(25ms 폴링이 미래 100ms를 `AudioContext.currentTime`에 예약). 시각 표시는 **같은 스케줄러 큐를 rAF가 소비**해 눈·귀 동기. 가짜 클록 시뮬레이션에서 **10분 1201발음 간격오차 0.000ms·누적 0.000ms**. 백그라운드 탭(타이머 1초 throttle)에서는 예약 창을 1.5초로 넓혀 소리 구멍 0, 정지 시엔 아직 안 울린 예약 노드를 전부 취소해 꼬리 소리 없음.
+- **음색:** 합성 클릭(OscillatorNode+GainNode, **자산 0KB**) 라이브 — 강박 1320Hz / 백비트 990 / 약박 880 / 세분 1760(아주 여리게). 드럼·목소리는 **샘플 슬롯까지 구현 완료**(디코드·매핑·폴백) — 파일만 오면 켜진다.
+- **샘플 슬롯 계약 확정(문서 §B3-1):** `public/metronome/drum/{kick,snare,hihat}.m4a` · `public/metronome/voice/{1..6}.m4a`. 확장자 `m4a→mp3→ogg→wav` 자동 탐색, **세트 단위로만 활성화**, 빌드타임 존재 탐지 → `data-samples` JSON. **파일 드롭인 + 재빌드만으로 자동 활성(코드 수정 0).** 매핑: 킥=강박 · 스네어=백비트(4/4 2·4박, 6/8 4번째 8분) · 하이햇=약박·세분.
+- **기능:** BPM 30~300(−/＋·슬라이더·**탭 템포**) · 박자 2/4·3/4·4/4·6/8 · 세분 8분/셋잇단/16분(**소리만**) · 볼륨 · 설정 저장(`riff_metronome` 키, storage.ts 래퍼). 시각 = 박 동그라미 + 아래 점 점등(은은한 글로우) + **강박 파동**, 6/8은 8분 6점. 목소리는 **180 BPM↑ 자동 비활성**(`VOICE_MAX_BPM` 상수) + 안내 문구.
+- **정적 체감 유지(V2):** 오디오 엔진은 **별도 async 청크**(`_astro/panel.*.js` 8.4KB) — 어떤 페이지 HTML 에도 `<script>`·`modulepreload`가 없고 FAB 최초 클릭/도구 페이지 진입 때만 `import()`. 메트로놈을 안 쓰는 페이지뷰의 오디오 비용 **0**.
+- **셸 배선:** `Base.astro` 에 `functions` prop 신설 → 커리큘럼 개요·레슨 4개 라우트만 FAB 노출(랜딩·도구 페이지 제외). 오버레이는 기존 `.scrim` 패턴 변형(닫기·백드롭 클릭 재사용), **닫아도 같은 페이지 안에서는 계속 재생**, `astro:before-swap` 에서 정지+FAB 리셋(`transition:persist` 불필요). 재생 중 FAB = **이퀄라이저 바 애니메이션**.
+- **라우트/SEO:** `/tools/{tool}/`(ko 무접두) · `/en/tools/…` · `/ja/tools/…` — `lib/urls.ts` `toolPath()`, sitemap.xml 자동 포함. 랜딩 카드 4개(튜너·메트로놈·반주·루프) 중 미구현 3개는 "곧 열려요"로 비활성.
+- **i18n:** `fn.*`(도구 이름·FAB·곧열려요) + `metro.*`(패널 전량) 3언어 신설, 누락 0.
+- **검증:** `npm run build` **1009 페이지 exit 0** · `astro check` **0 errors/0 warnings** · 헤드리스 Chrome(CDP) 자동 점검 **28/28 통과**(지연로드·오버레이 open/close·재생 지속·레슨 이동 정지·설정 저장/복원·랜딩 카드·전용 페이지·3언어) · 라이트/다크 × 기타(파랑)/베이스(초록) 스크린샷 육안 확인.
+- **다음:** CC0 샘플 확보(외부 대기) → 드럼·목소리 자동 활성. 21 배킹은 이 셸에 `ready: true` + 패널 컴포넌트만 얹으면 된다.
+
+### 2026-07-24 (배킹 21 — Suno 프롬프트 뱅크 저작: 기타 41트랙/13파일, `backing_prompts/` 신설)
+- **범위:** 21_backing 확정 매트릭스(기타 41트랙)를 실제 음원 생성용 **Suno 프롬프트**로 저작. 신규 디렉터리 `_design_docs/05_update_backlog/05-1_add_new_function/backing_prompts/`(+`guitar/`·`bass/`). 문서만 — 음원 생성·구현 미착수.
+- **저장 규약 신설:** md 1개 = (악기 × 장르 × 조), 템포 3개(드럼 5개)는 프롬프트 동일·BPM만 달라 한 파일에 「렌더 타깃」 표로 묶음. **md 파일명 = 오디오 파일명 접두사** — 오디오는 `{장르슬러그}_{조}_{bpm}.m4a`(드럼만 `drums_{bpm}.m4a`), 슬러그 `drums/blues/rock/funk/neosoul/jazz`. 실제 배치 경로는 구현 세션(매니페스트 `backing.json`)에 위임.
+- **기타 13파일:** drums · blues_A/E · rock_Am/E/G · funk_Am/Em · neosoul_Am/Dm · jazz_Am/C/F. 각 파일에 스케일 라벨·폼(마디)·제외 파트·**코드 진행**·영문 스타일 프롬프트·Exclude Styles·트림 메모·**생성 로그(생성일/링크 = Suno-Pro 라이선스 기록란)**.
+- **커리큘럼 원본 대조로 진행 확정:** 블루스 A7–D7–E7(12마디, 퀵체인지 없음) · 펑크 **E9**(funk_rhythm 원본 확인, 6+2 뱀프) · 네오소울 **Dm9–G13**(neosoul_voicing 원본) · 코드빌딩 **Cmaj**(jazz ii-V-I in C) · 입문일렉 **E5/G5/D5/A5**(rock_E 파워코드) · solo_scale Am(rock Am–F–C–G, minor ii-V-i Bm7♭5–E7♭9–Am7).
+- **폼 길이 확정:** 블루스 12마디(필수) · 그 외 16마디 · 드럼만 16마디(8·16마디째 필). 총 ≈24.6분 → **≈24 MB**(R3 추정 ~21MB 대비 소폭 상향, 예산 80MB의 30%). 빠른 템포에서 루프가 짧아 밤티 나는 걸 막으려 8마디 대신 16마디 채택.
+- **프롬프트 공통 규칙:** instrumental+Instrumental 토글 이중 안전장치 · 제외 파트 명시(기타=리드기타 제외) · 루프 친화 지시(no intro/outro/fade/build/breakdown, constant tempo) · 솔로 자리 확보 믹스 지시 · Exclude Styles 블록.
+- **생성 워크플로 문서화(`backing_prompts/README.md`):** ① **확장자 3단계** — Suno 다운로드 WAV → 편집 WAV 유지 → 최종 `.m4a`(AAC-LC 128k/44.1k/스테레오) 딱 한 번 인코딩(MP3 편집 금지: 손실 누적+패딩). ② **저장 경로 권장안** — 배포는 `web_app/public/audio/backing/{guitar|bass}/`(URL `/audio/backing/…`, `public/curriculum`·`public/icons` 관례 + 메트로놈 `audio/metronome/` 자리 확보), **작업 WAV는 repo 밖**(수백 MB → 저장소 비대화, 히스토리 영구 잔존). ③ **「사람이 순서대로 따라 하는 방법」 STEP 0~10 워크스루** — 준비물·Suno 세팅·`{BPM}`/`{FEEL}` 치환·테이크 검수 체크리스트(트랙별 빈발 사고 표)·WAV 다운로드·1폼 트림(`마디×4×60÷BPM` 목표길이 대조, 제로크로싱, 잔향 크로스페이드)·ffmpeg 인코딩·**인코딩 후** `loopStart/loopEnd` 실측(AAC 프라이밍 패딩 때문에 WAV 기준 측정은 어긋남, 콘솔 스니펫 수록)·repo 배치+생성 로그 기록 · 「절대 하지 말 것」 표.
+- **연동 갱신:** 21_backing.md 「Suno 프롬프트 뱅크」 인라인 표 → `backing_prompts/` 포인터로 교체(경로 권장안·WAV 제외 원칙 명시) + 체크리스트/헤더 상태 갱신. 05_update_backlog/README.md 21행에 프롬프트 뱅크 링크. 베이스 세트는 `bass/README.md`에 규약만(조 구성은 기타 배포 후 결정).
 
 ### 2026-07-24 (Functions 설계 착수 — 메트로놈·배킹 백로그 문서화, 구현 미착수)
 - **범위:** 커리큘럼 외 인터랙티브 연습 도구("Functions") 신규 트랙 설계 시작. `_design_docs/05_update_backlog/05-1_add_new_function/` 에 **20 메트로놈**(+Functions 공통 셸 SSOT)·**21 배킹**(기타/베이스 분리·Suno Pro) 설계 문서 작성. 22 튜너·23 루프스테이션은 자리만.

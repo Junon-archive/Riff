@@ -1,0 +1,223 @@
+/* ============================================================
+   Functions — 연습 도구 공통 셸 + 메트로놈 패널
+   SSOT: _design_docs/05_update_backlog/05-1_add_new_function/20_metronome.md
+   토큰(색·반경·그림자)은 tokens.css 만 쓴다 — 색 하드코딩 금지(기타 파랑/베이스 초록 자동 승계).
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   랜딩 진입 카드 행 (튜너 · 메트로놈 · 반주 · 루프)
+   ------------------------------------------------------------ */
+.fn-cards {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px;
+  margin-top: 20px;
+}
+.fn-card {
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  padding: 14px 4px 12px; text-align: center;
+  background: var(--card); border: 1px solid var(--line); border-radius: var(--radius-sm);
+  color: var(--text); text-decoration: none;
+  transition: transform .12s ease, background .15s, border-color .15s;
+}
+.fn-card:active { transform: scale(.97); background: var(--grey-50); }
+.fn-card-ico {
+  display: grid; place-items: center; width: 38px; height: 38px;
+  border-radius: 12px; background: var(--primary-weak); color: var(--primary);
+}
+.fn-card-name { font-size: 12.5px; font-weight: 700; letter-spacing: -0.02em; }
+/* 미구현 도구 — 비활성이지만 "곧 열려요"로 로드맵을 조용히 알린다(긁지 않기). */
+.fn-card.is-soon { background: var(--card-sub); cursor: default; }
+.fn-card.is-soon .fn-card-ico { background: var(--grey-100); color: var(--text-3); }
+.fn-card.is-soon .fn-card-name { color: var(--text-3); }
+.fn-card.is-soon:active { transform: none; background: var(--card-sub); }
+.fn-soon {
+  font-style: normal; font-size: 10px; font-weight: 700;
+  color: var(--text-3); letter-spacing: -0.02em; line-height: 1.2;
+}
+
+/* ------------------------------------------------------------
+   FAB (커리큘럼 세부 · 레슨 페이지 한정 — 랜딩 제외)
+   ------------------------------------------------------------ */
+.fn-fab {
+  /* 데스크톱에선 중앙 앱 컬럼의 오른쪽 가장자리에 붙인다(레슨은 720px 컬럼). */
+  --fn-col: var(--app-w);
+  position: fixed; z-index: 55;
+  right: calc((100% - min(var(--fn-col), 100%)) / 2 + 16px);
+  bottom: calc(20px + var(--safe-b));
+  width: 56px; height: 56px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--primary); color: #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, .18), 0 2px 6px rgba(0, 0, 0, .10);
+  transition: transform .12s ease, background .15s;
+}
+.fn-fab:active { transform: scale(.94); background: var(--primary-press); }
+@media (min-width: 600px) {
+  body:has(#view-lesson) .fn-fab { --fn-col: 720px; }
+}
+
+.fn-fab-ico { display: grid; place-items: center; }
+/* 재생 중 = 이퀄라이저 바 애니메이션(A2). 정지 시 기본 아이콘으로 되돌아간다. */
+.fn-eq { display: none; align-items: flex-end; gap: 3.5px; height: 20px; }
+.fn-fab.playing .fn-fab-ico { display: none; }
+.fn-fab.playing .fn-eq { display: flex; }
+.fn-eq i {
+  width: 3.5px; height: 100%; border-radius: 2px; background: currentColor;
+  transform-origin: bottom; animation: fn-eq-bounce .9s ease-in-out infinite;
+}
+.fn-eq i:nth-child(2) { animation-delay: .15s; }
+.fn-eq i:nth-child(3) { animation-delay: .3s; }
+@keyframes fn-eq-bounce {
+  0%, 100% { transform: scaleY(.3); }
+  50% { transform: scaleY(1); }
+}
+
+/* ------------------------------------------------------------
+   플로팅 오버레이 (.scrim 패턴 변형 — 바텀시트가 아니라 떠 있는 카드)
+   ------------------------------------------------------------ */
+.fn-sheet {
+  border-radius: 28px;
+  width: calc(100% - 24px); max-width: calc(var(--app-w) - 24px);
+  margin: 0 12px calc(12px + var(--safe-b));
+  padding: 10px 20px 18px;
+  max-height: 86vh;
+}
+.fn-sheet .grip { margin-bottom: 12px; }
+
+/* 오버레이 맨 위 Segmented Control (메트로놈 / 배킹) */
+.fn-seg {
+  display: flex; gap: 4px; padding: 4px; margin: 0 0 16px;
+  background: var(--grey-100); border-radius: var(--pill);
+}
+.fn-seg button {
+  flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  height: 42px; border-radius: var(--pill);
+  font-size: 14px; font-weight: 700; letter-spacing: -0.02em; color: var(--text-2);
+  transition: background .18s, color .18s, box-shadow .18s;
+}
+.fn-seg button.active { background: var(--card); color: var(--text); box-shadow: var(--shadow-sm); }
+.fn-seg button:disabled { color: var(--text-3); cursor: default; }
+.fn-seg button svg { flex: none; }
+
+/* 패널 교체 — 딱딱하지 않게(A0 전환 이펙트) */
+.fn-panel { display: none; }
+.fn-panel.active { display: block; animation: fn-panel-in .28s cubic-bezier(.2, .9, .25, 1) both; }
+@keyframes fn-panel-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* 도구 전용 페이지 */
+.fn-view { padding-bottom: 48px; }
+
+/* ------------------------------------------------------------
+   메트로놈 패널 (오버레이 · 전용 페이지 공용)
+   ------------------------------------------------------------ */
+.metro-head { text-align: center; margin: 6px 0 20px; }
+.metro-title { font-size: 26px; font-weight: 800; letter-spacing: -0.035em; margin: 0; }
+.metro-sub { font-size: 14.5px; color: var(--text-2); margin: 8px 0 0; word-break: keep-all; }
+
+/* 시각 박 표시 — 번호 동그라미 + 아래 점 점등. 세분음 시각 없음(B0). */
+.metro-beats {
+  display: flex; justify-content: center; align-items: flex-start; gap: 10px;
+  min-height: 52px; margin: 2px 0 16px;
+}
+.metro-beat { position: relative; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.metro-beat b {
+  width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center;
+  font-size: 14px; font-weight: 700; font-variant-numeric: tabular-nums;
+  color: var(--text-3); background: var(--card); border: 1.5px solid var(--line);
+  transition: color .18s, background .18s, border-color .18s, transform .12s;
+}
+.metro-beat.is-strong b { font-weight: 800; border-color: var(--grey-300); }
+.metro-beat i {
+  width: 6px; height: 6px; border-radius: 50%; background: var(--grey-300);
+  transition: background .18s, box-shadow .25s, transform .15s;
+}
+.metro-beat.on b {
+  color: var(--primary); background: var(--primary-weak); border-color: var(--primary);
+  transform: scale(1.06);
+}
+/* 은은한 글로우 — 점등된 박의 점만 */
+.metro-beat.on i {
+  background: var(--primary); transform: scale(1.3);
+  box-shadow: 0 0 10px 2px color-mix(in srgb, var(--primary) 45%, transparent);
+}
+/* 강박 파동(ripple) — Toss 톤 상 아주 은은하게(B5) */
+.metro-beat.ripple::before {
+  content: ""; position: absolute; top: -5px; left: 50%; margin-left: -22px;
+  width: 44px; height: 44px; border-radius: 50%;
+  border: 2px solid var(--primary); pointer-events: none;
+  animation: metro-ripple .62s ease-out forwards;
+}
+@keyframes metro-ripple {
+  from { transform: scale(.72); opacity: .42; }
+  to { transform: scale(1.5); opacity: 0; }
+}
+
+/* BPM */
+.metro-bpm { display: flex; align-items: center; justify-content: center; gap: 20px; }
+.metro-step {
+  width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--grey-100); color: var(--text); font-size: 20px; font-weight: 700;
+  transition: transform .1s, background .15s;
+}
+.metro-step:active { transform: scale(.94); background: var(--grey-200); }
+.metro-bpm-val { display: flex; flex-direction: column; align-items: center; min-width: 100px; }
+.metro-bpm-val strong {
+  font-size: 46px; font-weight: 800; letter-spacing: -0.045em; line-height: 1.02;
+  font-variant-numeric: tabular-nums;
+}
+.metro-bpm-val span { font-size: 11px; font-weight: 700; color: var(--text-3); letter-spacing: .1em; }
+
+.metro-range {
+  -webkit-appearance: none; appearance: none;
+  width: 100%; height: 4px; border-radius: var(--pill);
+  background: var(--grey-200); margin: 18px 0 2px; cursor: pointer;
+}
+.metro-range::-webkit-slider-thumb {
+  -webkit-appearance: none; appearance: none;
+  width: 22px; height: 22px; border-radius: 50%;
+  background: var(--card); border: 2.5px solid var(--primary); box-shadow: var(--shadow-sm);
+}
+.metro-range::-moz-range-thumb {
+  width: 22px; height: 22px; border-radius: 50%; border: 2.5px solid var(--primary);
+  background: var(--card); box-shadow: var(--shadow-sm);
+}
+.metro-range:focus-visible { outline: 2px solid var(--primary); outline-offset: 4px; }
+
+.metro-actions { display: flex; gap: 10px; margin-top: 16px; }
+.metro-actions .btn { height: 52px; font-size: 16px; }
+.metro-tap { flex: 0 0 38%; width: auto; }
+.metro-play.is-playing { background: var(--grey-700); }
+.metro-play.is-playing:active { background: var(--grey-800); }
+.metro-hint { margin: 10px 0 0; text-align: center; font-size: 12.5px; color: var(--text-3); }
+
+.metro-field { margin-top: 20px; }
+.metro-label { display: block; font-size: 13px; font-weight: 700; color: var(--text-3); margin-bottom: 8px; }
+.metro-seg {
+  display: flex; gap: 4px; padding: 4px;
+  background: var(--grey-100); border-radius: var(--radius-sm);
+}
+.metro-seg button {
+  flex: 1; min-width: 0; height: 42px; border-radius: 11px;
+  display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px;
+  font-size: 13.5px; font-weight: 700; letter-spacing: -0.02em; color: var(--text-2);
+  transition: background .16s, color .16s, box-shadow .16s;
+}
+.metro-seg button.active { background: var(--card); color: var(--primary); box-shadow: var(--shadow-sm); }
+.metro-seg button:disabled { color: var(--text-3); cursor: default; }
+.metro-soon { font-style: normal; font-size: 9.5px; font-weight: 700; color: var(--text-3); }
+
+.metro-field .metro-range { margin: 4px 0 0; }
+
+/* 목소리 자동 비활성 안내(≥180 BPM) — 경고가 아니라 안내 톤. */
+.metro-note {
+  margin: 16px 0 0; padding: 12px 14px; border-radius: var(--radius-sm);
+  background: var(--primary-weak); color: var(--primary);
+  font-size: 13px; font-weight: 600; line-height: 1.5; word-break: keep-all;
+}
+.metro-note[hidden] { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .fn-eq i { animation: none; transform: scaleY(.7); }
+  .metro-beat.ripple::before { animation: none; opacity: 0; }
+}

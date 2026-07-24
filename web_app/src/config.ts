@@ -22,6 +22,9 @@ export const THEME_KEY = 'riff_theme';
 /** 랜딩 악기 필터 기억 키 (05_tag-filter.md 단계 2). */
 export const INSTRUMENT_KEY = 'riff_instrument';
 
+/** 메트로놈 설정 기억 키 (20_metronome.md B1 — gh_state 밖의 독립 선호값). */
+export const METRONOME_KEY = 'riff_metronome';
+
 /** 기본(현재 유일) 커리큘럼 id. 콘텐츠 파이프라인 산출물 경로와 일치. */
 export const DEFAULT_CURRICULUM_ID = 'solo_scale_3months';
 

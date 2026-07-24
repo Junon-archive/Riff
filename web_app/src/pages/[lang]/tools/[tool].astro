@@ -1,0 +1,42 @@
+---
+/**
+ * /{lang}/tools/{tool}/ — Functions 도구 전용 페이지(en/ja, 접두 언어).
+ * ko 는 pages/tools/[tool].astro 가 담당.
+ */
+import Base from '../../../layouts/Base.astro';
+import MetronomePanel from '../../../components/MetronomePanel.astro';
+import { translate } from '../../../lib/i18n';
+import { readyFunctionTools } from '../../../lib/functions';
+import type { FunctionToolId } from '../../../lib/functions';
+import { PREFIXED_LANGS, toolPath } from '../../../lib/urls';
+import type { Lang } from '../../../config';
+
+export function getStaticPaths() {
+  return PREFIXED_LANGS.flatMap((lang) =>
+    readyFunctionTools().map((tool) => ({
+      params: { lang, tool: tool.id },
+      props: { i18nPrefix: tool.i18nPrefix },
+    })),
+  );
+}
+
+const lang = Astro.params.lang as Lang;
+const tool = Astro.params.tool as FunctionToolId;
+const { i18nPrefix } = Astro.props as { i18nPrefix: string };
+const title = `${translate(lang, `fn.${tool}`)} — ${translate(lang, 'common.app_name')}`;
+const description = translate(lang, `${i18nPrefix}.page_desc`);
+---
+
+<Base
+  lang={lang}
+  title={title}
+  description={description}
+  canonicalPath={toolPath(tool)}
+  backHref={`/${lang}/`}
+  showDonate={false}
+  instrumentFromFilter={true}
+>
+  <main class="view fn-view" id="view-tool" data-fn-tool={tool}>
+    {tool === 'metronome' && <MetronomePanel lang={lang} standalone />}
+  </main>
+</Base>

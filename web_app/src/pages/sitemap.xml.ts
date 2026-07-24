@@ -6,7 +6,8 @@
 import type { APIRoute } from 'astro';
 import { SUPPORTED_LANGS } from '../config';
 import { curriculumRoutes, lessonRoutes } from '../lib/paths';
-import { altUrls, curriculumPath, homePath, lessonPath } from '../lib/urls';
+import { readyFunctionTools } from '../lib/functions';
+import { altUrls, curriculumPath, homePath, lessonPath, toolPath } from '../lib/urls';
 
 export const prerender = true;
 
@@ -21,6 +22,8 @@ function urlEntry(site: string | URL, canonicalPath: string): string {
 export const GET: APIRoute = ({ site, url }) => {
   const base = site ?? url;
   const paths: string[] = [homePath()];
+  // Functions 도구 전용 페이지(/tools/{tool}/) — 검색 유입이 큰 유틸(메트로놈 등)이라 색인 대상.
+  for (const tool of readyFunctionTools()) paths.push(toolPath(tool.id));
   for (const c of curriculumRoutes()) paths.push(curriculumPath(c.curriculum));
   for (const r of lessonRoutes()) {
     paths.push(lessonPath(r.params.curriculum, r.monthNum, r.weekNum, r.dayNum));

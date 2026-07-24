@@ -75,6 +75,11 @@ function openSheet(id: string): void {
 }
 function closeSheet(el: Element | null | undefined): void {
   el?.classList.remove('show');
+  // Functions 오버레이는 FAB 가 여닫는 토글이라 접근성 상태도 함께 되돌린다.
+  // (닫아도 엔진은 멈추지 않는다 — 같은 페이지 안에서는 계속 재생, 20_metronome.md A0.)
+  if (el instanceof Element && el.id === 'fnScrim') {
+    document.getElementById('fnFab')?.setAttribute('aria-expanded', 'false');
+  }
 }
 
 /* ------------------------------------------------------------------
@@ -209,6 +214,72 @@ function showDonateChannel(channel: DonationChannel): void {
 
   document.getElementById('donateMain')?.setAttribute('hidden', '');
   document.getElementById('donateQrView')?.removeAttribute('hidden');
+}
+
+/* ------------------------------------------------------------------
+ * Functions 공통 셸 (20_metronome.md PART A) — FAB · 플로팅 오버레이 · 지연 로드 · 이동 시 정지.
+ *
+ * 지연 로드가 핵심이다: 오디오 엔진(스케줄러·합성·샘플 디코드)은 FAB 최초 클릭 또는 도구 전용
+ * 페이지 진입 시에만 `import()` 된다 → 메트로놈을 쓰지 않는 페이지뷰의 JS·오디오 비용 0.
+ * 아래 `import('./metronome/panel')` 은 반드시 동적이어야 한다(정적 import 로 바꾸면 전 페이지
+ * 번들에 엔진이 실려 검증 게이트 V2 가 깨진다).
+ * ---------------------------------------------------------------- */
+type MetronomeModule = typeof import('./metronome/panel');
+
+let metronomeMod: MetronomeModule | null = null;
+let metronomeLoading: Promise<MetronomeModule> | null = null;
+
+function loadMetronome(): Promise<MetronomeModule> {
+  if (metronomeMod) return Promise.resolve(metronomeMod);
+  if (!metronomeLoading) {
+    metronomeLoading = import('./metronome/panel').then((mod) => {
+      metronomeMod = mod;
+      return mod;
+    });
+  }
+  return metronomeLoading;
+}
+
+/** 주어진 컨테이너 안의 메트로놈 패널에 컨트롤러를 붙인다(엔진 지연 로드 트리거). */
+function mountMetronomeIn(scope: ParentNode): void {
+  const panel = $<HTMLElement>('[data-metro]', scope);
+  if (!panel) return;
+  void loadMetronome().then((mod) => mod.mountMetronome(panel));
+}
+
+/** 오버레이 안 도구 전환(Segmented Control) — 부드러운 교체는 app.css 의 .fn-panel 전환이 담당. */
+function showFunctionPanel(toolId: string): void {
+  $all<HTMLElement>('#fnSeg [data-fn-tab]').forEach((btn) => {
+    const active = btn.dataset.fnTab === toolId;
+    btn.classList.toggle('active', active);
+    btn.setAttribute('aria-selected', String(active));
+  });
+  $all<HTMLElement>('.fn-panel').forEach((panel) => {
+    panel.classList.toggle('active', panel.dataset.fnPanel === toolId);
+  });
+  const active = $<HTMLElement>(`.fn-panel[data-fn-panel="${toolId}"]`);
+  if (active) mountMetronomeIn(active);
+}
+
+function openFunctionsOverlay(): void {
+  const scrim = document.getElementById('fnScrim');
+  if (!scrim) return;
+  // 처음 여는 시점에 기본 도구(첫 활성 세그먼트) 패널을 마운트한다.
+  const activeTab = $<HTMLElement>('#fnSeg [data-fn-tab].active');
+  showFunctionPanel(activeTab?.dataset.fnTab ?? 'metronome');
+  scrim.classList.add('show');
+  document.getElementById('fnFab')?.setAttribute('aria-expanded', 'true');
+}
+
+/**
+ * 레슨 이동 시 정지(A0 확정) — 다음/이전 Day 로 넘어가면 소리를 끊고 초기화한다.
+ * 덕분에 전환 간 오디오를 살려둘 필요가 없어 `transition:persist`·전역 싱글턴 지속 로직이 불필요하다.
+ * "같은 페이지 안에서는 오버레이를 닫아도 계속 재생"은 DOM/JS 자연 수명으로 자동 충족된다.
+ */
+function stopFunctionsOnNavigate(): void {
+  metronomeMod?.stopMetronome();
+  document.getElementById('fnScrim')?.classList.remove('show');
+  document.getElementById('fnFab')?.setAttribute('aria-expanded', 'false');
 }
 
 /* ------------------------------------------------------------------
@@ -552,6 +623,16 @@ function bindDelegatesOnce(): void {
       return;
     }
 
+    if (target.closest('#fnFab')) {
+      openFunctionsOverlay();
+      return;
+    }
+    const fnTab = target.closest<HTMLButtonElement>('[data-fn-tab]');
+    if (fnTab) {
+      if (!fnTab.disabled && fnTab.dataset.fnTab) showFunctionPanel(fnTab.dataset.fnTab);
+      return;
+    }
+
     if (target.closest('#nickChip')) {
       openSheet('nickScrim');
       return;
@@ -656,6 +737,10 @@ function bindDelegatesOnce(): void {
   );
 
   window.addEventListener('resize', () => fitConfettiCanvas());
+
+  // 레슨/커리큘럼 이동 시 Functions 정지(20_metronome.md A0·A1). document 는 소프트 내비게이션
+  // 간 동일 객체라 1회 바인딩으로 충분하다.
+  document.addEventListener('astro:before-swap', stopFunctionsOnNavigate);
 }
 
 /* ------------------------------------------------------------------
@@ -699,6 +784,11 @@ function onPageLoad(): void {
   hydrateLesson(state);
   initInstrumentFilter();
   reorderCompletedCurricula(state);
+
+  // 도구 전용 페이지(/tools/{tool}/) — FAB 없이 패널이 곧바로 보이므로 진입 즉시 마운트한다.
+  // 그 외 페이지에서는 no-op(=엔진 청크를 아예 받지 않는다).
+  const toolView = document.getElementById('view-tool');
+  if (toolView) mountMetronomeIn(toolView);
 
   // 세션(소프트 내비게이션 전체) 당 1회만: 닉네임 유도 + welcome_back(state_storage §5).
   if (!bootDone) {

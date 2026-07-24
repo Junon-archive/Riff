@@ -7,7 +7,7 @@ depends_on: [20-metronome]
 owner: null
 ---
 
-> 🔴 TODO (2026-07-24). **설계 확정 완료 · 구현 대기.** 매트릭스·용량·조 확정(커리큘럼 조 검증 반영). 다음 실물 준비물: **Suno Pro 프롬프트 뱅크 작성 → 음원 생성 → 루프 트림.**
+> 🔴 TODO (2026-07-24). **설계 확정 + 기타 프롬프트 뱅크 저작 완료 · 음원 생성/구현 대기.** 매트릭스·용량·조 확정(커리큘럼 조 검증 반영). 다음 실물 준비물: **[`backing_prompts/`](backing_prompts/README.md) 로 Suno Pro 음원 생성 → 루프 트림 → 매니페스트.**
 > **공통 셸(FAB·플로팅 오버레이·Segmented Control·전용 페이지·랜딩 진입·부드러운 전환·지연 로드·레슨 이동 시 정지)은 `20_metronome.md` PART A 가 SSOT.** 이 문서는 배킹 고유(음원 매트릭스·플레이어·매니페스트)만 정의. 릴리스는 메트로놈 다음(후속).
 
 # 21 · 배킹 트랙 (Backing Track)
@@ -103,14 +103,27 @@ owner: null
 - 주의: 2026 약관에서 "소유권(Ownership)" 문구 축소 — Suno가 형식상 "author", 사용자에겐 영구 상업 이용 라이선스. **100% AI 산출물은 저작권 등록 대상 아님**(제3자 재사용 막을 근거 약함) — 우리의 무료 배포·연습용 사용엔 무관.
 - **기록 의무:** 각 트랙 `license:"Suno-Pro"` + 생성일/프롬프트를 매니페스트/프롬프트 뱅크에 남김.
 
-## Suno 프롬프트 뱅크 (확정 매트릭스별 1개 — 채워 나감)
+## Suno 프롬프트 뱅크 → **`backing_prompts/` 로 분리** (2026-07-24 저작 완료)
 
-> 각 프롬프트에 BPM·키·스케일·**제외 파트**(lead guitar / bass)·steady loop 지시·길이 명시.
+> 📁 **SSOT: [`backing_prompts/README.md`](backing_prompts/README.md)** — 인덱스 · 공통 작성 규칙 · 공통 Suno 설정 · **확장자/저장 경로** · **「사람이 순서대로 따라 하는 방법」(STEP 0~10 워크스루)** · 진행 체크리스트.
+> 프롬프트 본문은 이 문서에 인라인하지 않는다(길고 복사·붙여넣기 대상이라 파일 단위가 맞다).
 
-| # | 악기 | 장르 | 조/스케일 | BPM | 제외 파트 | 프롬프트 | 결과 파일 | 라이선스 |
-|---|---|---|---|---|---|---|---|---|
-| _예_ | guitar | blues shuffle | A / A minor pentatonic | 90 | lead guitar | _TBD_ | `guitar/blues_A_90.m4a` | Suno-Pro |
-| _예_ | guitar | jazz ii-V-I | F / F major | 130 | lead guitar | _TBD_ | `guitar/jazz_F_130.m4a` | Suno-Pro |
+- **파일 규약:** md 1개 = (악기 × 장르 × 조). 같은 장르+조의 템포 3개(드럼 5개)는 프롬프트가 동일하고 BPM만 다르므로 한 파일에 **「렌더 타깃」** 표로 묶는다. md 파일명 = 오디오 파일명 접두사.
+- **오디오 파일명:** `{장르슬러그}_{조}_{bpm}.m4a` (드럼만은 조 없음 → `drums_{bpm}.m4a`). 슬러그: `drums` `blues` `rock` `funk` `neosoul` `jazz`. 예: `blues_A_90.m4a` · `jazz_F_130.m4a`.
+- **배치 경로(권장안, 구현 세션 확정 대기):** `web_app/public/audio/backing/{guitar|bass}/{파일}.m4a` → URL `/audio/backing/guitar/blues_A_90.m4a`. 기존 `public/curriculum/*.webp`·`public/icons/` 관례를 따랐고, `audio/` 로 한 겹 묶어 메트로놈 CC0 샘플(`audio/metronome/`) 자리를 미리 확보. **최종 정본은 위 T3 매니페스트(`backing.json`)의 `file` 필드** — 바뀌면 `backing_prompts/README.md` 「저장 경로」도 같이 고친다.
+- **작업 원본 WAV는 repo 밖**에 둔다(41트랙 수백 MB → 저장소 비대화). 배포용 `.m4a` 만 커밋.
+- **기타 세트 13파일 / 41트랙 저작 완료.** 각 md에 스케일 라벨·폼(마디)·제외 파트·코드 진행·영문 스타일 프롬프트·Exclude Styles·루프 트림 메모·**생성 로그(생성일/링크/라이선스 기록란)** 포함.
+- **폼 길이 확정:** 블루스 12마디 · 그 외 16마디 · 드럼만 16마디(8·16마디째 필). → 총 길이 ≈ 24.6분 → **≈ 24 MB**(R3 추정 ~21MB 대비 소폭 상향, 예산 80MB의 30%).
+- 베이스 세트는 [`backing_prompts/bass/README.md`](backing_prompts/bass/README.md)에 규약만 확정(조 구성은 기타 배포 후 결정).
+
+| 파일 | 장르 | 조 | BPM | 트랙 |
+|---|---|---|---|---|
+| `guitar/drums.md` | 드럼만 | — | 70·95·120·150·200 | 5 |
+| `guitar/blues_A.md` · `blues_E.md` | 블루스(셔플) | A · E | 70·90·120 | 6 |
+| `guitar/rock_Am.md` · `rock_E.md` · `rock_G.md` | 락/팝 | Am · E · G | 80·110·140 | 9 |
+| `guitar/funk_Am.md` · `funk_Em.md` | 펑크 | Am · Em | 90·100·110 | 6 |
+| `guitar/neosoul_Am.md` · `neosoul_Dm.md` | R&B/네오소울 | Am · Dm | 70·85·100 | 6 |
+| `guitar/jazz_Am.md` · `jazz_C.md` · `jazz_F.md` | 재즈 ii-V-I | Am · C · F | 100·130·160 | 9 |
 
 ## 결정 완료 (2026-07-24) — 매트릭스 확정
 
@@ -136,9 +149,11 @@ owner: null
 
 ## 체크리스트
 
-- [ ] 「결정 대기 질문」 답변 → 매트릭스·예산 확정
+- [x] 「결정 대기 질문」 답변 → 매트릭스·예산 확정 (2026-07-24)
 - [ ] 트랙 매니페스트 스키마 확정(`backing.json`) + 빌드 검증
-- [ ] Suno 프롬프트 뱅크 작성(매트릭스 전부) → 음원 생성(Pro)
+- [x] **Suno 프롬프트 뱅크 작성 — 기타 41트랙(13파일) 완료** (2026-07-24, `backing_prompts/`)
+- [ ] 음원 생성(사람 · Suno Pro) — 기타 41트랙
+- [ ] 베이스 세트 프롬프트 작성(기타 배포 후 · 조 구성 확정 필요)
 - [ ] 루프 트림/심리스 검수 파이프라인(수작업+헬퍼)
 - [ ] 플레이어(공유 AudioContext·심리스 루프) + 캐스케이딩 버튼 UI
 - [ ] 오버레이 배킹 탭 + 전용 페이지(3언어) + 랜딩 "반주" 카드

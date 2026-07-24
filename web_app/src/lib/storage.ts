@@ -5,9 +5,17 @@
  *
  * localStorage 직접 접근은 이 파일로만 한정한다(technical_spec §3.1).
  */
-import { STORAGE_KEY, STATE_SCHEMA_VERSION, DEFAULT_LANG, THEME_KEY, INSTRUMENT_KEY } from '../config';
+import {
+  STORAGE_KEY,
+  STATE_SCHEMA_VERSION,
+  DEFAULT_LANG,
+  THEME_KEY,
+  INSTRUMENT_KEY,
+  METRONOME_KEY,
+} from '../config';
 import type { Lang, DonationChannel } from '../config';
 import type { GhState, CurriculumProgress } from '../types/state';
+import type { Meter, MetronomeSettings, Subdivision, Timbre } from '../types/metronome';
 
 /* ------------------------------------------------------------------
  * 0. 저장 백엔드 — localStorage 우선, 차단/시크릿 시 인메모리 폴백.
@@ -329,6 +337,61 @@ export function getInstrumentFilter(): Instrument {
 
 export function setInstrumentFilter(instrument: Instrument): void {
   backend.set(INSTRUMENT_KEY, instrument);
+}
+
+/* ------------------------------------------------------------------
+ * 6. 메트로놈 설정 기억 (20_metronome.md B1) — 테마·악기필터와 동일 층위의 독립 선호값.
+ *    gh_state(진도) 스키마를 오염시키지 않도록 `riff_metronome` 단일 키에 JSON 으로 저장한다.
+ * ---------------------------------------------------------------- */
+export const BPM_MIN = 30;
+export const BPM_MAX = 300;
+
+const METERS: readonly Meter[] = ['2/4', '3/4', '4/4', '6/8'];
+const SUBDIVISIONS: readonly Subdivision[] = [1, 2, 3, 4];
+const TIMBRES: readonly Timbre[] = ['click', 'drum', 'voice'];
+
+export const DEFAULT_METRONOME_SETTINGS: MetronomeSettings = {
+  bpm: 90,
+  meter: '4/4',
+  subdivision: 1,
+  timbre: 'click',
+  volume: 0.8,
+};
+
+export function clampBpm(value: number): number {
+  if (!Number.isFinite(value)) return DEFAULT_METRONOME_SETTINGS.bpm;
+  return Math.min(BPM_MAX, Math.max(BPM_MIN, Math.round(value)));
+}
+
+/** 미지 데이터를 안전하게 보정한다(누락·오염 필드 = 기본값, 크래시 금지 — loadState 와 동일 정책). */
+function coerceMetronome(raw: unknown): MetronomeSettings {
+  const base = DEFAULT_METRONOME_SETTINGS;
+  if (!raw || typeof raw !== 'object') return base;
+  const r = raw as Record<string, unknown>;
+  const volume = typeof r.volume === 'number' && r.volume >= 0 && r.volume <= 1 ? r.volume : base.volume;
+  return {
+    bpm: typeof r.bpm === 'number' ? clampBpm(r.bpm) : base.bpm,
+    meter: METERS.includes(r.meter as Meter) ? (r.meter as Meter) : base.meter,
+    subdivision: SUBDIVISIONS.includes(r.subdivision as Subdivision)
+      ? (r.subdivision as Subdivision)
+      : base.subdivision,
+    timbre: TIMBRES.includes(r.timbre as Timbre) ? (r.timbre as Timbre) : base.timbre,
+    volume,
+  };
+}
+
+export function getMetronomeSettings(): MetronomeSettings {
+  const raw = backend.get(METRONOME_KEY);
+  if (!raw) return { ...DEFAULT_METRONOME_SETTINGS };
+  try {
+    return coerceMetronome(JSON.parse(raw));
+  } catch {
+    return { ...DEFAULT_METRONOME_SETTINGS };
+  }
+}
+
+export function setMetronomeSettings(settings: MetronomeSettings): void {
+  backend.set(METRONOME_KEY, JSON.stringify(coerceMetronome(settings)));
 }
 
 /**

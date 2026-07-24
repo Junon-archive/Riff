@@ -13,8 +13,10 @@ import { altUrls } from '../lib/urls';
 import type { DonationChannel, Lang } from '../config';
 import { DONATION_CHANNELS, isDonationChannelPreparing, SUPPORTED_LANGS } from '../config';
 import type { Instrument } from '../lib/storage';
+import FunctionsFab from '../components/FunctionsFab.astro';
 import '../styles/tokens.css';
 import '../styles/app.css';
+import '../styles/functions.css';
 
 interface Props {
   lang: Lang;
@@ -39,6 +41,12 @@ interface Props {
    * 오버라이드해도 된다. false = 콘텐츠 페이지 — 스크립트가 절대 개입하지 않고 SSR 값을 고정한다.
    */
   instrumentFromFilter?: boolean;
+  /**
+   * Functions FAB(우하단 플로팅 진입) 노출 — 커리큘럼 세부·레슨 페이지에서만 true.
+   * 랜딩은 카드 행(FunctionCards)으로 진입하고, 도구 전용 페이지는 이미 그 도구 화면이라 불필요
+   * (20_metronome.md A2). 기본 false.
+   */
+  functions?: boolean;
 }
 
 const {
@@ -51,6 +59,7 @@ const {
   showDonate = true,
   instrument = 'guitar',
   instrumentFromFilter = false,
+  functions = false,
 } = Astro.props;
 const alts = altUrls(canonicalPath);
 const homeHref = lang === 'ko' ? '/' : `/${lang}/`;
@@ -353,6 +362,9 @@ const DONATION_BUTTONS: { channel: DonationChannel; iconClass: string; icon: str
         <button class="btn ghost" data-close-sheet>{translate(lang, 'storage.close')}</button>
       </div>
     </div>
+
+    {/* Functions 공통 셸 — FAB + 플로팅 오버레이(메트로놈 등). 커리큘럼/레슨 페이지에서만. */}
+    {functions && <FunctionsFab lang={lang} />}
 
     <div class="toast-wrap" id="toastWrap"></div>
     <canvas id="confetti"></canvas>

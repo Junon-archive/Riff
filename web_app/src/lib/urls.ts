@@ -6,6 +6,7 @@
  *   home        /
  *   curriculum  /c/{curriculumId}/
  *   lesson      /c/{curriculumId}/m{M}/w{W}/d{D}/
+ *   tool        /tools/{toolId}/            (Functions 전용 페이지 — 20_metronome.md PART A)
  *
  * 언어 접두:
  *   ko  → 접두 없음(기본)          /c/x/
@@ -33,6 +34,11 @@ export function curriculumPath(curriculumId: string): string {
 /** 캐논(ko) 레슨 경로. month/week/day 는 숫자. */
 export function lessonPath(curriculumId: string, month: number, week: number, day: number): string {
   return `/c/${curriculumId}/m${month}/w${week}/d${day}/`;
+}
+
+/** 캐논(ko) Functions 도구 전용 페이지 경로. */
+export function toolPath(toolId: string): string {
+  return `/tools/${toolId}/`;
 }
 
 /** 캐논(ko) 경로 → 특정 언어의 실제 URL. */

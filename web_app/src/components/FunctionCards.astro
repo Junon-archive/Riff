@@ -1,0 +1,37 @@
+---
+/**
+ * FunctionCards.astro — 랜딩 진입점(커리큘럼 카드 위 작은 카드 4개 한 행).
+ * SSOT: 20_metronome.md PART A(A0 랜딩 진입 · A2.1 라벨 정책).
+ *
+ * 그룹 라벨("연습 도구") 없이 아이콘+이름 카드만으로 자명하게 둔다.
+ * 각 카드 = 그 도구의 전용 페이지로 이동(플로팅 아님). 미구현 도구는 "곧 열려요"로 비활성.
+ */
+import { translate } from '../lib/i18n';
+import { FUNCTION_TOOLS } from '../lib/functions';
+import { localize, toolPath } from '../lib/urls';
+import type { Lang } from '../config';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const iconSvg = (inner: string) =>
+  `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${inner}</svg>`;
+---
+
+<div class="fn-cards">
+  {FUNCTION_TOOLS.map((tool) =>
+    tool.ready ? (
+      <a class="fn-card" href={localize(lang, toolPath(tool.id))}>
+        <span class="fn-card-ico" set:html={iconSvg(tool.icon)}></span>
+        <span class="fn-card-name">{translate(lang, `fn.${tool.id}`)}</span>
+      </a>
+    ) : (
+      <div class="fn-card is-soon" aria-disabled="true">
+        <span class="fn-card-ico" set:html={iconSvg(tool.icon)}></span>
+        <span class="fn-card-name">{translate(lang, `fn.${tool.id}`)}</span>
+        <em class="fn-soon">{translate(lang, 'fn.soon')}</em>
+      </div>
+    ),
+  )}
+</div>

@@ -1,0 +1,60 @@
+# 배킹 프롬프트 — 기타 · 드럼만 · (조 없음)
+
+- **스케일 라벨:** — (조 없음 · 모든 조/장르 공통 타이밍 트랙)
+- **폼:** 16마디 (4/4). **8마디째·16마디째에 1마디 필** — 루프 반복 시 밤티(단조로움) 방지.
+- **제외 파트:** 드럼 **단독**. 베이스·기타·건반·퍼커션 루프 전부 제외.
+- **공유:** 이 5트랙은 **기타 세트와 베이스 세트가 공유**한다(베이스용 재생성 없음).
+
+## 렌더 타깃 (템포별 개별 생성 — playbackRate 금지, 파일 분리)
+
+| 파일 | BPM | 1폼 길이 | 예상 용량 | 느낌 힌트(프롬프트 `{FEEL}` 치환) |
+|---|---|---|---|---|
+| `drums_70.m4a` | 70 | 54.9s | ~0.88 MB | slow soul / slow blues backbeat, relaxed behind-the-beat feel |
+| `drums_95.m4a` | 95 | 40.4s | ~0.65 MB | mid-tempo rock-funk backbeat, tight pocket |
+| `drums_120.m4a` | 120 | 32.0s | ~0.51 MB | straight-ahead rock backbeat, driving eighth-note hi-hat |
+| `drums_150.m4a` | 150 | 25.6s | ~0.41 MB | uptempo rock backbeat, insistent eighth-note hi-hat |
+| `drums_200.m4a` | 200 | 19.2s | ~0.31 MB | fast punk-rock straight-eighth drive, ride-heavy |
+
+- **라이선스:** Suno-Pro (생성일 ____ / 계정 ____)
+
+## Suno 프롬프트 — 스타일
+
+> `{BPM}` · `{FEEL}` 을 위 표의 값으로 치환해서 붙여넣는다.
+
+```
+Solo drum kit only — instrumental drum groove backing track, no vocals.
+Dry natural acoustic drum kit: kick, snare, hi-hat, ride, rack and floor toms.
+Tight modern-vintage room sound, close-miked, no reverb wash, no sample loops.
+{FEEL} in straight 4/4 at exactly {BPM} BPM, snare firmly on beats 2 and 4, steady hi-hat subdivision, click-tight timing.
+16-bar loop: the exact same groove all the way through, with one short one-bar tom-and-snare fill at bar 8 and another at bar 16.
+No other instruments at all — no bass, no guitar, no piano, no synth, no percussion overdubs.
+No intro, no count-in, no outro, no fade in, no fade out, no breakdown, no drop, no tempo change.
+Dry centered mix with plenty of headroom, meant to be played over.
+```
+
+## 제외 스타일 (Exclude Styles)
+
+```
+vocals, bass, guitar, piano, synth, strings, percussion loop, electronic drums, fade in, fade out, intro, outro, breakdown, tempo change, drum solo
+```
+
+## 코드 진행
+
+없음(무조성 타이밍 트랙). 모든 조·장르의 스케일 연습에 공통으로 쓴다.
+
+## 비고 / 루프 트림 메모
+
+- **템포 폭이 70~200으로 넓어 느낌까지 동일할 수 없다.** 코어 프롬프트는 5트랙 전부 동일하게 유지하고, `{FEEL}` 한 줄만 템포대에 맞게 치환한다(장르 색을 입히지 않는 선에서 최소 조정).
+- 필이 들어간 8·16마디째가 **루프 이음새 바로 앞**이 되도록 트림해야 반복이 자연스럽다. 16마디 필의 마지막 타점이 다음 루프 1마디 1박으로 자연스럽게 넘어가는지 반드시 청감 확인.
+- 킥/스네어의 어택이 파일 맨 앞에 정확히 오도록(선행 무음 0 샘플) 트림. 드럼은 어택이 시작점이라 갭이 가장 잘 들린다.
+- 심벌 서스테인이 루프 끝에서 잘리면 "툭" 소리가 난다 → 16마디째 필은 **크래시로 끝내지 말 것**을 프롬프트에서 유도했지만, 생성물에 크래시가 남으면 짧은 크로스페이드 또는 다른 테이크 선택.
+
+## 생성 로그
+
+| 파일 | 생성일 | Suno 곡 링크 | 트림 완료 | 비고 |
+|---|---|---|---|---|
+| `drums_70.m4a` | | | ☐ | |
+| `drums_95.m4a` | | | ☐ | |
+| `drums_120.m4a` | | | ☐ | |
+| `drums_150.m4a` | | | ☐ | |
+| `drums_200.m4a` | | | ☐ | |
