@@ -48,8 +48,14 @@ export function mountMetronome(root: HTMLElement): void {
     engine.onPlayingChange = (playing) => {
       syncFab(playing);
       if (boundRoot) syncToggle(boundRoot, playing);
-      if (playing) startRaf();
-      else stopRaf();
+      if (playing) {
+        startRaf();
+        return;
+      }
+      stopRaf();
+      // 정지하면 점등을 반드시 지운다 — 남아 있으면 멈췄는데도 울리는 중처럼 보인다.
+      // (정지 버튼·레슨 이동 등 어디서 멈추든 이 콜백을 지나므로 한 곳에서 처리된다.)
+      if (boundRoot) clearBeatHighlight(boundRoot);
     };
   }
 
@@ -62,7 +68,8 @@ export function mountMetronome(root: HTMLElement): void {
     bind(root);
   }
 
-  renderBeats(root, engine.getSettings().meter);
+  const s = engine.getSettings();
+  renderBeats(root, s.meter, s.subdivision);
   syncUi(root);
   syncFab(engine.playing);
   if (engine.playing) startRaf();
@@ -154,7 +161,12 @@ function apply(
   engine.update(patch);
   const after = engine.getSettings();
 
-  if (patch.meter && patch.meter !== before.meter) renderBeats(root, after.meter);
+  // 박자(동그라미 수)나 세분(점 수)이 바뀌면 표시를 다시 그린다.
+  if (patch.meter !== undefined || patch.subdivision !== undefined) {
+    if (after.meter !== before.meter || after.subdivision !== before.subdivision) {
+      renderBeats(root, after.meter, after.subdivision);
+    }
+  }
   syncUi(root, opts);
 
   window.clearTimeout(persistTimer);
@@ -183,14 +195,19 @@ function onTap(root: HTMLElement): void {
  * UI 동기화
  * ---------------------------------------------------------------- */
 
-function renderBeats(root: HTMLElement, meter: Meter): void {
+/**
+ * 박 동그라미 + 그 아래 세분 점을 다시 그린다.
+ * 점 개수 = 세분 수(♩ 1개 · 8분 2개 · 셋잇단 3개 · 16분 4개) → 재생 중 지금 울리는 세분이 점등된다.
+ */
+function renderBeats(root: HTMLElement, meter: Meter, subdivision: Subdivision): void {
   const wrap = root.querySelector<HTMLElement>('[data-metro-beats]');
   if (!wrap) return;
   const { roles } = METER_SPECS[meter];
+  const dots = `<span class="metro-dots" data-count="${subdivision}">${'<i></i>'.repeat(subdivision)}</span>`;
   wrap.innerHTML = roles
     .map(
       (role, i) =>
-        `<span class="metro-beat${role === 'strong' ? ' is-strong' : ''}"><b>${i + 1}</b><i></i></span>`,
+        `<span class="metro-beat${role === 'strong' ? ' is-strong' : ''}"><b>${i + 1}</b>${dots}</span>`,
     )
     .join('');
 }
@@ -260,8 +277,9 @@ function startRaf(): void {
     if (!engine || !boundRoot) return;
     const due = engine.drainDueBeats();
     if (due.length === 0) return;
-    // 프레임 사이에 여러 박이 지났다면 가장 최근 것만 그린다(정확한 "지금"의 박).
-    paintBeat(boundRoot, due[due.length - 1]!.pulse, due[due.length - 1]!.role === 'strong');
+    // 프레임 사이에 여러 발음이 지났다면 가장 최근 것만 그린다(정확한 "지금"의 위치).
+    const last = due[due.length - 1]!;
+    paintBeat(boundRoot, last.pulse, last.sub, last.role === 'strong');
   };
   rafId = requestAnimationFrame(loop);
 }
@@ -272,16 +290,24 @@ function stopRaf(): void {
   rafId = 0;
 }
 
-function paintBeat(root: HTMLElement, pulse: number, strong: boolean): void {
+/**
+ * 지금 울린 위치를 칠한다 — 숫자 동그라미는 그 박 내내 켜져 있고(세분이 지나가도 유지),
+ * 아래 점은 현재 세분 하나만 켜진다. 파동은 강박의 박 머리(sub 0)에서만 퍼진다.
+ */
+function paintBeat(root: HTMLElement, pulse: number, sub: number, strong: boolean): void {
   const beats = root.querySelectorAll<HTMLElement>('.metro-beat');
   beats.forEach((el, i) => {
     const on = i === pulse;
     el.classList.toggle('on', on);
+
+    const dots = el.querySelectorAll<HTMLElement>('.metro-dots i');
+    dots.forEach((dot, j) => dot.classList.toggle('on', on && j === sub));
+
     if (!on) {
       el.classList.remove('ripple'); // 지난 박의 파동 클래스가 남지 않게 정리.
       return;
     }
-    if (!strong) return;
+    if (!strong || sub !== 0) return;
     // 같은 클래스를 다시 붙이는 것만으로는 애니메이션이 재시작되지 않는다 → 리플로우로 강제.
     el.classList.remove('ripple');
     void el.offsetWidth;
@@ -293,4 +319,5 @@ function clearBeatHighlight(root: HTMLElement): void {
   root.querySelectorAll<HTMLElement>('.metro-beat').forEach((el) => {
     el.classList.remove('on', 'ripple');
   });
+  root.querySelectorAll<HTMLElement>('.metro-dots i').forEach((dot) => dot.classList.remove('on'));
 }

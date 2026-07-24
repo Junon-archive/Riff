@@ -50,12 +50,18 @@ const initialRoles = METER_SPECS[initial.meter].roles;
     </header>
   )}
 
-  {/* 시각 박 표시 — 동그라미(번호) + 아래 점 점등. 강박은 파동(ripple). 세분음 시각 없음(B0). */}
+  {/*
+    시각 박 표시 — 동그라미(번호) + 그 아래 세분 점. 강박은 파동(ripple).
+    점 개수 = 세분 수(♩1 · 8분2 · 셋잇단3 · 16분4)이며 재생 중 현재 세분이 점등된다(B0-r2).
+    SSR 은 기본값(세분 없음 = 점 1개)으로 그리고, panel.ts 가 저장된 설정으로 다시 그린다.
+  */}
   <div class="metro-beats" data-metro-beats role="img" aria-label={translate(lang, 'metro.beats')}>
     {initialRoles.map((role, i) => (
       <span class={`metro-beat${role === 'strong' ? ' is-strong' : ''}`}>
         <b>{i + 1}</b>
-        <i></i>
+        <span class="metro-dots" data-count={initial.subdivision}>
+          {Array.from({ length: initial.subdivision }, () => <i></i>)}
+        </span>
       </span>
     ))}
   </div>

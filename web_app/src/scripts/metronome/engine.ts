@@ -77,10 +77,12 @@ export interface SampleUrls {
 
 export const EMPTY_SAMPLES: SampleUrls = { drum: null, voice: null };
 
-/** 시각 표시용 박 이벤트(예약 시각 기준). */
+/** 시각 표시용 발음 이벤트(예약 시각 기준). 박 머리뿐 아니라 세분음도 포함한다. */
 export interface BeatEvent {
-  /** 0-based 펄스 인덱스. */
+  /** 0-based 펄스 인덱스(숫자 동그라미). */
   pulse: number;
+  /** 0-based 세분 인덱스 — 0 = 박 머리. 그 박 아래 몇 번째 점을 켤지에 대응한다. */
+  sub: number;
   role: PulseRole;
   /** AudioContext.currentTime 축의 발음 예정 시각(초). */
   time: number;
@@ -331,7 +333,8 @@ export class MetronomeEngine {
     const role = spec.roles[pulse] ?? 'weak';
     const isSub = sub > 0;
 
-    if (!isSub) this.visualQueue.push({ pulse, role, time });
+    // 세분음도 시각 큐에 넣는다 — 박 아래 점이 세분 수만큼 생기고 순서대로 점등된다.
+    this.visualQueue.push({ pulse, sub, role, time });
 
     const timbre = this.effectiveTimbre();
     if (timbre === 'drum') {

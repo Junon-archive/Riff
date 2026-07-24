@@ -132,17 +132,24 @@
   transition: color .18s, background .18s, border-color .18s, transform .12s;
 }
 .metro-beat.is-strong b { font-weight: 800; border-color: var(--grey-300); }
-.metro-beat i {
+
+/* 세분 점 줄 — 개수 = 세분 수. 점이 늘수록 살짝 작아져 숫자 원(34px) 아래에 넉넉히 들어간다. */
+.metro-dots { display: flex; align-items: center; justify-content: center; gap: 3px; min-height: 6px; }
+.metro-dots i {
   width: 6px; height: 6px; border-radius: 50%; background: var(--grey-300);
-  transition: background .18s, box-shadow .25s, transform .15s;
+  transition: background .16s, box-shadow .22s, transform .14s;
 }
+.metro-dots[data-count="3"] i { width: 5px; height: 5px; }
+.metro-dots[data-count="4"] { gap: 2.5px; }
+.metro-dots[data-count="4"] i { width: 5px; height: 5px; }
+
 .metro-beat.on b {
   color: var(--primary); background: var(--primary-weak); border-color: var(--primary);
   transform: scale(1.06);
 }
-/* 은은한 글로우 — 점등된 박의 점만 */
-.metro-beat.on i {
-  background: var(--primary); transform: scale(1.3);
+/* 은은한 글로우 — 지금 울리는 세분 점 하나만 */
+.metro-dots i.on {
+  background: var(--primary); transform: scale(1.35);
   box-shadow: 0 0 10px 2px color-mix(in srgb, var(--primary) 45%, transparent);
 }
 /* 강박 파동(ripple) — Toss 톤 상 아주 은은하게(B5).
